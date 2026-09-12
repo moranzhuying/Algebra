@@ -1,0 +1,58 @@
+\section{有理分式的次数}
+
+\begin{lemma}{有理分式的次数的良定义性}{}
+	\begin{enumerate}
+		\item 对每个$r\in K(((X_{i})_{i\in I}))$,存在$u,v\in K[\left(X_{i}\right)_{i\in I}]$使得$v\neq 0$且$r=\frac{u}{v}$.
+		\item 设$r\in K(((X_{i})_{i\in I}))$.若$r=\frac{u_{1}}{v_{1}}=\frac{u_{2}}{v_{2}}$且$r\neq 0$,其中$u_{1},v_{1},u_{2},v_{2}\in K[\left(X_{i}\right)_{i\in I}],v_{1}\neq 0,v_{2}\neq 0$,则
+		\begin{align*}
+			\deg\left(u_{1}\right)-\deg\left(v_{1}\right)=\deg\left(u_{2}\right)-\deg\left(v_{2}\right).
+		\end{align*}
+	\end{enumerate}
+\end{lemma}
+
+\begin{definition}{有理分式的次数}{}
+	设$r\in K(((X_{i})_{i\in I}))$且$r=\frac{u}{v}$,其中$u,v\in K[\left(X_{i}\right)_{i\in I}]$且$v\neq 0$.
+	\begin{enumerate}
+		\item 当$r\neq 0$时,称$\deg\left(r\right)\coloneq\deg\left(u\right)-\deg\left(v\right)$是$r$的(全)次数.
+		\item 当$r=0$时,称$\deg\left(r\right)\coloneq-\infty$是$r$的(全)次数.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{有理分式的偏次数}{}
+	设$J\subseteq I,L=K((X_{i})_{i\in I\setminus J})$,$\sigma:K((X_{i})_{i\in I})\to L((X_{i})_{i\in J})$是典范同构,$u\in K((X_{i})_{i\in I})$.我们称$\deg\left(\sigma\left(u\right)\right)$是$u$关于不定元族$\left(X_{i}\right)_{i\in J}$的偏次数.
+\end{definition}
+
+\begin{proposition}{有理分式次数的代数性质}{}
+	设$r,s\in K((X_{i})_{i\in I})$.
+	\begin{enumerate}
+		\item 若$\deg\left(r\right)\neq\deg\left(s\right)$,则$r+s\neq 0,\deg\left(r+s\right)=\sup\left(\deg\left(r\right),\deg\left(s\right)\right)$;若$\deg\left(r\right)=\deg\left(s\right)$,则$\deg\left(r+s\right)\leq\deg\left(r\right)$.
+		\item $\deg\left(rs\right)=\deg\left(r\right)+\deg\left(s\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	根据上述命题,$K((X_{i})_{i\in I})\to\Z,r\mapsto-\deg\left(r\right)$是离散赋值.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

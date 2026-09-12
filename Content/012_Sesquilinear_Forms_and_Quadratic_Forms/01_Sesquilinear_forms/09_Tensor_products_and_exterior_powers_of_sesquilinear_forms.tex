@@ -1,0 +1,70 @@
+\section{半双线性型的张量积与外幂}
+
+记号约定:
+\begin{itemize}
+	\item $A$是交换环,$M,N$是$A$-模,$\left(E_{i}\right)_{i=1}^{n}$和$\left(F_{i}\right)_{i=1}^{n}$是两族$A$-模(其中$n\geq 1$).
+	\item $\rho\in\Aut_{\mathsf{Ring}}\left(A\right),\sigma=\rho^{-1}$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $\varphi\in\Sesq_{A,\rho}\left(E,F\right)$,对每个$1\leq i\leq n$有$\varphi_{i}\in\Sesq_{A,\rho}\left(E_{i},F_{i}\right)$.
+	\item $\iota_{s}:\bigotimes\limits_{i=1}^{n}\sigma^{\ast}\left(F_{i}^{\vee}\right)\to\sigma^{\ast}\left(\left(\bigotimes\limits_{i=1}^{n}F_{i}\right)^{\vee}\right)$和$\iota_{d}:\bigotimes\limits_{i=1}^{n}E_{i}^{\vee}\to\left(\bigotimes\limits_{i=1}^{n}E_{i}\right)^{\vee}$是典范映射.
+	\item $k_{s}:\sigma^{\ast}\left(\bigwedge\limits^{n}F^{\vee}\right)\to\sigma^{\ast}\left(\left(\bigwedge\limits^{n}F\right)^{\vee}\right)$和$k_{d}:\bigwedge\limits^{n}E^{\vee}\to\left(\bigwedge\limits^{n}E\right)^{\vee}$是典范映射.
+	\item $\psi:\left(\prod\limits_{i=1}^{n}E_{i}\right)\times\left(\prod\limits_{i=1}^{n}\rho^{\ast}\left(F_{i}\right)\right)\to A,\left(\left(x_{i}\right)_{i=1}^{n},\left(y_{i}\right)_{i=1}^{n}\right)\mapsto\prod\limits_{i=1}^{n}\varphi_{i}\left(x_{i},y_{i}\right)$.
+	\item $\phi:\left(\bigwedge\limits^{n}E\right)\times\left(\bigwedge\limits^{n}\rho^{\ast}\left(F\right)\right)\to{}_{s}A_{d},\left(\left(x_{i}\right)_{i=1}^{n},\left(y_{i}\right)_{i=1}^{n}\right)\mapsto\det\left(\varphi\left(x_{i},y_{i}\right)\right)_{\substack{1\leq i\leq n\\
+	 1\leq j\leq n}}$.
+\end{itemize}
+
+\begin{proposition}{半双线性型的张量积的构造}{tensor-product-of-sesquilinear-mappings}
+	存在唯一的$\bar{\varphi}\in\Sesq_{A,\rho}\left(\bigotimes\limits_{i=1}^{n}E_{i},\rho^{\ast}\left(\bigotimes\limits_{i=1}^{n}F_{i}\right)\right)$使下图交换(其中,水平方向的箭头是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			{\left(\prod\limits_{i=1}^{n}E_{i}\right)\times\rho^{\ast}\left(\prod\limits_{i=1}^{n}F_{i}\right)} && {\left(\bigotimes\limits_{i=1}^{n}E_{i}\right)\times\rho^{\ast}\left(\bigotimes\limits_{i=1}^{n}F_{i}\right)} \\
+			& {{}_{s}A_{d}}
+			\arrow["\sim", from=1-1, to=1-3]
+			\arrow["\psi"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{\varphi}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{半双线性型的张量积}{}
+	沿用命题\ref{prop:tensor-product-of-sesquilinear-mappings}的记号.我们称$\bigotimes\limits_{i=1}^{n}\varphi_{i}\coloneq\bar{\varphi}$是$\left(\varphi_{i}\right)_{i=1}^{n}$的张量积.
+\end{definition}
+
+\begin{definition}{半双线性型的张量幂}{}
+	若对每个$1\leq i\leq n$有$E_{i}=E,F_{i}=F,\varphi_{i}=\varphi$,则称$\bigotimes\limits_{i=1}^{n}\varphi_{i}$是$\varphi$在$E^{\otimes n}$上的扩张,将$\bigotimes\limits_{i=1}^{n}\varphi_{i}$记作$\varphi^{\otimes n}$.
+\end{definition}
+
+\begin{proposition}{半双线性型的张量积的左右伴随}{}
+	设$\varphi=\bigotimes\limits_{i=1}^{n}\varphi_{i}$,则$s_{\varphi}=\iota_{s}\circ\bigotimes\limits_{i=1}^{n}s_{\varphi_{i}},d_{\varphi}=\iota_{d}\circ\bigotimes\limits_{i=1}^{n}d_{\varphi_{i}}$.
+\end{proposition}
+
+\begin{proposition}{半双线性型的张量积的逆型}{}
+	设$A$是域,$\left(E_{i}\right)_{i=1}^{n},\left(F_{i}\right)_{i=1}^{n}$是有限维$A$-向量空间族.若$\left(\varphi_{i}\right)_{i=1}^{n}$的各项都非退化,则$\bigotimes\limits_{i=1}^{n}\varphi_{i}$非退化,并且
+	\begin{align*}
+		\widetilde{\bigotimes\limits_{i=1}^{n}\varphi_{i}}\circ\left(\iota_{s}\times\iota_{d}\right)=\bigotimes\limits_{i=1}^{n}\tilde{\varphi}_{i}.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{半双线性型的外幂的构造}{exterior-power-of-sesquilinear-mapping}
+	存在唯一的$\phi_{\left(m\right)}\in\Sesq_{A,\rho}\left(\bigwedge\limits^{n}E,\rho^{\ast}\left(\bigwedge\limits^{n}F\right)\right)$使下图交换(其中,水平方向的箭头是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			{E^{n}\times\rho^{\ast}\left(F^{n}\right)} && {\left(\bigwedge\limits^{n}E\right)\times\rho^{\ast}\left(\bigwedge^{n}F\right)} \\
+			& {{}_{s}A_{d}}
+			\arrow["\sim", from=1-1, to=1-3]
+			\arrow["\phi"', from=1-1, to=2-2]
+			\arrow["{\exists!\phi_{\left(n\right)}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{半双线性型的外幂}{}
+	沿用命题\ref{prop:exterior-power-of-sesquilinear-mapping}的记号.我们称$\bigwedge\limits^{n}\varphi\coloneq\phi_{\left(n\right)}$是$\varphi$到$\bigwedge^{n}E$的扩张.
+\end{definition}
+
+\begin{proposition}{半双线性型的外幂的逆型}{}
+	设$A$是域,$E,F$是有限维$A$-向量空间,$\varphi$非退化,则$\bigwedge\limits^{n}\varphi$非退化,并且$\widetilde{\bigwedge\limits^{n}\varphi}\circ\left(k_{s}\times k_{d}\right)=\bigwedge\limits^{n}\tilde{\varphi}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	设$E$是自由$A$-模,$\theta:\bigwedge\limits^{n}E\to E^{\otimes n}$是典范映射,则$\left(\theta\times\theta\right)\circ\varphi^{\otimes n}=n!\bigwedge\limits^{n}\varphi$.
+\end{remark}

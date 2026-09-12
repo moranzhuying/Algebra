@@ -1,0 +1,85 @@
+\section{不可约多项式}
+
+记号约定:$K$是域.
+
+\begin{proposition}{不可约多项式的等价定义}{equivalent-definition-of-irreducible-polynomials}
+	设$f\in K\left[X\right]$.下列陈述等价:
+	\begin{enumerate}
+		\item $\deg\left(f\right)\geq 1$,并且$f$不能被每个满足$0<\deg\left(g\right)<\deg\left(f\right)$的$g\in K\left[X\right]$整除.
+		\item $\deg\left(f\right)\geq 1$,并且$f$在$K\left[X\right]$中的因式组成的集合为$KX^{0}\cup K^{\times}f$.
+		\item $\langle f\rangle$是$K\left[X\right]$的极大理想.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{不可约多项式}{}
+	设$f\in K\left[X\right]$.若命题(\ref{prop:equivalent-definition-of-irreducible-polynomials})的陈述之一成立,则称$f$是$K$上的不可约多项式.
+\end{definition}
+
+\begin{proposition}{不可约多项式的互素性质}{}
+	设$f,g\in K\left[X\right]$.
+	\begin{enumerate}
+		\item 若$f$是不可约多项式,则下列情形中有且仅有一种成立:$f$和$g$互素;$f$整除$g$.
+		\item 若$f,g$都是不可约多项式,则下列情形中有且仅有一种成立:$f$和$g$互素;$f\in K^{\times}g$.
+		\item 若$f\neq g$且$f,g$都是首一不可约多项式,则$f$和$g$互素.
+	\end{enumerate}
+\end{proposition}
+
+本节接下来的内容里,记$\mathscr{F}$是$K\left[X\right]$中首一不可约多项式组成的集合,$f\in K\left[X\right]$非零且首项系数为$\alpha$.
+
+\begin{proposition}{多项式环的唯一分解定理}{}
+	$\N$中存在唯一的有限支撑族$\left(v_{p}\right)_{p\in\mathscr{F}}$使得$f=\alpha\prod\limits_{p\in\mathscr{F}}p^{v_{p}}$.
+\end{proposition}
+
+\begin{proposition}{无平方因子多项式的等价定义}{equivalent-definition-of-square-free-polynomials}
+	设$\N$中的有限支撑族$\left(v_{p}\right)_{p\in\mathscr{F}}$满足$f=\alpha\prod\limits_{p\in\mathscr{F}}p^{v_{p}}$.下列陈述等价:
+	\begin{enumerate}
+		\item 对每个$p\in\mathscr{F}$有$v_{p}\leq 1$.
+		\item 存在$\lambda\in K$和$K\left[X\right]$中一族两两不同的不可约多项式$\left(p_{i}\right)_{i\in I}$使得$f=\lambda\prod\limits_{i\in I}p_{i}$.
+		\item 对$K\left[X\right]$的每个非常数多项式$g$,多项式$g^{2}$不能整除$f$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{无平方因子多项式的等价定义}{}
+	若命题(\ref{prop:equivalent-definition-of-square-free-polynomials})的陈述之一成立,则称$f$为无平方因子多项式(或$f$没有重因式).
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

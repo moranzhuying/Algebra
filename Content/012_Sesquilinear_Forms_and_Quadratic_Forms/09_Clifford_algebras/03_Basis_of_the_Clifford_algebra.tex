@@ -1,0 +1,68 @@
+\section{Clifford代数的基}
+
+\begin{proposition}{}{}
+	设$Q^{\prime}\in\Quad_{A}\left(E\right)$.若存在$F\in\Bil_{A}\left(E\right)$使得$\forall x\in E\left(Q^{\prime}\left(x\right)=Q\left(x\right)+F\left(x,x\right)\right)$,则
+	\begin{enumerate}
+		\item $\lambda_{F}\left(\mathrm{I}\left(Q\right)\right)=\mathrm{I}\left(Q^{\prime}\right)$,
+		\item $\lambda_{F}$诱导了$A$-模同构$\bar{\lambda}_{F}:\Cl\left(E,Q^{\prime}\right)\to\Cl\left(E,Q\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{lemma}{}{}
+	设$Q\in\Quad_{A}\left(E\right)$.若$Q=0$,则$\Cl\left(E,Q\right)=\bigwedge E$.
+\end{lemma}
+
+\begin{theorem}{}{}
+	设$E$是自由$A$-模,基是$\left(e_{i}\right)_{i\in I}$,其中$I$配备了全序$\leq$.对每个$H\in\fin\left(I\right)$,定义$e_{H}$如下:
+	\begin{itemize}
+		\item 若$H=\emptyset$,则$x_{H}=1$;
+		\item 若$H=\left\{h_{1},\ldots,h_{p}\right\}$,其中$p\geq 1$且$h_{1}<\ldots<h_{q}$,则$x_{H}=\rho\left(x_{h_{1}}\right)\ldots\rho\left(x_{h_{q}}\right)$,
+	\end{itemize}
+	那么$\left(x_{H}\right)_{H\in\fin\left(I\right)}$是$\Cl\left(E,Q\right)$的基.
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$E$是$n$维自由$A$-模.
+	\begin{enumerate}
+		\item $\Cl\left(E,Q\right)$是$2^{n}$维自由$A$-模.
+		\item 当$n>0$时,$\dim\Cl^{+}\left(E,Q\right)=\dim\Cl^{-}\left(E,Q\right)=2^{n-1}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E$是自由$A$-模,则典范映射$E\to\Cl\left(E,Q\right)$和$A\to\Cl\left(E,Q\right)$都是单射.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E_{1},E_{2}$是$E$的子模,$E=E_{1}\oplus E_{2}$,对每个$i\in\left\{1,2\right\}$记$Q_{i}=Q|_{E_{i}\times E_{i}}$,$p_{i}:\Cl\left(E,Q_{i}\right)\to\Cl\left(E,Q\right)$是典范映射.
+	\begin{enumerate}
+		\item $p\coloneq p_{1}\otimes p_{2}$是$A$-模同构.
+		\item 设$E_{1}$和$E_{2}$关于$\varphi$正交.定义$\Cl\left(E,Q_{1}\right)\otimes_{A}\Cl\left(E,Q_{2}\right)$上的分次张量积乘法如下:
+		\begin{quote}
+			对每个$i\in\left\{1,2\right\}$和$a_{i},b_{i}\in\Cl\left(E,Q_{i}\right)$,有$\left(a_{1}\otimes a_{2}\right)\cdot\left(b_{1}\otimes b_{2}\right)\coloneq\varepsilon\left(a_{1}b_{1}\right)\otimes\left(a_{2}b_{2}\right)$,其中
+			\begin{align*}
+				\varepsilon=
+				\begin{cases}
+					-1,&b_{1}\text{和}a_{2}\text{是奇元}\\
+					1,&\text{其他}
+				\end{cases}
+			\end{align*}
+		\end{quote}
+		那么$\Cl\left(E,Q\right)$同构于$\Cl\left(E,Q_{1}\right)$和$\Cl\left(E,Q_{2}\right)$的分次张量积.
+	\end{enumerate}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

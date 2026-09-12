@@ -1,0 +1,144 @@
+\section{矩阵的子式}
+
+记号约定:$A$是交换环,$M,N$是$A$-模,$I,J$是全序集.
+
+\begin{definition}{}{}
+	设$X$是集合,$\boldsymbol{X}\coloneq\left(\xi_{i,j}\right)_{i\in I,j\in J}$是$X$上的$\left(I,J\right)$-型矩阵.对每个$p\in\N$和$I\in\fin_{p}\left(I\right),K_{p}\in\fin_{p}\left(J\right)$,记
+	\begin{align*}
+		\phi_{p}:H_{p}\to K_{p}
+	\end{align*}
+	为序同构,并定义$p$阶方阵$\boldsymbol{X}_{H_{p},K_{p}}\coloneq\left(\xi_{i,\phi_{p}\left(j\right)}\right)_{i,j\in H_{p}}$.
+\end{definition}
+
+\begin{definition}{$p$阶子式}{}
+	设$\boldsymbol{X}$是$A$上的$\left(I,J\right)$-型矩阵,$p\in\N$.对每个$H\in\fin_{p}\left(I\right),K_{p}\in\fin_{p}\left(J\right)$,称$\det\left(\boldsymbol{X}_{H_{p},K_{p}}\right)$是$\boldsymbol{X}$关于$H,K$的$p$阶子式.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$p>0$,$\left(e_{j}\right)_{j\in J}$是$M$的基,$\left(e_{H}\right)_{H\in\fin_{p}\left(I\right)}$是$\bigwedge\limits^{p}\left(M\right)$的典范基.若
+	\begin{itemize}
+		\item $\boldsymbol{X}\coloneq\left(\xi_{j,i}\right)_{j\in J,i\in I}$是$A$上的矩阵,
+		\item $\left(x_{i}\right)_{i=1}^{p}$是$M$中的序列,对每个$1\leq i\leq n$有$x_{i}=\sum\limits_{j\in J}\xi_{j,i}e_{j}$,
+	\end{itemize}
+	那么$x_{1}\wedge\ldots\wedge x_{p}=\sum\limits_{H\in\fin_{p}\left(J\right)}\det\left(\boldsymbol{X}_{H,I}\right)e_{H}$.
+\end{proposition}
+
+\begin{proposition}{线性映射的$p$阶外幂在典范基下的表示矩阵}{matrix-representation-of-p-th-exterior-power-of-linear-mappings}
+	设$M$的基为$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{m}$,$N$的基为$\mathcal{C}\coloneq\left(f_{j}\right)_{j=1}^{n}$,$u\in\Hom_{A}\left(M,N\right)$,$\boldsymbol{X}=\left[u\right]_{\mathcal{B}}^{\mathcal{C}}$.则对每个$p\leq\inf\left(m,n\right)$,
+	\begin{align*}
+		\bigwedge\limits^{p}\left(u\right):\bigwedge\limits^{p}\left(M\right)\to\bigwedge\limits^{p}\left(N\right)
+	\end{align*}
+	关于$\left(e_{K}\right)_{K\in\fin_{p}\left(\left[1,m\right]\right)}$和$\left(f_{H}\right)_{H\in\fin_{p}\left(\left[1,n\right]\right)}$的表示矩阵为$\left(\det\left(\boldsymbol{X}_{H,K}\right)\right)_{H\in\fin_{p}\left(\left[1,m\right]\right),K\in\fin_{p}\left(\left[1,n\right]\right)}$.
+\end{proposition}
+
+\begin{definition}{矩阵的$p$阶外幂}{}
+	沿用命题(\ref{prop:matrix-representation-of-p-th-exterior-power-of-linear-mappings})的设定,固定$p\leq\inf\left(m,n\right)$.我们把$\bigwedge^{p}\left(\boldsymbol{X}\right)\coloneq\left(\det\left(\boldsymbol{X}_{H,K}\right)\right)_{H\in\fin_{p}\left(\left[1,m\right]\right),K\in\fin_{p}\left(\left[1,n\right]\right)}$称为$\boldsymbol{X}$的$p$阶外幂.
+\end{definition}
+
+\begin{remark}{$p$阶外幂与行列式}{}
+	当$p=m=n$时,我们有$\bigwedge\limits^{p}\left(\boldsymbol{X}\right)=\det\left(\boldsymbol{X}\right)$.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$M$是$n$维自由模,则对每个$u\in\End_{A}\left(M\right)$和$\xi,\eta\in A$,有$\det\left(\xi\id_{M}+\eta u\right)=\sum\limits_{k=0}^{n}\tr\left(\bigwedge\limits^{k}\left(u\right)\right)\xi^{n-k}\eta^{k}$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$M$是$n$维自由模,则对每个$u\in\End_{A}\left(M\right)$有$\tr\left(\bigwedge\left(u\right)\right)=\det\left(\id_{M}+u\right)$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

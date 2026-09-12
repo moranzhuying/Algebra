@@ -1,0 +1,37 @@
+\section{证明}
+
+\begin{definition}{形式推导文本,形式证明}{}
+	在理论$\mathcal{T}$中,一个\textbf{形式推导文本}由以下两部分组成:
+	\begin{enumerate}
+		\item 一个语法构造序列,称为辅助语法构造序列.
+		\item \textbf{形式证明}.这是一个公式序列$\boldsymbol{R}_{1},\ldots,\boldsymbol{R}_{k}$,其中的每个公式$\boldsymbol{R}_{i}$都在辅助语法构造序列中出现,并且满足如下三个条件之一:
+		\begin{itemize}
+			\item $\boldsymbol{R}_{i}$是理论$\mathcal{T}$的一个显式公理.
+			\item $\boldsymbol{R}_{i}$是理论$\mathcal{T}$的一个隐式公理.
+			\item 该公式序列中存在先于$\boldsymbol{R}_{i}$出现的两个公式$\boldsymbol{S}$和$\boldsymbol{T}$,使得$\boldsymbol{T}$为$\boldsymbol{S}\implies\boldsymbol{R}_{i}$.
+		\end{itemize}
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{理论中的定理}{}
+	若一个公式在理论$\mathcal{T}$的某个形式证明中出现过,则称该公式为$\mathcal{T}$中的一个\textbf{定理}(或\textbf{形式真命题},\textbf{命题},\textbf{引理},\textbf{推论}).
+\end{definition}
+
+\begin{definition}{满足与解}{}
+	设$\boldsymbol{R}$是理论$\mathcal{T}$的一个公式,$\boldsymbol{x}$是$\mathcal{T}$的字母,$\boldsymbol{T}$是$\mathcal{T}$的一个项.若$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$中的一个定理,则称$\boldsymbol{T}$\textbf{满足}公式$\boldsymbol{R}$(或者称$\boldsymbol{T}$是公式$\boldsymbol{R}$关于字母$\boldsymbol{x}$的一个\textbf{解}).		
+\end{definition}
+
+\begin{definition}{假命题}{}
+	若理论$\mathcal{T}$的公式$\boldsymbol{R}$满足$\neg\boldsymbol{R}$是定理,则称$\boldsymbol{R}$在$\mathcal{T}$中是\textbf{假}的(或称$\boldsymbol{R}$是\textbf{可驳斥的}).
+\end{definition}
+
+\begin{definition}{理论的不一致性}{}
+	若理论$\mathcal{T}$中有一个公式$\boldsymbol{R}$满足$\boldsymbol{R}$和$\neg\boldsymbol{R}$都是$\mathcal{T}$中的定理,则称$\mathcal{T}$是\textbf{不一致}的 ,否则称$\mathcal{T}$是\textbf{一致}的.
+\end{definition}
+
+为了简化和缩短形式证明的步骤,我们在元语言中引入一系列演绎准则.
+
+\begin{metatheorem}{肯定前件律}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$的公式.若$\boldsymbol{A}$和$\boldsymbol{A}\implies\boldsymbol{B}$都是$\mathcal{T}$的定理,则$\boldsymbol{B}$是$\mathcal{T}$的定理.
+\end{metatheorem}
+

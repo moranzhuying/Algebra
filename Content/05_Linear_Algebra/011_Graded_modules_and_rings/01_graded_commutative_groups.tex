@@ -1,0 +1,67 @@
+\chapter{分次模和分次环}
+
+\section{分次交换群}
+
+记号约定:$G$是交换群(加法记号),$\Delta,\Delta^{\prime}$是集合.
+
+\begin{definition}{$\Delta$型分次,$\Delta$型分次交换群}{}
+	设$\left(G_{\lambda}\right)_{\lambda\in\Delta}$是$G$的一族子群.若$G=\bigoplus\limits_{\lambda\in\Delta}G_{\lambda}$,则称$\left(G_{\lambda}\right)_{\lambda\in\Delta}$是$G$的一个$\Delta$型分次,配备该分次的$G$称为$\Delta$型分次交换群.
+\end{definition}
+
+\begin{definition}{次数(权),次数集,齐次元,齐次分量}{}
+	设$\left(G_{\lambda}\right)_{\lambda\in\Delta}$是$G$的一个$\Delta$型分次.
+	\begin{enumerate}
+		\item $\Delta$称为次数集.
+		\item 设$x\in G$.若$\mu\in\Delta$且$x\in G_{\mu}$,则称$x$是$\lambda$次齐次元,称$\mu$是$x$的次数(或权).
+		\item 设$y\in G$且$y=\sum\limits_{\lambda\in\Delta}y_{\lambda}$,其中$\left(y_{\lambda}\right)_{\lambda\in\Delta}$是$\prod\limits_{\lambda\in\Delta}G_{\lambda}$的元素.对每个$\lambda\in\Delta$,称$y_{\lambda}$是$y$的$\lambda$次(齐次)分量.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{术语说明}{}
+	当使用术语``权''代替``次数''时,``齐次''一词相应地被替换为``等权''.
+\end{remark}
+
+\begin{example}{分次的例子:$\Delta$型平凡分次}{}
+	设$\Delta$是交换幺半群(加法记号),$\left(G_{\lambda}\right)_{\lambda\in\Delta}$是$G$的$\Delta$型分次,其中$G_{\lambda}=
+	\begin{cases}
+		G,&\lambda=0\\
+		\left\{0\right\},&\lambda\neq 0
+	\end{cases}$.我们称该分次为$\Delta$型平凡分次.
+\end{example}
+
+\begin{example}{分次的例子:诱导分次,相反分次}{}
+	设$\rho\in\Hom_{\mathsf{Set}}\left(\Delta,\Delta^{\prime}\right)$,$\left(G_{\lambda}\right)_{\lambda\in\Delta}$是$G$的$\Delta$型分次.对诸$\mu\in\Delta^{\prime}$,定义$G_{\mu}^{\prime}=\bigoplus\limits_{\rho\left(\lambda\right)=\mu}G_{\lambda}$,则$\left(G_{\mu}^{\prime}\right)_{\mu\in\Delta}$是$G$的一个$\Delta^{\prime}$型分次,称为$\rho$诱导的分次.特别地,当$\Delta^{\prime}=\Delta$且$\Delta$是交换群(加法记号),$\rho=-\id_{\Delta}$时,称$\left(G_{\mu}^{\prime}\right)_{\mu\in\Delta}$为$\left(G_{\lambda}\right)_{\lambda\in\Delta}$的相反分次.
+\end{example}
+
+\begin{example}{分次的例子:双重分次}{}
+	设$\Delta_{1},\Delta_{2}$是集合,$\Delta=\Delta_{1}\times\Delta_{2}$,$\left(G_{\lambda,\mu}\right)_{\left(\lambda,\mu\right)\in\Delta}$是$G$的$\Delta$型分次.
+	\begin{itemize}
+		\item 我们称$\left(G_{\lambda,\mu}\right)_{\left(\lambda,\mu\right)\in\Delta}$是$G$的$\Delta_{1},\Delta_{2}$型双重分次.
+		\item 定义$G$上的分次$\left(G_{\lambda}^{\prime}\right)_{\lambda\in\Delta_{1}},\left(G_{\mu}^{\prime\prime}\right)_{\mu\in\Delta_{2}}$如下:对诸$\lambda\in\Delta_{1},G_{\lambda}^{\prime}=\bigoplus\limits_{\mu\in\Delta_{2}}G_{\lambda,\mu}$;对诸$\mu\in\Delta_{2},G_{\mu}^{\prime\prime}=\bigoplus\limits_{\mu\in\Delta_{1}}G_{\lambda,\mu}$.这两个分次称为$\Delta_{1},\Delta_{2}$型双重分次$\left(G_{\lambda,\mu}\right)_{\left(\lambda,\mu\right)\in\Delta}$的偏分次.
+	\end{itemize}
+\end{example}
+
+\begin{proposition}{双重分次和偏分次的等价刻画}{}
+	设$\Delta_{1},\Delta_{2}$是集合,$\Delta=\Delta_{1}\times\Delta_{2}$.
+	\begin{enumerate}
+		\item 若$\left(G_{\lambda,\mu}\right)_{\left(\lambda,\mu\right)\in\Delta}$是$G$的双重分次,$\left(G_{\lambda}^{\prime}\right)_{\lambda\in\Delta_{1}},\left(G_{\mu}^{\prime\prime}\right)_{\mu\in\Delta_{2}}$是其偏分次,则$\forall\left(\lambda,\mu\right)\in\Delta\left(G_{\lambda}^{\prime}\cap G_{\mu}^{\prime\prime}=G_{\lambda,\mu}\right)$.
+		\item 设$\left(G_{\lambda}^{\prime}\right)_{\lambda\in\Delta_{1}},\left(G_{\mu}^{\prime\prime}\right)_{\mu\in\Delta_{2}}$是$G$的分次,$G=\bigoplus\limits_{\left(\lambda,\mu\right)\in\Delta}$.对任一$\left(\lambda,\mu\right)\in\Delta$,定义$G_{\lambda,\mu}=G_{\lambda}^{\prime}\cap G_{\mu}^{\prime\prime}$,则$\left(G_{\lambda,\mu}\right)_{\left(\lambda,\mu\right)\in\Delta}$是$G$的分次,并且$\left(G_{\lambda}^{\prime}\right)_{\lambda\in\Delta_{1}},\left(G_{\mu}^{\prime\prime}\right)_{\mu\in\Delta_{2}}$是$\left(G_{\lambda,\mu}\right)_{\left(\lambda,\mu\right)\in\Delta}$的偏分次.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{分次的例子:多重分次及其全分次}{}
+	设$\Delta_{0}$是交换幺半群(加法记号),$I$是集合,$\Delta=\Delta_{0}^{\left(I\right)}$,$\rho:\Delta\to\Delta_{0}$是余对角映射.
+	\begin{itemize}
+		\item $G$上的$\Delta$型分次称为$\Delta$型多重分次.
+		\item 若$\left(G_{\lambda}\right)_{\lambda\in\Delta}$是$G$的$\Delta$型多重分次,则称$\rho$诱导的$\Delta_{0}$型分次是该多重分次的全分次.
+	\end{itemize}	
+\end{definition}
+
+\begin{remark}{非交换群的分次}{}
+	上述所有定义与性质均可直接推广至非交换群$G$,只需将定义中的条件作如下修正:
+	\begin{itemize}
+		\item 直和$\mapsto$限制和.
+		\item $\left(G_{\lambda}\right)_{\lambda\in\Delta}$是$G$的一族子群$\mapsto$ $\left(G_{\lambda}\right)_{\lambda\in\Delta}$是$G$的一族正规子群.
+		\item 对任一$\lambda,\mu\in\Delta$,当$\lambda\neq\mu$时$G_{\lambda}$和$G_{\mu}$中的元素可以交换.
+	\end{itemize}
+\end{remark}

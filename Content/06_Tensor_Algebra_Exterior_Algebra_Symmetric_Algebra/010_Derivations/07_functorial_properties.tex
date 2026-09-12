@@ -1,0 +1,82 @@
+\section{导子的函子性}
+
+记号约定:本节中,所有提到的代数都是含幺结合代数,所有代数同态都是含幺代数同态.
+
+\begin{proposition}{导子的拉回}{pullback-of-derivation}
+	设$A,B$是分次$K$-代数,$A$是$\left(A,A\right)$-双模,$F$是分次$\left(B,B\right)$-双模,$\rho:A\to B$是分次代数同态,$\theta:E\to\rho^{\ast}\left(F\right)$是$0$次分次$A$-双模同态,$\epsilon$是交换因子.
+	\begin{enumerate}
+		\item 对每个$\epsilon$-导子$d^{\prime}:B\to F$,映射$d^{\prime}\circ\rho$是$\deg\left(d^{\prime}\right)$次$\epsilon$-导子.
+		\item 对每个$\epsilon$-导子$d:A\to E$,映射$\rho\circ d$是$\deg\left(d\right)$次$\epsilon$-导子.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{导子交换性的生成系检验}{}
+	沿用命题(\ref{prop:pullback-of-derivation})的记号,设$S$是$A$的生成系,$d^{\prime}:B\to F$和$d:A\to e$是$\epsilon$-导子,则$d^{\prime}\circ\rho=\theta\circ d\iff \left(d^{\prime}\circ\rho\right)|_{S}=\left(\theta\circ d\right)|_{S}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	沿用命题(\ref{prop:pullback-of-derivation})的记号,设$B$通过$\rho$成为$\left(A,A\right)$-双模,$d:\rho^{\ast}\left(B\right)\to\rho^{\ast}\left(F\right)$是$\epsilon$-导子.
+	\begin{enumerate}
+		\item $d$相对于$\rho^{\ast}\left(B\right)$和$\rho^{\ast}\left(F\right)$的左$A$-模结构是左$A$-线性映射$\iff$ $d|_{\rho\left(A\right)}=0$.
+		\item $d$相对于$\rho^{\ast}\left(B\right)$和$\rho^{\ast}\left(F\right)$的右$A$-模结构是右$A$-线性映射$\iff$ $d|_{\rho\left(A\right)}=0$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{相对导子模}{}
+	设$B$是$K$-代数,$F$是$B$-双模,$\rho\in\Hom_{K-\mathsf{Alg}}\left(A,B\right)$.
+	\begin{enumerate}
+		\item 从$B$到$F$的所有导子构成的$K$-模记作$\Der_{K}\left(B,F\right)$,称之为导子模.
+		\item $\Der_{K}\left(B,F\right)$的$K$-子模$\Der_{A,\rho}\left(B,F\right)\coloneq\left\{\phi\in\Der_{K}\left(B,F\right)\middle|\phi|_{\rho\left(A\right)}=0\right\}$称为相对$A$的导子模.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{导子的基本正合列}{}
+	设$A,B,C$是分次$K$-导数,$\rho:A\to B$和$\sigma:B\to C$是分次$K$-代数同态,$G$是分次$\left(C,C\right)$-双模,则
+	\begin{align*}
+		0\xlongrightarrow{}\Der_{B}\left(B,\sigma_{\ast}\left(G\right)\right)\xlongrightarrow{u}\Der_{A}\left(C,\sigma_{\ast}\left(\rho_{\ast}\left(G\right)\right)\right)\xlongrightarrow{v}\Der_{A}\left(B,\sigma_{\ast}\left(G\right)\right)
+	\end{align*}
+	是$K$-线性映射的正合列,其中$u$是典范单射,$v=\Hom\left(\id,\sigma\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

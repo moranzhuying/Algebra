@@ -1,0 +1,63 @@
+\section{八元数}
+
+记号约定:$A$是交换环,$E$是$A$上的$\left(\alpha,\beta,\gamma\right)$型四元数代数,其单位元是$e$,共轭映射是$s$,$\delta\in A$.
+
+\begin{definition}{八元数代数}{}
+	我们称$\left(E,s\right)$通过$\delta$进行的Cayley扩张$F$是$A$上的$\left(\alpha,\beta,\gamma,\delta\right)$型八元数代数.
+\end{definition}
+
+接下来的内容中默认$F$是$A$上的$\left(\alpha,\beta,\gamma,\delta\right)$型八元数代数.
+
+\begin{proposition}{八元数的典范基,八元数的共轭,迹,范数}{}
+	$F$有一个基$\left(e_{i}\right)_{i=0}^{7}$,其中$\left(e,i,j,k\right)$是$E$的典范基,而
+	\begin{gather*}
+		e_{0}=\left(e,0\right),e_{1}=\left(i,0\right),e_{2}=\left(j,0\right),e_{3}=\left(k,0\right),\\
+		e_{4}=\left(0,e\right),e_{5}=\left(0,i\right),e_{6}=\left(0,j\right),e_{7}=\left(0,k\right).
+	\end{gather*}
+	可以验证$e_{0}$是$F$的单位元.进一步,若$u=\sum\limits_{i=0}^{7}\xi_{i}e_{i}\in F$,则
+	\begin{gather*}
+		\bar{u}=\left(\xi_{0}+\beta\xi_{1}\right)e_{0}-\sum\limits_{i=1}^{7}\xi_{i}e_{i},\\
+		\mathrm{T}_{F}\left(u\right)=2\xi_{0}+\beta\xi_{1},\\
+		\mathrm{N}_{F}\left(u\right)=\xi_{0}^{2}+\beta\xi_{0}\xi_{1}-\alpha\xi_{1}^{2}-\gamma\left(\xi_{2}^{2}+\beta\xi_{1}\xi_{2}-\alpha\xi_{3}^{2}\right)-\delta\left(\xi_{4}^{2}+\beta\xi_{4}\xi_{5}-\alpha\xi_{5}^{2}\right)+\gamma\delta\left(\xi_{6}^{2}+\beta\xi_{6}\xi_{7}-\alpha\xi_{7}^{2}\right).
+	\end{gather*}
+	特别地,若$F$是$\left(-1,0,-1,-1\right)$型八元数代数,则
+	\begin{align*}
+		\bar{u}=\xi_{0}e_{0}-\sum\limits_{i=1}^{7}\xi_{i}e_{i},\mathrm{T}_{F}\left(u\right)=2\xi_{0},\mathrm{N}_{F}\left(u\right)=\sum\limits_{i=0}^{7}\xi_{i}^{2}.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{迹的结合性恒等式}{}
+	对每个$u,v,w\in F$有$\mathrm{T}_{F}\left(\left(uv\right)w\right)=\mathrm{T}_{F}\left(u\left(vw\right)\right)$.
+\end{proposition}
+
+\begin{definition}{Cayley八元数代数}{}
+	我们称$\R$上的$\left(-1,0,-1,-1\right)$型八元数代数为Cayley八元数代数,记作$\mathbb{O}$.
+\end{definition}
+
+\begin{remark}{}{}
+	Cayley八元数代数中每个非零元素都是可逆的(换言之,$\mathbb{O}$是可除代数).
+\end{remark}
+
+\begin{proposition}{八元数代数的基的群结构}{}
+	设$F$是$\left(-1,0,-1,-1\right)$型八元数代数,则
+	\begin{enumerate}
+		\item 存在$3$维$\Z/2\Z$-向量空间$V$和双射$V\to\left\{e_{0},\ldots,e_{7}\right\},\lambda\mapsto e_{\lambda}^{\prime}$,使得$e_{0}^{\prime}=e_{0}$且$\forall\lambda,\mu\in V\left(e_{\lambda}^{\prime}e_{\mu}^{\prime}=\pm e_{\lambda+\mu}^{\prime}\right)$.
+		\item 设$\lambda,\mu,\nu\in V$.
+		\begin{enumerate}
+			\item 若$\lambda,\mu,\nu$是$\Z/2\Z$-线性相关的,则$e_{\lambda}^{\prime}\left(e_{\mu}^{\prime}e_{\nu}^{\prime}\right)=\left(e_{\lambda}^{\prime}e_{\mu}^{\prime}\right)e_{\nu}^{\prime}$.
+			\item 若$2\cdot 1_{A}\neq 0_{A}$,$e_{\lambda}^{\prime}\left(e_{\mu}^{\prime}e_{\nu}^{\prime}\right)=\left(e_{\lambda}^{\prime}e_{\mu}^{\prime}\right)e_{\nu}^{\prime}$,则$\lambda,\mu,\nu$是$\Z/2\Z$-线性相关的.
+		\end{enumerate}
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+

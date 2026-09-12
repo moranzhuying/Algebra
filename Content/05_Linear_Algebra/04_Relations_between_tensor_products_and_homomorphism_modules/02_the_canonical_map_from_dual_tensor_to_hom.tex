@@ -1,0 +1,51 @@
+\section{从对偶张量积到线性映射模的典范映射}
+
+记号约定:$A,B$是环,$E$是左$A$-模,$F$是左$B$-模,$G$是$\left(A,B\right)$-双模.
+
+\begin{proposition}{}{}
+	$\Hom_{A}\left(E\otimes_{A}G\right)\otimes_{B}F\to\Hom_{A}\left(E,G\otimes_{A}F\right),u\otimes y\mapsto\left[x\mapsto u\left(x\right)\otimes y\right]$是典范的$\Z$-线性映射.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\nu:\Hom_{A}\left(E\otimes_{A}G\right)\otimes_{B}F\to\Hom_{A}\left(E,G\otimes_{A}F\right)$是典范映射.
+	\begin{enumerate}
+		\item 若$F$是投射模(相对的,有限生成投射模),则$\nu$是单射(相对的,双射).
+		\item 若$E$是有限生成的投射摸,则$\nu$是双射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	当$B=A,G={}_{s}A_{d}$时,将$\nu$典范地等同于$\theta:E^{\vee}\otimes_{A}F\to\Hom_{A}\left(E,F\right),x^{\ast}\otimes y\mapsto x^{\ast}\left(x\right)y$,则
+	\begin{enumerate}
+		\item 若$F$是投射模(相对的,有限生成的投射模),则$\theta$是单射(相对的,双射).
+		\item 若$E$是有限生成的投射摸,则$\theta$是双射.
+	\end{enumerate}
+	进一步,记$\theta_{E}:E^{\vee}\otimes_{A}E\to\End_{A}\left(E\right)$是典范映射,则$E$是投射模$\iff$ $\id_{E}\in\im\left(\theta_{E}\right)$.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$B=A,G={}_{s}A_{d}$,$\left(e_{i}\right)_{i\in I}$是$E$的有限基,其对偶基为$\left(e_{i}^{\ast}\right)_{i\in I}$.记$\theta:E^{\vee}\otimes_{A}F\to\Hom_{A}\left(E,F\right)$为典范映射.
+	\begin{enumerate}
+		\item 对任一$u\in\Hom_{A}\left(E,F\right)$有$\theta_{E}^{-1}\left(u\right)=\sum\limits_{i\in I}\left(e_{i}^{\ast}\otimes u\left(e_{i}\right)\right)$.
+		\item 特别地,$\theta_{E}^{-1}\left(\id_{E}\right)=\sum\limits_{i\in I}\left(e_{i}^{\ast}\otimes e_{i}\right)$,它和$\left(e_{i}\right)_{i\in I}$的选取无关.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$B=A,G={}_{s}A_{d},E=F$.定义$E^{\vee}\otimes_{A}F$上的乘法为$\left(x^{\ast}\otimes x,y^{\ast}\otimes y\right)\mapsto y^{\ast}\left(x^{\ast}\left(x\right)\right)\otimes x$,则典范映射
+	\begin{align*}
+		\theta_{E}:E^{\vee}\otimes_{A}E\to\End_{A}\left(E\right)
+	\end{align*}
+	是环同构.
+\end{proposition}
+
+\begin{remark}{}{}
+	设$E$是右$A$-模.则有典范的$\Z$-模同态$\theta^{\prime}:E\otimes_{A}F\to\Hom_{A}\left(E^{\vee},F\right),x\otimes y\mapsto\left[x^{\ast}\mapsto x^{\ast}\left(x\right)y\right]$.进一步:
+	\begin{enumerate}
+		\item 若$E,F$都是投射摸,则$\theta^{\prime}$是单射.
+		\item 若$E$是有限生成的投射模,则$\theta^{\prime}$是双射.
+	\end{enumerate}
+\end{remark}
+
+
+

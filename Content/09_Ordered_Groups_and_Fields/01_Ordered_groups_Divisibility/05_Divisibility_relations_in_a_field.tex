@@ -1,0 +1,120 @@
+\section{域中的整除关系}
+
+记号约定:$A$是整环,$K=\Frac\left(A\right)$,$\iota:A\to K$是典范嵌入.
+
+\begin{definition}{整环的分式域的单位群上的整除关系}{}
+	记$P=A\setminus\left\{0\right\}$.定义$K^{\times}$的预序$\mid$如下:$\forall x,y\in K^{\times}\left(x\mid y\iff x^{-1}y\in\iota\left(P\right)\right)$,则$\left(K^{\times},\cdot,\mid\right)$是预序群.
+	\begin{enumerate}
+		\item 我们称$\mid$是$K^{\times}$中相对$A$的整除关系.
+		\item 设$x,y\in K^{\times}$.若$x\mid y$,则称(相对环$A$而言)$x$整除$y$,或$x$是$y$的因子,$y$是$x$的倍数.
+		\item 设$x,y\in K^{\times}$,记$x\nmid y$为$\neg\left(x\mid y\right)$的简写.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\iota\left(P\right)$的元素恰好是$1_{K}$的倍数组成的集合.如果我们取$A=K$,那么对每个$x,y\in K^{\times}$有$x\mid y$.
+		\item 设$p,q\in\mathbb{P}$.记$\Z_{\left(p\right)}$(相对的,$\Z_{\left(q\right)}$)是$\Q$中分母不是$p$(相对的,$q$)的倍数的有理数组成的集合,那么$\Q^{\times}$相对于这两个子环的整除关系并不同.例如,$\frac{p}{q}$相对$\Z_{\left(p\right)}$的整除是$1$的倍数,但相对$\Z_{\left(q\right)}$则不是.
+		\item 我们有时会把$\mid$的定义扩展到$K$中:对每个$x,y\in K$,定义$x\mid y\iff x^{-1}y\in\im\left(\iota\right)$.相应的,我们把关于整除的术语也扩充到$K$上.此时,
+		\begin{gather*}
+			\forall x\in K\left(x\mid 0\right),\\
+			\forall x,y,z\in K\left(x\mid y\wedge x\mid z\implies x\mid\left(y-z\right)\right),\\
+			\forall x,y,z\in K\left(x\mid y\wedge x\nmid z\implies x\nmid\left(y-z\right)\right).
+		\end{gather*}
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{相伴,严格整除,严格因子}{}
+	记$A^{\ast}=\left\{x\in K^{\times}\middle|x\mid 1\wedge 1\mid x\right\}$,则$K^{\times}/A^{\ast}$按$K^{\times}$的整除诱导的偏序$\leq$构成有序群.设$x,y\in K^{\times}$.
+	\begin{enumerate}
+		\item 若$x$和$y$都属于$A^{\ast}$的同一个陪集,则称$x$和$y$相伴,记作$x\sim y$.
+		\item 若$x\mid y$且$y\nmid x$,则称$x$严格整除$y$(或$x$是$y$的严格因子,$y$是$x$的严格倍数).
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 由于$K$是域,因此$\left(K^{\times}/A^{\ast},+,\leq\right)$是定向群.
+		\item $x\sim y$ $\iff$ $x$和$y$各自在$K$中的倍数组成的集合相同.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{主分数理想}{}
+	设$x\in K$.定义$\left(x\right)\coloneq\left\{\iota\left(z\right)x\in K\middle|z\in A\right\}$.把$K$视为$A$-模,则$\left(x\right)$是$K$的$A$-子模.
+	\begin{enumerate}
+		\item 我们称$\left(x\right)$是$K$中相对$A$的主分数理想.
+		\item 我们称$A$作为环的理想是整理想.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$A\neq K$且$\left(x\right)\neq\left\{0\right\}$时,$\left(x\right)$不是$K$作为环的理想.
+		\item 当$x,y,z\in K$时,若$x\in\left(y\right)$,则记$x\equiv 0\pmod{y}$;若$x-y\in\left(z\right)$,则记$x\equiv y\pmod{z}$.因此
+		\begin{align*}
+			\forall x,x^{\prime},y\in K\forall z\in A\left(x\equiv x^{\prime}\pmod{y}\implies\iota\left(z\right)x\equiv\iota\left(z\right)x^{\prime}\pmod{\iota\left(z\right)y}\right).
+		\end{align*}
+		\item 记$\mathscr{P}^{\ast}\left(K\right)$是$K$中所有非零主分数理想组成的集合,则$K^{\times}\to\mathscr{P}^{\ast}\left(K\right),x\mapsto\left(x\right)$是反序满射.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{主分数理想群}{}
+	定义$\mathscr{P}^{\ast}\left(K\right)$上的乘法为$\left(\left(x\right),\left(y\right)\right)\mapsto\left(xy\right)$,则$\left(\mathscr{P}^{\ast}\left(K\right),\cdot,\subseteq\right)$是有序群,称为$K$的主分数理想群.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 群同态$K^{\times}\to\mathscr{P}^{\ast}\left(K\right),x\mapsto\left(x\right)$诱导了典范双射$K^{\times}/A^{\ast}\to\mathscr{P}^{\ast}\left(K\right)$.我们通常把$K^{\times}/A^{\ast}$和$\mathscr{P}^{\ast}\left(K\right)$等同起来.
+		\item 对于给定的$x,y\in\N$有$x\mid y\iff\left(x\right)\supseteq\left(y\right)\iff x\leq y$,这么来看,$\left(x\right)$比$\left(y\right)$更``大''.我们可以借助集合的基数来理解这里的反序:$\left(x\right)$包含于$\left(y\right)$表明$x$的倍数比$y$的倍数更多.回到一般的情形,我们有
+		\begin{align*}
+			\forall x,y\in K\left(x\mid y\iff\left(x\right)\supseteq\left(y\right)\right).
+		\end{align*}
+		此外,$\left(0\right)=\inf\mathscr{P}^{\ast}\left(K\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	定义乘法商群$K^{\times}/R^{\times}$上的关系$\leqslant$如下:
+	\begin{itemize}
+		\item $\forall x,y\in K^{\times}\left(xR^{\times}\leqslant y+R^{\times}\iff x\mid y\right)$.
+		\item $\forall x,y\in K^{\times}\left(xR^{\times}<yR^{\times}\iff x\mid y\wedge y\nmid x\right)$.
+	\end{itemize}
+	则$K^{\times}/R^{\times}$按$\leqslant$构成有序交换群和有向群,其正锥是$\left\{a+R^{\times}\middle|a\in K^{\times}\right\}$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

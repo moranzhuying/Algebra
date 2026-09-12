@@ -1,0 +1,164 @@
+\section{导出列,可解群}
+
+记号约定:$G,G^{\prime}$是群.
+
+\begin{definition}{导出列}{}
+	定义$G$的导出列$\left(G^{\left(n\right)}\right)_{n=0}^{\infty}$如下:$G^{\left(n\right)}=
+	\begin{cases}
+		G,&n=0,\\
+		D\left(G^{\left(n-1\right)}\right),&n\geq 1.
+	\end{cases}
+	$
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $\forall n\in\N\left(G^{\left(n\right)}\subseteq\gamma_{2^{n}}\left(G\right)\right)$.
+		\item 若$f\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$是满射,则$\forall n\in\N\left(f\left(G^{\left(n\right)}\right)=\left(G^{\prime}\right)^{\left(n\right)}\right)$.
+		\item $\left(G^{\left(n\right)}\right)_{n=0}^{\infty}$是$G$的一族特征子群,从而是一族正规子群.
+		\item $\left(G^{\left(n\right)}/G^{\left(n+1\right)}\right)_{n=0}^{\infty}$是一族Abel群.
+		\item 设$G$的一族递减的子群$\left(G_{n}\right)_{n=0}^{\infty}$满足$G_{0}=G$,对任一$n\in\N$,$G_{n+1}$是$G_{n}$的正规子群且$G_{n}/G_{n+1}$是Abel群,则
+		\begin{align*}
+			\forall n\in\N\left(G^{\left(n\right)}\subseteq G_{n}\right).
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{可解群}{}
+	若$\exists n\in\N\left(G^{\left(n\right)}=\left\{e\right\}\right)$,则称$G$为可解群,称$\min\left\{k\in\N\middle|G^{\left(k\right)}=\left\{e\right\}\right\}$为$G$的可解类.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item $G$是可解类为$0$(相对地,$\leq 1$)的可解群$\iff$ $\left|G\right|=1$(相对地,$G$是交换群).
+		\item 设$n\in\N$,若$G$是幂零类$\leq 2^{n}-1$的幂零,则$G$是可解类$\leq n$的可解群.
+		\item 设$n\in\N$,$G$是可解类$\leq n$的可解群,则$G$的子群和商群都是可解类$\leq n$的可解群.
+		\item 若$G$是可解类为$p$的可解群,$F$是可解类为$q$的可解群,则$G$通过$F$的扩张$E$是可解类$\leq p+q$的可解群.
+		\item 设$n\geq 1$,则$\mathfrak{S}_{n}$是可解群$\iff$ $n\leq 4$.
+		\item 设$A$是交换环,$n\in\N$,则$U_{n}\left(A\right)$是可解群,但不一定是幂零群.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{可解群的等价条件}{}
+	设$n\in\N$.下列陈述等价:
+	\begin{enumerate}
+		\item $G$是可解类$\leq n$的可解群.
+		\item $G$有递减正规子群族$\left(G^{i}\right)_{i=0}^{n}$,满足$G^{0}=G,G^{n}=\left\{e\right\}$,对诸$0\leq k\leq n$,$G^{k}/G^{k+1}$是Abel群.
+		\item $G$有递减子群族$\left(G^{i}\right)_{i=0}^{n}$,满足$G^{0}=G,G^{n}=\left\{e\right\}$,对诸$0\leq k\leq n$,$G^{k}$是$G^{k+1}$的正规子群,$G^{k}/G^{k+1}$是Abel群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$G$是有限群,则$G$可解$\iff$ $G$的每个Jordan-H\"older链的每个商因子都是素数阶循环群.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

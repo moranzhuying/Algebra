@@ -1,0 +1,130 @@
+\chapter{群扩张,可解群,幂零群}
+
+\section{群扩张}
+
+记号约定:$E,E^{\prime},F,F^{\prime},G,G^{\prime}$是群.
+
+\begin{definition}{群扩张}{}
+	设$i:F\hookrightarrow E$和$p:E\twoheadrightarrow G$是群同态.若$\im\left(i\right)=\ker\left(p\right)$,则称$\left(E,i,p\right)$是$G$被$F$的扩张,$p$的右逆和$r$的左逆分别称为该扩张的截面和收缩.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	对于$G$被$F$的扩张$\mathscr{E}\coloneq\left(E,i,p\right)$,我们有时候将其记作$\mathscr{E}:F\xlongrightarrow{i}E\xlongrightarrow{p}G$.
+\end{remark}
+
+\begin{theorem}{群扩张的结构特征}{}
+	$F\xlongrightarrow{i}E\xlongrightarrow{p}G$是扩张$\iff$ $E$有一个同构于$F$的正规子群$F^{\prime}$使得$E/F^{\prime}\simeq G$.
+\end{theorem}
+
+\begin{definition}{中心扩张}{}
+	设$F\xlongrightarrow{i}E\xlongrightarrow{p}G$是扩张.若$\im\left(i\right)\subseteq Z\left(E\right)$,则称该扩张为中心扩张.
+\end{definition}
+
+\begin{remark}{}{}
+	只有$F$是交换群时$F\xlongrightarrow{i}E\xlongrightarrow{p}G$才可能是中心扩张.
+\end{remark}
+
+\begin{definition}{扩张的态射}{}
+	设$\mathscr{E}:F\xlongrightarrow{i}E\xlongrightarrow{p}G$和$\mathscr{E}^{\prime}:F\xlongrightarrow{i^{\prime}}E^{\prime}\xlongrightarrow{p^{\prime}}G^{\prime}$是扩张.使下图交换的$u\in\Hom_{\mathsf{Grp}}\left(E,E^{\prime}\right)$称为$\mathscr{E}$到$\mathscr{E}^{\prime}$的态射.
+	\begin{center}
+		\begin{tikzcd}
+			& E & \\
+			F && G \\
+			& {E^{\prime}}
+			\arrow["p", two heads, from=1-2, to=2-3]
+			\arrow["u", from=1-2, to=3-2]
+			\arrow["i", hook', from=2-1, to=1-2]
+			\arrow["{i^{\prime}}"', hook, from=2-1, to=3-2]
+			\arrow["{p^{\prime}}"', two heads, from=3-2, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{definition}
+
+\begin{proposition}{扩张态射一定是同构}{}
+	设有扩张$\mathscr{E}:F\xlongrightarrow{i}E\xlongrightarrow{p}G$和$\mathscr{E}^{\prime}:F\xlongrightarrow{i^{\prime}}E^{\prime}\xlongrightarrow{p^{\prime}}G^{\prime}$.若存在$\mathscr{E}$到$\mathscr{E}^{\prime}$的态射$u$,则$u$是群同构此时称$\mathscr{E}$和$\mathscr{E}^{\prime}$同构.
+\end{proposition}
+
+\begin{proposition}{平凡扩张}{}
+	设$i:F\hookrightarrow F\times G$和$p:F\times G\twoheadrightarrow G$分别为典范嵌入和典范投影.同构于扩张$\mathscr{E}_{0}:F\xlongrightarrow{i^{\prime}}G\times G\xlongrightarrow{p^{\prime}}G$的扩张称为平凡扩张.
+\end{proposition}
+
+\begin{proposition}{平凡扩展的等价条件}{}
+	设$\mathscr{E}:F\xlongrightarrow{i}E\xlongrightarrow{p}G$是扩张.下列陈述等价:
+	\begin{enumerate}
+		\item $\mathscr{E}$是平凡扩张.
+		\item $\mathscr{E}$有一个收缩$r$.
+		\item $\mathscr{E}$有一个截面$s$,并且$\im\left(s\right)\subseteq C_{E}\left(\im\left(i\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{外半直积}{}
+	设$\tau\in\Hom_{\mathsf{Grp}}\left(G,\Aut_{\mathsf{Grp}}\left(F\right)\right)$.定义$G$在$F$上的作用为
+	\begin{align*}
+		{g}^{f}\coloneq\tau\left(g\right)\left(f\right),g\in G,f\in\Aut_{\mathsf{Grp}}\left(F\right).
+	\end{align*}
+	定义$F\times G$上的运算为$\left(\left(f,g\right),\left(f^{\prime},g^{\prime}\right)\right)\mapsto\left(f\cdot {}^{g}f,gg^{\prime}\right)$,则$F\times G$为群.称该群为$G$对$F$关于$\tau$的外半直积,记作$F\rtimes_{\tau}G$.
+\end{definition}
+
+\begin{proposition}{半直积的扩张}{}
+	设$\tau\in\Hom_{\mathsf{Grp}}\left(G,\Aut_{\mathsf{Grp}}\left(F\right)\right)$,则存在扩张$\mathscr{E}_{\tau}:F\xlongrightarrow{i}F\rtimes_{\tau}G\xlongrightarrow{p}G$,它有典范截面$s\left(g\right)=\left(e,g\right)$.
+\end{proposition}
+
+\begin{proposition}{带截面扩张的分类}{}
+	设扩张$\mathscr{E}^{\prime}:F\xlongrightarrow{i^{\prime}}E^{\prime}\xlongrightarrow{p^{\prime}}G$有截面$s^{\prime}$.定义$G$在$F$上的作用$\tau$如下:
+	\begin{align*}
+		i^{\prime}\left(\tau\left(g,f\right)\right)=s^{\prime}\left(g\right)i^{\prime}\left(f\right)s^{\prime}\left(g\right)^{-1},\forall g\in G,\forall f\in F,
+	\end{align*}
+	则存在$\mathscr{E}^{\prime}$到$\mathscr{E}_{\tau}$的同构$u$,并且$u\circ s=s^{\prime}$.
+\end{proposition}
+
+\begin{definition}{内半直积}{}
+	设$H$是$G$的正规子群,$K$是$G$的子群.若$H\cap K=\left\{e\right\}$且$HK=G$,则称$G$为$K$和$H$的半直积,并记$H\rtimes K\coloneq G$.
+\end{definition}
+
+\begin{example}{$G$-齐性主空间和自同构}{}
+	设$E$是$G$-齐性主空间,$A=\left\{f\in\mathfrak{S}_{E}\middle|\forall\gamma\in\Aut_{\mathsf{Grp}}\left(G\right)\forall b\in E\forall g\in G\left(f\left(gb\right)=\gamma\left(g\right)f\left(b\right)\right)\right\}$,则$A$是群,并且存在扩张
+	\begin{align*}
+		G\xlongrightarrow{}A\xlongrightarrow{}\Aut_{\mathsf{Grp}}\left(G\right).
+	\end{align*}
+	此外,$A\simeq G\rtimes\Aut_{\mathsf{Grp}}\left(G\right)$.
+\end{example}
+
+\begin{example}{矩阵群的分裂}{}
+	设$A$是交换环,则$U_{n}\left(A\right)=SU_{n}\left(A\right)\rtimes D_{n}\left(A\right)$.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

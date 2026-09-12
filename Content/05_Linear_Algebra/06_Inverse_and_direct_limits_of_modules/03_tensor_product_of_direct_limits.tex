@@ -1,0 +1,86 @@
+\section{正向极限的张量积}
+
+记号约定:
+\begin{itemize}
+	\item $\left(\left(A_{\alpha}\right)_{\alpha\in I},\left(\phi_{\beta\alpha}\right)_{\alpha,\beta\in I}\right)$是环的正系统,$A$是环.
+	\item $\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\alpha,\beta\in I}\right),\left(\left(E_{\alpha}^{\prime}\right)_{\alpha\in I},\left(f_{\beta\alpha}^{\prime}\right)_{\alpha,\beta\in I}\right)$是右$A_{\alpha}$-模的正系统.
+	\item $\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\beta\alpha}\right)_{\alpha,\beta\in I}\right),\left(\left(F_{\alpha}^{\prime}\right)_{\alpha\in I},\left(g_{\beta\alpha}^{\prime}\right)_{\alpha,\beta\in I}\right)$是左$A_{\alpha}$-模的正系统.
+\end{itemize}
+
+\begin{proposition}{张量积的正向极限的构造,张量积和正向极限交换}{}
+	对任意$\alpha,\beta\in I$且$\alpha\leq\beta$,定义$h_{\beta\alpha}:E_{\alpha}\otimes_{A_{\alpha}}F_{\alpha}\to E_{\beta}\otimes_{A_{\beta}}F_{\beta},x_{\alpha}\otimes y_{\beta}\mapsto f_{\beta\alpha}\otimes g_{\beta\alpha}\left(y_{\alpha}\right)$.
+	\begin{enumerate}
+		\item $\left(\left(E_{\alpha}\otimes_{A_{\alpha}}F_{\alpha}\right)_{\alpha\in I},\left(h_{\beta\alpha}\right)_{\alpha,\beta\in I}\right)$是$\Z$-模的正系统.
+		\item 记$A=\varprojlim A_{\alpha}$,则$\left(h_{\beta\alpha}\right)_{\alpha,\beta\in I}$诱导典范的$\Z$-模同构$\pi:\varinjlim\left(E_{\alpha}\otimes_{A_{\alpha}}F_{\alpha}\right)\to\left(\varinjlim E_{\alpha}\right)\otimes_{A}\left(\varinjlim F_{\alpha}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{张量积和正向极限交换的自然性}{}
+	设$\forall\alpha\in I\left(u_{\alpha}\in\Hom_{\mathsf{Mod}-A_{\alpha}}\left(E_{\alpha},E_{\alpha}^{\prime}\right)\wedge v_{\alpha}\in\Hom_{A_{\alpha}-\mathsf{Mod}}\left(F_{\alpha},F_{\alpha}^{\prime}\right)\right)$,并且$\left(u_{\alpha}\right)_{\alpha\in I}$和$\left(v_{\alpha}\right)_{\alpha\in I}$都构成正系统.
+	\begin{enumerate}
+		\item $\left(\left(u_{\alpha}\otimes v_{\alpha}\right)\right)_{\alpha\in I}$是$\Z$-线性映射的正系统.
+		\item 如下图表交换(其中,水平方向的箭头都是典范同构):
+		\begin{center}
+			\begin{tikzcd}
+				{\varinjlim\left(E_{\alpha}\otimes_{A_{\alpha}}F_{\alpha}\right)} && {\varinjlim\left(E_{\alpha}\right)\otimes_{A}\varinjlim\left(F_{\alpha}\right)} \\
+				\\
+				{\varinjlim\left(E_{\beta}^{\prime}\otimes_{A_{\alpha}}F_{\alpha}^{\prime}\right)} && {\varinjlim\left(E_{\alpha}^{\prime}\right)\otimes_{A}\varinjlim\left(F_{\alpha}^{\prime}\right)}
+				\arrow["\simeq", from=1-1, to=1-3]
+				\arrow["{\varinjlim\left(u_{\alpha}\otimes v_{\alpha}\right)}"', from=1-1, to=3-1]
+				\arrow["{\varinjlim\left(u_{\alpha}\right)\otimes\varinjlim\left(v_{\alpha}^{\prime}\right)}", from=1-3, to=3-3]
+				\arrow["\simeq"', from=3-1, to=3-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$\left(\left(A_{\alpha}^{\prime}\right)_{\alpha\in I},\left(\phi_{\beta\alpha}^{\prime}\right)_{\alpha,\beta\in I}\right)$是环的正系统,$A^{\prime}=\varprojlim A_{\alpha}^{\prime}$,并且
+		\begin{itemize}
+			\item 对每个$\alpha\in I$,$E_{\alpha}$是$\left(A_{\alpha}^{\prime},A_{\alpha}\right)$-双模;
+			\item 对每个$\alpha,\beta\in I$且$\alpha\leq\beta$,$f_{\beta\alpha}$是$\left(A_{\alpha}^{\prime},A_{\alpha}\right)$-线性映射.
+		\end{itemize}
+		那么典范映射$\pi:\varinjlim\left(E_{\alpha}\otimes_{A_{\alpha}}F_{\alpha}\right)\to\left(\varinjlim E_{\alpha}\right)\otimes_{A}\left(\varinjlim F_{\alpha}\right)$是$A^{\prime}$-模同构.这个论断可以推广到任意的多模上.
+		\item 若$\left(A_{\alpha}\right)_{\alpha\in I}$是一族交换环,那么$\pi$是$A$-模同构.
+	\end{enumerate}
+\end{remark}
+
+\begin{corollary}{}{}
+	设$A=\varprojlim A_{\alpha}$,对每个$\alpha\in I$,右$A$-模$E_{\alpha}^{\prime}$由$E_{\alpha}$通过$\phi_{\alpha}$标量延拓而来.
+	\begin{enumerate}
+		\item $\left(\left(E_{\alpha}^{\prime}\right)_{\alpha\in I},\left(f_{\beta\alpha}\otimes\id_{A}\right)_{\alpha,\beta\in I}\right)$是右$A$-模的正系统.
+		\item $\varinjlim E_{\alpha}^{\prime}$典范同构于$\varprojlim E_{\alpha}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\alpha,\beta\in I}\right)$是右$A$-模的正系统,则$\Z$-模$\varinjlim\left(E_{\alpha}\otimes_{A}F\right)$典范同构于$\left(\varinjlim E_{\alpha}\right)\otimes_{A}F$.
+\end{corollary}
+
+\begin{remark}{}{}
+	特别地,如果$B$是环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,则$\varinjlim\rho^{\ast}\left(E_{\alpha}\right)$典范同构于$\rho^{\ast}\left(\varinjlim E_{\alpha}\right)$.
+\end{remark}
+
+\begin{corollary}{}{}
+	设$\left(x_{i}\right)_{i=1}^{n},\left(y_{i}\right)_{i=1}^{n}$分别是$M,N$的序列.若$\sum\limits_{i=1}^{n}\left(x_{i}\otimes_{A}y_{i}\right)=0$在张量积$M\otimes_{A}N$中成立,则$M,N$各自有一个有限生成子模$M_{1},N_{1}$满足如下条件:
+	\begin{itemize}
+		\item $M_{1}$包含$\left(x_{i}\right)_{i=1}^{n}$的所有项,$N_{1}$包含$\left(y_{i}\right)_{i=1}^{n}$的所有项;
+		\item 在$M_{1}\otimes_{A}N_{1}$中$\sum\limits_{i=1}^{n}\left(x_{i}\otimes y_{i}\right)=0$.
+	\end{itemize}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

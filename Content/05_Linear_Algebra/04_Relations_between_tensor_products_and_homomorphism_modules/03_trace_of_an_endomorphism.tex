@@ -1,0 +1,29 @@
+\section{自同态的迹}
+
+记号约定:
+
+\begin{itemize}
+	\item $A$是交换环,$E,F$是有限生成投射$A$-模.
+	\item $\langle -,-\rangle:E^{\vee}\times E\to E$是$E$上的典范配对,它诱导$C$-线性映射$\tau:E^{\vee}\otimes_{A}E\to E$.
+	\item $\theta_{E}:E^{\vee}\otimes E\to\End_{A}\left(E\right)$是典范映射
+\end{itemize}
+
+\begin{definition}{迹形式,迹}{}
+	称$\Tr\coloneq\tau\circ\theta^{-1}$为$E$上的迹形式.对诸$u\in\End_{A}\left(E\right)$,称$\Tr\left(u\right)$为$u$的迹.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$u\in\End_{A}\left(E\right)$,则存在$E^{\vee}$和$E$各自的有限支撑族$\left(x_{i}^{\ast}\right)_{i\in I}$和$\left(y_{i}\right)_{i\in I}$使得$\Tr\left(u\right)=\sum\limits_{i\in I}x_{i}^{\ast}\left(y_{i}\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	$\Tr$是$A$-线性泛函.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$u\in\Hom_{A}\left(E,F\right),u\in\Hom_{A}\left(F,E\right)$,则$\Tr\left(v\circ u\right)=\Tr\left(u\circ v\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(u_{i}\right)_{i=1}^{n}$是$\End_{A}\left(E\right)$的元素族,则对诸$1\leq i\leq n$有$\Tr\left(u_{1}\circ\ldots\circ u_{n}\right)=\Tr\left(u_{i}\circ u_{i+1}\circ\ldots\circ u_{n}\circ u_{1}\circ\ldots\circ u_{i-1}\right)$.
+\end{corollary}

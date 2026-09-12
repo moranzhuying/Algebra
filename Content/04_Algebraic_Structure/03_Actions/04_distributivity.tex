@@ -1,0 +1,62 @@
+\section{分配性}
+
+记号约定:
+\begin{itemize}
+	\item $n\in\Z$且$\geq 1$,$\left(E_{i}\right)_{i=1}^{n}$是一族原群(诸$E_{i}$的合成律为$\odot_{i}$),$E,F$是原群(合成律为$\odot$).
+	\item $\Omega$是集合,它在$E$上的作用是$\alpha\mapsto f_{\alpha}$,左作用法则为$\top$.
+\end{itemize}
+
+\begin{definition}{偏分配律}{}
+	设$E=\prod\limits_{i=1}^{n}E_{i}$,$f\in\Hom_{\mathsf{Mag}}\left(E,F\right)$,$1\leq i\leq n$.若对任一$a_{1}\in E_{1},\ldots,a_{i-1}\in E_{i-1},a_{i+1}\in E_{i+1},\ldots,a_{n}\in E_{n}$,映射
+	\begin{align*}
+		E_{i}\to F,x_{i}\mapsto f\left(a_{1},\ldots,a_{i-1},x_{i},a_{i+1},\ldots,a_{n}\right)
+	\end{align*}
+	是原群同态,则称$f$对第$i$个分量是分配的.
+\end{definition}
+
+\begin{example}{幂运算}{}
+	\begin{enumerate}
+		\item $\Z_{>0}\times E\to E,\left(x,n\right)\mapsto\bigodot\limits^{n}x$对第$1$个分量是分配的.
+		\item 当$E$是群时,$\Z\times E\to E,\left(x,n\right)\mapsto\bigodot\limits^{n}x$对第$1$个分量是分配的.
+		\item 当$E$是交换群时,$\Z\times E\to E,\left(x,n\right)\mapsto\bigodot\limits^{n}x$对第$2$个分量也是分配的.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{广义分配律}{}
+	设$F$和每个$E_{i}$都是交换幺半群(加法记号),$E=\prod\limits_{i=1}^{n}E_{i}$,$f\in\Hom_{\mathsf{Mag}}\left(E,F\right)$对每个分量都分配.考虑下列条件:
+	\begin{enumerate}
+		\item $\left(J_{i}\right)_{i=1}^{n}$是一族非空有限集,对诸$1\leq k\leq n$,$\left(x_{k,j_{k}}\right)_{j_{k}\in J_{k}}$是$X_{k}$的元素族;
+		\item $\left(J_{i}\right)_{i=1}^{n}$是一族非空有限集,对诸$1\leq k\leq n$,$\left(x_{k,j_{k}}\right)_{j_{k}\in J_{k}}$是$X_{k}$的有限支撑族,且
+		\begin{align*}
+			\forall x_{1}\in E_{1}\ldots\forall x_{n}\in E_{n}\left(x_{k}=0\implies f\left(x_{1},\ldots,x_{k-1},0,x_{k+1},\ldots,x_{n}\right)=0\right).
+		\end{align*}
+	\end{enumerate}
+	若二者中有一个成立,则$f\left(\sum\limits_{j_{1}\in J_{1}}x_{1,j_{1}},\ldots,\sum\limits_{j_{n}\in J_{n}}x_{n,j_{n}}\right)=\sum\limits_{\left(k_{1},\ldots,k_{n}\right)\in J_{1}\times\ldots\times J_{n}}f\left(x_{1,k_{1}},\ldots,x_{n,k_{n}}\right)$
+\end{proposition}
+
+\begin{definition}{分配作用}{}
+	若$\forall\alpha\in\Omega\left(f_{\alpha}\in\End_{\mathsf{Mag}}\left(E\right)\right)$,则称作用$\alpha\mapsto f_{\alpha}$是分配的.
+\end{definition}
+
+\begin{theorem}{分配性是原群同态的直接反映}{}
+	设$\alpha\in\Omega$,$\left(x_{i}\right)_{i\in I}$是$E$中的有限元素族,则$\alpha\top\bigodot\limits_{i\in I}x_{i}=\bigodot\limits_{i\in I}\left(\alpha\top x_{i}\right)$.
+\end{theorem}
+
+\begin{theorem}{商作用保持原作用的分配性}{}
+	设$E$上的等价关系$\sim$和$E/\sim$上的商合成律和商作用相容,$\alpha\mapsto f_{\alpha}$是分配的,则$\Omega$在$E/\sim$上的商作用也是分配的.
+\end{theorem}
+
+\begin{definition}{算子集的合成律与分配性}{}
+	设$\oplus$是$\Omega$上的合成律.若$\top$对第$1$分量是分配的,则称其对$\oplus$是分配的.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	\begin{enumerate}
+		\item 当$E$采用乘法记号时,在该合成律下满足分配性的作用通常用指数记号$x^{\alpha}$,此时分配律体现为$\left(xy\right)^{\alpha}=x^{\alpha}y^{\alpha}$.
+		\item 当$E$采用乘法记号时,在该合成律下满足分配性的作用通常采用左乘记法$\alpha\cdot x$(或右乘记号$x\cdot\alpha$),此时分配律体现为$\alpha\left(x+y\right)=\alpha x + \alpha y$(相应地,$\left(x+y\right)\alpha = x\alpha + y\alpha$).
+	\end{enumerate}
+\end{remark}
+
+
+
+

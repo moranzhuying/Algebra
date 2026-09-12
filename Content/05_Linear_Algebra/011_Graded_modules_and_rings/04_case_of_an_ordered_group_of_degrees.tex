@@ -1,0 +1,109 @@
+\section{有序群的情形}
+
+记号约定:$\Delta$是交换幺半群(加法记号),$A$是$\Delta$型分次环,分次为$\left(A_{\lambda}\right)_{\lambda\in\Delta}$.
+
+\begin{definition}{有序交换群}{}
+	设$\Delta$是交换群,$\leqslant$是$\Delta$上的偏序.若
+	\begin{align*}
+		\forall\rho,\lambda,\mu\in\Delta\left(\lambda\leqslant\mu\implies\rho+\lambda\leqslant\rho+\mu\right),
+	\end{align*}
+	则称$\leqslant$和$\Delta$上的加法相容,称$\Delta$是有序交换群.
+\end{definition}
+
+\begin{definition}{正次数理想}{}
+	若$\Delta$是有序交换群,$\forall\lambda\in\Delta\left(A_{\lambda}\neq\left\{0\right\}\implies\lambda >0\right)$,则$\mathfrak{J}_{0}\coloneq\bigoplus\limits_{\lambda\in\Delta,\lambda>0}A_{\lambda}$是$A$的$\Delta$型分次双边理想,称为正次数理想.
+\end{definition}
+
+\begin{proposition}{分次Nakayama引理的前提引理}{lemma-of-graded-nakayama-lemma}
+	设$\Delta$是有序交换群,$M$是$\Delta$型分次$A$-模,并且满足如下条件:
+	\begin{itemize}
+		\item $\forall\lambda\in\Delta\left(A_{\lambda}\neq\left\{0\right\}\implies\lambda\geq 0\right)$;
+		\item $\exists\lambda_{0}\in\Delta\left(M_{\lambda_{0}}\neq\left\{0\right\}\wedge\forall\lambda\in\Delta\left(\lambda<\lambda_{0}\implies M_{\lambda}=\left\{0\right\}\right)\right)$.
+	\end{itemize}
+	设$\mathfrak{J}_{0}=\bigoplus\limits_{\lambda\in\Delta,\lambda>0}A_{\lambda}$,则$\mathfrak{J}_{0}M\neq M$.
+\end{proposition}
+
+\begin{corollary}{分次Nakayama引理}{}
+	假设和记号同命题(\ref{prop:lemma-of-graded-nakayama-lemma}).若$M$有限生成且$\mathfrak{J}_{0}M=M$,则$M=\left\{0\right\}$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	假设和记号同命题(\ref{prop:lemma-of-graded-nakayama-lemma}).若$M$有限生成,其$\Delta$型分次子模$N$满足$N+\mathfrak{J}_{0}M=M$,则$N=M$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	假设和记号同命题(\ref{prop:lemma-of-graded-nakayama-lemma}).设$M,N$是$\Delta$型分次右$A$-模,$N$有限生成,$f:M\to N$是分次模同态.若$f\otimes\id_{A/\mathfrak{J}_{0}}$满,则$f$亦然.
+\end{corollary}
+
+\begin{remark}{良序版本的分次Nakayama引理及其推论}{}
+	上述三个推论都可以把$M$(相对的,$N$)有限生成削弱为如下条件:$\Delta$有一个子集$\Delta^{+}$满足下列条件:
+	\begin{itemize}
+		\item $\forall\lambda\in\Delta\setminus\Delta^{+}\left(M_{\lambda}=\left\{0\right\}\right)$(相对的,$\forall\lambda\in\Delta\setminus\Delta^{+}\left(N_{\lambda}=\left\{0\right\}\right)$)
+		\item $\Delta^{+}$的每个非空子集都有最小元.
+	\end{itemize}
+	特别地,当$\Delta=\Z$且$M$(相对的,$N$)是$\N$型分次模时上述条件必然成立.
+\end{remark}
+
+\begin{proposition}{分次自由模的判别定理}{}
+	设$\Delta=\Z$,假设和记号同命题(\ref{prop:lemma-of-graded-nakayama-lemma}).下列条件之一成立时,分次$A_{0}$-模$N\coloneq M/\mathfrak{J}_{0}M$是分次自由$A$-模.
+	\begin{enumerate}
+		\item $\left(N_{\lambda}\right)_{\lambda\in\Delta}$是一族自由$A_{0}$-模.
+		\item 典范映射$\mathfrak{J}_{0}\otimes_{A}M\to M$是单射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{lemma}{交换群可全序化的等价条件}{}
+	设$\Delta$是交换群(加法记号),则$\Delta$上存在和$\Delta$的加法相容的全序$\iff$ $\Delta$作为$\Z$-模无挠.
+\end{lemma}
+
+\begin{proposition}{分次环是整环的判定准则}{}
+	设$\Delta$是无挠交换群.若$A$中任意两个非零齐次元的乘积都非$0$,则$A$是整环.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

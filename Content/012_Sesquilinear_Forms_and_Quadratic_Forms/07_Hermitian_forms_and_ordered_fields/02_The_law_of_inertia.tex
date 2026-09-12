@@ -1,0 +1,21 @@
+\section{惯性定理}
+
+记号约定:$\dim E=n\geq 1$.
+
+\begin{theorem}{Sylvester惯性定理}{sylvester-inertia-law}
+	存在$E$的子空间$E^{+},E^{-}$和$E$的$\varphi$-正交基$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$满足下列条件:
+	\begin{enumerate}
+		\item $V=E^{+}\oplus E^{-}\oplus E^{\circ}$,其中$\varphi|_{E^{+}\times E^{+}}$正定,$\varphi|_{E^{-}\times E^{-}}$负定.记$s=\dim E^{+},t=\dim E^{-}$.
+		\item 对每个$\left(\left(\xi_{i},\eta_{i}\right)\right)_{i=1}^{n}\in\left(A\times A\right)^{n}$有$\varphi\left(\sum\limits_{i=1}^{n}\xi_{i}e_{i},\sum\limits_{i=1}^{n}\eta_{i}e_{i}\right)=\sum\limits_{i=1}^{s}\xi_{i}\bar{\eta}_{i}-\sum\limits_{i=s+1}^{s+t}\xi_{i}\bar{\eta}_{i}$.
+		\item $s$和$t$只跟$\varphi$有关,并满足
+		\begin{align*}
+			s=\max\left\{\dim F\middle|F\text{是}E\text{的子空间},\varphi|_{F\times F}\text{正定}\right\},t=\max\left\{\dim F\middle|F\text{是}E\text{的子空间},\varphi|_{F\times F}\text{负定}\right\}.
+		\end{align*}
+		\item $\rank\left(\varphi\right)=s+t$.
+		\item 当$\varphi$非退化时,其Witt指数为$\inf\left\{s,t\right\}$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{Hermite型的符号差,正惯性指数和负惯性指数}{}
+	沿用\ref{thm:sylvester-inertia-law}的记号.我们称$s$是$\varphi$的正惯性指数,$t$是$\varphi$的负惯性指数,$s-t$是$\varphi$的符号差.
+\end{definition}

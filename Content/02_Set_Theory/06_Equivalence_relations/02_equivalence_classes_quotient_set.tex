@@ -1,0 +1,80 @@
+\section{等价类,商集}
+
+\begin{definition}{映射有道的等价关系}{}
+	设$E$是集合,$f\in\End_{\mathsf{Set}}\left(E\right)$.我们称$E$上的公式$\left(x,y\right)\in E\times E\wedge f\left(x\right)=f\left(y\right)$是$f$诱导的等价关系.
+\end{definition}
+
+\begin{definition}{等价类,等价类的代表,典范投影,截面}{}
+	设$\sim$是$E$上的等价关系.
+	\begin{enumerate}
+		\item 对任意$x\in E$,称$\left[x\right]_{\sim}\coloneq\left\{y\in E\middle|x\sim y\right\}$为$x$关于$\sim$的等价类,$\left[x\right]_{\sim}$的元素称为$\left[x\right]_{\sim}$的一个代表.
+		\item 我们称$E/\sim\coloneq\left\{\left[x\right]_{\sim}\subseteq E\middle|x\in E\right\}$为$E$模$\sim$的商集.
+		\item 我们称映射$E\to E/\sim,x\mapsto\left[x\right]_{\sim}$是典范投影,其右逆称为$E$关于$\sim$的一个截面.
+	\end{enumerate}
+\end{definition}
+
+\begin{metatheorem}{典范投影良定义的等价条件}{}
+	设$\sim$是集合$E$上的等价关系,$p:E\to E/\sim$是典范投影,则$x\sim y\iff p\left(x\right)=p\left(y\right)$.
+\end{metatheorem}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 令$R$为等价关系$\left(x,y\right)\in E\times E\wedge x=y$,则对任意$x\in E$有$\left[x\right]_{R}=\left\{x\right\}$,并且典范映射$E\to E/R$是双射.
+		\item 设$E,F$是集合,$R$是$\pr_{1}:E\times F\to E$定义的等价关系,则对任意$x\in E$都有$\left[x\right]_{R}=\left\{x\right\}\times F$.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{集合上的等价关系和划分的对应}{}
+	设$E$是集合.
+	\begin{enumerate}
+		\item 如果$R$是等价关系,则$\left(\left[x\right]_{R}\right)_{x\in E}$是$E$的划分.
+		\item 设$\left(X_{i}\right)_{i\in I}$是$E$的划分,把公式$\exists i\in I\left(x\in X_{i}\wedge y\in X_{i}\right)$记作$\sim$,那么
+		\begin{itemize}
+			\item $\sim$是$E$上的等价关系,对每个$i\in I$有$\left[i\right]_{\sim}=X_{i}$.
+			\item 典范映射$I\to E/\sim$是双射.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{代表系}{}
+	设$\sim$是集合$E$上的等价关系.
+	\begin{enumerate}
+		\item 设$S\subseteq E$.如果对任意$x\in E$,$S\cap\left[x\right]_{\sim}$是单点集,则称$S$是相对$\sim$的代表系(或横截).
+		\item 设$K$是集合,$\iota:K\hookrightarrow E$是单射.若$\im\left(\iota\right)$是相对$\sim$的代表系,则称$\iota$是代表系.
+	\end{enumerate}
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

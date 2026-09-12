@@ -1,0 +1,137 @@
+\section{余代数的左缩并和右缩并}
+
+记号约定:$\left(E,c\right)$是分次$A$-余结合余代数,分次为$\left(E_{n}\right)_{n\in\N}$,余单位元是$\varepsilon$.
+
+\begin{definition}{余代数的右缩并}{}
+	对每个$p\in\N$和$\underline{E}^{\vee}$中的$p$次齐次元$u$,定义$\iota_{u}\coloneq\left(u\otimes\id_{E}\right)\circ c$,对每个$x\in E$,称$x\llcorner u\coloneq\iota_{u}\left(x\right)$是$x$和$u$的右缩并.
+\end{definition}
+
+\begin{remark}{}{}
+	对每个$u,v\in\underline{E}^{\vee}$有$\iota_{uv}=\iota_{v}\circ\iota_{u}$,于是$E\times\underline{E}^{\vee}\to E,\left(x,u\right)\mapsto x\llcorner u$使得$E$是右$\underline{E}^{\vee}$-模.
+\end{remark}
+
+\begin{definition}{余代数的左缩并}{}
+	对每个$p\in\N$和$\underline{E}^{\vee}$中的$p$次齐次元$u$,定义$\iota_{u}^{\prime}\coloneq\left(\id_{E}\otimes u\right)\circ c$,对每个$x\in E$,称$u\lrcorner x\coloneq\iota_{u}^{\prime}\left(x\right)$是$x$和$u$的左缩并.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 对每个$u,v\in\underline{E}^{\vee}$有$\iota_{uv}^{\prime}=\iota_{u}^{\prime}\circ\iota_{v}^{\prime}$,于是$\underline{E}^{\vee}\times E\to E,\left(u,x\right)\mapsto u\lrcorner x$使得$E$是左$\underline{E}^{\vee}$-模.进一步,$E$是$\left(\underline{E}^{\vee},\underline{E}^{\vee}\right)$-双模.
+		\item 若$E$是余交换的,则对每个$\left(x,u\right)\in E\times\underline{E}^{\vee}$有$u\lrcorner x=x\llcorner u$.
+		\item 若$E$是分次余交换的,则对每个$p,q\in\N$和$\underline{E}^{\vee},E_{q}$中各自的齐次元$u$和$x$有$u\lrcorner x=\left(-1\right)^{p\left(q-p\right)}x\llcorner u$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{余代数同态的函子性}{}
+	设$F$是分次余代数,$\phi:E\to F$是分次余代数同态,则$\phi^{\top}$是分次代数同态.
+\end{proposition}
+
+\begin{example}{}{}
+	设$M$是$A$-模,$f$是$E_{n}^{\vee}$中的$n$次元素,$\left(x_{i}\right)_{i=1}^{p}$是$M$中的序列.
+	\begin{enumerate}
+		\item 设$E=\mathsf{T}\left(M\right)$,把$f$等同于$n$重线性映射$\bar{f}:M^{n}\to A$,则
+		\begin{gather*}
+			\left(x_{1}\otimes\ldots\otimes x_{p}\right)\llcorner\bar{f}=
+			\begin{cases}
+				0,&p<n\\
+				f\left(x_{1},\ldots,x_{n}\right)x_{n+1}\otimes\ldots\otimes x_{p},&p\geq n
+			\end{cases}\\
+			\bar{f}\lrcorner\left(x_{1}\otimes\ldots\otimes x_{p}\right)=
+			\begin{cases}
+				0,&p<n\\
+				f\left(x_{p-n+1},\ldots,x_{p}\right)x_{1}\otimes\ldots\otimes x_{p-n},&p\geq n
+			\end{cases}
+		\end{gather*}
+		\item 设$E=\mathsf{S}\left(M\right)$,把$f$等同于$n$重对称线性泛函$\bar{f}:M^{n}\to A$,则
+		\begin{gather*}
+			\left(x_{1}\ldots x_{p}\right)\llcorner\bar{f}=
+			\begin{cases}
+				0,&p<n\\
+				\sum\limits_{\sigma\in\Shuffle_{n,p-n}}f\left(x_{\sigma\left(1\right)},\ldots,x_{\sigma\left(n\right)}\right)x_{\sigma\left(n+1\right)}\ldots x_{\sigma\left(p\right)},&p\geq n
+			\end{cases}\\
+			\bar{f}\lrcorner\left(x_{1}\ldots x_{p}\right)=
+			\begin{cases}
+				0,&p<n\\
+				\sum\limits_{\sigma\in\Shuffle_{n,p-n}}f\left(x_{\sigma\left(p-n+1\right)},\ldots,x_{\sigma\left(p\right)}\right)x_{\sigma\left(1\right)}\ldots x_{\sigma\left(p-n\right)},&p\geq n
+			\end{cases}
+		\end{gather*}
+		\item 设$E=\bigwedge\left(M\right)$,把$f$等同于$n$重交错线性泛函$\bar{f}:M^{n}\to A$,则
+		\begin{gather*}
+			\left(x_{1}\wedge\ldots\wedge x_{p}\right)\llcorner\bar{f}=
+			\begin{cases}
+				0,&p<n\\
+				\sum\limits_{\sigma\in\Shuffle_{n,p-n}}f\left(x_{\sigma\left(1\right)},\ldots,x_{\sigma\left(n\right)}\right)x_{\sigma\left(n+1\right)}\wedge\ldots\wedge x_{\sigma\left(p\right)},&p\geq n
+			\end{cases}\\
+			\bar{f}\lrcorner\left(x_{1}\wedge\ldots\wedge x_{p}\right)=
+			\begin{cases}
+				0,&p<n\\
+				\sum\limits_{\sigma\in\Shuffle_{n,p-n}}\sign\left(\sigma\right)f\left(x_{\sigma\left(p-n+1\right)},\ldots,x_{\sigma\left(p\right)}\right)x_{\sigma\left(1\right)}\wedge\ldots\wedge x_{\sigma\left(p-n\right)},&p\geq n
+			\end{cases}
+		\end{gather*}
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+\section{交换群上的矩阵}
+
+记号约定:
+
+\begin{itemize}
+	\item $G,G_{1},G_{2},G_{3},G_{12},G_{23}$是交换群,$\left(G_{ij}\right)_{i\in I,j\in J}$是一族交换群(加法记号).
+	\item $\left(H_{ij}^{\prime}\right)_{i\in I,j\in J},\left(H_{jk}\right)_{j\in J,k\in K},\left(H_{ik}\right)_{i\in I,k\in K}$是三族集合.
+	\item $H_{1}=\bigcup\limits_{\left(i,j\right)\in I\times J}H_{ij}^{\prime},H_{2}=\bigcup\limits_{\left(j,k\right)\in J\times K}H_{jk}^{\prime\prime},H_{3}=\bigcup\limits_{\left(i,k\right)\in I\times K}H_{ik}$.
+	\item $\forall i\in I\forall j\in J\forall k\in K\left(f_{ijk}\in\Hom_{\mathsf{Set}}\left(H_{ij}^{\prime}\times H_{jk}^{\prime\prime},H_{ik}\right)\right)$.
+\end{itemize}
+
+\begin{definition}{交换群上的矩阵的和}{}
+	设$\boldsymbol{A}\coloneq\left(a_{ij}\right)_{i\in I,j\in J},\boldsymbol{B}\coloneq\left(b_{ij}\right)_{i\in I,j\in J}\in G^{I\times J}$.称$\boldsymbol{A}+\boldsymbol{B}\coloneq\left(a_{ij}+b_{ij}\right)_{i\in I,j\in J}$是$\boldsymbol{A}$和$\boldsymbol{B}$的和.
+\end{definition}
+
+\begin{proposition}{交换群上的矩阵构成交换群}{}
+	$G^{I\times J}$是典范的交换群.
+\end{proposition}
+
+\begin{definition}{零矩阵}{}
+	$G^{I\times J}$的零元称为零矩阵,记作$\boldsymbol{O}_{I\times J}$.
+\end{definition}
+
+\begin{proposition}{矩阵的转置保持加法}{}
+	对任意$\boldsymbol{A},\boldsymbol{B}\in G^{I\times J}$,有$\left(\boldsymbol{A}+\boldsymbol{B}\right)^{\top}=\boldsymbol{A}^{\top}+\boldsymbol{B}^{\top}$.
+\end{proposition}
+
+\begin{definition}{矩阵的乘法}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(I\times J,G\right),\boldsymbol{A}\coloneq\left(a_{ij}\right)_{i\in I,j\in J}\in G^{I\times J},\boldsymbol{B}\coloneq\left(b_{jk}\right)_{j\in J,k\in K}\in G^{J\times K}$,集合$K$有限.
+	\begin{enumerate}
+		\item 称$\boldsymbol{A}\boldsymbol{B}\coloneq f\left(\boldsymbol{A},\boldsymbol{B}\right)\coloneq\left(\sum\limits_{j\in J}a_{ij}b_{jk}\right)_{i\in I,k\in K}$是$\boldsymbol{A},\boldsymbol{B}$通过$f$的乘积.
+		\item 定义$\boldsymbol{B}^{\top}\boldsymbol{A}^{\top}\coloneq f^{\op}\left(\boldsymbol{B}^{\top},\boldsymbol{A}^{\top}\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{矩阵乘法的左分配性和右分配性}{}
+	设集合$J$有限,$f\in\Bil_{\Z}\left(G_{1},G_{2};G\right)$.
+	\begin{enumerate}
+		\item 若$\boldsymbol{A},\boldsymbol{B}\in G_{1}^{I\times J},\boldsymbol{C}\in G_{2}^{J\times K}$,则$f\left(\boldsymbol{A}+\boldsymbol{B},\boldsymbol{C}\right)=f\left(\boldsymbol{A},\boldsymbol{C}\right)+f\left(\boldsymbol{B},\boldsymbol{C}\right)$.
+		\item 若$\boldsymbol{A}\in G_{1}^{I\times J},\boldsymbol{B},\boldsymbol{C}\in G_{2}^{J\times K}$,则$f\left(\boldsymbol{A},\boldsymbol{B}+\boldsymbol{C}\right)=f\left(\boldsymbol{A},\boldsymbol{B}\right)+f\left(\boldsymbol{A},\boldsymbol{C}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{矩阵乘法的结合律}{}
+	设$f\in\Bil_{\Z}\left(G_{12},G_{23};G\right),g\in\Bil_{\Z}\left(G_{1},G_{23};G\right),f_{12}\in\Hom_{\mathsf{Set}}\left(G_{1}\times G_{2},G_{12}\right),g\in\Hom_{\mathsf{Set}}\left(G_{2}\times G_{3},G_{23}\right)$.若
+	\begin{align*}
+		f_{3}\circ\left(f_{12}\times\id_{G_{3}}\right)=f_{1}\circ\left(\id_{G_{1}}\times f_{23}\right),\boldsymbol{A}\in G_{1}^{I\times J},\boldsymbol{B}\in G_{2}^{J\times K},\boldsymbol{C}\in G_{3}^{K\times L},J\text{和}K\text{是有限集},
+	\end{align*}
+	则$f_{1}\left(f_{12}\left(\boldsymbol{A},\boldsymbol{B}\right),\boldsymbol{C}\right)=g\left(\boldsymbol{A},f_{23}\left(\boldsymbol{B},\boldsymbol{C}\right)\right)$.
+\end{proposition}
+
+\begin{definition}{分块矩阵的加法}{}
+	设$G=\bigcup\limits_{\left(i,j\right)\in I\times J}G_{ij}$,$\boldsymbol{A}\coloneq\left(a_{ij}\right)_{i\in J,j\in J}$和$\boldsymbol{B}\coloneq\left(b_{ij}\right)_{i\in I,j\in J}$是$G$的元素族,其中$\forall i\in I\forall j\in J\left(\left(a_{ij},b_{ij}\right)\in G_{ij}\times G_{ij}\right)$.称
+	\begin{align*}
+		\boldsymbol{A}+\boldsymbol{B}\coloneq\left(a_{ij}+b_{ij}\right)_{i\in I,j\in J}
+	\end{align*}
+	是$\boldsymbol{A}$和$\boldsymbol{B}$的和.
+\end{definition}
+
+\begin{definition}{分块矩阵的乘法}{}
+	设$J$有限,$\left(H_{ik}\right)_{i\in I,k\in K}$是一族交换群(加法记号),$\boldsymbol{A}\coloneq\left(a_{ij}\right)_{i\in I,j\in J}$和$\boldsymbol{B}\coloneq\left(b_{jk}\right)_{j\in J,k\in K}$分别是$H_{1}$和$H_{2}$的元素族,其中:
+	\begin{gather*}
+		\forall i\in I\forall j\in J\left(a_{ij}\in H_{ij}^{\prime}\right),\\
+		\forall j\in J\forall k\in K\left(b_{jk}\in H_{jk}^{\prime\prime}\right).
+	\end{gather*}
+	称$\boldsymbol{A}\boldsymbol{B}\coloneq\left(\sum\limits_{j\in J}f_{i,j,k}\left(a_{ij},b_{jk}\right)\right)_{i\in I,k\in K}$是$\boldsymbol{A}$和$\boldsymbol{B}$的乘积.
+\end{definition}
+
+\begin{remark}{分块矩阵和矩阵的运算是一致的}{}
+	可以验证:先前关于矩阵加法构成群,矩阵乘法满足分配性和结合律的结论对于上述两个推广后的结论仍然成立.
+\end{remark}
+

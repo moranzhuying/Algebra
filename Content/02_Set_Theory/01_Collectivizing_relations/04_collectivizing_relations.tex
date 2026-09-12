@@ -1,0 +1,36 @@
+\section{集化公式}
+
+\begin{definition}{集化公式}{}
+	设$R$是公式,$x$是字母,$y$是未在$R$中出现且不同于$x$的字母.公式$\left(\exists y\right)\left(\forall x\right)\left(\left(x\in y\right)\iff R\right)$的简写记作$\Coll_{x}\left(R\right)$.
+\end{definition}
+
+\begin{definition}{关于某一字母是集化的}{}
+	设$R$是量化理论$\mathcal{T}$的公式,$x$是字母.若公式$\Coll_{x}\left(R\right)$是定理,则称$R$关于$x$在$\mathcal{T}$中是集化的.
+\end{definition}
+
+\begin{example}{集合论中集化公式的例子}{}
+	\begin{enumerate}
+		\item 设$x,y$是字母,则$x\in y$关于$x$是集化的.
+		\item (Russell悖论)公式$x\notin x$关于$x$不是集化的.
+	\end{enumerate}
+\end{example}
+
+\begin{metatheorem}{集化公式的单值性}{}
+	设$R$是公式,$x$是字母.若$R$关于$x$是集化的,则公式$\left(\forall x\right)\left(\left(x\in y\right)\iff R\right)$关于字母$y$是单值的.
+\end{metatheorem}
+
+\begin{definition}{集合的构建记法}{}
+	若公式$R$关于字母$x$是集化的,则把$\tau_{y}\left(\left(\forall x\right)\left(\left(x\in y\right)\iff R\right)\right)$记作$\left\{x\middle|R\right\}$,读作``满足$R$的所有$x$组成的集合''.
+\end{definition}
+
+\begin{metatheorem}{集合的元素与其满足性质的关系}{}
+	设公式$R$关于字母$x$是集化的,则$\left(\forall x\right)\left(x\in\left\{x\middle|R\right\}\iff R\right)$
+\end{metatheorem}
+
+\begin{metatheorem}{外延性与包含和相等的等价性}{}
+	设$R$和$S$是公式,$x$是字母.若$R$和$S$关于$x$都是集化的,则
+	\begin{enumerate}
+		\item $\left(\forall x\right)\left(R\implies S\right)$和$\left\{x\middle|R\right\}\subseteq\left\{x\middle|S\right\}$等价.
+		\item $\left(\forall x\right)\left(R\iff S\right)$和$\left\{x\middle|R\right\}=\left\{x\middle|S\right\}$等价.
+	\end{enumerate}
+\end{metatheorem}

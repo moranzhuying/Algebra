@@ -1,0 +1,52 @@
+\section{极大有序域的刻画·Euler-Lagrange定理}
+
+记号约定:$K$是域,$\leqslant$是$K$上的全序.
+
+\begin{theorem}{Euler-Lagrange定理}{}
+	设$\left(K,+,\cdot,\leq\right)$是有序域.下列命题等价:
+	\begin{enumerate}
+		\item $K(\mathrm{i})$是代数闭域(其中$\mathrm{i}$是$-1$的平方根).
+		\item $K$是极大有序域.
+		\item $K_{>0}$中的每个元素都在$K$中有平方根,$K[X]$中的每个奇数次多项式在$K$中都有一个根.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{有序域的二次扩张的代数性质}{}
+	设$\left(K,+,\cdot,\leq\right)$是有序域,$K_{>0}$的每个元素都是平方元.
+	\begin{enumerate}
+		\item $K\left(\mathrm{i}\right)$的每个元素都是平方元.
+		\item $K(\mathrm{i})[X]$中的每个$2$次多项式在$K(\mathrm{i})$中都有根.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{代数闭域的判别准则}{}
+	设$F$是域,$F^{\prime}$是$X^{2}+1\in F\left[X\right]$的分裂域.如果
+	\begin{itemize}
+		\item $F[X]$中的每个奇数次多项式在$F^{\prime}$中都有根,
+		\item $F[X]$中的每个$2$次多项式在$F^{\prime}$中都有根,
+	\end{itemize}
+	则$F^{\prime}$是代数闭域.
+\end{proposition}
+
+\begin{remark}{极大有序域的代数闭包上的范数,绝对值和三角不等式}{}
+	设,$K^{\prime}=K(\mathrm{i}),z=a+b\mathrm{i}\in K^{\prime}$.
+	\begin{enumerate}
+		\item $z\bar{z}=a^{2}+b^{2}$,并且$z\bar{z}=0\iff z=0$.
+		\item 如果$K_{\geq 0}$的每个元素都是平方元,则称$z\bar{z}$的正平方根称为$z$的绝对值,记作$\left|z\right|$.此时
+		\begin{align*}
+			\forall z_{1},z_{2}\in K\left(\mathrm{i}\right)\left(\left|z_{1}z_{2}\right|=\left|z_{1}\right|\cdot\left|z_{2}\right|\wedge \left|z_{1}+z_{2}\right|\leqslant\left|z_{1}\right|+\left|z_{2}\right|\right).
+		\end{align*}
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{极大有序域中不可约多项式的分类}{}
+	设$K$是极大有序域,$f\in K\left[X\right]$.若$f$不可约,则下列两种情形中必有一种成立:
+	\begin{itemize}
+		\item 存在$a,b\in K$使得$f=aX+b$.
+		\item 存在$a,b,c\in K$使得$f=aX^{2}+bX+c,b^{2}-4ac<0$.
+	\end{itemize}
+\end{proposition}
+
+\begin{remark}{}{}
+	当$f$是二次不可约多项式时,$\sign\left(f\right)=\sgn\left(a\right)$.
+\end{remark}

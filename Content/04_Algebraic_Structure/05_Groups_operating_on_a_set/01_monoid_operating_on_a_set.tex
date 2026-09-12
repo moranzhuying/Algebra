@@ -1,0 +1,166 @@
+\chapter{群在集合上的作用}
+
+\section{幺半群作用}
+
+记号约定:$G$是群,$M,M^{\prime}$是幺半群(三者均采用乘法记号,幺元为$e$),$E,E^{\prime},E^{\prime\prime}$是集合.
+
+\begin{definition}{幺半群给出的左作用和右作用}{}
+	\begin{enumerate}
+		\item 若$M\to\End_{\mathsf{Mon}}\left(E\right),\alpha\mapsto f_{\alpha}$是幺半群同态,则称其给出的左作用为$M$在$E$上的左作用,$E$为左$M$-集.
+		\item 若$M\to\left(\End_{\mathsf{Mon}}\left(E\right)\right)^{\op},\alpha\mapsto f_{\alpha}$是幺半群同态,则称给出的右作用为$M$在$E$上的右作用,$E$为右$M$-集.
+	\end{enumerate}
+	特别地,$M$是群时分别称幺半群左作用(和右作用)为群左作用(和右作用).
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item $\End_{\mathsf{Set}}\left(E\right)$在$E$上的作用诱导的典范赋值是左作用.
+		\item $M$上的乘法给出$M$在$M$上的左平移作用和右平移作用.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{幺半群给出左作用和右作用之间的相互转化}{}
+	$M$在$E$上的左作用可视为$M^{\op}$在$E$上的右作用,$M$在$E$上的右作用可视为$M^{\op}$在$E$上的左作用.
+\end{proposition}
+
+\begin{remark}{记号约定}{}
+	今后,除非另有说明,否则为我们所说的$M$-集一概指左$M$-集,左作用采用左乘记号.
+\end{remark}
+
+\begin{definition}{忠实作用}{}
+	若$M$在$E$上的作用$\alpha\mapsto f_{\alpha}$为单射,则称$M$在$E$上的左作用(和右作用)是忠实的.
+\end{definition}
+
+\begin{definition}{$M$-等变映射}{}
+	设$E,E^{\prime}$是$M$-集,$f\in\Hom_{\mathsf{Set}}\left(E,E^{\prime}\right)$.
+	\begin{enumerate}
+		\item 若$\forall\alpha\in M\forall x\in E\left(f\left(\alpha x\right)=\alpha f\left(x\right)\right)$,则称$f$是$M$-等变映射(或$M$-同态).
+		\item 若存在$M$-等变映射$g:E^{\prime}\to E$使$g\circ f=\id_{E}$且$f\circ g=\id_{E^{\prime}}$,则称$f$是$M$-等变同构(或$M$-同构).
+	\end{enumerate}
+\end{definition}
+
+显然,这里对$M$-等变映射的定义与定义(\ref{def:omega-equivariant-map})是一致的,这里的算子集是$M$.
+
+\begin{proposition}{}{}
+	设$E,E^{\prime},E^{\prime\prime}$是$M$-等变映射.
+	\begin{enumerate}
+		\item $\id_{E}$是$M$-等变映射.
+		\item 若$f:E\to E^{\prime}$和$g:E^{\prime}\to E^{\prime\prime}$是$M$-等变映射,则$g\circ f$是$M$-等变映射.
+		\item 设$f\in\Hom_{\mathsf{Set}}\left(E,E^{\prime}\right)$,则$f$是$M$-等变同构$\iff$ $f$是双射且为$M$-等变映射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{群$G$在$E$上的作用$\leftrightsquigarrow$ $\Hom_{\mathsf{Grp}}\left(M,\mathfrak{S}_{E}\right)$}{}
+	$G$在$E$上的作用$\alpha\mapsto f_{\alpha}$是双射,因此有群同态$\phi\in\Hom_{\mathsf{Grp}}\left(G,\mathfrak{S}_{E}\right)$.
+\end{proposition}
+
+\begin{proposition}{$M$-集的积作用}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族$M$-集,$E=\prod\limits_{i\in I}E_{i}$,则$\left(\alpha,\left(x_{i}\right)_{i\in I}\right)\mapsto\left(\alpha x_{i}\right)_{i\in I}$使$E$是$M$-集.称这个作用为$M$在$E$上的积作用,配备这个作用的$E$称为$\left(E_{i}\right)_{i\in I}$的乘积.
+\end{proposition}
+
+\begin{proposition}{子$M$-集}{}
+	设$E$是$M$-集,$F\subseteq E$且为该作用的不变子集,则$F$是$M$-集,典范嵌入$F\hookrightarrow E$是$M$-等变映射.称$F$是$E$的$M$-子集.
+\end{proposition}
+
+\begin{proposition}{商$M$-集}{}
+	设$E$是$M$-集,$\sim$是$E$上和$M$在$E$上的作用相容的等价关系,则$E/\sim$配备商$M$-作用后是$M$-集,典范映射$E\twoheadrightarrow E/\sim$是$M$-等变映射.称$E/\sim$为商$M$-集.
+\end{proposition}
+
+\begin{definition}{$\phi$-同态}{}
+	设$E$是$M$-集,$E^{\prime}$是$M^{\prime}$-集,$\phi\in\Hom_{\mathsf{Mon}}\left(M,M^{\prime}\right),f\in\Hom_{\mathsf{Set}}\left(E,E^{\prime}\right)$.若
+	\begin{align*}
+		\forall\alpha\in M\forall x\in E\left(f\left(\alpha x\right)=\phi\left(\alpha\right)f\left(x\right)\right),
+	\end{align*}
+	则称$f$是关于$\phi$的$\phi$-同态.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

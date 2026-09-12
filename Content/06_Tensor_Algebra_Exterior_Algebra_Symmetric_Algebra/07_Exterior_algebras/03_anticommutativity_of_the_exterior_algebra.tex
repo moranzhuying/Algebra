@@ -1,0 +1,49 @@
+\section{外代数的反交换性}
+
+记号约定:$A$是交换环,$M$是$A$-模.
+
+\begin{proposition}{}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$是$M$中的有限序列.
+	\begin{enumerate}
+		\item 对每个$\sigma\in\mathfrak{S}_{n}$有$x_{\sigma\left(1\right)}\wedge\ldots\wedge x_{\sigma\left(n\right)}=\sign\left(\sigma\right)\left(x_{1}\wedge\ldots\wedge x_{n}\right)$.
+		\item 如果$\exists 1\leq i\neq j\leq n\left(x_{i}=x_{j}\right)$,则$x_{1}\wedge\ldots\wedge x_{n}=0$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{lemma}{}{}
+	设$H,K\subseteq\left[1,n\right],H\sqcup K=\left[1,n\right],\left|H\right|=p$,将$H$和$K$各自的元素按递增顺序排列得到序列$\left(i_{h}\right)_{h=1}^{p}$和$\left(j_{k}\right)_{k=1}^{n-p}$.如果
+	\begin{align*}
+		\sigma\in\mathfrak{S}_{n},\sigma\left(h\right)=
+		\begin{cases}
+			i_{h},&1\leq h\leq p,\\
+			j_{h-p},&p+1\leq h\leq n,
+		\end{cases}
+	\end{align*}
+	那么$\sign\left(\sigma\right)=\left(-1\right)^{\left|\inv\left(\sigma\right)\right|}$.
+\end{lemma}
+
+\begin{corollary}{}{}
+	设$H,K\subseteq\left[1,n\right],H\sqcup K=\left[1,n\right],\left|H\right|=p$,将$H$和$K$各自的元素按递增顺序排列得到序列$\left(i_{h}\right)_{h=1}^{p}$和$\left(j_{k}\right)_{k=1}^{n-p}$,则
+	\begin{align*}
+		\forall\left(x_{i}\right)_{i=1}^{n}\in M^{n}\left(\left(x_{i_{1}}\wedge\ldots\wedge x_{i_{p}}\right)\wedge\left(x_{j_{1}}\wedge\ldots\wedge x_{j_{n-p}}\right)=\left(-1\right)^{\left|\inv\left(\sigma\right)\right|}x_{1}\wedge\ldots\wedge x_{n}\right).
+	\end{align*}
+\end{corollary}
+
+\begin{corollary}{}{}
+	$\N$型分次代数$\bigwedge\left(M\right)$是交错代数.
+\end{corollary}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 如果$M$有限生成,那么$\bigwedge\left(M\right)$也有限生成.
+		\item 如果$M$有一个基数为$n$的生成集,则$\forall p>n\left(\bigwedge^{p}\left(M\right)=\left\{0\right\}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+

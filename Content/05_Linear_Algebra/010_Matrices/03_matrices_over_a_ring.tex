@@ -1,0 +1,67 @@
+\section{环上的矩阵}
+
+记号约定:$A,B$是环,$I,J$是集合.
+
+\begin{proposition}{环上的矩阵构成的集合是典范的双模}{}
+	$A^{I\times J}$是典范的双模.
+\end{proposition}
+
+\begin{remark}{记号和术语说明}{}
+	\begin{enumerate}
+		\item 在没有特殊说明的情况下,我们默认矩阵的乘积通过$A$的乘法得到(或者说``在$A$中计算''),在此约定下,先前关于矩阵乘法的分配性、结合性的公式必然成立.
+		\item 对$A$中的矩阵$\boldsymbol{A},\boldsymbol{B}$,当$\boldsymbol{A}$和$\boldsymbol{B}$的乘积有定义时,我们将其记作$\boldsymbol{A}\boldsymbol{B}$.记$A^{\op}$上的乘法为$\ast$.我们默认$\boldsymbol{B}^{\top},\boldsymbol{A}^{\top}$是$A^{\op}$的矩阵,$\boldsymbol{B}^{\top}\boldsymbol{A}^{\top}$通过$\ast$得到,于是$\left(\boldsymbol{A}\boldsymbol{B}\right)^{\top}=\boldsymbol{B}^{\top}\ast\boldsymbol{A}^{\top}$.当$A$是交换环时,$\left(\boldsymbol{A}\boldsymbol{B}\right)^{\top}=\boldsymbol{B}^{\top}\boldsymbol{A}^{\top}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{矩阵单位}{}
+	设$\left(i,j\right)\in I\times J$.定义$A^{I\times J}$上的矩阵$\boldsymbol{E}_{i,j}\coloneq\left(a_{i,j}\right)_{i\in I,j\in J}$如下:对任一$\left(k,\ell\right)\in I\times J$,
+	\begin{align*}
+		a_{k,\ell}=
+		\begin{cases}
+			1,&\left(k,l\right)=\left(i,j\right),\\
+			0,&\left(k,l\right)\neq\left(i,j\right).
+		\end{cases}
+	\end{align*}
+	我们称$\boldsymbol{E}_{i,j}$是$A^{I\times J}$的$\left(i,j\right)$-矩阵单位.
+\end{definition}
+
+\begin{proposition}{矩阵单位构成有限矩阵模的典范基}{}
+	设集合$I,J$有限,则$\left(\boldsymbol{E}_{i,j}\right)_{\left(i,j\right)\in I\times J}$是$A^{I\times J}$作为左$A$-模和右$A$-模的典范基.
+\end{proposition}
+
+\begin{proposition}{矩阵单位的乘积}{}
+	设$p,q,r\in\N$,$I=\llbracket 1,p\rrbracket,J=\llbracket 1,q\rrbracket,K=\llbracket 1,r\rrbracket$.对任一$i\in I,j\in J,k\in K$,分别记
+	\begin{align*}
+		\boldsymbol{E}_{i,j},\boldsymbol{E}_{j,k}^{\prime},\boldsymbol{E}_{i,k}^{\prime\prime}
+	\end{align*}
+	为$A^{I\times J}$的$\left(i,j\right)$-矩阵单位,$A^{J\times K}$的$\left(j,k\right)$-矩阵单位和$A^{I\times K}$的$\left(i,k\right)$-矩阵单位.那么,对任一$i\in I,j\in J,k,l\in K$,
+	\begin{align*}
+		\boldsymbol{E}_{i,j}\boldsymbol{E}_{k,l}^{\prime}=
+		\begin{cases}
+			\boldsymbol{O}_{I\times K},&j\neq k\\
+			\boldsymbol{E}_{i,l}^{\prime\prime},&j=k
+		\end{cases}
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{双模上矩阵相等的判别引理}{}
+	设集合$I,J$有限,$G$是$\left(A,B\right)$-双模,$\boldsymbol{A}=\left(a_{ij}\right)_{i\in I,j\in J},\boldsymbol{B}=\left(b_{ij}\right)_{i\in I,j\in J}$是$G$的矩阵.那么:如果对$A$的每个行矩阵$\boldsymbol{P}=\left(p_{i}\right)_{i\in I}$和$B$的每个列矩阵$\boldsymbol{Q}=\left(q_{j}\right)_{j\in J}$,有$\boldsymbol{P}\boldsymbol{A}\boldsymbol{Q}=\boldsymbol{P}\boldsymbol{B}\boldsymbol{Q}$,则$\boldsymbol{A}=\boldsymbol{B}$.
+\end{proposition}
+
+\begin{definition}{环同态诱导的矩阵}{}
+	设$\sigma\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,$\boldsymbol{A}=\left(a_{ij}\right)_{i\in I,j\in J}$是$A$的矩阵.定义$\boldsymbol{A}^{\sigma}\coloneq\left(\sigma\left(a_{ij}\right)\right)_{i\in I,j\in J}$.
+\end{definition}
+
+\begin{proposition}{环同态诱导的矩阵保持矩阵的运算}{}
+	设$\sigma\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,集合$J$有限,$\boldsymbol{A},\boldsymbol{B}\in A^{I\times J},\boldsymbol{C}\in A^{J\times K},c\in A$.
+	\begin{enumerate}
+		\item $\left(c\boldsymbol{A}\right)^{\sigma}=\sigma\left(c\right)\boldsymbol{A}^{\sigma},\left(\boldsymbol{A}c\right)^{\sigma}=\boldsymbol{A}^{\sigma}\sigma\left(c\right)$.
+		\item $\left(\boldsymbol{A}^{\top}\right)^{\sigma}=\left(\boldsymbol{A}^{\sigma}\right)^{\top}$.
+		\item $\left(\boldsymbol{A}+\boldsymbol{B}\right)^{\sigma}=\boldsymbol{A}^{\sigma}+\boldsymbol{B}^{\sigma}$.
+		\item $\left(\boldsymbol{A}\boldsymbol{C}\right)^{\sigma}=\boldsymbol{A}^{\sigma}\boldsymbol{C}^{\sigma}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{环反同态诱导的矩阵的乘积}{}
+	设$\sigma\in\Hom_{\mathsf{Ring}}\left(A,A^{\op}\right)$,集合$J$有限,$\boldsymbol{A}\in A^{I\times J},\boldsymbol{B}\in A^{J\times K}$,则$\left(\boldsymbol{A}\boldsymbol{B}\right)^{\sigma}=\left(\left(\boldsymbol{B}^{\top}\right)^{\sigma}\left(\boldsymbol{A}^{\top}\right)^{\sigma}\right)^{\top}$.
+\end{proposition}

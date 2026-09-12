@@ -1,0 +1,127 @@
+\chapter{项和关系}
+
+\section{符号与汇集}
+
+\begin{definition}{形式理论的字母表}{}
+	一个理论$\mathcal{T}$的\textbf{字母表}由如下三类符号组成:
+	\begin{enumerate}
+		\item \textbf{逻辑常元}:$\square,\tau,\vee,\neg$.
+		\item \textbf{变元}.
+		\item \textbf{非逻辑常元}.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{关于逻辑常元,变元和非逻辑常元的说明}{}
+	\begin{enumerate}
+		\item 这里的$\square$是占位符,$\tau$是Hillbert选择算子,$\vee$是析取,$\neg$是否定.
+		\item 这里的字母指的是可数无穷个字母组成的集合的元素,他们是可以带(或者不带)上标(或下标)的大写(或者小写拉丁字母).在理论的推导中我们可以随时引用没有出现过的新字母.
+		\item 非逻辑常元和$\mathcal{T}$有关.例如,在集合理论中,非逻辑常元是$=,\in,\subseteq$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{表达式(或组合,符号串)}{}
+	形式理论$\mathcal{T}$中的\textbf{表达式}(或\textbf{组合},\textbf{符号串})是指由$\mathcal{T}$的符号并排书写而成的有限序列.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 在表达式中,某些非字母符号可以通过绘制在上方的直线成对地连结起来(以指示变量的绑定关系),这些直线叫做链接.例如,在集合论中,$\overbrace{\tau \vee \neg \in \square}^{\quad} A' \in \overbrace{\square A''}^{\quad}$是一个合法的表达式.
+		\item 仅使用表达式会给印刷者和读者带来无法克服的困难.因此,现行的文本使用了缩写符号(特别是日常语言中的词汇),这些符号\underline{不属于}形式数学.引入此类符号是\underline{定义}的目标,它们的使用对于理论来说\underline{并非不可或缺},而且往往会导致混乱.只有通过对该学科的一定熟悉程度,读者才能避免这种混乱.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{数学理论中表达式的例子}{}
+	\begin{enumerate}
+		\item 表达式$\vee\neg$用$\implies$来简写.
+		\item 下面的符号都是表达式(而且是非常长的表达式):
+		\begin{center}
+			``$3$和$4$''\\
+			$\emptyset$\\
+			$\N$\\
+			$\Z$\\
+			``实直线''\\
+			``$\Gamma$函数''\\
+			$f\circ g$\\
+			$\pi=\sqrt{2}+\sqrt{3}$\\
+			$1\in 2$\\
+			``每个有限除环都是域''\\
+			``$\zeta\left(s\right)$除去$-2,-4,-6,\ldots$后的零点在直线$\Re\left(s\right)=\frac{1}{2}$上''
+		\end{center}
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{}{}
+	一般来说,用于表示表达式的符号包含了出现在该组合中的所有字母.然而,这一原则有时可以在不产生混淆风险的情况下被违反.例如,``$X$的完备化''代表一个表达式,这个表达式包含字母$X$,但同时也包含代表$X$的一致结构的周围的字母.另一方面,$\int\limits_{0}^{1}f\left(x\right)\mathrm{d}x$代表一个不出现字母$x$和字母$\mathrm{d}$的组合,而由$\N$,$\Z$,``$\Gamma$函数''所表示的表达式不包含任何字母.
+\end{remark}
+
+\begin{definition}{理论}{}
+	一个理论$\mathcal{T}$由一组形式规则构成,这些规则定义了哪些表达式是该理论的\textbf{项}或\textbf{公式},哪些表达式是该理论的\textbf{定理}.
+\end{definition}
+
+\begin{remark}{}{}
+	在第一部分中,这些规则的描述\underline{不属于}形式数学.这些规则或多或少涉及未确定的表达式,比如未确定的字母.为了简化阐述,方便起见,我们用不太繁琐的符号来表示这些组合.我们将特别使用(理论的)符号组合,粗斜体字母(带或不带下标或上标),以及特定的符号,其中一些例子将在后文中给出.\underline{由于我们的目的仅是为了避免赘述},我们将不会为这些符号的使用列出严格的通用规则.在每一个具体案例中,读者将能够毫无困难地复原所讨论的组合.通过语意滥用,我们经常会说这些符号``\underline{就是}''表达式,而不是说它们``\underline{代表}''组合.因此,在接下来关于规则的陈述中,诸如``表达式$\boldsymbol{A}$''或``字母$\boldsymbol{x}$''这样的表达,应该替换为``由$\boldsymbol{A}$表示的表达式''或``由$\boldsymbol{x}$表示的字母''.
+\end{remark}
+
+\begin{definition}{表达式的拼接}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是两个表达式.
+	\begin{enumerate}
+		\item $\boldsymbol{A}\boldsymbol{B}$表示把表达式$\boldsymbol{B}$顺序拼接在表达式$A$的右侧所得到的新表达式.
+		\item $\vee\boldsymbol{A}\neg\boldsymbol{B}$表示自左向右依次拼接符号$\vee$,表达式$A$,符号$\neg$和表达式$B$得到的新表达式.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{$\tau$-绑定}{}
+	设$\boldsymbol{A}$是一个表达式,$\boldsymbol{x}$是一个字母.记号$\tau_{\boldsymbol{x}}\left(\boldsymbol{A}\right)$表示一个不包含字母$\boldsymbol{x}$的新表达式,其构造步骤如下:
+	\begin{itemize}
+		\item 构造表达式$\tau\boldsymbol{A}$.
+		\item 将$\boldsymbol{A}$中所有出现的字母$\boldsymbol{x}$用一条连接键连结到最左侧的$\tau$上.
+		\item 将$\boldsymbol{A}$中所有出现的$\boldsymbol{x}$替换为占位符$\square$.
+	\end{itemize} 
+\end{definition}
+
+由此可见,$\tau_{\boldsymbol{x}}\left(\boldsymbol{A}\right)$不包含$\boldsymbol{x}$.
+
+\begin{example}{$\tau$-绑定的例子}{}
+	设表达式为$\in \boldsymbol{x}\boldsymbol{y}$,则$\tau_{\boldsymbol{x}}\left(\in\boldsymbol{x}\boldsymbol{y}\right)$构造出的表达式为$\overbracket{\tau\in \square}^{\quad}\boldsymbol{y}$.
+\end{example}
+
+\begin{definition}{代入}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是表达式,$\boldsymbol{x}$是字母.用$\boldsymbol{B}$替换$\boldsymbol{A}$中所有出现的$\boldsymbol{x}$所得到的表达式记为$\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{A}$,读作``在$\boldsymbol{A}$中用$\boldsymbol{B}$代替$\boldsymbol{x}$''.
+\end{definition}
+
+\begin{example}{代入的例子}{}
+	把表达式$\vee\in\boldsymbol{x}\boldsymbol{y}=\boldsymbol{x}\boldsymbol{x}$中出现的所有$\boldsymbol{x}$都替换成$\square$,得到的表达式为$\vee\in\square\boldsymbol{y}=\square\square$.
+\end{example}
+
+\begin{metatheorem}{无变元代入的恒等性,绑定变元对代入的免疫性}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是表达式,$\boldsymbol{x}$是字母.
+	\begin{enumerate}
+		\item 若字母$\boldsymbol{x}$不在表达式$\boldsymbol{A}$中出现,则表达式$\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{A}$和$\boldsymbol{A}$相同.
+		\item 特别地,在(1)的条件下,$\left(\boldsymbol{B}|\boldsymbol{x}\right)\tau_{\boldsymbol{x}}\left(\boldsymbol{A}\right)$和$\tau_{\boldsymbol{x}}\left(\boldsymbol{A}\right)$相同.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{definition}{多个变元的代换}{}
+	如果$\boldsymbol{A}$,$\boldsymbol{B}$和$\boldsymbol{B}$是表达式,而我们关注$\boldsymbol{A}$中的特定字母$\boldsymbol{x}$,亦或是两个不同的字母$\boldsymbol{x}$和$\boldsymbol{y}$(其中$\boldsymbol{y}$不一定在$\boldsymbol{A}$中出现),那么我们用$\boldsymbol{A}\left\{\boldsymbol{x}\right\}$或$\boldsymbol{A}\left\{\boldsymbol{x},\boldsymbol{y}\right\}$来表示$\boldsymbol{A}$.在此意义下:
+	\begin{enumerate}
+		\item 我们用$\boldsymbol{A}\left\{\boldsymbol{B}\right\}$来表示$\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{A}$.
+		\item 我们用$\boldsymbol{A}\left\{\boldsymbol{B},\boldsymbol{C}\right\}$表示把$\boldsymbol{A}$中所有出现的$\boldsymbol{x}$和$\boldsymbol{y}$分别用$\boldsymbol{B}$和$\boldsymbol{C}$替换得到的表达式.
+	\end{enumerate}
+\end{definition}
+
+\begin{metatheorem}{同时代入的串行化等价定理}{}
+	若$\boldsymbol{x}^{\prime}$和$\boldsymbol{y}^{\prime}$是两个互不相同且未在三个表达式$\boldsymbol{A},\boldsymbol{B},\boldsymbol{C}$中出现过的字母,则$\boldsymbol{A}\left\{\boldsymbol{B},\boldsymbol{C}\right\}$和如下表达式相同:
+	\begin{align*}
+		\left(\boldsymbol{B}|\boldsymbol{x}^{\prime}\right)\left(\boldsymbol{C}|\boldsymbol{y}^{\prime}\right)\left(\boldsymbol{x}^{\prime}|\boldsymbol{x}\right)\left(\boldsymbol{y}^{\prime}|\boldsymbol{y}\right)\boldsymbol{A}
+	\end{align*}
+\end{metatheorem}
+
+\begin{remark}{元语言代入规则}{}
+	当通过定义引入一个缩写符号$\Sigma$来表示某个表达式时,(通常是默认的)惯例是:将原始表达式中的字母$\boldsymbol{x}$替换为表达式$\boldsymbol{B}$所得到的表达式,用通过将$\Sigma$中的字母$\boldsymbol{x}$替换为表达式$\boldsymbol{B}$(更常见的是,替换为表示表达式$\boldsymbol{B}$的缩写符号)而得到的符号来表示.例如,在定义了符号$E\otimes F$(其中$E$和$F$是字母)所表示的表达式(顺带提一下,除了$E$和$F$之外还包含其他字母)之后,无需进一步解释即可使用符号$\Z\otimes F$.
+\end{remark}
+
+\begin{remark}{括号使用规则}{}
+	元语言代入规则可能会导致混淆.为此,我们会使用各种排版上的手段,最常见的方法是用$\left(\boldsymbol{B}\right)$代替$\boldsymbol{B}$来替换$\boldsymbol{x}$.
+	
+	例如,$M\cap N$表示一个包含字母$N$的表达式.如果我们用由$P\cup Q$表示的表达式来替换$N$,我们就得到一个由$M\cap\left(P\cup Q\right)$表示的表达式.
+\end{remark}

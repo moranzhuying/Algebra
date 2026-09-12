@@ -1,0 +1,67 @@
+\section{向量空间中的标量延拓}
+
+记号约定:
+
+\begin{itemize}
+	\item $K$是除环,$A$是环,$\rho\in\Hom_{\mathsf{Ring}}\left(K,A\right)$.
+	\item $E_{1},E_{2},E_{3},E,F$是左$K$-向量空间.
+\end{itemize}
+
+\begin{proposition}{}{}
+	若序列$E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}$正合,则$\rho^{\ast}\left(E_{1}\right)\xlongrightarrow{\rho^{\ast}\left(f\right)}E_{2}\xlongrightarrow{\rho^{\ast}\left(g\right)}E_{3}$正合.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$f\in\Hom_{K}\left(E_{1},E_{2}\right)$,则在典范同构的意义下有
+	\begin{align*}
+		\im\left(\rho^{\ast}\left(f\right)\right)=\rho^{\ast}\left(\im\left(f\right)\right),\ker\left(\rho^{\ast}\left(f\right)\right)=\rho^{\ast}\left(\ker\left(f\right)\right),\coker\left(\rho^{\ast}\left(f\right)\right)=\rho^{\ast}\left(\coker\left(f\right)\right).
+	\end{align*}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\phi:E\to\rho^{\ast}\left(E\right)$是典范映射.
+	\begin{enumerate}
+		\item $\phi$是单射.
+		\item 设$M$是$E$的子空间.在典范同构的意义下,$\rho^{\ast}\left(M\right)$是$A_{d}\otimes_{K}E$的$A$-子模,并且$\left(A_{d}\otimes_{K}M\right)\cap\im\left(\phi\right)=\phi\left(M\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$f\in\Hom_{K}\left(E,F\right)$,则$f$是单射(相对的,满射,零映射)$\iff$ $\rho^{\ast}\left(f\right)$是单射(相对的,满射,零映射).
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\nu:\rho^{\ast}\left(E^{\vee}\right)\to\left(\rho^{\ast}\left(E\right)\right)^{\vee}$是典范映射,则$\nu$是单射,并且$E$有限维时$\nu$是双射.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$L$是$K$的扩除环,$\tau:K\hookrightarrow L$是典范嵌入.
+	\begin{enumerate}
+		\item $\dim_{L}\left(\tau^{\ast}\left(E\right)\right)=\dim_{K}E$.
+		\item 设$f\in\Hom_{K}\left(E,F\right)$,则$\rank\left(\rho^{\ast}\left(f\right)\right)=\rank\left(f\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$K$是域,$\omega:A\otimes_{K}\Hom_{K}\left(E,F\right)\to\Hom_{A}\left(\rho^{\ast}\left(E\right),\rho^{\ast}\left(F\right)\right)$是典范映射.
+	\begin{enumerate}
+		\item $\omega$是单射.
+		\item 若$A$或$E$有一个是有限维$K$-向量空间,则$\omega$是双射.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

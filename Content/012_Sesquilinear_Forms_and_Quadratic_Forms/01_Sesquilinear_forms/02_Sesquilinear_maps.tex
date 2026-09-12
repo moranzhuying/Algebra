@@ -1,0 +1,155 @@
+\section{半双线性映射}
+
+记号约定:
+\begin{itemize}
+	\item $A,B$是环,$E$是左$A$-模,$F$是左$B$-模,$M$是右$A$-模,$N$是右$B$-模,$G$是$\left(A,B\right)$-双模.
+	\item 对每个集合$I,J,K$和每个映射$f:I\times J\to K$,记$f^{\op}:J\times I\to K,\left(i,j\right)\mapsto f\left(i,j\right)$.
+	\item $\rho\in\Isom_{\mathsf{Ring}}\left(B,B^{\op}\right),\sigma=\rho^{-1}$.对每个$b\in B$,记$\bar{b}=\rho\left(b\right)$.
+	\item $\xi\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right),\eta=\rho^{-1}$.对每个$a\in A$,记$\bar{a}=\xi\left(a\right)$.
+\end{itemize}
+
+\begin{definition}{关于$\rho$的$\left(A,B\right)$右半双线性映射}{}
+	设$\varphi\in\Hom_{\mathsf{Set}}\left(E\times F,G\right)$.如果
+	\begin{enumerate}
+		\item 对每个$x\in E$有$\varphi\left(x,\cdot\right)\in\Hom_{B-\mathsf{Mod}}\left(F,\rho^{\ast}\left(G\right)\right)$,
+		\item 对每个$y\in F$有$\varphi\left(\cdot,y\right)\in\Hom_{A-\mathsf{Mod}}\left(E,G\right)$,
+	\end{enumerate}
+	则称$\varphi$是关于$\rho$的$\left(A,B\right)$-右半双线性映射.
+\end{definition}
+
+\begin{remark}{}{}
+	当$\rho=\id_{B}$时$B$是交换环,此时$\varphi$就是$\left(A,B\right)$-双线性映射.
+\end{remark}
+
+\begin{definition}{}{}
+	记$\Sesq_{A,(B,\rho)}\left(E,F;G\right)$是从$E\times F$到$G$的关于$\rho$的$\left(A,B\right)$-右半双线性映射组成的集合.这是典范的$\Z$-模.
+\end{definition}
+
+\begin{definition}{关于$\rho$的$\left(A,B\right)$-右半双线性映射的左伴随和右伴随}{}
+	设$\varphi\in\Sesq_{A,(B,\rho)}\left(E,F;G\right)$.
+	\begin{enumerate}
+		\item 我们称$s_{\varphi}:E\to\Hom_{B-\mathsf{Mod}}\left(F,\rho^{\ast}\left(G\right)\right),x\mapsto\varphi\left(x,\cdot\right)$是$\varphi$的左伴随.
+		\item 我们称$d_{\varphi}:F\to\Hom_{A-\mathsf{Mod}}\left(E,G\right),y\mapsto\varphi\left(\cdot,y\right)$是$\varphi$的右伴随.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{关于$\rho$的半双线性映射关于元素族的展开式}{}
+	设$\left(e_{i}\right)_{i\in I}\in E^{I},\left(f_{j}\right)_{j\in J}\in F^{J}$,$\left(a_{i}\right)_{i\in I}\in A^{\left(I\right)},\left(b_{j}\right)_{j\in J}\in B^{\left(J\right)},\varphi\in\Sesq_{A,(B,\rho)}\left(E,F;G\right)$.
+	\begin{enumerate}
+		\item $\varphi\left(\sum\limits_{i\in I}a_{i}e_{i},\sum\limits_{j\in J}f_{j}b_{j}\right)=\sum\limits_{\left(i,j\right)\in I\times J}a_{i}\varphi\left(e_{i},f_{j}\right)\bar{b}_{j}$.
+		\item 当$\left(e_{i}\right)_{i\in I}$生成$E$,$\left(f_{j}\right)_{j\in J}$生成$F$时,对每个$\psi\in\Sesq_{A,(B,\rho)}\left(E,F;G\right)$有
+		\begin{align*}
+			\forall\left(i,j\right)\in I\times J\left(\varphi\left(e_{i},f_{j}\right)=\psi\left(e_{i},f_{j}\right)\implies\varphi=\psi\right).
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{$\left(A,B\right)$-双线性映射和矩阵一一对应}{}
+	设$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}\in E^{I}$和$\mathcal{C}\coloneq\left(f_{j}\right)_{j\in J}\in F^{J}$分别是$E$和$F$的基.定义
+	\begin{align*}
+		\Omega:\Sesq_{A,(B,\rho)}\left(E,F;G\right)\to G^{I\times J},f\mapsto\left(f\left(e_{i},f_{j}\right)\right)_{i\in I,j\in J},
+	\end{align*}
+	则$\Omega$是$\Z$-模同构,$\Omega^{-1}:G^{I\times J}\to\Sesq_{A,(B,\rho)}\left(E,F;G\right),\left(a_{ij}\right)_{i\in I,j\in J}\mapsto\left[\left(\sum\limits_{i\in I}x_{i}e_{i},\sum\limits_{j\in J}f_{j}y_{j}\right)\mapsto\sum\limits_{\left(i,j\right)\in I\times J}x_{i}a_{ij}y_{j}\right]$.
+\end{proposition}
+
+\begin{definition}{$\left(A,B\right)$-双线性映射的Gram矩阵}{}
+	设$I$和$J$是有限集,$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}\in E^{I}$和$\mathcal{C}\coloneq\left(f_{j}\right)_{j\in J}\in F^{J}$分别是$E$和$F$的基,$\varphi\in\Sesq_{A,(B,\rho)}\left(E,F;G\right)$.我们称
+	\begin{align*}
+		\Gram_{\mathcal{B}}^{\mathcal{C}}\left(\varphi\right)\coloneq\left(\varphi\left(e_{i},f_{j}\right)\right)_{i\in I,j\in J}
+	\end{align*}
+	是$\varphi$在基$\mathcal{B}$和$\mathcal{C}$下的Gram矩阵.
+\end{definition}
+
+\begin{proposition}{$\Sesq_{A,(B,\rho)}\left(E,F;G\right)$上的双模结构}{}
+	$\Sesq_{A,(B,\rho)}\left(E,F;G\right)$是典范的$\left(Z\left(A\right),Z\left(B\right)\right)$-双模.
+\end{proposition}
+
+\begin{proposition}{关于$\rho$的$\left(A,B\right)$-右半双线性映射的Hom伴随}{}
+	为了简化表述,我们引入下列约定:
+	\begin{itemize}
+		\item 对每个$u\in\Hom_{A-\mathsf{Mod}}\left(E,\Hom_{B-\mathsf{Mod}}\left(F,\rho^{\ast}\left(G\right)\right)\right)$和$x\in E$,记$u_{x}=u\left(x\right)$;
+		\item 对每个$v\in\Hom_{B-\mathsf{Mod}}\left(F,\rho^{\ast}\left(\Hom_{A-\mathsf{Mod}}\left(E,G\right)\right)\right)$和$y\in F$,记$v_{y}=v\left(y\right)$;
+		\item $\Phi:\Sesq_{A,(B,\rho)}\left(E,F;G\right)\to\Hom_{A-\mathsf{Mod}}\left(E,\Hom_{B-\mathsf{Mod}}\left(F,\rho^{\ast}\left(G\right)\right)\right),f\mapsto s_{f}$;
+		\item $\Psi:\Sesq_{A,(B,\rho)}\left(E,F;G\right)\to\Hom_{B-\mathsf{Mod}}\left(F,\rho^{\ast}\left(\Hom_{A-\mathsf{Mod}}\left(E,G\right)\right)\right),g\mapsto d_{g}$.
+	\end{itemize}
+	那么$\varphi$和$\psi$都是典范的$\Z$-模同构,并且
+	\begin{gather*}
+		\Phi^{-1}:\Hom_{A-\mathsf{Mod}}\left(E,\Hom_{B-\mathsf{Mod}}\left(F,\rho^{\ast}\left(G\right)\right)\right)\to\Sesq_{A,(B,\rho)}\left(E,F;G\right),f\mapsto\left[\left(x,y\right)\mapsto f_{x}\left(y\right)\right],\\
+		\Psi^{-1}:\Hom_{B-\mathsf{Mod}}\left(F,\rho^{\ast}\left(\Hom_{A-\mathsf{Mod}}\left(E,G\right)\right)\right)\to\Sesq_{A,(B,\rho)}\left(E,F;G\right),g\mapsto\left[\left(x,y\right)\mapsto g_{y}\left(x\right)\right].
+	\end{gather*}
+\end{proposition}
+
+\begin{proposition}{关于$\rho$的$\left(A,B\right)$-右半双线性映射和$\left(A,B\right)$-双线性映射一一对应}{}
+	定义$\Theta:\Sesq_{A,(B,\rho)}\left(E,F;G\right)\to\Bil_{A,B}\left(E,\sigma_{\ast}\left(F\right);G\right)$如下:
+	\begin{center}
+		对每个$f\in\Sesq_{A,(B,\rho)}\left(E,F;G\right)$,$\tilde{f}\coloneq\Theta\left(f\right)$和$f$在集合层面上相同.
+	\end{center}
+	那么$\Theta$是典范的$\Z$-模同构.
+\end{proposition}
+
+\begin{definition}{关于$\rho$的$\left(A,B\right)$-右半双线性映射的非退化性}{}
+	设$\varphi\in\Sesq_{A,(B,\rho)}\left(E,F;G\right)$,它对应到$\tilde{\varphi}\in\Bil_{A,B}\left(E,\sigma_{\ast}\left(F\right);G\right)$.
+	\begin{enumerate}
+		\item 我们称$\rad_{L}\left(\varphi\right)\coloneq\rad_{L}\left(\tilde{\varphi}\right)$是$f$的左根,称$\rad_{R}\left(\varphi\right)\coloneq\rad_{R}\left(\tilde{\varphi}\right)$是$f$的右根.
+		\item 若$\rad_{L}\left(\varphi\right)\neq\left\{0\right\}$,则称$\varphi$是左退化的,否则称$\varphi$是左非退化的.
+		\item 若$\rad_{R}\left(\varphi\right)\neq\left\{0\right\}$,则称$\varphi$是右退化的,否则称$\varphi$是右非退化的.
+		\item 若$\varphi$既是左非退化的,又是右非退化的,则称$\varphi$是非退化的,否则称$\varphi$是退化的.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{关于$\xi$的$\left(A,B\right)$-左半双线性映射}{}
+	设$\varphi\in\Hom_{\mathsf{Set}}\left(M\times N,G\right)$.如果
+	\begin{enumerate}
+		\item 对每个$x\in M$有$\varphi\left(x,\cdot\right)\in\Hom_{\mathsf{Mod}-B}\left(N,G\right)$,
+		\item 对每个$y\in N$有$\varphi\left(\cdot,y\right)\in\Hom_{\mathsf{Mod}-A}\left(M,\xi^{\ast}\left(G\right)\right)$,
+	\end{enumerate}
+	则称$\varphi$是关于$\xi$的$\left(A,B\right)$-左半双线性映射.
+\end{definition}
+
+\begin{definition}{}{}
+	记$\Sesq_{(A,\xi),B}\left(E,F;G\right)$是从$E\times F$到$G$的关于$\xi$的$\left(A,B\right)$-左半双线性映射组成的集合.这是典范的$\Z$-模.
+\end{definition}
+
+\begin{remark}{}{}
+	类似的,可以验证$\Sesq_{(A,\xi),B}\left(E,F;G\right)$是典范的$\left(Z\left(A\right),Z\left(B\right)\right)$-双模.
+\end{remark}
+
+\begin{proposition}{右半双线性映射和$\left(A,B\right)$-双线性映射一一对应}{}
+	定义$\Xi:\Sesq_{(A,\xi),B}\left(M,N;G\right)\to\Bil_{A,B}\left(\eta_{\ast}\left(M\right),N;G\right)$如下:
+	\begin{center}
+		对每个$f\in\Sesq_{(A,\xi),B}\left(M,N;G\right)$,$\Xi\left(f\right)$和$f$在集合层面上相同.
+	\end{center}
+	那么$\Theta$是典范的$\Z$-模同构.
+\end{proposition}
+
+\begin{proposition}{右双线性映射和左半双线性映射一一对应}{}
+	设$\tau:\Hom_{\mathsf{Set}}\left(E\times F,G\right)\to\Hom_{\mathsf{Set}}\left(F\times E,G\right),f\mapsto f^{\op}$.定义
+	\begin{align*}
+		\Gamma:\Sesq_{A,(B,\rho)}\left(E,F;G\right)\to\Sesq_{(B^{\op},\rho^{\op}),A^{\op}}\left(F^{\op},E^{\op};G^{\op}\right),\varphi\mapsto\tau\left(\varphi\right),
+	\end{align*}
+	则$\Gamma$是典范的$\Z$-模同构.
+\end{proposition}
+
+\begin{remark}{}{}
+	特别地,当$A,B$都是交换环时,我们有典范的$\Z$-模同构$\Sesq_{A,(B,\rho)}\left(E,F;G\right)\simeq\Sesq_{(B,\rho),A}\left(F,E;G\right)$.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

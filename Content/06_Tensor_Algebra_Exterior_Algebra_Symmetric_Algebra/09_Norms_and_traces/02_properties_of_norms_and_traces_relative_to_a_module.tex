@@ -1,0 +1,55 @@
+\section{模的范数和迹的性质}
+
+\begin{proposition}{迹,范数,特征多项式在同构下不变}{}
+	设$M,N$是同构的$A$-模,$\rho_{\ast}\left(M\right),\rho_{\ast}\left(N\right)$都具备有限基,则对每个$a\in A$,
+	\begin{align*}
+		\Tr_{N}\left(a\right)=\Tr_{M}\left(a\right),\Norm_{M}\left(a\right)=\Norm_{N}\left(a\right),\Pc_{M}\left(a;X\right)=\Pc_{N}\left(a;X\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$M$是$A$-模,它一族单调递减的子模$\left(M_{i}\right)_{i=0}^{r}$满足如下条件:
+	\begin{itemize}
+		\item $M_{0}=M,M_{r}=\left\{0\right\}$.
+		\item 对每个$1\leq i\leq r$,商模$P_{i}\coloneq\rho_{\ast}\left(M_{i-1}/M_{i}\right)$具备有限基.
+	\end{itemize}
+	那么$\rho_{\ast}\left(M\right)$也具备有限基,而且对每个$a\in A$有
+	\begin{align*}
+		\Tr_{\rho_{\ast}\left(M\right)}\left(a\right)=\sum\limits_{i=1}^{r}\Tr_{P_{i}}\left(a\right),\Norm_{\rho_{\ast}\left(M\right)}=\prod\limits_{i=1}^{r}\Norm_{P_{i}}\left(a\right),\Pc_{\rho_{\ast}\left(M\right)}\left(a;X\right)=\prod\limits_{i=1}^{r}\Pc_{P_{i}}\left(a;X\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{张量积的范数和迹}{}
+	设$A,A^{\prime}$是$K$-代数,$M$是$A$-模,$M^{\prime}$是$A^{\prime}$-模,$\rho_{\ast}\left(M\right),\rho_{\ast}\left(N\right)$的维数分别是$m,n$.若
+	\begin{align*}
+		\sigma:A\to A\otimes_{K}A^{\prime},\sigma^{\prime}:A^{\prime}\to A\otimes_{K}A^{\prime}
+	\end{align*}
+	都是典范嵌入,则对每个$a\in A,a^{\prime}\in A^{\prime}$有
+	\begin{align*}
+		\Tr_{M\otimes_{K}M^{\prime}}\left(a\otimes a^{\prime}\right)=\Tr_{\sigma_{\ast}\left(M\right)}\left(a\right)\Tr_{\sigma_{\ast}^{\prime}\left(M^{\prime}\right)}\left(a^{\prime}\right),
+		\Norm_{M\otimes_{K}M^{\prime}}\left(a\otimes a^{\prime}\right)=\left(\Norm_{\sigma_{\ast}\left(M\right)}\left(a\right)\right)^{m}\left(\Norm_{\sigma_{\ast}^{\prime}}\left(a^{\prime}\right)\right)^{n}.
+	\end{align*}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

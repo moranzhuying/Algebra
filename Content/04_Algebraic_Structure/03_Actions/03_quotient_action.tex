@@ -1,0 +1,91 @@
+\section{商作用}
+
+记号约定:
+\begin{itemize}
+	\item $\Omega,E$是集合,$\alpha\mapsto f_{\alpha}$是$\Omega$在$E$上的作用.
+	\item $\sim$是$E$上的等价关系,$\pi:E\twoheadrightarrow E/\sim$是典范满射.
+\end{itemize}
+
+\begin{definition}{和作用兼容的等价关系}{}
+	若$\forall\alpha\in\Omega\forall x,y\in E\left(\pi\left(x\right)=\pi\left(y\right)\implies\pi\left(f_{\alpha}\left(x\right)\right)=\pi\left(f_{\alpha}\left(y\right)\right)\right)$,则称$\sim$和作用$\alpha\mapsto f_{\alpha}$相容.
+\end{definition}
+
+\begin{definition}{商作用}{}
+	设$\sim$和作用$\alpha\mapsto f_{\alpha}$相容.对任意$\alpha\in\Omega$,定义$\bar{f}_{\alpha}:E/\sim\to E/\sim,\pi\left(x\right)\mapsto\pi\left(f_{\alpha}\left(x\right)\right)$.称$\alpha\mapsto\bar{f}_{\alpha}$为$\Omega$在$E$上的商作用.
+\end{definition}
+
+本节接下来的内容中,默认$E$是原群(合成律为$\odot$).
+
+\begin{definition}{左相容,右相容}{}
+	若$\sim$和$a\mapsto\mathcal{L}_{a}$兼容,则称$\sim$和$\odot$左相容;若$\sim$和$a\mapsto\mathcal{R}_{a}$相容,则称$\sim$和$\odot$右相容.
+\end{definition}
+
+\begin{theorem}{相容$\iff$左相容+右相容}{}
+	$\sim$和$\odot$在$E$上诱导的商合成律相容$\iff$ $\sim$和$\odot$既左相容又右相容.
+\end{theorem}
+
+\begin{theorem}{作用下的第一同构定理}{}
+	设$F$是原群(合成律为$\odot$),$\alpha\mapsto g_{\alpha}$是$\Omega$在$F$上的作用,$g:E\to F$是$\Omega$-态射.
+	\begin{enumerate}
+		\item 若$\sim$是$h$在$E$上诱导的等价关系,则$\sim$和$\alpha\mapsto f_{\alpha}$相容.
+		\item 带有商作用的$E/\sim$和$\im\left(h\right)$是$\Omega$-同构的.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}{作用下的第二同构定理}{}
+	设$\sim,\sim^{\prime}$为$E$上的等价关系,$\sim$和$\alpha\mapsto f_{\alpha}$相容,则下列陈述等价:
+	\begin{enumerate}
+		\item $\sim^{\prime}$和$\Omega$在$E/\sim$上的商作用相容.
+		\item 存在$E$上和$\alpha\mapsto f_{\alpha}$相容的等价关系$\sim^{\prime\prime}$,使得$\sim\subseteq\sim^{\prime\prime}$且$\forall x,y\in E\left(x\sim^{\prime\prime}y\iff\pi\left(x\right)\sim^{\prime}\pi\left(y\right)\right)$.
+	\end{enumerate}
+	两条件之一成立时,典范映射$E/\sim^{\prime\prime}\to\left(E/\sim\right)/\left(\sim^{\prime\prime}/\sim\right)$是$\Omega$-等变同构.
+\end{theorem}
+
+\begin{theorem}{原群的第三同构定理}{}
+	设$A$是$E$的不变子集,$\sim$和$\alpha\mapsto f_{\alpha}$相容,$B$是$A$关于$\sim$的饱和集.
+	\begin{enumerate}
+		\item $B$是$E$的不变子集.
+		\item $\sim$在$A$和$B$上分别诱导的等价关系$\sim_{A}$和$\sim_{B}$各自和$\Omega$在$A,B$上分别诱导的商作用相容.
+		\item 典范嵌入$A\hookrightarrow B$诱导的典范映射$A/\sim_{A}\to B/\sim_{B}$是$\Omega$-等变同构.
+	\end{enumerate}
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

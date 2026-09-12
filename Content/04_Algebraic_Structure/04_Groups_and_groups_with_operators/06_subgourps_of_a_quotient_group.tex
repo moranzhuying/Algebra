@@ -1,0 +1,115 @@
+\section{商群的子群}
+
+记号约定:$\Omega$是集合,$G,G^{\prime}$是$\Omega$-群,$f:G\to H$是$\Omega$-群同态.
+
+\begin{proposition}{子群在$\Omega$-群同态下的原像}{}
+	设$H^{\prime}$是$H$的$\Omega$-子群.
+	\begin{enumerate}
+		\item $f^{-1}\left(H^{\prime}\right)$是$G$的$\Omega$-子群,当$H^{\prime}$是$H$的正规$\Omega$-子群时$f^{-1}\left(H^{\prime}\right)$亦然.
+		\item $\ker\left(f\right)$是$f^{-1}\left(H^{\prime}\right)$的正规$\Omega$-子群.
+		\item 若$f$是满射,则$H^{\prime}=f\left(f^{-1}\left(H^{\prime}\right)\right)$且$f$诱导出$\Omega$-群同构$f^{-1}\left(H^{\prime}\right)/\ker\left(f\right)\to H^{\prime}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{子群在$\Omega$-群同态下的像}{}
+	设$G^{\prime}$是$G$的$\Omega$-子群.
+	\begin{enumerate}
+		\item $f\left(G^{\prime}\right)$是$G$的$\Omega$-子群且$f^{-1}\left(f\left(G^{\prime}\right)\right)=G^{\prime}\ker\left(f\right)=\ker\left(f\right)G^{\prime}$.特别地,$f^{-1}\left(H^{\prime}\right)=G^{\prime}\iff\ker\left(f\right)\subseteq G^{\prime}$.
+		\item 若$f$是满射且$G^{\prime}$是$G$的正规$\Omega$-子群,则$f\left(G^{\prime}\right)$是$H$的正规$\Omega$-子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{满$\Omega$-群同态下的子群对应定理}{}
+	设$f$是满射,$\mathfrak{G},G^{\prime}$分别是$G$中包含$\ker\left(f\right)$的$\Omega$-子群和$\Omega$-正规子群的集合,$\mathfrak{H},\mathfrak{H}^{\prime}$分别是$H$中的$\Omega$-子群和正规$\Omega$-子群组成的集合,四者按$\subseteq$赋予偏序.记$\varphi:\mathfrak{G}\to\mathfrak{H},G^{\prime}\mapsto f\left(G^{\prime}\right),\psi:\mathfrak{H}\to\mathfrak{G},H^{\prime}\mapsto f^{-1}\left(H\right)$.
+	\begin{enumerate}
+		\item $\varphi$是偏序集同构,其逆为$\psi$.
+		\item $\varphi$和$\psi$分别诱导偏序集同构$\varphi^{\prime}:\mathfrak{G}^{\prime}\to\mathfrak{H}^{\prime}$和$\psi^{\prime}:\mathfrak{H}^{\prime}\to\mathfrak{G}^{\prime}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{乘积与同构定理}{}
+	设$G^{\prime}$是$G$的$\Omega$-子群,$L$是$G^{\prime}$的正规$\Omega$-子群.
+	\begin{enumerate}
+		\item $L\ker\left(f\right)$是$G^{\prime}\ker\left(f\right)$的正规$\Omega$-子群.
+		\item $L\left(G^{\prime}\cap\ker\left(f\right)\right)$是$G^{\prime}$的正规$\Omega$-子群.
+		\item $f\left(L\right)$是$f\left(G^{\prime}\right)$的正规$\Omega$-子群.
+		\item 商$\Omega$-群$G^{\prime}\ker\left(f\right)/L\ker\left(f\right),G^{\prime}/L\left(G^{\prime}\cap\ker\left(f\right)\right),f\left(G^{\prime}\right)/f\left(L\right)$两两同构.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$X\subseteq G$且$f\left(X\right)$生成的$\Omega$-子群是$H$,$Y\subseteq\ker\left(f\right)$且生成的$\Omega$-子群是$\ker\left(f\right)$,则$X\cup Y$生成的$\Omega$-子群是$G$.
+\end{corollary}
+
+\begin{remark}{满的$\Omega$-群同态在取原像时保持幂集的运算}{}
+	若$f$是满射,$A,B\subseteq H$,则$f^{-1}\left(AB\right)=f^{-1}\left(A\right)f^{-1}\left(B\right),f^{-1}\left(A^{-1}\right)=\left(f^{-1}\left(A\right)\right)^{-1}$.
+\end{remark}
+
+\begin{proposition}{正规化子与乘积子群}{}
+	设$A,B$是$G$的$\Omega$-子群,并且$\forall a\in A\forall b\in B\left(aba^{-1}\in B\right)$.
+	\begin{enumerate}
+		\item $AB=BA$,并且$AB$是$G$的$\Omega$-子群.
+		\item $A\cap B$是$A$的正规$\Omega$-子群.
+		\item $B$是$AB$的正规$\Omega$-子群.
+		\item 典范嵌入$A\hookrightarrow AB$诱导$\Omega$-群同构$A/\left(A\cap B\right)\to AB/B$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{商群对应定理}{}
+	设$N$是$G$的正规$\Omega$-子群.
+	\begin{enumerate}
+		\item $G^{\prime}\mapsto G^{\prime}/N$给出包含$N$的$\Omega$-子群和$G/N$的$\Omega$-子群的对应.
+		\item 若$G^{\prime}$是包含$N$的$\Omega$-子群,则$G^{\prime}/N$是$G/N$的正规子群$\iff$ $G^{\prime}$是$G$的正规$\Omega$-子群.此时有$\Omega$-群同构
+		\begin{align*}
+			G/G^{\prime}\simeq\left(G/N\right)/\left(G^{\prime}/N\right).
+		\end{align*}
+		\item 若$G^{\prime}$是$G$的$\Omega$-子群,则$G^{\prime}N$是$G$的$\Omega$-子群,$N$是$G^{\prime}N$的正规$\Omega$-子群,$G^{\prime}\cap N$是$G^{\prime}$的正规$\Omega$-子群,并且有$\Omega$-群同构
+		\begin{align*}
+			G^{\prime}/\left(G^{\prime}\cap N\right)\simeq G^{\prime}N/N.
+		\end{align*}
+	\end{enumerate}
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

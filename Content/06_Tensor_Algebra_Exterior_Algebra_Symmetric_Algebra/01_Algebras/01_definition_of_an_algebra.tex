@@ -1,0 +1,68 @@
+\chapter{代数}
+
+\section{代数的定义}
+
+记号约定:$A$是交换环,$E,E^{\prime},E^{\prime\prime}$是$A$-模.
+
+\begin{definition}{$A$-代数及其反代数,交换代数,结合代数,含幺代数}{}
+	设$E$上的运算$\cdot:E\times E\to E,\left(x,y\right)\mapsto xy$是$A$-双线性的.
+	\begin{itemize}
+		\item 我们称$E$是一个$A$-代数,称$\cdot$是$E$上的乘法.
+		\item $E^{\op}$对$\cdot^{\op}$构成$A$-代数,我们称$E^{\op}$是$E$的反$A$-代数.
+		\item 若$\cdot=\cdot^{\op}$,则称$E$是$A$-交换代数.
+		\item 若$\cdot$满足结合律,则称$E$是$A$-结合代数.
+		\item 若$\cdot$有幺元$e$,则称$e$是$E$的单位元,称$E$是$A$-含幺代数.
+	\end{itemize}
+\end{definition}
+
+\begin{proposition}{}{}
+	设$E$是$A$-代数,$\left(x_{i}\right)_{i\in I}$,$\left(y_{j}\right)_{j\in J}$是$E$的元素族,$\left(\alpha_{i}\right)_{i\in I}$,$\left(\beta_{j}\right)_{j\in J}$是$A$的有限支撑族,则
+	\begin{align*}
+		\left(\sum_{i\in I}\alpha_{i}x_{i}\right)\cdot\left(\sum_{j\in J}\beta_{j}y_{j}\right)=\sum_{\left(i,j\right)\in I\times J}\left(\alpha_{i}\beta_{j}\right)\left(x_{i}y_{j}\right).
+	\end{align*}
+	特别地,对任一$\alpha\in A$和$x,y\in E$,有$\left(\alpha x\right)y=x\left(\alpha y\right)=\alpha\left(xy\right)$.
+\end{proposition}
+
+\begin{example}{常见的$A$-代数的例子}{}
+	\begin{enumerate}
+		\item $_{d}A_{s}$对自身的乘法是$A$-交换结合代数.
+		\item 设$R$是伪环,它作为$\Z$-模对环的乘法构成$\Z$-结合代数.
+		\item 设$I$是集合,则$A$-模$A^{I}$配备逐点的乘法后成为$A$-交换结合代数.
+		\item 分别定义$E$上的运算$\cdot_{1},\cdot_{2}$为$\left(x,y\right)\mapsto xy+yx$和$\left(x,y\right)\mapsto xy-yx$,则$E$对$\cdot_{1}$构成$A$-交换代数,对$\cdot_{2}$构成$A$-代数.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{$A$-代数同态}{}
+	设$E,E^{\prime}$是$A$-代数,$f:E\to E^{\prime}$是$A$-模同态.若$\forall x,y\in E\left(f\left(xy\right)=f\left(x\right)f\left(y\right)\right)$,则称$f$是$A$-代数同态.定义
+	\begin{align*}
+		\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)=\left\{\varphi\in \Hom_{A}\left(E,E^{\prime}\right)\middle|\varphi\text{是}A\text{-代数同态}\right\},\End_{A-\mathsf{Alg}}\left(E\right)=\Hom_{A-\mathsf{Alg}}\left(E,E\right).
+	\end{align*}
+\end{definition}
+
+\begin{definition}{$A$-代数单(满)同态,$A$-代数同构}{}
+	设$E,E^{\prime}$是$A$-代数,$f\in\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)$.
+	\begin{enumerate}
+		\item 若对诸$A$-代数$D$和$g,h\in\Hom_{A-\mathsf{Alg}}\left(D,E\right)$,$f\circ g=f\circ h\implies g=h$,则称$f$是$A$-代数单同态.
+		\item 若对诸$A$-代数$D$和$g,h\in\Hom_{A-\mathsf{Alg}}\left(E,D\right)$,$g\circ f=h\circ f\implies g=h$,则称$f$是$A$-代数满同态.
+		\item 若存在$g\in\Hom_{A-\mathsf{Alg}}\left(E^{\prime},E\right)$使得$g\circ f=\id_{E}$,则称$f$是左可逆$A$-代数同态.
+		\item 若存在$g\in\Hom_{A-\mathsf{Alg}}\left(E^{\prime},E\right)$使得$f\circ g=\id_{E}$,则称$f$是右可逆$A$-代数同态.
+		\item 若存在$g\in\Hom_{A-\mathsf{Alg}}\left(E^{\prime},E\right)$使得$g\circ f=\id_{E}$且$f\circ g=\id_{E^{\prime}}$,则称$f$是$A$-代数同构(或可逆$A$-代数同态).
+	\end{enumerate}
+	定义$\Isom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)=\left\{\varphi\in\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)\middle|\varphi\text{是}A\text{-代数同构}\right\},\Aut_{A-\mathsf{Alg}}\left(E\right)=\Isom_{A-\mathsf{Alg}}\left(E,E\right)$.
+\end{definition}
+
+\begin{definition}{反自同构}{}
+	设$E$是$A$-代数.我们称$\Isom_{A-\mathsf{Alg}}\left(E,E^{\op}\right)$的元素为$E$的反自同构.
+\end{definition}
+
+\begin{proposition}{$A$-代数同态的性质}{}
+	设$E,E^{\prime},E^{\prime\prime}$是$A$-代数.
+	\begin{enumerate}
+		\item 若$f\in\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right),g\in\Hom_{A-\mathsf{Alg}}\left(E^{\prime},E^{\prime\prime}\right)$,则$g\circ f\in\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime\prime}\right)$.
+		\item 若$f\in\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)$,则$f\in\Isom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)$ $\iff$ $f$是双射.两条件之一成立时$f^{-1}\in\Hom_{A-\mathsf{Alg}}\left(E^{\prime},E\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$A$-含幺代数同态}{}
+	设$E,E^{\prime}$是含幺$A$-代数,分别有单位元$e,e^{\prime},f\in\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)$.若$f\left(e\right)=e^{\prime}$,则称$f$是$A$-含幺代数同态.
+\end{definition}

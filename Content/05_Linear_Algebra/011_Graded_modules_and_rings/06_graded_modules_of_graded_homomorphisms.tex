@@ -1,0 +1,53 @@
+\section{分次同态模的分次模}
+
+记号约定:$\Delta$是交换群(加法记号),$A$是$\Delta$型分次环,$M,N$是$\Delta$型分次左$A$-模.
+
+\begin{definition}{分次同态模}{}
+	定义$\underline{\Hom}_{A}\left(M,N\right)\coloneq\bigoplus\limits_{\lambda\in\Delta}\Hom_{A}\left(M,N\right)_{\delta},\underline{\End}_{\Delta-A}\left(M\right)=\underline{\Hom}_{\Delta-A}\left(M,M\right)$.
+\end{definition}
+
+\begin{proposition}{分次同态模是中心模}{}
+	$\underline{\Hom}_{A}\left(M,N\right)$是$Z\left(A\right)$-模$\Hom_{A}\left(M,N\right)$的$Z\left(A\right)$-子模,也是$\Delta$型分次$Z\left(A\right)$-模.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$M^{\prime},N^{\prime}$是$\Delta$型分次左$A$-模,$f:M^{\prime}\to M$和$g:N^{\prime}\to N$分别是$\alpha$次和$\beta$次分次模同态,则
+	\begin{align*}
+		\underline{\Hom}_{A}\left(M,N\right)\to\underline{\Hom}_{A}\left(M^{\prime},N^{\prime}\right),u\mapsto f\circ u\circ g
+	\end{align*}
+	是$\alpha+\beta$次分次$Z\left(A\right)$-模同态.
+\end{proposition}
+
+\begin{corollary}{}{}
+	$\underline{\End}_{A}\left(M\right)$是$\End_{A}\left(M\right)$的$\Delta$型分次子环.
+\end{corollary}
+
+\begin{proposition}{}{}
+	若$M$有限生成,则$\underline{\Hom}_{A}\left(M,N\right)=\Hom_{A}\left(M,N\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	$\underline{\Hom}_{A}\left(A_{s},M\right)=\Hom_{A}\left(A_{s},M\right)$,$\Hom_{A}\left(A_{s},M\right)$是典范的$\Delta$型分次左$A$-模,典范映射$M\to\Hom_{A}\left(A_{s},M\right)$是$0$次分次左$A$-模同构.
+\end{corollary}
+
+\begin{definition}{分次对偶模}{}
+	我们称$\underline{M}^{\vee}\coloneq\Hom_{A}\left(M,A_{s}\right)$为$M$的分次对偶模.
+\end{definition}
+
+\begin{definition}{分次转置}{}
+	设$f:M\to N$是$\delta$次分次左$A$-模同态.定义$f^{\top}\coloneq\underline{\Hom}_{A}\left(f,\id_{A}\right)$为$f$的$\delta$次分次转置.
+\end{definition}
+
+\begin{remark}{}{}
+	有时候我们会给$\Delta$配备$-\id_{\Delta}$诱导的分次,此时$\underline{M}^{\vee}$的$\delta$次齐次元是$M$上的$-\delta$次分次线性泛函.若$f:M\to N$是$\delta$次分次模同态,则$f^{\top}$是$-\delta$次分次模同态.
+\end{remark}
+
+\begin{proposition}{交换环下的典范分次同态}{}
+	设$A$是$\Delta$型分次交换环,$M,N,P,Q$是$\Delta$型分次$A$-模,则存在如下的$0$次典范分次模同态:
+	\begin{gather*}
+		\underline{\Hom}_{A}\left(M,\underline{\Hom}_{A}\left(N,P\right)\right)\to\underline{\Hom}_{A}\left(M\otimes_{A}N,P\right)\\
+		\underline{\Hom}_{A}\left(M,N\right)\otimes_{A}P\to\underline{\Hom}_{A}\left(M,N\otimes_{A}P\right)\\
+		\underline{\Hom}_{A}\left(M,P\right)\otimes_{A}\underline{\Hom}_{A}\left(N,Q\right)\to\underline{\Hom}_{A}\left(M\otimes_{A}N,P\otimes_{A}Q\right)\\
+		\underline{M}^{\vee}\to\underline{N}^{\vee}\to\left(M\otimes_{A}N\right)^{\vee}
+	\end{gather*}
+\end{proposition}

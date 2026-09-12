@@ -1,0 +1,68 @@
+\section{线性方程}
+
+记号约定:
+
+\begin{itemize}
+	\item $A$是环,$E,F$是$A$-模,$\left(F_{i}\right)_{i\in I}$是一族$A$-模.
+	\item $f\in\Hom_{A}\left(E,F\right),\forall i\in I\left(f_{i}\in\Hom_{A}\left(E,F_{i}\right)\right)$.
+	\item $y_{0}\in F$,$\left(y_{i}\right)_{i\in I}$是$\prod\limits_{i\in I}F_{i}$的元素族,$\left(\alpha_{i,j}\right)_{i\in I,j\in J},\left(\eta_{i}\right)_{i\in I}$是$A$的元素族.
+\end{itemize}
+
+\begin{definition}{线性方程,齐次线性方程}{}
+	\begin{enumerate}
+		\item 我们称$f\left(x\right)=y_{0}$是一个线性方程,$y_{0}$是该方程的常数项,$f^{-1}\left(\left\{y_{0}\right\}\right)$的元素称为该方程的解.
+		\item 若$y_{0}=0$,则称$f\left(x\right)=0$是与方程$f\left(x\right)=y_{0}$相伴的其次线性方程,称$0$是该方程的零解(或平凡解).
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{线性方程组}{}
+	我们称$f_{i}\left(x\right)=y_{i}\left(i\in I\right)$是一个线性方程组.
+\end{definition}
+
+\begin{definition}{标量线性方程}{}
+	若$F=A_{s}$,则称$f\left(x\right)=y_{0}$为(左)标量线性方程.
+\end{definition}
+
+\begin{proposition}{线性方程的解集结构定理}{}
+	若$x_{0}$是方程$f\left(x\right)=y_{0}$的一个解,则$f^{-1}\left(\left\{y_{0}\right\}\right)=x_{0}+\ker\left(f\right)$.
+\end{proposition}
+
+\begin{corollary}{线性方程有唯一解的等价条件}{}
+	线性方程$f\left(x\right)=y_{0}$有唯一解$\iff$ $\left|f^{-1}\left(\left\{y_{0}\right\}\right)\right|\geqslant 1$且$f$为单射.
+\end{corollary}
+
+\begin{proposition}{Fredholm二则一的代数形式}{}
+	若线性方程$f\left(x\right)=y_{0}$有解,则$y_{0}\in\ker\left(f^{\top}\right)^{\circ}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	上述条件对一般的环和模不一定是充分的.若$A$是除环,则$y_{0}\in\ker\left(f^{\top}\right)^{\circ}$ $\implies$ 线性方程$f\left(x\right)=y_{0}$有解.
+\end{remark}
+
+\begin{proposition}{线性方程组和线性方程的转化}{}
+	令$\bar{f}:E\to\prod\limits_{i\in I}F_{i},x\mapsto\left(f_{i}\left(x\right)\right)_{i\in I},\tilde{y}_{0}=\left(y_{i}\right)_{i\in I}$,则$f^{-1}\left(\left\{\tilde{y}_{0}\right\}\right)=\bigcap\limits_{i\in I}f_{i}^{-1}\left(\left\{y_{i}\right\}\right)$.
+\end{proposition}
+
+\begin{remark}{}{}
+	若$E$是自由模,它有基$\left(m_{i}\right)_{i\in I}$,而$\left(r_{i}\right)_{i\in I}$是$A_{s}^{\left(I\right)}$的元素族,则:
+	\begin{enumerate}
+		\item $\sum\limits_{i\in I}r_{i}m_{i}$是线性方程$f\left(x\right)=y_{0}$的一个解$\iff$ $\sum\limits_{i\in I}r_{i}f\left(m_{i}\right)=y_{0}$.
+		\item $f\left(x_{0}\right)=y_{0}$ $\iff$存在$A_{s}^{\left(I\right)}$的元素族$\left(\xi_{i}\right)_{i\in I}$使$x_{0}=\sum\limits_{i\in I}\xi_{i}m_{i}$且$\sum\limits_{i\in I}\xi_{i}f\left(m_{i}\right)=y_{0}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{左标量线性方程组,右标量线性方程组}{}
+	\begin{enumerate}
+		\item 我们称$\sum\limits_{i\in I}x_{i}\alpha_{i,j}=\eta_{i}(i\in I)$是$A$上的左标量线性方程组,其中$\left(x_{i}\right)_{i\in I}$是$A_{s}^{\left(I\right)}$的元素族.
+		\item 我们称$\sum\limits_{i\in I}\alpha_{i,j}x_{i}=\eta_{i}(i\in I)$是$A$上的右标量线性方程组,其中$\left(x_{i}\right)_{i\in I}$是$A_{s}^{\left(I\right)}$的元素族.
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{左标量方程组和右标量方程组之间的转化}{}
+	$A$上的左(相对的,右)标量线性方程组都可以视为$A^{\op}$上的右(相对的,左)标量线性方程组.
+\end{remark}
+
+\begin{proposition}{右标量线性方程组和线性方程的转化}{}
+	设$g:A_{d}^{\left(I\right)}\to A_{d}^{I},\left(x_{i}\right)_{i\in I}\mapsto\left(\sum\limits_{i\in I}a_{i,j}x_{j}\right)_{j\in J}$,则$g^{-1}\left(\left\{\left(\eta_{i}\right)_{i\in I}\right\}\right)$是$\sum\limits_{i\in I}\alpha_{i,j}x_{i}=\eta_{i}(i\in I)$的解集.
+\end{proposition}
+

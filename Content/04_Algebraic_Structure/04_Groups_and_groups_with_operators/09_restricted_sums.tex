@@ -1,0 +1,92 @@
+\section{限制和}
+
+记号说明:$\Omega$是集合,$\left(G_{i}\right)_{i\in I}$是一族$\Omega$-群,对诸$i\in I$,$H_{i}$是$G_{i}$的$\Omega$-子群.
+
+\begin{definition}{相对$\Omega$-子群族的限制和}{}
+	记$G=\prod\limits_{i\in I}G_{i}$.称$\Res\prod\limits_{i\in I}\left(G_{i},H_{i}\right)\coloneq\left\{\left(x_{i}\right)_{i\in I}\in G\middle|\left\{i\in I\middle|x_{i}\notin H_{i}\right\}\text{有限}\right\}$为$\left(G_{i}\right)_{i\in I}$相对$\left(H_{i}\right)_{i\in I}$的限制和.
+\end{definition}
+
+\begin{proposition}{限制和的性质}{}
+	记$G=\prod\limits_{i\in I}G_{i}$.
+	\begin{enumerate}
+		\item $\Res\prod\limits_{i\in I}\left(G_{i},H_{i}\right)$是$G$的$\Omega$-子群.
+		\item 当$I$有限时$\Res\prod\limits_{i\in I}\left(G_{i},H_{i}\right)=G$.
+		\item 若$\left\{i\in I\middle|H_{i}\text{不是正规}\Omega\text{-子群}\right\}$有限,则$\Res\prod\limits_{i\in I}\left(G_{i},H_{i}\right)$是$G$的正规$\Omega$-子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$\Omega$-群的限制和}{}
+	设对诸$i\in I$有$H_{i}=\left\{e_{i}\right\}$.我们称$\bigoplus\limits_{i\in I}G_{i}\coloneq\Res\prod\limits_{i\in I}\left(G_{i},H_{i}\right)$为$\left(G_{i}\right)_{i\in I}$的限制和.
+	
+	对诸$i_{0}\in I$,定义典范嵌入$\iota_{i_{0}}:G_{i_{0}}\hookrightarrow\bigoplus\limits_{i\in I}G_{i},x\mapsto\left(x_{i}\right)_{i\in I},x_{i}=
+	\begin{cases}
+		x,&i=i_{0},\\
+		x_{i},&i\neq i_{0}.
+	\end{cases}$
+\end{definition}
+
+\begin{proposition}{典范嵌入的像与限制和}{}
+	\begin{enumerate}
+		\item 对诸$i\in I$,$\im\left(\iota_{i}\right)$是$\bigoplus\limits_{i\in I}G_{i}$的正规$\Omega$-子群.
+		\item 对诸$i,j\in I$且$i\neq j$,$\im\left(\iota_{i}\right)$和$\im\left(\iota_{j}\right)$的元素在$\bigoplus\limits_{i\in I}G_{i}$中可交换.
+		\item 对诸$i,j\in I$且$i\neq j$,$\im\left(\iota_{i}\right)\cap\im\left(\iota_{j}\right)=\left\{\left(e_{k}\right)_{k\in I}\right\}$.
+		\item $\bigcup\limits_{i\in I}\im\left(\iota_{i}\right)$生成的$\Omega$-子群是$\bigoplus\limits_{i\in I}G_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{限制和的泛性质}{}
+	设$K$是$\Omega$-群,对诸$i\in I$,$\phi_{i}:G_{i}\to K$是$\Omega$-群同态.若对诸$i,j\in I$且$i\neq j$,$\im\left(\phi_{i}\right)$和$\im\left(\phi_{j}\right)$的元素可交换,则
+	\begin{enumerate}
+		\item 对诸$i\in I$,下列图表交换.
+		\begin{center}
+			\begin{tikzcd}
+				G_{i} \arrow[rr, "\iota_{i}", hook] \arrow[rd, "\phi_{i}"'] &   & \bigoplus\limits_{k\in I}G_{k} \arrow[ld, "\exists!\phi", dashed] \\
+				& K &                                                                  
+			\end{tikzcd}
+		\end{center}
+		\item (1)的图表里的$\phi$满足下列条件:对诸$\left(x_{i}\right)_{i\in I}\in\bigoplus\limits_{k\in I}G_{k}$有$\phi\left(\left(x_{i}\right)_{i\in I}\right)=\prod\limits_{i\in I}\phi_{i}\left(x_{i}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+本节接下来的内容中,$G$是$\Omega$-群,$\left(H_{i}\right)_{i\in I}$是它的一族$\Omega$-群.
+
+\begin{definition}{$\Omega$-群的内限制和}{}
+	下列条件成立时,称$G$是$\left(H_{i}\right)_{i\in I}$的内限制和.
+	\begin{enumerate}
+		\item 对诸$i,j\in I$且$i\neq j$,$H_{i}$的每个元素和$H_{j}$的每个元素可交换.
+		\item $\Omega$-群同态$\bigoplus\limits_{i\in I}H_{i}\to G$是$\Omega$-群同构.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{直因子}{}
+	设$H$是$G$的$\Omega$-子群.若存在$G$的$\Omega$-子群$K^{\prime}$使$G$是$K$和$K^{\prime}$的内限制和,则称$K$是$G$的直因子.
+\end{definition}
+
+\begin{proposition}{内直和的唯一分解刻画}{}
+	$G$是$\left(H_{i}\right)_{i\in I}$的内限制和$\iff$对诸$x\in G$都存在$\prod\limits_{i\in I}H_{i}$的有限支撑族$\left(y_{i}\right)_{i\in I}$使$x=\prod\limits_{i\in I}y_{i}$.
+\end{proposition}
+
+\begin{proposition}{内直和的商群积刻画}{}
+	设$I$是有限集,对诸$i,j\in I$,记$H^{i}$是满足$j\neq i$的$H_{j}$生成的$\Omega$-子群,则$G$是$\left(H_{i}\right)_{i\in I}$的内限制和$\iff$ $\left(H_{i}\right)_{i\in I}$是$G$的一族正规$\Omega$-子群族且$G=\prod\limits_{i\in I}\left(G/H^{i}\right)$.
+\end{proposition}
+
+\begin{proposition}{内直和的归纳交集刻画}{}
+	设$n\in\N$且$\geq 1$,$I=\llbracket 1,n\rrbracket$,$\left(H_{i}\right)_{i=1}^{n}$是$G$的一族正规$\Omega$-子群.若对诸$i\in\llbracket 1,n-1\rrbracket$有
+	\begin{align*}
+		\left(H_{1}\ldots H_{i}\right)\cap H_{i+1}=\left\{e\right\},
+	\end{align*}
+	则$H_{1}\ldots H_{n}$是$G$的正规$\Omega$-子群,并且是$\left(H_{i}\right)_{i=1}^{n}$的内直积.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+

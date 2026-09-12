@@ -1,0 +1,80 @@
+\section{基环的更换}
+
+记号约定:
+\begin{itemize}
+	\item $A,A_{0},B,B_{0}$是环,$p\in\Hom_{\mathsf{Ring}}\left(A,A_{0}\right),q\in\Hom_{\mathsf{Ring}}\left(B,B_{0}\right)$.
+	\item $\rho\in\Isom_{\mathsf{Ring}}\left(A,A_{0}\right),\sigma\in\Isom_{\mathsf{Ring}}\left(B,B_{0}\right)$.
+	\item 对每个$b\in B$,记$\bar{b}=\rho\left(b\right)$;对每个$b_{0}\in B_{0}$,记$\tilde{b}_{0}=\sigma\left(b_{0}\right)$.
+	\item $E$是左$A$-模,$F$是右$B$-模或左$B$-模,$G$是$\left(A,B\right)$-双模,$G_{0}$是$\left(A_{0},B_{0}\right)$-双模.
+	\item $u\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$且$\forall\left(a,x,b\right)\in A\times G\times B\left(u\left(axb\right)=p\left(a\right)u\left(x\right)q\left(b\right)\right)$.
+	\item $F$是右$B$-模时$\varphi\in\Bil_{A,B}\left(E,F;G\right)$,$F$是左$B$-模时$\varphi\in\Sesq_{A,(B,\rho)}\left(E,F;G\right)$.
+\end{itemize}
+
+\begin{proposition}{$\left(A,B\right)$-双线性映射的标量扩张的存在唯一性}{scalar-extension-of-bilinear-mappings}
+	设$F$是右$B$-模,则存在唯一的$\varphi^{\prime}\in\Bil_{A^{\prime},B^{\prime}}\left(p^{\ast}\left(E\right),q^{\ast}\left(F\right);G^{\prime}\right)$,对每个$\left(a^{\prime},b^{\prime},x,y\right)\in A^{\prime}\times B^{\prime}\times M\times N$有
+	\begin{align*}
+		\varphi^{\prime}\left(a^{\prime}\otimes x,b^{\prime}\otimes y\right)=a^{\prime}u\left(\varphi\left(x,y\right)\right)b^{\prime}.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{双线性映射的左右伴随的标量扩张的存在唯一性}{}
+	沿用命题(\ref{prop:scalar-extension-of-bilinear-mappings})的设定.记$i_{E}:E\to p_{\ast}\left(p^{\ast}\left(E\right)\right)$和$i_{F}:F\to q_{\ast}\left(q^{\ast}\left(F\right)\right)$是典范映射,则如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			E && {\Hom_{\mathsf{Mod}-B_{0}}\left(F,G\right)} \\
+			{p^{\ast}\left(p_{\ast}\left(F\right)\right)} && {p_{\ast}\left(\Hom_{\mathsf{Mod}-B_{0}^{\op}}\left(q^{\ast}\left(F\right),G_{0}\right)\right)} \\
+			F && {\Hom_{A-\mathsf{Mod}}\left(E,G\right)} \\
+			{q^{\ast}\left(q_{\ast}\left(F\right)\right)} && {q_{\ast}\left(\Hom_{A_{0}-\mathsf{Mod}}\left(p^{\ast}\left(E\right),G_{0}\right)\right)}
+			\arrow["{s_{\varphi}}"', from=1-1, to=1-3]
+			\arrow["{i_{E}}"', from=1-1, to=2-1]
+			\arrow["{k_{1}}", from=1-3, to=2-3]
+			\arrow["{p_{\ast}\left(s_{\varphi^{\prime}}\right)}", from=2-1, to=2-3]
+			\arrow["{d_{\varphi}}"', from=3-1, to=3-3]
+			\arrow["{i_{F}}"', from=3-1, to=4-1]
+			\arrow["{k_{2}}", from=3-3, to=4-3]
+			\arrow["{q_{\ast}\left(d_{\varphi^{\prime}}\right)}", from=4-1, to=4-3]
+		\end{tikzcd}
+	\end{center}
+	其中,$k_{1}:\Hom_{\mathsf{Mod}-B^{\op}}\left(F,G\right)\to p_{\ast}\left(\Hom_{\mathsf{Mod}-B_{0}^{\op}}\left(q^{\ast}\left(F\right)\right),G_{0}\right),w\mapsto\left[y\otimes b^{\prime}\mapsto u\left(w\left(y\right)\right)b^{\prime}\right]$,
+	\begin{align*}
+		k_{2}:\Hom_{A-\mathsf{Mod}}\left(E,G\right)\to q_{\ast}\left(\Hom_{A_{0}-\mathsf{Mod}}\left(p^{\ast}\left(E\right)\right),G_{0}\right),v\mapsto\left[x\otimes a^{\prime}\mapsto  a^{\prime}u\left(v\left(x\right)\right)\right].
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{半双线性映射的标量扩张的存在唯一性}{scalar-extension-of-sesqualinear-mappings}
+	设$F$是左$B$-模,则存在唯一的$\varphi^{\prime}\in\Sesq_{A_{0},(B_{0},\sigma)}\left(p^{\ast}\left(E\right),q^{\ast}\left(F\right);G_{0}\right)$,对每个$\left(a_{0},b_{0},x,y\right)\in A_{0}\times B_{0}\times E\times F$,
+	\begin{align*}
+		\varphi^{\prime}\left(a_{0}\otimes x,b_{0}\otimes y\right)=a_{0}u\left(\varphi\left(x,y\right)\right)\tilde{b}_{0}.
+	\end{align*}
+\end{proposition}
+
+\begin{definition}{(半)双线性映射的标量扩张}{}
+	沿用命题\ref{prop:scalar-extension-of-bilinear-mappings}(或命题\ref{prop:scalar-extension-of-sesqualinear-mappings})的设定.考虑下列三种情形:
+	\begin{itemize}
+		\item $G_{0}=A_{0}\otimes_{A}G\otimes_{B}B_{0},u:G\to G_{0},g\mapsto 1_{A_{0}}\otimes g\otimes 1_{B_{0}}$.
+		\item $A=B=G,A_{0}=B_{0}=G_{0},u=p=q$时,
+		\item $A=B,A_{0}=B_{0},p=q$,$A,A_{0}$是交换环,$G_{0}=p^{\ast}\left(G\right),u:G\to G_{0},g\mapsto 1_{A_{0}}\otimes g$,$\forall \left(a,g\right)\in A\times G\left(ag=ga\right)$.
+	\end{itemize}
+	\begin{enumerate}
+		\item 情形(1)成立时,称$p^{\ast}q^{\ast}\varphi\coloneq\varphi^{\prime}$为$\varphi$的泛标量扩张.
+		\item 情形(2)成立时,称$p^{\ast}\varphi\coloneq\varphi^{\prime}$是$\varphi$向$A_{0}$的标量扩张.
+		\item 情形(3)成立时,称$\varphi_{A_{0}}\coloneq\varphi^{\prime}$是$\varphi$向$A_{0}$的标准标量扩张.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	沿用命题\ref{prop:scalar-extension-of-bilinear-mappings}(或命题\ref{prop:scalar-extension-of-sesqualinear-mappings})的记号,设$A,A_{0},B,B_{0}$是除环,$\alpha:p^{\ast}\left(G\right)\to G_{0},a_{0}\otimes g\mapsto a_{0}u\left(g\right)$.
+	\begin{itemize}
+		\item 当$F$是右$B$-模时,定义$\beta:q_{\ast}\left(G\right)\to G_{0},g\otimes b_{0}\mapsto u\left(g\right)b_{0}$.
+		\item 当$F$是左$B$-模时,定义$\beta:q_{\ast}\left(G\right)\to G_{0},g\otimes b_{0}\mapsto u\left(g\right)\tilde{b}_{0}$.
+	\end{itemize}
+	\begin{enumerate}
+		\item 若$\alpha$为单射,则对$E$的每个子空间$M$有$p^{\ast}\left(M\right)^{\circ}=q^{\ast}\left(M^{\circ}\right)$.
+		\item 若$\beta$为单射,则对$F$的每个子空间$N$有$q^{\ast}\left(N\right)^{\circ}=p^{\ast}\left(N^{\circ}\right)$.
+		\item 设$\alpha$和$\beta$都是单射,则$\varphi^{\prime}$是单射$\iff$ $\varphi$非退化.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	只要$A,A_{0},B,B_{0}$是除环,那么$\alpha$和$\beta$都是单射.
+\end{remark}

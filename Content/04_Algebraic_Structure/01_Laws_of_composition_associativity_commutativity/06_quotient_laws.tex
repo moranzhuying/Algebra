@@ -1,0 +1,69 @@
+\section{商运算}
+
+记号约定:
+\begin{itemize}
+	\item $E,F$是原群,配备合成律$\odot$,$\sim$是$E$上的等价关系,$\pi:E\twoheadrightarrow E/\sim,x\mapsto\left[x\right]_{\sim}$.
+	\item $\left(\left(u_{\alpha},v_{\alpha}\right)\right)_{\alpha\in I}$是$E\times E$的元素族.
+\end{itemize}
+
+
+\begin{definition}{与合成律相容的等价关系,商合成律,商原群}{}
+	若$\forall x,y,x^{\prime},y^{\prime}\in E\left(\pi\left(x\right)=\pi\left(x^{\prime}\right)\wedge\pi\left(y\right)=\pi\left(y^{\prime}\right)\implies\pi\left(x\odot y\right)=\pi\left(x^{\prime}\odot y^{\prime}\right)\right)$,则称$\sim$和$\odot$相容,称
+	\begin{align*}
+		\left(E/\sim\right)\times\left(E/\sim\right)\to E/\sim,\left(\pi\left(x\right),\pi\left(y\right)\right)\mapsto\pi\left(x\odot y\right)
+	\end{align*}
+	是$\odot$相对$\sim$的商合成律,配备商合成律的$E/\sim$称为$E$相对$\sim$的商原群.
+\end{definition}
+
+\begin{proposition}{与合成律相容的等价关系给出的典范满射是原群同态}{}
+	设$\sim$和$\odot$相容,则$\pi\in\Hom_{\mathsf{Mag}}\left(E,E/\sim\right)$.
+\end{proposition}
+
+\begin{proposition}{商合成律继承结合性与交换性}{}
+	设$\sim$和$\odot$相容.若$\odot$满足结合律(或交换律),则$\odot$相对$\sim$的商作用律亦然.
+\end{proposition}
+
+\begin{proposition}{等价关系诱导的映射是原群同态$\iff$典范满射是原群同态}{}
+	设$g:E/\sim\to F$是映射,则$g\in\Hom_{\mathsf{Mag}}\left(E/\sim,F\right)\iff\pi\in\Hom_{\mathsf{Mag}}\left(E,E/\sim\right)$.
+\end{proposition}
+
+\begin{proposition}{等化子诱导的等价关系和原群的合成律兼容,并诱导典范同构}{}
+	设$f\in\Hom_{\mathsf{Mag}}\left(E,F\right),\sim=\left\{\left(x,y\right)\in X\times X\middle|f\left(x\right)=f\left(y\right)\right\}$,则下列图表交换,$f$诱导的映射是同构.
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[r, "f"] \arrow[d, "\pi"',two heads]  & Y  \\
+			X/\sim\arrow[r,"\simeq","\hat{f}"', dashed] & \im\left(f\right) \arrow[u, "\iota"', hook]                
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{theorem}{原群的第二同构定理}{}
+	设$\sim,\sim^{\prime}$为$E$上的等价关系,$\sim$和$\odot$相容,则下列陈述等价:
+	\begin{enumerate}
+		\item $\sim^{\prime}$和$E/\sim$的合成律相容.
+		\item 存在$E$上和$\odot$相容的等价关系$\sim^{\prime\prime}$,使得$\sim\subseteq\sim^{\prime\prime}$且$\forall x,y\in E\left(x\sim^{\prime\prime}y\iff\pi\left(x\right)\sim^{\prime}\pi\left(y\right)\right)$.
+	\end{enumerate}
+	两条件之一成立时,典范映射$E/\sim^{\prime\prime}\to\left(E/\sim\right)/\left(\sim^{\prime\prime}/\sim\right)$是原群同构.
+\end{theorem}
+
+\begin{theorem}{原群的第三同构定理}{}
+	设$A$是$E$的子原群,$\sim$和$\odot$相容,$B$是$A$关于$\sim$的饱和集.
+	\begin{enumerate}
+		\item $B$是$E$的子原群.
+		\item $\sim$在$A$和$B$上分别诱导的等价关系$\sim_{A}$和$\sim_{B}$都和$A,B$各自的商作用律相容.
+		\item 典范嵌入$A\hookrightarrow B$诱导的典范映射$A/\sim_{A}\to B/\sim_{B}$是原群同构.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{生成的相容等价关系}{}
+	考虑$E$上满足如下条件的所有等价关系$\approx$组成的集合$\mathcal{S}$:
+	\begin{enumerate}
+		\item $\approx$和$\odot$相容;
+		\item $\forall\alpha\in I\left(\left[u_{i}\right]_{\approx}=\left[v_{\alpha}\right]_{\approx}\right)$.
+	\end{enumerate}
+		我们称$\bigcap\limits_{\tau\in\mathcal{S}}\tau$是$\left(\left(u_{\alpha},v_{\alpha}\right)\right)_{\alpha\in I}$生成的和$\odot$相容的等价关系.
+\end{definition}
+
+\begin{proposition}{同态的因子化性质}{}
+	设与$\odot$相容的等价关系$\sim$由$\left(\left(u_{\alpha},v_{\alpha}\right)\right)_{\alpha\in I}$生成,$f\in\Hom_{\mathsf{Mag}}\left(E,F\right)$且$\forall i\in I\left(f\left(x_{i}\right)=f\left(y_{i}\right)\right)$,则$f$和$\sim$相容.
+\end{proposition}

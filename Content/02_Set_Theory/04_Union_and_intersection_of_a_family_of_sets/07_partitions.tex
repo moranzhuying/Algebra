@@ -1,0 +1,44 @@
+\section{划分}
+
+\begin{definition}{集合无交和相交}{}
+	设$A,B$是集合.若$A\cap B=\emptyset$,则称$A$和$B$无交,否则称$A$和$B$相交.
+\end{definition}
+
+\begin{definition}{两两无交的集合族}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合族.若$\forall i,j\in I\left(i\neq j\implies X_{i}\cap X_{j}=\emptyset\right)$,则称$\left(X_{i}\right)_{i\in I}$是两两无交的集合族.
+\end{definition}
+
+\begin{proposition}{两两无交的集合族和映射的像与原像}{}
+	设$f:A\to B$是映射.
+	\begin{enumerate}
+		\item 若$\left(X_{i}\right)_{i\in I}$是$A$的两两无交的子集族,则$\left(f\left(X_{i}\right)\right)_{i\in I}$是$B$的两两无交的子集族.
+		\item 若$\left(Y_{j}\right)_{j\in J}$是$B$的两两无交的子集族,则$\left(f^{-1}\left(Y_{j}\right)\right)_{j\in J}$是$A$的两两无交的子集族.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{两两无交}{}
+	设$\left(X_{i}\right)_{i\in I}$是两两无交的集合族,$\left(f_{i}\right)_{i\in I}$是一族偏函数,对每个$i\in I$,$f_{i}$的源是$X_{i}$,靶是$F$,则存在唯一的以$\bigcup\limits_{i\in I}X_{i}$为源,$F$为靶的偏函数,对任一$i\in I$,$f|_{X_{i}}=f_{i}$.
+\end{proposition}
+
+\begin{definition}{划分(集合族版本)}{}
+	设$E$是集合,$\left(X_{i}\right)_{i\in I}$是$E$的子集族.若如下条件成立,则称$\left(X_{i}\right)_{i\in I}$是$E$的划分,并把$E$记作$\bigsqcup\limits_{i\in I}X_{i}$.
+	\begin{itemize}
+		\item 对任一$i\in I$,$X_{i}\neq\emptyset$.
+		\item $\left(X_{i}\right)_{i\in I}$是两两无交的集合族.
+		\item $\left(X_{i}\right)_{i\in I}$是$E$的覆盖.
+	\end{itemize}
+\end{definition}
+
+\begin{proposition}{}{}
+	设$E$是集合,$\left(X_{i}\right)_{i\in I}$是$E$的划分,$\mathcal{X}=\left\{X_{i}\middle|i\in I\right\}$,则映射$i\to\mathcal{X},i\mapsto X_{i}$是双射.
+\end{proposition}
+
+\begin{example}{}{}
+	若$A$是非空集合,则$\left(\left\{x\right\}\right)_{x\in A}$是$A$的划分.
+\end{example}
+
+
+
+
+
+

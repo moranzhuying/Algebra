@@ -1,0 +1,47 @@
+\section{有限生成模}
+
+记号约定:$A$是PID.
+
+\begin{theorem}{PID上有限生成模的结构定理}{structure-theorem-of-finite-generated-modules-over-pid}
+	设$E$是有限生成$A$-模,则$A$中有一族理想$\left(\mathfrak{a}_{k}\right)_{k=1}^{n}$满足下列条件:
+	\begin{enumerate}
+		\item $E\simeq\bigboxplus\limits_{k=1}^{n}A/\mathfrak{a}_{k}$,$\left(\mathfrak{a}_{k}\right)_{k=1}^{n}$递增且$\mathfrak{a}_{n}\neq A$.
+		\item $\left(\mathfrak{a}_{k}\right)_{k=1}^{n}$被(1)中的条件唯一确定.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{PID上有限生成模的直和分解}{}
+	对每个有限生成$A$-模$E$,存在自由$A$-模$F$使得$E=\tor\left(E\right)\oplus F$.
+\end{corollary}
+
+\begin{remark}{}{}
+	$\tor\left(E\right)$的直和补通常是不唯一的.例如,取$E=\Z\boxplus\left(\Z/2\Z\right)$,则$\tor\left(\Z\right)=\left\{0\right\}\boxplus\left(\Z/2\Z\right)$.它的直和补是
+	\begin{align*}
+		\Z\boxplus\left(0+2\Z\right),\left\{\left(n,n+2\Z\right)\middle|n\in\Z\right\}.
+	\end{align*}
+\end{remark}
+
+\begin{corollary}{PID上有限生成的无挠模必定有限维且自由}{}
+	每个无挠的有限生成$A$-模都是有限维自由模
+\end{corollary}
+
+\begin{remark}{}{}
+	``有限生成''不能去掉.例如,$A$不是域时,$K\coloneq\Frac(A)$的加法群作为$A$-模无挠,但它不是自由模.
+\end{remark}
+
+\begin{definition}{有限生成模的不变因子}{}
+	沿用定理(\ref{thm:structure-theorem-of-finite-generated-modules-over-pid})的设定.我们称理想序列$\left(\mathfrak{a}_{k}\right)_{k=1}^{n}$是$E$的不变因子.
+\end{definition}
+
+\begin{remark}{}{}
+	设$K$是域.当$A$是$\Z$或$K[X]$时,$A$的每个理想都有典范的生成元选取方式(分别取正整数和首一多项式).设
+	\begin{align*}
+		\forall 1\leq i\leq n\left(\mathfrak{a}_{i}=\langle\alpha_{i}\rangle\right).
+	\end{align*}
+	按照习惯,我们通常把$\left(\alpha_{i}\right)_{i=1}^{n}$称为$E$的不变因子.
+\end{remark}
+
+
+
+
+

@@ -1,0 +1,44 @@
+\section{直和,分次模的外代数}
+
+记号约定:$A$是交换环.
+
+\begin{proposition}{}{}
+	设$\left(M_{\lambda}\right)_{\lambda\in\Lambda}$是一族$A$-模,对每个$\lambda\in\Lambda$,$f_{\lambda}:\bigwedge\left(M_{\lambda}\right)\to\bigotimes\limits_{\lambda\in\Lambda}\bigwedge\left(M_{\lambda}\right)$是典范代数同态,$j_{\lambda}:M_{\lambda}\to\bigboxplus\limits_{\lambda\in\Lambda}M_{\lambda}$是典范单射.
+	\begin{enumerate}
+		\item 存在唯一的$A$-代数同构$g_{M}:{}^{g}\bigotimes\limits_{\lambda\in\Lambda}\bigwedge\left(M_{\lambda}\right)\to\bigwedge\left(\bigboxplus\limits_{\lambda\in\Lambda}M_{\lambda}\right)$满足$\forall\lambda\in\Lambda\left(\bigwedge\left(j_{\lambda}\right)=g\circ f_{\lambda}\right)$.
+		\item $g_{M}$也是$\N$型分次代数同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	设$\left(N_{\lambda}\right)_{\lambda\in\Lambda}$是一族$A$-模,$\forall\lambda\in\Lambda\left(v_{\lambda}\in\Hom_{A-\mathsf{Alg}}\left(M_{\lambda},N_{\lambda}\right)\right)$,则如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			{^{g}\bigotimes\limits_{\lambda\in\Lambda}\bigwedge(M_{\lambda})} & {\bigwedge(\bigboxplus\limits_{\lambda\in\Lambda}M_{\lambda})} \\
+			{^{g}\bigotimes\limits_{\lambda\in\Lambda}\bigwedge(N_{\lambda})} & {\bigwedge(\bigboxplus\limits_{\lambda\in\Lambda}N_{\lambda})}
+			\arrow["{g_{M}}", from=1-1, to=1-2]
+			\arrow["{\bigboxplus\limits_{\lambda\in\Lambda}\bigwedge(v_{\lambda})}"', from=1-1, to=2-1]
+			\arrow["{\bigwedge(^{g}\bigotimes\limits_{\lambda\in\Lambda}v_{\lambda})}", from=1-2, to=2-2]
+			\arrow["{g_{N}}"', from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{remark}
+
+\begin{corollary}{对称幂的直和分解}{}
+	设$\left(M_{\lambda}\right)_{\lambda\in\Lambda}$是一族$A$-模,对每个$\boldsymbol{\nu}=\left(\nu_{\lambda}\right)_{\lambda\in\Lambda}\in\N^{\left(\Lambda\right)}$,记
+	\begin{align*}
+		J_{\boldsymbol{\nu}}=\supp\left(\boldsymbol{\nu}\right),\bigwedge^{\boldsymbol{\nu}}\left(M\right)=\bigotimes\limits_{\lambda\in J_{\boldsymbol{\nu}}}\bigwedge^{n_{\lambda}}\left(M_{\lambda}\right).
+	\end{align*}
+	那么对每个$n\in\N$,$\bigwedge\limits^{n}\left(M\right)$典范同构于$\bigboxplus\limits_{\substack{\boldsymbol{\nu}\in\N^{\left(\Lambda\right)}\\ \left|\boldsymbol{\nu}\right|=n}}\bigwedge\limits^{\nu}\left(M\right)$.
+\end{corollary}
+
+\begin{proposition}{分次模的外代数}{}
+	设$\Delta$是交换幺半群(加法记号),$M$是带有分次$\left(M_{\alpha}\right)_{\alpha\in\Delta}$的$A$-模.对每个$\left(\alpha,n\right)\in\Delta\times\N$,定义
+	\begin{align*}
+		\bigwedge^{\alpha,n}=\bigboxplus\limits_{\substack{\nu=\left(n_{\lambda}\right)_{\lambda\in\Lambda}\in\N^{\left(\Lambda\right)},\left(\alpha_{\lambda}\right)_{\lambda\in\supp\left(\nu\right)}\in\Delta^{\supp\left(\nu\right)}\\ \sum\limits_{\lambda\in\Lambda}n_{\lambda}=n,\sum\limits_{\lambda\in\Lambda}n_{\lambda}\alpha_{\lambda}=\alpha}}\bigwedge^{n_{\lambda}}\left(M_{\alpha_{\lambda}}\right).
+	\end{align*}
+	\begin{enumerate}
+		\item $\left(\bigwedge\limits^{\alpha,n}\left(M\right)\right)_{\alpha\in\Delta,n\in\N}$是$\mathsf{T}\left(M\right)$上的$\Delta\times\N$型分次.
+		\item $\bigwedge\left(M\right)$上既与$\bigwedge\left(M\right)$的$A$-代数结构相容,又诱导$\bigwedge\limits^{1}\left(M\right)$上的$\Delta$型分次的分次只有$\left(\bigwedge\limits^{\alpha,n}\left(M\right)\right)_{\alpha\in\Delta,n\in\N}$.
+	\end{enumerate}
+\end{proposition}

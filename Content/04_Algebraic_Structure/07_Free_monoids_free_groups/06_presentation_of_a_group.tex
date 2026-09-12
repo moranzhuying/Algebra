@@ -1,0 +1,127 @@
+\section{群的展示}
+
+记号约定:$I$是集合,$G$是群,$\mathbf{t}\coloneq\left(t_{i}\right)_{i\in I}$是$G$的元素族,$\mathbf{r}\coloneq\left(r_{j}\right)_{j\in J}$是$I$的元素族.
+
+\begin{definition}{生成族,自由族,基,关系子}{}
+	设$f_{\mathbf{t}}:F\left(I\right)\to G,i\mapsto t_{i}$是赋值同态.
+	\begin{enumerate}
+		\item 若$f_{\mathbf{t}}$是满射,则称$\mathbf{t}$是$G$的生成族.
+		\item 若$f_{\mathbf{t}}$是单射,则称$\mathbf{t}$是$G$的自由族.
+		\item 若$f_{\mathbf{t}}$是双射,则称$\mathbf{t}$是$G$的基.
+		\item $\ker\left(f_{\mathbf{t}}\right)$的元素称为$\mathbf{t}$的关系子.
+	\end{enumerate}
+\end{definition}
+
+注意$f_{\mathbf{t}}$是双射时$G$为自由群.
+
+\begin{definition}{群的展示}{}
+	若$\mathbf{t}$是$G$的生成族,$\left(r_{j}\right)_{j\in J}$是$F\left(I\right)$的关系子,$\ker\left(f_{\mathbf{t}}\right)$是包含$\mathbf{r}$中所有元素的最小正规子群,则称$\left(\mathbf{t},\mathbf{r}\right)$为$G$的展示.
+\end{definition}
+
+\begin{definition}{群展示构造的群}{}
+	设$N\left(\mathbf{r}\right)$是包含$\mathbf{r}$的所有元素的最小正规子群.定义$F\left(I,\mathbf{r}\right)\coloneq F\left(I\right)/N\left(\mathbf{r}\right)$为生成元$I$和关系字$\mathbf{r}$确定的群.
+	
+	对诸$i\in I$,记$\tau_{i}\coloneq iN\left(\mathbf{r}\right)$.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	\begin{enumerate}
+		\item 我们通常说群$G$由生成元$t_{i}$和关系$r_{j}\left(\mathbf{t}\right)=e$展示.
+		\item 设$m,n\in\N,I=\left\{1,\ldots,n\right\},J=\left\{1,\ldots,m\right\}$.此时记$\langle\tau_{1},\ldots,\tau_{n}\mid r_{1},\ldots,r_{m}\rangle\coloneq F\left(I,\mathbf{r}\right)$.特别地,若
+		\begin{align*}
+			\forall 1\leq j\leq m\exists u_{j},v_{j}\in G\left(r_{j}=u_{j}^{-1}v_{j}\right),
+		\end{align*}
+		则记$\langle\tau_{1},\ldots,\tau_{n}\mid u_{1}=v_{1},\ldots,u_{m}=v_{m}\rangle\coloneq F\left(I,\mathbf{r}\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{群展示在同构意义下能唯一确定一个群}{}
+	设$\left(\mathbf{t},\mathbf{r}\right)$是$G$的展示,则存在唯一的$u\in\Isom_{\mathsf{Grp}}\left(F\left(I,\mathbf{r}\right),G\right)$使得$\forall i\in I\left(u\left(\tau_{i}\right)=t_{i}\right)$.
+\end{proposition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 展示$\langle\tau\mid\tau^{q}=e\rangle$定义的群是$q$阶循环群.
+		\item 展示$\langle x,y\mid xy=yx\rangle$定义的群同构于$\Z\times\Z$.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	下列命题等价:
+	\begin{enumerate}
+		\item $\left(\mathbf{t},\mathbf{r}\right)$为$G$的展示.
+		\item 对任意群$G^{\prime}$及其元素族$\mathbf{t}^{\prime}=\left(t_{i}^{\prime}\right)_{i\in I}$,若$\forall j\in J\left(f_{\mathbf{t}^{\prime}}\left(r_{j}\right)=e^{\prime}\right)$,则存在唯一的$u\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$使
+		\begin{align*}
+			\forall i\in I\left(u\left(t_{i}\right)=t_{i}^{\prime}\right).
+		\end{align*}
+		\item 设$\bar{G}$是群,$\bar{\mathbf{t}}=\left(\bar{t}_{i}\right)_{i\in I}$是其生成族.若$\forall j\in J\left(f_{\bar{\mathbf{t}}}\left(r_{j}\right)=\bar{e}\right)$,
+		则每个满足$\forall i\in I\left(v\left(\bar{t}_{i}\right)=t_{i}\right)$的$v\in\Hom_{\mathsf{Grp}}\left(\bar{G},G\right)$都是群同构.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

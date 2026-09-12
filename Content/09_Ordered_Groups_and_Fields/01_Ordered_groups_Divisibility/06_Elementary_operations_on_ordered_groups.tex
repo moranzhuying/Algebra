@@ -1,0 +1,56 @@
+\section{有序群的初等运算}
+
+\begin{definition}{有序群的子群}{}
+	设$\left(G,+,\leq\right)$是有序群,$H\leq G$,则$G$在$H$上诱导的偏序使得$G$是有序群,称$H$是$G$的有序子群.
+\end{definition}
+
+\begin{remark}{}{}
+	没有额外说明的情况下,我们总是默认按照这种方式为$G$的子群配备偏序.可以验证$H_{\geq 0}=G_{\geq 0}\cap H$.
+\end{remark}
+
+\begin{definition}{有序群的乘积}{}
+	设$\left(G_{i}\right)_{i\in I}$是一族有序群,$G=\prod\limits_{i\in I}G_{i}$.为$G$配备逐点偏序,则$G$是有序群,称之为有序群族$\left(G_{i}\right)_{i\in I}$的乘积.
+\end{definition}
+
+\begin{remark}{}{}
+	可以验证$G_{\geq 0}=\prod\limits_{i\in I}G_{\geq 0}$.特别地,若$H$是另一个有序群,$\left(G_{i}\right)_{i\in I}$的每一项都等于$H$,则$G=\Hom_{\mathsf{Set}}\left(I,H\right)$,并且
+	\begin{align*}
+		G_{\geq 0}=\left\{f\in\Hom_{\mathsf{Set}}\left(I,H\right)\middle|f\left(I\right)\subseteq H_{\geq 0}\right\}.
+	\end{align*}
+\end{remark}
+
+\begin{definition}{有序群的直和}{}
+	设$\left(G_{i}\right)_{i\in I}$是一族有序群.为$\prod\limits_{i\in I}G_{i}$配备逐点偏序,其有序子群$\bigoplus\limits_{i\in I}G_{i}$称为有序群族$\left(G_{i}\right)_{i\in I}$的直和.
+\end{definition}
+
+\begin{definition}{有序群的字典序乘积}{}
+	设集合$I$良序,$\left(G_{i}\right)_{i\in I}$是一族有序群,$G=\prod\limits_{i\in I}G_{i}$.为$G$配备字典序,则$G$是有序群,称为有序群族$\left(G_{i}\right)_{i\in I}$的字典序乘积.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$\left(G_{i}\right)_{i\in I}$还是一族全序群,那么它们的字典序乘积也是全序群.
+		\item 在常见的情形下,$I$是$\N$中的有限区间$\left[1,n\right]$.
+		\item $G_{\geq 0}=\left\{0\right\}\cup A$,其中$A$由$G$中最小指标的非零分量是正元的元素组成.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

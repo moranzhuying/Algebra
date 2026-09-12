@@ -1,0 +1,137 @@
+\section{仿射空间的射影完备化}
+
+记号约定:
+
+\begin{itemize}
+	\item $K$是除环,$V$是$K$-向量空间,$n\in\N$,$\pi:\left(K_{s}\times V\right)\setminus\left\{0\right\}\twoheadrightarrow\mathbb{P}\left(K_{s}\times V\right)$是典范投影.
+	\item $\phi:V\to\mathbb{P}\left(K_{s}\times V\right),x\mapsto\pi\left(1,x\right)$.
+\end{itemize}
+
+\begin{definition}{伴随射影空间}{}
+	我们称$\mathbb{P}\left(K_{s}\times V\right)$是和$V$典范伴随的射影空间.
+\end{definition}
+
+\begin{proposition}{典范伴随的射影空间的维数}{}
+	若$\dim V=n$,则$\dim\mathbb{P}\left(K_{s}\times V\right)=n$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$V_{1}=\left\{1\right\}\times V\subseteq K_{s}\times V$,则$K_{s}\times V$的每个不包含$\Dir\left(V_{1}\right)$的直线和$V_{1}$的交集是单点集.
+\end{proposition}
+
+\begin{proposition}{}{}
+	$\phi$是单射.我们称$\phi$是典范嵌入.
+\end{proposition}
+
+\begin{remark}{}{}
+	在典范同构的意义下,$V=\im\left(\phi\right)$.
+\end{remark}
+
+\begin{definition}{无穷远超平面,无穷远点}{}
+	定义$H_{\infty}\coloneq\mathbb{P}\left(K_{s}\times V\right)\setminus\im\left(\phi\right)=\mathbb{P}\left(\left\{0\right\}\times V\right)$.称$H_{\infty}$为$\mathbb{P}\left(K_{s}\times V\right)$的无穷远超平面,$H_{\infty}$的元素称为无穷原点.
+\end{definition}
+
+\begin{proposition}{无穷远点的坐标表征}{}
+	设$\left(a_{i}\right)_{i\in I}$是$V$的基,$p\in\mathbb{P}\left(K_{s}\times V\right)$.定义$\mathbb{P}\left(K_{s}\times V\right)$的基$\left(e_{i}\right)_{i\in I\cup\left\{\omega\right\}}$如下:$e_{i}=\begin{cases}
+		\left(0,a_{i}\right),&i\in I,\\
+		\left(0,1\right),&i=\omega.
+	\end{cases}$那么
+	\begin{center}
+		$x$是无穷原点$\iff$ $x$在$\left(e_{i}\right)_{i\in I\cup\left\{\omega\right\}}$下的齐次坐标的第$\omega$个分量是$0$.
+	\end{center}
+\end{proposition}
+
+\begin{definition}{射影完备化}{}
+	设$M$是$V$的仿射线性簇,$M_{1}$是$\left\{1\right\}\times M$在$K_{s}\times V$中生成的向量子空间.称$\bar{M}\coloneq\pi\left(M_{1}\right)$为$M$的射影完备化.
+\end{definition}
+
+\begin{proposition}{射影完备化的性质}{}
+	设$M$是$V$的仿射线性簇,$M_{1}$是$\left\{1\right\}\times M$在$K_{s}\times V$中生成的向量子空间.
+	\begin{enumerate}
+		\item 若$E$的元素族$\left(a_{i}\right)_{i\in I}$生成$M$且仿射无关,则$\left(\left(1,a_{i}\right)\right)_{i\in I}$是$M_{1}$的基.
+		\item 若$M$是有限维的,则$\dim\bar{M}-\dim M$.
+		\item $\bar{M}\setminus\im\left(\phi\right)=\bar{M}\cap H_{\infty}=\pi\left(\left\{0\right\}\times\Dir\left(M\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{射影线性簇的仿射割截}{}
+	设$N$是$\mathbb{P}\left(K_{s}\times V\right)$的子空间,$N\cap H_{\infty}\neq\emptyset$,$R=\pi^{-1}\left(N\right)$.
+	\begin{enumerate}
+		\item 存在$V$的仿射线性簇$M$使得$R\cap\left(\left\{1\right\}\times V\right)=\left\{1\right\}\times M$.
+		\item $N=\bar{M}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{仿射线性簇和射影线性簇的对应}{}
+	设$\mathcal{A}$是$V$中的仿射线性簇组成的集合,$\mathcal{P}$是$\mathbb{P}\left(K_{s}\times V\right)$中不包含于$H_{\infty}$的射影线性簇组成的集合,则$\mathcal{A}\to\mathcal{P},M\mapsto\bar{M}$是双射.
+\end{theorem}
+
+\begin{theorem}{仿射子空间平行的射影表征}{}
+	设$M_{1},M_{2}$是$V$的仿射线性簇,则$M_{1}$和$M_{2}$平行$\iff$ $\bar{M}_{1}\cap H_{\infty}=\bar{M}_{2}\cap H_{\infty}$.
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

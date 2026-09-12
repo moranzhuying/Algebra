@@ -1,0 +1,65 @@
+\chapter{对称代数}
+
+\section{模的对称代数}
+
+记号约定:$A$是交换环,$M$是$A$-模,$E$是$A$-代数.
+
+\begin{definition}{对称代数}{}
+	设$I_{\text{Sym}}$是$\left\{x\otimes y-y\otimes x\in\mathsf{T}\left(M\right)\middle|x,y\in M\right\}$生成的双边理想.称商代数$\mathsf{T}\left(M\right)/I_{\text{Sym}}$为$M$的对称代数.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 我们把$\mathsf{T}\left(M\right)/I_{\text{Sym}}$记作$\Sym\left(M\right)$或$\mathsf{S}\left(M\right)$.
+		\item $I_{\text{Sym}}$是$\mathsf{T}\left(M\right)$的$2$次齐次元生成的分次理想.对每个$n\in\N$,记
+		\begin{align*}
+			I_{n}\coloneq I_{\text{Sym}}\cap\mathsf{T}^{n}\left(M\right),\Sym^{n}\left(M\right)\coloneq\mathsf{S}^{n}\left(M\right)\coloneq\mathsf{T}^{n}\left(M\right)/I_{n},
+		\end{align*}
+		则$\left(\mathsf{S}^{n}\left(M\right)\right)_{n\in\N}$是$\mathsf{S}\left(M\right)$的分次(称为典范分次).此外,我们有典范同构$\mathsf{S}^{0}\left(M\right)\simeq A$和$\mathsf{S}^{1}\left(M\right)\simeq\mathsf{T}^{1}\left(M\right)$,常常把它们等同起来.记$\phi_{M}^{\prime}:M\to\mathsf{S}\left(M\right)$为典范单射.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{对称代数是交换代数}{}
+	$\mathsf{S}\left(M\right)$是交换代数.
+\end{proposition}
+
+\begin{proposition}{对称代数的泛性质}{}
+	设$f\in\Hom_{A}\left(M,E\right)$,$\forall x,y\in M\left(f\left(x\right)f\left(y\right)=f\left(y\right)f\left(x\right)\right)$,则存在唯一的$g\in\Hom_{A-\mathsf{Alg}}\left(\mathsf{S}\left(M\right),E\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			M && E \\
+			& {\mathsf{S}\left(M\right)}
+			\arrow["f", from=1-1, to=1-3]
+			\arrow["{\phi_{M}^{\prime}}"', from=1-1, to=2-2]
+			\arrow["{\exists!g}"', dashed, from=2-2, to=1-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 进一步假设$E$有$\Z$型分次$\left(E_{n}\right)_{n\in\Z}$.如果$f$还满足$\im\left(f\right)\subseteq E_{1}$,则$g$是$\Z$型分次代数同态.
+		\item 对每个$z\in\mathsf{S}\left(M\right)$,存在$A$中的有限序列$\left(a_{j}\right)_{j=1}^{n}$,$\N$中的序列$\left(p_{j}\right)_{j=1}^{n}$和$M$中的矩阵$\left(x_{j,i}\right)_{\substack{1\leq j\leq n\\1\leq i\leq n_{j}}}$使得
+		\begin{align*}
+			z=\sum\limits_{j=1}^{n}a_{j}\left(\bigotimes\limits_{i=1}^{p_{j}}x_{j,i}+I_{\text{Sym}}\right).
+		\end{align*}
+		为了叙述方便,在没有歧义的时候,我们滥用记号:对$M$的有限序列$\left(x_{i}\right)_{i=1}^{n}$,记$x_{1}\ldots x_{n}\coloneq\prod\limits_{i=1}^{n}\left(x_{i}+I_{\text{Sym}}\right)$.
+		\item 固定$n\in\N$.如果$n!\cdot 1_{A}\in A^{\times}$,则$\mathsf{S}^{n}\left(M\right)$由$\left\{x^{n}\middle|x\in M\right\}$生成.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+\section{可逆元}
+
+记号约定:集合$E,F$按$\odot$构成幺原群,各自的幺元是$e$和$e^{\prime}$.
+
+\begin{definition}{左逆,右逆,逆}{}
+	设$x,x^{\prime}\in E$.若$x^{\prime}\odot x=e$,则称$x^{\prime}$是$x$的左逆;若$x\odot x^{\prime}=e$,则称$x^{\prime}$是$x$的右逆;若$x^{\prime}\odot x=x\odot x^{\prime}=e$,则称$x^{\prime}$是$x$的逆.
+\end{definition}
+
+\begin{definition}{左可逆,右可逆,可逆}{}
+	设$x\in E$.若$x$有左逆,则称$x$左可逆;若$x$有右逆,则称$x$右可逆;若$x$有逆,则称$x$可逆.
+\end{definition}
+
+\begin{definition}{群}{}
+	所有元素都可逆的幺半群叫做群.
+\end{definition}
+
+\begin{remark}{术语说明}{}
+	有的时候,我们用``对称''和``可对称化''来分别指代``逆''和``可逆''.采用加法记号时,我们通常不说``逆'',而是说``负''.
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item $e$的逆就是$e$.
+		\item 对于配备映射复合诱导的合成律的$E^{E}$和$f\in E^{E}$来说:
+		\begin{center}
+			$f$是满射$\implies$ $f$左可逆;$f$是单射$\implies$ $f$右可逆;$f$是双射$\iff$ $f$可逆.
+		\end{center}
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{\mathsf{UMag}}\left(E,F\right)$,$x\in E$的逆是$x^{\prime}$,则$f\left(x\right)$的逆是$f\left(x^{\prime}\right)$.
+\end{proposition}
+
+\begin{corollary}{幺原群同态保持可逆元}{}
+	设$f\in\Hom_{\mathsf{UMag}}\left(E,F\right)$,则对$E$的每个可逆元$x$,在$F$中$f\left(x\right)$都可逆.
+\end{corollary}
+
+\begin{corollary}{可逆元在商原群同态下的像可逆}{}
+	设$\sim$是$E$上和$\odot$相容的等价关系,$\pi:X\twoheadrightarrow X/\sim$是典范满射,则对$x$的每个可逆元$x$,在$E/\sim$中$\pi\left(x\right)$都可逆.
+\end{corollary}
+
+\begin{proposition}{可消去和可逆的关系}{}
+	设$E$对$\odot$构成幺半群,$a\in E$.
+	\begin{enumerate}
+		\item 若$a$左可逆,则$\mathcal{L}_{a}$和$\mathcal{R}_{a}$都是双射.
+		\item 若$\mathcal{L}_{a}$和$\mathcal{R}_{a}$至少有一个是双射,则$a$可逆.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{可逆元乘积的具体表达}{}
+	设$E$对$\odot$构成幺半群,$x,y\in E$的逆分别是$x^{\prime},y^{\prime}$,则$x\odot y$的逆是$y^{\prime}\odot x^{\prime}$.
+\end{proposition}
+
+\begin{corollary}{一族可逆元的乘积的具体表达}{}
+	设$E$对$\odot$构成幺半群,$I$是全序集,$I^{\prime}$配备$I$的相反序,$\left(x_{i}\right)_{i\in I}$是$E$的一族可逆元,诸$x_{i}$的逆为$x_{i}^{\prime}$,则$\prod\limits_{i\in I}x_{i}$的逆为$\prod\limits_{i\in I^{\prime}}x_{i}^{\prime}$.
+\end{corollary}
+
+\begin{corollary}{幺半群中可逆元组成的集合是子幺原群}{}
+	设$E$对$\odot$构成幺半群,则$E$中的可逆元组成的集合是$E$的子幺半群.
+\end{corollary}
+
+\begin{proposition}{可逆元把可逆性``传递给''其中心子的元素}{}
+	设$E$对$\odot$构成幺半群,$x,y\in M$可交换,$x^{\prime}$是$x$的逆,则$x^{\prime}$和$y$可交换.
+\end{proposition}
+
+\begin{corollary}{中心子对可逆元取逆封闭}{}
+	设$E$对$\odot$构成幺半群,$X\subseteq E$,$x\in C_{E}\left(X\right)$且可逆,则$x$的逆也属于$C_{E}\left(X\right)$.
+\end{corollary}
+
+\begin{corollary}{可逆中心元的逆是中心元}{}
+	设$E$按$\odot$构成幺半群.若$x\in Z\left(E\right)$且可逆,则$x$的逆也属于$Z\left(E\right)$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

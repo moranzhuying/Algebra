@@ -1,0 +1,68 @@
+\chapter{线性映射模,对偶性}
+
+\section{线性映射模的有关正合列的性质}
+
+记号约定:$A$是环,$E,E_{1},E_{2},E_{3}$是$A$-模,$f\in\Hom_{A}\left(E_{1},E_{2}\right),g\in\Hom_{A}\left(E_{2},E_{3}\right)$.
+
+\begin{proposition}{反变函子$\Hom_{A}\left(-,F\right)$是左正合的}{}
+	下列陈述等价:
+	\begin{enumerate}
+		\item 序列$E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}\xlongrightarrow{}0$正合.
+		\item 对诸$A$-模$F$,序列$0\xlongrightarrow{}\Hom_{A}\left(E_{3},F\right)\xlongrightarrow{\Hom_{A}\left(g,\id_{F}\right)}\Hom_{A}\left(E_{2},F\right)\xlongrightarrow{\Hom_{A}\left(f,\id_{F}\right)}\Hom_{A}\left(E_{1},F\right)$正合.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	$f$是单射(相对的,满射,双射,零映射)$\iff$对任一$A$-模$F$,$\Hom_{A}\left(f,\id_{F}\right)$是单射(相对的,满射,双射,零映射).
+\end{corollary}
+
+\begin{remark}{反变函子$\Hom_{A}\left(-,F\right)$不一定是右正合的}{}
+	设$F$是$A$-模,$0\xlongrightarrow{}E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}\xlongrightarrow{}0$正合,其诱导的序列
+	\begin{align*}
+		0\xlongrightarrow{}\Hom_{A}\left(E_{3},F\right)\xlongrightarrow{\Hom_{A}\left(g,\id_{F}\right)}\Hom_{A}\left(E_{2},F\right)\xlongrightarrow{\Hom_{A}\left(f,\id_{F}\right)}\Hom_{A}\left(E_{1},F\right)\xlongrightarrow{}0
+	\end{align*}
+	不一定正合.如果把$E_{1}$等同于$E_{2}$的一个子模,这意味着一个从$E_{1}$到$E_{2}$的线性映射并非总是能延拓到$E_{2}$上的.
+\end{remark}
+
+\begin{proposition}{$\Hom$函子保持分裂短正合列}{}
+	下列陈述等价.
+	\begin{enumerate}
+		\item 短正合列$0\xlongrightarrow{}E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}\xlongrightarrow{}0$分裂.
+		\item 对诸$A$-模$F$,序列$0\xlongrightarrow{}\Hom_{A}\left(E_{3},F\right)\xlongrightarrow{\Hom_{A}\left(g,\id_{F}\right)}\Hom_{A}\left(E_{2},F\right)\xlongrightarrow{\Hom_{A}\left(f,\id_{F}\right)}\Hom_{A}\left(E_{1},F\right)\xlongrightarrow{}0$为分裂的短正合列.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{共变函子$\Hom_{A}\left(F,-\right)$是右正合的}{}
+	下列陈述等价:
+	\begin{enumerate}
+		\item $0\xlongrightarrow{}E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}$是正合列.
+		\item 对任一$A$-模$F$,序列$0\xlongrightarrow{}\Hom_{A}\left(F,E_{1}\right)\xlongrightarrow{\Hom_{A}\left(\id_{F},f\right)}\Hom_{A}\left(F,E_{2}\right)\xlongrightarrow{\Hom_{A}\left(\id_{F},g\right)}\Hom_{A}\left(F,E_{3}\right)$正合.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	若$E_{1}$是$E_{2}$的子模,则可以把$\Hom_{A}\left(E,F_{1}\right)$等同于$\Hom_{A}\left(E,F_{2}\right)$的$\Z$-子模.在此意义下,对$F_{2}$的诸子模族$\left(M_{\lambda}\right)_{\lambda\in L}$都有
+	\begin{align*}
+		\Hom_{A}\left(E,\bigcap\limits_{\lambda\in L}M_{\lambda}\right)=\bigcap\limits_{\lambda\in L}\Hom_{A}\left(E,M_{\lambda}\right).
+	\end{align*}
+\end{remark}
+
+\begin{corollary}{}{}
+	$f$是单射$\iff$ 对任一$A$-模$G$,$\Hom_{A}\left(\id_{G},f\right)$是单射.
+\end{corollary}
+
+\begin{remark}{共变函子$\Hom_{A}\left(F,-\right)$不一定是左正合的}{}
+	若序列$0\xlongrightarrow{}E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}$正合,$F$是$A$-模,则序列
+	\begin{align*}
+		0\xlongrightarrow{}\Hom_{A}\left(F,E_{1}\right)\xlongrightarrow{\Hom_{A}\left(\id_{F},f\right)}\Hom_{A}\left(F,E_{2}\right)\xlongrightarrow{\Hom_{A}\left(\id_{F},g\right)}\Hom_{A}\left(F,E_{3}\right)
+	\end{align*}
+	不一定正合.把$E_{1}$等同于$E_{2}$的子模,$E_{3}$等同于$E_{2}/E_{1}$,则每个从$F$到$E_{3}$的线性映射不一定能分解成形如$v\circ g$的映射,其中$v\in\Hom_{A}\left(F,E_{2}\right)$.
+\end{remark}
+
+\begin{proposition}{共变函子$\Hom_{A}\left(F,-\right)$保持分裂短正合列}{}
+	下列陈述等价:
+	\begin{enumerate}
+		\item 短正合列$0\xlongrightarrow{}E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}\xlongrightarrow{}0$分裂.
+		\item 对诸$A$-模$F$,短正合列$0\xlongrightarrow{}\Hom_{A}\left(F,E_{1}\right)\xlongrightarrow{\Hom_{A}\left(\id_{F},f\right)}\Hom_{A}\left(F,E_{2}\right)\xlongrightarrow{\Hom_{A}\left(\id_{F},g\right)}\Hom_{A}\left(E_{3},F\right)\xlongrightarrow{}0$分裂.
+	\end{enumerate}
+\end{proposition}

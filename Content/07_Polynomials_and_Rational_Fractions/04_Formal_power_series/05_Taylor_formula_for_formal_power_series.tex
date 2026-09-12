@@ -1,0 +1,61 @@
+\section{形式幂级数的Taylor公式}
+
+记号约定:设$\mathbf{X}\coloneq(X_{i})_{i\in I},\mathbf{Y}\coloneq\left(Y_{i}\right)_{i\in I},\mathbf{Z}\coloneq\left(Z_{i}\right)_{i\in I}$是三族不相交的不定元.
+
+\begin{definition}{形式幂级数环中的形式Taylor展开算子}{}
+	设$\rho:A[[\mathbf{X},\mathbf{Y}]]\to(A[[\mathbf{X}]])[[\mathbf{Y}]]$是典范同构.定义$\Delta:A[[\mathbf{X}]]\to A[[\mathbf{X}]]$如下:
+	\begin{center}
+		对每个$u\in A[[\mathbf{X}]]$和$\nu\in\N^{\left(I\right)}$,$\Delta^{\nu}\left(u\right)$是$\rho\left(u\left(\mathbf{X}+\mathbf{Y}\right)\right)$中$\mathbf{Y}^{\nu}$的系数.
+	\end{center}
+	我们称$\Delta$是形式幂级数环中的形式Taylor展开算子.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 对每个$u\in A[[\mathbf{X}]]$有$u\left(\mathbf{X}+\mathbf{Y}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\left(\Delta^{\nu}\left(u\right)\right)\left(\mathbf{X}\right)\mathbf{Y}^{\nu}$.特别地,$u\left(\mathbf{X}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\left(\Delta^{\nu}\left(u\right)\right)\left(0\right)\mathbf{X}^{\nu}$,故$\Delta^{\nu}\left(u\right)$的常数项是$u$中$\mathbf{X}^{\nu}$的系数.
+		\item $A[[\mathbf{X}]]\to A[[\mathbf{Y}]],u\mapsto\Delta^{\nu}\left(u\right)$是连续映射.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{形式Taylor展开算子的性质}{}
+	\begin{enumerate}
+		\item 对每个$u,v\in A[[\mathbf{X}]]$和$\sigma\in\N^{\left(I\right)}$有$\Delta^{\sigma}\left(uv\right)=\sum\limits_{\substack{\nu,\rho\in\N^{\left(I\right)}\\ \nu+\rho=\sigma}}\Delta^{\nu}\left(u\right)\Delta^{\rho}\left(v\right)$.
+		\item 对每个$\rho,\sigma\in\N^{\left(I\right)}$和$u\in A[[\mathbf{X},\mathbf{Y},\mathbf{Z}]]$有$\Delta^{\rho}\left(\Delta^{\sigma}\left(u\right)\right)=\frac{\left(\rho+\sigma\right)!}{\rho!\sigma!}\Delta^{\rho+\sigma}\left(u\right)$.
+		\item 对每个$u\in A[[\mathbf{X}]]$和$\nu\in\N^{\left(I\right)}$有$\Delta^{\nu}\left(u\right)=\sum\limits_{\lambda\in\N^{\left(I\right)}}\alpha_{\lambda+\nu}\frac{\left(\lambda+\nu\right)!}{\lambda!\nu!}\mathbf{X}^{\lambda}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{特征$0$时多项式环中的Taylor公式}{}
+	设$A$是$\Q$-代数,$\mathbf{X}\coloneq(X_{i})_{i\in I},\mathbf{Y}\coloneq\left(Y_{i}\right)_{i\in I}$是两族不相交的不定元,则
+	\begin{enumerate}
+		\item 对每个$u\in A[\mathbf{X}]$有$u\left(\mathbf{X}+\mathbf{Y}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\frac{1}{\nu!}\left(\mathrm{D}^{\nu}u\right)\left(\mathbf{X}\right)\mathbf{Y}^{\nu}$.
+		\item 对每个$u\in A[\mathbf{X}]$和$\mathbf{a}\in A^{I}$有$u\left(\mathbf{X}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\frac{1}{\nu!}\left(\mathrm{D}^{\nu}u\right)\left(\mathbf{a}\right)\left(\mathbf{X}-\mathbf{a}\right)^{\nu}$.
+		\item 对每个$u\in A[\mathbf{X}]$有$u\left(\mathbf{X}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\frac{1}{\nu!}\left(\mathrm{D}^{\nu}u\right)\left(0\right)\mathbf{X}^{\nu}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}{形式幂级数环中的导子}{}
+	令$\nu=\left(\varepsilon_{i}\right)_{i\in I}\in\N^{I}$,其中$\forall j\in I\left(\varepsilon_{i}\left(j\right)=\delta_{i,j}\right)$.对每个$i\in I$,定义
+	\begin{align*}
+		\mathrm{D}_{i}:A[[\mathbf{X}]]\to A[[\mathbf{X}]],u\mapsto\Delta^{\varepsilon}\left(u\right),
+	\end{align*}
+	则$\mathrm{D}_{i}$是导子.对固定的$i\in I$和$u\in A[[\mathbf{X}]]$,称$\mathrm{D}_{i}u\coloneq\frac{\partial u}{\partial X_{i}}\coloneq\mathrm{D}_{i}\left(u\right)$是$u$关于$X_{i}$的形式偏导数.
+\end{definition}
+
+\begin{definition}{形式幂级数环中的高阶偏导数}{}
+	对每个$\nu\coloneq\left(\nu_{i}\right)_{i\in I}\in\N^{\left(I\right)}$,定义$\mathrm{D}^{\nu}\coloneq\prod\limits_{i\in I}\mathrm{D}_{i}^{\nu_{i}}$.
+\end{definition}
+
+\begin{definition}{一元形式幂级数环中的导数}{}
+	设$u\in A[[X]]$.我们把$u$关于$X$的偏导数记作$\frac{\mathrm{d}u}{\mathrm{d}X}$(或$\mathrm{D}u,u^{\prime}$),称之为$u$的导数.
+\end{definition}
+
+\begin{proposition}{特征$0$的交换环上的形式幂级数环中的Taylor展开式}{}
+	设$A$是$\Q$-代数,$u\in A[[\mathbf{X}]]$,则$u\left(\mathbf{X}+\mathbf{Y}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\frac{1}{\nu!}\left(\mathrm{D}^{\nu}\left(u\right)\right)\left(\mathbf{X}\right)\mathbf{Y}^{\nu},u\left(\mathbf{X}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\frac{1}{\nu!}\left(\mathrm{D}^{\nu}\left(u\right)\right)\left(0\right)\mathbf{X}^{\nu}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	可以验证,对固定的$\nu\in\N^{\left(I\right)}$有$\mathrm{D}^{\nu}=\nu!\Delta^{\nu}$.
+\end{remark}
+
+

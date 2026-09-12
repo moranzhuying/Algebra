@@ -1,0 +1,25 @@
+\section{可逆的形式幂级数}
+
+\begin{proposition}{形式幂级数环中的几何级数恒等式}{}
+	$1-X\in A[[X]]^{\times}$,并且$\left(1-X\right)^{-1}=\sum\limits_{k=0}^{n}X^{k}$.
+\end{proposition}
+
+\begin{proposition}{形式幂级数的可逆性判别准则}{}
+	设$u\in A[[X]]$,则$u\in A^{\times}$ $\iff$ $u$的常数项系数在$A$中可逆.
+\end{proposition}
+
+\begin{remark}{形式幂级数环的乘法群结构}{}
+	令$\mathscr{M}$为$A[[X]]$中常数项系数是$1$的形式幂级数构成的集合
+	\begin{enumerate}
+		\item 根据上述命题,$\mathscr{M}$按乘法构成交换群,并且$A[[I]]^{\times}=\mathscr{M}\times A^{\times}X$.
+		\item 为$\mathscr{M}$配备$A[[X]]$诱导的子空间拓扑,则$\left(1+\mathfrak{a}_{\beta}\right)_{\beta\in\N^{\left(I\right)}}$是$\mathscr{M}$的一族构成$1_{\mathscr{M}}$的邻域基的子群.因此,$\mathscr{M}$是拓扑群.
+	\end{enumerate}
+\end{remark}
+
+\begin{theorem}{有理分式在原点处的形式幂级数展开}{}
+	令$\mathfrak{O}$是$K((X_{i})_{i\in I})$中能在$0\in K^{I}$处代入的元素组成的子环,$f=\frac{u}{v}\in\mathfrak{O}$.我们称$uv^{-1}$是$f$在原点的Taylor展开式.
+\end{theorem}
+
+\begin{remark}{}{}
+	$\mathfrak{O}\to K((X_{i})_{i\in I}),\frac{u}{v}\mapsto uv^{-1}$既是环同态又是单射,因此我们可以把$\mathfrak{O}$等同于$K((X_{i})_{i\in I})$的子环.
+\end{remark}

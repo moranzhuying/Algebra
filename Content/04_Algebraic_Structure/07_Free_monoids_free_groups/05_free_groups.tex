@@ -1,0 +1,144 @@
+\section{自由群}
+
+记号约定:
+\begin{itemize}
+	\item $I,X,Y,Z$是集合,$G,G^{\prime}$是群.
+	\item 对任一$x\in X$,$G_{x}=\Z$,$\phi_{x}:G_{x}\hookrightarrow\bigast\limits_{i\in X}G_{i}$是典范嵌入.
+	\item $e$为$\bigast\limits_{x\in X}G_{x}$的幺元.
+\end{itemize}
+
+\begin{definition}{自由群}{}
+	我们称$F\left(X\right)\coloneq\bigast\limits_{x\in X}G_{i}$为$X$上的自由群.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	在同构意义下,$x\in X$和$\phi_{x}\left(1\right)$相等,此时$X$是$F\left(X\right)$的生成集,$e\notin X$.
+\end{remark}
+
+\begin{proposition}{自由群中约化字的表示}{}
+	设$g\in F\left(X\right)$且$\neq e$,则存在唯一的$n\in\N_{>0}$和$X\times\left(\Z\setminus\left\{0\right\}\right)$的序列$\left(x_{\alpha},m\left(\alpha\right)\right)_{i=1}^{n}$满足系列条件:
+	\begin{enumerate}
+		\item $\forall 1\leq\alpha\leq n-1\left(x_{\alpha}\neq x_{\alpha+1}\right)$;
+		\item $g=\prod\limits_{\alpha=1}^{n}x_{\alpha}^{m\left(\alpha\right)}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{自由群的泛性质}{}
+	设$G$是群,$f\in\Hom_{\mathsf{Set}}\left(X,G\right)$,则存在唯一的$\phi\in\Hom_{\mathsf{Grp}}\left(F\left(X\right),G\right)$使下图交换(其中,$\iota$是典范嵌入).
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[rr, "\iota", hook] \arrow[rd, "f"'] &   & F\left(X\right) \arrow[ld, "\exists!\phi", dashed] \\
+			& M &                                                         
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{诱导映射$F\left(u\right)$}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.定义$F\left(u\right)\in\Hom_{\mathsf{Grp}}\left(F\left(X\right),F\left(Y\right)\right)$为使下图交换的映射.
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[rr, "\iota", hook] \arrow[d, "u"'] &  & F\left(X\right) \arrow[d, "\exists!F\left(u\right)", dashed] \\
+			Y \arrow[rr, "\iota^{\prime}"', hook]       &  & F\left(Y\right)                                                
+		\end{tikzcd}
+	\end{center}
+\end{definition}
+
+\begin{proposition}{$F\left(-\right)$的函子性}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right),v\in\Hom_{\mathsf{Set}}\left(Y,Z\right)$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			X & {F\left(X\right)} \\
+			Y & {F\left(Y\right)} \\
+			Z & {F\left(Z\right)}
+			\arrow["\iota", hook, from=1-1, to=1-2]
+			\arrow["u", from=1-1, to=2-1]
+			\arrow["{v\circ u}"'{pos=0.5}, bend right=40, from=1-1, to=3-1]
+			\arrow["{F\left(u\right)}"', from=1-2, to=2-2]
+			\arrow["{F\left(v\circ u\right)}"{pos=0.5}, shift left=2pt, bend left=50, from=1-2, to=3-2]
+			\arrow["{\iota^{\prime}}", hook, from=2-1, to=2-2]
+			\arrow["v", from=2-1, to=3-1]
+			\arrow["{F\left(v\right)}"', from=2-2, to=3-2]
+			\arrow["{\iota^{\prime\prime}}", hook, from=3-1, to=3-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{$F\left(-\right)$保持单性和满性}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.若$u$是单射(相对地,满射,双射),则$F\left(u\right)$是单射(相对地,满射,双射).
+\end{proposition}
+
+\begin{proposition}{子群的嵌入}{}
+	设$S\subseteq X$,$i:S\hookrightarrow X$是典范嵌入,则下图交换.因此$F\left(S\right)$在同构意义下是$S$在$\Mag\left(X\right)$中生成的子原群.
+	\begin{center}
+		\begin{tikzcd}
+			S & {F\left(X\right)} \\
+			X & {F\left(Y\right)}
+			\arrow["\iota", hook, from=1-1, to=1-2]
+			\arrow["i"', hook, from=1-1, to=2-1]
+			\arrow["{F\left(i\right)}", hook', from=1-2, to=2-2]
+			\arrow["{\iota^{\prime}}", hook, from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{不定元}{}
+	对任意$i\in I$,$\phi\left(I\right)$称为不定元,记作$X_{i}$(或$T_{i}$,等等).$\left\{X_{i}\middle|i\in I\right\}$生成的自由群记作$F\left(\left(T_{i}\right)_{i\in I}\right)$.当$I=\left\{1,\ldots,n\right\}$时,相应地记$F\left(T_{1},\ldots,T_{n}\right)\coloneq F\left(\left(T_{i}\right)_{i\in I}\right)$.
+\end{definition}
+
+\begin{definition}{赋值同态,代入}{}
+	设$\mathbf{t}\coloneq\left(t_{i}\right)_{i\in I}$是$G$的元素族.称$f_{\mathbf{t}}:F\left(\left(T_{i}\right)_{i\in I}\right)\to G,T_{i}\mapsto t_{i}$为赋值同态.对诸$\omega\in F\left(X\right)$,称$\omega\left(t_{i}\right)_{i\in I}\coloneq f_{\mathbf{t}}\left(\omega\right)$为在$\omega$中代入.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	当$I=\left\{1,\ldots,n\right\}$时,相应地记$\omega\left(t_{1},\ldots,t_{n}\right)\coloneq\omega\left(t_{i}\right)_{i\in I}$.
+\end{remark}
+
+\begin{proposition}{赋值同态和群同态可交换}{}
+	设$n\in\N,I=\left\{1,\ldots,n\right\},u\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$.对任意$G$中的序列$\left(t_{i}\right)_{i=1}^{n}$和$\omega\in F\left(X\right)$,有
+	\begin{align*}
+		u\left(\omega\left(t_{1},\ldots,t_{n}\right)\right)=\omega\left(u\left(t_{1}\right),\ldots,u\left(t_{n}\right)\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{代入的复合}{}
+	设$m,n\in\N,\omega\in F\left(T_{1},\ldots,T_{n}\right),v_{1},\ldots,v_{n}\in F\left(T_{1}^{\prime},\ldots,T_{n}^{\prime}\right),\omega^{\prime}=\omega\left(v_{1},\ldots,v_{n}\right)\in F\left(T_{1}^{\prime},\ldots,T_{n}^{\prime}\right)$,则
+	\begin{align*}
+		\forall t_{1},\ldots,t_{m}\in G\left(\omega^{\prime}\left(t_{1},\ldots,t_{n}\right)=\omega\left(v_{1}\left(t_{1},\ldots,t_{m}\right)\right),\ldots,v_{n}\left(t_{1},\ldots,t_{m}\right)\right).
+	\end{align*}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

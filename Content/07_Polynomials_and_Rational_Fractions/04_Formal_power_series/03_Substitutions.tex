@@ -1,0 +1,84 @@
+\section{形式幂级数的代入}
+
+\begin{definition}{$A$-拓扑代数}{}
+	设$E$是$A$-代数,$\tau$是$E$上的拓扑.若
+	\begin{enumerate}
+		\item 对每个$a\in A$,它在$E$上诱导的平移$\mathcal{T}_{a}:E\to E,x\mapsto x+a$是同胚;
+		\item $E$中有一族理想构成了$0_{E}$的邻域基,
+	\end{enumerate}
+	则称$\tau$是$A$-线性拓扑(或$\tau$与$E$上的$A$-代数结构相容),配备该拓扑的$E$称为拓扑$A$-代数.
+\end{definition}
+
+\begin{proposition}{形式幂级数环的代入的泛性质}{universal-property-of-substitution-of-formal-series-rings}
+	设$E$是完备且Hausdorff的拓扑$A$-含幺交换结合代数.
+	\begin{enumerate}
+		\item 设$\varphi:A[[(X_{i})_{i\in I}]]\to E$是连续$A$-代数同态,满足$\forall i\in I\left(x_{i}=\varphi\left(X_{i}\right)\right)$.
+		\begin{enumerate}
+			\item $\left(x_{i}\right)_{i\in I}$是拓扑幂零的(即,对每个$i\in I$有$\limit_{n\to+\infty}x_{i}^{n}=0$).
+			\item 若$I$是无限集,$\mathfrak{F}$是$I$的余有限补滤子,则$\limit_{\mathfrak{F}}x_{i}=0$.
+		\end{enumerate}
+		\item 设$\left(x_{i}\right)_{i\in I}$是$E$的元素族,满足如下条件:
+		\begin{enumerate}
+			\item $\left(x_{i}\right)_{i\in I}$是拓扑幂零的,
+			\item 若$I$是无限集,$\mathfrak{F}$是$I$的余有限补滤子,则$\limit_{\mathfrak{F}}x_{i}=0$,
+		\end{enumerate}
+		则存在唯一的连续$A$-含幺代数同态$\varphi:A[[(X_{i})_{i\in I}]]\to E$使得$\forall i\in I\left(x_{i}=\varphi\left(X_{i}\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{形式幂级数的代入}{}
+	沿用命题(\ref{prop:universal-property-of-substitution-of-formal-series-rings})中(2)的设定,并设$u\in A[[(X_{i})_{i\in I}]],\mathbf{x}=\left(x_{i}\right)_{i\in I}$.
+	\begin{enumerate}
+		\item 我们称$u\left(\left(x_{i}\right)_{i\in I}\right)\coloneq\varphi\left(u\right)$是$\left(X_{i}\right)_{i\in I}$在$u$中用$\left(x_{i}\right)_{i\in I}$代入.
+		\item 我们称$\ev_{\mathbf{x}}\coloneq\varphi$是$\mathbf{x}$诱导的赋值.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{可代入形式幂级数的元素族}{}
+	设$E$是完备且Hausdorff的拓扑$A$-含幺交换结合代数,$\left(x_{i}\right)_{i\in I}$是$E$的元素族.如果$\left(x_{i}\right)_{i\in I}$满足如下条件:
+	\begin{enumerate}
+		\item $\left(x_{i}\right)_{i\in I}$是拓扑幂零的,
+		\item 若$I$是无限集,$\mathfrak{F}$是$I$的余有限补滤子,则$\limit_{\mathfrak{F}}x_{i}=0$,
+	\end{enumerate}
+	则称它可被$A[[(X_{i})_{i\in I}]]$中的元素代入.
+\end{definition}
+
+\begin{proposition}{形式幂级数的代入与连续代数同态可交换}{}
+	设$E,F$是完备且Hausdorff的拓扑$A$-含幺交换结合代数,$\varphi\in\Hom_{A-\mathsf{UAlg}}\left(E,F\right)$连续,$u\in A[[(X_{i})_{i\in I}]]$,$\left(x_{i}\right)_{i\in I}$是$E$中的元素族.若$\left(x_{i}\right)_{i\in I}$能被$A[[(X_{i})_{i\in I}]]$中的元素代入,则$\left(\varphi\left(x_{i}\right)\right)_{i\in I}$也能被$A[[(X_{i})_{i\in I}]]$中的元素代入,并且
+	\begin{align*}
+		\varphi\left(u\left(\left(x_{i}\right)_{i\in I}\right)\right)=u\left(\left(\varphi\left(x_{i}\right)\right)_{i\in I}\right).
+	\end{align*}
+\end{proposition}
+
+本节剩下的内容中,默认$J,K,L$是集合.
+
+\begin{definition}{可代入的形式幂级数族空间}{}
+	定义$A_{J,K}$是$A[[K]]$中满足如下条件的元素族$\left(g_{j}\right)_{j\in J}$组成的集合:
+	\begin{enumerate}
+		\item 对每个$j\in J$都有$g_{j}\in A[[K]]$,并且$g_{j}$的常数项系数幂零.
+		\item 当$J$是无限集时,$\left(g_{j}\right)_{j\in J}$按$A[[K]]$的拓扑收敛到$0$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	如果$J$有限,那么$A[[K]]$中每一族无常数项的形式幂级数都属于$A_{J,K}$.
+\end{remark}
+
+\begin{proposition}{形式幂级数之间的代入}{}
+	若$\left(g_{j}\right)_{j\in J}\in A_{J,K}$,那么它可以带入到$A[[J]]$的每个元素中,并且$A[[J]]\to A[[K]],f\mapsto f\left(\left(g_{j}\right)_{j\in J}\right)$是连续$A$-代数同态.
+\end{proposition}
+
+\begin{proposition}{形式幂级数中代入的复合}{}
+	设$\mathbf{x}\in E^{K}$可代入$A[[K]]$的每个元素,$\left(g_{j}\right)_{j\in J}\in A_{J,K},f\in A[[J]],h=f\left(\left(g_{j}\right)_{j\in J}\right)$,则$h\left(\mathbf{x}\right)=f\left(\left(g_{j}\left(\mathbf{x}\right)\right)_{j\in J}\right)$.
+\end{proposition}
+
+\begin{definition}{形式幂级数的复合}{}
+	设$\mathbf{f}\coloneq\left(f_{i}\right)_{i\in I}\in\left(A[[J]]\right)^{i},\mathbf{g}\coloneq\left(g_{j}\right)_{j\in J}\in A_{J,K}$.我们称$\mathbf{f}\circ\mathbf{g}\coloneq\left(f_{i}\left(\mathbf{g}\right)\right)_{i\in I}$是$\mathbf{f}$与$\mathbf{g}$的复合.
+\end{definition}
+
+\begin{proposition}{形式幂级数的复合的性质}{}
+	\begin{enumerate}
+		\item 若$\mathbf{f}\in A_{I,J},\mathbf{g}\in A_{J,K}$,则$\mathbf{f}\circ\mathbf{g}\in A_{I,K}$.
+		\item 若$\mathbf{f}\in\left(A[[J]]\right)^{I},\mathbf{g}\in A_{J,K},\mathbf{h}\in A_{K,L}$,则$\mathbf{f}\circ\left(\mathbf{g}\circ\mathbf{h}\right)=\left(\mathbf{f}\circ\mathbf{g}\right)\circ\mathbf{h}$.
+	\end{enumerate}
+\end{proposition}

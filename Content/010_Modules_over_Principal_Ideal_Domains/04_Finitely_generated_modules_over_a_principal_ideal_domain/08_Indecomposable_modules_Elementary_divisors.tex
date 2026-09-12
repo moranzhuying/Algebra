@@ -1,0 +1,130 @@
+\section{不可分解模·初等因子}
+
+记号约定:$A$是环,$M$是左$A$-模.
+
+\begin{definition}{可分解模,不可分解模}{}
+	\begin{enumerate}
+		\item 若$M$有一族非零真子模$\left(M_{i}\right)_{i\in I}$满足$M=\bigoplus\limits_{i\in I}M_{i}$,则称$M$是可分解左$A$-模.
+		\item 若$M$不是可分解模,则称$M$是不可分解左$A$-模.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	照此定义,零模一定是可分解模.
+\end{remark}
+
+\begin{lemma}{商模不可分解的等价条件}{}
+	设$\mathfrak{a}$是$A$的左理想,则下列陈述等价:
+	\begin{enumerate}
+		\item $A/\mathfrak{a}$是不可分解模.
+		\item $\mathfrak{a}\neq A$,并且$A$中不存在真左理想$\mathfrak{b},\mathfrak{c}$使得$\mathfrak{a}\subset\mathfrak{b},\mathfrak{a}\subseteq\mathfrak{c},A=\mathfrak{b}+\mathfrak{c},\mathfrak{b}\cap\mathfrak{c}=\mathfrak{a}$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{proposition}{素理想对应的准素商模不可分解}{}
+	设$A$交换,$\mathfrak{p}$是$A$对的素理想,$\mathfrak{q}$是$A$的包含于$\mathfrak{p}$的理想.若$\forall x\in\mathfrak{p}\exists n\in\N_{>0}\left(x^{n}\in\mathfrak{q}\right)$,则$A/\mathfrak{q}$不可分解.
+\end{proposition}
+
+接下来的内容中,$A$是PID,$P$是$A$中的所有不可约元构成的代表系组成的集合,$M$有限生成.
+
+\begin{proposition}{PID上有限生成模的不可分解模直和分解}{}
+	\begin{enumerate}
+		\item $M$是不可分解模$\iff$ $M$满足如下条件之一:
+		\begin{itemize}
+			\item $M$同构于$_{s}A_{d}$.
+			\item 存在$A$中的不可约元$p$和$n>0$使得$M$同构于$A/\langle p^{n}\rangle$.
+		\end{itemize}
+		\item 存在有限集$I$和$M$的一族不可分解子模$\left(M_{i}\right)_{i\in I}$,使得$M=\bigoplus\limits_{i\in I}M_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{PID上有限生成模的初等因子分解定理}{elementary-divisor-composition-of-finite-generated-modules-over-pid}
+	存在$m\left(0\right)\in\N_{>0}$和$\N_{>0}$中的有限支撑族$m\left(p^{n}\right)_{p\in P,n\in\N_{>0}}$满足如下条件:
+	\begin{enumerate}
+		\item $M\simeq A^{m\left(0\right)}\boxplus\bigboxplus\limits_{\left(p,n\right)\in P\times\N_{>0}}\left(A/\langle p^{n}\rangle\right)^{m\left(p^{n}\right)}$.
+		\item $m\left(0\right)\in\N_{>0}$和$m\left(p^{n}\right)_{p\in P,n\in\N_{>0}}$被$M$唯一确定.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{有限生成模的初等因子}{}
+	沿用命题(\ref{prop:elementary-divisor-composition-of-finite-generated-modules-over-pid})的记号.
+	\begin{enumerate}
+		\item 设$p\in P,n\geq 1$.若$m\left(p^{n}\right)>0$,则称$\langle p^{n}\rangle$是$M$的初等因子,称$m\left(p^{n}\right)$是该初等因子的重数.
+		\item 若$m\left(0\right)>0$,则称之为初等因子$0$的重数.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	设$K$是域.当$A$是$\Z$或$K[X]$时,我们通常把$p^{n}$称为$M$的初等因子.
+\end{remark}
+
+\begin{remark}{}{}
+	设$G$是有限Abel群,那么它的结构可以通过初等因子及其重数描述.例如,如果
+	\begin{align*}
+		G\simeq\bigboxplus\limits_{i=1}^{2}\left(\Z/2\Z\right)\boxplus\left(\Z/2^{2}\Z\right)\boxplus\bigboxplus\limits_{i=1}^{2}\left(\Z/3^{3}\Z\right)\boxplus\left(\Z/5^{2}\Z\right),
+	\end{align*}
+	则称$G$是$\left(2,2,4,27,27,25\right)$型有限Abel群.
+\end{remark}
+
+\begin{remark}{}{}
+	如果$\left(a_{i}\right)_{i\in I}$是$A$的一族不可约元,$M$是扭模,并且同构于$\bigboxplus\limits_{i\in I}A/\langle a_{i}\rangle$(特别地,$M$的不变因子已知),那么$M$的不变因子及其重数可以被确定.留意如下事实:如果$a\in A$的不可约因子分解为$a=\varepsilon\prod\limits_{p\in P}p^{n\left(p\right)}$,那么$A/\langle a\rangle\simeq\prod\limits_{p\in P}A/\langle p^{n\left(p\right)}\rangle$.
+	
+	例如,对于乘法群$\Z/464600\Z$,由于$464600=2^{3}\cdot 5^{2}\cdot 23\cdot 101$,因此
+	\begin{align*}
+		\Z/464600\Z\simeq\left(\Z/2^{3}\Z\right)\times\left(\Z/5^{2}\Z\right)\times\left(\Z/23\Z\right)\times\left(\Z/101\Z\right).
+	\end{align*}
+	留意如下事实:
+	\begin{itemize}
+		\item $\left|\Z/5^{2}\Z\right|=20,\left|\Z/23\Z\right|=22,\left|\Z/101\Z\right|=100$,$\Z/2^{3}\Z$是两个$2$阶乘法群的乘积.
+		\item $20=2^{2}\cdot 5,22=2\cdot 11,100=2^{2}\cdot 5^{2}$.
+	\end{itemize}
+	因此,$\Z/464600\Z$是$\left(2,2,2,2^{2},2^{2},5,5^{2},11\right)$型有限Abel群.
+\end{remark}
+
+\begin{remark}{}{}
+	现在考虑$M$是扭模,并且初等因子已知,需要计算$M$的不变因子的情形.下面以$M=\Z/464600\Z$的情形为例:
+	\begin{itemize}
+		\item 把$M$的初等因子按照同一个不可约元$p$写成一行,按照幂次高低从左向右排序.
+		\item 在必要的时候,给每个不可约元所在的直线补$1$,使得每个不可约元所在的直线长度相同.
+	\end{itemize}
+	照此操作,我们有
+	\begin{gather*}
+		\begin{array}{rrrrr}
+			2^{2} & 2^{2} & 2 & 2 & 2 \\
+			5^{2} & 5 & 1 & 1 & 1 \\
+			11 & 1 & 1 & 1 & 1
+		\end{array}
+	\end{gather*}
+	于是,不变因子就是同一列的元素的乘积:$1100,20,2,2,2$.当然,$M$同构于阶数为$1100,20,20,2,2,2$的循环群的乘积,
+\end{remark}
+
+\begin{remark}{}{}
+	设$R$是环,则单左$R$-模循环,有限生成且不可分解.但不可分解左$R$-模不一定是单模.例如,取$p\in R,n\geq 2$,则$R/\langle p^{n}\rangle$不是单左$R$-模.现在考虑PID上的单模的分类.设$N$是单$A$-模,那么
+	\begin{enumerate}
+		\item 当$A$是域时,$N$是$1$维自由模;
+		\item 当$A$不是域时,存在$A$中的不可约元$p$使得$N\simeq A/\langle p\rangle$.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

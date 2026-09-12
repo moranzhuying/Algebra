@@ -1,0 +1,102 @@
+\section{代数及其对偶的左缩并和右缩并}
+
+记号约定:$M$是$A$-模.
+
+\begin{definition}{}{}
+	\begin{enumerate}
+		\item 定义$\mathsf{T}\left(M^{\vee}\right)$在$\mathsf{T}\left(M\right)$上的右作用为$\left(t,z^{\ast}\right)\mapsto t\llcorner\theta_{\mathsf{T}\left(M\right)}\left(z^{\ast}\right)$,则$\mathsf{T}\left(M\right)$是右$\mathsf{T}\left(M^{\vee}\right)$-模.
+		\item 定义$\mathsf{S}\left(M^{\vee}\right)$在$\mathsf{S}\left(M\right)$上的右作用为$\left(t,z^{\ast}\right)\mapsto t\llcorner\theta_{\mathsf{S}\left(M\right)}\left(z^{\ast}\right)$,则$\mathsf{S}\left(M\right)$是右$\mathsf{S}\left(M^{\vee}\right)$-模.
+		\item 定义$\bigwedge\left(M^{\vee}\right)$在$\bigwedge\left(M\right)$上的左作用为$\left(z^{\ast},t\right)\mapsto\theta_{\mathsf{T}\left(M\right)}\left(z^{\ast}\right)\lrcorner t$,则$\bigwedge\left(M\right)$是左$\bigwedge\left(M^{\vee}\right)$-模.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 对$\mathsf{T}\left(M^{\vee}\right)$(相对的,$\mathsf{S}\left(M^{\vee}\right)$)的每个元素$z^{\ast}$和$\mathsf{T}\left(M\right)$(相对的,$\mathsf{S}\left(M\right)$)的每个元素$t$,滥用记号,记
+		\begin{align*}
+			t\llcorner z^{\ast}\coloneq t\llcorner\theta_{\mathsf{T}\left(M\right)}\left(z^{\ast}\right)(\text{相对的},t\llcorner z^{\ast}\coloneq t\llcorner\theta_{\mathsf{S}\left(M\right)}\left(z^{\ast}\right)).
+		\end{align*}
+		\item 对$\bigwedge\left(M^{\vee}\right)$的每个元素$z^{\ast}$和$\bigwedge\left(M\right)$的每个元素$t$,滥用记号,记$z^{\ast}\lrcorner t\coloneq \theta_{\mathsf{T}\left(M\right)}\left(z^{\ast}\right)\lrcorner t$.
+	\end{enumerate}
+\end{remark}
+
+\begin{theorem}{}{}
+	设$\left(x_{i}\right)_{i=1}^{p}$是$M$中的序列,$\left(x_{j}^{\ast}\right)_{j=1}^{n}$是$M^{\vee}$中的序列,则
+	\begin{gather*}
+		\left(x_{1}\otimes\ldots\otimes x_{p}\right)\llcorner\left(x_{1}^{\ast}\otimes\ldots\otimes x_{n}^{\ast}\right)=
+		\begin{cases}
+			0,&p<n\\
+			\prod\limits_{j=1}^{n}x_{j}^{\ast}\left(x_{j}\right)x_{n+1}\otimes\ldots\otimes x_{p},&p\geq n\\
+		\end{cases}\\
+		\left(x_{1}^{\ast}\otimes\ldots\otimes x_{n}^{\ast}\right)\lrcorner\left(x_{1}\otimes\ldots\otimes x_{p}\right)=
+		\begin{cases}
+			0,&p<n\\
+			\prod\limits_{j=1}^{n}x_{j}^{\ast}\left(x_{p-n+j}\right)x_{1}\otimes\ldots\otimes x_{p-n},&p\geq n\\
+		\end{cases}\\
+		\left(x_{1}\ldots x_{p}\right)\llcorner\left(x_{1}^{\ast}\ldots x_{n}^{\ast}\right)=
+		\begin{cases}
+			0,&p<n\\
+			\sum\limits_{\sigma\in\Shuffle\left(n,p-n\right)}\left(\prod\limits_{j=1}^{n}x_{j}^{\ast}\left(x_{j}\right)\right)x_{\sigma\left(n+1\right)}\ldots x_{\sigma\left(p\right)},&p\geq n\\
+		\end{cases}\\
+		\left(x_{1}^{\ast}\ldots x_{n}^{\ast}\right)\lrcorner\left(x_{1}\ldots x_{p}\right)=
+		\begin{cases}
+			0,&p<n\\
+			\sum\limits_{\sigma\in\Shuffle_{n,p-n}}\left(\prod\limits_{j=1}^{n}x_{j}^{\ast}\left(x_{p-n+j}\right)\right)x_{1}\otimes\ldots\otimes x_{p-n},&p\geq n\\
+		\end{cases}\\
+		\left(x_{1}\wedge\ldots\wedge x_{p}\right)\llcorner\left(x_{1}^{\ast}\wedge\ldots\wedge x_{n}^{\ast}\right)=
+		\begin{cases}
+			0,&p<n\\
+			\left(-1\right)^{\frac{n\left(n-1\right)}{2}}\sum\limits_{\sigma\in\Shuffle_{n,p-n}}\sign\left(\sigma\right)\left(\prod\limits_{j=1}^{n}x_{j}^{\ast}\left(x_{\sigma\left(j\right)}\right)\right)x_{\sigma\left(n+1\right)}\wedge\ldots\wedge x_{\sigma\left(p\right)},&p\geq n
+		\end{cases}\\
+		\left(x_{1}^{\ast}\wedge\ldots\wedge x_{n}^{\ast}\right)\lrcorner\left(x_{1}\wedge\ldots\wedge x_{p}\right)=
+		\begin{cases}
+			0,&p<n\\
+			\left(-1\right)^{\frac{n\left(n-1\right)}{2}}\sum\limits_{\sigma\in\Shuffle_{n,p-n}}\sign\left(\sigma\right)\left(\prod\limits_{j=1}^{n}x_{j}^{\ast}\left(x_{\sigma\left(p-n+j\right)}\right)\right)x_{\sigma\left(n+1\right)}\wedge\ldots\wedge x_{\sigma\left(p\right)},&p\geq n
+		\end{cases}
+	\end{gather*}
+\end{theorem}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 若$t\in\mathsf{T}\left(M\right),u^{\ast},v^{\ast}\in\mathsf{T}\left(M^{\vee}\right)$,则$\left(t\llcorner u^{\ast}\right)\left(v^{\ast}\right)=\theta_{\mathsf{T}\left(M\right)}\left(u^{\ast}\otimes v^{\ast}\right)\left(t\right)$.
+		\item 若$t\in\mathsf{S}\left(M\right),u^{\ast},v^{\ast}\in\mathsf{S}\left(M^{\vee}\right)$,则$\left(t\llcorner u^{\ast}\right)\left(v^{\ast}\right)=\theta_{\mathsf{S}\left(M\right)}\left(u^{\ast}v^{\ast}\right)\left(t\right)$.
+		\item 若$t\in\bigwedge\left(M\right),u^{\ast},v^{\ast}\in\bigwedge\left(M^{\vee}\right)$,则$\left(u^{\ast}\lrcorner t\right)\left(v^{\ast}\right)=\theta_{\wedge\left(M\right)}\left(u^{\ast}\wedge v^{\ast}\right)\left(t\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{}{}
+	设$\ev_{M}:M\to M^{\vee\vee}$是典范单射.
+	\begin{enumerate}
+		\item 定义$\mathsf{T}\left(M\right)$在$\mathsf{T}\left(M^{\vee}\right)$上的右作用为$\left(t,z^{\ast}\right)\mapsto t\llcorner\mathsf{T}\left(\ev_{M}\right)\left(z^{\ast}\right)$,则$\mathsf{T}\left(M^{\vee}\right)$是右$\mathsf{T}\left(M\right)$-模.
+		\item 定义$\mathsf{S}\left(M\right)$在$\mathsf{S}\left(M^{\vee}\right)$上的右作用为$\left(t,z^{\ast}\right)\mapsto t\llcorner\mathsf{S}\left(\ev_{M}\right)\left(z^{\ast}\right)$,则$\mathsf{S}\left(M^{\vee}\right)$是左$\mathsf{S}\left(M\right)$-模.
+		\item 定义$\bigwedge\left(M\right)$在$\bigwedge\left(M^{\vee}\right)$上的左作用为$\left(z^{\ast},t\right)\mapsto\bigwedge\left(\ev_{M}\right)\left(z^{\ast}\right)\lrcorner t$,则$\bigwedge\left(M^{\vee}\right)$是左$\bigwedge\left(M\right)$-模.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	固定$x\in M$.
+	\begin{enumerate}
+		\item $x$在$\mathsf{S}\left(M^{\vee}\right)$上诱导的右缩并$\iota_{x}$是$\mathsf{S}\left(M^{\vee}\right)$上的导子.
+		\item $x$在$\bigwedge\left(M^{\vee}\right)$上诱导的右缩并$\iota_{x}$是$\bigwedge\left(M^{\vee}\right)$上满足$\iota_{x}\circ\iota_{x}=0$的反导子.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	$\theta_{\mathsf{T}\left(M\right)}$是右$\mathsf{T}\left(M\right)$-模同态,$\theta_{\mathsf{S}\left(M\right)}$是右$\mathsf{S}\left(M\right)$-模同态,$\theta_{\wedge\left(M\right)}$是左$\bigwedge\left(M\right)$-模同态.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

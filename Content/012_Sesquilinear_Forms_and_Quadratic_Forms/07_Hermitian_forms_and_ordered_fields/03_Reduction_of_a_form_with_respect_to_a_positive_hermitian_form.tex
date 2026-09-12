@@ -1,0 +1,169 @@
+\section{正定Hermite型的约化}
+
+记号约定:$\dim E=n\geq 1$,$\varphi$正定.
+
+\begin{lemma}{}{}
+	对每个$\left(x,y,z\right)\in E\times E\times\left(E\setminus\left\{0\right\}\right)$,存在唯一的$t\in E$使得$\varphi\left(x,z\right)=\overline{\varphi\left(t,y\right)}$.
+\end{lemma}
+
+\begin{lemma}{}{}
+	设$A\in\left\{K,K(\mathrm{i})\right\}$,$u\in\Hom_{A}\left(E,\rho^{\ast}\left(E\right)\right)$,则对每个$x\in E$,存在唯一的$u_{x}\in E$,对每个$y\in E$有$\varphi\left(x,u\left(y\right)\right)=\overline{\varphi\left(u_{x},y\right)}$.
+\end{lemma}
+
+\begin{definition}{半线性映射的伴随}{}
+	设$A\in\left\{K,K(\mathrm{i})\right\}$,$u\in\Hom_{A}\left(E,\rho^{\ast}\left(E\right)\right)$.定义$u^{\ast}\in\Hom_{A}\left(E,\rho^{\ast}\left(E\right)\right)$如下:
+	\begin{align*}
+		\forall x,y\in E\left(\varphi\left(x,u\left(y\right)\right)=\overline{\varphi\left(u^{\ast}\left(x\right),y\right)}\right).
+	\end{align*}
+	我们称$u^{\ast}$是$u$的伴随.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$\rho=\id_{K}$时,这里定义的伴随和第一节定义的伴随是一致的.
+		\item 令$E^{\prime}=\rho^{\ast}\left(E\right)$.由于$\rho^{\ast}\varphi\in\Bil_{A}\left(\rho^{\ast}\left(E\right),E\right)$,因此$u^{\ast}$确实是之前定义的伴随.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{正规算子,自伴算子,反自伴算子}{}
+	设$u\in\Hom_{A}\left(E,\rho^{\ast}\left(E\right)\right)$.
+	\begin{enumerate}
+		\item 若对每个$x,y\in E$有$\varphi\left(u^{\ast}\left(x\right),u^{\ast}\left(y\right)\right)=\varphi\left(u\left(x\right),u\left(y\right)\right)$,则称$u$是正规算子.
+		\item 若对每个$x,y\in E$有$\varphi\left(u\left(x\right),y\right)=\overline{\varphi\left(x,u\left(y\right)\right)}$,则称$u$是自伴算子(或Hermite算子).
+		\item 若对每个$x,y\in E$有$\varphi\left(u\left(x\right),y\right)=-\overline{\varphi\left(x,u\left(y\right)\right)}$,则称$u$是反自伴算子.
+	\end{enumerate}
+\end{definition}
+
+\begin{example}{正规算子的例子}{}
+	\begin{enumerate}
+		\item $E$上的酉变换都是正规算子.
+		\item $E$上的Hermite算子都是正规算子.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{Hermite型和Hermite算子一一对应}{}
+	记$\mathcal{H}\left(E\right)$是$E$上的Hermite算子组成的集合.
+	\begin{enumerate}
+		\item 对每个$u\in\mathcal{H}\left(E\right)$,$\varphi_{u}:\rho^{\ast}\left(E\right)\times E\to A,\left(x,y\right)\mapsto\varphi\left(u\left(x\right),y\right)$是Hermite型.
+		\item 对每个$\psi\in\Herm_{A,\rho}\left(E\right)$,映射$u_{\psi}\coloneq s_{\varphi}^{-1}\circ s_{\psi}$是Hermite算子.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{双线性型的表示定理}{}
+	设$A\in\left\{K,K(\mathrm{i})\right\}$,$E$是有限维的.
+	\begin{enumerate}
+		\item 对每个$\psi\in\Bil_{A}\left(E\right)$,存在唯一的$u\in\Hom_{A}\left(E,\rho^{\ast}\left(E\right)\right)$,对每个$x,y\in E$有$\psi\left(x,y\right)=\overline{\varphi\left(u\left(x\right),y\right)}$.
+		\item 设$\psi\in\Bil_{A}\left(E\right)$.
+		\begin{itemize}
+			\item $\psi$是对称双线性型$\iff$ $u$是自伴算子.
+			\item $\psi$是反对称双线性型$\iff$ $u$是反自伴算子.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{}{}
+	设$E$是有限维的.定义集合$S$如下:
+	\begin{itemize}
+		\item 当$A\in\left\{K,K(i)\right\}$时,$S\subseteq\Hom_{A}\left(E,\rho^{\ast}\left(E\right)\right)$;
+		\item 无论$A\in\left\{K,K(i)\right\}$是否成立,都有$S\subseteq\End_{A}\left(E\right)$.
+		\item 对每个$u\in S$有$u^{\ast}\in S$.
+	\end{itemize}
+	对$E$的子空间$F$,如果$\forall u\in S\left(u\left(F\right)\subseteq F\right)$,则称$F$是$S$-不变的.
+	\begin{enumerate}
+		\item 若$E$的子空间$F$是$S$-不变的,则$V^{\circ}$也是$S$-不变的.
+		\item $E$有一族子空间$\left(V_{i}\right)_{i=1}^{m}$(其中$m\geq 1$)满足如下条件:
+		\begin{itemize}
+			\item 对每个$1\leq i\leq m$,$V_{i}$是极小的非零$S$-不变子空间.
+			\item 对每个$1\leq i\neq j\leq m$,$V_{i}$和$V_{j}$关于$\varphi$正交.
+			\item $E=\bigoplus\limits_{i=1}^{m}V_{i}$.
+		\end{itemize}
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$A\in\left\{K,K(\mathrm{i})\right\}$,$B$是$\End_{A}\left(E\right)$的子代数,并且$\forall u\in B\left(u^{\ast}\in B\right)$.
+	\begin{enumerate}
+		\item $E$是半单$B$-模.
+		\item $E$有一族单子模$\left(V_{i}\right)_{i=1}^{m}$满足如下条件:
+		\begin{itemize}
+			\item 对每个$1\leq i\neq j\leq m$,$V_{i}$和$V_{j}$关于$\varphi$正交.
+			\item $E=\bigoplus\limits_{i=1}^{m}V_{i}$.
+		\end{itemize}
+		\item 代数$B$是半单的.
+	\end{enumerate}
+\end{corollary}
+
+
+\begin{corollary}{}{}
+	设$A\in\left\{K,K(\mathrm{i})\right\}$,$B$是$\End_{A}\left(E\right)$的交换子代数,并且$\forall u\in B\left(u^{\ast}\in B\right)$.
+	\begin{enumerate}
+		\item 对每个$u\in B$,它是$E$上正规算子,并且是半单的.
+		\item $E$有一族单$B$-子模$\left(V_{i}\right)_{i=1}^{m}$(其中$m\geq 1$)满足如下条件:
+		\begin{itemize}
+			\item $E=\bigoplus\limits_{i=1}^{m}V_{i}$.
+			\item 对每个$1\leq i\neq j\leq n$,$V_{i}$和$V_{j}$关于$\varphi$正交.
+			\item 当$A=K(\mathrm{i})$时,对每个$1\leq i\leq m$有$\dim V_{i}=1$.
+			\item 当$A=K$时,对每个$1\leq i\leq m$有$\dim V_{i}\in\left\{1,2\right\}$.
+		\end{itemize}
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{正规算子的谱分解定理}{}
+	设$E$是有限维的,$u\in\End_{A}\left(E\right)$是正规算子.
+	\begin{enumerate}
+		\item 当$A=\in\left\{K(\mathrm{i}),\mathbb{H}_{K}\right\}$时,$E$有一个$\varphi$-规范正交基$\left(e_{i}\right)_{i=1}^{n}$,它的每一项都是$u$的特征向量.
+		\item 当$A=K$时,$u$是半单的,$E$有一族子空间$\left(V_{i}\right)_{i=1}^{m}$(其中$m\geq 1$)满足如下条件:
+		\begin{itemize}
+			\item 对每个$1\leq i\leq m$,$V_{i}$是$u$-不变的;
+			\item 对每个$1\leq i\neq j\leq m$,$V_{i}$和$V_{j}$关于$\varphi$正交;
+			\item 对每个$1\leq i\leq m$有$\dim V_{i}\in\left\{1,2\right\}$;
+			\item $E=\bigoplus\limits_{i=1}^{m}V_{i}$.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{自伴算子的谱定理}{}
+	设$A\in\left\{K,K(\mathrm{i}),\mathbb{H}_{K}\right\}$,$u\in\End_{A}\left(E\right)$是正规算子.
+	\begin{enumerate}
+		\item $u$的所有特征值都在$K$中.
+		\item $E$中有一个$\varphi$-正交基$\left(e_{i}\right)_{i=1}^{m}$(其中$m\geq 1$),它的每一项都是$u$的特征向量.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{正定Hermite型的约化定理}{}
+	设$\dim E=n$.
+	\begin{enumerate}
+		\item 设$\psi\in\Herm_{A,\rho}\left(E\right)$,则$E$中有一个基$\left(e_{i}\right)_{i=1}^{n}$,它既是$\varphi$-规范正交的,又是$\psi$-正交的.
+		\item 设$A\in\left\{K,K(\mathrm{i})\right\}$,$\psi\in\Bil_{A}\left(E\right)$交错,则存在$E$的$\varphi$-正交基$\mathcal{B}\coloneq\left(\check{e}_{i}\right)_{i=1}^{n}$使得
+		\begin{align*}
+			\Gram_{\mathcal{B}}^{\mathcal{B}}\left(\varphi\right)=\diag\left(\begin{bmatrix}
+				0&a_{1}\\
+				-a_{1}&0
+			\end{bmatrix},\ldots,\begin{bmatrix}
+			0&a_{r}\\
+			-a_{r}&0
+			\end{bmatrix},\boldsymbol{O}_{\left(n-2r\right)\times\left(n-2r\right)}\right),
+		\end{align*}
+		其中$r\geq 0$且$2r\leq n$,$a_{1},\ldots,a_{r}\in K_{>0}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

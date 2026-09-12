@@ -1,0 +1,58 @@
+\section{有序群中的上确界与下确界}
+
+记号约定:$\left(G,+,\leq\right)$为有序群,$A$是整环,$K=\Frac\left(A\right)$.
+
+\begin{definition}{最大公因子,最小公倍数}{}
+	设$\left(x_{i}\right)_{i\in I}$是$K^{\times}$的元素族.$d,m\in K^{\times}$
+	\begin{enumerate}
+		\item 若$\left(d\right)$是$\left(\left(x_{i}\right)\right)_{i\in I}$在$\mathscr{P}^{\ast}\left(K\right)$中的上确界,则称$d$是$\left(x_{i}\right)_{i\in I}$的最大公因子.
+		\item 若$\left(m\right)$是$\left(\left(x_{i}\right)\right)_{i\in I}$在$\mathscr{P}^{\ast}\left(K\right)$中的下确界,则称$d$是$\left(x_{i}\right)_{i\in I}$的最小公倍数.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 若$\left(d\right)=\sum\limits_{i\in I}\left(x_{i}\right)$,则$d$是$\left(x_{i}\right)_{i\in I}$的最大公因子;若$d$是$\left(x_{i}\right)_{i\in I}$的最大公因子,那么$\left(d\right)=\sum\limits_{i\in I}\left(x_{i}\right)$不一定成立.
+		\item $m$是$\left(x_{i}\right)_{i\in I}$的最小公倍数$\iff$ $\left(m\right)=\bigcap\limits_{i\in I}\left(x_{i}\right)$.
+		\item 如果$\left(x_{i}\right)_{i\in I}$的最大公因子(相对的,最小公倍数),那么它在精确到相伴的意义下是唯一的.只要没有混淆,我们就会滥用语言,把$\left(x_{i}\right)_{i\in I}$的任意一个最大公因子(相对的,最小公倍数)记作$\gcd\left(\left(x_{i}\right)_{i\in I}\right)$(相对的,$\lcm\left(\left(x_{i}\right)_{i\in I}\right)$).特别地,若$I=\left[1,n\right]\subseteq\N$,记$\gcd\left(\left(x_{i}\right)_{i\in I}\right)$(相对的,$\lcm\left(\left(x_{i}\right)_{i\in I}\right)$)为$\gcd\left(x_{1},\ldots,x_{n}\right)$(相对的,$\lcm\left(x_{1},\ldots,x_{n}\right)$).
+		\item 设$\left(z_{i}\right)_{i\in I}$是$K$中包含$0$的元素族,$\left(z_{i}^{\prime}\right)_{i\in J}$是$\left(z_{i}\right)_{i\in I}$中不等于$0$的项组成的族.
+		\begin{itemize}
+			\item 如果$J=\emptyset$,则规定$\left(z_{i}\right)_{i\in I}$的最大公因式和最小公倍数都为$0$.
+			\item 如果$J\neq\emptyset$,则规定$\left(z_{i}\right)_{i\in I}$的最大公因式和最小公倍数分别是$\left(z_{i}^{\prime}\right)_{i\in J}$的最大公因式和最小公倍数.
+		\end{itemize}
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{交运算和并运算与有序群运算的相容性}{}
+	设$\left(x_{i}\right)_{i\in I}$是$G$的元素族.
+	\begin{enumerate}
+		\item 设$z\in G$.若$\left(z+x_{i}\right)_{i\in I}$(相对的,$\left(x_{i}\right)_{i\in I}$)有上确界,则$\left(x_{i}\right)_{i\in I}$(相对的,$\left(z+x_{i}\right)_{i\in I}$)有上确界,并且
+		\begin{align*}
+			\sup\limits_{i\in I}\left(z+x_{i}\right)=z+\sup\limits_{i\in I}x_{i}.
+		\end{align*}
+		\item 若$\left(x_{i}\right)_{i\in I}$(相对的,$\left(-x_{i}\right)_{i\in I}$)有上确界,则$\left(-x_{i}\right)_{i\in I}$(相对的,$\left(x_{i}\right)_{i\in I}$)有下确界(相对的,上确界),并且
+		\begin{align*}
+			\inf\limits_{i\in I}\left(-x_{i}\right)=-\sup\limits_{i\in I}\left(x_{i}\right).
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{不同指标集的元素族的上确界}{}
+	设$\left(x_{i}\right)_{i\in I},\left(y_{j}\right)_{j\in J}$是$G$中的元素族.若二者都有上确界,则$\left(x_{i}+y_{j}\right)_{i\in I,j\in J}$有上确界,并且
+	\begin{align*}
+		\sup\limits_{\left(i,j\right)\in I\times J}\left(x_{i}+y_{j}\right)=\sup\limits_{i\in I}x_{i}+\sup\limits_{j\in J}y_{j}.
+	\end{align*}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+

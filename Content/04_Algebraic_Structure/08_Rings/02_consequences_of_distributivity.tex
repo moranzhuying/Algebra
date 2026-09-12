@@ -1,0 +1,37 @@
+\section{分配性的直接推论}
+
+记号约定:$A$是环,$n\in\N$.
+
+\begin{proposition}{乘积的展开}{}
+	设$n\in\N$,$\left(I_{k}\right)_{k=1}^{n}$是一族有限集,$\left(\left(a_{i,j}\right)_{j\in I_{j}}\right)_{i=1}^{n}$是$A$的一族有限支撑族,则
+	\begin{align*}
+		\prod\limits_{i=1}^{n}\sum\limits_{j\in I_{j}}a_{i,j}=\sum\limits_{\left(i_{i},\ldots,i_{n}\right)\in I_{1}\times\ldots\times I_{n}}\prod\limits_{k=1}^{n}a_{k,i_{k}}
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{多项式展开}{}
+	设$A$是交换环,$\left(x_{i}\right)_{i\in I}$是$A$的有限元素族.对$\N$的诸元素族$\boldsymbol{\beta}\coloneq\left(\beta_{i}\right)_{i\in I}$,记$\left|\boldsymbol{\beta}\right|=\sum\limits_{i\in I}\beta_{i}$,则
+	\begin{align*}
+		\left(\sum\limits_{i\in I}x_{i}\right)^{n}=\sum\limits_{\substack{\left|\boldsymbol{\beta}\right|=n\\ \boldsymbol{\beta}:I\to\N}}\dfrac{n!}{\prod\limits_{i\in I}\beta_{i}!}\prod\limits_{i\in I}x_{i}^{\beta_{i}}.
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{交换环上的二项式定理}{}
+	设$A$是交换环,$x,y\in A$,则$\left(x+y\right)^{n}=\sum\limits_{k=0}^{n}\binom{n}{k}x^{k}y^{n-k}$.
+\end{corollary}
+
+\begin{corollary}{幂的广义展开}{}
+	设$A$是交换环,$\boldsymbol{u}\coloneq\left(u_{i}\right)_{i\in I}$和$\boldsymbol{v}\coloneq\left(v_{i}\right)_{i\in I}$是$A$的有限支撑族,$\boldsymbol{\alpha}\in\N^{\left(I\right)}$.对诸$\boldsymbol{\lambda}\in\N^{\left(I\right)}$记$\boldsymbol{\lambda}!\coloneq\prod\limits_{i\in I}\boldsymbol{\lambda}\left(i\right)!$,则
+	\begin{align*}
+		\left(\boldsymbol{u}+\boldsymbol{v}\right)^{\boldsymbol{\alpha}}=\sum\limits_{\substack{\boldsymbol{\beta},\boldsymbol{\gamma}\in\N^{\left(I\right)}\\ \boldsymbol{\beta}+\boldsymbol{\gamma}=\boldsymbol{\alpha}}}\dfrac{\boldsymbol{\alpha}!}{\boldsymbol{\beta}!\boldsymbol{\gamma}!}\boldsymbol{u}^{\boldsymbol{\beta}}\boldsymbol{v}^{\boldsymbol{\gamma}}.
+	\end{align*}
+\end{corollary}
+
+\begin{proposition}{求和与排列的恒等式}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$是$A$的元素族,$I=\left\{1,\ldots,n\right\}$.对$I$的各子集$H$,记$x_{H}\coloneq\sum\limits_{i\in H}x_{i}$,则
+	\begin{align*}
+		\left(-1\right)^{n}\sum\limits_{\sigma\in\mathfrak{S}_{n}}\prod\limits_{i=1}^{n}x_{\sigma\left(i\right)}=\sum\limits_{H\subseteq I}\left(-1\right)^{\left|H\right|}\left(x_{H}\right)^{n}.
+	\end{align*}
+	进一步,若$A$是交换环,则$\left(-1\right)^{n}n!\prod\limits_{i=1}^{n}x_{\sigma\left(i\right)}=\sum\limits_{H\subseteq I}\left(-1\right)^{\left|H\right|}\left(x_{H}\right)^{n}.$
+\end{proposition}
+

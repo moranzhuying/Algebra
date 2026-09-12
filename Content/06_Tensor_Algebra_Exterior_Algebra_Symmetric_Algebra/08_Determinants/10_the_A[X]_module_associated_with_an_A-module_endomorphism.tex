@@ -1,0 +1,139 @@
+\section{和\texorpdfstring{$A$}{A}-模自同态相伴的\texorpdfstring{$A\left[X\right]$}{A[X]}-模结构}
+
+记号约定:$A$是交换环,$M$是$A$-模,$\mathcal{T}\in\End_{A}\left(M\right)$.
+
+\begin{definition}{$A$-模的$A\left[X\right]$-模结构}{}
+	定义$A\left[X\right]$在$M$上的左作用$\cdot$为
+	\begin{align*}
+		\forall p\in A\left[X\right]\forall x\in M\left(p\cdot x=p\left(\mathcal{T}\right)\left(x\right)\right),
+	\end{align*}
+	则$M$是典范的$A\left[X\right]$-模.记所得到的$A\left[X\right]$-模为$M_{\mathcal{T}}$.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 记$\rho:A\to A\left[X\right]$为典范同态,则$\rho_{\ast}\left(M_{\mathcal{T}}\right)=M$.
+		\item $M_{\mathcal{T}}$的$A\left[X\right]$-子模$=$ $M$的$\mathcal{T}$-不变的$A$-子模.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{$A\left[X\right]\otimes_{A}M$的$A\left[X\right]$-模结构}{}
+	把典范$A\left[X\right]$-模$A\left[X\right]\otimes_{A}M$记作$M\left[X\right]$,并定义典范的$A\left[X\right]$-模同态
+	\begin{gather*}
+		\overline{\mathcal{T}}:M\left[X\right]\to M\left[X\right],p\otimes x\mapsto p\otimes\mathcal{T}\left(x\right)\\
+		\phi_{\mathcal{T}}:M\left[X\right]\to M_{\mathcal{T}},p\otimes x\mapsto p\cdot x\\
+		\psi_{\mathcal{T}}:M\left[X\right]\to M\left[X\right],p\otimes x\mapsto\left(Xp\right)\otimes x-p\otimes\mathcal{T}\left(x\right)
+	\end{gather*}
+\end{definition}
+
+\begin{proposition}{}{}
+	如下图表交换:
+	\begin{center}
+		\begin{tikzcd}
+			{M[X]} & {M[X]} \\
+			{M_{\mathcal{T}}} & {M_{\mathcal{T}}}
+			\arrow["{\overline{\mathcal{T}}}", from=1-1, to=1-2]
+			\arrow["{\phi_{\mathcal{T}}}"', from=1-1, to=2-1]
+			\arrow["{\phi_{\mathcal{T}}}", from=1-2, to=2-2]
+			\arrow["{\mathcal{T}}"', from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{}{}
+	序列$M\left[X\right]\xlongrightarrow{\psi_{\mathcal{T}}}M\left[X\right]\xlongrightarrow{\phi_{\mathcal{T}}}M_{\mathcal{T}}\xlongrightarrow{}0$正合.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$N$是$A$-模,$\mathcal{S}\in\End_{A}\left(N\right),g\in\Hom_{\mathsf{Set}}\left(M,N\right)$.
+	\begin{enumerate}
+		\item $g\in\Hom_{A\left[X\right]}\left(M_{\mathcal{T}},N_{\mathcal{S}}\right)\iff g\in\Hom_{A}\left(M,N\right)\wedge g\circ\mathcal{T}=\mathcal{S}\circ g$.
+		\item 若$g\in\Hom_{A\left[X\right]}\left(M_{\mathcal{T}},N_{\mathcal{S}}\right),\bar{g}=\id_{A\left[X\right]}\otimes g$,则如下图表交换:
+		\begin{center}
+			\begin{tikzcd}
+				{M[X]} & {M[X]} & {M_{\mathcal{T}}} & 0 \\
+				{N[X]} & {N[X]} & {N_{\mathcal{S}}} & 0
+				\arrow["{\psi_{\mathcal{T}}}", from=1-1, to=1-2]
+				\arrow["{\bar{g}}"', from=1-1, to=2-1]
+				\arrow["{\phi_{\mathcal{T}}}", from=1-2, to=1-3]
+				\arrow["{\bar{g}}", from=1-2, to=2-2]
+				\arrow[from=1-3, to=1-4]
+				\arrow["g"', from=1-3, to=2-3]
+				\arrow["{\psi_{\mathcal{S}}}"', from=2-1, to=2-2]
+				\arrow["{\phi_{\mathcal{S}}}"', from=2-2, to=2-3]
+				\arrow[from=2-3, to=2-4]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

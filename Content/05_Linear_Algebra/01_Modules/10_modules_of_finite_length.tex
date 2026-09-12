@@ -1,0 +1,57 @@
+\section{有限长度模}
+
+记号约定:$A$是环,$E,F$是$A$-模,$M_{1},M_{2}$是$E$的子模,$\left(M_{i}\right)_{i\in I}$是$E$的一族子模.
+
+\begin{definition}{单模}{}
+	若$\left|E\right|\neq 1$且没有除了零子模和$E$之外的子模,则称$E$是单模.
+\end{definition}
+
+\begin{definition}{有限长度模}{}
+	\textbf{把$E$视为$R$-群}.若$E$有Jordan-H\"older链,则称$E$为有限长度模,$E$作为$R$-群的长度称为$E$作为模的长度,记作$\ell_{A}\left(M\right)$.
+\end{definition}
+
+\begin{proposition}{长度的可加性}{}
+	$M$是有限长度的$\iff$ $N,M/N$是有限长度的.两条件之一成立时$\ell_{A}\left(N\right)+\ell_{A}\left(M/N\right)=\ell_{A}\left(M\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$M$是有限长度模,则$\ell_{A}\left(M\right)=\ell_{A}\left(N\right)\iff M=N$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$u\in\Hom_{A}\left(M,N\right)$.
+	\begin{enumerate}
+		\item 若$M,N$中有一个是有限长度模,则$\im\left(u\right)$是有限长度模.
+		\item 若$M$是有限长度模,则$\ker\left(f\right)$是有限长度模,$\ell_{A}\left(\im\left(u\right)\right)+\ell_{A}\left(\ker\left(u\right)\right)=\ell_{A}\left(M\right)$.
+		\item 若$N$是有限长度模,则$\coker\left(f\right)$是有限长度模,$\ell_{A}\left(\im\left(u\right)\right)+\ell_{A}\left(\coker\left(u\right)\right)=\ell_{A}\left(N\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$n\geq 0$,有限长度模的序列$0\xlongrightarrow{}M_{0}\xlongrightarrow{u_{0}}M_{1}\xlongrightarrow{u_{1}}\ldots\xlongrightarrow{u_{n-2}}M_{n-1}\xlongrightarrow{u_{n-1}}M_{n}\xlongrightarrow{}0$正合,则$\sum\limits_{k=0}^{n}\left(-1\right)^{k}\ell_{A}\left(M_{k}\right)=0$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$M_{1},M_{2}$是有限长度模,则$M_{1}+M_{2}$是有限长度模,$\ell_{A}\left(M_{1}+M_{2}\right)+\ell_{A}\left(M_{1}\cap M_{2}\right)=\ell_{A}\left(M_{1}\right)+\ell_{A}\left(M_{2}\right)$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$\left(M_{i}\right)_{i\in I}$是$M$的一族有限长度子模,$E=\sum\limits_{i\in I}M_{i}$,则$E$是有限长度模,$\ell_{A}\left(M\right)\leqslant\sum\limits_{i\in I}\ell_{A}\left(M_{i}\right)$,其中
+	\begin{align*}
+		\ell_{A}\left(E\right)=\sum\limits_{i\in I}\ell_{A}\left(M_{i}\right)\iff E=\bigoplus\limits_{i\in I}M_{i}.
+	\end{align*}
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$E/M_{1},E/N_{2}$是有限长度模,则$E/\left(M_{1}+M_{2}\right),E/\left(M_{1}\cap M_{2}\right)$是有限长度模,并且
+	\begin{align*}
+		\ell_{A}\left(E/\left(M_{1}\cap M_{2}\right)\right)+\ell_{A}\left(E/\left(M_{1}+M_{2}\right)\right)=\ell_{A}\left(E/M_{1}\right)+\ell_{A}\left(E/M_{2}\right).
+	\end{align*}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$I$有限,$\left(M_{i}\right)_{i\in I}$是一族有限长度摸.若$\left(E/M_{i}\right)_{i\in I}$是一族有限长度模,则$E/\bigcap\limits_{i\in I}M_{i}$亦然,并且
+	\begin{align*}
+		\ell_{A}\left(E/\bigcap\limits_{i\in I}M_{i}\right)\leqslant\sum\limits_{i\in I}\ell_{A}\left(E/M_{i}\right)
+	\end{align*}
+\end{corollary}

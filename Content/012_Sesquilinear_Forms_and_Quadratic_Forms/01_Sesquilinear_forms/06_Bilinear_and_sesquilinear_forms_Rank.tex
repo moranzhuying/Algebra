@@ -1,0 +1,106 @@
+\section{双线性型与半双线性型·秩}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$E$是左$A$-模,$F$是右$A$-模或左$A$-模.
+	\item $\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right),\sigma=\rho^{-1}$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $\langle\cdot,\cdot\rangle_{E}$和$\langle\cdot,\cdot\rangle_{F}$分别是$E$和$F$的典范配对.
+\end{itemize}
+
+\begin{definition}{$A$-双线性型}{}
+	设$F$是右$A$-模.
+	\begin{enumerate}
+		\item 我们称$\Bil_{A}\left(E,F\right)\coloneq\Bil_{A,A}\left(E,F;{}_{s}A_{d}\right)$的元素是$E\times F$上的$A$-双线性型.
+		\item 当$A$是交换环时,我们称$\Bil_{A}\left(E\right)\coloneq\Bil_{A,A}\left(E,E;{}_{s}A_{d}\right)$的元素是$E$上的$A$-双线性型.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{关于$\rho$的$A$-右半双线性型}{}
+	设$F$是左$A$-模.
+	\begin{enumerate}
+		\item 我们称$\Sesq_{A,\rho}\left(E,F\right)\coloneq\Sesq_{A,(A,\rho)}\left(E,F;{}_{s}A_{d}\right)$的元素是$E\times F$上关于$\rho$的$A$-右半双线性型.
+		\item 我们称$\Sesq_{A,\rho}\left(E\right)\coloneq\Sesq_{A,(A,\rho)}\left(E,E;{}_{s}A_{d}\right)$的元素是$E$上关于$\rho$的$A$-右半双线性型.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	设$M,N$是右$A$-模.
+	\begin{enumerate}
+		\item 我们称$\Sesq_{\rho,A}\left(M,N\right)\coloneq\Sesq_{(A,\rho),A}\left(M,N;{}_{s}A_{d}\right)$的元素是$M\times M$上关于$\rho$的$A$-左半双线性型.
+		\item 我们称$\Sesq_{\rho,A}\left(E\right)\coloneq\Sesq_{(A,\rho),A}\left(M,M;{}_{s}A_{d}\right)$的元素是$M$上关于$\rho$的$A$-左半双线性型.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{半双线性型的等价}{}
+	设$E^{\prime}$是左$A$-模,$\psi\in\Sesq_{A,\rho}\left(E\right),\psi^{\prime}\in\Sesq_{A,\rho}\left(E^{\prime}\right)$.若$\exists u\in\Isom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right)\left(\psi^{\prime}\circ\left(u\times u\right)=\psi\right)$,则称$\psi$和$\psi^{\prime}$等价.
+\end{definition}
+
+本节剩下的内容中,当$F$是右$A$-模时$\varphi\in\Bil_{A}\left(E,F\right)$;$F$是左$A$-模时$\varphi\in\Sesq_{A,\rho}\left(E,F\right)$.
+
+\begin{proposition}{双线性型的左右伴随和典范配对}{}
+	设$F$是右$A$-模,则对每个$\left(x,y\right)\in E\times F$有$\varphi\left(x,y\right)=\langle x,d_{\varphi}\left(y\right)\rangle_{E}=\langle s_{\varphi}\left(x\right),y\rangle_{F}$.
+\end{proposition}
+
+\begin{definition}{半双线性型的转置}{}
+	设$F$是左$A$-模.我们称$\varphi^{\top}\coloneq\sigma\circ\varphi$是$\varphi$的转置.
+\end{definition}
+
+\begin{proposition}{半双线性型的左右伴随和典范配对}{}
+	设$F$是左$A$-模,则对每个$\left(x,y\right)\in E\times F$有$\varphi\left(x,y\right)=\langle x,d_{\varphi}\left(y\right)\rangle_{E}=\overline{\langle y,s_{\varphi}\left(x\right)\rangle_{F}}$.
+\end{proposition}
+
+\begin{proposition}{正交子模和对偶空间的正交子模的关系}{}
+	对$E$的每个子模$M$有$M^{\perp}=s_{\varphi}^{-1}\left(M^{\circ}\right)$,对$F$的每个子模$N$有$N^{\perp}=d_{\varphi}^{-1}\left(N^{\circ}\right)$.
+\end{proposition}
+
+\begin{remark}{}{}
+	设$M,N$是右$A$-模,$\psi\in\Sesq_{(A,\rho),A}\left(E,F;{}_{s}A_{d}\right)$,$\langle\cdot,\cdot\rangle_{M}$和$\langle\cdot,\cdot\rangle_{N}$分别是$M$和$N$的典范配对,则对每个$\left(x,y\right)\in M\times N$有
+	\begin{align*}
+		\psi\left(x,y\right)=\langle y,s_{\psi}\left(x\right)\rangle_{N}=\overline{\langle x,d_{\psi}\left(y\right)\rangle_{M}}.
+	\end{align*}
+\end{remark}
+
+本节接下来的内容中,默认$A$是除环.
+
+\begin{proposition}{(半)双线性型的秩是良定义的}{}
+	$E/F^{\circ}$是有限维$A$-向量空间$\iff$ $F/E^{\circ}$是有限维$A$-向量空间.两条件之一成立时,$\dim_{A}\left(E/F^{\circ}\right)=\dim_{A}\left(F/E^{\circ}\right)$.
+\end{proposition}
+
+\begin{corollary}{(半)双线性型的正交子模的格论性质}{}
+	设$\varphi$非退化.
+	\begin{enumerate}
+		\item 对$E$的每个子空间$M$有$\dim_{A}M<\aleph_{0}\iff\codim_{F}\left(M^{\circ}\right)<\aleph_{0}$.
+		\item 对$E$的每个有限维子空间$M$有$\codim_{F}\left(M^{\circ}\right)=\dim_{A}M$和$M^{\circ\circ}=M$.
+		\item 对$E$的任意两个子空间$M,N$有$\left(M+N\right)^{\circ}=M^{\circ}\cap N^{\circ}$.
+		\item 对$E$的任意两个有限维子空间$M,N$有$\left(M\cap N\right)^{\circ}=M^{\circ}+N^{\circ}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}{(半)双线性型的秩}{}
+	设$E/F^{\circ}$是有限维$A$-向量空间.
+	\begin{enumerate}
+		\item 我们称$\rank\left(\varphi\right)\coloneq\dim_{A}\left(E/F^{\circ}\right)$是$\varphi$的秩.
+		\item 若$E/F^{\circ}$是无限维的,则称$\varphi$是无限秩的.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{(半)双线性型及其左右伴随的秩的关系}{}
+	设$E/F^{\circ}$是有限维$A$-向量空间,则$\rank\left(s_{\varphi}\right)=\rank\left(d_{\varphi}\right)=\rank\left(\varphi\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E,F,E/F^{\circ}$是有限维$A$-向量空间,$\dim_{A}E=\dim_{A}F$,则
+	\begin{center}
+		$d_{\varphi}$是单射$\iff$ $d_{\varphi}$是满射$\iff$ $s_{\varphi}$是单射$\iff$ $s_{\varphi}$是满射$\iff$ $\varphi$非退化.
+	\end{center}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$E,E/F^{\circ}$是有限维$A$-向量空间,$\dim_{A}E=n\geq 1$,$\varphi$是非退化的.
+	\begin{enumerate}
+		\item $\dim_{A}E=\dim_{A}F$.
+		\item 对$E$的每个基$\left(e_{i}\right)_{i=1}^{n}$,存在$F$的基$\left(f_{i}\right)_{i=1}^{n}$,对每个$1\leq i,j\leq n$有$\varphi\left(e_{i},f_{j}\right)=\delta_{i,j}$.
+	\end{enumerate}
+\end{corollary}
+
+

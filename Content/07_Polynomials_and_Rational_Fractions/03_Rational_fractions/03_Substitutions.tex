@@ -1,0 +1,121 @@
+\section{有理分式的代入}
+
+记号约定:
+\begin{itemize}
+	\item $E$是$K$-含幺结合代数,$B=K[(X_{i})_{i\in I}]$.
+	\item $\mathbf{x}\coloneq\left(x_{i}\right)_{i\in I}$是$E$中一族两两可交换的元素.
+	\item $S_{\mathbf{x}}=\left\{v\in K[(X_{i})_{i\in I}]\setminus\left\{0\right\}\middle|v\left(\mathbf{x}\right)\in E^{\times}\right\}$.
+\end{itemize}
+
+\begin{lemma}{有理分式的代入的良定义性}{}
+	设$f\in K((X_{i})_{i\in I})$.若$\exists\left(u,v\right)\in B\times S_{\mathbf{x}}\left(f=\frac{u}{v}\right)$,则
+	\begin{align*}
+		\forall\left(u_{1},v_{1}\right),\left(u_{2},v_{2}\right)\in B\times S_{\mathbf{x}}\left(f=\frac{u_{1}}{v_{1}}=\frac{u_{2}}{v_{2}}\implies u_{1}\left(\mathbf{x}\right)\left(v_{1}\left(\mathbf{x}\right)\right)^{-1}=u_{2}\left(\mathbf{x}\right)\left(v_{2}\left(\mathbf{x}\right)\right)^{-1}\right)
+	\end{align*}
+\end{lemma}
+
+\begin{definition}{有理分式的代入}{}
+	设$f\in K((X_{i})_{i\in I})$.
+	\begin{enumerate}
+		\item 若$\exists\left(u,v\right)\in B\times S_{\mathbf{x}}\left(f=\frac{u}{v}\right)$,则称$\mathbf{x}$在$f$中可代入.
+		\item 若$\mathbf{x}$在$f$中可代入,$\left(r,s\right)\in B\times S_{\mathbf{x}}$且$f=\frac{r}{s}$,则记$f\left(\mathbf{x}\right)\coloneq r\left(\mathbf{x}\right)\left(s\left(\mathbf{x}\right)\right)^{-1}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{可代入分式代数}{}
+	\begin{enumerate}
+		\item $\left\{f\in K((X_{i})_{i\in I})\middle|\mathbf{x}\text{在}f\text{中可代入}\right\}=S_{\mathbf{x}}^{-1}B$,并且$S_{\mathbf{x}}^{-1}B$是$K((X_{i})_{i\in I})$的$K$-子代数.
+		\item $\ev_{\mathbf{x}}:S_{\mathbf{x}}^{-1}B\to E,f\mapsto f\left(\mathbf{x}\right)$是$K$-含幺代数同态,$\im\left(\ev_{\mathbf{x}}\right)=\left\{yz^{-1}\in E\middle|y\in K\left[\mathbf{x}\right],z\in\left(K\left[\mathbf{x}\right]\right)^{\times}\right\}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{生成子域}{}
+	设$L$是域,$K$是$L$的子域,$\mathbf{y}\coloneq\left(y_{i}\right)_{i\in I}\in L^{I},M=\left\{y_{i}\middle|i\in I\right\}$.令
+	\begin{align*}
+		\varphi:S_{\mathbf{x}}^{-1}B\to L,f\mapsto f\left(\mathbf{y}\right),
+	\end{align*}
+	则$\im\left(\varphi\right)$是$K\cup M$在$L$中生成的子域,将其记作$K\left(\mathbf{x}\right)$.
+\end{corollary}
+
+\begin{proposition}{有理分式的代入的复合}{}
+	设$E$是非零$K$-含幺交换结合代数,$f\in K((X_{i})_{i\in I})$,$\left(g_{i}\right)_{i\in I}$是$K((Y_{j})_{j\in J})$中的序列,$\mathbf{y}\in E^{J}$.若对每个$i\in I$,$\mathbf{y}$在$g_{i}$中可代入,$\left(g_{i}\left(\mathbf{y}\right)\right)_{i\in I}$在$f$中可代入,$h=f\left(\left(g_{i}\right)_{i\in I}\right)$,则$\left(g_{i}\right)_{i\in I}$在$f$中可代入,$\mathbf{y}$在$h$中可代入,$h\left(\mathbf{y}\right)=f\left(\left(g_{i}\left(\mathbf{y}\right)\right)_{i\in I}\right)$.
+\end{proposition}
+
+\begin{definition}{有理函数}{}
+	设$E$是$K$-含幺交换结合代数,$f\in K((X_{i})_{i\in I})$,$T_{f}=\left\{\mathbf{x}\in E^{I}\middle|\mathbf{x}\text{在}f\text{中可代入}\right\}$.我们称
+	\begin{align*}
+		\tilde{f}:T_{f}\to E,\mathbf{x}\mapsto f\left(\mathbf{x}\right)
+	\end{align*}
+	是$f$在$E$上诱导的有理函数.
+\end{definition}
+
+\begin{remark}{}{}
+	对于$f,g\in K((X_{i})_{i\in I})$,我们要求$T_{f}\cap T_{g}$包含于$\dom\left(\tilde{f}+\tilde{g}\right)$和$\dom\left(\tilde{f}\tilde{g}\right)$.此外,若$\mathbf{x}\in T_{f}$且$f\left(\mathbf{x}\right)\in E^{\times}$,则$\mathbf{x}$在$\frac{1}{f}$中可代入,并且$\frac{1}{f}\left(\mathbf{x}\right)=f\left(\mathbf{x}\right)^{-1}$.记$\Ratio_{K}\left(E\right)=\left\{\tilde{f}\middle|f\in K((X_{i})_{i\in I})\right\}$.
+\end{remark}
+
+\begin{theorem}{无限域上,有理函数相等$\implies$有理分式相等}{}
+	设$K$是无限集.
+	\begin{enumerate}
+		\item 若$f,g\in K((X_{i})_{i\in I})$且$\forall\mathbf{x}\in T_{f}\cap T_{g}\left(\tilde{f}\left(\mathbf{x}\right)=\tilde{g}\left(\mathbf{x}\right)\right)$,则$f=g$.
+		\item $K((X_{i})_{i\in I})\to\Ratio_{K}\left(E\right),f\mapsto\tilde{f}$是单射.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 实践中,我们经常会滥用术语,把$f\in K((X_{i})_{i\in I})$与$\tilde{f}$等同起来.
+		\item 对每个$f\in K((X_{i})_{i\in I})$,存在$u,v\in K[(X_{i})_{i\in I}]$使得$f=\frac{u}{v}\wedge\forall\mathbf{x}\in K^{I}\left(\mathbf{x}\in T_{f}\iff v\left(\mathbf{x}\right)\neq 0\right)$.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

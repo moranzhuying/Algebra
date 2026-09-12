@@ -1,0 +1,170 @@
+\section{交换环上的形式幂级数}
+
+记号约定:$I$是集合,$A$是交换环.
+
+\begin{proposition}{}{}
+	幺半群$\N^{\left(I\right)}$满足局部有限乘法条件.
+\end{proposition}
+
+\begin{definition}{形式幂级数代数,形式幂级数}{}
+	\begin{enumerate}
+		\item 我们称$\N^{\left(I\right)}$在$A$上的全幺半群代数是以$\left(X_{i}\right)_{i\in I}$为不定元,系数在$A$中的形式幂级数代数,记作$A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]$.
+		\item 我们称$A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]$的元素是以$\left(X_{i}\right)_{i\in I}$为不定元,系数在$A$中的形式幂级数.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{形式幂级数的系数和项}{}
+	设$u=\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}\in A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]$.
+	\begin{enumerate}
+		\item 我们称$\left(\alpha_{\nu}\right)_{\nu\in\N^{\left(I\right)}}$是$u$的系数.
+		\item 我们称$\left(a_{\nu}X^{\nu}\right)_{\nu\in\N^{\left(I\right)}}$是$u$的项.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{集合间双射诱导的同构}{}
+	设$I_{1},I_{2}$是集合,则每个$\sigma\in\Isom_{\mathsf{Set}}\left(I_{1},I_{2}\right)$都诱导典范的$A$-代数同构
+	\begin{gather*}
+		A\left[\left[\left(X_{i}\right)_{i\in I_{1}}\right]\right]\to A\left[\left[\left(X_{i}\right)_{i\in I_{2}}\right]\right]\\
+		\sum\limits_{\left(n_{i}\right)_{i\in I}\in\N^{\left(I_{1}\right)}}\prod\limits_{i\in I_{1}}X_{i}^{n_{i}}   
+		\longmapsto
+		\sum\limits_{\left(n_{i}\right)_{i\in I}\in\N^{\left(I_{1}\right)}}\prod\limits_{i\in I_{1}}X_{\sigma\left(i\right)}^{n_{i}}
+	\end{gather*}
+\end{proposition}
+
+\begin{proposition}{子指标集对应的子代数}{}
+	设$J\subseteq I$,则$A\left[\left[\left(X_{j}\right)_{j\in J}\right]\right]$典范等同于$A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]$的子代数
+	\begin{align*}
+		\left\{\sum\limits_{\left(n_{i}\right)_{i\in I}\in \mathbb{N}^{\left(I\right)}}\alpha_{\left(n_{i}\right)_{i\in I}}\prod\limits_{i\in I}X_{i}^{n_{i}}\ \middle|\ \left(\alpha_{\left(n_i\right)_{i\in I}}\right)\in R^{\mathbb{N}^{(I)}},\ \forall\left(n_{i}\right)_{i\in I}\in\mathbb{N}^{\left(I\right)}\left(\exists i^{\prime}\in I\setminus J\left(n_{i^{\prime}}\neq 0\right)\implies\alpha_{\left(n_{i}\right)_{i\in I}}=0\right)\right\}
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$J\subseteq I,K=I\setminus J$,则有典范$A$-代数同构(其中$\mathbf{n}$通过典范映射$\N^{\left(I\right)}\to\N^{\left(J\right)}\times\N^{\left(K\right)}$对应到$\left(\mathbf{p},\mathbf{m}\right)$).
+	\begin{gather*}
+		A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]\to\left(A\left[\left[\left(X_{j}\right)_{j\in J}\right]\right]\right)\left[\left[\left(X_{k}\right)_{k\in K}\right]\right]\\
+		\sum\limits_{\mathbf{n}\in\N^{\left(I\right)}}\alpha_{\mathbf{n}}X^{\mathbf{n}}\mapsto\sum\limits_{\mathbf{m}\in\N^{\left(K\right)}}\left(\sum\limits_{\mathbf{p}\in\N^{\left(J\right)}}\alpha_{\left(\mathbf{p},\mathbf{m}\right)}X^{\mathbf{p}}\right)X^{\mathbf{m}}
+	\end{gather*}
+\end{proposition}
+
+\begin{definition}{$p$次齐次部分}{}
+	设$u=\sum\limits_{\nu\in\N^{\left(I\right)}}a_{\nu}X^{\nu}\in A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right],p\in\Z_{\geq 0}$.
+	\begin{enumerate}
+		\item 若$\left|\nu\right|=p$,则称$a_{\nu}X^{\nu}$是$u$的总次数为$p$的项.
+		\item $u$的所有总次数为$p$的项组成的形式幂级数(总次数非$p$的项的系数为$0$)称为$u$的$p$次齐次部分,记作$u_{p}$.
+		\item 我们称$u_{0}$是$u$的常数项.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{形式幂级数齐次部分的乘法公式}{}
+	设$u,v\in A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right],w=uv,p\in\Z_{\geq 0}$,则$w_{p}=\sum\limits_{r=0}^{p}u_{r}v_{p-r}$.
+\end{proposition}
+
+\begin{definition}{(总)阶数}{}
+	设$u\in A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]$且$\neq 0$.称$\omega\left(u\right)\coloneq\min\left\{p\in\Z_{\geq 0}\middle|u_{p}\neq 0\right\}$是$u$的总阶数(或阶数).
+\end{definition}
+
+\begin{proposition}{阶数的运算性质}{}
+	设$u,v\in A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]$且都$\neq 0$.
+	\begin{enumerate}
+		\item 若$u+v\neq 0$,则$\omega\left(u,v\right)\geq\min\left(\omega\left(u\right),\omega\left(v\right)\right)$.
+		\item 若$\omega\left(u\right)\neq\omega\left(v\right)$,则$u+v\neq 0$,并且$\omega\left(u+v\right)=\min\left(\omega\left(u\right),\omega\left(v\right)\right)$.
+		\item 若$uv\neq 0$,则$\omega\left(uv\right)\geq\omega\left(u\right)+\omega\left(v\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{术语约定}{}
+	我们不定义$\omega\left(0\right)$.对$f\in A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]$和$p\in\Z_{\geq 0}$做下列约定:
+	\begin{itemize}
+		\item 若对每个$n<p$有$f_{n}=0$,则称$\omega\left(f\right)\geq p$.
+		\item 若对每个$n\leq p$有$f_{n}=0$,则称$\omega\left(f\right)>p$.
+	\end{itemize}
+	在此约定下,对每个$n\in\Z_{\geq 0}$,$0\in A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]$满足$\omega\left(0\right)>n$.
+\end{remark}
+
+\begin{definition}{偏次数}{}
+	设$J\subseteq I,K=I\setminus J$,$u=\sum\limits_{\mathbf{n}\in\N^{\left(I\right)}}\alpha_{\mathbf{n}}X^{\mathbf{n}}$对应到$\sum\limits_{\mathbf{m}\in\N^{\left(K\right)}}\left(\sum\limits_{\mathbf{p}\in\N^{\left(J\right)}}\alpha_{\left(\mathbf{p},\mathbf{m}\right)}X^{\mathbf{p}}\right)X^{\mathbf{m}}$.
+	\begin{enumerate}
+		\item 对任一$\mathbf{n}\in\N^{\left(I\right)}$,若$\mathbf{n}$对应到$\left(\mathbf{p},\mathbf{m}\right)$,则称$\left|\mathbf{m}\right|$是$\alpha_{\mathbf{n}}X^{\mathbf{n}}$关于$K$变元的偏次数.
+		\item 对任一$p\in\Z_{\geq 0}$,定义$u_{p}^{K}=\sum\limits_{\substack{\mathbf{n}\in\N^{\left(I\right)}\\ \left|\mathbf{n}\right|=p}}a_{\mathbf{n}}X^{\mathbf{n}}$是$u$关于$K$变元的$p$次齐次部分.
+		\item 若$u\neq 0$,责成$\omega_{K}\left(u\right)\coloneq\min\left\{p\in\Z_{\geq 0}\middle|u_{p}^{\left(K\right)}\neq 0\right\}$为关于$K$变元的偏阶数.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{阶数的运算性质}{}
+	设$J\subseteq I,K=I\setminus J$,$u,v\in A\left[\left[\left(X_{i}\right)_{i\in I}\right]\right]$且都$\neq 0$,其中:
+	\begin{itemize}
+		\item $u=\sum\limits_{\mathbf{n}\in\N^{\left(I\right)}}\alpha_{\mathbf{n}}X^{\mathbf{n}}$对应到$\sum\limits_{\mathbf{m}\in\N^{\left(K\right)}}\left(\sum\limits_{\mathbf{p}\in\N^{\left(J\right)}}\alpha_{\left(\mathbf{p},\mathbf{m}\right)}X^{\mathbf{p}}\right)X^{\mathbf{m}}$.
+		\item $v=\sum\limits_{\mathbf{n}\in\N^{\left(I\right)}}\beta_{\mathbf{n}}X^{\mathbf{n}}$对应到$\sum\limits_{\mathbf{m}\in\N^{\left(K\right)}}\left(\sum\limits_{\mathbf{p}\in\N^{\left(J\right)}}\beta_{\left(\mathbf{p},\mathbf{m}\right)}X^{\mathbf{p}}\right)X^{\mathbf{m}}$.
+	\end{itemize}
+	\begin{enumerate}
+		\item 若$u+v\neq 0$,则$\omega_{K}\left(u,v\right)\geq\min\left(\omega_{K}\left(u\right),\omega_{K}\left(v\right)\right)$.
+		\item 若$\omega_{K}\left(u\right)\neq\omega_{K}\left(v\right)$,则$u+v\neq 0$,并且$\omega_{K}\left(u+v\right)=\min\left(\omega_{K}\left(u\right),\omega_{K}\left(v\right)\right)$.
+		\item 若$uv\neq 0$,则$\omega_{K}\left(uv\right)\geq\omega_{K}\left(u\right)+\omega_{K}\left(v\right)$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+\section{代数的范数和迹}
+
+记号约定:$A,A^{\prime}$是自由$K$-代数,二者作为$K$-模是有限维的.
+
+\begin{definition}{代数中的范数,迹,特征多项式}{}
+	设$a\in A$.我们依次称$a$在$A$上诱导的左乘$\mathcal{L}_{a}$的范数,迹,特征多项式为$a$关于$A$和$K$的范数,迹,特征多项式,依次记作
+	\begin{align*}
+		\Tr_{A/K}\left(a\right),\Norm_{A/K}\left(a\right),\Pc_{A/K}\left(a;X\right).
+	\end{align*}
+	没有混淆时,省略下标中的$A,K$甚至是$A/K$.
+\end{definition}
+
+\begin{remark}{}{}
+	在此意义下,$a$的迹,范数,特征多项式只不过是$a$相对于$A$-模$A_{s}$的迹,范数,特征多项式.
+\end{remark}
+
+\begin{proposition}{代数的乘积的迹,范数,特征多项式}{}
+	设$\left(A_{i}\right)_{i=1}^{n}$是一族有限维自由$K$-代数,$A=\prod\limits_{i=1}^{n}A_{i}$,则对每个$a\coloneq\left(a_{i}\right)_{i=1}^{n}\in A$,有
+	\begin{align*}
+		\Tr_{A/K}\left(a\right)=\sum\limits_{i=1}^{n}\Tr_{A_{i}/K}\left(a_{i}\right),
+		\Norm_{A/K}\left(a\right)=\prod\limits_{i=1}^{n}\Norm_{A_{i}/K}\left(a_{i}\right),
+		\Pc_{A/K}\left(a;X\right)=\prod\limits_{i=1}^{n}\Pc_{A_{i}/K}\left(a_{i};X\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$A,A^{\prime}$作为$K$-模各自的维数分别是$m,n$,则对每个$a\in A,a^{\prime}\in A^{\prime}$有
+	\begin{align*}
+		\Tr_{A\otimes_{K}A^{\prime}}\left(a\otimes a^{\prime}\right)=\Tr_{A}\left(a\right)\Tr_{A^{\prime}}\left(a^{\prime}\right),
+		\Norm_{A\otimes_{K}A^{\prime}}\left(a\otimes a^{\prime}\right)=\left(\Norm_{A}\left(a\right)\right)^{m}\left(\Norm_{A^{\prime}}\left(a^{\prime}\right)\right)^{n}.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{标量扩张和环同态的自然性}{}
+	设$K^{\prime}$是交换环,$h\in\Hom_{\mathsf{Ring}}\left(K,K^{\prime}\right),A^{\prime}=h^{\ast}\left(A\right),\bar{h}\in\Hom_{\mathsf{Ring}}\left(K\left[X\right],K^{\prime}\left[X\right]\right)$是$h$诱导的同态,则对每个$a\in A$,
+	\begin{gather*}
+		\Tr_{A^{\prime}/K^{\prime}}\left(1_{K^{\prime}}\otimes a\right)=\bar{h}\left(\Tr_{A/K}\left(a\right)\right),\\
+		\Norm_{A^{\prime}/K^{\prime}}\left(1_{K^{\prime}}\otimes a\right)=\bar{h}\left(\Norm_{A/K}\left(a\right)\right),\\
+		\Pc_{A^{\prime}/K^{\prime}}\left(1_{K^{\prime}}\otimes a;X\right)=\bar{h}\left(\Pc_{A/K}\left(a;X\right)\right).
+	\end{gather*}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$K^{\prime}=K\left[X\right],A\left[X\right]=A\otimes_{K}K\left[X\right]$,那么$\Pc_{A/K}\left(a;X\right)=\Norm_{A\left[X\right]/K\left[X\right]}\left(X-a\right)$.
+		\item 更一般地,如果$K^{\prime}$是交换$K$-代数,$A^{\prime}=A\otimes_{K}K^{\prime}$,则对每个$x\in A^{\prime}$,有$\Pc_{A/K}\left(a;x\right)=\Norm_{A^{\prime}/K^{\prime}}\left(x-a\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$A$是$K$上$\left(\alpha,\beta\right)$型的二次代数,典范基为$\left(e_{i}\right)_{i=1}^{2}$,则对每个$x=\xi e_{1}+\eta e_{2}\in A$,
+		\begin{align*}
+			\Tr_{A/K}\left(x\right)=2\xi+\beta\eta,\Norm_{A/K}\left(x\right)=\xi^{2}+\beta\xi\eta-\alpha\eta^{2}.
+		\end{align*}
+		(由此可见$\Tr_{A/K}\left(x\right)$和$\Norm_{A/K}\left(x\right)$分别与$x$的Caylay迹和Caylai范数相同).
+		\item 设$A$是$K$上的四元数代数,则对每个$x\in A$,有
+		\begin{align*}
+			\Norm_{A/K}\left(x\right)=2T\left(x\right),\Norm_{A/K}\left(x\right)=\left(N\left(x\right)\right)^{2},
+		\end{align*}
+		其中$T\left(x\right),N\left(x\right)$分别是$x$的Caylay迹和Caylay范数.
+		\item 设$A=\boldsymbol{M}_{n}\left(K\right)$,则对每个$\boldsymbol{X}\in A$,有$\Tr_{A/K}\left(\boldsymbol{X}\right)=n\tr\left(\boldsymbol{X}\right),\Norm_{A/K}\left(\boldsymbol{X}\right)=\left(\det\left(\boldsymbol{X}\right)\right)^{n}$.
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

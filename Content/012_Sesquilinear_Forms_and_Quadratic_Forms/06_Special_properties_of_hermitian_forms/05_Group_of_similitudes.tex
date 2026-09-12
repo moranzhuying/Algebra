@@ -1,0 +1,80 @@
+\section{相似群}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$是对合,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $E$是左$A$-模,$\varphi\in\SHerm_{A,\rho}\left(E\right)$.
+\end{itemize}
+
+\begin{definition}{相似变换(Hermite型情形)}{}
+	设$u\in\Aut_{A-\mathsf{Mod}}\left(E\right)$.若存在$\alpha\in A^{\times}$使得$\varphi\circ\left(u\times u\right)=\alpha\varphi$,则称$u$是关于$\varphi$的相似变换(或$\varphi$-相似变换).
+\end{definition}
+
+\begin{lemma}{相似变换群的良定义性}{well-definedness-of-group-of-similitudes}
+	设$\GU\left(\varphi\right)$是$E$上所有$\varphi$-相似变换组成的集合,则$\GU\left(\varphi\right)$按映射复合构成群.
+\end{lemma}
+
+\begin{definition}{相似变换群}{}
+	沿用引理\ref{lem:well-definedness-of-group-of-similitudes}的记号.我们称$\GU\left(\varphi\right)$是$\varphi$的相似变换群.
+\end{definition}
+
+\begin{remark}{}{}
+	设$\im\left(\varphi\right)$中存在$A$的可消去元,$u\in\GU\left(\varphi\right)$.那么:
+	\begin{enumerate}
+		\item 当$\alpha\in A^{\times}$且$\varphi\circ\left(u\times u\right)=\alpha\varphi$时,$\alpha$被$u$唯一确定.我们称$\mu\left(u\right)\coloneq\alpha$是$u$的相似比.
+		\item 如果$u$的相似比为$\alpha$,那么$\mu\left(u\right)\in Z\left(A\right)$且$\overline{\mu\left(u\right)}=\mu\left(u\right)$.
+		\item $\mu:\GU\left(\varphi\right)\to Z\left(A\right)^{\times},f\mapsto\mu\left(f\right)$是群同态,$\ker\left(\mu\right)=\mathrm{U}\left(\varphi\right)$.
+		\item 满足一定的条件时,相似变换可以分解为位似和酉变换的乘积,反之亦然.
+		\begin{itemize}
+			\item 若$\beta\in Z\left(A\right)^{\times}$且$\mu\left(u\right)=\beta\bar{\beta}$,则$u=\beta^{-1}u\circ\mathcal{L}_{\beta}=\mathcal{L}_{\beta}\circ\beta^{-1}u,\mathcal{L}_{\beta}\in\Aut_{A-\mathsf{Mod}}\left(E\right),\beta^{-1}u\in\mathrm{U}\left(\varphi\right)$.
+			\item 若$\beta\in Z\left(A\right)^{\times}$且$\mu\left(u\right)=\beta\bar{\beta}$,则存在$v\in\mathrm{U}\left(\varphi\right)$使得$u=v\circ\mathcal{L}_{\beta}$.
+		\end{itemize}
+	\end{enumerate}
+\end{remark}
+
+\begin{theorem}{相似变换群的结构定理}{}
+	设$A$是域,$\dim E=n\in\N$,$\varphi$非退化,$u\in\GU\left(\varphi\right),\alpha=\mu\left(u\right)$.
+	\begin{enumerate}
+		\item $u^{\ast}u=\mu\left(u\right)\id_{E}$,并且$\det\left(u\right)\overline{\det\left(u\right)}=\alpha^{n}$.
+		\item 设$n=2q+1$且$q\in\N$.令$\lambda=\alpha^{-q}\det\left(u\right)$,则$u$可以唯一表示成$\mathcal{L}_{\lambda}\circ\lambda^{-1}u$.
+		\item 设$n=2q$且$q\in\N$,$\rho=\id_{A}$,则$\det\left(u\right)\in\left\{\alpha^{q},\alpha^{-q}\right\}$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{正相似变换,负相似变换}{}
+	设$A$是域,$\dim E=n=2q$(其中$n,q\in\N$),$\rho=\id_{K},u\in\GU\left(\varphi\right),\mu\left(u\right)=\alpha$.
+	\begin{enumerate}
+		\item 若$\det\left(u\right)=\alpha^{q}$,则称$u$是相对$\varphi$的正相似变换.记$\GU^{+}\left(\varphi\right)$是$E$上相对$\varphi$的正相似变换组成的集合.
+		\item 若$\det\left(u\right)=-\alpha^{q}$,则称$u$是相对$\varphi$的反相似变换.记$\GU^{-}\left(\varphi\right)$是$E$上相对$\varphi$的负相似变换组成的集合.
+		\item 当$E=A^{2n}$时,分别记$\GU_{n}\left(A\right)\coloneq\GU\left(\varphi\right),\GU_{n}^{+}\left(A\right)\coloneq\GU^{+}\left(\varphi\right),\GU_{n}^{-}\left(A\right)\coloneq\GU^{-}\left(\varphi\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\GU^{+}\left(\varphi\right)$是$\GU\left(\varphi\right)$中指数为$2$的正规子群.我们有时候将其记作$\GSU\left(\varphi\right)$,称之为$\varphi$的特殊相似群.
+		\item $\GU^{-}\left(\varphi\right)$是$\GU\left(\varphi\right)$中的陪集,并且$\GU\left(\varphi\right)=\GU^{+}\left(\varphi\right)\sqcup\GU^{-}\left(\varphi\right)$.
+		\item 对每个$\alpha\in A^{\times}$有$\mathcal{L}_{\alpha}\in\GU^{+}\left(\varphi\right)$.
+		\item 对每个$u\in\mathrm{O}\left(\varphi\right)$,当$\det\left(u\right)=1$时$u\in\GU^{+}\left(\varphi\right)$,当$\det\left(u\right)=-1$时$u\in\GU^{-}\left(\varphi\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{}{}
+	本节所有关于Hermite型的结论都可以平行地推广到$\varepsilon$-Hermite型上.
+\end{remark}
+
+\begin{definition}{二次型的相似变换}{}
+	设$A$是域,$Q\neq 0$,$u\in\Aut_{A}\left(E\right)$.
+	\begin{enumerate}
+		\item 若存在$\alpha\in A^{\times}$使得$Q\circ u=\alpha Q$,则称$u$是关于$Q$的相似变换.
+		\item 设$\alpha\in A^{\times}$.若$Q\circ u=\alpha Q$,则称$\alpha$是$Q$的相似比.
+		\item 记$\GU\left(Q\right)$是$E$上所有关于$Q$的相似变换组成的集合,它按映射复合构成群,称为相似变换群.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	显然$\GU\left(Q\right)\subseteq\GSU\left(\varphi_{Q}\right)$.当$A$的特征为$2$时,等号无法成立.
+\end{remark}
+
+
+

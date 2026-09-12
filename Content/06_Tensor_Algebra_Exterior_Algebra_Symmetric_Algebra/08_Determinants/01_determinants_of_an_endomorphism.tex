@@ -1,0 +1,55 @@
+\chapter{行列式}
+
+\section{自同态的行列式}
+
+记号约定:$A$是交换环,$n\in\N$,$M$是$n$维自由$A$-模.
+
+\begin{definition}{线性自同态的行列式}{}
+	设$u\in\End_{A}\left(M\right)$.定义$u$的行列式是使得$\bigwedge\limits^{n}\left(u\right)$是比率为$\lambda$的位似的标量,把$\lambda$记作$\det\left(u\right)$.
+\end{definition}
+
+\begin{remark}{}{}
+	等价地说:$\det\left(u\right)$是$A$中唯一一个满足$\forall\left(x_{i}\right)_{i=1}^{n}\in M^{n}\left(u\left(x_{1}\right)\wedge\ldots\wedge u\left(x_{n}\right)=\det\left(u\right)x_{1}\wedge\ldots\wedge x_{n}\right)$的标量.
+\end{remark}
+
+\begin{definition}{幺模自同态}{}
+	设$u\in\End_{A}\left(M\right)$.若$\det\left(u\right)=1_{A}$,则称$u$是幺模的.
+\end{definition}
+
+\begin{proposition}{行列式的基本性质}{}
+	\begin{enumerate}
+		\item 对任意$u,v\in\End_{A}\left(M\right)$有$\det\left(u\circ v\right)=\det\left(u\right)\circ\det\left(v\right)$.
+		\item $\det\left(\id_{M}\right)=1_{A}$.
+		\item 对任意$u\in\Aut_{A}\left(M\right)$有$\det\left(u\right)\in A^{\times}$和$\det\left(u^{-1}\right)=\left(\det\left(u\right)\right)^{-1}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{元素族在给定基下的行列式}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$是$M$中的序列,$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$是$M$的基,$u:M\to M$是$\left(x_{i}\right)_{i=1}^{n}$诱导的线性映射.称
+	\begin{align*}
+		\det_{\mathcal{B}}\left(x_{1},\ldots,x_{n}\right)\coloneq\det\left(x_{1},\ldots,x_{n}\right)\coloneq\det\left(u\right)
+	\end{align*}
+	是$\left(x_{i}\right)_{i=1}^{n}$关于基$\mathcal{B}$的行列式.
+\end{definition}
+
+\begin{proposition}{交错$n$重线性映射和序列的行列式}{}
+	设$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$是$M$的基,$f:M^{n}\to A,\left(x_{i}\right)_{i=1}^{n}\mapsto\det_{\mathcal{B}}\left(x_{1},\ldots,x_{n}\right)$.
+	\begin{enumerate}
+		\item $f$是交错$n$重线性映射.
+		\item 对每个交错$n$重线性映射$g:M^{n}\to A$,存在$\alpha\in A$使得$g=\alpha f$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$是$M$的基,$u\in\End_{A}\left(M\right)$,则对$M$中的每个序列$\left(x_{i}\right)_{i=1}^{n}$有
+	\begin{align*}
+		\det_{\mathcal{B}}\left(u\left(x_{1}\right),\ldots,u\left(x_{n}\right)\right)=\det\left(u\right)\det_{\mathcal{B}}\left(x_{1},\ldots,x_{n}\right).
+	\end{align*}
+\end{proposition}
+
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+\section{等价矩阵,相似矩阵}
+
+记号约定:$A$是环,$E,F$是有限秩的自由右$A$-模,$m,n\in\N$.
+
+\begin{definition}{矩阵的等价}{}
+	定义$\mathbf{M}_{m,n}\left(A\right)$上的相抵关系$\overset{\text{相抵}}{\sim}$如下:
+	\begin{align*}
+		\forall\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{m,n}\left(R\right)\left(\boldsymbol{X}\overset{\text{相抵}}{\sim}\boldsymbol{Y}\iff\exists\boldsymbol{P}\in\GL_{m}\left(A\right)\exists\boldsymbol{Q}\in\GL_{n}\left(A\right)\left(\boldsymbol{Y}=\boldsymbol{P}\boldsymbol{X}\boldsymbol{Q}\right)\right),
+	\end{align*}
+	$\overset{\text{相抵}}{\sim}$是$\mathbf{M}_{m,n}\left(A\right)$上的等价关系.对$\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{m,n}\left(A\right)$,若$\boldsymbol{X}\overset{\text{相抵}}{\sim}\boldsymbol{Y}$,则称$\boldsymbol{X}$和$\boldsymbol{Y}$相抵.
+\end{definition}
+
+\begin{proposition}{矩阵的相抵和线性映射在不同的基下的表示矩阵}{}
+	\begin{enumerate}
+		\item 设$f\in\Hom_{A}\left(E,F\right)$,$\mathcal{B},\mathcal{B}^{\prime}$是$E$的基,$\mathcal{C},\mathcal{C}^{\prime}$是$F$的基,则$\left[f\right]_{\mathcal{B}^{\prime}}^{\mathcal{C}^{\prime}}\overset{\text{相抵}}{\sim}\left[f\right]_{\mathcal{B}}^{\mathcal{C}}$.
+		\item 设$\boldsymbol{A},\boldsymbol{B}\in\mathbf{M}_{m,n}\left(A\right)$,$\mathcal{B},\mathcal{C}$分别是$A_{d}^{n},A_{d}^{m}$的典范基,$\mathcal{B}^{\prime},\mathcal{C}^{\prime}$分别是$A_{d}^{n},A_{d}^{m}$的基,$f\in\Hom_{A}\left(A_{d}^{n},A_{d}^{m}\right)$,则
+		\begin{align*}
+			\left(\boldsymbol{A}\overset{\text{相抵}}{\sim}\boldsymbol{B}\wedge\left[f\right]_{\mathcal{B}}^{\mathcal{C}}=\boldsymbol{A}\right)\implies\boldsymbol{B}=\left[\id_{F}\right]_{\mathcal{C}}^{\mathcal{C}^{\prime}}\boldsymbol{A}\left[\id_{E}\right]_{\mathcal{B}^{\prime}}^{\mathcal{B}}.
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{只有行(列)的顺序不相同的矩阵}{}
+	设$\boldsymbol{X}\coloneq\left(x_{i,j}\right)_{\substack{1\leq i\leq m\\1\leq j\leq n}},\boldsymbol{Y}\coloneq\left(y_{i,j}\right)_{\substack{1\leq i\leq m\\1\leq j\leq n}}$是$A$中的矩阵.
+	\begin{enumerate}
+		\item 若存在$\sigma\in\mathfrak{S}_{m}$,对任意$1\leq i\leq m,1\leq j\leq n$有$y_{i,j}=x_{\sigma\left(i\right),j}$,则称$\boldsymbol{X}$和$\boldsymbol{Y}$只有行的顺序不一样.
+		\item 若存在$\sigma\in\mathfrak{S}_{n}$,对任意$1\leq i\leq m,1\leq j\leq n$有$y_{i,j}=x_{i,\sigma\left(j\right)}$,则称$\boldsymbol{X}$和$\boldsymbol{Y}$只有列的顺序不一样.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{把矩阵某行(列)的$a$倍加到另一行(列)得到的矩阵}{}
+	设$\boldsymbol{X},\boldsymbol{Y}$是$A$中的$m\times n$矩阵,$a\in A$.
+	\begin{enumerate}
+		\item 设$1\leq i\neq j\leq m$.若$\row_{k}\left(\boldsymbol{Y}\right)=
+		\begin{cases}
+			\row_{i}\left(\boldsymbol{X}\right)+a\row_{j}\left(\boldsymbol{X}\right),&k=i,\\
+			\row_{k}\left(\boldsymbol{X}\right),&k\neq i,
+		\end{cases}
+		$则称$\boldsymbol{Y}$由$\boldsymbol{X}$的第$i$行左乘$a$再加到第$j$行得到.
+		\item 设$1\leq k\neq l\leq n$.若$\col_{p}\left(\boldsymbol{Y}\right)=
+		\begin{cases}
+			\col_{k}\left(\boldsymbol{X}\right)+\col_{l}\left(\boldsymbol{Y}\right)a,&p=k,\\
+			\col_{p}\left(\boldsymbol{X}\right),&p\neq k,
+		\end{cases}$则称$\boldsymbol{Y}$由$\boldsymbol{X}$的第$k$列右乘$a$再加到第$l$列得到.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{只有行(相对的,列)的顺序不相同的矩阵}{}
+	设设$\boldsymbol{X},\boldsymbol{Y}$是$A$中的$m\times n$矩阵,$c\in A^{\times}$.
+	\begin{enumerate}
+		\item 设$1\leq i\leq m$.若$\row_{k}\left(\boldsymbol{Y}\right)=
+		\begin{cases}
+			c\row_{i}\left(\boldsymbol{X}\right),&k=i,\\
+			\row_{k}\left(\boldsymbol{X}\right),&k\neq i,
+		\end{cases}$则称$\boldsymbol{Y}$通过$c$左乘$\boldsymbol{X}$的第$i$行得到.
+		\item 设$1\leq j\leq n$.若$\col_{l}\left(\boldsymbol{Y}\right)=
+		\begin{cases}
+			\col_{j}\left(\boldsymbol{X}\right)c,&l=j,\\
+			\col_{j}\left(\boldsymbol{X}\right),&l\neq j,
+		\end{cases}$则称$\boldsymbol{Y}$通过$c$右乘$\boldsymbol{X}$的第$j$列得到.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{对换,缩放,剪切的矩阵描述}{}
+	$\boldsymbol{X},\boldsymbol{Y}$是$A$中的$m\times n$矩阵,$a\in A,c\in A^{\times}$.
+	\begin{enumerate}
+		\item 若$\boldsymbol{X}$和$\boldsymbol{Y}$只有行的顺序不一样,则存在$\sigma\in\mathfrak{S}_{m}$使得$\boldsymbol{Y}=\boldsymbol{P}_{\sigma^{-1}}\boldsymbol{X}$.
+		\item 若$\boldsymbol{X}$和$\boldsymbol{Y}$只有列的顺序不一样,则存在$\sigma\in\mathfrak{S}_{n}$使得$\boldsymbol{Y}=\boldsymbol{X}\boldsymbol{P}_{\sigma}$.
+		\item 设$1\leq i\neq j\leq m$.若$\boldsymbol{Y}$由$\boldsymbol{X}$的第$i$行左乘$a$再加到第$j$行得到,则$\boldsymbol{Y}=\left(\boldsymbol{I}_{m\times m}+a\boldsymbol{E}_{i,j}\right)\boldsymbol{X}$.
+		\item 设$1\leq k\neq l\leq n$.若$\boldsymbol{Y}$由$\boldsymbol{X}$的第$k$行右乘$a$再加到第$l$行得到,则$\boldsymbol{Y}=\boldsymbol{X}\left(\boldsymbol{I}_{m\times m}+a\boldsymbol{E}_{l,k}\right)$.
+		\item 设$1\leq i\leq m$.$\boldsymbol{Y}$通过$c$左乘$\boldsymbol{X}$的第$i$行得到,则$\boldsymbol{Y}=\diag\left(1,\ldots,\underbracket{c}_{\text{第}i\text{项}},\ldots,1\right)\boldsymbol{X}$.
+		\item 设$1\leq j\leq n$.$\boldsymbol{Y}$通过$c$右乘$\boldsymbol{X}$的第$j$列得到,则$\boldsymbol{Y}=\boldsymbol{X}\diag\left(1,\ldots,\underbracket{c}_{\text{第}j\text{项}},\ldots,1\right)$.
+	\end{enumerate}
+	因此,上述六种情形之一成立时,都有$\boldsymbol{X}\overset{\text{相抵}}{\sim}\boldsymbol{Y}$.
+\end{proposition}
+
+\begin{definition}{矩阵的相似}{}
+	定义$\mathbf{M}_{n}\left(A\right)$上的相似关系$\overset{\text{相似}}{\sim}$如下:
+	\begin{align*}
+		\forall\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{n}\left(A\right)\left(\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}\iff\exists\boldsymbol{P}\in\GL_{m}\left(A\right)\left(\boldsymbol{Y}=\boldsymbol{P}\boldsymbol{X}\boldsymbol{P}^{-1}\right)\right),
+	\end{align*}
+	$\overset{\text{相似}}{\sim}$是$\mathbf{M}_{n}\left(A\right)$上的等价关系.对$\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{n}\left(A\right)$,若$\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}$,则称$\boldsymbol{X}$和$\boldsymbol{Y}$相似.
+\end{definition}
+
+\begin{remark}{$n$阶方阵环上的内自同构和矩阵的相似}{}
+	从内自同构的角度看,$\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}$就是说$\boldsymbol{X},\boldsymbol{Y}$中的一者可以由另一者通过$\mathbf{M}_{n}\left(A\right)$上的一个内自同构得到.
+\end{remark}
+
+\begin{proposition}{矩阵的相似和现行自同态在不同的基下的表示矩阵}{}
+	\begin{enumerate}
+		\item 设$f\in\End_{A}\left(E\right)$,$\mathcal{B},\mathcal{B}^{\prime}$是$E$的基则$\left[f\right]_{\mathcal{B}^{\prime}}^{\mathcal{B}^{\prime}}\overset{\text{相似}}{\sim}\left[f\right]_{\mathcal{B}}^{\mathcal{B}}$.
+		\item 设$\boldsymbol{A},\boldsymbol{B}\in\mathbf{M}_{m,n}\left(A\right),E=A_{d}^{n}$,$\mathcal{B},\mathcal{C}$是$A_{d}^{n}$的基,$f\in\End_{A}\left(E\right)$,则
+		\begin{align*}
+			\left(\boldsymbol{A}\overset{\text{相抵}}{\sim}\boldsymbol{B}\wedge\left[f\right]_{\mathcal{B}}^{\mathcal{B}}=\boldsymbol{A}\right)\implies\boldsymbol{B}=\left[\id_{E}\right]_{\mathcal{C}}^{\mathcal{B}}\boldsymbol{A}\left[\id_{E}\right]_{\mathcal{B}}^{\mathcal{C}}.
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{置换矩阵的行和列对矩阵相似的影响}{}
+	给定$A$上的矩阵$\boldsymbol{X}\coloneq\left(x_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}},\boldsymbol{Y}\coloneq\left(y_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$.若$\boldsymbol{X}$和$\boldsymbol{Y}$只有行(相对的,列)不一样,那么$\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}$不一定成立.要想使得$\boldsymbol{X}$和$\boldsymbol{Y}$相似,则必定存在$\sigma\in\mathfrak{S}_{n}$使得$\forall 1\leq i,j\leq n\left(y_{i,j}=x_{\sigma\left(i\right),\sigma\left(j\right)}\right)$.
+	
+	从线性映射的角度来看,若$\boldsymbol{X}$是$f\in\End_{A}\left(A_{d}^{n}\right)$在基$\left(e_{i}\right)_{i=1}^{n}$下的表示矩阵,则$\boldsymbol{Y}$是$f$在$\left(e_{\sigma\left(i\right)}\right)_{i=1}^{n}$下的表示矩阵.
+\end{remark}
+
+\begin{remark}{分块矩阵的相抵和相似}{}
+	设$\mathcal{I}\coloneq\left(I_{k}\right)_{k=1}^{p}$是$\llbracket 1,n\rrbracket$的划分,其中$\forall 1\leq k\leq p\left(\left|I_{k}\right|=n_{k}\right)$,$\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{n}\left(A\right)$相对$\mathcal{I}$分别有如下的分块
+	\begin{align*}
+		\diag\left(\boldsymbol{X}_{1},\ldots,\boldsymbol{X}_{p}\right),\diag\left(\boldsymbol{Y}_{1},\ldots,\boldsymbol{Y}_{p}\right).
+	\end{align*}
+	\begin{enumerate}
+		\item 若$\forall 1\leq i\leq p\exists\boldsymbol{P}_{i},\boldsymbol{Q}_{i}\in\GL_{n_{i}}\left(A\right)\left(\boldsymbol{Y}_{i}=\boldsymbol{P}_{i}\boldsymbol{X}_{i}\boldsymbol{Q}_{i}\right)$,则$\boldsymbol{Y}=\boldsymbol{P}\boldsymbol{X}\boldsymbol{Q}$(从而二者相抵),其中
+		\begin{align*}
+			\boldsymbol{P}=\diag\left(\boldsymbol{P}_{1},\ldots,\boldsymbol{P}_{p}\right),\boldsymbol{Q}=\diag\left(\boldsymbol{Q}_{1},\ldots,\boldsymbol{Q}_{p}\right).
+		\end{align*}
+		进一步,若$\forall 1\leq i\leq p\left(\boldsymbol{P}_{i}=\boldsymbol{Q}_{i}\right)$,则$\boldsymbol{Q}=\boldsymbol{P}^{-1}$.
+		\item 若$\forall 1\leq i\leq p\left(\boldsymbol{X}_{i}\overset{\text{相似}}{\sim}\boldsymbol{Y}_{i}\right)$,则$\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}$.
+	\end{enumerate}
+\end{remark}
+
+
+

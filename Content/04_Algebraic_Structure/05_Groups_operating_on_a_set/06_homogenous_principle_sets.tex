@@ -1,0 +1,62 @@
+\section{齐性主集}
+
+记号约定:$G$是群,$E$是集合.
+
+\begin{proposition}{单传递作用的等价描述}{equivalent-description-of-simple-transtive-action}
+	设$E$是左$G$-集(相对地,右$G$-集).下列陈述等价:
+	\begin{enumerate}
+		\item 存在$x\in E$使得$\rho_{x}$是$G$-等变同构.
+		\item $G$在$E$上的左作用(相对地,右作用)既自由又传递.
+		\item $E\neq\emptyset$,并且$\forall x,y\in E\exists!\alpha\in G\left(y=\alpha x\right)$(相对地,$\forall x,y\in E\exists!\alpha\in G\left(y=x\alpha\right)$).
+		\item $G\times E\to E\times E,\left(\alpha,x\right)\mapsto\left(\alpha x,x\right)$(相对地,$E\times G\to E\times E,\left(x,\alpha\right)\mapsto\left(x,x\alpha\right)$)是双射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$G$-齐性主空间}{}
+	设$E$是左$G$-集(相对地,右$G$-集).命题(\ref{prop:equivalent-description-of-simple-transtive-action})的陈述之一为真时,称$E$为左(相对地,右)$G$-齐性主空间,$G$在$E$上的左(相对地,右)作用简单传递.
+\end{definition}
+
+\begin{example}{$G$是左(相对地,右)$G$-齐性主空间}{}
+	$G$在自身上的左(相对地,右)平移作用使其称为左(相对地,右)$G$-齐性主空间.分别记得到的左$G$-齐性主空间和右$G$-齐性主空间为$G_{s}$和$G_{d}$.
+\end{example}
+
+\begin{example}{交换群在集合上的传递作用给出齐性主空间}{}
+	设$G$是交换群,其在$E$上的作用传递.若该作用忠实,则$E$是$G$-齐性主空间.
+\end{example}
+
+\begin{example}{仿射空间是齐性主空间}{}
+	设$K$是除环,$V$是$K$-向量空间,$A$是集合,$V$的加法群在$A$上的作用简单传递,则$A$是仿射空间.
+\end{example}
+
+\begin{proposition}{$G_{s}$的自同构群}{}
+	$G_{s}$的所有$G$-等变自同构组成的群是$G$的所有右平移组成的群,它同构于$G^{\op}$.
+\end{proposition}
+
+\begin{proposition}{基点诱导同构}{}
+	设$E$是$G$-齐性主空间.对任一$a\in E$,定义
+	\begin{align*}
+		\psi_{a}:G^{\op}\to\Aut_{G-\mathsf{Grp}}\left(E\right),x\mapsto\rho_{a}\circ\mathcal{R}_{x}\circ\rho_{a}^{-1}.
+	\end{align*}
+	若$a,a^{\prime}\in E,\alpha\in G$且$a^{\prime}=\alpha a$,则$\rho_{\alpha a}=\rho_{a}\circ\mathcal{R}_{\alpha},\psi_{\alpha a}=\psi_{a}\circ\Ad_{\alpha^{-1}}$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

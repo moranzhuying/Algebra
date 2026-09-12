@@ -1,0 +1,94 @@
+\chapter{运算,结合性,交换性}
+
+\section{结合律}
+
+记号约定:$E$,$E^{\prime}$是集合.当$E$是一个原群时,默认$E$上配备的运算是$\odot$,$\top$,$+$,$\cdot$中的一种.
+
+\begin{definition}{运算律}{laws-of-composition}
+	设$E$是集合.一个从$E\times E$到$E$的映射$f$叫做$E$上的合成律(或运算).对诸$\left(x,y\right)\in E\times E$,称$f\left(x,y\right)$是$x$和$y$在$f$下的合成.
+\end{definition}
+
+\begin{definition}{原群}{magma}
+	配备了一个合成律$f$的集合$E$叫做原群.
+\end{definition}
+
+两个元素$x$与$y$的二元运算通常采用中缀表示法,即将特定的算符置于有序对$\left(x,y\right)$之间.在约定俗成的情况下,该算符可以省略.最常用的算符为$+$和$\cdot$,且通常允许省略后者.在这些记法下,$x$与$y$的合成分别写作$x+y$以及$x\cdot y$(或$xy$).
+
+当使用符号$+$时,该运算通常被称为加法,其结果$x+y$称为和,此时我们称该运算采用加法记法.当使用符号$\cdot$时,该运算通常被称为乘法,其结果$xy$称为积,此时我们称该运算采用乘法记法.
+
+在讨论一般性的代数理论时,我们通常使用$\ast$或$\circ$等中性符号来表示抽象的二元运算.
+
+根据数学中的术语滥用,定义域为$E\times E$的某个子集且映射至$E$的映射有时也被称为部分运算,或称为在$E$上未处处定义的合成律.
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item $\N$上的加法,乘法和指数运算都是$\N$上的合成律.
+		\item $\mathcal{P}\left(E\times E\right)\times\mathcal{P}\left(E\times E\right)\to\mathcal{P}\left(E\times E\right),\left(X,Y\right)\mapsto X\circ Y$是合成律.
+		\item 设$E$是格,则$E\times E\to E,\left(x,y\right)\mapsto\sup\left(x,y\right)$和$E\times E\to E,\left(x,y\right)\mapsto\inf\left(x,y\right)$是$E$上的合成律.
+		
+		特别地,$\mathcal{P}\left(E\right)\times\mathcal{P}\left(E\right)\to\mathcal{P}\left(E\right),\left(X,Y\right)\mapsto X\cup Y$和$\mathcal{P}\left(E\right)\times\mathcal{P}\left(E\right)\to\mathcal{P}\left(E\right),\left(X,Y\right)\mapsto X\cap Y$是$\mathcal{P}\left(E\right)$的合成律(我们在$\mathcal{P}\left(E\right)$配备$\subseteq$构成格的意义下讨论).
+		\item 设$\left(E_{i}\right)_{i\in I}$是一族原群,$\top_{i}$是$E_{i}$上的合成律,$E=\prod\limits_{i\in I}E_{i}$,则
+		\begin{align*}
+			\top:E\times E\to E,\left(\left(x_{i}\right)_{i\in I},\left(y_{i}\right)_{i\in I}\right)\mapsto\left(x_{i}\top_{i} y_{i}\right)_{i\in I}
+		\end{align*}
+		是$E$上的一个合成律,称为$\left(\top_{i}\right)_{i\in I}$的乘积.配备$\top$的集合$E$叫做$\left(E_{i}\right)_{i\in I}$的乘积.
+		
+		特别地.若每个$E_{i}$都等于一个固定的原群$M$,那么我们就得到了从$I$到$M$的映射构成的原群.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{逐点运算的集合提升}{}
+	设$\top$是$E$上的合成律.对$E$的诸子集$X,Y$,定义$X\top Y=\left\{x\top y\in E\middle|x\in X,y\in Y\right\}$.
+	
+	若$a\in E$,则记$a\top Y\coloneq \left\{a\right\}\top Y$,$X\top a\coloneq X\top\left\{a\right\}$.于是$\mathcal{P}\left(E\right)\times\mathcal{P}\left(E\right)\to\mathcal{P}\left(E\right),\left(X,Y\right)\mapsto X\top Y$是$\mathcal{P}\left(E\right)$上的运算律.我们称该运算律为$\top$在$\mathcal{P}\left(E\right)$上的诱导运算.
+\end{definition}
+
+\begin{definition}{相反原群}{}
+	设$E$配备运算$\top$,则$\top^{\op}:E\times E\to E,\left(x,y\right)\mapsto y\top x$是$E$上的合成律,我们称之为$\top$的对立.配备$\top^{\op}$的$E$称为$E$的相反原群,记作$E^{\op}$.
+\end{definition}
+
+\begin{definition}{原群同态,原群同构}{}
+	设$E,E^{\prime}$分别带运算律$\top$和$\top^{\prime}$,$f:E\to E^{\prime}$称为原群同态.
+	\begin{enumerate}
+		\item 若$\forall x,y\in E\left(f\left(x\top y\right)=f\left(x\right)\top^{\prime}f\left(y\right)\right)$,则称$f$是原群同态.
+		\item 若存在原群同态$g:E^{\prime}\to E$使得$g\circ f=\id_{E}$且$f\circ g=\id_{E^{\prime}}$,则称$f$是原群同构.
+		\item 若存在从$E$到$E^{\prime}$的原群同构,则称$E$和$E^{\prime}$同构.
+	\end{enumerate}
+	记$\Hom_{\mathsf{Mag}}\left(E,E^{\prime}\right)=\left\{f\in E^{E}\middle|f\text{是原群同态}\right\}$,$\Isom_{\mathsf{Mag}}\left(E,E^{\prime}\right)=\left\{f\in E^{E}\middle|f\text{是原群同构}\right\}$.
+\end{definition}
+
+\begin{definition}{原群自同态,原群自同构}{}
+	设$E$带运算律$\top$.记$\End_{\mathsf{Mag}}\left(E\right)=\Hom_{\mathsf{Mag}}\left(E,E\right)$,$\Aut_{\mathsf{Mag}}\left(E\right)=\Isom_{\mathsf{Mag}}\left(E,E\right)$,分别称二者的元素为$E$的(原群)自同态和自同构.
+\end{definition}
+
+\begin{theorem}{原群同态的基本性质}{}
+	设$E,E^{\prime}$和$E^{\prime\prime}$分别带运算律$\top,\top^{\prime}$和$E^{\prime\prime}$,$f:E\to E^{\prime}$和$g:E^{\prime}\to E^{\prime\prime}$是原群同态.
+	\begin{enumerate}
+		\item $\id_{E}\in\End_{\mathsf{Mag}}\left(E\right)$.
+		\item $g\circ f\in\Hom_{\mathsf{Mag}}\left(E,E^{\prime\prime}\right)$.
+		\item $f\in\Isom\left(E,E^{\prime}\right)$ $\iff$ $f$是双射.两条件之一成立时,$f^{-1}\in\Isom_{\mathsf{Mag}}\left(E^{\prime},E\right)$.
+	\end{enumerate}
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

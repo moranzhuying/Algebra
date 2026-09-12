@@ -1,0 +1,25 @@
+\section{理论中的代入}
+
+\begin{definition}{代入理论}{}
+	设$\mathcal{T}$是一个理论,其显式公理为$\boldsymbol{A}_{1}\ldots,\boldsymbol{A}_{n}$,$\boldsymbol{x}$是字母,$\boldsymbol{T}$是$\mathcal{T}$的一个项.定义\textbf{代入理论}$\left(\boldsymbol{T}|\boldsymbol{x}\right)\mathcal{T}$为满足下列条件的理论:
+	\begin{enumerate}
+		\item 其字母表和公理模式与$\mathcal{T}$完全相同.
+		\item 其显式公理是$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{A}_{1},\ldots,\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{A}_{n}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{metatheorem}{一般代入保持定理}{}
+	设$\mathcal{T}$是一个理论,$\boldsymbol{T}$是$\mathcal{T}$的一个项,$\boldsymbol{x}$是一个字母.若公式$\boldsymbol{A}$是$\mathcal{T}$的一个定理,则$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{A}$是$\left(\boldsymbol{T}|\boldsymbol{x}\right)\mathcal{T}$的定理.
+\end{metatheorem}
+
+\begin{metatheorem}{常元代入定理}{constant-substitution}
+	设$\mathcal{T}$是一个理论,$\boldsymbol{T}$是$\mathcal{T}$的一个项,$\boldsymbol{x}$是一个字母.若$\boldsymbol{x}$不是$\mathcal{T}$的常元,则当公式$\boldsymbol{A}$是$\mathcal{T}$的定理时,$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{A}$是$\mathcal{T}$的定理.
+\end{metatheorem}
+
+\begin{corollary}{无常元理论下的无条件代入}{}
+	若理论$\mathcal{T}$满足以下两个条件之一,则元定理(\ref{metathm:constant-substitution})成立.
+	\begin{itemize}
+		\item $\mathcal{T}$没有显式公理.
+		\item $\mathcal{T}$没有常元.
+	\end{itemize}
+\end{corollary}

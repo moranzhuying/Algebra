@@ -1,0 +1,85 @@
+\section{指数和对数}
+
+\begin{definition}{形式指数幂函数}{}
+	我们称$\Q[[X]]$的元素$\exp\left(X\right)\coloneq e^{X}\coloneq\sum\limits_{n\in\Z_{\geq 0}}\frac{X^{n}}{n!}$是形式指数函数.
+\end{definition}
+
+\begin{proposition}{形式指数函数的加法定理}{}
+	在$\Q[[X,Y]]$中有$\exp\left(X+Y\right)=\exp\left(X\right)+\exp\left(Y\right)$.
+\end{proposition}
+
+\begin{definition}{无常数项的辅助形式幂级数$e\left(X\right)$和$l\left(X\right)$}{}
+	定义$\Q[[X]]$中的元素$e\left(X\right)\coloneq\exp\left(X\right)-1,l\left(X\right)\coloneq\sum\limits_{n\in\Z_{\geq 1}}\left(-1\right)^{n-1}\frac{X^{n}}{n!}$.	
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 在$\Q[[X,Y]]$中$e\left(X+Y\right)=e\left(X\right)+e\left(Y\right)+e\left(X\right)e\left(Y\right)$.
+		\item 在$\Q[X]$中,$\mathrm{D}\left(\exp\left(X\right)\right)=\mathrm{D}\left(\exp\left(X\right)\right)=\exp\left(X\right),\mathrm{D}\left(l\left(X\right)\right)=\sum\limits_{n\in\Z_{\geq 0}}\left(-X\right)^{n}=\left(1+X\right)^{-1}$.
+		\item 在$Q[X]$中$l\left(e\left(X\right)\right)=e\left(l\left(X\right)\right)=X$.
+	\end{enumerate}
+\end{proposition}
+
+接下来的内容中,默认$F$是$\Q$-代数,$\mathscr{E}$是$K[[I]]$中无常数项的形式幂级数组成的集合.显然它按加法构成拓扑交换群.
+
+\begin{proposition}{}{}
+	$\mathscr{E}\to\mathscr{M},f\mapsto\exp\left(f\right),f\mapsto\exp\left(f\right)$是拓扑群同构.
+\end{proposition}
+
+\begin{definition}{形式对数}{}
+	我们把拓扑群同构$\mathscr{E}\to\mathscr{M},f\mapsto\exp\left(f\right)$的逆映射记作$\log$.对每个$g\in\mathscr{M}$,称$\log\left(g\right)$是形式对数.
+\end{definition}
+
+\begin{remark}{}{}
+	显然$\log\left(g\right)=l\left(g-1\right)$.特别地,在$\Q[X]$中$\log\left(1+X\right)=l\left(X\right)$,在$\Q[[X,Y]]$中$l\left(X\right)+l\left(Y\right)=l\left(X+Y+XY\right)$.
+\end{remark}
+
+\begin{proposition}{可乘形式幂级数族与可和形式幂级数族的转化}{}
+	\begin{enumerate}
+		\item 若$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$是$\mathscr{E}$的可和族,则$\left(\exp\left(u_{\lambda}\right)\right)_{\lambda\in\Lambda}$是$\mathscr{M}$的可乘族,$\exp\left(\sum\limits_{\lambda\in\Lambda}u_{\lambda}\right)=\prod\limits_{\lambda\in\Lambda}\exp\left(u_{\lambda}\right)$.
+		\item 若$\left(f_{\lambda}\right)_{\lambda\in\Lambda}$是$\mathscr{M}$的可乘族,则$\left(\log\left(f_{\lambda}\right)\right)_{\lambda\in\Lambda}$是$\mathscr{E}$的可和族,$\log\left(\prod\limits_{\lambda\in\Lambda}f_{\lambda}\right)=\sum\limits_{\lambda\in\Lambda}\log\left(f_{\lambda}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{对数导数}{}
+	设$\mathcal{D}:A[[I]]\to A[[I]]$是连续导子,$g\in\mathcal{M}$.我们称$\mathcal{D}\left(g\right)g^{-1}$是$g$关于$\mathcal{D}$的对数导数.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

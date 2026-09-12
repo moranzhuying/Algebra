@@ -1,0 +1,50 @@
+\section{有序域}
+
+记号约定:$K$是域,$\leq$是$K$上的全序.
+
+\begin{definition}{有序域}{}
+	若$\left(K,+,\cdot,\leq\right)$是有序环,则称之为有序域.
+\end{definition}
+
+\begin{remark}{}{}
+	如果$\leq$只是偏序,那么结果会非常病态.因此,我们只考虑和域结构相容的全序.
+\end{remark}
+
+\begin{example}{有序域的例子}{}
+	\begin{enumerate}
+		\item $\Q$按照其上的通常全序构成有序域.
+		\item 有序域的子域在诱导全序下是有序域.
+		\item  $\R$按照其上的通常全序构成有序域.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{有序域中的符号函数}{}
+	设$\left(K,+,\cdot,\leq\right)$是有序域.我们称$\sgn:K\to\left\{-1,0,1\right\},x\mapsto
+	\begin{cases}
+		1,&x>0\\
+		0,&x=0\\
+		-1,&x<0
+	\end{cases}$是$F$上的符号函数.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\sgn$诱导了满同态$s:K^{\times}\to\left\{-1,1\right\},x\mapsto\sgn\left(x\right)$,其中$\ker\left(s\right)$是$K^{\times}$中指数为$2$的子群.
+		\item 如果$F$是域,$s:K^{\times}\to\left\{-1,1\right\}$是满同态,$\ker\left(s\right)$对加法构成原群,则$s$是$F$上的符号函数,并且$F_{>0}=\ker\left(s\right)$.
+		\item 有序域的特征一定是$0$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{全序整环到齐分式域的序扩张}{}
+	设$\left(A,+,\cdot,\preccurlyeq\right)$是全序整环,$F=\Frac\left(A\right)$,则$F$上存在唯一的全序$\leqslant$使得
+	\begin{enumerate}
+		\item 典范映射$A\to F$是保序同构,
+		\item $\left(K,+,\cdot,\leqslant\right)$是有序域.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{$\Q$上的有序域结构唯一}{}
+	由于$\Z$上的有序环结构唯一,$\Q$作为$\Z$的分式域有且仅有一种有序域结构.
+\end{example}
+
+

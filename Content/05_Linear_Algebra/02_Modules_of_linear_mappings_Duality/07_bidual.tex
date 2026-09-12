@@ -1,0 +1,60 @@
+\section{双重对偶}
+
+记号约定:$E,F$是左$A$-模,$\langle -,-\rangle_{E}$和$\langle -,-\rangle_{F}$分别是$E$和$F$上的典范配对.
+
+\begin{definition}{二次对偶}{}
+	我们称左$A$-模$E^{\vee\vee}\coloneq\left(E^{\vee}\right)^{\vee}$为$E$的二次对偶.对$f\in\Hom_{A}\left(E,F\right)$,称$f^{\top\top}\coloneq\left(f^{\top}\right)^{\top}$为$f$的二次对偶.
+\end{definition}
+
+\begin{definition}{典范赋值}{}
+	我们称$\ev_{E}:E\to E^{\vee\vee},x\mapsto\langle x,-\rangle$是典范赋值.
+\end{definition}
+
+\begin{definition}{自反模}{}
+	若$\ev_{E}\in\Isom_{A}\left(E,E^{\vee}\right)$,则称$E$是自反(左/右)$R$-模.
+\end{definition}
+
+\begin{proposition}{二次对偶的函子性}{}
+	设$f\in\Hom_{A}\left(E,F\right)$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			E \arrow[d, "\ev_{E}"'] \arrow[r, "f"]            & F \arrow[d, "\ev_{F}"] \\
+			E^{\vee\vee} \arrow[r, "f^{\top\top}"] & F^{\vee\vee}         
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{}{}
+	若$E$是自由模(相对的,有一个基集是有限集),则$\ev_{E}$是单射(相对的,双射).
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$E$都有一个有限的基集,则对$E$的诸基$\left(e_{t}\right)_{t\in T}$,$\left(\ev_{M}\left(e_{i}\right)\right)_{t\in T}$是$\left(e_{t}\right)_{t\in T}$的对偶基$\left(e_{t}^{\ast}\right)_{t\in T}$的对偶基.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E$有一个有限的基集,则$E^{\vee}$的每个基都是$E$的一个基的对偶基.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E,F$都有一个有限的基集.将二者分别和$E^{\vee},F^{\vee}$等同,在此意义下,对任一$f\in\Hom_{A}\left(E,F\right)$有$f=f^{\top\top}$.
+\end{corollary}
+
+\begin{lemma}{}{}
+	设$M$和$N$是$E$的互补子模,$i_{1}:P\hookrightarrow E$和$i_{2}:Q\hookrightarrow E$是典范嵌入,则下图交换:
+	\begin{center}
+		\begin{tikzcd}
+			E && {E^{\vee\vee}} \\
+			\\
+			{M\oplus N} && {M^{\vee\vee}\oplus N^{\vee\vee}}
+			\arrow["{\ev_{M}}", from=1-1, to=1-3]
+			\arrow["{i_{1}+i_{2}}", from=3-1, to=1-1]
+			\arrow["{\ev_{M}\boxplus\ev_{N}}"', from=3-1, to=3-3]
+			\arrow["{i_1{^{\top\top}}+i_{2}^{\top\top}}"', from=3-3, to=1-3]
+			\end{tikzcd}
+	\end{center}
+\end{lemma}
+
+\begin{corollary}{}{}
+	若$E$是投射模(相对的,有限生成的投射模),则$\ev_{E}$是单射(相对的,双射).
+\end{corollary}

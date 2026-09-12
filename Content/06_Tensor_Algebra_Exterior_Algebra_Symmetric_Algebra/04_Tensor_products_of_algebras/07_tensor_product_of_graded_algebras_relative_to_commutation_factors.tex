@@ -1,0 +1,147 @@
+\section{分次代数相对于交换因子的张量积}
+
+记号约定:$I$是有限集,$\left(\Delta_{i}\right)_{i\in I}$是一族交换幺半群(加法记号).
+
+\begin{definition}{交换因子系}{}
+	设$\forall i,j\in I\left(i\neq j\implies\varepsilon_{ij}\in\Hom_{\mathsf{Set}}\left(\Delta_{i}\times\Delta_{j},A\right)\right)$.如果对每个$\left(i,j\right)\in \left(I\times I\right)\setminus\Delta_{I}$,
+	\begin{enumerate}
+		\item $\forall\alpha_{i},\alpha_{i}^{\prime}\in\Delta_{i}\forall\beta_{j}\in\Delta_{j}\left(\varepsilon_{ij}\left(\alpha_{i}+\alpha_{i}^{\prime},\beta_{j}\right)=\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)\varepsilon_{ij}\left(\alpha_{i}^{\prime},\beta_{j}\right)\right)$,
+		\item $\forall\alpha_{i},\in\Delta_{i}\forall\beta_{j},\beta_{j}^{\prime}\in\Delta_{j}\left(\varepsilon_{ij}\left(\alpha_{i},\beta_{j}+\beta_{j}^{\prime}\right)=\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)\varepsilon_{ij}\left(\alpha_{i},\beta_{j}^{\prime}\right)\right)$,
+		\item $\forall\alpha_{i}\in\Delta_{i}\forall\beta_{j}\in\Delta_{j}\left(\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)\varepsilon_{ji}\left(\beta_{j},\alpha_{i}\right)=1_{A}\right)$,
+	\end{enumerate}
+	则称$\left(\varepsilon_{ij}\right)_{\substack{i,j\in I\\i\neq j}}$是在$\left(\Delta_{i}\right)_{i\in I}$上取值于$A$的交换因子系.
+\end{definition}
+
+\begin{remark}{}{}
+	如果$I$是全序集,$\left(\Delta_{i}\right)_{i\in I}$是一族群,则可以按如下方式定义一个交换因子系:对每个$i,j\in I$,
+	\begin{itemize}
+		\item 当$i<j$时,取$\varepsilon_{ij}\in\Bil_{\Z}\left(\Delta_{i},\Delta_{j};A^{\times}\right)$.
+		\item 当$i>j$时,定义$\varepsilon_{ji}:\Delta_{j}\times\Delta_{i}\to A^{\times},\left(\beta_{j},\alpha_{i}\right)\mapsto\left(\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)\right)^{-1}$.
+	\end{itemize}
+	那么$\left(\varepsilon_{ij}\right)_{\substack{i,j\in I\\i\neq j}}$就是一个交换因子系.
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 如果交换因子系$\left(\varepsilon_{ij}\right)_{\substack{i,j\in I\\i\neq j}}$满足$\forall i,j\in I\left(i\neq j\implies\im\left(\varepsilon_{ij}\right)=\left\{1_{A}\right\}\right)$,则称之为平凡的交换因子系.
+		\item 如果$A=\Z$且$\forall i\in I\left(\Delta_{i}=\Z\right)$,对每个$\left(i,j\right)\in\left(I\times I\right)\setminus\Delta_{I}$,定义
+		\begin{align*}
+			\varepsilon_{ij}:\Delta_{i}\times\Delta_{j}\to A,\left(\alpha_{i},\beta_{j}\right)\mapsto\left(-1\right)^{\alpha_{i}\beta_{j}},
+		\end{align*}
+		则$\left(\varepsilon_{ij}\right)_{\substack{i,j\in I\\i\neq j}}$是交换因子系.据此,我们可以让$\left(\Delta_{i}\right)_{i\in I}$有一些项是$\Z/2\Z$,其余的项是$\Z$.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{分次代数的张量积的泛性质}{universal-property-of-tensor-product-of-graded-algebra}
+	设对每个$i\in I$,$E_{i}$是$\Delta_{i}$型分次$A$-代数,$\left(\varepsilon_{ij}\right)_{\substack{i,j\in I\\i\neq j}}$是在$\left(\Delta_{i}\right)_{i\in I}$上取值于$A$的交换因子系,$\Delta=\prod\limits_{i\in I}\Delta_{i}$.
+	\begin{enumerate}
+		\item 存在$\Delta$型分次$A$-代数$E$和一族$A$-代数同态$\left(h_{i}\right)_{i\in I}$(其中$\forall i\in I\left(h_{i}\in\Hom_{A-\mathsf{Alg}}\left(E_{i},E\right)\right)$),满足如下条件:
+		\begin{itemize}
+			\item 对每个$i\in I$,$h_{i}$是相对典范映射$\phi_{i}:\Delta_{i}\to\Delta$的分次$A_{i}$-代数同态.
+			\item 对每个$i,j\in\left(I\times I\right)\setminus\Delta_{I}$和$\left(x_{i},x_{j},\alpha_{i},\beta_{j}\right)\in E_{i}\times E_{j}\times\Delta_{i}\times\Delta_{j}\left(\deg\left(x_{i}\right)\right)$,
+			\begin{align*}
+				\deg\left(x_{i}\right)=\alpha_{i}\wedge\deg\left(x_{j}\right)=\beta_{j}\implies h_{i}\left(x_{i}\right)h_{j}\left(x_{j}\right)=\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)h_{j}\left(x_{j}\right)h_{i}\left(x_{i}\right).
+			\end{align*}
+		\end{itemize}
+		\item 设$F$是$A$-代数,$\forall i\in I\left(f_{i}\in\Hom_{A-\mathsf{Alg}}\left(E_{i},F\right)\right)$.对(1)中的$E$,如果对每个$i,j\in\left(I\times I\right)\setminus\Delta_{I}$和$\left(x_{i},x_{j},\alpha_{i},\beta_{j}\right)\in E_{i}\times E_{j}\times\Delta_{i}\times\Delta_{j}\left(\deg\left(x_{i}\right)\right)$,有$\deg\left(x_{i}\right)=\alpha_{i}\wedge\deg\left(x_{j}\right)=\beta_{j}\implies f_{i}\left(x_{i}\right)f_{j}\left(x_{j}\right)=\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)f_{j}\left(x_{j}\right)f_{i}\left(x_{i}\right)$,则
+		\begin{align*}
+			\exists!f\in\Hom_{A-\mathsf{Alg}}\left(E,F\right)\forall i\in I\left(f_{i}=f\circ h_{i}\right).
+		\end{align*}
+		此时,$E$的底$A$-模是$\bigotimes\limits_{i\in I}E_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{分次$\varepsilon$-张量积}{}
+	沿用命题(\ref{prop:universal-property-of-tensor-product-of-graded-algebra})的记号.当$I$是全序集时,
+	\begin{enumerate}
+		\item 称$E$是$\left(E_{i}\right)_{i\in I}$的$\Delta$型分次$\varepsilon$-张量积,记作${}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}$,把$\left(h_{i}\right)_{i\in I}$称为${}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}$的典范同态族,把$f$记作${}^{\varepsilon}\bigotimes\limits_{i\in I}f_{i}$.
+		\item 如果$I=\left[1,n\right]$,$\left(E_{i}\right)_{i\in I}$的每一项都等于一个$\Delta$型$A$-代数$G$,则把$E$记作${}^{\varepsilon}G^{\otimes n}$.
+		\item 如果$\left(\Delta_{i}\right)_{i\in I}$的每一项都是$\Z$,交换因子族满足
+		\begin{align*}
+			\forall\left(i,j\right)\in\left(I\times I\right)\setminus\Delta_{I}\forall\left(\alpha_{i},\beta_{j}\right)\in\Delta_{i}\times\Delta_{j}\left(\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)=\left(-1\right)^{\alpha_{i}\beta_{j}}\right)
+		\end{align*}
+		时,称$E$为$\left(E_{i}\right)_{i\in I}$的斜张量积,记作${}^{g}\bigotimes\limits_{i\in I}E_{i}$,把$f$记作${}^{g}\bigotimes\limits_{i\in I}f_{i}$.特别地,
+		\begin{itemize}
+			\item 当$I=\left[1,n\right]$且$\left(E_{i}\right)_{i\in I}$的各项等于一个$\Delta$型分次$A$-代数$G$时,把${}^{g}\bigotimes\limits_{i\in I}E_{i}$记作$^{g}G^{\otimes n}$.
+			\item 当$I=\left\{1,2\right\}$时,把${}^{g}\bigotimes\limits_{i\in I}E_{i}$记作$E_{1}{}^{g}\otimes_{A}E_{2}$.
+		\end{itemize}
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	如果交换因子系平凡,那么$\varepsilon$-张量积就是代数的张量积.
+\end{remark}
+
+\begin{corollary}{$\varepsilon$-张量积的函子性}{}
+	设$I$是有限集,$\Delta=\prod\limits_{i\in I}\Delta_{i}$,对诸$i\in I$,$E_{i},F_{i}$是$\Delta_{i}$型分次$A$-代数,$g_{i}:E_{i}\to F_{i}$是$\Delta_{i}$型分次$A$-代数同态,${}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i},{}^{\varepsilon}\bigotimes\limits_{i\in I}F_{i}$各自的典范映射族是$\left(p_{i}\right)_{i\in I},\left(q_{i}\right)_{i\in I}$.
+	\begin{enumerate}
+		\item 存在唯一的$\Delta$型分次$A$-代数同态$g:{}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}\to{}^{\varepsilon}\bigotimes\limits_{i\in I}F_{i}$,满足$\forall i\in I\left(g\circ p_{i}=q_{i}\circ g\right)$.
+		\item 如果$\left(g_{i}\right)_{i\in I}$是一族双射,则$g$是双射.
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	考虑命题(\ref{prop:universal-property-of-tensor-product-of-graded-algebra}).
+	\begin{enumerate}
+		\item 如果改变$I$上的全序,那么得到的新分次代数典范同构于原来的分次代数.
+		\item 如果$J\subseteq I$,$\left(h_{i}^{\prime}\right)_{i\in I}$是${}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}$的典范映射族,则存在典范的代数同态$h:{}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}\to E$,对每个$i\in J$有$h_{i}^{\prime}=h\circ h_{i}$.为集合$J$配备$I$诱导的全序,则对每个$\left(x_{i}\right)_{i\in I}\in\prod\limits_{i\in I}E_{i}$有$h\left(\bigotimes\limits_{i\in J}x_{i}\right)=\prod\limits_{i\in I}h_{i}\left(x_{i}\right)=\bigotimes\limits_{i\in I}x_{i}^{\prime}$,其中
+		\begin{center}
+			$\prod\limits_{i\in I}h_{i}\left(x_{i}\right)$是序列$\left(h_{i}\left(x_{i}\right)\right)_{i\in I}$中各项的乘积,而$x_{i}^{\prime}=
+			\begin{cases}
+				x_{i},&i\in J,\\
+				e_{i},&i\notin J.
+			\end{cases}$
+		\end{center}
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{$\varepsilon$-张量积的结合同构}{associative-isomorphism-of-epsilon-tensor-product-of-graded-algebra}
+	沿用命题(\ref{prop:universal-property-of-tensor-product-of-graded-algebra})的记号.假设
+	\begin{itemize}
+		\item $\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,也是一族全序集,
+		\item 对每个$\lambda\in\Lambda$,令$\Delta_{\lambda}^{\prime}=\prod\limits_{i\in J_{\lambda}}\Delta_{i}$,$E_{\lambda}^{\prime}$是$\left(E_{i}\right)_{i\in J_{\lambda}}$的$\Delta_{\lambda}^{\prime}$型分次$\varepsilon$-张量积.
+		\item 对每个$\left(\lambda,\mu\right)\in\left(\Lambda\times\Lambda\right)\setminus\Delta_{\Lambda}$,定义$\varepsilon_{\lambda\mu}^{\prime}:\Delta_{\lambda}^{\prime}\times\Delta_{\mu}^{\prime}\to A,\left(\left(\alpha_{i}\right)_{i\in J_{\lambda}},\left(\beta_{j}\right)_{j\in J_{\mu}}\right)\mapsto\prod\limits_{\left(i,j\right)\in J_{\lambda}\times J_{\mu}}\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)$.
+	\end{itemize}
+	\begin{enumerate}
+		\item $\left(\varepsilon_{\lambda\mu}^{\prime}\right)_{\lambda,\mu\in\Lambda}$是定义在$\left(\Delta_{\lambda}^{\prime}\right)_{\lambda\in\Delta}$上在$A$中取值的交换因子系.
+		\item 设$I$是全序集,对每个$\lambda\in\Lambda$,$J_{\lambda}$上的全序由$I$上的全序诱导,并且$\left(J_{\lambda}\right)_{\lambda\in\Delta}$是有序划分,则存在唯一的$\Delta$型分次代数同构$f:\bigotimes\limits_{\lambda\in\Lambda}{}^{\varepsilon}\bigotimes\limits_{i\in J_{\lambda}}E_{i}\to{}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}$,对每个$\left(x_{i}\right)_{i\in I}\in\prod\limits_{i\in I}E_{i}$有$g\left(\bigotimes\limits_{\lambda\in\Lambda}\bigotimes\limits_{i\in J_{\lambda}}x_{i}\right)=\bigotimes\limits_{i\in I}x_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

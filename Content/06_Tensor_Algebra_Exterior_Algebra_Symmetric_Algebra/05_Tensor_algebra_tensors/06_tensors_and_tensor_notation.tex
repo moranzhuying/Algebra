@@ -1,0 +1,149 @@
+\section{张量和张量记号}
+
+记号约定:
+\begin{itemize}
+	\item $A$是交换环,$M$是$A$-模,$I$和$J$是不相交的有限集.
+	\item 定义$A$-模族$\left(E_{i}\right)_{i\in I\cup J}$如下:$E_{i}=\begin{cases}
+		M,&i\in I,\\
+		M^{\vee},&i\in J.
+	\end{cases}$
+\end{itemize}
+
+\begin{definition}{$\left(I,J\right)$-型张量}{}
+	定义$\mathsf{T}_{I}^{J}\left(M\right)\coloneq\bigotimes\limits_{i\in I\cup J}E_{i}$.
+	\begin{enumerate}
+		\item 我们称$\mathsf{T}_{I}^{J}\left(M\right)$的元素为$M$上的$\left(I,J\right)$-型张量.
+		\item 若$J=\emptyset$,则称$\mathsf{T}_{I}^{J}\left(M\right)$的元素为$M$上的反变张量.
+		\item 若$I=\emptyset$,则称$\mathsf{T}_{I}^{J}\left(M\right)$的元素为$M$上的共变张量.
+		\item 若$I\neq\emptyset$且$J\neq\emptyset$,则称$\mathsf{T}_{I}^{J}\left(M\right)$的元素为$M$上的混合张量.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$I_{1},I_{2}\subseteq I,J_{1},J_{2}\subseteq J$且$I=I_{1}\sqcup I_{2},J=J_{1}\sqcup J_{2}$,则$\mathsf{T}_{I}^{J}\left(M\right)$典范同构于$\mathsf{T}_{I_{1}}^{J_{1}}\left(M\right)\otimes_{A}\mathsf{T}_{I_{2}}^{J_{2}}\left(M\right)$.
+		\item 对$n\in\N$,张量代数$\mathsf{T}\left(M\boxplus M^{\vee}\right)$典范同构于$\bigboxplus\limits_{\substack{I\subseteq\left[1,n\right]\\J=\left[1,n\right]\setminus I}}\mathsf{T}_{I}^{J}\left(M\right)$.
+		\item 当$p,q\in\N$,$I=\left[1,p\right],J=\left[p+1,q\right]$时,记$\mathsf{T}_{I}^{J}\left(M\right)$为$\mathsf{T}_{p}^{q}\left(M\right)$.显然$\mathsf{T}_{0}^{n}\left(M\right)=\mathsf{T}^{n}\left(M\right),\mathsf{T}_{n}^{0}\left(M\right)=\mathsf{T}^{n}\left(M^{\vee}\right)$.
+		\item 当$p,q\in\N,\left|I\right|=p,\left|J\right|=q$时,通过选取序同构$\left[1,p\right]\to I$和$\left[p+1,p+q\right]\to J$,总可以建立$\mathsf{T}_{I}^{J}\left(M\right)$到$\mathsf{T}_{p}^{q}\left(M\right)$的$A$-代数同构.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{张量代数及其对偶的典范同构}{}
+	如果$M$是有限生成的投射模,则$\left(\mathsf{T}_{J}^{I}\left(M\right)\right)^{\vee}$典范同构于$\mathsf{T}_{I}^{J}\left(M\right)$.
+\end{proposition}
+
+\begin{definition}{张量代数的基}{}
+	设$M$是有限生成自由模,基为$\mathcal{B}\coloneq\left(e_{\lambda}\right)_{\lambda\in\Lambda}$,对偶基为$\mathcal{B}^{\ast}\coloneq\left(e_{\lambda}^{\ast}\right)_{\lambda\in\Lambda}$.对每个$f\in\Hom_{\mathsf{Set}}\left(I,\Lambda\right),g\in\Hom_{\mathsf{Set}}\left(J,\Lambda\right)$,记
+	\begin{align*}
+		e_{f}^{g}=\bigotimes\limits_{i\in I\cup J}x_{i},\text{其中}x_{i}=
+		\begin{cases}
+			e_{f\left(i\right)},&i\in I,\\
+			e_{g\left(i\right)}^{\ast},&i\in J,
+		\end{cases}
+	\end{align*}
+	那么$\left(e_{f}^{g}\right)_{f\in\Lambda^{I},g\in\Lambda^{J}}$是$\mathsf{T}_{I}^{J}\left(M\right)$的基.设$z\in\mathsf{T}_{I}^{J}\left(M\right)$且$z=\sum\limits_{f\in\Lambda^{I},g\in\Lambda^{J}}\alpha_{f}^{g}\left(z\right)e_{f}^{g}$.称$\left(\alpha_{f}^{g}\left(z\right)\right)_{f\in\Lambda^{I},g\in\Lambda^{J}}$是$z$相对$\mathcal{B}$的坐标.
+\end{definition}
+
+\begin{remark}{}{}
+	若$p,q\in\N,I=\left[1,p\right],J=\left[p+1,p+q\right],f:I\to\Lambda,k\mapsto i_{k},g:J\to\Lambda,\ell\mapsto j_{\ell}$,则把$\left(\alpha_{f}^{g}\left(z\right)\right)_{f\in\Lambda^{I},g\in\Lambda^{J}}$记作$\alpha_{i_{1}\ldots i_{p}}^{j_{1}\ldots j_{q}}$.
+\end{remark}
+
+\begin{proposition}{张量代数和基变换}{}
+	设$M$是有限生成自由模,$z\in\mathsf{T}\left(M\right)$.考虑$M$的如下两个基及相应的对偶基:
+	\begin{itemize}
+		\item $\mathcal{B}_{1}\coloneq\left(e_{\lambda}\right)_{\lambda\in\Lambda},\mathcal{B}_{2}\coloneq\left(\bar{e}_{\lambda}\right)_{\lambda\in\Lambda}$.
+		\item $\mathcal{B}_{1}\coloneq\left(e_{\lambda}^{\ast}\right)_{\lambda\in\Lambda},\mathcal{B}_{2}^{\ast}\coloneq\left(\bar{e}_{\lambda}^{\ast}\right)_{\lambda\in\Lambda}$,其中$\mathcal{B}_{1}^{\ast},\mathcal{B}_{2}^{\ast}$分别是$\mathcal{B}_{1},\mathcal{B}_{2}$的对偶基.
+	\end{itemize}
+	记$\mathcal{B}\coloneq\left(e_{f}^{g}\right)_{f\in\Lambda^{I},g\in\Lambda^{J}},\mathcal{B}^{\prime}\coloneq\left(\bar{e}_{f}^{g}\right)_{f\in\Lambda^{I},g\in\Lambda^{J}},\boldsymbol{P}=\left[\id_{M^{\vee}}\right]_{\mathcal{B}_{1}^{\ast}}^{\mathcal{B}_{2}^{\ast}}$,则
+	\begin{align*}
+		\left[\id_{\mathsf{T}\left(M\right)}\right]_{\mathcal{B}}^{\mathcal{B}^{\prime}}=\bigotimes\limits_{i\in I\cup J}\boldsymbol{Q}_{i},\text{其中}\boldsymbol{Q}_{i}=
+		\begin{cases}
+			\boldsymbol{P},&i\in I,\\
+			\left(\boldsymbol{P}^{-1}\right)^{\top},&i\in J.
+		\end{cases}
+	\end{align*}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

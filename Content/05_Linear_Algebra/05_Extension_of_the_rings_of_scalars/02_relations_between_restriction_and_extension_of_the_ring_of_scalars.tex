@@ -1,0 +1,57 @@
+\section{标量限制和标量扩张的关系}
+
+记号约定:$A,B$是环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$.
+
+\begin{definition}{单位映射}{}
+	设$E$是左$A$-模.称$A$-线性映射$\phi_{E}:E\to\rho_{\ast}\left(\rho^{\ast}\left(E\right)\right),x\mapsto 1\otimes x$为单位映射.
+\end{definition}
+
+\begin{definition}{余单位映射}{}
+	设$F$是左$B$-模.称$B$-线性映射$\psi_{E}:\rho^{\ast}\left(\rho_{\ast}\left(E\right)\right)\to E,\beta\otimes y\mapsto\beta y$为余单位映射.
+\end{definition}
+
+\begin{proposition}{左$A$-模的标量延拓的伴随的三角恒等式}{}
+	设$E$是左$A$-模,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			{\rho^{\ast}\left(E\right)} && \\
+			&& {\rho^{\ast}\left(\rho_{\ast}\left(\rho^{\ast}\left(E\right)\right)\right)} \\
+			{\rho^{\ast}\left(E\right)}
+			\arrow["{\rho^{\ast}\left(\phi_{E}\right)}", from=1-1, to=2-3]
+			\arrow["{\id_{\rho^{\ast}\left(E\right)}}"', equals, from=1-1, to=3-1]
+			\arrow["{\psi_{\rho^{\ast}\left(E\right)}}", from=2-3, to=3-1]
+			\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$F$是左$B$-模,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			{\rho_{\ast}\left(E\right)} && \\
+			&& {\rho_{\ast}\left(\rho^{\ast}\left(\rho_{\ast}\left(F\right)\right)\right)} \\
+			{\rho_{\ast}\left(E\right)}
+			\arrow["{\phi_{\rho_{\ast}\left(F\right)}}", from=1-1, to=2-3]
+			\arrow["{\id_{\rho_{\ast}\left(E\right)}}"', equals, from=1-1, to=3-1]
+			\arrow["{\rho_{\ast}\left(\psi_{F}\right)}", from=2-3, to=3-1]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{corollary}{}{}
+	\begin{enumerate}
+		\item 设$E$是左$A$-模,则$\rho^{\ast}\left(\phi_{E}\right)$是单射.在同构意义下,$\rho^{\ast}\left(E\right)$是$\rho^{\ast}\left(\rho_{\ast}\left(\rho^{\ast}\left(E\right)\right)\right)$的一个直因子.
+		\item 设$F$是左$B$-模,则$\rho_{\ast}\left(\phi_{F}\right)$是单射.在同构意义下,$\rho_{\ast}\left(F\right)$是$\rho_{\ast}\left(\rho^{\ast}\left(\rho_{\ast}\left(F\right)\right)\right)$的一个直因子.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{张量积的伴随}{}
+	设$E$是左$A$-模,$F$是右$B$-模,则存在唯一的$\Z$-模同构$\rho_{\ast}\left(F\right)\otimes_{A} E\simeq F\otimes_{B}\rho^{\ast}\left(E\right)$.
+\end{corollary}
+
+\begin{corollary}{张量积的伴随}{}
+	设$A,B$是交换环,$E$是$A$-模,$F$是$B$-模,则存在唯一的$A$-模同构$\rho_{\ast}\left(F\right)\otimes_{A} E\simeq \rho_{\ast}\left(F\otimes_{B}\rho^{\ast}\left(E\right)\right)$.
+\end{corollary}
+
+
+

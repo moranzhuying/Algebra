@@ -1,0 +1,80 @@
+\section{多项式函数}
+
+\begin{definition}{多项式函数}{}
+	设$M$是自由模,定义$\Pol\left(M,N\right)\coloneq\Pol_{A}\left(M,N\right)\coloneq\sum\limits_{q\in\N}\Pol_{A}^{q}\left(M,N\right)$,其元素称为从$M$到$N$的多项式函数.
+\end{definition}
+
+\begin{remark}{}{}
+	若$M$有有限基$\left(e_{i}\right)_{i\in I}$,$f\in\Hom_{\mathsf{Set}}\left(M,N\right)$,则
+	\begin{align*}
+		f\in\Pol_{A}\left(M,N\right)\iff\exists F\in N[I]\forall\left(\lambda_{i}\right)_{i\in I}\in A^{\left(I\right)}\left(f\left(\sum\limits_{i\in I}\lambda_{i}e_{i}\right)=F\left(\left(\lambda_{i}\right)_{i\in I}\right)\right).
+	\end{align*}
+\end{remark}
+
+\begin{proposition}{多项式函数模构成$B$-子代数}{}
+	设$M$是自由模,$B$是$A$-含幺交换结合代数,则$\Pol_{A}\left(M,N\right)$是$\Hom_{\mathsf{Set}}\left(M,N\right)$的$B$-子代数.
+\end{proposition}
+
+\begin{proposition}{多项式函数的复合}{}
+	设$M,N$是自由模.若$f\in\Pol_{A}\left(M,N\right),g\in\Pol_{A}\left(N,P\right)$,则$g\circ f\in\Pol_{A}\left(M,P\right)$.
+\end{proposition}
+
+\begin{lemma}{一元多项式恒等于$0$的判别}{}
+	设$n\in\N$,$f=\sum\limits_{k=0}^{n}m_{k}X^{k}\in N[X]$.若$\alpha_{0},\ldots,\alpha_{n}\in A$满足下列条件:
+	\begin{enumerate}
+		\item $f\left(\alpha_{0}\right)=\ldots=f\left(\alpha_{n}\right)=0$,
+		\item 对每个$1\leq i\neq j\leq n$,$\alpha_{i}-\alpha_{j}$诱导的位似$N\to N$是单射,
+	\end{enumerate}
+	则$f=0$.
+\end{lemma}
+
+\begin{proposition}{多项式函数空间的直和分解}{}
+	设$M$是自由模.若$A$的加法群有一个无限子群$G$,对每个$g\in G\setminus\left\{0\right\}$,它诱导的位似$N\to N$都是单射,则
+	\begin{align*}
+		\Pol_{A}\left(M,N\right)=\bigoplus\limits_{n\in\N}\Pol_{A}^{n}\left(M,N\right).
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{无线整环与无挠模上的多项式函数}{}
+	设$A$是无限整环,$M$是自由模,$N$无挠.
+	\begin{enumerate}
+		\item $\Pol_{A}\left(M,N\right)=\bigoplus\limits_{n\in\N}\Pol_{A}^{n}\left(M,N\right)$,对每个$q\in\N$,我们有典范同构$\Pol_{A}^{q}\left(M,N\right)\simeq\Hom_{A}\left(\mathsf{TS}^{q}\left(M\right),N\right)$.
+		\item 设$\left(e_{i}\right)_{i\in I}$是$M$的基,$f\in\Pol_{A}\left(M,N\right)$,则$\exists\left(u_{\nu}\right)_{\nu\in\N^{\left(I\right)}}\forall\left(\lambda_{i}\right)_{i\in I}\in\N^{\left(I\right)}\left(f\left(\sum\limits_{i\in I}\lambda_{i}e_{i}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\lambda^{\nu}u_{\nu}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+\section{组合分析}
+
+\begin{proposition}{乘法原理}{}
+	设$E,F$是集合,$\mathfrak{a},\mathfrak{b},\mathfrak{c}$是基数,若存在满射$f:E\to F$使得$\forall y\in F\left(\left|f^{-1}\left(\left\{y\right\}\right)\right|=\mathfrak{c}\right)$,则$\mathfrak{a}=\mathfrak{b}\mathfrak{c}$.
+\end{proposition}
+
+\begin{definition}{阶乘}{}
+	对任意自然数$n$,把$\prod\limits_{0\leq i<n}\left(i+1\right)$记作$n!$,称之为$n$的阶乘.
+\end{definition}
+
+\begin{proposition}{排列数的组合含义}{}
+	设$m,n$是自然数且$m\leq n$,$A$是$m$元集,$B$是$n$元集,则从$A$到$B$的单射个数为$\frac{n!}{\left(n-m\right)!}$.
+\end{proposition}
+
+\begin{corollary}{全排列数的组合含义}{}
+	一个$n$元集上有$n!$个置换.
+\end{corollary}
+
+\begin{proposition}{多项式系数的组合含义}{}
+	设$E$是$n$元集,自然数序列$\left(p_{i}\right)_{i=1}^{h}$满足$\sum\limits_{i=1}^{h}p_{i}=n$.那么,$E$中满足
+	\begin{align*}
+		\forall i\left(1\leq i\leq h\implies\left|X_{i}\right|=p_{i}\right)
+	\end{align*}
+	的划分$\left(X_{i}\right)_{i=1}^{h}$有$\frac{n!}{p_{1}!p_{2}!\ldots p_{h}!}$个.
+\end{proposition}
+
+\begin{corollary}{二项式系数的组合含义}{}
+	设$n,p$是自然数且$p\leq n$,则一个$n$元集总共有$\frac{n!}{p!\left(n-p\right)!}$个$p$元子集.
+\end{corollary}
+
+\begin{definition}{二项式系数}{}
+	设$m,n$是自然数.定义二项式系数$\binom{n}{m}=
+	\begin{cases}
+		\frac{n!}{m!\left(n-m\right)!},&m\leq n,\\
+		0,&m>n.
+	\end{cases}$
+\end{definition}
+
+\begin{corollary}{二项式系数的另一组合含义}{}
+	设$E,F$分别是$n$元全序集和$m$元全序集,则从$E$到$F$的严格递增映射共有$\binom{n}{m}$个.
+\end{corollary}
+
+\begin{proposition}{$n$元集的幂集基数的组合含义}{}
+	对任意自然数$n$都有$\sum\limits_{p=0}^{n}\binom{n}{p}=2^{n}$.
+\end{proposition}
+
+\begin{proposition}{Pascal恒等式}{}
+	对任意自然数$n$和$p$都有$\binom{n+1}{p+1}=\binom{n}{p+1}+\binom{n}{p}$.
+\end{proposition}
+
+\begin{proposition}{正方形中的格点计数}{}
+	设自然数$n>0$,则满足$1\leq i\leq j\leq n$的$\left(i,j\right)$有$\frac{1}{2}n\left(n+1\right)$个,满足$1\leq i<j\leq n$的$\left(i,j\right)$有$\frac{1}{2}n\left(n-1\right)$个.
+\end{proposition}
+
+\begin{corollary}{}{}
+	对任意$>0$的自然数$n$都有$\sum\limits_{i=1}^{n}i=\frac{1}{2}n\left(n+1\right)$.
+\end{corollary}
+
+\begin{proposition}{重组合数(隔板法)}{}
+	设$m,n$是自然数,$E$是$m$元集.
+	\begin{enumerate}
+		\item 满足$\sum\limits_{x\in E}u\left(x\right)\leq n$的映射$u:E\to\left[0,n\right]$有$\binom{n+m}{m}$个.
+		\item 当$m>0$时,满足$\sum\limits_{x\in E}u\left(x\right)=n$的映射$u:E\to\left[0,n\right]$有$\binom{n+m-1}{m-1}$个.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	全次数$\leq n$且含有$m$个不定元的单项式$X_{1}^{\alpha_{1}}\ldots X_{m}^{\alpha_{m}}$的个数和满足$\sum\limits_{i=0}^{m}\alpha_{i}\leq n$的映射$\left[1,m\right]\to\left[0,n\right],i\mapsto\alpha_{i}$的个数相同,因此前者共有$\binom{n+m}{m}$个,这也是全次数为$n$且含有$m+1$个不定元的单项式$X_{1}^{\alpha_{1}}\ldots X_{m+1}^{\alpha_{m+1}}$的个数.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

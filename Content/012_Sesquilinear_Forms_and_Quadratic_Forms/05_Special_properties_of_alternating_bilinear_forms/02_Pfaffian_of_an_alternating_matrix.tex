@@ -1,0 +1,57 @@
+\section{交错矩阵的Pfaff型}
+
+记号约定:$m,n\geq 1$,$F$是域,$A$是交换环.
+
+\begin{definition}{$n$-划分}{}
+	设$X$是$mn$元集,$\left\{B_{1},\ldots,B_{n}\right\}$是$X$的划分.如果对每个$1\leq j\leq m$有$\left|B_{j}\right|=m$,则称之为$X$的$n$-划分.
+\end{definition}
+
+\begin{remark}{}{}
+	现在考虑$X=\left[1,mn\right]\subseteq\N$且$\left\{B_{1},\ldots,B_{n}\right\}$是$n$-划分的情形.对每个$1\leq j\leq m$,存在$h_{j,1},\ldots,h_{j,n}\in \N$使得
+	\begin{align*}
+		B_{j}=\left\{h_{j,1},\ldots,h_{j,n}\right\},1\leq h_{j,1}<\ldots<h_{j,n}\leq mn.
+	\end{align*}
+	因此$\mathcal{P}=\left\{\left\{h_{1,1},\ldots,h_{1,n}\right\},\ldots,\left\{h_{m,1},\ldots,h_{m,n}\right\}\right\}$.
+\end{remark}
+
+\begin{definition}{}{}
+	我们把$\N$中的区间$\left[1,mn\right]$的$n$-划分组成的集合记作$\mathcal{P}_{n}\left(m\right)$.
+\end{definition}
+
+\begin{lemma}{$n$-划分可以对应到置换}{n-partition-correspond-to-a-permutation}
+	对每个$S=\left\{\left\{h_{1,1},\ldots,h_{1,n}\right\},\ldots,\left\{h_{m,1},\ldots,h_{m,n}\right\}\right\}\in\mathcal{P}_{n}\left(m\right)$,定义$\sigma_{S}:\left[1,mn\right]\to\left[1,mn\right]$如下:
+	\begin{align*}
+		\forall 1\leq j\leq m\forall 1\leq k\leq n\left(\sigma_{S}\left(\left(j-1\right)n+k\right)=h_{j,k}\right).
+	\end{align*}
+	那么,对每个$S\in\mathcal{P}_{n}\left(m\right)$有$\sigma_{S}\in\mathfrak{S}_{mn}$,并且当$n$是偶数时$\sign\left(\sigma_{S}\right)$良好定义.
+\end{lemma}
+
+\begin{definition}{}{}
+	沿用\ref{lem:n-partition-correspond-to-a-permutation}的记号.对每个$S\in\mathcal{P}_{n}\left(m\right)$,称$\sigma_{S}$是$S$诱导的置换.
+\end{definition}
+
+本节接下来的内容中,默认$\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq 2n\\1\leq j\leq 2n}}$是$A$上的交错方阵.
+
+\begin{definition}{Pfaff多项式,Pfaff值}{}
+	设$\mathrm{X}\coloneq\left(X_{i,j}\right)_{1\leq i<j\leq n}$是一族不定元.
+	\begin{enumerate}
+		\item 我们称$\Z[\mathrm{X}]$上的多项式$\Pf\left(\mathrm{X}\right)\coloneq\sum\limits_{S\in\mathcal{P}_{2}\left(2m\right)}\sign\left(\sigma_{S}\right)\prod\limits_{\left(h,k\right)\in S}X_{h,k}$是Pfaff多项式.
+		\item 我们称$\Pf\left(\boldsymbol{A}\right)\coloneq\sum\limits_{S\in\mathcal{P}_{2}\left(2m\right)}\sign\left(\sigma_{S}\right)\prod\limits_{\left(h,k\right)\in S}a_{h,k}$是$\boldsymbol{A}$的Pfaff值.
+	\end{enumerate}
+\end{definition}
+
+\begin{example}{标准交错分块矩阵的Pfaff值}{}
+	设$A\setminus\left\{0\right\}$中的族$\left(\beta\right)_{i=1}^{n}$满足如下条件:
+	\begin{itemize}
+		\item $\forall 1\leq i\leq n\left(a_{2i-1,2i}=-a_{2i,2i-1}=\beta_{i}\right)$,
+		\item $\forall 1\leq i,j\leq n\left(i\neq j\implies a_{i,j}=0\right)$,
+	\end{itemize}
+	则$\boldsymbol{A}$的Pfaff值为$\prod\limits_{j=1}^{m}\beta_{j}$.
+\end{example}
+
+\begin{proposition}{Pfaff值的性质}{}
+	\begin{enumerate}
+		\item 对每个$\boldsymbol{P}\in\mathbf{M}_{2n}\left(A\right)$有$\Pf\left(\boldsymbol{P}^{\top}\boldsymbol{A}\boldsymbol{P}\right)=\det\left(\boldsymbol{P}\right)\Pf\left(\boldsymbol{A}\right)$.
+		\item $\det\left(\boldsymbol{A}\right)=\left(\Pf\left(\boldsymbol{A}\right)\right)^{2}$.
+	\end{enumerate}
+\end{proposition}

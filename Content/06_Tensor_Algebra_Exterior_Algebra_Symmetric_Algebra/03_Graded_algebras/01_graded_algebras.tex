@@ -1,0 +1,83 @@
+\chapter{分次代数}
+
+本章中,$\Delta$是交换幺半群(加法记号,恒等元记作$0$).
+
+\section{分次代数}
+
+记号约定:$A$是$\Delta$型分次环,分次为$\left(A_{\lambda}\right)$.
+
+\begin{definition}{$\Delta$型分次代数}{}
+	设$E$是$A$-代数,带有分次$\left(E_{\lambda}\right)_{\lambda\in\Delta}$.若该分次既和$E$的$A$-模结构相容,又和$E$的环结构相容,则称该分次与$E$的$A$-代数结构相容,称配备该分次的$E$为分次环$A$上的$\Delta$型分次代数.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$\left(A_{\lambda}\right)_{\lambda\in\Delta}$是平凡分次时,$\left(E_{\lambda}\right)_{\lambda\in\Delta}$是$E$的一族$A$-子模.因此,我们也可以定义飞分次交换环$A$上的$\Delta$型分次代数——为$A$配备平凡分次,再沿用上述分次代数的定义.
+		\item 当我们考虑含单位元$e$的$\Delta$型分次$A$-代数$E$时,默认$\deg\left(e\right)=0$.
+		\item 如果$E$是含幺$\Delta$型分次$A$-代数,$E$中的元素$x$是可逆的$p$次齐次元,则$x^{-1}$是$-p$次齐次元. 
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{分次代数同态}{}
+	设$E,F$是$A$上的$\Delta$型分次代数,各自带有分次$\left(E_{\lambda}\right)_{\lambda\in\Lambda},\left(F_{\lambda}\right)_{\lambda\in\Lambda}$,$u\in\Hom_{A-\mathsf{Alg}}\left(E,F\right)$.若
+	\begin{align*}
+		\forall\lambda\in\Delta\left(u\left(E_{\lambda}\right)\subseteq F_{\lambda}\right),
+	\end{align*}
+	则称$u$是$\Delta$型分次($A$-)代数同态.
+\end{definition}
+
+\begin{remark}{}{}
+	特别地,当$E,F$都含单位元,$u$是含幺$A$-代数同态时,上述条件等价于$u$是$\Delta$型分次环同态.
+\end{remark}
+
+\begin{remark}{}{}
+	设$E$是$\N$型分次$A$-代数,那么它可以典范等同于一个$\Z$型分次代数,后者的分次$\left(E_{n}\right)_{n\in\Z}$满足:对每个$n<0$有$E_{n}=\left\{0\right\}$.
+\end{remark}
+
+\begin{remark}{}{}
+	$\Delta$型分次代数可用下列方式表述:$E$是$\Delta$型分次左$A$-模,为$E\otimes_{A}E$配备典范$\Delta$型分次,定义了$E$上乘法的$A$-线性映射
+	\begin{align*}
+		m:E\otimes_{A}E\to E
+	\end{align*}
+	是$0$次齐次映射.因此,在分次环$A$和分次左$A$-模$E$上定义一个$\Delta$型分次$A$-代数结构,等价于对每个$\left(\lambda,\mu\right)\in\Delta$,定义
+	\begin{align*}
+		m_{\lambda\mu}\in\Bil_{\Z}\left(E_{\lambda},E_{\mu};E_{\lambda+\mu}\right),
+	\end{align*}
+	对每个$\left(i,j,k\right)\in\Delta\times\Delta\times\Delta$和$\left(a,x,y\right)\in A_{i}\times E_{i}\times E_{j}$,有$\alpha m_{ij}\left(x,y\right)=m_{a+i,j}\left(ax,y\right)=m_{i,a+j}\left(x,ay\right)$.
+\end{remark}
+
+\begin{example}{$\Delta$型分次环上的$\Z$-分次代数结构的例子}{}
+	设$B$是$\Delta$型分次环.赋予其典范的$\Z$-代数结构,为$\Z$配备平凡分次,则$B$是分次$\Z$-代数.
+\end{example}
+
+\begin{example}{分次自同态代数}{}
+	进一步假设$A$是交换环,$M$是$\Delta$型分次$A$-模.如果$\Delta$的元素都可消去,则$\underline{\End}_{A}\left(M\right)$是典范的$\Delta$型分次$A$-模.由于这个分次与$\underline{\End}_{A}\left(M\right)$的环结构相容,$\underline{\End}_{A}\left(M\right)$是典范的含幺$\Delta$型分次$A$-代数.
+\end{example}
+
+\begin{example}{原群代数,多项式代数,自由结合代数上的分次}{}
+	设$S$是原群,$\phi\in\Hom_{\mathsf{Mag}}\left(S,\Delta\right)$.对每个$\lambda\in\Delta$,记$S_{\lambda}=\phi^{-1}\left(\left\{\lambda\right\}\right)$,则显然有$\forall\lambda,\mu\in\Delta\left(S_{\lambda}S_{\mu}\subseteq S_{\lambda+\mu}\right)$.进一步假设$A$是交换环.在$E\coloneq A^{\left(S\right)}$上定义$\Delta$型分次$A$-代数结构如下:对每个$\lambda\in\Delta$,群$E$的加法子群$E_{\lambda}$由
+	\begin{align*}
+		\left\{\alpha s\middle|\alpha\in A_{\mu},s\in S_{\nu},\mu,\nu\in\Delta,\mu+\nu=\lambda\right\}
+	\end{align*}
+	生成.于是$\left(E_{\lambda}\right)_{\lambda\in\Delta}$是$E$的分次,并使得$E$是$\Delta$型分次$A$-模(当$S$有单位元$e$时,通常假设$\phi\left(e\right)=0$).
+	\begin{itemize}
+		\item 当$A$的分次平凡时,对每个$\lambda\in\Delta$,$E_{\lambda}$升级为由$S_{\lambda}$生成的$E$的$A$-子模.进一步,如果$S=\N^{\left(I\right)},\Delta=\N$,
+		\begin{align*}
+			\phi:S\to\Delta,\left(n_{i}\right)_{i\in I}\mapsto\sum\limits_{i\in I}n_{i},
+		\end{align*}
+		那么就得到了多项式$A\left[X_{i}\right]_{i\in I}$的一个典范的分次(在此分次下,一个非零齐次多项式的次数就是它的总次数).
+		\item 如果$S=\Mo\left(B\right)$,$\phi:S\to\N,s\mapsto\ell\left(s\right)$,那么$B$的自由结合代数是一个典范的分次$A$-代数.
+	\end{itemize}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+

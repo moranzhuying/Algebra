@@ -1,0 +1,74 @@
+\chapter{仿射空间,射影空间}
+
+\section{仿射空间的定义}
+
+记号约定:$K$是除环,$E$是集合.
+
+\begin{definition}{仿射空间及其向量部分,自由向量,点}{}
+	设$V$是左(相对的,右)$K$-向量空间.若$V$是左(相对的,右)$V$-齐性主空间,则称$E$是左(相对的,右)$K$-仿射空间,称$V$是其向量部分(或平移向量空间),$V$中的元素称为平移(或自由向量),$E$中的元素称为点.
+\end{definition}
+
+\begin{remark}{记号和术语说明}{}
+	\begin{enumerate}
+		\item 今后,在没有特殊声明的情况下,我们总是讨论左仿射空间.
+		\item 我们用$\aplus$表示$V$在$E$上的左(相对的,右)作用.
+		\item 讨论一般的空间时,默认用黑体字母表示$V$中的元素,普通的字母表示$E$中的元素.
+	\end{enumerate}
+\end{remark}
+
+本节接下来的内容里,默认$T$是$K$-向量空间,$E$是以$T$为向量部分的仿射空间.
+
+\begin{definition}{仿射空间的维数,仿射直线,仿射平面}{}
+	\begin{enumerate}
+		\item 我们称$\dim_{K}T$是$E$的维数,记作$\dim_{K}E$或$\dim E$.
+		\item 若$\dim_{K}E=1$,则称$E$是仿射直线.
+		\item 若$\dim_{K}E=2$,则称$E$是仿射平面.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	根据仿射空间的定义,如下性质是显然的:
+	\begin{enumerate}
+		\item 对任一$p\in E$,有$0\aplus p=p$.
+		\item 对任一$u,v\in V$和$p\in E$,有$\mathbf{u}\aplus\left(\mathbf{v}\aplus p\right)=\left(\mathbf{u}+\mathbf{v}\right)\aplus p$.
+		\item 对任一$p,q\in E$,存在唯一的$\mathbf{v}\in V$使得$\mathbf{v}\aplus p=q$.
+	\end{enumerate}
+	对给定的$a,b\in E$,定义$a\aminus b\in V$是满足$a\aplus\left(b\aminus a\right)=b$的向量.
+\end{remark}
+
+\begin{proposition}{向量减法的运算性质}{}
+	设$a,b,c\in E$.
+	\begin{enumerate}
+		\item $a\aminus a=0$.
+		\item $a\aminus b=-\left(b\aminus a\right)$.
+		\item $\left(c\aminus b\right)+\left(b\aminus a\right)=\left(c\aminus a\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{仿射空间中的平行四边形法则}{}
+	设$a,b,c,d\in E$.若$d\aminus c=b\aminus a$,则$b\aminus d=a\aminus c$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 对任一$\mathbf{v}\in V$,定义$\tau_{\mathbf{v}}:E\to E,x\mapsto\mathbf{v}\aplus x$,则$\tau_{\mathbf{v}}$是双射.
+		\item 对任一$a\in E$,定义$\rho_{a}:V\to E,\mathbf{v}\mapsto v\aminus a$,则$\rho_{a}$是双射,其逆为$\pi_{a}:E\to V,x\mapsto x\aminus a$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{仿射空间上的向量空间结构}{}
+	选定$a\in E$.定义$E$上的加法和$K$在$E$上的左作用如下:
+	\begin{gather*}
+		E\times E\to E,\left(x,y\right)\mapsto\left(\left(x\aminus a\right)+\left(y\aminus a\right)\right)\aplus a,\\
+		K\times E\to E,\left(\lambda,x\right)\mapsto\lambda\left(x\aminus a\right)\aplus a,
+	\end{gather*}
+	则$E$是同构于$V$的$K$-向量空间.我们称$a$是原点,$E$是以$a$为原点得到的向量空间.
+\end{proposition}
+
+\begin{corollary}{向量空间上的仿射空间结构}{}
+	$T$按照自身的加法$\left(x,y\right)\mapsto x+y$构成典范的仿射空间,其向量部分就是$T$.
+\end{corollary}
+
+\begin{remark}{}{}
+	本节的内容可以推广到带算子的交换群,只需要把平移向量空间换成带算子的交换群.
+\end{remark}

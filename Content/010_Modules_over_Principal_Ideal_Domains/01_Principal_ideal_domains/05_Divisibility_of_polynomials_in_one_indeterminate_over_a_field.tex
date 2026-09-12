@@ -1,0 +1,42 @@
+\section{域上一元多项式的整除理论}
+
+记号约定:$K$是域,$\mathcal{P}$是$K[X]$中的不可约多项式组成的集合.
+
+\begin{proposition}{多项式环的单位群}{}
+	$(K[X])^{\times}=\left\{f\in K[X]\setminus\left\{0\right\}\middle|\deg\left(f\right)=0\right\}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f,g\in K[X]\setminus\left\{0\right\}$.
+	\begin{enumerate}
+		\item $f$和$g$相伴$\iff$ 存在$c\in K^{\times}$使得$g=cf$.
+		\item 存在唯一的$h\in K[X]\setminus\left\{0\right\}$使得$h$首一且$f$和$h$相伴.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\mathcal{P}$是$\left\{f\in K[X]\middle|f\text{首一}\right\}$生成的乘法子群,则
+	\begin{enumerate}
+		\item $\mathcal{P}$在$K(X)$中的每个相伴类都是单点集,
+		\item $\mathcal{P}$典范等同于$\mathscr{P}^{\ast}\left(K(X)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	在$K(X)$中(相对于$K[X]$)讨论最大公因式和最小公倍式时,默认把他们理解为两个首一多项式的商(或者零多项式和另一个首一多项式的商).由此,我们可以讨论任意一族有理函数的最大公倍式和最小公倍式.
+\end{remark}
+
+\begin{proposition}{$K[X]$中的不可约元代表系}{}
+	$\left(f\right)_{f\in\mathcal{P}}$是$K[X]$的不可约元代表系.
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $K[X]$中的每个一次多项式都不可约.如果$K$是代数闭域,那么$K[X]$中的每个不可约多项式都是一次多项式.
+		\item 若$n\in\N$,$K$是代数闭域,则$K[X]$中每个$n$次多项式$p$(在精确到各个因子的排列顺序的意义下)总可以唯一地表示成$p\left(X\right)=c\prod\limits_{i=1}^{n}\left(X-a_{i}\right)$,其中$c,a_{1},\ldots,a_{n}\in K$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{域上的一元不可约首一多项式是无限的}{}
+	$\mathcal{P}$是无限集.
+\end{proposition}

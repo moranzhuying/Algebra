@@ -1,0 +1,48 @@
+\section{分次摸的分次张量积}
+
+记号约定:
+
+\begin{itemize}
+	\item $\Delta$是交换幺半群(加法记号),$A$是$\Delta$型分次环,$M,M^{\prime}$是$\Delta$型分次右$A$-模,$N,N^{\prime}$是$\Delta$型分次左$A$-模.
+	\item $M,N$各自的分次为$\left(M_{\lambda}\right)_{\lambda\in\Delta},\left(N_{\nu}\right)_{\nu\in\Delta}$.
+\end{itemize}
+
+\begin{proposition}{自由张量积上的诱导分次}{}
+	\begin{enumerate}
+		\item $M\otimes_{\Z}N$有一个$\Delta,\Delta$型分次$\left(M_{\lambda}\otimes_{\Z}N_{\nu}\right)_{\left(\lambda,\mu\right)\in\Delta\times\Delta}$
+		\item 对诸$\lambda\in\Delta$,令$P_{\lambda}=\bigboxplus\limits_{\substack{\mu,\nu\in\Delta\\
+		\mu+\nu=\lambda}}\left(M_{\mu}\otimes_{\Z}N_{\nu}\right)$,则$\left(P_{\lambda}\right)_{\lambda\in\Delta}$是$M\otimes_{\Z}N$的全分次.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{分次张量积的良定义性}{}
+	记$Q$为$\left\{\left(xa\right)\otimes y-x\otimes\left(ay\right)\in M\otimes_{\Z}N\middle|x\in M,y\in N,a\in A\right\}$生成的子群.
+	\begin{enumerate}
+		\item $Q$是$M\otimes_{\Z}N$的$\Delta$型分次$\Z$-子模.
+		\item $M\otimes_{A}N\coloneq\left(M\otimes_{\Z}N\right)/Q$是典范的$\Delta$型分次$\Z$-模.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	若$A$是交换环,则$M\otimes_{A}N$是典范的$\Delta$型分次$A$-模.进一步,若$P$是$\Delta$型分次$A$-模,则典范映射$\left(M\otimes_{A}N\right)\otimes_{A}P\to M\otimes_{A}\left(N\otimes_{A}P\right)$是$\Delta$型$0$次分次模同构.
+\end{corollary}
+
+\begin{proposition}{与中心的相容性}{}
+	$M\otimes_{A}N$是典范的$\Delta$型分次$Z\left(A\right)$-模.
+\end{proposition}
+
+\begin{proposition}{分次模同态的张量积}{}
+	若$f:M\to M^{\prime}$和$g:N\to N^{\prime}$分别是$\alpha$次和$\beta$次$\Delta$型分次模同态,则$f\otimes g$是$\alpha+\beta$次$\Delta$型分次模同态.
+\end{proposition}
+
+\begin{proposition}{分次模张量积的泛性质}{}
+	设$P$是$\Delta$型分次$\Z$-模,$f:M\times N\to P$是$A$-平衡映射.若$\forall\lambda,\mu\in\Delta\left(f\left(M_{\lambda}\times N_{\mu}\right)\subseteq P_{\lambda+\mu}\right)$,则$f$诱导的映射$M\otimes_{A}N\to P$是$0$次分次$\Z$-模同态.
+\end{proposition}
+
+\begin{proposition}{分次标量扩张}{}
+	若$B$是$\Delta$型分次环,$\rho\in\Hom_{\Delta-\mathsf{GrRing}}\left(A,B\right)$,则$\rho^{\ast}\left(N\right)$是$\Delta$型分次左$B$-模.
+\end{proposition}
+
+
+
+

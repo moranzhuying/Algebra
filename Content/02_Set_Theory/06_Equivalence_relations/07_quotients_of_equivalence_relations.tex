@@ -1,0 +1,52 @@
+\section{等价关系的商}
+
+\begin{definition}{等价关系的粗细}{}
+	设$R\left\{x,y\right\}$和$S\left\{x,y\right\}$是等价关系.若公式$S\implies R$为真,则称$R$比$S$粗(或$S$比$R$细).
+\end{definition}
+
+\begin{proposition}{}{}
+	设$R\left\{x,y\right\}$和$S\left\{x,y\right\}$是集合$E$上的等价关系.
+	\begin{enumerate}
+		\item 如果$G_{S}$和$G_{R}$分别是相对$S$和$R$的二元关系,那么$G_{S}\subseteq G_{R}$.
+		\item 对任意$x\in E$,存在$y\in E$使得$\left[x\right]_{S}\subseteq\left[y\right]_{R}$.
+		\item 每个$A\in E/R$都是关于$S$的饱和子集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$E$是集合,则等价关系$x=y$比$E$上的每个等价关系都细,等价关系$x\in E\wedge y\in E$比$E$上的每个等价关系都粗.
+		\item 在$\Z$上,等价关系``模$4$同余''比``模$2$同余''细.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{等价关系的商}{}
+	设$R$和$S$是集合$E$上的等价关系,$S$比$R$细,$p:E\to E/R$和$q:E\to E/S$是典范投影.诱导映射$E/R\to E/S$确定的等价关系记作$R/S$,称为$R$对$S$的商.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$R$和$S$是集合$E$上的等价关系,$S$比$R$细,$p:E\to E/R$和$q:E\to E/S$是典范投影.
+	\begin{enumerate}
+		\item 设$x,y\in E$,则$x\equiv y\pmod{R}\iff q\left(x\right)\equiv q\left(y\right)\pmod{R/S}$.
+		\item 设$x\in E$,则$\left[\left[x\right]_{S}\right]_{R/S}=q\left(\left[x\right]_{R}\right)$.
+		\item 诱导映射$E/S\to E/R$是满射,并且它诱导的映射$\left(E/S\right)/\left(R/S\right)\to E/R$是典范双射.
+		\item 若$T$是$E/S$上的等价关系,$R$是$T$在$q$下的原像,则对任意$x,y\in E$有$x\equiv y\pmod{R}\iff p\left(x\right)\equiv p\left(y\right)\pod{R/S}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

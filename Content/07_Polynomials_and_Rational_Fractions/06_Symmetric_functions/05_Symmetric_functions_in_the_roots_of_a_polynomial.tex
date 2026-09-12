@@ -1,0 +1,119 @@
+\section{多项式的根中的对称函数}
+
+记号约定:$f=X^{n}+a_{1}X^{n-1}+\ldots+a_{n-1}X+a_{0}\in A[X]$.
+
+\begin{definition}{首一多项式的泛分解代数}{}
+	令$\mathfrak{a}$为$\left\{e_{k}+\left(-1\right)^{k}a_{k}\in A[X]\middle|1\leq k\leq n\right\}$生成的理想.
+	\begin{enumerate}
+		\item 我们称$A$-含幺交换结合代数$E_{f}\coloneq A[X_{1},\ldots,X_{n}]/\mathfrak{a}$为$f$的泛分解代数.
+		\item 对每个$1\leq i\leq n$,记$x_{i}\coloneq x_{i,f}\coloneq X_{i}+\mathfrak{a}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	$\left(x_{i}\right)_{i=1}^{n}$生成$E_{f}$;对每个$1\leq k\leq n$有$\sum\limits_{1\leq i_{1}<\ldots<i_{k}\leq n}x_{i_{1}}\ldots x_{i_{n}}=\left(-1\right)^{k}a_{k}$.等价地,$f\left(X\right)=\prod\limits_{i=1}^{n}\left(X-x_{i}\right)$.
+\end{remark}
+
+\begin{proposition}{泛分解代数的泛性质}{}
+	设$B$是交换环,$\xi_{1},\ldots,\xi_{n}\in B,\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$.若$\rho$诱导的多项式$^{\rho}f$满足$^{\rho}f=\prod\limits_{i=1}^{n}\left(X-\xi_{i}\right)$,则存在唯一的
+	\begin{align*}
+		\exists!u\in\Hom_{\mathsf{Ring}}\left(\left(E_{f},B\right)\left(\forall\alpha\in A\left(\rho\left(\alpha\right)=u\left(\alpha\cdot 1_{A}\right)\right)\right)\wedge\forall 1\leq i\leq n\left(u\left(x_{i}\right)=\xi_{i}\right)\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	对每个$\sigma\in\mathfrak{S}_{n}$,存在唯一的$t_{\sigma}\in\Aut_{A-\mathsf{Alg}}\left(E_{f}\right)$使$\forall 1\leq i\leq n\left(t_{\sigma}\left(x_{i,f}\right)\right)=x_{\sigma\left(i\right),f}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	注意到$\forall\sigma,\tau\in\mathfrak{S}_{n}\left(t_{\sigma\circ\tau}=t_{\sigma}\circ t_{\tau}\right)$.基于此,$\mathfrak{S}_{n}$典范地左作用于$E_{f}$.
+\end{remark}
+
+\begin{proposition}{泛分解代数的自由模结构}{}
+	$\left\{\prod\limits_{i=1}^{n}X_{i}^{v_{i}}\middle|1\leq i\leq n,0\leq v\left(i\right)<i\right\}$是$A$-模$E_{f}$的基集,因此$E_{f}$是$n!$维自由模.
+\end{proposition}
+
+\begin{corollary}{泛分解代数的唯一性}{}
+	设$g\in A[X]$首一,则典范映射$A\to E_{f}$是单射.
+\end{corollary}
+
+\begin{proposition}{泛根对称多项式的下降性质}{}
+	设$P\in A[X_{1},\ldots,X_{n}]^{\mathfrak{S}_{n}}$,则存在唯一的$a\in A$,对每个$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$和$\xi_{1},\ldots,\xi_{n}\in B$有
+	\begin{align*}
+		^{\rho}f\left(X\right)=\prod\limits_{i=1}^{n}\left(X-\xi_{i}\right)\implies\rho\left(a\right)=P\left(\xi_{1},\ldots,\xi_{n}\right).
+	\end{align*}
+	我们把$a$记作$P^{\ast}\left(f\right)$.
+\end{proposition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$1\leq k\leq n,P=e_{k}\in A[X_{1},\ldots,X_{n}]$,则$P^{\ast}\left(f\right)=\left(-1\right)^{k}a_{k}$.
+		\item 设$g\in A[X],P=\prod\limits_{i=1}^{n}g\left(X_{i}\right)$,则$P^{\ast}\left(f\right)=\res\left(f,g\right)$.
+		\item 设$P=\prod\limits_{1\leq i<j\leq n}\left(X_{i}-X_{j}\right)^{2}\in A[X_{1},\ldots,X_{n}]$,则$P^{\ast}\left(f\right)=\disc\left(f\right)$.
+		\item 设$P=\sum\limits_{i=1}^{n}X_{i}^{k}\in A[X_{1},\ldots,X_{n}],E=A[X]/\langle f\rangle,x=X+\langle f\rangle$,则$\left(x^{i-1}\right)_{i=1}^{n}$是$E$的基,
+		\begin{align*}
+			\forall 1\leq k\leq n\left(\Tr_{E/A}\left(x^{k}\right)=P^{\ast}\left(f\right)\wedge\Tr_{E/A}\left(f\left(x\right)\right)=\Tr_{E/A}\left(x^{k}\right)+a_{1}\Tr_{E/A}\left(x^{k-1}\right)+\ldots+na_{k}\right).
+		\end{align*}
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

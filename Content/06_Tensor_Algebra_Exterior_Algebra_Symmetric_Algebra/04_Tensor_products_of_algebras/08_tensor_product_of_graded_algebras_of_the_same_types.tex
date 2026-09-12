@@ -1,0 +1,62 @@
+\section{同类分次代数的张量积}
+
+记号约定:
+\begin{itemize}
+	\item $I$是有限集,$\left(\Delta_{i}\right)_{i\in I}$是一族交换幺半群(加法记号),$\Delta_{0}$是交换幺半群(加法记号),$\left(\Delta_{i}\right)_{i\in I}$的每一项都等于$\Delta_{0}$.
+	\item 命题(\ref{prop:universal-property-of-tensor-product-of-graded-algebra})的所有假设都成立.
+\end{itemize}
+
+\begin{definition}{$\Delta_{0}$型分次$\varepsilon$-张量积}{}
+	为${}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}$配备$\Delta_{0}$型总分次.在此分次下称${}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}$是$\Delta_{0}$型分次$\varepsilon$-张量积.
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 若$F$是$\Delta_{0}$型分次$A$-代数,$\left(f_{i}\right)_{i\in I}$是一族$\Delta_{0}$型分次$A$-代数同态,则典范映射${}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}\to F$是$\Delta_{0}$型分次$A$-代数同态.
+		\item 对每个$J\subseteq I$,典范同态${}^{\varepsilon}\bigotimes\limits_{i\in J}E_{i}\to{}^{\varepsilon}\bigotimes\limits_{i\in J}E_{i}$是$\Delta_{0}$型分次$A$-代数同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{同类型分次代数的$\varepsilon$-张量积的结合律}{}
+	沿用命题(\ref{prop:associative-isomorphism-of-epsilon-tensor-product-of-graded-algebra})的诸设定.假定对诸$\left(i,j\right)\in\left(I\times I\right)\setminus\Delta_{I},\left(\lambda,\mu\right)\in\left(\Lambda\times\Lambda\right)\setminus\Delta_{\Lambda}$,对$\Delta_{\lambda}^{\prime}$中的每个元素族$\left(\alpha_{i}\right)_{i\in J_{\lambda}}$和$\Delta_{\mu}^{\prime}$的每个元素族$\left(\beta_{j}\right)_{j\in J_{\mu}}$,$\prod\limits_{i\in J_{\lambda},j\in J_{\mu}}\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)$只和$\sum\limits_{i\in I}\alpha_{i}$和$\sum\limits_{j\in J}\beta_{j}$有关.对诸$\left(\lambda,\mu\right)\in\left(\Lambda\times\Lambda\right)\setminus\Delta_{\Lambda}$,定义
+	\begin{align*}
+		\varepsilon_{\lambda\mu}^{\prime\prime}:\Delta_{\lambda}^{\prime}\times\Delta_{\mu}^{\prime}\to A,\left(\sum\limits_{i\in J_{\lambda}}\alpha_{i},\sum\limits_{j\in J_{\mu}}\beta_{j}\right)\mapsto\prod\limits_{\left(i,j\right)\in J_{\lambda}\times J_{\mu}}\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right).
+	\end{align*}
+	\begin{enumerate}
+		\item 设对每个$\lambda\in\Lambda$有$\Delta_{\lambda}^{\prime\prime}=\Delta_{0}$,则$\left(\varepsilon_{\lambda\mu}^{\prime}\right)_{\substack{\lambda,\mu\in \Lambda\\ \lambda\neq\mu}}$是$\left(\Delta_{\lambda}^{\prime\prime}\right)_{\lambda\in\Delta}$上取值于$A$的交换因子系.
+		\item 若对每个$\lambda\in\Delta$,$E_{\lambda}^{\prime\prime}$是$\left(E_{i}\right)_{i\in J_{\lambda}}$的$\Delta_{0}$型分次$\varepsilon$-张量积,则存在唯一的$\Delta_{0}$型分次$A$-代数同构
+		\begin{align*}
+			\omega:{}^{\varepsilon^{\prime\prime}}\bigotimes\limits_{\lambda\in\Lambda}E_{\lambda}^{\prime\prime}\to{}^{\varepsilon}\bigotimes\limits_{i\in I}E,
+		\end{align*}
+		对每个$\left(x_{i}\right)_{i\in I}\in\prod\limits_{i\in I}E_{i}$有$\omega\left(\bigotimes\limits_{\lambda\in\Lambda}\bigotimes\limits_{i\in J_{\lambda}}x_{i}\right)=\bigotimes\limits_{i\in I}x_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	如下条件之一成立时,该命题的额外假设自动成立:
+	\begin{itemize}
+		\item $\Delta_{0}=\Z$,交换因子系$\left(\varepsilon_{ij}\right)_{\substack{i,j\in I\\i\neq j}}$平凡.
+		\item 交换因子系$\left(\varepsilon_{ij}\right)_{\substack{i,j\in I\\i\neq j}}$满足$\forall\left(i,j\right)\in\left(I\times I\right)\setminus\Delta_{I}\forall\left(\alpha_{i},\beta_{j}\right)\in\Delta_{i}\times\Delta_{j}\left(\varepsilon_{ij}\left(\alpha_{i},\beta_{j}\right)=\left(-1\right)^{\alpha_{i}\beta_{j}}\right)$.
+	\end{itemize}
+\end{remark}
+
+\begin{remark}{}{}
+	设$I$是无限集.对每个$J\in\fin\left(I\right)$,定义$E_{J}$是$\left(E_{i}\right)_{i\in J}$的$\Delta_{0}$型分次$\varepsilon$-张量积.对$J,J^{\prime}\in\fin\left(I\right)$且$J\subseteq J^{\prime}$,记
+	\begin{align*}
+		h_{J^{\prime}J}:E_{J}\to E_{J^{\prime}}
+	\end{align*}
+	为典范的$\Delta_{0}$型分次$A$-代数同态,则$\left(\left(E_{J}\right)_{J\in\fin\left(I\right)},\left(h_{J^{\prime}J}\right)_{J,J^{\prime}\in\mathcal{P}\left(I\right)}\right)$是$\Delta_{0}$型分次$A$-代数的正系统.我们称这个正系统的正向极限是$\left(E_{i}\right)_{i\in I}$的$\Delta_{0}$型分次$\varepsilon$-张量积,同样记作${}^{\varepsilon}\bigotimes\limits_{i\in I}E_{i}$.可以验证:
+	\begin{itemize}
+		\item 指标集有限时的泛性质可以推广到指标集无限的情形.
+		\item $\varinjlim E_{J}$的底层$A$-模与(无分次的)代数族$\left(E_{i}\right)_{i\in I}$的(无分次)张量积相同.
+	\end{itemize}
+\end{remark}
+
+\begin{remark}{}{}
+	设$E$是$\Delta_{0}$型分次$A$-代数,$B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,则$\Delta_{0}$型分次代数$\rho^{\ast}\left(E\right)$等同于如下分次代数:把$B$视为带有平凡分次的$\Delta_{0}$型分次代数,再考虑配备全分次的$\rho^{\ast}\left(E\right)$.
+\end{remark}
+
+
+
+
+

@@ -1,0 +1,29 @@
+\section{配对公理}
+
+\begin{axiom}{配对公理}{}
+	$\left(\forall x\right)\left(\forall y\right)\Coll_{z}\left(z=x\vee z=y\right)$.
+\end{axiom}
+
+\begin{definition}{无序对}{}
+	设$x,y$是字母.我们把$\left\{z|z=x\vee z=y\right\}$记作$\left\{x,y\right\}$,称为由$x$和$y$组成的无序对.
+\end{definition}
+
+\begin{proposition}{无序对的性质}{}
+	设$x,y,z$是字母,则$z\in\left\{x,y\right\}$和$z=x\vee z=y$等价,$\left\{y,x\right\}=\left\{x,y\right\}$.
+\end{proposition}
+
+\begin{proposition}{无序对上的量词消去}{}
+	设$R\left\{z\right\}$是包含字母$z$的公式,$x,y$是不同于$z$的字母,则
+	\begin{enumerate}
+		\item $\left(\exists z\right)\left(\left(z\in\left\{x,y\right\}\right)\implies R\left\{z\right\}\right)$和$R\left\{x\right\}\vee R\left\{y\right\}$等价.
+		\item $\left(\forall z\right)\left(\left(z\in\left\{x,y\right\}\right)\implies R\left\{z\right\}\right)$和$R\left\{x\right\}\wedge R\left\{y\right\}$等价.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{单点集}{}
+	设$x$是字母.我们把集合$\left\{x,x\right\}$记作$\left\{x\right\}$,称为由$x$构成的单点集.
+\end{definition}
+
+\begin{proposition}{单点集的性质}{}
+	设$x$是字母,$X$是集合,$z$是不同于$x$的字母,则$z\in\left\{x\right\}$和$z=x$等价,$x\in X$和$\left\{x\right\}\subseteq X$等价.
+\end{proposition}

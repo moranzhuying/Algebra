@@ -1,0 +1,44 @@
+\chapter{相等理论}
+
+\section{相等公理}
+
+\begin{definition}{相等理论}{}
+	若一个量化理论$\mathcal{T}$满足以下条件,则称其为等号理论:
+	\begin{enumerate}
+		\item $\mathcal{T}$的字母表包含关系符号$=$(称为等号),对任意两个项$\boldsymbol{T}$和$\boldsymbol{U}$,其等号连接式记作$\boldsymbol{T}=\boldsymbol{U}$或$\left(\boldsymbol{T}\right)=\left(\boldsymbol{U}\right)$.
+		\item $\mathcal{T}$的公理包括如下公理模式导出的所有隐式公理:
+		\begin{itemize}
+			\item 设$\boldsymbol{x}$是一个变量,$\boldsymbol{T}$和$\boldsymbol{U}$是$\mathcal{T}$中的项,$\boldsymbol{R}\left\{\boldsymbol{x}\right\}$是$\mathcal{T}$中的公式,则$\left(\boldsymbol{T}=\boldsymbol{U}\right)\implies\left(\boldsymbol{R}\left\{\boldsymbol{T}\right\}\iff\boldsymbol{R}\left\{\boldsymbol{U}\right\}\right)$是公理.
+			\item 
+			设$\boldsymbol{R}$和$\boldsymbol{S}$是$\mathcal{T}$中的两个公式,$\boldsymbol{x}$是一个字母,则$\left(\forall\boldsymbol{x}\left(\boldsymbol{R}\iff\boldsymbol{S}\right)\right)\implies\left(\tau_{\boldsymbol{x}}\left(\boldsymbol{R}\right)=\tau_{\boldsymbol{x}}\left(\boldsymbol{S}\right)\right)$是公理.
+		\end{itemize}
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	直观而言,第一条公理模式意味着,如果两个对象相等,则它们具有相同的性质.第二条公理模式则与日常直觉相距较远.它的意思是,如果关于对象$\boldsymbol{x}$的两个性质$\boldsymbol{R}$与$\boldsymbol{S}$是等价的,那么分别从满足$\boldsymbol{R}$的对象和满足$\boldsymbol{S}$的对象中(若此类对象存在)选出的特定对象$\tau_{\boldsymbol{x}}\left(\boldsymbol{R}\right)$与$\tau_{\boldsymbol{x}}\left(\boldsymbol{S}\right)$也是相等的.在第二条公理模式中,量词$\forall\boldsymbol{x}$的存在是至关重要的.
+\end{remark}
+
+\begin{definition}{不等式}{}
+	给定量化理论$\mathcal{T}$的项$\boldsymbol{T}$和$\boldsymbol{U}$,把$\neg\left(\boldsymbol{T}=\boldsymbol{U}\right)$简记为$\boldsymbol{T}\neq\boldsymbol{U}$或$\left(\boldsymbol{T}\right)\neq\left(\boldsymbol{U}\right)$,读作``$\boldsymbol{T}$不等于$\boldsymbol{U}$''.
+\end{definition}
+
+\begin{metatheorem}{相等条件替换定理}{}
+	设$\boldsymbol{x}$是字母,$\boldsymbol{T}$和$\boldsymbol{U}$是等号理论$\mathcal{T}$的项,$\boldsymbol{R}\left\{\boldsymbol{x}\right\}$是$\mathcal{T}$的公式,则$\left(\boldsymbol{T}=\boldsymbol{U}\wedge\boldsymbol{R}\left\{\boldsymbol{T}\right\}\right)$和$\left(\boldsymbol{T}=\boldsymbol{U}\wedge\boldsymbol{R}\left\{\boldsymbol{U}\right\}\right)$在$\mathcal{T}$中等价.
+\end{metatheorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

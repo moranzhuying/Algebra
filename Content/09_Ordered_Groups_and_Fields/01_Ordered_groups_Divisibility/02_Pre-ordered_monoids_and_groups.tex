@@ -1,0 +1,26 @@
+\section{预序幺半群与预序群}
+
+记号约定:$M$是交换幺半群(加法记号),$\preccurlyeq$是$M$上的预序.
+
+\begin{definition}{预序幺半群,预序群}{}
+	\begin{enumerate}
+		\item 若$\forall x,y,z\in M\left(x\preccurlyeq y\implies x+z\preccurlyeq y+z\right)$,则称$\left(M,+,\preccurlyeq\right)$是预序幺半群,$M$上的加法和该预序相容.
+		\item 若$M$既是群又是预序幺半群,则称$\left(M,+,\preccurlyeq\right)$是预序群.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{伴随有序(幺半)群的构造}{construction-of-associated-ordered-monoid-and-group}
+	设$\left(M,+,\preccurlyeq\right)$是预序幺半群,$S\left\{x,y\right\}$是公式$x\preccurlyeq y\wedge y\preccurlyeq x$定义的等价关系.
+	\begin{enumerate}
+		\item $S$和$M$上的加法相容,$M/S$配备$M$诱导的加法和$\preccurlyeq$诱导的偏序以后是有序幺半群.
+		\item 如果$M$是预序群,那么$M/S$是有序群,并且和商群$M/H$相等,其中$H=\left\{x\in M\middle|x\preccurlyeq 0\wedge 0\preccurlyeq x\right\}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{预序(幺半)群的伴随有序(幺半)群}{}
+	沿用命题(\ref{prop:construction-of-associated-ordered-monoid-and-group})的设定.
+	\begin{enumerate}
+		\item 我们称$M/S$是$\left(M,+,\preccurlyeq\right)$的伴随有序幺半群.
+		\item 当$M$是预序群时,称$M/S$是$\left(M,+,\preccurlyeq\right)$的伴随有序群.
+	\end{enumerate}
+\end{definition}

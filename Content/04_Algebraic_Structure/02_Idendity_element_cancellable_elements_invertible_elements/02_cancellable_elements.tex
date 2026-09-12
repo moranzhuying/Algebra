@@ -1,0 +1,39 @@
+\section{可消去元}
+
+记号约定:集合$E$按$\odot$构成原群.
+
+\begin{definition}{左平移,右平移}{}
+	设$a\in E$.我们称$\mathcal{L}_{a}:E\to E,x\mapsto a\odot x$和$\mathcal{R}_{a}:E\to E,x\mapsto x\odot a$分别是$a$相对$\odot$的左平移和右平移.
+\end{definition}
+
+显然,对$a\in E$,$\mathcal{L}_{a}$是$a$相对于$\odot^{\op}$的右平移,$\mathcal{R}_{a}$是$a$相对于$\odot^{\op}$的左平移.此外,$\mathcal{L}_{a}=\mathcal{R}_{a}\iff\odot=\odot^{\op}$.
+
+\begin{proposition}{左平移,右平移构成群}{}
+	设$\odot$满足结合律,则$\forall a,b\in E\left(\mathcal{L}_{a\odot b}=\mathcal{L}_{a}\circ\mathcal{L}_{b}\wedge\mathcal{R}_{a\circ b}=\mathcal{R}_{b}\circ\mathcal{R}_{a}\right)$.
+\end{proposition}
+
+\begin{remark}{左右平移$\iff$结合性}{}
+	显然,上述命题的逆命题也为真.给$E^{E}$配备映射复合导出的合成律,$\mathcal{L}:E\to E^{E},a\mapsto\mathcal{L}_{a}$和$\mathcal{R}:E\to E^{E},a\mapsto\mathcal{R}_{a}$都是原群同态.特别地,当$E$是幺半群时,$\mathcal{L}$和$\mathcal{R}$都是幺原群同态.
+\end{remark}
+
+\begin{definition}{左可消去元,右可消去,可消去}{}
+	设$a\in E$.若$\mathcal{L}_{a}$是单射,则称$a$对$\odot$左可消去;若$\mathcal{R}_{a}$是单射,则称$a$对$\odot$右可消去;若$\mathcal{L}_{a},\mathcal{R}_{a}$是单射,则称$a$对$\odot$可消去.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 每个自然数在加法下都可消去,每个$\neq 0$的自然数在乘法下都可消去.
+		\item 在一个格中:当它有最大元的时候,相对于取上确界运算可消去的元素仅有最小元;当它有最小元的时候,相对于取下确界运算可消去的元素只有最大元.特别地,对于$\mathcal{P}\left(E\right)$上的交运算和并运算,$\emptyset$是并运算唯一的可消去元,$E$是交运算唯一的可消去元.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{半群中的左可消去元,右可消去元,可消去元各自组成的集合是子原群}{}
+	若$\odot$满足结合律,则$E$中的左可消去元,右可消去元,可消去元各自组成的集合都是$E$的子原群.
+\end{proposition}
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+\chapter{逆向极限和正向极限}
+
+本章中,$I$是一个非空预序集.在第二节和第三节中,我们默认$I$是上定向集.
+
+\section{模的逆向极限}
+
+记号约定:$\left(\left(A_{\alpha}\right)_{\alpha\in I},\left(\phi_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是环的逆系统,$A$是环.
+
+\begin{definition}{左模的逆系统和逆向极限}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是交换群的逆系统.如果
+	\begin{enumerate}
+		\item 对每个$\alpha\in I$,$E_{\alpha}$是左$A_{\alpha}$-模，
+		\item $\forall\alpha,\beta\in I\forall\lambda_{\beta}\in A_{\beta}\forall x_{\beta}\in E_{\beta}\left(\alpha\leq\beta\implies f_{\alpha\beta}\left(\lambda_{\beta}x_{\beta}\right)=\phi_{\alpha\beta}\left(\lambda_{\beta}\right)f_{\alpha\beta}\left(x_{\beta}\right)\right)$,
+	\end{enumerate}
+	则称$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是左$A_{\alpha}$-模的逆系统,左$\varprojlim A_{\alpha}$-模$\varprojlim E_{\alpha}$是其逆向极限.
+\end{definition}
+
+\begin{proposition}{模的逆系统之间的同态的逆向极限}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right),\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是$A_{\alpha}$-模的逆系统,$A=\varprojlim A_{\alpha}$,对每个$\alpha\in I$有
+	\begin{align*}
+		u_{\alpha}\in\Hom_{A_{\alpha}-\mathsf{Mod}}\left(E_{\alpha},F_{\alpha}\right),
+	\end{align*}
+	并且$\left(u_{\alpha}\right)_{\alpha\in I}$是后者到前者的同态,则$\varprojlim u_{\alpha}\in\Hom_{A-\mathsf{Mod}}\left(\varprojlim E_{\alpha},\varprojlim F_{\alpha}\right)$.
+\end{proposition}
+
+\begin{proposition}{模的逆向极限的左正合性}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right),\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\alpha\beta}\right)_{\alpha,\beta\in I}\right),\left(\left(G_{\alpha}\right)_{\alpha\in I},\left(h_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是$A_{\alpha}$-模的逆系统,其中
+	\begin{itemize}
+		\item $\forall\alpha\in I\left(u_{\alpha}\in\Hom_{A_{\alpha}-\mathsf{Mod}}\left(E_{\alpha},F_{\alpha}\right)\wedge v_{\alpha}\in\Hom_{A_{\alpha}-\mathsf{Mod}}\left(F_{\alpha},G_{\alpha}\right)\right)$,
+		\item $\left(u_{\alpha}\right)_{\alpha\in I},\left(v_{\alpha}\right)_{\alpha\in I}$是$A_{\alpha}$-线性映射的正系统.
+	\end{itemize}
+	如果对每个$\alpha\in I$,序列$0\xlongrightarrow{}E_{\alpha}\xlongrightarrow{u_{\alpha}}F_{\alpha}\xlongrightarrow{v_{\alpha}}G_{\alpha}$正合,则序列$0\xlongrightarrow{}\varprojlim E_{\alpha}\xlongrightarrow{\varprojlim u_{\alpha}}\varprojlim F_{\alpha}\xlongrightarrow{\varprojlim v_{\alpha}}\varprojlim G_{\alpha}$也正合.
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 这个结论对群的逆系统也成立,调整相应的记号即可.
+		\item 如果对每个$\alpha\in I$,序列$0\xlongrightarrow{}E_{\alpha}\xlongrightarrow{u_{\alpha}}F_{\alpha}\xlongrightarrow{v_{\alpha}}G_{\alpha}\xlongrightarrow{}0$正合,则$0\xlongrightarrow{}\varprojlim E_{\alpha}\xlongrightarrow{\varprojlim u_{\alpha}}\varprojlim F_{\alpha}\xlongrightarrow{\varprojlim v_{\alpha}}\varprojlim G_{\alpha}\xlongrightarrow{}0$不一定正合.
+	\end{enumerate}
+\end{remark}
+
+本节接下来的内容中,默认$\forall\alpha\in I\left(A_{\alpha}=A\right)\wedge\forall\beta,\gamma\in I\left(\phi_{\beta\gamma}=\id_{A}\right)$.
+
+\begin{proposition}{}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是左$A$-模的逆系统,$F$是左$A$-模.
+	\begin{enumerate}
+		\item 若$\forall\alpha\in I\left(u_{\alpha}\in\Hom_{A-\mathsf{Mod}}\left(F,E_{\alpha}\right)\right)$且$\left(u_{\alpha}\right)_{\alpha\in I}$是逆系统,则$\varprojlim u_{\alpha}\in\Hom_{A-\mathsf{Mod}}\left(F,\varprojlim E_{\alpha}\right)$.
+		\item 若$v\in\Hom_{A-\mathsf{Mod}}\left(F,\varprojlim E_{\alpha}\right)$,对每个$\alpha\in I$有$v_{\alpha}=f_{\alpha}\circ v$,则$\left(v_{\alpha}\right)_{\alpha\in I}$是逆系统,并且$v=\varprojlim v_{\alpha}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{Hom函子和逆向极限交换}{}
+	对每个左$A$-模的逆系统$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$和每个左$A$-模$F$,典范映射
+	\begin{align*}
+		l_{F}:\Hom_{A-\mathsf{Mod}}\left(F,\varprojlim E_{\alpha}\right)\to\varprojlim\Hom_{A-\mathsf{Mod}}\left(F,E_{\alpha}\right),u\mapsto\left(f_{\alpha}\circ u\right)_{\alpha\in I}
+	\end{align*}
+	是$\Z$-模同构.
+\end{proposition}
+
+\begin{corollary}{Hom与逆极限可交换的自然性}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha\beta}\right)_{\alpha,\beta\in I}\right)$是左$A$-模的逆系统,$F,G$是左$A$-模,$v\in\Hom_{A}\left(F,G\right)$且$\forall\alpha\in I\left(\bar{v}_{\alpha}=\Hom_{A}\left(v,\id_{E_{\alpha}}\right)\right)$.
+	\begin{enumerate}
+		\item $\left(\bar{v}_{\alpha}\right)_{\alpha\in I}$是$\Z$-线性映射的逆系统.
+		\item 如下图表交换:
+		\begin{center}
+			\begin{tikzcd}
+				{\Hom_{A}\left(G,\varprojlim E_{\alpha}\right)} && {\varprojlim\Hom_{A}\left(G,E_{\alpha}\right)} \\
+				\\
+				{\Hom_{A}\left(F,\varprojlim E_{\alpha}\right)} && {\varprojlim \Hom_{A}\left(F,E_{\alpha}\right)}
+				\arrow["{l_{G}}", from=1-1, to=1-3]
+				\arrow["{\Hom_{A}(v,\id_{E})}"', from=1-1, to=3-1]
+				\arrow["{\varprojlim\bar{v}_{\alpha}}", from=1-3, to=3-3]
+				\arrow["{l_{F}}"', from=3-1, to=3-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

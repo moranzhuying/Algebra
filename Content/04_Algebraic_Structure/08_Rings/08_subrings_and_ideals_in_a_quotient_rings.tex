@@ -1,0 +1,20 @@
+\section{商环中的理想和子环}
+
+记号约定:$A,B$是环同态,$f\in\Hom_{\mathsf{Ring}}\left(A,B\right),\mathfrak{a}=\ker\left(f\right)$.
+
+\begin{proposition}{环同态下的结构对应定理}{}
+	\begin{enumerate}
+		\item 设$B^{\prime}$是$B$的子环,则$f^{-1}\left(B^{\prime}\right)$是$A$的包含$\mathfrak{a}$的子环.若$f$是满射,则$f\left(B\right)=B^{\prime}$且$B/\mathfrak{a}\simeq B^{\prime}$.
+		\item 若$\mathfrak{b}$是$A$的左(相对地,右,双边)理想,则$f^{-1}\left(\mathfrak{b}\right)$是$A$的包含$\mathfrak{a}$的左(相对地,右,双边)理想.
+		\item 设$\mathfrak{b}$是$A$的双边理想,$\pi:B\twoheadrightarrow B/\mathfrak{b}$是典范满射,则$\pi\circ f$诱导$\bar{f}\in\Hom_{\mathsf{Ring}}\left(A/f^{-1}\left(\mathfrak{b}\right),B/\mathfrak{b}\right)$且$\bar{f}$为单射.若$f$为满射,则$\bar{f}$是环同构.
+		\item 设$f$是满射,$\Phi$是$A$周国包含$\mathfrak{a}$的子环(相对地,左理想,右理想,双边理想)组成的集合,$\Phi^{\prime}$是$B$的子环(相对地,左理想,右理想,双边理想)组成的集合,则$\Phi\to\Phi^{\prime},B\mapsto f\left(B\right)$是序同构,其逆为$\Phi^{\prime}\to\Phi,B^{\prime}\mapsto f^{-1}\left(B\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{商群的理想形式}{}
+	设$\mathfrak{a}^{\prime}$是$A$的双边理想,则$A/\mathfrak{a}$的每个左(相对地,右,双边)理想可唯一表示成$\mathfrak{b}/\mathfrak{a}^{\prime}$,其中$\mathfrak{b}$是$A$中包含$\mathfrak{a}^{\prime}$的左(相对地,右,双边)理想.
+\end{corollary}
+
+\begin{corollary}{环同构第三定理}{}
+	设$\mathfrak{a}^{\prime},\mathfrak{b}$是$A$的双边理想,$\mathfrak{a}^{\prime}\subseteq\mathfrak{b}$,则有环同构$\left(A/\mathfrak{a}^{\prime}\right)/\left(\mathfrak{b}/\mathfrak{a}^{\prime}\right)\simeq A/\mathfrak{b}$.
+\end{corollary}

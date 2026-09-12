@@ -1,0 +1,66 @@
+\section{方阵的行列式}
+
+记号约定:$A$是交换环,$I$是有限集,$M$是有限维$A$-模,$n\in\N$.
+
+\begin{definition}{矩阵的行列式}{}
+	设$\boldsymbol{X}$是$A$上的$I$型方阵,$u\in\End_{A}\left(\Hom_{A}\left(I,A\right)\right)$且它关于$\Hom_{A}\left(I,A\right)$的典范基的表示矩阵是$\boldsymbol{X}$.称
+	\begin{align*}
+		\det\left(\boldsymbol{X}\right)\coloneq\det\left(u\right)
+	\end{align*}
+	是$\boldsymbol{X}$的行列式.
+\end{definition}
+
+\begin{definition}{}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$是$A^{n}$的序列.定义矩阵$\boldsymbol{X}\left(x_{1},\ldots,x_{n}\right)$如下:对每个$1\leq i\leq n$,该矩阵的第$i$列是$x_{i}$.
+\end{definition}
+
+\begin{proposition}{}{}
+	$f:\left(A^{n}\right)^{n}\to A,\left(x_{i}\right)_{i=1}^{n}\mapsto\det\left(\boldsymbol{X}\left(x_{1},\ldots,x_{n}\right)\right)$是交错$n$重线性映射.
+\end{proposition}
+
+\begin{definition}{指标集是$\N$中的区间时矩阵的行列式}{}
+	设$\left(e_{i}\right)_{i=1}^{n}$是$M$的基,$\boldsymbol{X}\coloneq\left(x_{i,j}\right)_{\substack{1\leq i\leq m\\1\leq j\leq n}}$是$A$上的$n$阶方阵.记
+	\begin{align*}
+		\begin{vmatrix}
+			x_{1,1}&\ldots&x_{1,n}\\
+			\vdots&\ddots&\vdots\\
+			x_{n,1}&\ldots&x_{n,n}
+		\end{vmatrix}
+		\coloneq\det\left(x_{i,j}\right)_{\substack{1\leq i\leq m\\1\leq j\leq n}}\coloneq\det\left(\boldsymbol{X}\right).
+	\end{align*}
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 设$\boldsymbol{X},\boldsymbol{Y}$是$A$上的$I$型方阵,则$\det\left(\boldsymbol{X}\boldsymbol{Y}\right)=\det\left(\boldsymbol{X}\right)\det\left(\boldsymbol{Y}\right)$.
+		\item 设$\boldsymbol{X}$是$A$上的$I$型方阵,则$\boldsymbol{A}$可逆$\iff$ $\det\left(\boldsymbol{X}\right)\in A^{\times}$.当$\boldsymbol{X}$可逆时$\det\left(\boldsymbol{X}^{-1}\right)=\left(\det\left(\boldsymbol{X}\right)\right)^{-1}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{n}\left(A\right)$.若$\boldsymbol{X}$和$\boldsymbol{Y}$相似,则$\det\left(\boldsymbol{X}\right)=\det\left(\boldsymbol{Y}\right)$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\boldsymbol{X}\in\mathbf{M}_{n}\left(A\right)$,则$\left(\col_{i}\left(\boldsymbol{X}\right)\right)_{i=1}^{n}$线性无关$\iff$ $\det\left(\boldsymbol{X}\right)$不是$A$中的零因子.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+\section{多项式的微分和导数}
+
+\begin{definition}{多项式环的导子}{}
+	在多项式环$A[(X_{i})_{i\in I}]$中,对每个$i\in I$,存在唯一的$A$-导子$\mathrm{D}_{i}:B\to B$满足
+	\begin{align*}
+		\forall s,t\in I\left(D_{s}\left(X_{t}\right)=\delta_{s,t}\right).
+	\end{align*}
+	对每个$i\in I$和$P\in A[(X_{i})_{i\in I}]$,称多项式$\frac{\partial P}{\partial X_{i}}\coloneq\mathrm{D}_{X_{i}}P\coloneq\mathrm{D}_{i}\left(P\right)$是$P$关于$X_{i}$的偏导数.
+\end{definition}
+
+\begin{remark}{}{}
+	固定$i\in I$和$\nu\coloneq\left(\nu_{j}\right)_{j\in I}\in\N^{\left(I\right)}$,则$\mathrm{D}_{i}\left(X^{\nu}\right)=
+	\begin{cases}
+		\nu_{i}X_{i}^{\nu_{i}-1}\prod\limits_{j\in I\setminus\left\{i\right\}}X_{j}^{\nu_{j}},&\nu_{i}>0,\\
+		0,&\nu_{i}=0.
+	\end{cases}$
+\end{remark}
+
+\begin{definition}{高阶偏导数}{}
+	对每个$\nu\coloneq\left(\nu_{i}\right)_{i\in I}\in\N^{\left(I\right)}$,记$\mathrm{D}^{\nu}\coloneq\prod\limits_{i\in I}\mathrm{D}_{i}^{\nu_{i}}$.为$\N^{\left(I\right)}$配备逐点序.
+\end{definition}
+
+\begin{proposition}{单项式的高阶偏导数}{}
+	对每个$\mu,\nu\in\N^{\left(I\right)}$,$\mathrm{D}^{\mu}\left(X^{\nu}\right)=
+	\begin{cases}
+		\frac{\mu!}{\left(\mu-\nu\right)!}X^{\mu-\nu},&\nu\leq\mu,\\
+		0,&\nu>\mu.
+	\end{cases}$
+\end{proposition}
+
+\begin{definition}{多项式的导数}{}
+	设$P$是$A[(X_{i})_{i\in I}]$中的单项式.我们把$P$的偏导数记作$\frac{\mathrm{d}P}{\mathrm{d}X}$(或$\mathrm{d}P,P^{\prime}$),称之为$P$的导数.
+\end{definition}
+
+\begin{definition}{多项式环的微分表示}{}
+	设$B=A[(X_{i})_{i\in I}]$.
+	\begin{enumerate}
+		\item $\left(\mathrm{d}X_{i}\right)_{i\in I}$是$\Omega_{A}\left(B\right)$的基,并且对每个$u\in B$,它在这个基下的坐标为$\left(\mathrm{D}_{i}P\right)_{i\in I}$.
+		\item 若$I$是有限集,则$\left(\mathrm{D}_{i}\right)_{i\in I}$是$\Der_{B}\left(A\right)$的基.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{多项式环的导子的复合}{}
+	设$E$是$A$-含幺交换结合代数,$F$是$E$-模,$\mathbf{x}\coloneq\left(x_{i}\right)_{i\in I}\in E^{I},u\in A[(X_{i})_{i\in I}],\mathbf{y}=u\left(\mathbf{x}\right)$,则对每个导子$D:E\to F$,
+	\begin{align*}
+		D\left(\mathbf{y}\right)=\sum\limits_{i\in I}\frac{\partial u}{\partial X_{i}}\left(\mathbf{x}\right)D\left(x_{i}\right).
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{多项式环的导子的链式法则}{}
+	设$p,q\geq 1,f\in A[X_{1},\ldots,X_{n}],g_{1},\ldots,g_{p}\in A[Y_{1},\ldots,Y_{q}],h=f\left(\left(g_{i}\right)_{i=1}^{p}\right)$,则对每个$1\leq j\leq q$有
+	\begin{align*}
+		\frac{\partial h}{\partial Y_{j}}=\sum\limits_{i=1}^{p}\frac{\partial f}{\partial X_{i}}\left(\left(g_{k}\right)_{k=1}^{q}\right)\frac{\partial g_{i}}{\partial Y_{j}}.
+	\end{align*}
+\end{corollary}
+
+\begin{definition}{多项式环中的形式Taylor展开算子}{}
+	设$\mathbf{X}\coloneq(X_{i})_{i\in I},\mathbf{Y}\coloneq\left(Y_{i}\right)_{i\in I}$是两族不相交的不定元,$\rho:A[\mathbf{X},\mathbf{Y}]\to\left(A[\mathbf{X}]\right)[\mathbf{Y}]$是典范同构.定义
+	\begin{align*}
+		\Delta:A[\mathbf{X}]\to A[\mathbf{X}]
+	\end{align*}
+	如下:对每个$u\in A[\mathbf{X}]$和$\nu\in\N^{\left(I\right)}$,$\Delta^{\nu}\left(u\right)$是$\rho\left(u\left(\mathbf{X}+\mathbf{Y}\right)\right)$中$\mathbf{Y}^{\nu}$的系数.我们称$\Delta$是形式Taylor展开算子.
+\end{definition}
+
+\begin{proposition}{形式Taylor展开算子的性质}{}
+	设$\mathbf{X}\coloneq(X_{i})_{i\in I},\mathbf{Y}\coloneq\left(Y_{i}\right)_{i\in I},\mathbf{Z}\coloneq\left(Z_{i}\right)_{i\in I}$是三族不相交的不定元.
+	\begin{enumerate}
+		\item 对每个$u\in A[\mathbf{X}]$和$\mathbf{a}\in A^{I}$有$u\left(\mathbf{X}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\left(\Delta^{\nu}\right)\left(a\right)\left(\mathbf{X}-\mathbf{a}\right)^{\nu}$.
+		\item 对每个$u,v\in A[\mathbf{X}]$和$\sigma\in\N^{\left(I\right)}$有$\Delta^{\sigma}\left(uv\right)=\sum\limits_{\substack{\nu,\rho\in\N^{\left(I\right)}\\ \nu+\rho=\sigma}}\Delta^{\nu}\left(u\right)\Delta^{\rho}\left(v\right)$.
+		\item 对每个$\rho,\sigma\in\N^{\left(I\right)}$和$u\in A[\mathbf{X},\mathbf{Y},\mathbf{Z}]$有$\Delta^{\rho}\left(\Delta^{\sigma}\left(u\right)\right)=\frac{\left(\rho+\sigma\right)!}{\rho!\sigma!}\Delta^{\rho+\sigma}\left(u\right)$.
+		\item 对每个$u\in A[\mathbf{X}]$和$\nu\in\N^{\left(I\right)}$有$\mathrm{D}^{\nu}u=\nu!\Delta^{\nu}\left(u\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{特征$0$时多项式环中的Taylor公式}{}
+	设$A$是$\Q$-代数,$\mathbf{X}\coloneq(X_{i})_{i\in I},\mathbf{Y}\coloneq\left(Y_{i}\right)_{i\in I}$是两族不相交的不定元,则
+	\begin{enumerate}
+		\item 对每个$u\in A[\mathbf{X}]$有$u\left(\mathbf{X}+\mathbf{Y}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\frac{1}{\nu!}\left(\mathrm{D}^{\nu}u\right)\left(\mathbf{X}\right)\mathbf{Y}^{\nu}$.
+		\item 对每个$u\in A[\mathbf{X}]$和$\mathbf{a}\in A^{I}$有$u\left(\mathbf{X}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\frac{1}{\nu!}\left(\mathrm{D}^{\nu}u\right)\left(\mathbf{a}\right)\left(\mathbf{X}-\mathbf{a}\right)^{\nu}$.
+		\item 对每个$u\in A[\mathbf{X}]$有$u\left(\mathbf{X}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\frac{1}{\nu!}\left(\mathrm{D}^{\nu}u\right)\left(0\right)\mathbf{X}^{\nu}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{Euler恒等式}{}
+	设$r\in\N$,$u\in A[(X_{i})_{i\in I}]$是$r$次齐次多项式,则$\sum\limits_{i\in I}X_{i}\frac{\partial u}{\partial X_{i}}=ru$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+

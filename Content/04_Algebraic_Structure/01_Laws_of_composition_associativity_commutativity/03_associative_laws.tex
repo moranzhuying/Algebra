@@ -1,0 +1,59 @@
+\section{结合律}
+
+记号约定:
+\begin{itemize}
+	\item $E$是原群,配备运算律$\odot$.
+	\item $I$,$J$是非空的有限全序集.
+	\item $\left(x_{i}\right)_{i\in I},\left(y_{j}\right)_{j\in J}$是$E$的序列.
+\end{itemize}
+
+\begin{definition}{结合律,半群}{}
+	如果$\forall x,y,z\in E\left(\left(x\odot y\right)\odot z=x\odot\left(y\odot z\right)\right)$,则称$\odot$满足结合律,称$E$对$\odot$构成半群.
+\end{definition}
+
+显然,如果$E$是半群,则$E^{\op}$亦然.
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item $\N$上的加法,乘法和指数运算都满足结合律.
+		\item 1.1节中提到的例子都满足结合律.
+	\end{enumerate}
+\end{example}
+
+\begin{theorem}{结合性定理}{associativity-theorem}
+	设$E$是半群,$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的一个连续划分,则$\bigodot\limits_{i\in I}x_{i}=\bigodot\limits_{\lambda\in\Lambda}\bigodot\limits_{i\in I_{\lambda}}x_{i}$.
+\end{theorem}
+
+\begin{proof}
+	记$\left|I\right|=n,\left|\Lambda\right|=p,h=\min\Lambda,\Lambda^{\prime}=\Lambda\setminus\left\{h\right\}$.我们对$n$作数学归纳法. 
+	
+	若$n=1$,由于诸$I_{\lambda}$非空,因此$p=1$,定理显然成立.现假设对于基数小于$n$的索引集,定理均成立.对于$n$个元素的情况:
+	
+	(1)$I_{h}=\left\{\beta\right\}$.令$I^{\prime}=\bigcup\limits_{\lambda\in\Lambda^{\prime}}I_{\lambda}$,根据定义$\bigodot_{i\in I}x_{i}=x_{\beta}\odot\bigodot\limits_{i\in I^{\prime}}x_{i},\bigodot\limits_{\lambda\in\Lambda}\bigodot\limits_{i\in I_{\lambda}}x_{i}=x_{\beta}\odot\left(\bigodot\limits_{\lambda\in\Lambda^{\prime}}\bigodot\limits_{i\in I_{\lambda}}x_{i}\right)$,由假设可知结论成立.
+	
+	(2)$I_{h}$不是单点集.令$\beta=\min I$,$I^{\prime}=I\setminus\left\{\beta\right\}$,并定义$I^{\prime}$的新划分如下:$I_{h}^{\prime}=I_{h}\setminus\left\{\beta\right\}$,对诸$\lambda\in\Lambda^{\prime}$有$I_{\lambda}^{\prime}=I_{\lambda}$.
+	
+	此时$\left|I^{\prime}\right|=n-1$,所以$\bigodot\limits_{i\in I^{\prime}}x_{i}=\left(\bigodot\limits_{i\in I_{h}^{\prime}}x_{i}\right)\odot\left(\bigodot\limits_{\lambda\in\Lambda^{\prime}}\left(\bigodot\limits_{i\in I_{\lambda}}x_{i}\right)\right)$.根据定义,$\bigodot\limits_{i\in I^{\prime}}x_{i}=\bigodot\limits_{i\in I}x_{i}$;利用结合律,
+	\begin{align*}
+		\left(\bigodot\limits_{i\in I_{h}^{\prime}}x_{i}\right)\odot\left(\bigodot\limits_{\lambda\in\Lambda^{\prime}}\left(\bigodot_{i\in I_{\lambda}}x_{i}\right)\right)=\left(x_{\beta}\odot\left(\bigodot_{i\in I_{h}^{\prime}}x_{i}\right)\right)\odot \left( \bigodot_{\lambda\in\Lambda^{\prime}}\left(\bigodot_{i\in I_{\lambda}}x_{i}\right)\right)=\left(\bigodot_{i\in I_{h}}x_{i}\right)\odot\left(\bigodot_{\lambda\in\Lambda^{\prime}}\left(\bigodot_{i\in I_{\lambda}}x_{i}\right)\right).
+	\end{align*}
+	定理得证.	
+\end{proof}
+
+\begin{remark}{结合性保证了加括号(即对指标集做划分)的方式不影响计算结果,进一步给出有限次运算的递归公式}{}
+	\begin{enumerate}
+		\item 若$\odot$满足结合律,则序列$\left(x_{i}\right)_{i=p}^{q}$的复合可以简记为$x_{p}\odot\ldots\odot x_{q}$.结合律保证了运算顺序不影响最终结果,因此这种记法不会引起歧义.
+		\item 结合性定理的一个特例是递归公式$x_{0}\odot x_{1}\odot\ldots\odot x_{n}=\left(x_{0}\odot\ldots\odot x_{n-1}\right)\odot x_{n}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{记号说明}{}
+	\begin{enumerate}
+		\item 对于长度为$n$且各项均等于$x\in E$的常数序列,其合成在$\odot$下记为$\bigodot\limits^{n}x$.在乘法记法下,该结果记作$x^{n}$,称为$x$的$n$次幂;在加法记法下,通常记作$nx$,称为$x$的$n$倍元.
+		\item 将结合律定理应用于常数序列,得到关于幂(或倍数)的运算性质:$\bigodot\limits^{n_{1}+\ldots+n_{p}}x=\left(\bigodot\limits^{n_{1}}x\right)\odot\ldots\odot\left(\bigodot\limits^{n_{p}}x\right)$.
+		
+		特别地,当$p=2$时,有$\bigodot\limits^{m+n}x=\left(\bigodot\limits^{m}x\right)\odot\left(\bigodot\limits^{n}x\right)$;若$n_{1}=\ldots=n_{p}=m$,则$\bigodot\limits^{pm}=\bigodot\limits^{p}\left(\bigodot\limits^{m}x\right)$.
+		\item 若$X\subseteq E$,仿照上述记法,我们用$\bigodot\limits^{p}X$表示$p$个$X$的诱导子集积$X_{1}\odot\ldots\odot X_{p}$(其中诸$X_{i}=X$),它由所有形如$x_{1}\odot\ldots\odot x_{p}$的元素组成,其中诸$x_{i}$独立地来自$X$. 
+		\item $\bigodot\limits^{p}X$允许序列中的各项取自$X$中不同的元素,而$x$遍历$X$时$\bigodot\limits^{p}x$构成的集合仅包含$X$中单个元素自身的$p$次幂.
+	\end{enumerate}
+\end{remark}

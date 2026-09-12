@@ -1,0 +1,167 @@
+\chapter{对称函数}
+
+\section{对称多项式}
+
+\begin{definition}{}{}
+	对每个$\sigma\in\mathfrak{S}_{n}$,定义$\varphi_{\sigma}\in\Aut_{A-\mathsf{Alg}}\left(A[X_{1},\ldots,X_{n}]\right)$如下:$\forall 1\leq i\leq n\left(\varphi_{\sigma}\left(X_{i}\right)=X_{\sigma\left(i\right)}\right)$.
+\end{definition}
+
+\begin{remark}{}{}
+	$\mathfrak{S}_{n}\to\Aut_{A-\mathsf{Alg}},\sigma\mapsto\varphi_{\sigma}$是典范同构.定义$\mathfrak{S}_{n}$在$A[X_{1},\ldots,X_{n}]$上的作用$\left(\sigma,f\right)\mapsto\varphi_{\sigma}\left(f\right)$.
+\end{remark}
+
+\begin{definition}{对称多项式}{}
+	设$f\in A[X_{1},\ldots,X_{n}]$.若$\forall\sigma\in\mathfrak{S}_{n}\left(\sigma f=f\right)$,则称$f$是对称多项式.记
+	\begin{equation*}
+		A[X_{1},\ldots,X_{n}]^{\mathfrak{S}_{n}}=\left\{g\in A[X_{1},\ldots,X_{n}]\middle|\forall\sigma\in\mathfrak{S}_{n}\left(\sigma g=g\right)\right\}.
+	\end{equation*}
+	这是$A[X_{1},\ldots,X_{n}]$的分次$A$-含幺子代数.
+\end{definition}
+
+\begin{definition}{初等对称多项式}{}
+	定义$k$次初等对称多项式$e_{k,n}\coloneq e_{k}\in A[X_{1},\ldots,X_{n}]$如下:
+	\begin{equation*}
+		e_{k,n}=
+		\begin{cases}
+			\sum\limits_{1\leq i_{1}<\ldots<i_{k}\leq n}X_{i_{1}}\ldots X_{i_{k}},&k\leq n,\\
+			0,&k>n.
+		\end{cases}
+	\end{equation*}
+\end{definition}
+
+\begin{proposition}{生成函数与Vieta公式}{}
+	在多项式环$A[X_{1},\ldots,X_{n},X,Y,Z]$中,我们有
+	\begin{align*}
+		\prod\limits_{i=1}^{n}\left(X+YX_{i}\right)=\sum\limits_{k=0}^{n}X^{n-k}Y^{k}e_{k,n},\prod\limits_{i=0}^{n}\left(1+YX_{i}\right)=\sum\limits_{k=0}^{n}e_{k,n}X^{k},\prod\limits_{i=1}^{n}\left(X-X_{k}\right)=\sum\limits_{i=0}^{n}\left(-1\right)^{n-k}e_{n-k,n}X^{k}.
+	\end{align*}
+\end{proposition}
+
+\begin{theorem}{对称多项式基本定理}{}
+	记$E=A[X_{1},\ldots,X_{n}],S=A[X_{1},\ldots,X_{n}]^{\mathfrak{S}_{n}}$.
+	\begin{enumerate}
+		\item $S$由$\left(e_{k,n}\right)_{k=1}^{n}$生成.
+		\item $\left(e_{k,n}\right)_{k=1}^{n}$是$A$-代数无关的.
+		\item $\left\{\prod\limits_{i=1}^{n}X_{i}^{v\left(i\right)}\middle|1\leq i\leq n,0\leq v\left(i\right)<i\right\}$是$E$作为$S$-模的基,$\dim _{S}E=n!$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	设$f\in A[X_{1},\ldots,X_{n}]^{\mathfrak{S}_{n}}$是$m$次齐次多项式,则存在$Q\in A[Y_{1},\ldots,Y_{n}]$使$f=Q\left(e_{1},\ldots,e_{n}\right)$.上述证明通过对$n$和$m$做归纳给出了$Q$的精确计算公式.如我们所见,存在$P\in A[Y_{1},\ldots,Y_{n-1}]$和$h\in A[X_{1},\ldots,X_{n}]^{\mathfrak{S}_{n}}$使得
+	\begin{align*}
+		f=P\left(e_{1,1},\ldots,e_{n-1,n}\right)+e_{n}h,\deg\left(h\right)=m-n.
+	\end{align*}
+	对每个$u\in A[X_{1},\ldots,X_{n}]$记$u^{\prime}\left(X_{1},\ldots,x_{n-1}\right)=u\left(X_{1},\ldots,X_{n-1},0\right)$,则$e_{1}^{\prime},\ldots,e_{n-1}\in A[X_{1},\ldots,X_{n-1}]$是初等对称多项式,$f^{\prime}=P\left(s_{1}^{\prime},\ldots,s_{n-1}^{\prime}\right)$.因此,确定$P$的任务约化为计算$n-1$元对称多项式,$h$则由上述公式确定.
+\end{remark}
+
+\begin{example}{}{}
+	设$n=3$.
+	\begin{enumerate}
+		\item 令$f=X_{1}^{2}\left(X_{2}+X_{3}\right)+X_{2}^{2}\left(X_{3}+X_{1}\right)+X_{3}^{2}\left(X_{1}+X_{2}\right)$,则$f^{\prime}=X_{1}X_{2}\left(X_{1}+X_{2}\right)=s_{1}s_{2}$.令$g=f-s_{1}s_{2}$,则
+		\begin{align*}
+			g=f-\left(X_{1}+X_{2}+X_{3}\right)\left(X_{1}X_{2}+X_{1}X_{3}+X_{2}X_{3}\right)=-3X_{1}X_{2}X_{3},
+		\end{align*}
+		从而$f=s_{1}s_{2}-s_{3}$.
+		\item 设$p=X_{1}^{3}+X_{2}^{3}+X_{3}^{3}$.注意$p\left(X_{1},0,0\right)=s_{1}\left(X_{1},0,0\right)^{3}$.令$q=p-s_{1}^{3}$,则
+		\begin{align*}
+			q=-3f-6X_{1}X_{2}X_{3}=-3s_{1}s_{2}+3s_{3},
+		\end{align*}
+		从而$p=s_{1}^{3}-3s_{1}s_{2}+3s_{3}$.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{}{}
+	为$A[S_{1},\ldots,S_{n}]$配备$\N$型分次,使得对每个$1\leq k\leq n$不定元$S_{k}$的权是$k$.
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 对每个$n\in\N$,映射$\varphi_{n}:A[S_{1},\ldots,S_{n}]\to A[X_{1},\ldots,X_{n}]^{\mathfrak{S}_{n}},S_{k}\mapsto s_{k,n}$是分次$A$-代数同构.
+		\item 对每个$k\in\N$和$m\leq n$,有$s_{k,m}\left(X_{1},\ldots,X_{m}\right)=s_{k,n}\left(X_{1},\ldots,X_{m},0,\ldots,0\right)$.
+		\item 设$m\leq n$,则下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				{A[S_{1},\ldots,S_{m}]} & {A[X_{1},\ldots,X_{n}]} \\
+				{A[X_{1},\ldots,X_{m}]^{\mathfrak{S}_{m}}} & {A[X_{1},\ldots,X_{n}]^{\mathfrak{S}_{n}}}
+				\arrow["j", from=1-1, to=1-2]
+				\arrow["{\varphi_{m}}"', from=1-1, to=2-1]
+				\arrow["{\varphi_{n}}", from=1-2, to=2-2]
+				\arrow["p", from=2-2, to=2-1]
+			\end{tikzcd}
+		\end{center}
+	其中,$j$是典范单射,$p:A[X_{1},\ldots,X_{n}]^{\mathfrak{S}_{n}}\to A[X_{1},\ldots,X_{m}]^{\mathfrak{S}_{m}},g\mapsto g\left(X_{1},\ldots,X_{m},0,\ldots,0\right)$,.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{对称多项式的稳定化性质}{}
+	对每个$k\in\N$,记$S_{k}^{\left(n\right)}$是$A[X_{1},\ldots,X_{n}]$中$k$次齐次对称多项式组成的$A$-模.若$0\leq k\leq m\leq n$,则
+	\begin{align*}
+		S_{k}^{\left(n\right)}\to S_{k}^{\left(m\right)},f\mapsto f\left(X_{1},\ldots,X_{m},0,\ldots,0\right)
+	\end{align*}
+	是$A$-模同构.
+\end{proposition}
+
+\begin{example}{}{}
+	在$A[X_{1},X_{2},X_{3}]$中,对每个$k\geq 3$有$\sum\limits_{i=1}^{3}X_{i}=e_{1,k}^{3}-3e_{1,k}e_{2,k}+3e_{3,k}$.此外,$X_{1}^{3}+X_{2}^{3}=e_{1,2}^{2}-3e_{1,2}e_{2,2},X_{1}^{3}=e_{1,1}^{3}$.
+\end{example}
+
+\begin{definition}{}{}
+	设$n,k>0$.定义$\Delta_{k,n}$是$\N^{n}$中长度为$k$的元素组成的集合,为其配备$\N^{n}$上的字典序诱导的偏序$\preccurlyeq$.定义
+	\begin{align*}
+		\cdot:\mathfrak{S}_{n}\times\N^{n}\to\N^{n},\left(\sigma,\alpha\right)\mapsto\alpha\circ\sigma^{-1}.
+	\end{align*}
+	记$D_{k}=\left\{\alpha\in\N^{n}\middle|\alpha\text{递减},\sum\limits_{i=1}^{n}\alpha\left(i\right)=k\right\}$.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$0<k\leq n$,把$\N^{k}$典范等同于$\N^{n}$的子集,那么
+		\begin{itemize}
+			\item $D_{k}$由$\Delta_{k,n}$中满足$\forall\sigma\in\mathfrak{S}_{n}\left(\sigma\alpha\preccurlyeq\alpha\right)$的$\alpha$组成,
+			\item $\mathfrak{S}_{n}$在$\Delta_{k,n}$的左作用下的每个轨道都是单点集.
+		\end{itemize}
+		对每个$\alpha\in D_{k}$,记$\mathcal{O}\left(\alpha\right)$是$\alpha$的轨道,记
+		\begin{align*}
+			M\left(\alpha\right)=\sum\limits_{\beta\in\mathcal{O}\left(\alpha\right)}X^{\beta}\in A[X_{1},\ldots,X_{n}],S\left(\alpha\right)=\prod\limits_{i=1}^{k}e_{i}^{\alpha\left(i\right)-\alpha\left(i+1\right)},
+		\end{align*}
+		约定$i>n\implies\alpha\left(i\right)=0$,则$\left(S\left(\alpha\right)\right)_{\alpha\in D_{k}}$,$\left(M\left(\alpha\right)\right)_{\alpha\in D_{k}}$是$S_{k}^{\left(n\right)}$的基.
+		
+		对每个$\alpha,\beta\in D_{k}$,记$c_{\alpha\beta}$是$X^{\beta}$在$S\left(\alpha\right)$中的系数,则$\left(c_{\alpha,\beta}\right)_{\alpha,\beta\in D_{k}}$不依赖环$A$和自然数$n$,为$D_{k}$配备字典序以后它是单位下三角矩阵.
+		\item 设$0<n<k$,把$\N^{n}$典范等同于$\N^{n}$的子集.对每个$\alpha\in D_{k}\cap\N^{n}$,设$\mathcal{O}\left(\alpha\right)$是$\alpha$的轨道,记
+		\begin{align*}
+			M\left(\alpha\right)=\sum\limits_{\beta\in\mathcal{O}\left(\alpha\right)}X^{\beta}\in A[X_{1},\ldots,X_{n}],S\left(\alpha\right)=\prod\limits_{i=1}^{k}e_{i}^{\alpha\left(i\right)-\alpha\left(i+1\right)},
+		\end{align*}
+		约定$i>n\implies\alpha\left(i\right)=0$,则$\left(M\left(\alpha\right)\right)_{\alpha\in D_{k}\cap\N^{n}}$和$\left(S\left(\alpha\right)\right)_{\alpha\in D_{k}\cap\N^{n}}$是$S_{k}^{\left(n\right)}$的基.
+		
+		对每个$\alpha,\beta\in D_{k}$,记$c_{\alpha\beta}$是$X^{\beta}$在$S\left(\alpha\right)$中的系数,则$\left(c_{\alpha,\beta}\right)_{\alpha,\beta\in D_{k}\cap\N^{n}}$不依赖环$A$和自然数$n$,为$D_{k}$配备字典序以后它是单位下三角矩阵.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{}{}
+	对每个$n\geq 3$,我们有$M\left(3,0,0\right)=S\left(3,0,0\right)-3S\left(2,1,0\right)+3S\left(1,1,1\right)$,并且当$n=2$时$M\left(3,0\right)=S\left(3,0\right)-3S\left(2,1\right)$.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

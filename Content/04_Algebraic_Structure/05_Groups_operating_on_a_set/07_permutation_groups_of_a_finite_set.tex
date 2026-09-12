@@ -1,0 +1,139 @@
+\section{有限集的置换群}
+
+记号约定:$G$是群,$E$是有限集,$n\in\N_{>0}$.
+
+\begin{definition}{标准置换群}{}
+	当$E=\left\{1,\ldots,n\right\}$时,定义$\mathfrak{S}_{n}\coloneq\mathfrak{S}_{E}$为标准置换群.
+\end{definition}
+
+\begin{proposition}{置换群的阶数}{}
+	若$\left|E\right|=n$,则$\left|\mathfrak{S}_{E}\right|=n!$.
+\end{proposition}
+
+\begin{proposition}{$n$阶置换群同构于标准置换群}{}
+	若$\left|E\right|=n$,则$\mathfrak{S}_{E}\simeq\mathfrak{S}_{n}$.
+\end{proposition}
+
+\begin{definition}{轮换,支撑}{}
+	设$\zeta\in\mathfrak{S}_{E}$,$\langle\zeta\rangle$左作用于$E$.若有且仅有一个轨道不是单点集,则称$\zeta$为轮换,称该轨道$\supp\left(\zeta\right)$为$\xi$的支撑,$\ord\left(\zeta\right)$称为该轮换的长度.进一步,若$\ord\left(\zeta\right)=d\in\N_{>0}$,则称$\zeta$是$d$-轮换.
+\end{definition}
+
+\begin{theorem}{轮换的性质}{}
+	$\xi\in\mathfrak{S}_{E}$,则$\ord\left(\zeta\right)=\left|\supp\left(\zeta\right)\right|$,$\supp\left(\xi\right)$是$\langle\zeta\rangle$-主齐性空间.
+\end{theorem}
+
+\begin{definition}{不相交的轮换}{}
+	设$\zeta,\xi\in\mathfrak{S}_{E}$.若$\supp\left(\zeta\right)\cap\supp\left(\xi\right)=\emptyset$,则称$\zeta$和$\xi$不相交.
+\end{definition}
+
+\begin{lemma}{不相交轮换的复合}{}
+	设$\left(\zeta_{i}\right)_{i\in I}$是$E$上一族两两不相交的轮换,$\sigma=\prod\limits_{i\in I}\zeta_{i}$.
+	\begin{enumerate}
+		\item $\left(\zeta_{i}\right)_{i\in I}$是一族两两可交换的元素.
+		\item 对任一$i\in I$和$x\in E$,$\sigma\left(x\right)=
+		\begin{cases}
+			\zeta_{i}\left(x\right),&x\in\supp\left(\zeta_{i}\right),\\
+			x,&x\notin\supp\left(\zeta_{i}\right).
+		\end{cases}$
+		\item $I\to\supp\left(\sigma\right),i\mapsto\supp\left(\zeta_{i}\right)$是双射.
+	\end{enumerate}
+\end{lemma}
+
+\begin{proposition}{是环的不相交轮换分解}{}
+	对任一$\sigma\in\mathfrak{S}_{E}$,$\mathfrak{S}_{E}$中存在唯一的有限元素族$\left(\zeta_{i}\right)_{i\in I}$,其元素为两两不交的轮换,并且$\sigma=\prod\limits_{i\in I}\zeta_{i}$.
+\end{proposition}
+
+\begin{definition}{对换}{}
+	设$\zeta\in\mathfrak{S}_{E}$.若$\ord\left(\zeta\right)=2$,则称$\zeta$为对换.
+\end{definition}
+
+\begin{definition}{}{}
+	设$x,y\in E$且$x\neq y$.定义$\tau_{x,y}$如下:对任一$z\in E$,$\tau_{x,y}\left(z\right)=
+	\begin{cases}
+		z,&z\notin\left\{x,y\right\},\\
+		x,&z=y,\\
+		y,&z=x.
+	\end{cases}$
+\end{definition}
+
+\begin{definition}{相邻对换}{}
+	设$1\leq i\leq n-1$.称$\tau_{i,i+1}\in\mathfrak{S}_{n}$为相邻对换.
+\end{definition}
+
+\begin{theorem}{所有对换构成共轭类}{}
+	对任一$\sigma\in\mathfrak{S}_{E}$和$x,y\in E$且$x\neq y$,$\sigma\circ\tau_{x,y}\circ\sigma^{-1}=\tau_{\sigma\left(x\right),\sigma\left(y\right)}$.进一步,$\mathfrak{S}_{E}$的全体对换构成一共轭类.
+\end{theorem}
+
+\begin{proposition}{对换生成置换群}{}
+	$\mathfrak{S}_{E}$由$E$上所有对换组成的集合生成.
+\end{proposition}
+
+\begin{proposition}{标准置换群由相邻对换生成}{}
+	$\mathfrak{S}_{n}$由$\left(\tau_{i,i+1}\right)_{i=0}^{n-1}$生成.
+\end{proposition}
+
+\begin{definition}{逆序,逆序数}{}
+	设$\sigma\in\mathfrak{S}_{n}$.定义$\inv\left(\sigma\right)=\left\{\left(i,j\right)\in\N\times\N\middle|1\leq i<j\leq n,\sigma\left(i\right)>\sigma\left(j\right)\right\}$,其元素称为$\sigma$的逆序,其基数称为$\sigma$的逆序数.
+\end{definition}
+
+\begin{proposition}{对称群在$\Hom_{\mathsf{Grp}}\left(\Z^{n},\Z\right)$上的作用}{}
+	设$P=\Hom_{\mathsf{Grp}}\left(\Z^{n},\Z\right)$.定义$\mathfrak{S}_{n}$在$P$上的作用为
+	\begin{align*}
+		\left(\sigma f\right)\left(z_{1},\ldots,z_{n}\right)=f\left(z_{\sigma\left(1\right)},\ldots,f_{\sigma\left(n\right)}\right),\sigma\in\mathfrak{S}_{n},f\in P,\left(z_{1},\ldots,z_{n}\right)\in\Z^{n},
+	\end{align*}
+	则上述作用为群作用,并且是群同态.
+\end{proposition}
+
+\begin{lemma}{}{}
+	沿用上面的命题的记号.设$p:\Z^{n}\to\Z,\left(z_{1},\ldots,z_{n}\right)\mapsto\prod\limits_{1\leq i<j\leq n}\left(z_{j}-z_{i}\right)$.对诸$\sigma\in\mathfrak{S}$有$\sigma p=\left(-1\right)^{\left|\inv\left(\sigma\right)\right|}p$.
+\end{lemma}
+
+\begin{proposition}{符号同态的存在唯一性}{}
+	设$\left|E\right|=n$,则存在唯一的群同态$\sign:\mathfrak{S}_{n}\to\left\{-1,1\right\}$,对任意对换$\tau\in\mathfrak{S}_{E}$有$\sign\left(\tau\right)=-1$.
+	
+	上述同态可通过$\sign\left(\sigma\right)=\left(-1\right)^{\left|\inv\left(\sigma\right)\right|}$来定义.
+\end{proposition}
+
+\begin{definition}{置换的符号}{}
+	上述命题定义的群同态$\sign$称为符号同态.对$\sigma\in\mathfrak{S}_{n}$,$\sign\left(\sigma\right)$称为$\sign$的符号.
+\end{definition}
+
+\begin{definition}{奇置换,偶置换}{}
+	设$\sigma\in\mathfrak{S}_{n}$.若$\sign\left(\sigma\right)=1$,则称$\sign$为偶置换;若$\sign\left(\sigma\right)=-1$,则称$\sigma$为奇置换.
+\end{definition}
+
+\begin{definition}{交错群}{}
+	$\mathfrak{A}_{n}\coloneq\ker\left(\sign\right)$称为$E$的交错群.
+\end{definition}
+
+\begin{proposition}{交错群的结构定理}{}
+	\begin{enumerate}
+		\item $\mathfrak{A}_{n}$是$\mathfrak{S}_{n}$的正规子群.
+		\item 若$n\geq 2$,则$\left(\mathfrak{S}_{n}:\mathfrak{A}_{n}\right)=2$,$\left|\mathfrak{A}_{n}\right|=\dfrac{n!}{2}$.
+		\item 当$n=3$或$n\geq 5$时$\mathfrak{A}_{n}$是单群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{$d$-轮换的符号}{}
+	设$d\in\N_{>0}$,则$d$-轮换的符号是$\left(-1\right)^{d-1}$.
+\end{example}
+
+\begin{example}{一个特殊置换的逆序数}{}
+	设$d\in\N_{>0}$,则置换$\left(1,2,\ldots,n\right)\mapsto\left(d,1,2,\ldots,d-1\right)$的逆序数为$d-1$.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+\section{记号和术语}
+
+本节定义的术语对任何偏序关系和预序关系都适用.
+
+\begin{enumerate}
+	\item 对给定的(预序)偏序关系$R\left\{x,y\right\}$,常把$R$记作$\leq$(或$\subseteq$以及其他类似的符号),约定公式$y\geq x$和$x\leq y$的含义完全相同.公式$x\leq y$读作``$x$小于等于$y$'',``$x$不大于$y$'',``$y$大于等于$x$'',``$y$不小于$x$''.
+	\item 我们把(预序)偏序关系$\leq$的对偶记作$\geq$.通过语言滥用,我们通常会用``关系$\leq$''来代替``公式$x\leq y$'',在此意义下``关系$\leq$''是``关系$\geq$''的对偶.此外,证明过程中,只要不引起歧义,我们就可以用$\leq$指代不同的偏序关系.
+	\item 按照上面的约定,公式$x\leq y$是集合$E$上的偏序关系当且仅当如下条件成立:
+	\begin{itemize}
+		\item ($\mathrm{RO}_{1}$)$x\leq y\wedge y\leq z$蕴含$x\leq z$.
+		\item ($\mathrm{RO}_{2}$)$x\leq y\wedge y\leq x$蕴含$x=y$.
+		\item ($\mathrm{RO}_{3}$)$x\leq y$蕴含$x\leq x\wedge y\leq y$.
+		\item ($\mathrm{RO}_{4}$)$x\leq y$和$x\in E$等价.
+	\end{itemize}
+	进一步地,$x\leq y$是$E$上的预序关系当且仅当上述四个条件中只有($\mathrm{RO}_{2}$)不成立.
+	\item 当$x\leq y$是偏序关系时,我们把公式$x\leq y\wedge x\neq y$记作$x<y$(或$y>x$),读作``$x$严格小于$y$'',``$y$严格大于$x$''.
+\end{enumerate}
+
+\begin{metatheorem}{偏序关系和严格偏序关系的传递性}{}
+	设$\leq\left\{x,y\right\}$是偏序关系,则
+	\begin{enumerate}
+		\item $x\leq y$和$x<y\vee x=y$等价.
+		\item $x\leq y\wedge y<z$蕴含$x<z$.
+		\item $x<y\wedge y\leq z$蕴含$x<z$.
+	\end{enumerate}
+\end{metatheorem}
+
+为了简化表述和用元数学定理代替元数学的表述,我们通常会考虑这样一个理论$\mathfrak{T}$:它包含集合论的所有公理与公理模式,以及下面一条公理(其中$E,\Gamma$是两个常元):``$\Gamma$是集合$E$上的偏序''.我们把公式$y\in\Gamma\left(\left\{x\right\}\right)$记作$x\leq y$,并且说集合$E$配备了偏序$\Gamma$(或赋予$E$偏序关系$y\in\Gamma\left(\left\{x\right\}\right)$).类似的,如果在$\mathfrak{T}$中$\Gamma$是$E$上的预序,我们说集合$E$配备了偏序$\Gamma$.
+
+\begin{definition}{序同构}{}
+	设集合$E,E^{\prime}$各自配备偏序$\Gamma,\Gamma^{\prime}$,$f\in\Isom_{\mathsf{Set}}\left(E,F\right)$.如果$\forall x,y\in E\left(x\leq y\iff f\left(x\right)\leq f\left(y\right)\right)$,则称$f$是序同构.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+\section{素理想}
+
+记号约定:$A$是交换环,$\mathfrak{p}$是$A$的理想.
+
+\begin{proposition}{素理想的等价条件}{equivalent-description-of-prime-ideal}
+	下列陈述等价:
+	\begin{enumerate}
+		\item $A/\mathfrak{p}$是整环.
+		\item $\mathfrak{p}$是$A$的真理想,并且$\forall x,y\in A\left(xy\in\mathfrak{p}\implies x\in\mathfrak{p}\vee y\in\mathfrak{p}\right)$.
+		\item 存在除环$K$和$f\in\Hom_{\mathsf{Ring}}\left(A,K\right)$使得$\mathfrak{p}=\ker\left(f\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{素理想}{}
+	命题(\ref{prop:equivalent-description-of-prime-ideal})中的陈述之一成立时,称$\mathfrak{p}$为$A$的素理想.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 若$A$是交换环,则$A$的每个极大理想都是素理想.
+		\item 若$A$是整环,则$\left\{0\right\}$是素理想,不一定是极大理想,例如$\Z$.
+	\end{enumerate}
+\end{example}
+
+
+
+

@@ -1,0 +1,121 @@
+\chapter{Hermite型与有序域}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $K$是极大有序域,$\left(A,\rho\right)$满足下列条件之一:
+	\begin{enumerate}
+		\item $A=K,\rho=\id_{K}$.
+		\item $A=K(i)$,$\rho$是共轭映射,其中$\mathrm{i}$是$X^{2}+1\in K[X]$在$K$中的根.
+		\item $A$是$K$上的四元数除环,$\rho$是四元数的共轭映射.
+	\end{enumerate}
+	\item $E$是左$A$-向量空间,$\varphi\in\SHerm_{A,\rho}\left(E\right)$.
+\end{itemize}
+
+\section{正Hermite型}
+
+\begin{definition}{Hermite型的(正/负/不)定,半(正/负)定}{}
+	\begin{enumerate}
+		\item 若对每个$x\in E$有$\varphi\left(x,x\right)\geq 0$,则称$\varphi$是半正定Hermite型.
+		\item 若对每个$x\in E\setminus\left\{0\right\}$有$\varphi\left(x,x\right)>0$,则称$\varphi$是正定Hermite型.
+		\item 若$-\varphi$是半正定Hermite型,则称$\varphi$是半负定Hermite型.
+		\item 若$-\varphi$是正定Hermite型,则称$\varphi$是负定Hermite型.
+		\item 若$\varphi$既不是正定Hermite型,又不是负定Hermite型,则称$\varphi$是不定Hermite型.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{Hermite型的(正/负/不)定,半(正/负)定}{}
+	设$A=K$,$Q:E\to K,x\mapsto\frac{1}{2}\varphi\left(x,x\right)$.
+	\begin{enumerate}
+		\item 若$\varphi$是半正定Hermite型,则称$Q$是半正定二次型.
+		\item 若$\varphi$是半负定Hermite型,则称$Q$是半负定二次型.
+		\item 若$\varphi$是正定Hermite型,则称$Q$是正定二次型.
+		\item 若$\varphi$是负定Hermite型,则称$Q$是负定二次型.
+		\item 若$\varphi$是不定Hermite型,则称$Q$是不定二次型.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{有限维向量空间上Hermite型半正定性的判别与规范正交基的存在性}{}
+	设$E$是$n$维向量空间.
+	\begin{enumerate}
+		\item 设$\left(e_{i}\right)_{i=1}^{n}$是$E$的$\varphi$-正交基,则$\varphi$半正定$\iff$对每个$1\leq i\leq n$有$\varphi\left(e_{i},e_{i}\right)\geq 0$.
+		\item 设$\varphi$非退化且半正定,则$E$有一个$\varphi$-规范正交基.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{非退化正定Hermite型在$E^{\otimes p},\bigwedge\limits^{p}E$上的延拓和$E^{\vee}$上的逆型保正定和非退化}{}
+	设$A\in\left\{K,K(\mathrm{i})\right\}$,$\dim E=n\geq 1$,$\varphi$非退化且半正定.
+	\begin{enumerate}
+		\item 对每个$1\leq p\leq n$,$\varphi^{\otimes p}$非退化且半正定.
+		\item 对任一$p\in\Z_{\geqslant 1}$,$\bigwedge\limits^{p}\varphi$非退化且半正定.
+		\item $\varphi$在$E^{\vee}$上的逆形式$\tilde{\varphi}$非退化且半正定.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{Cauchy-Buniakowsky-Schwarz不等式}{}
+	设$\varphi$半正定,则对每个$x,y\in E$有$\varphi\left(x,y\right)\overline{\varphi\left(x,y\right)}\leq\varphi\left(x,x\right)\varphi\left(y,y\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\varphi$半正定.
+	\begin{enumerate}
+		\item $E$中的$\varphi$-迷向向量组成的集合就是$E^{\circ}$.
+		\item $\varphi$是非退化的$\iff$ $\varphi$正定.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{正定半双线性型的Sylvester判定准则}{}
+	设$\dim E=n\geq 1$,$A\in\left\{K,K(\mathrm{i})\right\}$,$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$是$E$的基,$\boldsymbol{X}=\Gram_{\mathcal{B}}^{\mathcal{B}}\left(\varphi\right)$.
+	\begin{itemize}
+		\item 对每个$H\subseteq\left[1,n\right]$,记$\boldsymbol{X}_{H,H}$是去掉$\boldsymbol{X}$中行指标和列指标都不在$H$中的行和列后所得的主子式.
+		\item 对每个$1\leq j\leq n$,记$H_{j}=\left[1,j\right]$.
+	\end{itemize}
+	\begin{enumerate}
+		\item 若$\varphi$正定,则对每个$H\subseteq\llbracket 1,n\rrbracket$有$\boldsymbol{X}_{H,H}>0$.
+		\item 若对每个$j\in\llbracket 1,n\rrbracket$有$\boldsymbol{X}_{H_{j},H_{j}}>0$,则$\varphi$正定.
+	\end{enumerate}
+\end{proposition}
+
+\begin{lemma}{}{}
+	设$E_{1},E_{2}$是$m$维左$A$-向量空间(其中$m\geq 1$),$\varphi_{1},\varphi_{2}$分别是$E_{1},E_{2}$上的正定Hermite型,则$\left(E_{1},\varphi_{1}\right)\simeq\left(E_{2},\varphi_{2}\right)$.
+\end{lemma}
+
+本节接下来的内容中,作如下记号约定:
+\begin{itemize}
+	\item $L$是$n$维左$A$-仿射空间($n\geq 1$),其平移向量空间是$V$.
+	\item $\Phi\in\SHerm_{A,\rho}\left(V\right)$正定且非退化.
+	\item $\bar{d}:E\times E\to K$是度量形式.
+\end{itemize}
+
+\begin{proposition}{维数相同的仿射子空间可以被位移传递}{}
+	设$S_{1},S_{2}$是$L$的$k$维仿射子空间($0\leq k\leq n$),则存在$v\in\Disp\left(\Phi\right)$使得$u\left(S_{1}\right)=S_{2}$.
+\end{proposition}
+
+\begin{lemma}{极大有序域上度量形式的性质}{}
+	$\bar{d}$满足如下条件:
+	\begin{enumerate}
+		\item 对每个$a,b\in L$有$\bar{d}\left(a,b\right)\geq 0$;
+		\item 对每个$a,b\in L$有$\bar{d}\left(a,b\right)=0\iff a=b$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{lemma}{点对的等距全等定理}{}
+	设$\left(a_{1},b_{1}\right),\left(a_{2},b_{2}\right)\in L\times L$,则$\bar{d}\left(a_{1},b_{1}\right)=\bar{d}\left(a_{2},b_{2}\right)$ $\iff$存在$v\in\Disp\left(\Phi\right)$使得$\left(v\left(a_{1}\right),v\left(b_{1}\right)\right)=\left(a_{2},b_{2}\right)$.
+\end{lemma}
+
+\begin{definition}{极大有序域上的度量}{}
+	我们称$d:L\times L\to K,\left(a,b\right)\mapsto\sqrt{\bar{d}\left(a,b\right)}$是$L$上的度量.对每个$\left(a,b\right)\in L\times L$,称$d\left(a,b\right)$是$a$和$b$的距离.
+\end{definition}
+
+\begin{proposition}{极大有序域上度量的性质}{}
+	设$d:L\times L\to K$是$L$上的度量.
+	\begin{enumerate}
+		\item 对每个$\left(a,b\right)\in L\times L$有$d\left(a,b\right)\geq 0$.
+		\item 对每个$\left(a,b\right)\in L\times L$有$d\left(a,b\right)=0\iff a=b$.
+		\item 对每个$\left(a,b\right)\in L\times L$有$d\left(a,b\right)=d\left(b,a\right)$.
+		\item 对每个$\left(a,b,c\right)\in L\times L\times L$有$d\left(a,c\right)\leq d\left(a,b\right)+d\left(b,c\right)$.
+	\end{enumerate}
+\end{proposition}
+
+
+

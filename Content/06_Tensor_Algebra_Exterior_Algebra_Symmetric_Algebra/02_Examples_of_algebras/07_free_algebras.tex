@@ -1,0 +1,153 @@
+\section{自由代数}
+
+记号约定:$I$是集合,$A$是交换环.
+
+\begin{definition}{自由代数,自由结合代数,自由交换结合代数}{}
+	\begin{enumerate}
+		\item $A$-代数$\Lib_{A}\left(I\right)\coloneq A^{\left(\Mag\left(I\right)\right)}$称为$I$在$A$上的自由代数.
+		\item $A$-结合代数$\Libas_{A}\left(I\right)\coloneq A^{\left(\Mo\left(I\right)\right)}$称为$I$在$A$上的自由交换代数.
+		\item $A$-交换结合代数$\Libasc_{A}\left(I\right)\coloneq A^{\left(\N^{\left(I\right)}\right)}$称为$I$在$A$上的自由交换结合代数.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	存在从$I$到$\Lib_{A}\left(I\right)$(相对的,$\Libas_{A}\left(I\right),\Libasc_{A}\left(I\right)$)的典范映射,当$A$是非零环时该映射为单射.
+\end{proposition}
+
+\begin{definition}{指标为$i$的不定元}{}
+	设$\phi$是从$I$到$\Lib_{A}\left(I\right)$(相对的,$\Libas_{A}\left(I\right),\Libasc_{A}\left(I\right)$)的典范映射.
+	
+	对任一$i\in I$,称$X_{i}\coloneq\phi\left(i\right)$是$\Lib_{A}\left(I\right)$(相对的,$\Libas_{A}\left(I\right),\Libasc_{A}\left(I\right)$)的指标为$i$的不定元.
+\end{definition}
+
+\begin{proposition}{自由代数的泛性质}{}
+	设$F$是$A$-代数.对任一$f\in\Hom_{\mathsf{Set}}\left(I,F\right)$,存在唯一的$\bar{f}\in\Hom_{A-\mathsf{Alg}}\left(\Lib_{A}\left(I\right),F\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			I && {\Lib_{A}\left(I\right)} \\
+			& F
+			\arrow[from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{自由代数的泛性质}{}
+	设$F$是$A$-含幺结合代数.对任一$f\in\Hom_{\mathsf{Set}}\left(I,F\right)$,存在唯一的$\bar{f}\in\Hom_{A-\mathsf{Alg}}\left(\Libas_{A}\left(I\right),F\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			I && {\Libas_{A}\left(I\right)} \\
+			& F
+			\arrow[from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{自由代数的泛性质}{}
+	设$F$是$A$-含幺交换结合代数.对任一$f\in\Hom_{\mathsf{Set}}\left(I,F\right)$,存在唯一的$\bar{f}\in\Hom_{A-\mathsf{Alg}}\left(\Libasc_{A}\left(I\right),F\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			I && {\Libasc_{A}\left(I\right)} \\
+			& F
+			\arrow[from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{remark}{自由代数,自由结合代数,自由交换结合代数的延伸}{}
+\begin{enumerate}
+	\item 接下来的章节中,我们会证明$\Libas_{A}\left(I\right)$和$\Libasc_{A}\left(I\right)$分别同构于自由模$A^{\left(I\right)}$的张量代数和对称代数.
+	\item 设$B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,则存在典范的$B$-代数同构
+	\begin{align*}
+		\rho^{\ast}\left(\Lib_{A}\left(I\right)\right)\simeq\Lib_{B}\left(I\right),\rho^{\ast}\left(\Libas_{A}\left(I\right)\right)\simeq\Libas_{B}\left(I\right),\rho^{\ast}\left(\Libasc_{A}\left(I\right)\right)\simeq\Libasc_{B}\left(I\right).
+	\end{align*}
+	\item 对每个$J\subseteq I$,把$\Lib_{A}\left(J\right)$(相对的,$\Libas_{A}\left(J\right),\Libasc_{A}\left(J\right)$)等同于$\left\{X_{i}\middle|i\in J\right\}$生成的子代数,那么
+	\begin{align*}
+		\Lib_{A}\left(I\right)=\bigcup\limits_{J\in\fin\left(I\right)}\Lib_{A}\left(J\right),\Libas_{A}\left(I\right)=\bigcup\limits_{J\in\fin\left(I\right)}\Libas_{A}\left(J\right),\Libasc_{A}\left(I\right)=\bigcup\limits_{J\in\fin\left(I\right)}\Libasc_{A}\left(J\right).
+	\end{align*}
+	\item 对$\Lib_{A}\left(J\right)$(相对的,$\Libas_{A}\left(J\right),\Libasc_{A}\left(J\right)$)的任意元素$x=\sum\limits_{s\in S}\alpha_{s}e_{s}$,其全次数(或者简单称为次数)定义为
+	\begin{align*}
+		\min\left\{\ell\left(x\right)\middle|\alpha_{s}\neq 0\right\}.
+	\end{align*}
+	例如,对$I$中三个不相等的元素$i,j,k$,$\Lib_{A}\left(I\right)$的元素$\left(X_{i}\left(X_{j}X_{k}\right)\right)X_{i}-\left(X_{i}X_{j}\right)\left(X_{k}X_{i}\right)$非零且全次数为$4$.
+\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

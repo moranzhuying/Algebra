@@ -1,0 +1,215 @@
+\section{方阵}
+
+记号约定:$A$是环,$I,J,K,H$是集合,$E$是左(相对的,右)$A$-模.
+
+\begin{definition}{方阵}{}
+	$H^{I\times I}$的元素称$H$上的$\left(I,I\right)$-型方阵.若$\left|I\right|=n$,则称$H^{I\times I}$的元素为$n$阶方阵.当$I=\llbracket 1,n\rrbracket$时,记$\mathbf{M}_{n}\left(H\right)\coloneq H^{I\times I}$.
+\end{definition}
+
+\begin{proposition}{矩阵环}{}
+	若集合$I$有限,则$H^{I\times I}$是环,其幺元为$\boldsymbol{I}=\left(\delta_{iij}\right)_{i\in I,j\in J}$.
+\end{proposition}
+
+\begin{definition}{一般线性群}{}
+	我们称$\GL_{n}\left(A\right)\coloneq\left(\mathbf{M}_{n}\left(A\right)\right)^{\times}$为一般线性群.
+\end{definition}
+
+\begin{proposition}{矩阵单边可逆和线性方程组的关系}{}
+	设$\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$是$A$上的矩阵.
+	\begin{enumerate}
+		\item $\boldsymbol{A}$左可逆$\iff$对$A$的每个元素族$\left(b_{i}\right)_{i=1}^{n}$,线性方程组$\sum\limits_{j=1}^{n}x_{j}a_{i,j}=b_{i}\left(1\leq i\leq n\right)$在$A^{n}$中有唯一解.
+		\item $\boldsymbol{A}$右可逆$\iff$对$A$的每个元素族$\left(b_{i}\right)_{i=1}^{n}$,线性方程组$\sum\limits_{j=1}^{n}a_{i,j}x_{j}=b_{i}\left(1\leq i\leq n\right)$在$A^{n}$中有唯一解.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{自同态的表示矩阵}{}
+	设集合$I$有限,$f\in\End_{A}\left(E\right)$,$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}$是$E$的基.称$\left[f\right]_{\mathcal{B}}^{\mathcal{B}}$是$f$在$\mathcal{B}$下的表示矩阵.
+\end{definition}
+
+\begin{proposition}{矩阵环和自同态环的同构}{}
+	设$I=\llbracket 1,n\rrbracket$,$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$是$E$的基.
+	\begin{enumerate}
+		\item 若$E$是左$A$-模,则$\mathcal{M}_{\mathcal{B}}:\End_{A}\left(E\right)\to\left(\mathbf{M}_{n}\left(A\right)\right)^{\op},f\mapsto\left(\left[f\right]_{\mathcal{B}}^{\mathcal{B}}\right)^{\top}$是环同构.
+		\item 若$E$是有$A$-模,则$\mathcal{M}_{\mathcal{B}}:\End_{A}\left(E\right)\to\left(\mathbf{M}_{n}\left(A\right)\right)^{\op},f\mapsto\left[f\right]_{\mathcal{B}}^{\mathcal{B}}$是环同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{一般线性群和自由模的一般线性群同构}{}
+	$\GL_{n}\left(A\right)$典范同构于$\GL\left(A_{d}^{n}\right)$.
+\end{corollary}
+
+\begin{proposition}{反变同构的表示矩阵}{}
+	设集合$I$有限,$f\in\Aut_{A}\left(E\right)$,$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}$是$E$的基,$\mathcal{B}^{\ast}\coloneq\left(e_{i}^{\ast}\right)_{i\in I}$是$\mathcal{B}$的对偶基,则
+	\begin{align*}
+		\left[\check{f}\right]_{\mathcal{B}^{\ast}}^{\mathcal{B}^{\ast}}=\left(\left(\left[f\right]_{\mathcal{B}}^{\mathcal{B}}\right)^{\top}\right)^{-1}=\left(\left[f^{-1}\right]_{\mathcal{B}}^{\mathcal{B}}\right)^{\top}.
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{转置和取逆可交换}{}
+	若$\boldsymbol{X}\in A^{I\times I}$可逆,则$\left(\boldsymbol{X}^{-1}\right)^{\top}=\left(\boldsymbol{X}^{\top}\right)^{-1}$.
+\end{corollary}
+
+\begin{definition}{反变矩阵}{}
+	若$\boldsymbol{X}\in A^{I\times I}$可逆,则称$\left(\boldsymbol{X}^{\top}\right)^{-1}$是$\boldsymbol{X}$的反变矩阵.
+\end{definition}
+
+\begin{proposition}{半线性映射的矩阵}{}
+	设$\sigma\in\Aut_{\mathsf{Ring}}\left(A\right)$,$E$是右$A$-模,$f\in\Aut_{A}\left(E\right)$是关于$\sigma$的半线性映射,$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}$是$E$的基,则$\left[f^{-1}\right]_{\mathcal{B}}^{\mathcal{B}}=\left(\left(\left[f\right]_{\mathcal{B}}^{\mathcal{B}}\right)^{\sigma}\right)^{-1}.$
+\end{proposition}
+
+\begin{proposition}{直和分解和上三角化,对角化的关系}{}
+	设集合$I$有限,$\mathcal{E}\coloneq\left(E_{i}\right)_{i\in I}$是$E$的一族子模,$E=\bigoplus\limits_{i\in I}E_{i}$,$f\in\End_{A}\left(E\right)$且$\left[f\right]_{\mathcal{E},\mathcal{E}}=\left(f_{j,i}\right)_{j\in I,i\in I}$.
+	\begin{enumerate}
+		\item $\left(E_{i}\right)_{i\in I}$是一族在$f$下不变的子模$\iff$ $\forall i,j\in I\left(i\neq j\implies f_{j,i}=0\right)$.
+		\item 若$I=\llbracket 1,n\rrbracket$,则$\forall 1\leq i\leq n\left(f\left(E_{i}\right)\subseteq\bigoplus\limits_{i\leq j\leq n}E_{j}\right)$ $\iff$ $\forall i,j\in I\left(i>j\implies f_{j,i}=0\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\subsubsection*{方阵的例子:对角矩阵}
+
+\begin{definition}{对角元,对角线,对角矩阵}{}
+	设$\boldsymbol{A}\coloneq\left(a_{ij}\right)_{i\in I,j\in I}$是$A$上的矩阵.
+	\begin{enumerate}
+		\item 我们称$\left(a_{ii}\right)_{i\in I}$是$\boldsymbol{A}$的对角线,其元素称为$\boldsymbol{A}$的对角元.
+		\item 若$\forall i,j\in I\left(i\neq j\implies a_{ij}=0\right)$,则称$\boldsymbol{A}$是对角矩阵.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	给定$A$中的元素族$\left(a_{i}\right)_{i\in I}$,$A$中对角线是$\left(a_{i}\right)$的矩阵记作$\diag\left(a_{i}\right)_{i\in I}$.当$I=\llbracket 1,n\rrbracket$时,将其记作$\diag\left(a_{1},\ldots,a_{n}\right)$.定义
+	\begin{align*}
+		\mathfrak{d}_{n}\left(A\right)\coloneq\left\{\diag\left(d_{1},\ldots,d_{n}\right)\in\mathbf{M}_{n}\left(A\right)\middle|d_{1},\ldots,d_{n}\in A\right\}.
+	\end{align*}
+\end{remark}
+
+\begin{definition}{标量矩阵}{}
+	设$\boldsymbol{A}\in\mathbf{M}_{n}\left(A\right)$.若$\exists a\in A\left(\boldsymbol{A}=\diag\left(a,\ldots,a\right)\right)$,则称$\boldsymbol{A}$是标量矩阵.
+\end{definition}
+
+\begin{proposition}{对角矩阵和一般矩阵的乘积}{}
+	设$\boldsymbol{D}\coloneq\diag\left(d_{1},\ldots,d_{n}\right)$是$A$上的矩阵.
+	\begin{enumerate}
+		\item 若$\boldsymbol{X}\coloneq\left(x_{i,j}\right)_{\substack{1\leqslant i\leqslant n\\1\leqslant j\leqslant m}}$是$A$上矩阵,则$\boldsymbol{D}\boldsymbol{X}=\left(d_{i}x_{i,j}\right)_{\substack{1\leqslant i\leqslant n\\1\leqslant j\leqslant m}}$.
+		\item 设$\boldsymbol{X}\coloneq\left(x_{i,j}\right)_{\substack{1\leqslant i\leqslant m\\1\leqslant j\leqslant n}}$是$A$上的矩阵,则$\boldsymbol{X}\boldsymbol{D}=\left(x_{i,j}d_{j}\right)_{\substack{1\leqslant i\leqslant m\\1\leqslant j\leqslant n}}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{对角矩阵的和与乘积}{}
+	设$\boldsymbol{A}\coloneq\diag\left(a_{1},\ldots,a_{n}\right),\boldsymbol{B}\coloneq\diag\left(b_{1},\ldots,b_{n}\right)$是$A$上的矩阵,则
+	\begin{align*}
+		\boldsymbol{A}+\boldsymbol{B}=\diag\left(a_{1}+b_{1},\ldots,a_{n}+b_{n}\right),\boldsymbol{A}\boldsymbol{B}=\diag\left(a_{1}b_{1},\ldots,a_{n}b_{n}\right).
+	\end{align*}
+\end{corollary}
+
+\begin{proposition}{对角矩阵环是$\mathbf{M}_{n}\left(A\right)$的同构于$A^{n}$的子环,标量矩阵环是对角矩阵环的同构于$A$的子环}{}
+	\begin{enumerate}
+		\item $\mathfrak{d}_{n}\left(A\right)$是$\mathbf{M}_{n}\left(A\right)$的子环,并且同构于$A^{n}$.
+		\item $A\boldsymbol{I}_{n\times n}$是$\mathfrak{d}_{n}\left(A\right)$的子环,并且同构于$A$.
+	\end{enumerate}
+\end{proposition}
+
+\subsubsection*{方阵的例子:置换矩阵,单项矩阵}
+
+\begin{definition}{置换矩阵}{}
+	设集合$I$有限,$\sigma$是$I$上的置换,$E=A_{d}^{I}$的典范基是$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}$.定义$u_{\sigma}\in\End_{A}\left(E\right)$如下:
+	\begin{align*}
+		\forall i\in I\left(u_{\sigma}\left(e_{i}\right)=e_{\sigma\left(i\right)}\right).
+	\end{align*}
+	我们称$\boldsymbol{P}_{\sigma}\coloneq\left[u_{\sigma}\right]_{\mathcal{B}}^{\mathcal{B}}$为$\sigma$诱导的置换矩阵.
+\end{definition}
+
+\begin{definition}{置换矩阵群}{}
+	设集合$I$有限.定义$P_{I}\left(A\right)\coloneq\left\{\boldsymbol{P}_{\sigma}\in A^{I\times I}\middle|\sigma\in\mathfrak{S}_{I}\right\}$,当$I=\llbracket 1,n\rrbracket$时,记$P_{n}\left(A\right)\coloneq P_{I}\left(A\right)$.
+\end{definition}
+
+\begin{proposition}{置换矩阵群同构于置换群}{}
+	设集合$I$有限,则$P_{I}\left(A\right)$按矩阵乘法构成群,并且同构于$\mathfrak{S}_{I}$.
+\end{proposition}
+
+\begin{definition}{单项矩阵}{}
+	设$A$是非零环,集合$I$有限,$\boldsymbol{R}\in A^{I\times I}$是置换矩阵.若$\boldsymbol{R}$的每一行和每一列都只有一个元素$\neq 0$,则称$\boldsymbol{R}$是单项矩阵.
+\end{definition}
+
+\begin{proposition}{单项矩阵的分解}{}
+	设$A$是非零环,设集合$I$有限对$A$上的每个$\left(I,I\right)$-型单项矩阵$\boldsymbol{R}$,存在唯一的$\sigma\in\mathfrak{S}_{I}$和$A\setminus\left\{0\right\}$中的元素族$\left(r_{i}\right)_{i\in I}$使
+	\begin{align*}
+		\boldsymbol{R}=\boldsymbol{P}_{\sigma}\diag\left(r_{i}\right)_{i\in I}.
+	\end{align*}
+\end{proposition}
+
+\subsubsection*{方阵的例子:三角矩阵}
+
+\begin{definition}{上三角矩阵,下三角矩阵}{}
+	设$\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$是$A$上的矩阵.
+	\begin{enumerate}
+		\item 若$\forall 1\leq i,j\leq n\left(i>j\implies a_{ij}=0\right)$,则称$\boldsymbol{A}$是上三角矩阵(或$\boldsymbol{A}$的对角线下只有$0$).
+		\item 若$\forall 1\leq i,j\leq n\left(i<j\implies a_{ij}=0\right)$,则称$\boldsymbol{A}$是下三角矩阵(或$\boldsymbol{A}$的对角线上只有$0$).
+	\end{enumerate}
+	定义$\mathfrak{b}_{n}\left(A\right)=\left\{\boldsymbol{X}\in\mathbf{M}_{n}\left(A\right)\middle|\boldsymbol{X}\text{是上三角矩阵}\right\},\mathfrak{b}_{n}^{-}\left(A\right)=\left\{\boldsymbol{X}\in\mathbf{M}_{n}\left(A\right)\middle|\boldsymbol{X}\text{是下三角矩阵}\right\}$.
+\end{definition}
+
+\begin{proposition}{上三角矩阵和下三角矩阵是各自组成的集合是$n$阶方阵环的子环}{}
+	$\mathfrak{b}_{n}\left(A\right),\mathfrak{b}_{n}^{-}\left(A\right)$都是$\mathbf{M}_{n}\left(A\right)$的子环,并且$\mathfrak{b}_{n}\left(A\right)\cap \mathfrak{b}_{n}^{-}\left(A\right)=\mathfrak{d}_{n}\left(A\right)$.
+\end{proposition}
+
+\begin{definition}{上(下)完全三角矩阵}{}
+	设$\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$是$A$上的矩阵,$\boldsymbol{A}$的对角元都可逆.
+	\begin{enumerate}
+		\item 若$\boldsymbol{A}\in T_{n}\left(A\right)$,则称$\boldsymbol{A}$是上完全三角矩阵.
+		\item 若$\boldsymbol{A}\in L_{n}\left(A\right)$,则称$\boldsymbol{A}$是下完全三角矩阵.
+	\end{enumerate}
+	定义$B_{n}\left(A\right)=\left\{\boldsymbol{X}\in \mathfrak{b}_{n}\left(A\right)\middle|\boldsymbol{X}\text{是上完全三角矩阵}\right\},B_{n}^{-}\left(A\right)=\left\{\boldsymbol{X}\in \mathfrak{b}_{n}^{-}\left(A\right)\middle|\boldsymbol{X}\text{是下完全三角矩阵}\right\}$.
+\end{definition}
+
+\begin{proposition}{}{}
+	$B_{n}\left(A\right),B_{n}^{-}\left(A\right)$按矩阵的乘法构成群.
+\end{proposition}
+
+\begin{definition}{严格上(下)三角矩阵}{}
+	设$\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$是$A$上的矩阵,$\boldsymbol{A}$的对角元都是$1$.
+	\begin{enumerate}
+		\item 若$\boldsymbol{A}\in T_{n}\left(A\right)$,则称$\boldsymbol{A}$是严格上三角矩阵.
+		\item 若$\boldsymbol{A}\in L_{n}\left(A\right)$,则称$\boldsymbol{A}$是严格下三角矩阵.
+	\end{enumerate}
+	定义$N_{n}\left(A\right)=\left\{\boldsymbol{X}\in \mathfrak{b}_{n}\left(A\right)\middle|\boldsymbol{X}\text{是严格上三角矩阵}\right\},N_{n}^{-}\left(A\right)=\left\{\boldsymbol{X}\in \mathfrak{b}_{n}^{-}\left(A\right)\middle|\boldsymbol{X}\text{是严格下三角矩阵}\right\}$.
+\end{definition}
+
+\begin{proposition}{}{}
+	$N_{n}\left(A\right),N_{n}^{-}\left(A\right)$分别$\mathfrak{b}_{n}\left(A\right),\mathfrak{b}_{n}^{-}\left(A\right)$的子群.
+\end{proposition}
+
+\begin{definition}{上(下)完全三角矩阵群,严格上(下)三角矩阵群}{}
+	\begin{enumerate}
+		\item $\mathfrak{b}_{n}\left(A\right)$(相对的,$\mathfrak{b}_{n}^{-}\left(A\right)$)称为上(相对的,下)完全三角矩阵群.
+		\item $N_{n}\left(A\right)$(相对的,$N_{n}^{-}\left(A\right)$)称为严格上(相对的,下)三角矩阵群.
+	\end{enumerate}
+\end{definition}
+
+\subsubsection*{方阵的例子:分块对角矩阵和分块三角矩阵}
+
+设集合$I$有限,$\mathcal{I}\coloneq\left(I_{k}\right)_{k=1}^{p}$是$I$的划分,$\psi:A^{I\times I}\to\prod\limits_{1\leq s,t\leq p}A^{\left|I_{s}\right|\times\left|I_{t}\right|}$是典范双射.
+
+\begin{definition}{分块对角矩阵}{}
+	设$\boldsymbol{X}\in A^{I\times I},\psi\left(\boldsymbol{X}\right)=\left(\boldsymbol{X}_{s,t}\right)_{\substack{1\leq s\leq p\\1\leq t\leq p}}$.
+	\begin{enumerate}
+		\item 若$\forall 1\leq s,t\leq p\left(s>t\implies\boldsymbol{X}_{s,t}=\boldsymbol{O}_{I_{s}\times I_{t}}\right)$,则称$\boldsymbol{X}$相对$\mathcal{I}$是分块上三角矩阵.
+		\item 若$\forall 1\leq s,t\leq p\left(s<t\implies\boldsymbol{X}_{s,t}=\boldsymbol{O}_{I_{s}\times I_{t}}\right)$,则称$\boldsymbol{X}$相对$\mathcal{I}$是分块下三角矩阵.
+		\item 若$\forall 1\leq s,t\leq p\left(s\neq t\implies\boldsymbol{X}_{s,t}=\boldsymbol{O}_{I_{s}\times I_{t}}\right)$,则称$\boldsymbol{X}$相对$\mathcal{I}$是分块对角矩阵.
+	\end{enumerate}
+	$A^{I\times I}$中相对$\mathcal{I}$是分块上三角(相对的,下三角,对角)矩阵的矩阵组成的集合记作$\mathcal{B}_{\mathcal{I}}\left(A\right)$(相对的,$\mathcal{B}_{\mathcal{I}}^{-}\left(A\right),\mathcal{D}_{\mathcal{I}}\left(A\right)$).
+\end{definition}
+
+\begin{proposition}{}{}
+	$\mathcal{B}_{\mathcal{I}}\left(A\right),\mathcal{B}_{\mathcal{I}}^{-}\left(A\right),\mathcal{D}_{\mathcal{I}}\left(A\right)$是$A^{I\times I}$的子环,$\mathcal{B}_{\mathcal{I}}\left(A\right)\cap\mathcal{B}_{\mathcal{I}}^{-}\left(A\right)=\mathcal{D}_{\mathcal{I}}\left(A\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E$的子模族$\left(E_{k}\right)_{k=1}^{p}$满足$\forall 1\leq k\leq p\left(\End_{A}\left(E_{k}\right)\simeq A^{I_{k}\times I_{k}}\right)$,则$\mathcal{D}_{\mathcal{I}}\left(A\right)\simeq\prod\limits_{k=1}^{p}\End_{A}\left(E_{k}\right)$.
+\end{proposition}
+
+
+
+
+
+
+

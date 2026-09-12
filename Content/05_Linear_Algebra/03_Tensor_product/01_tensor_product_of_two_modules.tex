@@ -1,0 +1,107 @@
+\chapter{张量积}
+
+\section{两个模的张量积}
+
+
+记号约定:$A$是环,$E$是右$A$-模,$F$是左$A$-模,$G$是$\Z$-模.
+
+\begin{definition}{$\Z$-双线性映射}{}
+	设$G_{1},G_{2}$是$\Z$-模,$f\in\Hom_{\mathsf{Set}}\left(G_{1}\times G_{2},G\right)$.如下条件成立时,称$f$为$\Z$-双线性映射:
+	\begin{enumerate}
+		\item 对任一$x\in G_{1},f\left(x,-\right)$是$\Z$-线性映射;
+		\item 对任一$y\in G_{2},f\left(-,y\right)$是$\Z$-线性映射.
+	\end{enumerate}
+	进一步,若对任一$a\in A,x\in M,y\in N$,有$\left(xa\right)\otimes_{A}y=x\otimes_{A}\left(ay\right)$,则称$f$是$\Z$-平衡的.
+\end{definition}
+
+\begin{definition}{两个模的张量积}{}
+	设$C=\Z^{\oplus\left(M\times N\right)}$.考虑$D=\langle C_{1}\cup C_{2}\cup C_{3}\rangle$,其中
+	\begin{gather*}
+		C_{1}=\left\{\left(x_{1}+x_{2},y\right)-\left(x_{1},y\right)-\left(x_{2},y\right)\middle|x_{1},x_{2}\in M,y\in N\right\},\\
+		C_{2}=\left\{\left(x,y_{1}+y_{2}\right)-\left(x,y_{1}\right)-\left(x,y_{2}\right)\middle|x\in M,y_{1},y_{2}\in N\right\},\\
+		C_{3}=\left\{\left(x\lambda,y\right)-\left(x,\lambda y\right)\middle|x\in M,y\in N,\lambda\in A\right\}.
+	\end{gather*}
+	我们称商$\Z$-模$M\otimes_{A}N\coloneq C/D$为$M$和$N$在$A$上的张量积.对诸$x\in M,y\in N$,称$x\otimes_{A}y\coloneq\left(x,y\right)+D$为$x$和$y$的张量积.
+	
+	记典范映射为$\otimes_{A}:M\times N\twoheadrightarrow M\otimes_{A}N,\left(x,y\right)\mapsto x\otimes y$,它是$\Z$-双线性映射.
+\end{definition}
+
+\begin{remark}{}{}
+	典范$\Z$-双线性映射$\otimes_{A}$是$A$-平衡的.
+\end{remark}
+
+\begin{proposition}{张量积的泛性质}{}
+	\begin{enumerate}
+		\item 设$g\in\Hom_{\Z}\left(E\otimes_{A}F,G\right)$,则$f:E\times F\to G,\left(x,y\right)\mapsto g\left(x\otimes y\right)$是$A$-平衡的.
+		\item 设$f\in\Hom_{\Z}\left(E\times F,G\right)$是$A$-平衡的,则下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				{E\times F} && {E\otimes_{A}F} \\
+				& G
+				\arrow["{\otimes_{A}}", two heads, from=1-1, to=1-3]
+				\arrow["f"', from=1-1, to=2-2]
+				\arrow["{\exists!g}", dashed, from=1-3, to=2-2]
+				\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	记$\mathscr{E}$是$E\times F$到$G$的$A$-平衡映射组成的集合,则存在典范同构$\mathscr{E}\to\Hom_{\Z}\left(E\otimes_{A}F,G\right)$.
+\end{corollary}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$A=\Z$时,双线性映射当然是$\Z$-平衡映射,因此构造张量积的时只需让$D=\langle C_{1}\cup C_{2}\rangle$.
+		\item 回到一般的情形.设$E^{\prime},F^{\prime}$分别是$E,F$的底$\Z$-模.令
+		\begin{align*}
+			D^{\prime}=\langle\left\{\left(xa\right)\otimes y-x\otimes\left(ay\right)\middle|x\in E,y\in F,a\in A\right\}\rangle,
+		\end{align*}
+		则$\Z$-模可以典范等同于商模$\left(E^{\prime}\otimes_{A}F^{\prime}\right)/D^{\prime}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{corollary}{张量积在同构意义下的唯一性}{}
+	设$h:E\times F\to G$是$A$-平衡映射,$G=\langle\im\left(h\right)\rangle$.若对诸$\Z$-模$H$和$A$-平衡映射$f:E\times F\to H$,下图都交换:
+	\begin{center}
+		\begin{tikzcd}
+			{E\times F} && G \\
+			& H
+			\arrow["f", from=1-1, to=1-3]
+			\arrow["h"', from=1-1, to=2-2]
+			\arrow["\exists g", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+	那么,存在唯一的$\Z$-模同构$\theta:E\otimes_{A}F\to H$使下图交换:
+	\begin{center}
+		\begin{tikzcd}
+			{E\times F} && {E\otimes_{A}F} \\
+			& H
+			\arrow["{\otimes_{A}}", two heads, from=1-1, to=1-3]
+			\arrow["h"', from=1-1, to=2-2]
+			\arrow["{\exists!\theta}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{corollary}{张量积的反环结构}{}
+	存在唯一的$f\in\Hom_{\Z}\left(E\otimes_{A}F,F^{\op}\otimes_{A^{\op}}E^{\op}\right)$使下图交换(其中,$\tau$是典范双射).
+	\begin{center}
+		\begin{tikzcd}
+			{E\times F} && {E\otimes_{A}F} \\
+			\\
+			{F^{\op}\times E^{\op}} && {F^{\op}\otimes_{A^{\op}}E^{\op}}
+			\arrow["{\otimes_{A}}", from=1-1, to=1-3]
+			\arrow["\tau"', equals, from=1-1, to=3-1]
+			\arrow["{\exists!f}", dashed, from=1-3, to=3-3]
+			\arrow["{\otimes_{A^{\op}}}"', from=3-1, to=3-3]
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{remark}{非零模的张量积可能为零}{}
+	两个非零模的张量积可能为零.例如,当$E=\left(\Z/2\Z\right),F=\Z/3\Z$时,对诸$x\in E$有$2x=0$,对诸$y\in F$有$3y=0$.
+	
+	
+	于是,对诸$x\in E,y\in F$,有$x\otimes y=3\left(x\otimes y\right)-2\left(x\otimes y\right)=x\otimes\left(3y\right)-\left(2x\right)\otimes y=x\otimes 0-0\otimes x=0$.
+\end{remark}

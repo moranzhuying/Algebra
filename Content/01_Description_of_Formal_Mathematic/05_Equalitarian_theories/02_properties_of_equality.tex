@@ -1,0 +1,38 @@
+\section{等号的性质}
+
+自本节起,我们仅讨论等号理论.设$\mathcal{T}$为一个等号理论,$\mathcal{T}_{0}$为没有非逻辑公理的等号理论.
+
+\begin{theorem}{等号的自反性}{}
+	$\boldsymbol{x}=\boldsymbol{x}$是$\mathcal{T}_{0}$的定理.
+\end{theorem}
+
+\begin{corollary}{等号自反性的推广}{}
+	\begin{enumerate}
+		\item (全称量化自反律)$\forall\boldsymbol{x}\left(\boldsymbol{x}=\boldsymbol{x}\right)$是$\mathcal{T}_{0}$的定理.
+		\item (项的自反性)若$\boldsymbol{T}$是$\mathcal{T}_{0}$的项,则$\boldsymbol{T}=\boldsymbol{T}$是$\mathcal{T}_{0}$的定理.
+	\end{enumerate}
+\end{corollary}
+
+\begin{theorem}{等号的对称性}{}
+	$\left(\boldsymbol{x}=\boldsymbol{y}\right)\iff\left(\boldsymbol{y}=\boldsymbol{x}\right)$是$\mathcal{T}_{0}$的定理.
+\end{theorem}
+
+\begin{theorem}{等号的传递性}{}
+	$\left(\boldsymbol{x}=\boldsymbol{y}\wedge\boldsymbol{y}=\boldsymbol{z}\right)\implies\left(\boldsymbol{x}=\boldsymbol{z}\right)$是$\mathcal{T}_{0}$的定理.
+\end{theorem}
+
+\begin{metatheorem}{项的代入保持等号}{}
+	设$\boldsymbol{x}$是一个字母,$\boldsymbol{T},\boldsymbol{U}$和含$\boldsymbol{x}$的表达式$\boldsymbol{V}\left\{\boldsymbol{x}\right\}$均为$\mathcal{T}_{0}$中的项,则$\left(\boldsymbol{T}=\boldsymbol{U}\right)\implies\left(\boldsymbol{V}\left\{\boldsymbol{T}\right\}=\boldsymbol{V}\left\{\boldsymbol{U}\right\}\right)$是$\mathcal{T}_{0}$中的定理.
+\end{metatheorem}
+
+\begin{definition}{方程,方程的解}{}
+	设$\boldsymbol{T}$和$\boldsymbol{U}$是理论$\mathcal{T}$中的项.形式为$\boldsymbol{T}=\boldsymbol{U}$的表达式称为\textbf{方程}.设该方程包含变量$\boldsymbol{x}$(写作$\boldsymbol{T}\left\{\boldsymbol{x}\right\}=\boldsymbol{U}\left\{\boldsymbol{x}\right\}$).若在$\boldsymbol{T}$中存在一个项$\boldsymbol{V}$,使得$\boldsymbol{T}\left\{\boldsymbol{U}\right\}=\boldsymbol{T}\left\{\boldsymbol{V}\right\}$是$\mathcal{T}$中的定理,则称项$\boldsymbol{V}$是方程 $\boldsymbol{T}=\boldsymbol{U}$关于字母$\boldsymbol{x}$的一个解.
+\end{definition}
+
+\begin{definition}{可化为某种形式}{}
+	设$\boldsymbol{T}$和$\boldsymbol{U}$是理论$\mathcal{T}$中的两个项,$\boldsymbol{x}_{1},\ldots,\boldsymbol{x}_{n}$是所有在$\boldsymbol{T}$中出现,但未在$\boldsymbol{U}$中出现的字母.若$\exists\boldsymbol{x}_{1}\ldots\exists\boldsymbol{x}_{n}\left(\boldsymbol{T}=\boldsymbol{U}\right)$在$\mathcal{T}$中可证,则称项$\boldsymbol{U}$在$\mathcal{T}$中可化为形式$\boldsymbol{T}$(或$\boldsymbol{U}$具有形式$\boldsymbol{T}$).
+\end{definition}
+
+\begin{definition}{通解}{}
+	设$\boldsymbol{R}\left\{\boldsymbol{y}\right\}$是理论$\mathcal{T}$中关于变量$\boldsymbol{y}$的一个公式,$\boldsymbol{V}$是该公式在$\mathcal{T}$中的一个已知解.若$\boldsymbol{R}\left\{\boldsymbol{y}\right\}$在$\mathcal{T}$中均可化为形式$\boldsymbol{V}$,则称项$\boldsymbol{V}$是$\boldsymbol{R}\left\{\boldsymbol{y}\right\}$在$\mathcal{T}$中的通解.
+\end{definition}

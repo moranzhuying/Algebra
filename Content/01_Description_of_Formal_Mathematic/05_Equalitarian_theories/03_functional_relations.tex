@@ -1,0 +1,45 @@
+\section{函数性关系}
+
+\begin{definition}{至多存在一个}{at-most-one}
+	设$\boldsymbol{R}$是一个公式,$\boldsymbol{x}$是一个字母,$\boldsymbol{y}$和$\boldsymbol{z}$是两个互不相同,均未在$\boldsymbol{R}$中出现过且不同于$\boldsymbol{x}$的字母.定义公式``至多存在一个$\boldsymbol{x}$满足$\boldsymbol{R}$''为公式$\forall\boldsymbol{y}\forall\boldsymbol{z}\left(\left(\boldsymbol{y}|\boldsymbol{x}\right)\boldsymbol{R}\wedge\left(\boldsymbol{z}|\boldsymbol{x}\right)\boldsymbol{R}\implies\boldsymbol{y}=\boldsymbol{z}\right)$的缩写.
+\end{definition}
+
+\begin{definition}{单值公式}{}
+	记号同定义(\ref{def:at-most-one}).若公式``至多存在一个$\boldsymbol{x}$满足$\boldsymbol{R}$''是$\mathcal{T}$中的一个定理,则称公式$\boldsymbol{R}$在$\mathcal{T}$中关于$\boldsymbol{x}$是单值的.
+\end{definition}
+
+\begin{metatheorem}{单值关系的判定与性质}{}
+	设$\boldsymbol{R}$是理论$\mathcal{T}$中的公式,字母$\boldsymbol{x}$不是$\mathcal{T}$的常元.
+	\begin{enumerate}
+		\item 若$\boldsymbol{R}$在$\mathcal{T}$中关于$\boldsymbol{x}$是单值的,则$\boldsymbol{R}\implies\left(\boldsymbol{x}=\tau_{\boldsymbol{x}}\left(\boldsymbol{R}\right)\right)$是$\mathcal{T}$中的定理.
+		\item 若$\mathcal{T}$中存在一个不包含变量$\boldsymbol{x}$的项$\boldsymbol{T}$,使得$\boldsymbol{R}\implies\left(\boldsymbol{x}=\boldsymbol{T}\right)$是$\mathcal{T}$中的定理,则$\boldsymbol{R}$在$\mathcal{T}$中关于$\boldsymbol{x}$是单值的.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{definition}{存在且唯一}{exist-exactly-one}
+	设$\boldsymbol{R}$是一个公式,$\boldsymbol{x}$是一个字母.定义公式$\exists!\boldsymbol{x}\boldsymbol{R}$为公式$\exists\boldsymbol{x}\boldsymbol{R}\wedge\left(\text{至多存在一个}\boldsymbol{x}\text{满足}\boldsymbol{R}\right)$的缩写,读作``存在唯一一个$\boldsymbol{x}$使得$\boldsymbol{R}$成立''.
+\end{definition}
+
+\begin{definition}{函数性公式}{}
+	记号同定义(\ref{def:exist-exactly-one}),若$\exists!\boldsymbol{x}\boldsymbol{R}$是$\mathcal{T}$的定理,则称$\boldsymbol{R}$在$\mathcal{T}$中关于$\boldsymbol{x}$是函数型的.
+\end{definition}
+
+\begin{metatheorem}{函数性关系的判定与性质}{}
+	设$\boldsymbol{R}$是理论$\mathcal{T}$中的公式,字母$\boldsymbol{x}$不是$\mathcal{T}$的常元.
+	\begin{enumerate}
+		\item 若$\boldsymbol{R}$在$\mathcal{T}$中关于$\boldsymbol{x}$是函数性的,则$\boldsymbol{R}\iff\left(\boldsymbol{x}=\tau_{\boldsymbol{x}}\left(\boldsymbol{R}\right)\right)$是$\mathcal{T}$的定理.
+		\item 若$\mathcal{T}$中存在一个不包含$\boldsymbol{x}$的项$\boldsymbol{T}$,使得$\boldsymbol{R}\iff\left(\boldsymbol{x}=\boldsymbol{T}\right)$是$\mathcal{T}$的定理,则$\boldsymbol{R}$在$\mathcal{T}$中关于$\boldsymbol{x}$是函数性的.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{definition}{函数性符号}{}
+	设公式$\boldsymbol{R}$在$\mathcal{T}$中关于$\boldsymbol{x}$是函数性的.在实际数学中,为了书写和推导的简便,我们通常会引入一个缩写符号$\Sigma$来代表项$\tau_{\boldsymbol{x}}\left(\boldsymbol{R}\right)$,这个新引入的符号$\Sigma$称为$\mathcal{T}$中的一个函数性符号.
+\end{definition}
+
+\begin{metatheorem}{唯一存在性下的项代入定理}{}
+	设字母$\boldsymbol{x}$不是$\mathcal{T}$的常元,$\boldsymbol{R}\left\{\boldsymbol{x}\right\}$和$\boldsymbol{S}\left\{\boldsymbol{x}\right\}$是$\mathcal{T}$的公式.若$\boldsymbol{R}\left\{\boldsymbol{x}\right\}$在$\mathcal{T}$中关于$\boldsymbol{x}$是函数性的,则
+	\begin{align*}
+		\exists\boldsymbol{x}\left(\boldsymbol{R}\left\{\boldsymbol{x}\right\}\wedge\boldsymbol{S}\left\{\boldsymbol{x}\right\}\right)\boldsymbol{S}\left\{\tau_{\boldsymbol{x}}\left(\boldsymbol{R}\right)\right\}\iff\exists\boldsymbol{x}\left(\boldsymbol{R}\left\{\boldsymbol{x}\right\}\wedge\boldsymbol{S}\left\{\boldsymbol{x}\right\}\right)
+	\end{align*}
+	是$\mathcal{T}$的定理.
+\end{metatheorem}

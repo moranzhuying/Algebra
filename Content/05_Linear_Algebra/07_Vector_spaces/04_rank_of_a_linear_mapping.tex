@@ -1,0 +1,40 @@
+\section{线性映射的秩}
+
+记号约定:$K$是除环,$E,F$是左$K$-向量空间,$f\in\Hom_{K}\left(E,F\right),n\in\N$.
+
+\begin{definition}{线性映射的秩和零化度}{}
+	我们称$\rank\left(f\right)\coloneq\dim\im\left(f\right)$为$f$的秩,称$\nul\left(f\right)\coloneq\dim\ker\left(f\right)$为$f$的零化度.
+\end{definition}
+
+\begin{proposition}{线性映射的秩的恒等式}{}
+	\begin{enumerate}
+		\item $\rank\left(f\right)=\codim_{E}\ker\left(f\right)$.
+		\item (秩-零化度定理)$\rank\left(f\right)+\nul\left(f\right)=\dim E$.
+		\item $\rank\left(f\right)+\dim\coker\left(f\right)=\dim F$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $\rank\left(f\right)\leq\inf\left\{\dim E,\dim F\right\}$.
+		\item 若$E$是有限维的,则$\rank\left(f\right)=\dim E$ $\iff$ $f$是单射.
+		\item 若$F$是有限维的,则$\rank\left(f\right)=\dim F$ $\iff$ $f$是满射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$E$是$n$维$K$-向量空间,$u\in\End_{K}\left(E\right)$,则
+	\begin{center}
+		$u$是单射$\iff$ $u$是满射$\iff$ $u$是双射$\iff$ $u$左可逆$\iff$ $u$右可逆$\iff$ $\rank\left(f\right)=n$.
+	\end{center}
+\end{corollary}
+
+\begin{remark}{}{}
+	当$E$是无限维向量空间时,$E$上存在是单射但不是满射的自同态.
+\end{remark}
+
+\begin{definition}{半线性映射的秩}{}
+	设$K^{\prime}$是除环,$E^{\prime}$是$K^{\prime}$-向量空间,$\sigma\in\Isom_{\mathsf{Ring}}\left(K,K^{\prime}\right),u\in\Hom_{K}\left(E,\sigma_{\ast}\left(E^{\prime}\right)\right)$.称$\dim\im\left(u\right)$为$u$的秩.
+\end{definition}
+
+

@@ -1,0 +1,77 @@
+\section{半线性映射的矩阵}
+
+记号约定:
+
+\begin{itemize}
+	\item $A,B,C$是环,$\sigma\in\Hom_{\mathsf{Ring}}\left(A,B\right),\tau\in\Hom_{\mathsf{Ring}}\left(B,C\right)$.
+	\item $E,F,G$都是左(相对的,右)$A$-模,各自的基是$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I},\mathcal{C}\coloneq\left(c_{j}\right)_{j\in J},\mathcal{D}\coloneq\left(d_{k}\right)_{k\in K}$.
+	\item $\mathcal{B}^{\ast}\coloneq\left(e_{i}^{\ast}\right)_{i\in I},\mathcal{C}^{\ast}\coloneq\left(c_{j}^{\ast}\right)_{j\in J},\mathcal{D}^{\ast}\coloneq\left(d_{k}\right)_{k\in K}$分别是$\mathcal{B},\mathcal{C},\mathcal{D}$的对偶基.
+\end{itemize}
+
+\begin{definition}{半线性映射的表示矩阵}{}
+	设$f\in\Hom_{A}\left(E,F\right)$,$A$上的矩阵$\left(a_{ji}\right)_{j\in J,i\in I}$满足$\forall i\in I\forall j\in J\left(a_{ji}=f_{j}^{\ast}\left(f\left(e_{i}\right)\right)\right)$.称$\left(a_{ji}\right)_{j\in J,i\in I}$是$f$在$\mathcal{B}$和$\mathcal{C}$下的表示矩阵.具体而言,记$\langle-,-\rangle_{F}$是$F$上的典范配对,那么:
+	\begin{enumerate}
+		\item 当$E,F$都是左$A$-模时,$\forall i\in I\forall j\in J\left(a_{j,i}=\langle f\left(e_{i}\right),f_{j}^{\ast}\rangle_{F}\right)$
+		\item 当$E,F$都是右$A$-模时,$\forall i\in I\forall j\in J\left(a_{j,i}=\langle f_{j}^{\ast},f\left(e_{i}\right)\rangle_{F}\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{表示矩阵的转换映射}{}
+	定义$\mathcal{B}$和$\mathcal{C}$诱导的转换映射$\left[\cdot\right]_{\mathcal{B}}^{\mathcal{C}}:\Hom_{A}\left(E,F\right)\to A^{J\times I}$如下:对任一$f\in\Hom_{A}\left(E,F\right)$,$\left[f\right]_{\mathcal{B}}^{\mathcal{C}}$是$f$在$\mathcal{B}$和$\mathcal{C}$下的表示矩阵.
+\end{definition}
+
+\begin{remark}{表示矩阵的每一列都是基在线性映射下的像的坐标矩阵}{}
+	对任意$f\in\Hom_{A}\left(E,F\right)$和$i\in I$,有$\col_{i}\left(\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\right)=\left[f\left(e_{i}\right)\right]_{\mathcal{C}}$.
+\end{remark}
+
+\begin{proposition}{转换映射是模同态}{}
+	$\left[\cdot\right]_{\mathcal{B}}^{\mathcal{C}}$是$Z\left(A\right)$-模同态,并且在集合$J$有限时是$Z\left(A\right)$-模同构.
+\end{proposition}
+
+\begin{proposition}{映射的复合的表示矩阵}{}
+	设集合$I,J,K$都有限,$f\in\Hom_{A}\left(E,F\right),g\in\Hom_{A}\left(F,G\right)$分别是关于$\sigma$和关于$\tau$的半线性映射.
+	\begin{enumerate}
+		\item 若$E,F,G$都是左$A$-模,则有$\left(\left[g\circ f\right]_{\mathcal{B}}^{\mathcal{D}}\right)^{\top}=\left(\left(\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\right)^{\tau}\right)^{\top}\ast\left(\left[g\right]_{\mathcal{C}}^{\mathcal{D}}\right)^{\top}$.
+		\item 若$E,F,G$都是右$A$-模,则有$\left[g\circ f\right]_{\mathcal{B}}^{\mathcal{D}}=\left[g\right]_{\mathcal{C}}^{\mathcal{D}}\left(\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\right)^{\tau}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{映射作用下的坐标变换}{}
+	设集合$I,J$都有限,$f\in\Hom_{A}\left(E,F\right)$是关于$\sigma$的半线性映射,$x\in E$.
+	\begin{enumerate}
+		\item 若$E,F,G$都是左$A$-模,则有$\left(\left[f\left(x\right)\right]_{\mathcal{C}}\right)^{\top}=\left(\left(\left[x\right]_{\mathcal{C}}\right)^{\sigma}\right)^{\top}\ast\left(\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\right)^{\top}$.
+		\item 若$E,F,G$都是右$A$-模,则有$\left[f\left(x\right)\right]_{\mathcal{C}}=\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\left(\left[x\right]_{\mathcal{C}}\right)^{\sigma}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\sigma$是环同构,集合$I,J$有限,则对任一$f\in\Hom_{A}\left(E,F\right)$,有$\left[f^{\top}\right]_{\mathcal{C^{\ast}}}^{\mathcal{B}^{\ast}}=\left(\left(\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\right)^{\top}\right)^{\sigma^{-1}}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	设$B=A^{\op},x\in E$,集合$I,J$有限.考虑下列两种情形:
+	\begin{enumerate}
+		\item $E$是右$A$-模,$F$是左$A$-模,$f:E\to D$是关于$\sigma$的左$\Z$-线性映射.
+		\item $E$是左$A$-模,$F$是右$A$-模,$f:E\to F$是关于$\sigma$的右$\Z$-线性映射.
+	\end{enumerate}
+	两种情形下,$\left[f\right]_{\mathcal{B}}^{\mathcal{C}}$的分量都属于$A$.对情形(1),有$\left(\left[f\left(x\right)\right]_{\mathcal{C}}\right)^{\top}=\left(\left(\left[x\right]_{\mathcal{B}}\right)^{\top}\right)^{\sigma}\left(\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\right)^{\top}$.对情形(2),有$\left[f\left(x\right)\right]_{\mathcal{C}}=\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\left(\left[x\right]_{\mathcal{B}}\right)^{\sigma}$.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

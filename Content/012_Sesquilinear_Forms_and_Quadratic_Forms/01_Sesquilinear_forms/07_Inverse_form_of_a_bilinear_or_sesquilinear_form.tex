@@ -1,0 +1,41 @@
+\section{双线性型或半双线性型的逆形式}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$E$是左$A$-模,$F$是左$A$-模或右$A$-模.
+	\item $\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $F$是右$A$-模时$\varphi\in\Bil_{A}\left(E,F\right)$;$F$是左$A$-模时$\varphi\in\Sesq_{A,\rho}\left(E,F\right)$.
+	\item $\langle\cdot,\cdot\rangle_{E}$和$\langle\cdot,\cdot\rangle_{F}$分别是$E$和$F$的典范配对.
+	\item $\varphi$的左伴随和右伴随都是双射.
+	\item $\ev_{E}:E\to E^{\vee\vee}$和$\ev_{F}:F\to F^{\vee\vee}$是典范映射.
+\end{itemize}
+
+\begin{definition}{(半)双线性型的逆型}{}
+	我们称$\tilde{\varphi}\coloneq\varphi\circ\left(s_{\varphi}^{-1}\times d_{\varphi}^{-1}\right)$是$\varphi$的逆型.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$F$是右$A$-模时,$\tilde{\varphi}\in\Bil_{A}\left(F^{\vee},E^{\vee}\right)$,并且对每个$\left(y^{\ast},x^{\ast}\right)\in F^{\vee}\times E^{\vee}$有
+		\begin{align*}
+			\tilde{\varphi}\left(y^{\ast},x^{\ast}\right)=\langle s_{\varphi}^{-1}\left(y^{\ast}\right),x^{\ast}\rangle_{E}=\langle d_{\varphi}^{-1}\left(x^{\ast}\right),y^{\ast}\rangle_{F}.
+		\end{align*}
+		\item 当$F$是左$A$-模时,$\tilde{\varphi}\in\Sesq_{\rho,A}\left(F^{\vee},E^{\vee}\right)$,并且对每个$\left(y^{\ast},x^{\ast}\right)\in F^{\vee}\times E^{\vee}$有
+		\begin{align*}
+			\tilde{\varphi}\left(y^{\ast},x^{\ast}\right)=\langle s_{\varphi}^{-1}\left(y^{\ast}\right),x^{\ast}\rangle_{E}=\overline{\langle d_{\varphi}^{-1}\left(x^{\ast}\right),y^{\ast}\rangle_{F}}.
+		\end{align*}
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	$s_{\tilde{\varphi}}\circ s_{\varphi}=\ev_{E},d_{\tilde{\varphi}}\circ d_{\varphi}=\ev_{F},\tilde{\tilde{\varphi}}\circ\left(\ev_{E}\times\ev_{F}\right)=\varphi$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$a\in Z\left(A\right)^{\times}$.
+	\begin{enumerate}
+		\item $s_{a\varphi}=as_{\varphi}$,并且$s_{a\varphi}^{-1}=a^{-1}s_{\varphi}^{-1}$.
+		\item $d_{a\varphi}=ad_{\varphi}$.当$F$是右$A$-模时$d_{a\varphi}^{-1}=a^{-1}d_{\varphi}^{-1}$,当$F$是左$A$-模时$d_{a\varphi}^{-1}=\bar{a}^{-1}d_{\varphi}^{-1}$.
+		\item $\widetilde{a\varphi}=a^{-1}\tilde{\varphi}$.
+	\end{enumerate}
+\end{proposition}

@@ -1,0 +1,115 @@
+\section{张量积的函子性}
+
+记号约定:
+
+\begin{itemize}
+	\item $C$是交换环,$E_{1},E_{2},F_{1},F_{2}$是$C$-模.
+	\item $\lambda:\Hom_{A}\left(E_{1},F_{1}\right)\otimes_{C}\Hom_{C}\left(E_{2},F_{2}\right)\to\Hom_{C}\left(E_{1}\otimes_{C}E_{2},F_{1}\otimes_{C}F_{2}\right),f\otimes_{\Z}g\mapsto f\otimes_{C}g$是典范映射.
+\end{itemize}
+
+\begin{proposition}{}{}
+	下列条件之一成立时,$\lambda$是双射:
+	\begin{itemize}
+		\item $E_{1},E_{2}$均为有限生成投射模;
+		\item $E_{1},F_{1}$均为有限生成投射模;
+		\item $E_{2},F_{2}$均为有限生成投射模.
+	\end{itemize}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$E_{1}=C_{s}^{\left(I\right)},E_{2}=C_{s}^{\left(J\right)}$时,考虑典范同构
+		\begin{gather*}
+			\Hom_{C}\left(E_{1},F_{1}\right)\simeq F_{1}^{I},
+			\Hom_{C}\left(E_{2},F_{2}\right)\simeq F_{2}^{J},\\
+			E_{1}\otimes_{C}E_{2}\simeq C^{\left(I\times J\right)},
+			\Hom_{C}\left(E_{1}\otimes_{C}E_{2},F_{1}\otimes_{C}F_{2}\right)\simeq\left(F_{1}\otimes_{C}F_{2}\right)^{I\times J},
+		\end{gather*}
+		则$\lambda$等同于典范映射$\bar{\lambda}:F_{1}^{I}\otimes_{C}F_{2}^{I}\to\left(F_{1}\otimes_{C}F_{2}\right)^{I\times J},\left(x_{i}\right)_{i\in I}\otimes\left(y_{j}\right)_{j\in J}\mapsto\left(x_{i}\otimes y_{j}\right)_{i\in I,j\in J}$.
+		\item 当$E_{1}=E,F_{1}=F,E_{2}=C_{s},F_{2}=G$时,考虑典范同构
+		\begin{align*}
+			\Hom_{C}\left(C_{s},G\right)\simeq G,E\otimes_{C}C_{s}\simeq E,
+		\end{align*}
+		则$\lambda$等同于典范映射$\nu:\Hom_{C}\left(E,F\right)\otimes_{C}G\to\Hom_{C}\left(E,F\otimes_{C}G\right),u\otimes g\mapsto u\left(x\right)\otimes g$.
+		\item 当$E_{1}=E,F_{1}=C,E_{2}=C,F_{2}=F$时,考虑$\Hom_{C}\left(E,C\right)=E^{\vee}$和典范同构
+		\begin{align*}
+			\Hom_{C}\left(C,F\right)\simeq F,E\otimes_{C}F\simeq E,C\otimes_{C}F\simeq F,
+		\end{align*}
+		则$\lambda$等同于典范映射$\theta:E^{\vee}\otimes_{C}F\to\Hom_{C}\left(E,F\right),x^{\ast}\otimes g\mapsto\left[x\mapsto x^{\ast}\left(x\right)g\right]$.
+		\item 当$E_{1}=E,E_{2}=F,F_{1}=C,F_{2}=C$时,考虑$\Hom_{C}\left(E,C\right)=E^{\vee},\Hom_{C}\left(F,C\right)=F^{\vee}$和典范同构
+		\begin{align*}
+			F_{1}\otimes_{C}F_{2}\simeq C,
+		\end{align*}
+		则$\lambda$等同于典范映射$\mu:E^{\vee}\otimes_{C}F^{\vee}\to\left(E\otimes_{C}F\right)^{\vee},x^{\ast}\otimes y^{\ast}\mapsto\left[x\otimes y\mapsto x^{\ast}\left(x\right)y^{\ast}\left(y\right)\right]$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{$\mu$的自然性}{}
+	设$f\in\Hom_{C}\left(E_{1},E_{2}\right),g\in\Hom_{C}\left(F_{1},F_{2}\right)$,则下图交换(其中,$\mu_{1}$和$\mu_{2}$是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			{E_{2}^{\vee}\otimes_{C}F_{2}^{\vee}} && {\left(E_{2}\otimes_{C}F_{2}\right)^{\vee}} \\
+			\\
+			{E_{1}^{\vee}\otimes_{C}F_{1}^{\vee}} && {\left(E_{1}\otimes_{C}F_{1}\right)^{\vee}}
+			\arrow["{\mu_{2}}", from=1-1, to=1-3]
+			\arrow["{f^{\top}\otimes g^{\top}}"', from=1-1, to=3-1]
+			\arrow["{\left(f\otimes g\right)^{\top}}", from=1-3, to=3-3]
+			\arrow["{\mu_{1}}"', from=3-1, to=3-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{corollary}{}{}
+	若$E,F$是有限生成投射$C$-模,则典范映射$E^{\vee}\otimes_{C}F^{\vee}\to\left(E\otimes_{C}N\right)^{\vee}$是双射.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E_{1},E_{2}$是有限生成投射模.若$u\in\End_{C}\left(E_{1}\right),v\in\End_{C}\left(E_{2}\right)$,则$\Tr\left(u\otimes v\right)=\Tr\left(u\right)\Tr\left(v\right)$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$E,F,G$是$C$-模,则下图交换(其中,$\phi,\psi,\tau,\mu,\nu,\varphi$都是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			{\left(E^{\vee}\otimes_{C}F^{\vee}\right)\otimes_{C}G^{\vee}} &&& {\left(E\otimes_{C}F\right)^{\vee}\otimes_{C}G^{\vee}} \\
+			\\
+			{E^{\vee}\otimes_{C}\left(F^{\vee}\otimes_{C}G^{\vee}\right)} &&& {\left(\left(E\otimes_{C}F\right)\otimes_{C}G\right)^{\vee}} \\
+			\\
+			{E^{\vee}\otimes_{C}\left(F\otimes_{C}G\right)^{\vee}} &&& {\left(E\otimes_{C}\left(F\otimes_{C}G\right)\right)^{\vee}}
+			\arrow["{\psi\otimes\id_{G^{\vee}}}", from=1-1, to=1-4]
+			\arrow["\tau"', from=1-1, to=3-1]
+			\arrow["\varphi", from=1-4, to=3-4]
+			\arrow["{\id_{E^{\vee}}\otimes\mu}"', from=3-1, to=5-1]
+			\arrow["\nu"', from=5-1, to=5-4]
+			\arrow["{\phi}"', from=5-4, to=3-4]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{张量-同态伴随}{}
+	设$E,F$是$C$-模,则存在典范同构$\left(E\otimes_{C}F\right)^{\vee}\simeq\Hom_{C}\left(E,F^{\vee}\right)\simeq\Hom_{C}\left(F,E^{\vee}\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$E,F$是$C$-模,则存在典范同构$\Bil_{C}\left(E,F;{}_{d}C_{s}\right)\simeq\Hom_{C}\left(E,F^{\vee}\right)\simeq\Hom_{C}\left(F,E^{\vee}\right)$
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

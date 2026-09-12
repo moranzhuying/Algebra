@@ -1,0 +1,73 @@
+\chapter{范数和迹}
+
+本章中,$K$是交换环,$A$是含幺结合$K$-代数,$\rho\in\Hom_{\mathsf{Ring}}\left(K,A\right)$,所有的$A$-模通过$\rho$成为$K$-模.
+
+\section{模的范数和迹}
+
+记号约定:$M$是$A$-模.对每个$a\in A$,记$\mathcal{L}_{a}$为$a$在$\rho_{\ast}\left(M\right)$上诱导的左乘.
+
+\begin{definition}{模的范数,痕迹}{}
+	设$\rho_{\ast}\left(M\right)$具备有限基,$a\in A$.分别称$\mathcal{L}_{a}$的迹,范数和行列式为$a$在$M$上的迹,范数和行列式,依次记作
+	\begin{align*}
+		\Tr_{M/K}\left(a\right),\Norm_{M/K}\left(a\right),\Pc_{M/K}\left(a;X\right).
+	\end{align*}
+	当没有歧义时,三者分别记作$\Tr_{M}\left(a\right),\Norm_{M}\left(a\right),\Pc_{M}\left(a;X\right)$.
+\end{definition}
+
+\begin{proposition}{迹的线性性和循环交换性,范数的乘性}{}
+	\begin{enumerate}
+		\item 对每个$a,b\in A$,有$\Tr_{M/K}\left(a+b\right)=\Tr_{M/K}\left(a\right)+\Tr_{M/K}\left(b\right),\Tr_{M/K}\left(ab\right)=\Tr_{M/K}\left(ba\right)$.
+		\item 对每个$a,b\in A$,有$\Norm_{M/K}\left(ab\right)=\Norm_{M/K}\left(a\right)\Norm_{M/K}\left(b\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{元素的迹,范数和特征多项式与表示矩阵的关系}{}
+	设$\left(e_{i}\right)_{i=1}^{n}$是$\rho_{\ast}\left(M\right)$的基,$\left(m_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$是$\rho_{\ast}\left(A\right)^{\vee}$上的矩阵,$a\in M$,$\mathcal{L}_{a}$在基$\left(e_{i}\right)_{i=1}^{n}$下的表示矩阵为$\left(m_{i,j}\left(a\right)\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$,则
+	\begin{align*}
+		\Tr_{M/K}\left(a\right)=\sum\limits_{i=1}^{n}m_{i,i}\left(a\right),\Norm_{M/K}\left(a\right)=\det\left(m_{i,j}\left(a\right)\right)_{\substack{1\leq i\leq m\\1\leq j\leq n}},\Pc_{M/K}\left(a;X\right)=\det\left(\delta_{i,j}X-m_{i,j}\left(a\right)\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{特征多项式的系数}{}
+	设$a\in A,\Pc_{M/K}\left(a;X\right)=X^{n}+c_{1}X^{n-1}+\ldots+c_{n}$,则$c_{1}=-\Tr_{M/K}\left(a\right),c_{n}=\left(-1\right)^{n}\Norm_{M/K}\left(a\right)$.
+\end{proposition}
+
+\begin{proposition}{元素的迹,范数,特征多项式和基集的关系}{}
+	设$\rho_{\ast}\left(M\right)$有一个基数为$n$的基集,$\lambda\in K$,则$\Tr_{M/K}\left(\lambda\right)=n\lambda,\Norm_{M/K}\left(\lambda\right)=\lambda^{n},\Pc_{M/K}\left(\lambda;X\right)=\left(X-\lambda\right)^{n}$.
+\end{proposition}
+
+\begin{proposition}{元素的迹,范数,特征多项式和标量扩张的关系}{}
+	设$K^{\prime}$是交换$K$-代数,$M^{\prime}=K^{\prime}\otimes_{K}M,A^{\prime}=K^{\prime}\otimes_{K}A$,并为$M^{\prime}$配备典范的$A^{\prime}$-模结构,则对每个$a\in A$,
+	\begin{gather*}
+		\Tr_{M^{\prime}}\left(1_{K^{\prime}}\otimes a\right)=\Tr_{M}\left(a\right)\cdot 1_{K^{\prime}},
+		\Norm_{M^{\prime}}\left(1_{K^{\prime}}\otimes a\right)=\Norm_{M}\left(a\right)\cdot 1_{K^{\prime}},
+		\Pc_{M^{\prime}}\left(1_{K^{\prime}}\otimes a;X\right)=\Pc_{M}\left(a;X\right)\cdot 1_{K^{\prime}}
+	\end{gather*}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

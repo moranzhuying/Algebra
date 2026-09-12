@@ -1,0 +1,124 @@
+\section{导子的复合}
+
+记号约定:
+\begin{itemize}
+	\item $A,A^{\prime},A^{\prime\prime}$是$\Delta$型分次$K$-模.
+	\item $\mu:A\times A^{\prime}\to A^{\prime\prime}$是$K$-双线性映射,它诱导的典范映射是$0$次分次$K$-线性映射.
+\end{itemize}
+
+\begin{definition}{$\epsilon$-括积}{}
+	设$B$是$\Delta$型分次$K$-代数,$u,v\in B$,$\epsilon$是$\Delta$上的交换因子.我们称$\left[u,v\right]_{\epsilon}\coloneq uv-\epsilon\left(\deg\left(u\right),\deg\left(v\right)\right)vu$是$u$和$v$的$\epsilon$-括积.当$\epsilon$是平凡交换因子时,称$\left[u,v_{\epsilon}\right]$为$u$和$v$的括积.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 通过线性延拓,我们可以定义$K$-双线性映射$B\times B\to B,\left(u,v\right)\mapsto\left[u,v\right]_{\epsilon}$.
+		\item 对$B$中任意两个齐次元$p$和$q$,都有$\left[p,q\right]_{\epsilon}=\epsilon\left(\deg\left(p\right),\deg\left(q\right)\right)\left[q,p\right]_{\epsilon}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{导子关于$\epsilon$-括积封闭}{}
+	\begin{enumerate}
+		\item 设$d_{1},d_{2}$是$\left(A,A^{\prime},A^{\prime\prime}\right)$上的导子,次数分别为$\delta_{1},\delta_{2}$,则$\left[d_{1},d_{2}\right]_{\epsilon}$是$\delta_{1}+\delta_{2}$次$\epsilon$-导子.
+		\item 设$d$是是$\left(A,A^{\prime},A^{\prime\prime}\right)$上的$\delta$次$\epsilon$导子,$\epsilon\left(\delta,\delta\right)=-1$,则$d^{2}$是导子.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\Delta=\Z$,$\epsilon$是标准分次交换因子.
+	\begin{enumerate}
+		\item $\left(A,A^{\prime},A^{\prime\prime}\right)$上的每个反导子$d$都满足$d^{2}$是导子.
+		\item $\left(A,A^{\prime},A^{\prime\prime}\right)$上的每个导子$d_{1},d_{2}$都满足$\left[d_{1},d_{2}\right]$是导子.
+		\item 对$\left(A,A^{\prime},A^{\prime\prime}\right)$上的每个反导子$d_{1}$和偶数次导子$d_{2}$,二者的括积$\left[d_{1},d_{2}\right]$是反导子.
+		\item 如果$d_{1},d_{2}$是$\left(A,A^{\prime},A^{\prime\prime}\right)$上的反导子,那么$d_{1}d_{2}+d_{2}d_{1}$是导子.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\Delta=\Z$,$\epsilon$是标准分次交换因子,$D\coloneq\left(d_{i}\right)_{i=1}^{n}$是$\left(A,A^{\prime},A^{\prime\prime}\right)$上一族两两可交换的导子.
+	\begin{itemize}
+		\item 对每个$P\in K\left[X_{1},\ldots,X_{n}\right]$,记$P\left(D\right)\coloneq P\left(d_{1},\ldots,d_{n}\right)$.
+		\item 设$T\coloneq\left(T_{i}\right)_{i=1}^{n}$和$T^{\prime}\coloneq\left(T_{i}^{\prime}\right)_{i=1}^{n}$是两族不定元,对每个$F\in K\left[X_{1},\ldots,X_{n}\right]$,记
+		\begin{align*}
+			F\left(T\right)\coloneq F\left(T_{1},\ldots,T_{n}\right),F\left(T^{\prime}\right)\coloneq F\left(T_{1}^{\prime},\ldots,T_{n}^{\prime}\right).
+		\end{align*}
+	\end{itemize}
+	如果$K\left[X_{1},\ldots,X_{n},X_{1}^{\prime},\ldots,X_{n}^{\prime}\right]$中的序列$\left(Q_{i}\right)_{i=1}^{n},\left(R_{i}\right)_{i=1}^{n}$和$P\in K\left[X_{1},\ldots,X_{n}\right]$满足
+	\begin{align*}
+		P\left(T+T^{\prime}\right)=\sum\limits_{i=1}^{n}Q_{i}\left(T\right)R_{i}\left(T^{\prime}\right),
+	\end{align*}
+	则对每个$x\in A,y\in A^{\prime}$有$P\left(D\right)\left(xy\right)=\sum\limits_{i=1}^{n}\left(Q_{i}\left(D\right)x\right)\left(R_{i}\left(D\right)y\right)$.
+\end{proposition}
+
+\begin{corollary}{Leibniz公式}{}
+	设$\left(d_{i}\right)_{i=1}^{n}$是$\left(A,A^{\prime},A^{\prime\prime}\right)$上一族两两可交换的导子,$\boldsymbol{\alpha}=\left(\alpha_{i}\right)_{i=1}^{n}\in\N^{n}$.记$d^{\boldsymbol{\alpha}}\coloneq\prod\limits_{i=1}^{n}d_{i}^{\alpha_{i}}$,则对任意$x\in A,y\in A^{\prime}$,有
+	\begin{align*}
+		d^{\boldsymbol{\alpha}}\left(xy\right)=\sum\limits_{\substack{\boldsymbol{\beta},\boldsymbol{\gamma}\in\N^{n}\\ \boldsymbol{\beta}+\boldsymbol{\gamma}=\boldsymbol{\alpha}}}\binom{\boldsymbol{\beta}+\boldsymbol{\gamma}}{\boldsymbol{\beta}}d^{\boldsymbol{\beta}}\left(x\right)d^{\boldsymbol{\gamma}}\left(y\right),
+	\end{align*}
+	其中$\binom{\boldsymbol{\beta}+\boldsymbol{\gamma}}{\boldsymbol{\beta}}\coloneq\frac{\left(\boldsymbol{\beta}+\boldsymbol{\gamma}\right)!}{\boldsymbol{\beta}!\boldsymbol{\gamma}!}$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

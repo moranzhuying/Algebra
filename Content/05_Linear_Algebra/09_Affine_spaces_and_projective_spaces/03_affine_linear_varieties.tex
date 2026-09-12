@@ -1,0 +1,81 @@
+\section{仿射线性簇}
+
+记号约定:$K$是除环,$T$是$K$-向量空间,$E$是向量部分为$T$的仿射空间.
+
+\begin{definition}{仿射线性簇(仿射子集)}{}
+	设$V\subseteq E$.若对$E$的诸元素族$\left(x_{i}\right)_{i\in I}$和$T$中的诸有限支撑族$\left(\lambda_{i}\right)_{i\in I}$,$\sum\limits_{i\in I}\lambda_{i}=1\implies\sum\limits_{i\in I}\lambda_{i}x_{i}\in V$,则称$V$是$E$的仿射线性簇(或仿射子集).
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $\emptyset$是$E$的仿射线性簇.
+		\item 若$\left(V_{i}\right)_{i\in I}$是$E$的一族仿射线性簇,则$\bigcap\limits_{i\in I}V_{i}$是$E$的仿射线性簇.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\emptyset\neq V\subseteq E$,则$V$是仿射线性簇$\iff$存在$a\in E$,以$a$为原点使$E$是向量空间后$V$是$E$的向量子空间.
+\end{proposition}
+
+\begin{corollary}{}{}
+	$T$作为仿射空间,其非空的仿射线性簇是$T$的向量子空间的平移,包含$0$的仿射线性簇就是仿射子空间.
+\end{corollary}
+
+\begin{proposition}{}{}
+	若$V$是$E$的非空仿射线性簇,则$D\coloneq\left\{x\aminus y\in E\middle|x,y\in V\right\}$是$T$的向量子空间,$E$是向量部分为$D$的仿射空间.
+\end{proposition}
+
+\begin{definition}{仿射线性簇的维数和余维数,仿射直线,仿射平面,仿射超平面,方向向量,方向参数系}{}
+	设$V$是$E$的非空仿射线性簇.定义$\Dir\left(F\right)\coloneq\left\{x\aminus y\in E\middle|x,y\in V\right\}$.
+	\begin{itemize}
+		\item 我们称$\Dir\left(V\right)$是$F$的方向,称$\dim_{K}\Dir\left(V\right)$为$F$的维数,称$\codim_{T}\Dir\left(F\right)$是$V$在$E$中的余维数.
+		\item 当$\codim_{T}\Dir\left(V\right)=1$时,称$F$为$E$中的仿射超平面.
+		\item 当$\Dir\left(V\right)=1$时,$\Dir\left(V\right)\setminus\left\{0\right\}$中的元素称为$V$的方向向量.
+		\item 设$\Dir\left(V\right)=1$,$\mathbf{v}$是$V$的方向向量,$\mathcal{B}$是$V$的基.称$v$在$\mathcal{B}$下的坐标分量是$V$的方向参数系.
+	\end{itemize}
+\end{definition}
+
+\begin{remark}{}{}
+	当$\Dir\left(V\right)$分别等于$1,2$时,$V$分别为$E$中的仿射直线,仿射平面.
+\end{remark}
+
+\begin{definition}{仿射线性簇的平行}{}
+	设$V_{1},V_{2}$是$E$的非空仿射线性簇.若$\Dir\left(V_{1}\right)=\Dir\left(V_{2}\right)$,则称$V_{1}$和$V_{2}$平行.
+\end{definition}
+
+\begin{proposition}{}{}
+	若$\left(a_{i}\right)_{i\in I}$是$E$的元素族,则$V\coloneq\left\{\sum\limits_{i\in I}\lambda_{i}a_{i}\in E\middle|\sum\limits_{i\in I}\lambda_{i}a_{i}\text{是重心}\right\}$是包含$\left(a_{i}\right)_{i\in I}$的元素的最小仿射线性簇.
+\end{proposition}
+
+\begin{definition}{元素族生成的仿射线性簇}{}
+	设$\left(a_{i}\right)_{i\in I}$是$E$的元素族.称$\Aff\left(\left(a_{i}\right)_{i\in I}\right)\coloneq\left\{\sum\limits_{i\in I}\lambda_{i}a_{i}\in E\middle|\sum\limits_{i\in I}\lambda_{i}a_{i}\text{是重心}\right\}$为$\left(a_{i}\right)_{i\in I}$生成的仿射线性簇,称$\left(a_{i}\right)_{i\in I}$为生成系.
+\end{definition}
+
+\begin{proposition}{仿射无关的等价条件}{equivalent-of-affine-independent}
+	设$\left(a_{i}\right)_{i\in I}$是$E$的元素族,$I\neq\emptyset$.下列陈述等价:
+	\begin{enumerate}
+		\item 对每个$x\in V$都,$E$中都存在唯一一个有限支撑族$\left(\lambda_{i}\right)_{i\in I}$使得$x=\sum\limits_{i\in I}\lambda_{i}a_{i}$.
+		\item 对任一$\kappa\in I$,$\left(a_{i}\aminus a_{\kappa}\right)_{i\in I,i\neq\kappa}$是$V$的自由族.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{仿射无关,仿射相关}{}
+	设$\left(a_{i}\right)_{i\in I}$是$E$的元素族,$I\neq\emptyset$.
+	\begin{enumerate}
+		\item 命题(\ref{prop:equivalent-of-affine-independent})的陈述之一为真时,称$\left(a_{i}\right)_{i\in I}$仿射无关.
+		\item 若$\left(a_{i}\right)_{i\in I}$不是仿射无关的,则称$\left(a_{i}\right)_{i\in I}$仿射相关.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{重心坐标}{}
+	设$E$的元素族$\left(a_{i}\right)_{i\in I}$仿射无关,$x=\sum\limits_{i\in I}\lambda_{i}x_{i}\in T$.对任一$i\in I$,$\lambda_{i}$称为$x$在$\left(x_{i}\right)_{i\in I}$下的第$i$个重心坐标.
+\end{definition}
+
+\begin{proposition}{仿射无关和仿射相关的另一等价条件}{}
+	设$\left(x_{i}\right)_{i\in I}$是$E$的元素族,$I\neq\emptyset$.
+	\begin{enumerate}
+		\item $\left(x_{i}\right)_{i\in I}$仿射相关$\iff$存在$K$中的有限支撑族$\left(\lambda_{i}\right)_{i\in I}$使得$\sum\limits_{i\in I}\lambda_{i}=0$且$\sum\limits_{i\in I}\lambda_{i}x_{i}=0$.
+		\item $\left(x_{i}\right)_{i\in I}$仿射无关$\iff$对任一$i\in I$,$x_{i}\notin\Aff\left(\left(x_{\kappa}\right)_{\kappa\in I,\kappa\neq i}\right)$
+	\end{enumerate}
+\end{proposition}
+

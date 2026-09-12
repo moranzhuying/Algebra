@@ -1,0 +1,21 @@
+\section{自同态的特征多项式}
+
+记号约定:$A$是交换环,$M$是$n$维自由$A$-模,$\mathcal{T}\in\End_{A}\left(M\right)$.
+
+\begin{proposition}{}{}
+	设$M\left[X,Y\right]=A\left[X,Y\right]\otimes_{A}M$,$\widetilde{\mathcal{T}}$是$\mathcal{T}$在$M\left[X,Y\right]$上诱导的自同态,则$\det\left(X-Y\widetilde{\mathcal{T}}\right)=\sum\limits_{k=0}^{n}\left(-1\right)^{k}\tr\left(\bigwedge\limits^{k}\left(\mathcal{T}\right)\right)X^{n-k}Y^{k}$.
+\end{proposition}
+
+\begin{definition}{模同态的特征多项式}{}
+	我们称$M\left[X\right]$上的自同态$X-\bar{T}$的行列式为$\mathcal{T}$的特征多项式,记作$\Char_{\mathcal{T}}\left(X\right)$.
+\end{definition}
+
+\begin{remark}{}{}
+	$\Char_{\mathcal{T}}\left(X\right)=\sum\limits_{k=0}^{n}\left(-1\right)^{k}\tr\left(\bigwedge\limits^{k}\left(\mathcal{T}\right)\right)X^{n-k}$.由此可见,$\Char_{\mathcal{T}}\left(X\right)$中的常数项为$\left(-1\right)^{n}\det\left(\mathcal{T}\right)$,$X^{n-1}$的系数为$-\tr\left(\mathcal{T}\right)$.
+\end{remark}
+
+\begin{proposition}{Cayley-Hamilton定理}{}
+	对每个$u\in\End_{A}\left(M\right)$都有$\Char_{u}\left(X\right)=0$.
+\end{proposition}
+
+

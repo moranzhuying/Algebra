@@ -1,0 +1,68 @@
+\section{形式幂级数代数中的导子}
+
+记号约定:
+\begin{itemize}
+	\item $E$是完备且Hausdorff的$A$-含幺交换结合代数.
+	\item $\mathbf{x}\coloneq\left(x_{i}\right)_{i\in I}\in E^{I}$可代入$A[[(X_{i})_{i\in I}]]$中的每个元素.
+	\item $\varphi:A[[(X_{i})_{i\in I}]]\to E,u\mapsto u\left(\mathbf{x}\right)$是连续同态.它使得$E$是典范的$A[[(X_{i})_{i\in I}]]$-模.
+\end{itemize}
+
+\begin{proposition}{连续导子的存在唯一性与显式公式}{}
+	设$\left(y_{i}\right)_{i\in I}\in E^{I}$($I$无限时,设$\left(y_{i}\right)_{i\in I}$收敛到$0$),则存在唯一的连续$A$-导子$D:A[[(X_{i})_{i\in I}]]\to A[[(X_{i})_{i\in I}]]$使得
+	\begin{align*}
+		\forall i\in I\left(D\left(X_{i}\right)=y_{i}\right).
+	\end{align*}
+	进一步,对每个$u\in A[[(X_{i})_{i\in I}]]$有$D\left(u\right)=\sum\limits_{i\in I}\frac{\partial u}{\partial X_{i}}\left(\mathbf{x}\right)y_{i}$.
+\end{proposition}
+
+\begin{corollary}{形式幂级数的偏导数的链式法则}{}
+	设$\mathcal{D}:E\to E$是连续导子,则对每个$u\in A[[(X_{i})_{i\in I}]]$,元素族$\left(\frac{\partial u}{\partial X_{i}}\left(\mathbf{x}\right)\mathcal{D}\left(x_{i}\right)\right)_{i\in I}$在$E$中可和,并且
+	\begin{align*}
+		\mathcal{D}\left(u\left(\mathbf{x}\right)\right)=\sum\limits_{i\in I}\frac{\partial u}{\partial X_{i}}\left(\mathbf{x}\right)\mathcal{D}\left(x_{i}\right).
+	\end{align*}
+\end{corollary}
+
+\begin{corollary}{形式幂级数环的偏导数的唯一性}{}
+	对每个$i\in I$,形式幂级数环$A[[(X_{i})_{i\in I}]]$上的导子$\mathrm{D}_{i}$是唯一满足$\forall j\in I\left(\mathrm{D}_{i}\left(X_{j}\right)=\delta_{i,j}\right)$的连续导子.
+\end{corollary}
+
+\begin{corollary}{多元形式幂级数环的链式法则}{}
+	设$g_{1},\ldots,g_{p}\in A[[Y_{1},\ldots,Y_{q}]]$且无常数项,$f\in A[[X_{1},\ldots,X_{p}]],h=f\left(g_{1},\ldots,g_{p}\right)$,则对每个$1\leq j\leq q$有
+	\begin{align*}
+		\frac{\partial h}{\partial Y_{j}}=\sum\limits_{i=1}^{p}\frac{\partial f}{\partial X_{i}}\left(\left(g_{k}\right)_{k=1}^{p}\right)\frac{\partial g_{i}}{\partial Y_{j}}.
+	\end{align*}
+\end{corollary}
+
+本节接下来的内容中,默认$\mathcal{D}:A[[(X_{i})_{i\in I}]]\to A[[(X_{i})_{i\in I}]]$是导子.
+
+\begin{proposition}{对数导数的公式}{}
+	\begin{enumerate}
+		\item 若$g,h\in A[[(X_{i})_{i\in I}]]^{\times}$,则$\mathcal{D}\left(fg\right)\left(fg\right)^{-1}=\mathcal{D}\left(f\right)f^{-1}+\mathcal{D}\left(g\right)g^{-1}$.
+		\item 若$\Lambda$是有限集,$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$是$A[[(X_{i})_{i\in I}]]$的元素族,$u=\prod\limits_{\lambda\in\Lambda}\left(1+u_{\lambda}\right)$,则$\mathcal{D}\left(u\right)u^{-1}=\prod\limits_{\lambda\in\Lambda}\mathcal{D}\left(u_{\lambda}\right)\left(1+u_{\lambda}\right)^{-1}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{形式幂级数环上的无限乘积的对数导数}{}
+	设$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$是$A[[(X_{i})_{i\in I}]]$中无常数项的可和族,$\mathcal{D}$连续,$u=\prod\limits_{\lambda\in\Lambda}\left(1+u_{\lambda}\right)$,则$\left(\mathcal{D}\left(u_{\lambda}\right)\left(1+u_{\lambda}\right)^{-1}\right)_{\lambda\in\Lambda}$可和,并且
+	\begin{align*}
+		\mathcal{D}\left(u\right)u^{-1}=\sum\limits_{\lambda\in\Lambda}\mathcal{D}\left(u_{\lambda}\right)\left(1+u_{\lambda}\right)^{-1}.
+	\end{align*}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

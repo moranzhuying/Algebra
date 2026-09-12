@@ -1,0 +1,174 @@
+\section{应用II:\texorpdfstring{$\Z/a\Z$}{Z/aZ}的乘法单位群}
+
+记号约定:$a\in\Z_{>1}$.对每个$p\in\mathbb{P}$和$n\in\Z_{>1}$,记$U\left(p^{n}\right)$为典范群同态$\left(\Z/p^{n}\Z\right)^{\times}\to\left(\Z/p\Z\right)^{\times}$的核.
+
+\begin{lemma}{}{}
+	如果$a$的素因子分解为$a=\prod\limits_{i\in I}p_{i}^{n_{i}}$,则环$\Z/a\Z$典范同构于$\prod\limits_{i\in I}\left(\Z/p_{i}^{n_{i}}\Z\right)$,环$\left(\Z/a\Z\right)^{\times}$典范同构于$\prod\limits_{i\in I}\left(\Z/p_{i}^{n_{i}}\Z\right)^{\times}$.
+\end{lemma}
+
+\begin{lemma}{}{}
+	设$p\in\mathbb{P},n\in\Z_{>1}$.
+	\begin{enumerate}
+		\item 当$p>2$时,序列$\left\{1\right\}\longrightarrow U\left(p^{n}\right)\longrightarrow\left(\Z/p^{n}\Z\right)^{\times}\to\left(\Z/p\Z\right)^{\times}\xlongrightarrow{}{1}$正合.
+		\item 当$p=2$时,序列$\left\{1\right\}\longrightarrow U\left(2^{n}\right)\longrightarrow\left(\Z/2^{n}\Z\right)^{\times}\to\left(\Z/4\Z\right)^{\times}\xlongrightarrow{}{1}$正合.
+	\end{enumerate}
+\end{lemma}
+
+\begin{lemma}{素数幂次同余的升幂性质}{}
+	设$x,y\in\Z,k\in\Z_{\geq 0}$.
+	\begin{enumerate}
+		\item 设$p\in\mathbb{P}\cap\Z_{>2}$.若$x\equiv 1+py\pmod{p^{2}}$,则$x^{p^{k}}\equiv 1+p^{k+1}y\pmod{p^{k+2}}$.
+		\item 若$x\equiv 1+4y\pmod{8}$,则$x^{2^{k}}\equiv 1+2^{k+2}y\pmod{2^{k+3}}$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 设$p\in\mathbb{P}\cap\left(2\Z_{>0}+1\right),n\in\N_{>0}$.
+		\begin{itemize}
+			\item $U\left(p^{n}\right)$是$p^{n-1}$阶循环群.
+			\item 设$n\geq 2,x\in\Z$,则$x$模$1$同余$p$的剩余类是$U\left(p^{n}\right)$的生成元$\iff$ $x$不是模$1$同余$p^{2}$的.
+		\end{itemize}
+		\item 设$n\geq 1$.
+		\begin{itemize}
+			\item $U\left(2^{m}\right)$是$2^{m-2}$阶循环群.
+			\item 设$m\geq 3,x\in\Z$,则$x$模$1$同余$4$的剩余类是$U\left(2^{n}\right)$的生成元$\iff$ $x$不是模$1$同余$8$的.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}
+
+\begin{lemma}{}{}
+	设$A$是PID,$0\xlongrightarrow{}N\xlongrightarrow{}M\xlongrightarrow{}P\xlongrightarrow{}0$是$A$-模的短正合列.若$A$中存在互素的元素$a,b$使得$aN=bM=0$,则
+	\begin{enumerate}
+		\item 该正合列分裂,
+		\item 当$N$和$P$都是循环$A$-模时$M$也是循环$A$-模.
+	\end{enumerate}
+\end{lemma}
+
+\begin{theorem}{整数模$p$乘法群的结构定理}{}
+	设$p\in\mathbb{P},n\in\N$.
+	\begin{enumerate}
+		\item 当$p$是奇数且$n\geq 1$时,$\left(\Z/p^{n}\Z\right)^{\times}$是$p^{n-1}\left(p-1\right)$阶循环群.
+		\item 当$p=2$时,$\left(\Z/p\Z\right)^{\times}$是平凡群.
+		\item 当$p=2$且$n\geq 2$时,$\left(\Z/2^{n}\Z\right)^{\times}$同构于$\left(\Z/2^{n-2}\Z\right)\times\left(\Z/2\Z\right)$,其中:
+		\begin{itemize}
+			\item $\Z/2^{n-2}\Z$是$5$模$2^{n}$的剩余类生成的$2^{n-2}$阶循环群,
+			\item $\Z/2\Z$是$-1$和$1$模$2^{n}$的剩余类生成的$2$阶循环群.
+		\end{itemize}
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{$p$进整数环的乘法群结构}{}
+	设$p\in\mathbb{P}\cap\Z_{>2}$,$x$是模$1$同余$p$但不满足模$1$同余$p^{2}$的整数,那么我们有正合列
+	\begin{align*}
+		\left\{0\right\}\xlongrightarrow{}\Z/p^{n-1}\Z\xlongrightarrow{u}\left(\Z/p^{n}\Z\right)^{\times}\xlongrightarrow{v}\left(\Z/p\Z\right)^{\times}\xlongrightarrow{}{1},
+	\end{align*}
+	其中$v$是自然投射,$u$是映射$r\mapsto x^{r}$诱导的商映射.令$\Z_{p}$是$p$-进整数环,$y\in\Z_{p}$满足$y-1\in p\Z_{p}$和$y-1\notin p^{2}\Z_{p}$,则
+	\begin{align*}
+		\left\{0\right\}\xlongrightarrow{}\Z_{p}\xlongrightarrow{\bar{u}}\Z_{p}^{\times}\xlongrightarrow{\bar{v}}\left(\Z/p\Z\right)^{\times}\xlongrightarrow{}{1}
+	\end{align*}
+	是正合列,其中$v$是自然映射,$u$是映射$n\mapsto x^{n}(n\in\Z)$的连续延拓.对每个$n\in\Z_{p}$,通常记$x^{n}=u\left(x\right)$.
+	
+	类似的,若$z\in\Z_{2}$满足$x-1\in 4\Z_{2}$和$x-1\notin 8\Z_{2}$,则有分裂的正合列
+	\begin{align*}
+		\left\{0\right\}\xlongrightarrow{}\Z_{2}\xlongrightarrow{}\Z_{2}^{\times}\xlongrightarrow{}\left(\Z/4\Z\right)^{\times}\xlongrightarrow{}\left\{1\right\},
+	\end{align*}
+	其中$u$是$n\mapsto x^{n}$的连续扩张.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

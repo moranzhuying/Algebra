@@ -1,0 +1,117 @@
+\section{内自同构}
+
+记号约定:$G$是群(采用乘法记号,幺元记作$e$),$K,H$是$G$的子群,$A,B\subseteq G$.
+
+\begin{proposition}{}{}
+	$\Aut_{\mathsf{Grp}}\left(G\right)$三是$\mathfrak{S}_{G}$的子群.
+\end{proposition}
+
+\begin{proposition}{内自同构的基本性质}{}
+	\begin{enumerate}
+		\item 对任一$x\in G$,定义$\Ad_{x}:G\to G,y\mapsto xyx^{-1}$,则$\Ad_{x}\in\Aut_{\mathsf{Grp}}\left(G\right)$.
+		\item 定义$\Int:G\to\Aut_{\mathsf{Grp}}\left(G\right),x\mapsto\Ad_{x}$,则$\Int\in\Hom_{\mathsf{Grp}}\left(G,\Aut_{\mathsf{Grp}}\left(G\right)\right),\ker\left(\Int\right)=Z\left(G\right)$,$\im\left(\Int\right)$是$\Aut_{\mathsf{Grp}}\left(G\right)$的正规子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{内自同构}{}
+	对任一$x\in G$,定义$\Ad_{x}:G\to G,y\mapsto xyx^{-1}$为$x$诱导的内自同构.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	对$x,y\in G$,记$x^{y}\coloneq\Ad_{y^{-1}}\left(x\right)$.
+\end{remark}
+
+\begin{definition}{内自同构映射,内自同构群}{}
+	定义$\Int:G\to\Aut_{\mathsf{Grp}}\left(G\right),x\mapsto\Ad_{x}$.称$\Inn\left(G\right)\coloneq\im\left(\Int\right)$为$G$的内自同构群.
+\end{definition}
+
+\begin{proposition}{内自同构群的正规性}{}
+	对任一$\alpha\in\Aut_{\mathsf{Grp}}\left(G\right)$和$x\in G$,有$\Ad_{\alpha\left(x\right)}=\alpha\circ\Ad_{x}\circ\alpha^{-1}$.
+\end{proposition}
+
+\begin{proposition}{正规子群=在每个内自同构下稳定的子群}{}
+	$H$是$G$的子群$\iff$ 对$G$的每个内自同构,$H$都是其不变子群.
+\end{proposition}
+
+\begin{definition}{特征子群}{}
+	若对$G$的每个自同构,$H$都是其不变子群,则称$H$是特征子群.
+\end{definition}
+
+\begin{example}{群的中心是特征子群}{}
+	$Z\left(G\right)$是$G$的特征子群.但是,$Z\left(G\right)$不一定是$G$的每个自同态的不变子群.
+\end{example}
+
+\begin{proposition}{特征子群(和特征子群)通过特征子群来传递}{}
+	设$K\subseteq H\subseteq G$且$K$是$H$的特征子群.
+	\begin{enumerate}
+		\item 若$H$是$G$的特征子群,则$K$是$G$的特征子群.
+		\item 若$H$是$G$的正规子群,则$K$是$G$的正规子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{(元素版本)正规化,中心化}{}
+	设$b\in G$.
+	\begin{enumerate}
+		\item 若$bAb^{-1}=A$,则称$b$正规化$A$.
+		\item 若$\forall a\in A\left(bab^{-1}=a\right)$,则称$b$中心化$A$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{(集合版本)正规化,中心化}{}
+	\begin{enumerate}
+	\item 若$B$的每个元素都正规化$A$,则称$B$正规化$A$.
+	\item 若$B$的每个元素都中心化$A$,则称$B$中心化$A$.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}{正规化子,中心化子}{}
+	\begin{enumerate}
+		\item $G$中所有正规化$A$的元素组成的集合称为$A$的正规化子,记作$N_{G}\left(A\right)$,无歧义时记作$N\left(A\right)$.
+		\item $G$中所有中心化$A$的元素组成的集合称为$A$的中心化子,记作$C_{G}\left(A\right)$,无歧义时记作$C\left(A\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{$N\left(A\right)$和$C\left(A\right)$是子群,$N\left(A\right)$的特征子群刻画}{}
+	\begin{enumerate}
+		\item $N\left(A\right)$和$C\left(A\right)$都是$G$的子群.
+		\item 若$A$是$G$的子群,则$N\left(A\right)$是包含$A$且使$A$是$G$的正规子群的最大子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 考虑$\Int$在$G$上的作用,则$N\left(A\right)$对应到$A$的严格稳定子,$C\left(A\right)$对应到$A$的固定子,因此$C\left(A\right)$是$N\left(A\right)$的正规子群.
+		\item $\left\{b\in G\middle|bAb^{-1}\subseteq A\right\}$只是$G$的子幺半群.即使$A$是子群,它也不一定是子群.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

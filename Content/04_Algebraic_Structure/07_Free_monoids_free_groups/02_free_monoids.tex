@@ -1,0 +1,118 @@
+\section{自由幺半群}
+
+记号约定:$X,Y,Z$是集合,$\mathcal{S}$是$X$中的有限序列组成的集合,$N$是幺半群.
+
+\begin{definition}{字}{}
+	设$n\in\N$.$X$中的有限序列$\left(x_{i}\right)_{i=1}^{n}$称为$X$上的字.
+\end{definition}
+
+\begin{definition}{长度函数,长度}{}
+	称$\ell:\mathcal{S}\to\N,\left(x_{i}\right)_{i=1}^{n}\mapsto n$为长度函数.对$\omega\in\mathcal{S}$,称$\ell\left(\omega\right)$为$\omega$的长度.
+\end{definition}
+
+\begin{proposition}{长度为$0$的字唯一}{}
+	存在唯一的$\omega\in\mathcal{S}$使得$\ell\left(\omega\right)=0$.
+\end{proposition}
+
+\begin{definition}{空字}{}
+	长度为$0$的字称为空字,记作$\epsilon$.
+\end{definition}
+
+\begin{definition}{拼接}{}
+	定义$\mathcal{S}$上的运算$\cdot$如下:对$\omega\coloneq\left(x_{i}\right)_{i=1}^{m}$和$\omega^{\prime}\coloneq\left(x_{j}^{\prime}\right)_{j=1}^{n}$,
+	\begin{align*}
+		\omega\cdot\omega^{\prime}=\left(y_{k}\right)_{k=1}^{n},y_{k}=
+		\begin{cases}
+			x_{k},&1\leq k\leq m,\\
+			x_{k-m}^{\prime},&m+1\leq k\leq n.
+		\end{cases}
+	\end{align*}
+	称运算$\cdot$为拼接.
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $\mathcal{S}$按照$\cdot$构成幺半群,其中$\cdot$的幺元为空字.
+		\item $\ell\in\Hom_{\mathsf{Mon}}\left(\mathcal{S},\N\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{自由幺半群(字幺半群)}{}
+	配备$\cdot$和空字的$\mathcal{S}$构成的幺半群记作$\Mo\left(X\right)$,称为$X$生成的自由幺半群(或字幺半群).
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	$\tau:X\to\Mo\left(X\right),x\mapsto\left(x\right)_{i\in\left\{0\right\}}$诱导了一个幺半群同构,在该同构的意义下,长度为$1$的字和$X$的一个元素相等.
+	
+	进一步,每个$\omega\in\Mo\left(X\right)$能唯一的表示成$\prod\limits_{i=1}^{n}x_{i}$.今后我们总是采用这种观点.
+\end{remark}
+
+\begin{proposition}{自由原群的泛性质}{}
+	设$M$是幺半群,$f\in\Hom_{\mathsf{Set}}\left(X,M\right)$,则存在唯一的$\phi\in\Hom_{\mathsf{Mon}}\left(\Mo\left(X\right),M\right)$使下图交换(其中,$\iota$是典范嵌入).
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[rr, "\iota", hook] \arrow[rd, "f"'] &   & \Mo\left(X\right) \arrow[ld, "\exists!\phi", dashed] \\
+			& M &                                                         
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{诱导映射$\Mo\left(u\right)$的存在唯一性}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right)$,则存在唯一的$f\in\Hom_{\mathsf{Mon}}\left(\Mo\left(X\right),\Mo\left(Y\right)\right)$,对诸$\left(x_{i}\right)_{i=1}^{n}\in\Mo\left(X\right)$有$f\left(\left(x_{i}\right)_{i=1}^{n}\right)=\left(u\left(x_{i}\right)\right)_{i=1}^{n}$.
+\end{proposition}
+
+\begin{definition}{诱导映射$\Mag\left(u\right)$}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.定义$\Mo\left(u\right)\in\Hom_{\mathsf{Mon}}\left(\Mo\left(X\right),\Mo\left(Y\right)\right)$为使下图交换的映射.
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[rr, "\iota", hook] \arrow[d, "u"'] &  & \Mo\left(X\right) \arrow[d, "\exists!\Mo\left(u\right)", dashed] \\
+			Y \arrow[rr, "\iota^{\prime}"', hook]       &  & \Mo\left(Y\right)                                                
+		\end{tikzcd}
+	\end{center}
+\end{definition}
+
+\begin{proposition}{$\Mo\left(-\right)$的函子性}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right),v\in\Hom_{\mathsf{Set}}\left(Y,Z\right)$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			X & {\Mo\left(X\right)} \\
+			Y & {\Mo\left(Y\right)} \\
+			Z & {\Mo\left(Z\right)}
+			\arrow["\iota", hook, from=1-1, to=1-2]
+			\arrow["u", from=1-1, to=2-1]
+			\arrow["{v\circ u}"'{pos=0.5}, bend right=40, from=1-1, to=3-1]
+			\arrow["{\Mo\left(u\right)}"', from=1-2, to=2-2]
+			\arrow["{\Mo\left(v\circ u\right)}"{pos=0.5}, shift left=2pt, bend left=50, from=1-2, to=3-2]
+			\arrow["{\iota^{\prime}}", hook, from=2-1, to=2-2]
+			\arrow["v", from=2-1, to=3-1]
+			\arrow["{\Mo\left(v\right)}"', from=2-2, to=3-2]
+			\arrow["{\iota^{\prime\prime}}", hook, from=3-1, to=3-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{$\Mo\left(-\right)$保持单性和满性}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.若$u$是单射(相对地,满射,双射),则$\Mo\left(u\right)$是单射(相对地,满射,双射).
+\end{proposition}
+
+本节接下来的内容中,设$\left(\left(u_{\alpha},v_{\alpha}\right)\right)_{\alpha\in I}$是$\Mo\left(X\right)$的元素族,$\sim$是其生成的相容等价关系,$\left(n_{x}\right)_{x\in X}$是$N$的元素族.
+
+\begin{proposition}{}{}
+	设$\pi:\Mo\left(X\right)\twoheadrightarrow\Mo\left(X\right)/\sim$是典范满射,则$\Mo\left(X\right)/\sim$作为幺半群由$\pi\left(X\right)$生成.
+\end{proposition}
+
+\begin{proposition}{唯一扩张定理}{}
+	设$k\in\Hom_{\mathsf{Mon}}\left(\Mag\left(X\right),N\right)$由映射$X\to N,x\mapsto n_{x}$延拓得到.若$\forall\alpha\in I\left(k\left(u_{\alpha}\right)=k\left(v_{\alpha}\right)\right)$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			{\Mo\left(X\right)} && {\Mo\left(X\right)/\sim} \\
+			& N
+			\arrow["\pi", two heads, from=1-1, to=1-3]
+			\arrow["k"', from=1-1, to=2-2]
+			\arrow["{\exists!f}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+
+

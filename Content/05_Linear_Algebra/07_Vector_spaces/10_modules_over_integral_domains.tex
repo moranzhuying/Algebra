@@ -1,0 +1,164 @@
+\section{整环上的模}
+
+记号约定:
+
+\begin{itemize}
+	\item $A$是整环,$K$是其分式域,$\rho:A\hookrightarrow K$是典范嵌入.
+	\item $E_{1},E_{2},E_{3},E,F$是$A$-模,$\phi:E\to\rho^{\ast}\left(E\right)$是典范映射.
+\end{itemize}
+
+\begin{proposition}{}{}
+	$E$中的挠元组成的集合是$E$的子模.
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$R$是交换环,$E$是$R$-模.若$x\in E$是挠元,则$Rx$的每个元素都是挠元.
+		\item 若$A$有零因子,则$E$中两个挠元的和可能是无挠.下面是一个反例:在$\Z/6\Z$-模$\Z/6\Z$中,$3+6\Z$和$4+6\Z$都是挠元,但是$\left(3+6\Z\right)+\left(4+6\Z\right)=1+6\Z$,它是无挠元.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{挠子模,挠模,无挠模}{}
+	记$E$中的挠元组成的集合为$\tor\left(E\right)$,称之为$E$的挠子模.若$\tor\left(E\right)=E$,则称$E$是挠模;若$\tor\left(E\right)=\left\{0\right\}$,则称$E$是无挠模.
+\end{definition}
+
+\begin{example}{挠模的例子}{}
+	\begin{enumerate}
+		\item 自由$A$-模的每个子模都是无挠的.特别地,投射$A$-模是无挠的.
+		\item $\Q$作为$\Z$-模是无挠的.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{A}\left(E_{1},E_{2}\right)$.
+	\begin{enumerate}
+		\item $f\left(\tor\left(E_{1}\right)\right)\subseteq\tor\left(E_{2}\right)$.
+		\item 若$f$是单射,则$f\left(\tor\left(E_{1}\right)\right)=\tor\left(E_{2}\right)\cap\im\left(f\right)$.
+		\item 若$f$是满射,$\ker\left(f\right)\subseteq\tor\left(E_{1}\right)$,则$f\left(\tor\left(E_{1}\right)\right)=\tor\left(E_{2}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	$E/\tor\left(E\right)$是无挠$A$-模.
+\end{corollary}
+
+\begin{remark}{记号说明}{}
+	对$f\in\Hom_{A}\left(E_{1},E_{2}\right)$,记$f_{T}:\tor\left(E_{1}\right)\to\tor\left(E_{2}\right),x\mapsto f\left(x\right)$.
+\end{remark}
+
+\begin{corollary}{}{}
+	若序列$0\xlongrightarrow{}E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}\xlongrightarrow{}0$正合,则$0\xlongrightarrow{}\tor\left(E_{1}\right)\xlongrightarrow{f_{T}}\tor\left(E_{2}\right)\xlongrightarrow{g_{T}}\tor\left(E_{3}\right)\xlongrightarrow{}0$也正合.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族$A$-模,则$\tor\left(\bigboxplus\limits_{i\in I}E_{i}\right)=\bigboxplus\limits_{i\in I}\tor\left(E_{i}\right)$.
+\end{proposition}
+
+\begin{remark}{}{}
+	$\tor\left(E\otimes_{A}F\right)$包含了$\tor\left(E\right)\otimes_{A}F$和$E\otimes_{A}F$在典范映射下的像.但是,即使$E,F$均无挠,$\tor\left(E\otimes_{A}F\right)$也可能是零子模.
+	
+	无限个挠模的直积不一定是挠模,例如$\prod\limits_{n=1}^{\infty}\left(\Z/p\Z\right)$($p\geq 2$),其元素$\left(1+p\Z\right)_{n=1}^{\infty}$是无挠的.
+\end{remark}
+
+\begin{proposition}{}{}
+	$\rho^{\ast}\left(E\right)=\left(A^{\times}\right)^{-1}\im\left(\phi\right),\ker\left(\phi\right)=\tor\left(E\right)$.
+\end{proposition}
+
+\begin{remark}{}{}
+	对$x,y\in E$和$\alpha,\beta\in A^{\times}$,$\alpha^{-1}\phi\left(x\right)=\beta^{-1}\phi\left(y\right)\iff\beta x-\alpha y\in\tor\left(E\right)$.
+\end{remark}
+
+\begin{corollary}{}{}
+	$E$是无挠的$\iff$ $\phi$是单射.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$f\in\Hom_{K}\left(E,F\right)$.若$\ker\left(f\right)\subseteq\tor\left(E\right)$,则$f$诱导的$K$-线性映射$\bar{f}:\rho^{\ast}\left(E\right)\to F$是单射.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$f\in\Hom_{K}\left(E,F\right)$.若$\ker\left(f\right)\subseteq\tor\left(E\right)$且$\im\left(f\right)$生成$F$,则$f$诱导的$K$-线性映射$\bar{f}:\rho^{\ast}\left(E\right)\to F$是同构.
+\end{corollary}
+
+\begin{corollary}{}{}
+	每个有限生成的$A$-模都是有限秩的.
+\end{corollary}
+
+\begin{proposition}{}{}
+	若序列$E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}$正合,则$\rho^{\ast}\left(E_{1}\right)\xlongrightarrow{\rho^{\ast}\left(f\right)}E_{2}\xlongrightarrow{\rho^{\ast}\left(g\right)}E_{3}$正合.
+\end{proposition}
+
+\begin{corollary}{}{}
+	若$E_{1}$是$E_{2}$的子模,则在典范同构的意义下,$\rho^{\ast}\left(E_{1}\right)$是$\rho^{\ast}\left(E\right)$的子空间,$\rho^{\ast}\left(E_{2}/E_{1}\right)$是$\rho^{\ast}\left(E_{2}\right)/\rho^{\ast}\left(E_{1}\right)$的子空间.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$f\in\Hom_{A}\left(E,F\right)$.
+	\begin{enumerate}
+		\item 在典范同构的意义下,$\im\left(\rho^{\ast}\left(f\right)\right)=\rho^{\ast}\left(\im\left(f\right)\right),\ker\left(\rho^{\ast}\left(f\right)\right)=\rho^{\ast}\left(\ker\left(f\right)\right),\coker\left(\rho^{\ast}\left(f\right)\right)=\rho^{\ast}\left(\coker\left(f\right)\right)$.
+		\item $\rho^{\ast}\left(f\right)$是单射$\iff$ $\ker\left(f\right)\subseteq\tor\left(E\right)$.
+		\item $\rho^{\ast}\left(f\right)$是满射$\iff$ $\coker\left(f\right)$是扭模.
+		\item $\rho^{\ast}\left(f\right)$是零映射$\iff$ $\im\left(f\right)\subseteq\tor\left(F\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\left(x_{i}\right)_{i\in I}$是$E$的元素族,则$\left(x_{i}\right)_{i\in I}$是自由族$\iff$ $\left(\phi\left(x_{i}\right)\right)_{i\in I}$是自由族.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

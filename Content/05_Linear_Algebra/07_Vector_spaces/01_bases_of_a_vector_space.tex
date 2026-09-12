@@ -1,0 +1,39 @@
+\chapter{向量空间}
+
+\section{向量空间的基}
+
+记号约定:$K$是除环,$E$是左$K$-向量空间.
+
+\begin{lemma}{线性相关性的判别}{}
+	设$b\in E$,自由族$\left(a_{i}\right)_{i\in I}$生成的子空间为$W$.若$b\notin W$,则$W\cup\left\{b\right\}$是$E$的自由子集.
+\end{lemma}
+
+\begin{theorem}{基的存在性定理}{}
+	$E$是自由$K$-模.
+\end{theorem}
+
+\begin{theorem}{基的扩充和筛选定理}{}
+	设$S$是$E$的生成集,$L$是$E$的自由子集且$L\subseteq S$,则$E$有一个基集$B$满足$L\subseteq B\subseteq S$.
+\end{theorem}
+
+\begin{corollary}{基=极大自由子集=极小生成系}{}
+	设$B\subseteq E$,则$B$是$E$的自由子集$\iff$ $B$是$E$的极大自由子集$\iff$ $B$是$E$的极小生成集.
+\end{corollary}
+
+\begin{example}{扩充除环的基}{}
+	设$A$是环,$K$是其子除环,则$A$是左(相对的,右)$K$-向量空间,从而有基.特别地,$K$的每个扩充除环作为左(相对的,右)$K$-向量空间都有基.因此,$\R$作为$\Q$-向量空间也有基,它的基叫做Hamel基.
+\end{example}
+
+\begin{remark}{自由族的另一判别准则}{}
+	设$\left(a_{i}\right)_{i\in I}$是$E$的元素族,则$E$是自由族$\iff$对任一$i\in I$,$a_{i}$不属于$\left(a_{j}\right)_{j\in I,j\neq i}$生成的子空间.对于环上的模,这个结论是必要的.根据本节的引理,上述条件也是充分的,只需要作数学归纳法并考虑$\left(a_{i}\right)_{i\in I}$的极小相关族.
+\end{remark}
+
+
+
+
+
+
+
+
+
+

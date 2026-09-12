@@ -1,0 +1,208 @@
+\section{角}
+
+记号约定:$\left(A,+,\cdot,\leq\right)$是有序域,$\mathrm{H}^{+}$是$E$上位似比$>0$的位似组成的集合.
+
+\begin{definition}{迷向半直线}{}
+	设$\Delta$是$E$中的半直线.若$\Delta$所在的直线是$\varphi$-迷向的,则称$\Delta$是$E$中的$\varphi$-迷向半直线.
+\end{definition}
+
+\begin{proposition}{}{}
+	$\mathrm{H}^{+}$是$H$的指数为$2$的子群,典范映射$\mathrm{O}^{+}\to\mathrm{S}^{+}/\mathrm{H}^{+}$是单射.
+\end{proposition}
+
+\begin{definition}{射线空间}{}
+	我们称$\mathbb{P}^{+}\left(E\right)\coloneq\left(E\setminus\left\{0\right\}\right)/A_{>0}$是$E$中的射线空间.
+\end{definition}
+
+\begin{remark}{}{}
+	我们有典范的满射$\pi:\mathbb{P}^{+}\left(E\right)\to\mathbb{P}\left(E\right),\Delta\mapsto\Delta\cup\left(-\Delta\right)$.
+\end{remark}
+
+\begin{definition}{角}{}
+	定义$\mathbb{P}\left(E\right)\times\mathbb{P}\left(E\right)$上的等价关系$R\left\{\left(D_{1},D_{2}\right),\left(D_{1}^{\prime},D_{2}^{\prime}\right)\right\}$如下:
+	\begin{center}
+		存在$u\in\mathrm{S}^{+}$使得$\left(u\left(D_{1}\right),u\left(D_{2}\right)\right)=\left(D_{1}^{\prime},D_{2}^{\prime}\right)$.
+	\end{center}
+	\begin{enumerate}
+		\item 对每个$\left(D,D^{\prime}\right)\in\mathbb{P}\left(E\right)\times\mathbb{P}\left(E\right)$,称$\widehat{\left(D,D^{\prime}\right)}\coloneq\left[\left(D,D^{\prime}\right)\right]_{R}$是$\left(D,D^{\prime}\right)$张成的角.
+		\item 记$\mathfrak{A}_{0}\left(E\right)\coloneq\left(\mathbb{P}\left(E\right)\times\mathbb{P}\left(E\right)\right)/R$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{有向角}{}
+	定义$\mathbb{P}^{+}\left(E\right)\times\mathbb{P}^{+}\left(E\right)$上的等价关系$R\left\{\left(\Delta_{1},\Delta_{2}\right),\left(\Delta_{1}^{\prime},\Delta_{2}^{\prime}\right)\right\}$如下:
+	\begin{center}
+		存在$u\in\mathrm{O}^{+}$使得$\left(u\left(\Delta_{1}\right),u\left(\Delta_{2}\right)\right)=\left(\Delta_{1}^{\prime},\Delta_{2}^{\prime}\right)$.
+	\end{center}
+	\begin{enumerate}
+		\item 对每个$\left(\Delta,\Delta^{\prime}\right)\in\mathbb{P}^{+}\left(E\right)\times\mathbb{P}^{+}\left(E\right)$,称$\widehat{\left(\Delta,\Delta^{\prime}\right)}\coloneq\left[\left(\Delta,\Delta^{\prime}\right)\right]_{R}$是$\left(\Delta,\Delta^{\prime}\right)$张成的有向角.
+		\item 记$\mathfrak{A}_{0}\left(E\right)\coloneq\left(\mathbb{P}^{+}\left(E\right)\times\mathbb{P}^{+}\left(E\right)\right)/R$.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{(有向)角的交叉等价性}{}
+	\begin{enumerate}
+		\item 对每个$D_{1},D_{2},D_{3},D_{4}\in\mathbb{P}\left(E\right)$有$\widehat{\left(D_{1},D_{2}\right)}=\widehat{\left(D_{3},D_{4}\right)}\iff\widehat{\left(D_{1},D_{3}\right)}=\widehat{\left(D_{2},D_{4}\right)}$.
+		\item 对每个$\Delta_{1},\Delta_{2},\Delta_{3},\Delta_{4}\in\mathbb{P}^{+}\left(E\right)$有$\widehat{\left(\Delta_{1},\Delta_{2}\right)}=\widehat{\left(\Delta_{3},\Delta_{4}\right)}\iff\widehat{\left(\Delta_{1},\Delta_{3}\right)}=\widehat{\left(\Delta_{2},\Delta_{4}\right)}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	给$\mathrm{S}^{+}/\mathrm{H}$和$\mathrm{O}^{+}$用乘法记号.定义$\mathcal{R}:\mathfrak{A}\left(E\right)\to\mathrm{S}^{+}/\mathrm{H},\theta\mapsto\mathcal{R}_{\theta}$和$\overline{\mathcal{R}}:\mathfrak{A}_{0}\left(E\right)\to\mathrm{O}^{+},\theta\mapsto\overline{\mathcal{R}}_{\theta}$如下:
+	\begin{itemize}
+		\item 对每个$\left(D_{1},D_{2}\right)\in\mathbb{P}\left(E\right)\times\mathbb{P}\left(E\right)$有$\mathcal{R}\left(\widehat{\left(D_{1},D_{2}\right)}\right)=uH$,其中$u\in\mathrm{S}^{+}$且$u\left(D_{1}\right)=D_{2}$.
+		\item 对每个$\left(\Delta_{1},\Delta_{2}\right)\in\mathbb{P}\left(E\right)\times\mathbb{P}\left(E\right)$有$\overline{\mathcal{R}}\left(\widehat{\left(\Delta_{1},\Delta_{2}\right)}\right)=vH$,其中$v\in\mathrm{O}^{+}$且$v\left(\Delta_{1}\right)=\Delta_{2}$.
+	\end{itemize}
+	那么,$\mathcal{R}$和$\overline{\mathcal{R}}$都是典范双射,并且分别在$\mathfrak{A}_{0}\left(E\right)$和$\mathfrak{A}\left(E\right)$上诱导了加法交换群结构.
+\end{proposition}
+
+\begin{definition}{圆周角群,直线角群}{}
+	加法交换群$\mathfrak{A}_{0}\left(E\right)$和$\mathfrak{A}\left(E\right)$分别称为$E$上的圆周角群和直线角群.
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 对每个$D_{1},D_{2},D_{3}\in\mathbb{P}\left(E\right)$有$\widehat{\left(D_{1},D_{3}\right)}=\widehat{\left(D_{1},D_{2}\right)}+\widehat{\left(D_{2},D_{3}\right)}$.
+		\item 对每个$D\in\mathbb{P}\left(E\right)$有$\widehat{\left(D,D\right)}=0$.
+		\item 对每个$D_{1},D_{2}\in\mathbb{P}\left(E\right)$有$\widehat{\left(D_{1},D_{2}\right)}=-\widehat{\left(D_{2},D_{1}\right)}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 对每个$\Delta_{1},\Delta_{2},\Delta_{3}\in\mathbb{P}^{+}\left(E\right)$有$\widehat{\left(\Delta_{1},D_{3}\right)}=\widehat{\left(\Delta_{1},\Delta_{2}\right)}+\widehat{\left(\Delta_{2},\Delta_{3}\right)}$.
+		\item 对每个$\Delta\in\mathbb{P}^{+}\left(E\right)$有$\widehat{\left(\Delta,\Delta\right)}=0$.
+		\item 对每个$\Delta_{1},\Delta_{2}\in\mathbb{P}^{+}\left(E\right)$有$\widehat{\left(\Delta_{1},\Delta_{2}\right)}=-\widehat{\left(\Delta_{2},\Delta_{1}\right)}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\mathbb{P}\left(E\right)$是$\mathrm{S}^{+}/\mathrm{H}$的主齐性空间,$\mathbb{P}^{+}\left(E\right)$是$\mathrm{O}^{+}$的主齐性空间.
+		\item$\mathfrak{A}_{0}\left(E\right)\simeq\mathrm{O}^{+}/\left\{-\id_{E},\id_{E}\right\}$,典范同态$\mathrm{O}^{+}\to\mathrm{O}^{+}/\left\{-\id_{E},\id_{E}\right\}$诱导了典范同态$p:\mathfrak{A}\left(E\right)\to\mathfrak{A}_{0}\left(E\right)$.具体来说,它把$\widehat{\left(\Delta_{1},\Delta_{2}\right)}$映到$\Delta_{1}$和$\Delta_{2}$各自所在的直线$D_{1}$和$D_{2}$的夹角.特别地,当$A=\R$时,$\mathfrak{A}\left(E\right)$是$\mathfrak{A}_{0}\left(E\right)$的二重覆叠空间.
+		\item 设$D_{1},D_{2},D_{3},D_{4}\in\mathbb{P}\left(E\right)$.如果$D_{1}$和$D_{2}$正交,$D_{3}$和$D_{4}$正交,那么$\widehat{\left(D_{1},D_{2}\right)}=\widehat{\left(D_{3},D_{4}\right)}$.
+		\item 设$\Delta_{1},\Delta_{2}\in\mathbb{P}^{+}\left(E\right)$,那么$\widehat{\left(\Delta_{1},-\Delta_{1}\right)}=\widehat{\left(\Delta_{2},-\Delta\right)}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{直角,平角}{}
+	设$D_{1},D_{2}\in\mathbb{P}\left(E\right),\Delta\in\mathbb{P}^{+}\left(E\right)$,$D_{1}$和$D_{2}$正交.
+	\begin{enumerate}
+		\item 我们称$\widehat{\left(D_{1},D_{2}\right)}$是直角.
+		\item 我们称$\widehat{\left(\Delta,-\Delta\right)}$是平角.
+	\end{enumerate}
+\end{definition}
+
+本节接下来的内容中,默认$A$是极大有序域,$\varphi$正定.
+
+\begin{proposition}{圆周角群和射影角群的有限挠性}{}
+	对每个$n\geq 1$有$\left|\left\{\theta\in\mathfrak{A}_{0}\left(E\right)\middle|n\theta=0\right\}\right|=\left|\left\{\alpha\in\mathfrak{A}\left(E\right)\middle|n\alpha=0\right\}\right|=n$.
+\end{proposition}
+
+\begin{corollary}{直角和平角的唯一性}{}
+	直角是$\mathfrak{A}_{0}\left(E\right)$中唯一的$2$阶元,平角是$\mathfrak{A}\left(E\right)$中唯一的$2$阶元.
+\end{corollary}
+
+本节接下来的内容中,默认$E$配备了定向$\Delta_{0}$.
+
+\begin{lemma}{相似变换保持$2$-向量所在的直线}{}
+	设$u\in\mathrm{S}^{+}$,则对每个$x\in E\setminus\left\{0\right\}$,存在$e\in\bigwedge\limits^{2}E$和$\lambda_{x}\in A$,使得下列情形中只有一种成立:
+	\begin{itemize}
+		\item $x\wedge u\left(x\right)=\lambda_{x}e$且$\lambda_{x}\geq 0$;
+		\item $x\wedge u\left(x\right)=\lambda_{x}e$且$\lambda_{x}\leq 0$.
+	\end{itemize}
+\end{lemma}
+
+\begin{lemma}{正向生成元的唯一性}{}
+	$A\left(\varphi\right)$中存在唯一的生成元$w$,使得$w^{2}=-\id_{E}$且对每个$x\in E$有$x\wedge w\left(x\right)>0$.
+\end{lemma}
+
+\begin{definition}{关于生成元的三角函数}{}
+	设$w$是$A\left(\varphi\right)$的生成元,满足$w^{2}=-\id_{E}$和$\forall x\in E\left(x\wedge w\left(x\right)>0\right)$.
+	\begin{enumerate}
+		\item 分别称$\sin_{w}\coloneq s_{w}\circ\overline{\mathcal{R}}$和$\cos_{w}\coloneq c_{w}\circ\overline{\mathcal{R}}$是关于$w$的正弦和余弦.
+		\item 分别称$\tan_{w}\coloneq t_{w}\circ\mathcal{R}$和$\cot_{w}:\mathfrak{A}_{0}\left(E\right)\to\tilde{A},\varphi\mapsto\frac{1}{\tan_{w}\left(\varphi\right)}$是关于$w$的正切和余切.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	对每个$\theta,\theta^{\prime}\in\mathfrak{A}_{0}\left(E\right)$有$\tan\left(\theta+\theta^{\prime}\right)=\frac{\tan_{w}\left(\theta\right)+\tan_{w}\left(\theta^{\prime}\right)}{1-\tan_{w}\left(\theta\right)\tan_{w}\left(\theta^{\prime}\right)},\tan\left(2\theta\right)=\frac{2\tan_{w}\left(\theta\right)}{1-\left(\tan_{w}\left(\theta\right)\right)^{2}}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	对每个$\theta_{1},\theta_{2}\in\mathfrak{A}_{0}\left(E\right)$有
+	\begin{gather*}
+		\left(\cos_{w}\left(p\left(\theta\right)\right)\right)^{2}+\left(\sin_{w}\left(p\left(\theta\right)\right)\right)^{2}=1,\\
+		\cos_{w}\left(p\left(\theta\right)+p\left(\theta^{\prime}\right)\right)=\cos_{w}\left(p\left(\theta\right)\right)\cos_{w}\left(p\left(\theta^{\prime}\right)\right)-\sin_{w}\left(p\left(\theta\right)\right)\sin_{w}\left(p\left(\theta^{\prime}\right)\right),\\
+		\sin_{w}\left(p\left(\theta\right)+p\left(\theta^{\prime}\right)\right)=\sin_{w}\left(p\left(\theta\right)\right)\cos_{w}\left(p\left(\theta^{\prime}\right)\right)+\cos_{w}\left(p\left(\theta\right)\right)\sin_{w}\left(p\left(\theta^{\prime}\right)\right),\\
+		\tan_{w}\left(p\left(\theta\right)\right)=\frac{\sin_{w}\left(p\left(\theta\right)\right)}{\cos_{w}\left(p\left(\theta\right)\right)},\cot_{w}\left(p\left(\theta\right)\right)=\frac{\cos_{w}\left(p\left(\theta\right)\right)}{\sin_{w}\left(p\left(\theta\right)\right)},\\
+		1+\left(\tan_{w}\left(p\left(\theta\right)\right)\right)^{2}=\frac{1}{\left(\cos_{w}\left(p\left(\theta\right)\right)\right)^{2}},1+\left(\cot_{w}\left(p\left(\theta\right)\right)\right)^{2}=\frac{1}{\left(\sin_{w}\left(p\left(\theta\right)\right)\right)^{2}},\\
+		\sin_{w}\left(2p\left(\theta\right)\right)=\frac{2\tan_{w}\left(p\left(\theta\right)\right)}{1+\left(\tan_{w}\left(p\left(\theta\right)\right)\right)^{2}},\cos_{w}\left(2p\left(\theta\right)\right)=\frac{1-\tan_{w}\left(p\left(\theta\right)\right)^{2}}{1+\tan_{w}\left(p\left(\theta\right)\right)^{2}}.
+	\end{gather*}
+\end{proposition}
+
+\begin{remark}{}{}
+	没有歧义的时候,我们总把$\sin_{w},\cos_{w},\tan_{w},\cot_{w}$分别写作$\sin,\cos,\tan,\cot$.本节接下来的内容中,默认$w$如上定义.
+\end{remark}
+
+\begin{definition}{向量的夹角}{}
+	设$x,y\in E\setminus\left\{0\right\}$,各自所在的半直线为$\Delta_{x}$和$\Delta_{y}$.我们称$\widehat{\left(x,y\right)}\coloneq\widehat{\left(\Delta_{x},\Delta_{y}\right)}$是$x$和$y$的有序夹角.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$e\in\bigwedge\limits^{2}E$是正单位向量,则对每个$x,y\in E\setminus\left\{0\right\}$有
+	\begin{align*}
+		\cos_{w}\widehat{\left(x,y\right)}=\frac{\varphi\left(x,y\right)}{\left|x\right|\cdot\left|y\right|},\sin_{w}\widehat{\left(x,y\right)}e=\frac{x\wedge y}{\left|x\right|\cdot\left|y\right|}.
+	\end{align*}
+\end{proposition}
+
+\begin{definition}{仿射空间中(半)直线之间的夹角}{}
+	设$L$是$A$-仿射空间,其平移空间是$E$.
+	\begin{enumerate}
+		\item 设$\Delta_{1},\Delta_{2}$是$L$中的半直线,各自的方向向量为$v_{1},v_{2}$.我们称$\widehat{\left(\Delta_{1},\Delta_{2}\right)}\coloneq\widehat{\left(v_{1},v_{2}\right)}$是$\Delta_{1}$和$\Delta_{2}$在$L$中张成的角.
+		\item 设$D_{1},D_{2}$是$L$中的直线,各自的方向向量为$v_{1},v_{2}$.我们称$\widehat{\left(D_{1},D_{2}\right)}\coloneq\widehat{\left(v_{1},v_{2}\right)}$是$D_{1}$和$D_{2}$在$L$中张成的角.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{任意维向量空间中的夹角}{}
+	设$V$是$A$-向量空间,$\psi\in\Bil_{A}\left(V\right)$对称且正定,$x,y\in F$且线性无关,$V^{\prime}=\langle x,y\rangle$.令
+	\begin{align*}
+		D_{x}=A_{>0}x\cap V^{\prime},D_{y}=A_{>0}y\cap V^{\prime},
+	\end{align*}
+	称$\widehat{\left(x,y\right)}\coloneq\widehat{\left(D_{x},D_{y}\right)}$是$x$和$y$的夹角.对$V\setminus\left\{0\right\}$的任意两个线性相关的向量$u,v$,约定$\widehat{\left(u,v\right)}=0$.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 类似的,我们有$\cos\widehat{\left(x,y\right)}=\frac{\psi\left(x,y\right)}{\left|x\right|\cdot\left|y\right|}$.
+		\item $\cos\widehat{\left(x,y\right)}$不依赖$V^{\prime}$的定向,而$\sin\widehat{\left(x,y\right)},\tan\widehat{\left(x,y\right)}$依赖$V^{\prime}$的定向.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

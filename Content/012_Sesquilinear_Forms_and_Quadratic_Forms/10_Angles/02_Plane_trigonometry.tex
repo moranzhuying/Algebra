@@ -1,0 +1,111 @@
+\section{平面三角学}
+
+\begin{proposition}{}{}
+	设$\delta\in A$,$w$是$A\left(\varphi\right)$的生成元,$w^{2}=\delta\id_{E}$.
+	\begin{enumerate}
+		\item 若$w^{\prime}$是$A\left(\varphi\right)$的生成元,则存在$\lambda\in A^{\times}$使得$w^{\prime}=\lambda w$.
+		\item $\delta\left(A^{\times}\right)^{2}\in A^{\times}/\left(A^{\times}\right)^{2}$是唯一的.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$\delta\equiv -1\pmod{\left(A^{\times}\right)^{2}}$时,通常让$w$满足$w^{2}=-\id_{E}$.此时,$w$在相差正负号的意义下是唯一的.
+		\item 当$\delta\equiv -1\pmod{\left(A^{\times}\right)^{2}}$且$-1\notin\left(A^{\times}\right)^{2}$时,通常让$w$满足$w^{2}=\id_{E}$.此时,$w$在相差正负号的意义下是唯一的.
+	\end{enumerate}
+	这两种情形分别对应于经典的圆三角学和双曲三角学.
+\end{remark}
+
+本节接下来的内容中,采用如下记号约定:
+\begin{itemize}
+	\item $\delta\in A$,$w$生成$A\left(\varphi\right)$且$w^{2}=\delta\id_{E}$,$\tilde{A}\coloneq\mathbb{P}^{1}\left(A\right)=A\sqcup\left\{\infty\right\}$.
+	\item $\left(e_{i}\right)_{i=1}^{2}$是$A\left(\varphi\right)$的基,其中$e_{1}=\id_{E},e_{2}=w$.
+\end{itemize}
+
+\begin{definition}{}{}
+	定义$s_{w},c_{w}\in\Hom_{\mathsf{Set}}\left(A\left(\varphi\right),A\right),t_{w}^{\prime}\in\Hom_{\mathsf{Set}}\left(\mathrm{S}^{+},\tilde{A}\right)$和$t_{w}\in\Hom_{\mathsf{Set}}\left(\mathrm{S}^{+}/\mathrm{H},\tilde{A}\right)$如下:
+	\begin{itemize}
+		\item $\forall v\in\mathrm{S}^{+}\forall a,b\in A\left(v=a\id_{E}+bw\implies\left(c_{w}\left(v\right),s_{w}\left(v\right)\right)=\left(a,b\right)\right)$.
+		\item $\forall v\in\mathrm{S}^{+}\left(\left(c_{w}\left(v\right)=0\implies t_{w}\left(v\right)=\infty\right)\wedge\left(c_{w}\left(v\right)\neq 0\implies t_{w}^{\prime}\left(v\right)=\frac{s_{w}\left(v\right)}{t_{w}\left(v\right)}\right)\right)$.
+		\item $\forall v\in\mathrm{S}^{+}\left(t_{w}\left(vH\right)=t_{w}^{\prime}\left(v\right)\right)$.
+	\end{itemize}
+\end{definition}
+
+\begin{remark}{}{}
+	显然$\left(c_{-w},s_{-w},t_{-w}\right)=\left(c_{w},-s_{w},-t_{w}\right)$.
+\end{remark}
+
+\begin{proposition}{}{}
+	给$\mathrm{S}^{+}/\mathrm{H}$采用加法记号.
+	\begin{enumerate}
+		\item 若不存在$\gamma\in A$使得$\delta=\gamma^{2}$,则$t_{w}$是双射.
+		\item 若存在$\gamma\in A$使得$\delta=\gamma^{2}$,则$\mathrm{S}^{+}/\mathrm{H}\to\tilde{A}\setminus\left\{-\gamma^{-1},\gamma^{-1}\right\},v\mapsto t_{w}\left(v\right)$是史昂社.
+		\item 对每个$\theta,\theta^{\prime}\in\mathrm{S}^{+}/\mathrm{H}$,当$t_{w}\left(\theta\right),t_{w}\left(\theta^{\prime}\right)\in A$且$1+\delta t_{w}\left(\theta\right)t_{w}\left(\theta^{\prime}\right)\neq 0$时,
+		\begin{align}
+			t_{w}\left(\theta+\theta^{\prime}\right)=\frac{t_{w}\left(\theta\right)+t_{w}\left(\theta^{\prime}\right)}{1+\delta t_{w}\left(\theta\right)t_{w}\left(\theta^{\prime}\right)}.
+		\end{align}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	给$\mathrm{O}^{+}$采用加法记号,那么对每个$\theta,\theta^{\prime}\in\mathrm{O}^{+}$,
+	\begin{gather}
+		c_{w}\left(\theta\right)^{2}-\delta s_{w}\left(\theta\right)^{2}=1,\\
+		c_{w}\left(\theta+\theta^{\prime}\right)=c_{w}\left(\theta\right)s_{w}\left(\theta^{\prime}\right)+\delta s_{w}\left(\theta\right)s_{w}\left(\theta^{\prime}\right),\\
+		s_{w}\left(\theta+\theta^{\prime}\right)=s_{w}\left(\theta\right)c_{w}\left(\theta^{\prime}\right)+\delta c_{w}\left(\theta\right)s_{w}\left(\theta^{\prime}\right).
+	\end{gather}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$d:\mathrm{S}^{+}/\mathrm{H}\to\mathrm{O}^{+}$是典范同构.对每个$\theta\in\mathrm{S}^{+}/\mathrm{H}$,当$t_{w}\left(\theta\right)\in A$时,
+	\begin{align}
+		s_{w}\left(d\left(\theta\right)\right)=\frac{2t_{w}\left(\theta\right)}{1-\delta t_{w}\left(\theta\right)^{2}},
+		c_{w}\left(d\left(\theta\right)\right)=\frac{1+\delta t_{w}\left(\theta\right)^{2}}{1-\delta t_{w}\left(\theta\right)^{2}}.
+	\end{align}
+\end{proposition}
+
+\begin{corollary}{}{}
+	\begin{enumerate}
+		\item 对每个$\theta\in\mathrm{O}^{+}$,当$t_{w}\left(\theta\right)\in A$时,
+		\begin{align}
+			s_{w}\left(2\theta\right)=\frac{2t_{w}\left(\theta\right)}{1-\delta t_{w}\left(\theta\right)^{2}},
+			c_{w}\left(2\theta\right)=\frac{1+t_{w}\left(\theta\right)^{2}}{1-\delta t_{w}\left(\theta\right)^{2}}.
+		\end{align}
+		\item 对每个$\theta\in\mathrm{S}^{+}/\mathrm{H}$,当$1+\delta t_{w}\left(\theta\right)^{2}\neq 0$时,
+		\begin{align}
+			t_{w}\left(2\theta\right)=\frac{2t_{w}\left(\theta\right)}{1+\delta t_{w}\left(\theta\right)^{2}}.
+		\end{align}
+	\end{enumerate}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

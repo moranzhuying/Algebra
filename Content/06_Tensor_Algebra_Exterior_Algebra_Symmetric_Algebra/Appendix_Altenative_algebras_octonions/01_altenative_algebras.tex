@@ -1,0 +1,69 @@
+\chapter{附录:交错代数,八元数}
+
+\section{交错代数}
+
+记号约定:$R$是交换环,$A$是$R$-代数.
+
+\begin{definition}{结合子}{}
+	定义$3$重$R$-线性映射$\left[\cdot,\cdot,\cdot\right]:A\times A\times A\to A,\left(x,y,z\right)\mapsto\left(xy\right)z-x\left(yz\right)$.对每个$x,y,z\in A$,称$\left[x,y,z\right]$是$x,y,z$的结合子.
+\end{definition}
+
+\begin{lemma}{结合子恒等式}{}
+	对每个$p,q,r,s\in A$有$\left[pq,r,s\right]-\left[p,qr,s\right]+\left[p,q,rs\right]=\left[p,q,r\right]s+p\left[q,r,s\right]$.
+\end{lemma}
+
+\begin{lemma}{}{}
+	设$E$是$R$-代数,其结合子映射是交错的,$S$是$E$的生成集,$U$是$E$的$R$-子模,$S\subseteq U,SU\subseteq U,US\subseteq U$,则$U=E$.
+\end{lemma}
+
+\begin{definition}{强结合子集}{}
+	设$H\subseteq A$.称$H$是强结合的,若$\forall x,y,z\in A\left(\left\{x,y\right\}\subseteq H\vee\left\{y,z\right\}\subseteq H\vee\left\{x,z\right\}\subseteq H\vee\left\{x,y,z\right\}\subseteq H\implies\left[x,y,z\right]=0\right)$.
+\end{definition}
+
+\begin{lemma}{}{}
+	设$A$的结合子映射交错.若$H$是$A$的强结合子集,则$H$生成的子代数也是强结合的.
+\end{lemma}
+
+\begin{lemma}{}{}
+	设$A$的结合子映射交错,则对每个$x\in A$,由$\left\{x\right\}$生成的子代数是强结合的.
+\end{lemma}
+
+\begin{lemma}{}{}
+	设$A$的结合子映射交错.若$X,Y$是$A$的两个强结合子代数,则$X\cup Y$生成的子代数是结合的.
+\end{lemma}
+
+\begin{proposition}{交错代数的等价条件}{equivalent-condition-of-altenative-algebra}
+	下列陈述等价:
+	\begin{enumerate}
+		\item 对每个$x,y\in A$,由$\left\{x,y\right\}$生成的子代数是结合的.
+		\item $\left[\cdot,\cdot,\cdot\right]$是交错的.
+		\item 对每个$x,y\in A$有$x^{2}y=x\left(xy\right)$和$yx^{2}=\left(yx\right)x$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{交错代数}{}
+	若$A$满足(\ref{prop:equivalent-condition-of-altenative-algebra})的条件之一,则称$A$是交错$R$-代数.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 显然,每个结合代数一定交错.
+		\item 设$A$是交错$R$-代数,$R^{\prime}$是交换$R$-代数,则$A\otimes_{R}R^{\prime}$是交错$R^{\prime}$-代数.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+\section{分式环}
+
+记号约定:$A$是交换环,$B$是环,$S\subseteq A$,$A_{S}$是$A$相对$S$的分式幺半群(只配备乘法),$\pi:A\twoheadrightarrow A_{S}$是典范映射.
+
+\begin{proposition}{分式环的构造}{construction-of-fraction-ring}
+	$A_{S}$上仅有一种加法运算,使得配备该运算后$A_{S}$是交换环,$\pi\in\Hom_{\mathsf{Ring}}\left(A,A_{S}\right)$.
+\end{proposition}
+
+\begin{definition}{局部化,分式环}{}
+	命题(\ref{prop:construction-of-fraction-ring})中构造的环称为$A$关于$S$的局部化(或$A$关于$S$的分式环),记作$A\left[S^{-1}\right]$.
+	
+	当$S$是$A$中所有可消去元组成的集合时,称$A\left[S^{-1}\right]$为$A$的全分式环(或$A$的完全局部化).
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	$S$是$A$中所有可消去元组成的集合时$\pi$是双射,因此在同构意义下$A$是$A\left[S^{-1}\right]$的子环.
+\end{remark}
+
+\begin{theorem}{局部化的泛性质}{}
+	若$f\in\Hom_{\mathsf{Ring}}\left(A,B\right)$且$f\left(S\right)\subseteq B^{\times}$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			A && {A\left[S^{-1}\right]} \\
+			& B
+			\arrow["\pi", two heads, from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}", dashed, from=1-3, to=2-2]
+			\end{tikzcd}
+	\end{center}
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+\chapter{逆向极限和正向极限}
+
+\section{逆向极限}
+
+\begin{definition}{逆向系统}{}
+	设集合$I$配备全序$\leq$,$\left(E_{i}\right)_{i\in I}$是集合族,对任意$\alpha,\beta\in I$且$\alpha\leq\beta$有$f_{\alpha,\beta}\in\Hom_{\mathsf{Set}}\left(E_{\beta},E_{\alpha}\right)$.若
+	\begin{itemize}
+		\item $\forall\alpha,\beta,\gamma\in I\left(\alpha\leq\beta\leq\gamma\implies f_{\alpha,\gamma}=f_{\alpha,\beta}\circ f_{\beta,\gamma}\right)$;
+		\item $\forall\alpha\in I\left(f_{\alpha,\alpha}=\id_{E_{\alpha}}\right)$,
+	\end{itemize}
+	则称$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统.
+\end{definition}
+
+\begin{definition}{集合族的逆向极限}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合逆向系统.定义$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$的逆向极限为
+	\begin{align*}
+		\varprojlim\limits_{I}\left(E_{\alpha},f_{\alpha,\beta}\right)\coloneq\varprojlim\limits_{I}E_{\alpha}\coloneq\left\{x\in\prod\limits_{i\in I}E_{i}\middle|\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies \pr_{\alpha}\left(x\right)=f_{\alpha,\beta}\left(\pr_{\beta}\left(x\right)\right)\right)\right\}.
+	\end{align*}
+	对任意$\alpha\in I$,映射$\pr_{\alpha}$在$\varprojlim E_{\alpha}$上的限制记作$f_{\alpha}$,称为典范映射.
+\end{definition}
+
+\begin{remark}{}{}
+	即便$\left(E_{\alpha}\right)_{\alpha\in I}$是一族非空集合,$\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}$是一族满射,$\varprojlim E_{\alpha}$也有可能是空集.
+\end{remark}
+
+\begin{example}{}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统.
+	\begin{enumerate}
+		\item 若$I$上的预序由相等关系诱导,则$\varprojlim E_{\alpha}=\prod\limits_{\alpha\in I}E_{\alpha}$.
+		\item 若$I$是上定向的,$F$是集合,对任意$\alpha\in I$有$E_{\alpha}=F$,对任意$\alpha,\beta\in I$且$\alpha\leq\beta$有$f_{\alpha,\beta}=\id_{F}$,则$\varprojlim E_{\alpha}=\Delta_{\Hom_{\mathsf{Set}}\left(I,F\right)}$.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{逆向系统的限制}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统,$J\subseteq I$,则$\left(\left(E_{\alpha}\right)_{\alpha\in J},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in J}\right)$也是集合的逆向系统,称为原逆向系统在$J$上的限制.
+\end{definition}
+
+\begin{definition}{限制逆向系统诱导的典范映射}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统,$J\subseteq I$.我们称$g:\varprojlim \limits_{I}E_{\alpha}\to\varprojlim\limits_{J}E_{\alpha},x\mapsto\left(f_{\alpha}\left(x\right)\right)_{\alpha\in J}$为典范映射.
+\end{definition}
+
+\begin{proposition}{逆向极限的函子性}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统,$K\subseteq J\subseteq I$,则下图交换(其中$f,g,h$都是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			{\varprojlim\limits_{K}E_{\alpha}} && {\varprojlim\limits_{I}E_{\alpha}} \\
+			& {\varprojlim\limits_{J}E_{\alpha}}
+			\arrow["h", from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["g"', from=2-2, to=1-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

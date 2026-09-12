@@ -1,0 +1,73 @@
+\section{含有两个变量的偏函数}
+
+\begin{definition}{二元偏函数}{}
+	一个二元偏函数是一个定义域为两个集合的笛卡尔积的子集的偏函数.如果$f$是偏函数,$\left(x,y\right)$是$f$的定义域的元素,则把$f\left(\left(x,y\right)\right)$记作$f\left(x,y\right)$.
+\end{definition}
+
+\begin{definition}{部分函数}{}
+	设$f$是二元偏函数,源为$D$,靶为$C$.对任一$y$,令$A_{y}=\left\{x\middle|\left(x,y\right)\in D\right\}$;对任一$x$,令$B_{x}=\left\{y\middle|\left(x,y\right)\in D\right\}$.
+	\begin{enumerate}
+		\item 对任一$y$,映射$f\left(-,y\right):A_{y}\to C,x\mapsto f\left(x,y\right)$称为$f$关于第二分量$y$的部分映射(或部分函数).
+		\item 对任一$x$,映射$f\left(x,-\right):B_{x}\to C,y\mapsto f\left(x,y\right)$称为$f$关于第一分量$y$的部分映射(或部分函数).
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{不依赖第一(第二)分量}{}
+	设$f$是二元偏函数,源为$D$,靶为$C$.对任一$y$,令$A_{y}=\left\{x\middle|\left(x,y\right)\in D\right\}$;对任一$x$,令$B_{x}=\left\{y\middle|\left(x,y\right)\in D\right\}$.
+	\begin{enumerate}
+		\item 若对任一$y$,映射$f\left(-,y\right)$是常值函数,则称$f$不依赖它的第二分量.
+		\item 若对任一$x$,映射$f\left(x,-\right)$是常值函数,则称$f$不依赖它的第一分量.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	设$A,B$是集合,$f$是二元偏函数,源为$D$,靶为$C$.
+	\begin{enumerate}
+		\item 若$f$不依赖它的第一分量,则存在映射$g:\pr_{2}\left(D\right)\to C$满足$\forall\left(x,y\right)\in D\left(g\left(y\right)=f\left(x,y\right)\right)$.
+		\item 若$g:B\to C$是映射,则映射$A\times B\to C,\left(x,y\right)\mapsto g\left(y\right)$不依赖第一个参数.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{映射的乘积}{}
+	设$f:A\to C$和$g:B\to D$是映射.称$f\times g:A\times B\to C\times D,\left(x,y\right)\mapsto\left(f\left(x\right),g\left(y\right)\right)$是$f$和$g$的乘积.
+\end{definition}
+
+\begin{proposition}{映射的乘积的性质}{}
+	设$f:A\to C$和$g:B\to D$是映射.
+	\begin{enumerate}
+		\item $\im\left(f\times g\right)=\im\left(f\right)\times\im\left(g\right)$.
+		\item 若$f$和$g$都是单射(相对的,满射,双射),则$f\times g$是单射(相对的,满射,双射).
+		\item 若$f$和$g$都是双射,则$\left(f\times g\right)^{-1}=f^{-1}\times g^{-1}$.
+		\item 若$u:C\to E$和$v:D\to F$是映射,则$\left(u\times v\right)\circ\left(f\times g\right)=\left(u\circ f\right)\times\left(v\circ g\right)$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

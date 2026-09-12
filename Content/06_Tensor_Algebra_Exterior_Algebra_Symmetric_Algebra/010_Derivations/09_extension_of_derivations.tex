@@ -1,0 +1,218 @@
+\section{导子的展开}
+
+\begin{proposition}{导子向张量代数,对称代数和外代数的延拓}{extend-derivation-to-tensor-algebra-symmetric-algebra-and-exterior-algebra}
+	设$A$是交换环,$M$是$A$-模,$B\in\left\{\mathsf{T}\left(M\right),\mathsf{S}\left(M\right),\bigwedge\left(M\right)\right\}$,$E$是$\left(B,B\right)$-双模,$d_{0}:A\to E$是导子,$d_{1}:M\to E$是群同态.若
+	\begin{enumerate}
+		\item $\forall a\in A\forall x\in M\left(d_{1}\left(ax\right)=ad_{1}\left(x\right)+d_{0}\left(a\right)x\right)$,
+		\item 当$B=\mathsf{S}\left(M\right)$时,有$\forall x,y\in M\left(xd_{1}\left(y\right)+d_{1}\left(x\right)y=yd_{1}\left(x\right)+d_{1}\left(y\right)x\right)$,
+		\item 当$B=\bigwedge\left(M\right)$时,有$\forall x\in M\left(xd_{1}\left(x\right)+d_{1}\left(x\right)x=0\right)$,
+	\end{enumerate}
+	那么,把$B$视为$\Z$-代数,则存在唯一的导子$d:B\to E$,满足$d|_{A}=d_{0}$和$d|_{M}=d_{1}$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$M$是$\Delta$型分次$K$-模,$\Delta^{\prime}=\Delta\times\Z$,为$K$-代数$\mathsf{T}\left(M\right),\mathsf{S}\left(M\right),\bigwedge\left(M\right)$配备$\Delta^{\prime}$型分次.设$\epsilon^{\prime}$是$\Delta^{\prime}$上的交换因子.
+	\begin{enumerate}
+		\item 设$E$是$\Delta^{\prime}$型分次$\mathsf{T}\left(M\right)$-双模,则每个$\delta^{\prime}$次分次$K$-线性映射$f:M\to E$都能唯一延拓为$\delta$次$\epsilon^{\prime}$-导子$d:\mathsf{T}\left(M\right)\to E$.
+		\item 设$E$是$\Delta^{\prime}$型分次$\mathsf{S}\left(M\right)$-模,$f:M\to E$是分次$K$-线性映射,则$f$能延拓为$\epsilon$-导子$d:\mathsf{S}\left(M\right)\to E$ $\iff$对$M$的每个齐次元$x,y$有$xf\left(y\right)+\epsilon^{\prime}\left(\deg\left(y\right),1\right)yf\left(x\right)=yf\left(x\right)+\epsilon^{\prime}\left(\deg\left(x\right),1\right)xf\left(y\right)$.这个条件成立时,$d$是唯一的.
+		\item 设$E$是$\Delta^{\prime}$型分次$\bigwedge\left(M\right)$-模,$f:M\to E$是分次$K$-线性映射,则$f$能延拓为$\epsilon$-导子$d:\bigwedge\left(M\right)\to E$ $\iff$对$M$的每个齐次元$x$有$xf\left(x\right)+\epsilon^{\prime}\left(\deg\left(x\right),1\right)f\left(x\right)x=0$.这个条件成立时,$d$是唯一的.
+	\end{enumerate}
+\end{corollary}
+
+\begin{example}{自同态诱导的代数导子}{}
+	沿用命题(\ref{prop:extend-derivation-to-tensor-algebra-symmetric-algebra-and-exterior-algebra})的设定.取$d=0$,那么$d_{1}$是$A$-线性映射.
+	\begin{itemize}
+		\item 特别地,每个$s\in\End_{A}\left(M\right)$都可以唯一地延拓为$\mathsf{T}\left(M\right)$(相对的,$\mathsf{S}\left(M\right),\bigwedge\left(M\right)$)上的$0$次导子$D_{s}$.具体地:对$M$中的每个序列$\left(x_{i}\right)_{i=1}^{n}$,
+		\begin{align*}
+			\begin{cases}
+				D_{s}\left(x_{1}\otimes\ldots\otimes x_{n}\right)=\sum\limits_{i=1}^{n}x_{1}\otimes\ldots\otimes x_{i-1}\otimes s\left(x_{i}\right)\otimes x_{i+1}\otimes\ldots\otimes x_{n},&D_{s}\text{在}\mathsf{T}\left(M\right)\text{上},\\
+				D_{s}\left(x_{1}\ldots x_{n}\right)=\sum\limits_{i=1}^{n}x_{1}\ldots x_{i-1}s\left(x_{i}\right)x_{i+1}\ldots x_{n},&D_{s}\text{在}\mathsf{S}\left(M\right)\text{上},\\
+				D_{s}\left(x_{1}\wedge\ldots\wedge x_{n}\right)=\sum\limits_{i=1}^{n}x_{1}\wedge\ldots\wedge x_{i-1}\wedge s\left(x_{i}\right)\wedge x_{i+1}\wedge\ldots\wedge x_{n},&D_{s}\text{在}\bigwedge\left(M\right)\text{上}.
+			\end{cases}
+		\end{align*}
+		\item 对任意$s,t\in\End_{A}\left(M\right)$都有$\left[D_{s},D_{t}\right]=D_{\left[s,t\right]}$,其中两侧都是$\mathsf{T}\left(M\right)$(相对的,$\mathsf{S}\left(M\right),\bigwedge\left(M\right)$)上的括积.
+	\end{itemize}
+\end{example}
+
+\begin{proposition}{诱导导子和迹的关系}{}
+	如果$M$是$n$维有限生成自由$K$-模,则对每个$s\in\End_{A}\left(M\right)$,导子$D_{s}$在$\bigwedge\limits^{n}\left(M\right)$上的限制是比率为$\tr\left(s\right)$的位似.
+\end{proposition}
+
+\begin{example}{外代数上的内插算子}{}
+	沿用命题(\ref{prop:extend-derivation-to-tensor-algebra-symmetric-algebra-and-exterior-algebra})的设定,考虑$B=\bigwedge\left(M\right)$,$\Delta=\left\{0\right\}$的情形,并采用标准交换因子,则每个$x^{\ast}\in M^{\vee}$能唯一延拓为$\bigwedge\left(M\right)$上的$-1$次反导子$i\left(x^{\ast}\right)$.具体地,对$M$中每个序列$\left(x_{i}\right)_{i=1}^{n}$,有
+	\begin{align*}
+		i\left(x^{\ast}\right)\left(x_{1}\wedge\ldots\wedge x_{n}\right)=\sum\limits_{i=1}^{n}\left(-1\right)^{i-1}\langle x_{i},x^{\ast}\rangle x_{1}\wedge\ldots\wedge x_{i-1}\wedge x_{i+1}\wedge\ldots\wedge x_{n}.
+	\end{align*}
+	我们称$i\left(x^{\ast}\right)$是$x^{\ast}$的内插.
+\end{example}
+
+\begin{proposition}{多重线性映射模上的导子}{derivation-over-multilinear-mapping-module}
+	设$A$是交换$K$-代数,$\left(M_{i}\right)_{i=1}^{n}$是$A$-模,$P$是$A$-模,$H=\Mult_{A}\left(M_{1},\ldots,M_{n};P\right)$.假定
+	\begin{enumerate}
+		\item $d_{0}$是代数$A$上的$K$-导子,$D\in\End_{K}\left(\rho_{\ast}\left(P\right)\right)$,$\left(d_{0},P\right)$是$\left(A,\rho_{\ast}\left(P\right),\rho_{\ast}\left(P\right)\right)$上的$K$-导子,
+		\item 对每个$1\leq i\leq n$和每个$d_{i}\in\End_{K}\left(\rho_{\ast}\left(M_{i}\right)\right)$,$\left(d_{0},d_{i}\right)$是$\left(A,M_{i},M_{i}\right)$上的$K$-导子,
+	\end{enumerate}
+	则存在唯一的$D^{\prime}\in\End_{K}\left(\rho_{\ast}\left(H\right)\right)$,使得
+	\begin{itemize}
+		\item $\left(d_{0},D^{\prime}\right)$是$\left(A,\rho_{\ast}\left(H\right),\rho_{\ast}\left(H\right)\right)$上的$K$-导子,
+		\item 对每个$f\in H$和每个$\left(x_{i}\right)_{i=1}^{n}\in\prod\limits_{i=1}^{n}M_{i}$,有
+		\begin{align*}
+			D\left(f\left(x_{1},\ldots,x_{n}\right)\right)=D^{\prime}\left(f\right)\left(x_{1},\ldots,x_{n}\right)+\sum\limits_{i=1}^{n}f\left(x_{1},\ldots,x_{i-1},d_{i}\left(x_{i}\right),x_{i+1},\ldots,x_{n}\right).
+		\end{align*}
+	\end{itemize}
+\end{proposition}
+
+\begin{example}{对偶模和态射模上的导子}{}
+	\begin{enumerate}
+		\item 在命题(\ref{prop:derivation-over-multilinear-mapping-module})中,考虑$n=1$,$M_{1}=M,P=A$的情形.那么$M^{\vee}$上诱导了导子$d^{\ast}$,对每个$m\in M$和$m^{\ast}\in M^{\vee}$有
+		\begin{align*}
+			d_{0}\left(\langle m,m^{\ast}\rangle\right)=\langle d\left(m\right),m^{\ast}\rangle+\langle m,d^{\ast}\left(m^{\ast}\right)\rangle.
+		\end{align*}
+		考虑$\End_{K}\left(\rho_{\ast}\left(M\boxplus M^{\vee}\right)\right)\simeq\End_{K}\left(\rho_{\ast}\left(M\right)\boxplus\rho_{\ast}\left(M^{\vee}\right)\right)$,则每个$h\in\End_{K}\left(\rho_{\ast}\left(M\boxplus M^{\ast}\right)\right)$只要在$\rho_{\ast}\left(M^{\vee}\right)$上等于$d^{\ast}$,在$\rho_{\ast}\left(M\right)$上等于$d$,就一定是$\rho_{\ast}\left(\mathsf{T}\left(M\boxplus M^{\vee}\right)\right)$上的$K$-导子.$d$在$\mathsf{T}\left(M\boxplus M^{\vee}\right)$的$A$-子模$\mathsf{T}_{J}^{I}\left(M\right)$上的限制$d_{J}^{I}$满足$\left(d_{0},d_{J}^{I},d_{J}^{I}\right)$是$\left(A,\rho_{\ast}\left(T_{J}^{I}\left(M\right)\right),\rho_{\ast}\left(T_{I}^{J}\left(M\right)\right)\right)$的$K$-导子.此外,对$\left(i,j\right)\in I\times J$,若记$I^{\prime}-I\setminus\left\{i\right\},J^{\prime}=J\setminus\left\{j\right\}$,则对缩并$c_{j}^{i}$和每个$z\in\mathsf{T}_{J}^{i}\left(M\right)$有$c_{j}^{i}\left(d_{J}^{I}\left(z\right)\right)=d_{J^{\prime}}^{I^{\prime}}\left(c_{j}^{i}\left(z\right)\right)$.
+		\item 设$\left(M_{i}\right)_{i=1}^{3}$是一族$A$-模,对每个$1\leq i\leq 3$,$\left(d_{0},d_{1},d_{1}\right)$是$\left(A,\rho_{\ast}\left(M_{i}\right),\rho_{\ast}\left(M_{i}\right)\right)$的导子.应用命题(\ref{prop:derivation-over-multilinear-mapping-module})中$n=1$的情形,并记$H_{ij}=\Hom_{A}\left(M_{i},M_{j}\right)\left(1\leq i,j\leq 3\right)$,则对每个$1\leq i,j\leq 3$,$\left(d_{0},d_{ij},d_{ij}\right)$是$\left(A,\rho_{\ast}\left(H_{ij}\right),\rho_{\ast}\left(H_{ij}\right)\right)$的导子.在此记号下,对每个$u\in H_{12}$和$v\in H_{23}$有$d_{13}\left(v\circ u\right)=d_{23}\left(v\right)\circ u+v\circ d_{12}\left(u\right)$.
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

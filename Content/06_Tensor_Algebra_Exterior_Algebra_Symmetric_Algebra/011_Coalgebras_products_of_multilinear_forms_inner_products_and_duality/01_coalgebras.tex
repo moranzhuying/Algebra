@@ -1,0 +1,156 @@
+\chapter{余代数,多线性泛函的积,内乘和对偶}
+
+本章中,$A$是配备平凡分次的交换环.
+
+\section{余代数}
+
+\begin{definition}{$A$-余代数}{}
+	设$E$是$A$-模,$c:E\to E\otimes_{A}E$是$A$-线性映射.我们称$c$是$E$上的余乘,称$\left(E,c\right)$是$A$-余代数.
+\end{definition}
+
+\begin{definition}{余代数同态}{}
+	设$\left(E,c\right),\left(F,d\right)$是$A$-余代数,$f\in\Hom_{A}\left(E,F\right)$.
+	\begin{enumerate}
+		\item 若如下图表交换,则称$f$是$A$-余代数同态.
+		\begin{center}
+			\begin{tikzcd}
+				E && F \\
+				{E\otimes_{A}E} && {F\otimes_{A}F}
+				\arrow["f", from=1-1, to=1-3]
+				\arrow["c"', from=1-1, to=2-1]
+				\arrow["d", from=1-3, to=2-3]
+				\arrow["{f\otimes f}"', from=2-1, to=2-3]
+			\end{tikzcd}
+		\end{center}
+		记$\Hom_{A-\mathsf{CoAlg}}\left(E,F\right)=\left\{p\in\Hom_{A}\left(E,F\right)\middle|p\text{是}A\text{-余代数同态}\right\},\End_{A-\mathsf{CoAlg}}\left(E\right)=\Hom_{A-\mathsf{CoAlg}}\left(E,E\right)$.
+		\item 若存在$g\in\Hom_{A-\mathsf{CoAlg}}\left(F,E\right)\left(g\circ f=\id_{E}\wedge f\circ g=\id_{F}\right)$,则称$f$是$A$-余代数同构.记
+		\begin{align*}
+			\Isom_{A-\mathsf{CoAlg}}\left(E,F\right)=\left\{p\in\Hom_{A}\left(E,F\right)\middle|p\text{是}A\text{-余代数同构}\right\},\Aut_{A-\mathsf{CoAlg}}\left(E\right)=\Isom_{A-\mathsf{CoAlg}}\left(E,E\right).
+		\end{align*}
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	设$\left(G,p\right)$是$A$-余代数.下面的结论是容易验证的.
+	\begin{enumerate}
+		\item $\id_{E}\in\End_{A-\mathsf{CoAlg}}\left(E\right)$.
+		\item 若$f\in\Hom_{A-\mathsf{CoAlg}}\left(E,F\right),g\in\Hom_{A-\mathsf{CoAlg}}\left(F,G\right)$,则$g\circ f\in\Hom_{A-\mathsf{CoAlg}}\left(E,G\right)$.
+		\item $\Isom_{A-\mathsf{CoAlg}}\left(E,F\right)=\left\{f\in\Hom_{A-\mathsf{CoAlg}}\left(E,F\right)\middle|f\text{是双射}\right\}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{}{}
+	对固定的$n\in\N,p\in\left[1,n-1\right]$和$\sigma\in\mathfrak{S}_{n}$,若
+	\begin{gather*}
+		\left[1,p\right]\to\left[1,p\right],x\mapsto\sigma\left(x\right),\\
+		\left[p+1,n\right]\to\left[p+1,n\right],x\mapsto\sigma\left(x\right)
+	\end{gather*}
+	都递增,则称$\sigma$是$\left(p,n-p\right)$-混排置换,并记$\Shuffle_{p,n-p}$为所有$\left(p,n-p\right)$-混排置换构成的集合.
+\end{remark}
+
+\begin{example}{余代数的例子}{}
+	\begin{enumerate}
+		\item 设$\tau:A\to A\otimes_{A}A$是典范同构,则$\left(A,\tau\right)$是$A$-余代数,称为平凡余代数.
+		\item 设$\left(E,c\right)$是$A$-余代数,$\sigma\in\End_{A}\left(E\otimes_{A}E\right)$是交换约束.记$c^{\op}\coloneq\sigma\circ c$,则$\left(E,c^{\op}\right)$是余代数,称为$E$的反余代数.
+		\item 设$B$是$A$-代数,$m\in\Hom_{A}\left(B\otimes_{A}B,B\right)$确定了$B$上的乘法.若$B$是有限生成投射模,
+		\begin{align*}
+			\mu:B^{\vee}\otimes_{A}B^{\vee}\to\left(B\otimes_{A}B\right)^{\vee}
+		\end{align*}
+		是典范同构,$\Delta=\mu^{-1}\circ m^{\top}$,则$\left(B^{\vee},\Delta\right)$是余代数.
+		\item 设$X$是集合,$A^{\left(X\right)}$的典范基是$\left(e_{x}\right)_{x\in X}$.定义$\Delta:A^{\left(X\right)}\to A^{\left(X\right)}\otimes_{A}A^{\left(X\right)}$如下:
+		\begin{align*}
+			\forall x\in X\left(\Delta\left(e_{x}\right)=e_{x}\otimes e_{x}\right),
+		\end{align*}
+		则$\left(A^{\left(X\right)},\Delta\right)$是典范的$A$-余代数.
+		\item 设$M$是$A$-模,$\Delta\in\Hom_{A}\left(\mathsf{T}\left(M\right),\mathsf{T}\left(M\right)\otimes_{A}\mathsf{T}\left(M\right)\right)$满足
+		\begin{align*}
+			\forall n\geq 0\forall\left(x_{i}\right)_{i=1}^{n}\in M^{n}\left(\Delta\left(x_{1}\ldots x_{n}\right)=\sum\limits_{p=0}^{n}\left(x_{1}\ldots x_{p}\right)\otimes\left(x_{p+1}\ldots x_{n}\right)\right),
+		\end{align*}
+		则$\left(\mathsf{T}\left(M\right),\Delta\right)$是$A$-余代数.
+		\item 设$M$是$A$-模,$h:\mathsf{S}\left(M\times M\right)\to\mathsf{S}\left(M\right)\otimes_{A}\mathsf{S}\left(M\right)$是典范同构,则$c\coloneq h\circ\mathsf{S}\left(\Delta_{M}\right)$是唯一满足
+		\begin{align*}
+			\forall x\in M\left(c\left(x\right)=1\otimes 1+1\otimes x\right)
+		\end{align*}
+		的$A$-代数同态,$\left(\mathsf{S}\left(M\right),c\right)$是$A$-余代数.固定$n\in\N$.对$M$中的每个序列$\left(x_{i}\right)_{i=1}^{n}$,
+		\begin{align*}
+			c\left(x_{1}\ldots x_{n}\right)
+			=\prod\limits_{i=1}^{n}\left(x_{i}\otimes 1+1\otimes x_{i}\right)
+			=\sum\limits_{\substack{1\leq i_{1}<\ldots<i_{p}\leq n,1\leq j_{1}<\ldots<j_{n-p}\leq n\\ \left[i_{1},i_{p}\right]\sqcup\left[j_{1},j_{n-p}\right]=\left[1,n\right]}}\left(x_{i_{1}}\ldots x_{i_{p}}\right)\otimes\left(x_{j_{1}}\otimes\ldots\otimes x_{j_{n-p}}\right),
+		\end{align*}
+		这是$\mathsf{S}\left(M\right)\otimes_{A}\mathsf{S}\left(M\right)$上全次数为$n$的元素,它的双次数为$\left(p,n-p\right)$($p\in\left[1,n-1\right]$)的齐次分量是
+		\begin{align*}
+			\sum\limits_{\sigma\in\Shuffle_{p,n-p}}\left(x_{\sigma\left(1\right)}\ldots x_{\sigma\left(p\right)}\right)\otimes\left(x_{\sigma\left(p+1\right)}\ldots x_{\sigma\left(n\right)}\right).
+		\end{align*}
+		\item 设$M$是$A$-模,$h:\bigwedge\left(M\times M\right)\to\bigwedge\left(M\right)\otimes_{A}^{g}\bigwedge\left(M\right)$是典范分次代数同态,$c=h\circ\bigwedge\left(\Delta_{M}\right)$,则满足
+		\begin{align*}
+			\forall x\in M\left(c\left(x\right)=x\otimes 1+1\otimes x\right)
+		\end{align*}
+		的代数同态只有$c$,并且$\left(\bigwedge\left(M\right),c\right)$是余代数.对$M$中每个序列$\left(x_{i}\right)_{i=1}^{n}$,
+		\begin{gather*}
+			c\left(x_{1}\wedge\ldots\wedge x_{n}\right)\\
+			=\left(x_{1}\otimes 1+1\otimes x_{1}\right)\wedge\ldots\wedge\left(x_{n}\otimes 1+1\otimes x_{n}\right)\\
+			=\sum\limits_{\substack{1\leq i_{1}<\ldots<i_{p}\leq n,1\leq j_{1}<\ldots<j_{n-p}\leq n\\ \left[i_{1},i_{p}\right]\sqcup\left[j_{1},j_{n-p}\right]=\left[1,n\right]}}\left(-1\right)^{\nu}\left(x_{i_{1}}\wedge\ldots\wedge x_{i_{p}}\right)\otimes\left(x_{j_{1}}\wedge\ldots\wedge x_{j_{n-p}}\right),\\
+			\nu=\left|\left\{\left(h,k\right)\in\left[1,p\right]\times\left[1,n-p\right]\middle|i_{h}>j_{k}\right\}\right|.
+		\end{gather*}
+		这是$\bigwedge\left(M\right)\otimes_{A}^{g}\bigwedge\left(M\right)$上全次数为$n$的元素,它的双次数为$\left(p,n-p\right)$($p\in\left[1,n-1\right]$)的齐次分量是
+		\begin{align*}
+			\sum\limits_{\sigma\in\Shuffle_{p,n-p}}\sign\left(\sigma\right)\left(x_{\sigma\left(1\right)}\wedge\ldots \wedge x_{\sigma\left(p\right)}\right)\otimes\left(x_{\sigma\left(p+1\right)}\wedge\ldots\wedge x_{\sigma\left(n\right)}\right).
+		\end{align*}
+		\item 设$\left(E,c\right),\left(F,d\right)$是$A$-余代数,$\tau\in\Isom_{A}\left(\left(E\otimes_{A}E\right)\otimes_{A}\left(F\otimes_{A}F\right),\left(E\otimes_{A}F\right)\otimes_{A}\left(E\otimes_{A}F\right)\right)$是结合约束.记
+		\begin{align*}
+			h\coloneq\tau\circ\left(c\otimes d\right),
+		\end{align*}
+		则$\left(E\otimes_{A}F,h\right)$是$A$-余代数,称为$\left(E,c\right)$和$\left(F,d\right)$的张量积.
+	\end{enumerate}
+	没有额外说明时,默认按照上述方式理解$A^{\left(X\right)},\mathsf{T}\left(M\right),\mathsf{S}\left(M\right),\bigwedge\left(M\right)$上的余代数结构.
+\end{example}
+
+\begin{definition}{分次余代数}{}
+	设$\left(E,c\right)$是$A$-余代数,$\Delta$是交换幺半群(加法记号),$\left(E_{\lambda}\right)_{\lambda\in\Delta}$是$E$的分次.
+	\begin{enumerate}
+		\item 若$c$是$0$次分次同态,则称$\left(E_{\lambda}\right)_{\lambda\in\Delta}$和$c$相容.
+		\item 若$\Delta=\N$且$\left(E_{\lambda}\right)_{\lambda\in\Delta}$和$c$相容,则称$\left(E,c\right)$是分次余代数.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{分次余代数映射}{}
+	设$\left(E,c\right),\left(F,d\right)$是分次$A$-余代数,$\phi\in\Hom_{A-\mathsf{CoAlg}}\left(E,F\right)$.
+	\begin{enumerate}
+		\item 若$\phi$是$0$次$A$-线性映射,则称$\phi$是分次$A$-余代数同态.记
+		\begin{align*}
+			\underline{\Hom}_{A-\mathsf{CoAlg}}\left(E,F\right)=\left\{f\in\Hom_{A-\mathsf{CoAlg}}\left(E,F\right)\middle|f\text{是分次余代数同态}\right\},\underline{\End}_{A-\mathsf{Coalg}}\left(E\right)=\underline{\Hom}_{A-\mathsf{CoAlg}}\left(E,E\right).
+		\end{align*}
+		\item 若存在$\psi\in\underline{\Hom}_{A-\mathsf{CoAlg}}\left(F,E\right)$使$\phi\circ\psi=\id_{E}$且$\psi\circ\phi=\id_{F}$,则称$\phi$是分次$A$-余代数同构.记
+		\begin{align*}
+			\underline{\Isom}_{A-\mathsf{CoAlg}}\left(E,F\right)=\left\{f\in\Hom_{A-\mathsf{CoAlg}}\left(E,F\right)\middle|f\text{是分次余代数同构}\right\},\underline{\Aut}_{A-\mathsf{Coalg}}\left(E\right)=\underline{\Isom}_{A-\mathsf{CoAlg}}\left(E,E\right).
+		\end{align*}
+	\end{enumerate}
+\end{definition}
+
+\begin{example}{}{}
+	设$M$是$A$-模,则$\mathsf{T}\left(M\right),\mathsf{S}\left(M\right),\bigwedge\left(M\right)$按照典范分次构成分次余代数.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

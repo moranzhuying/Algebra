@@ -1,0 +1,55 @@
+\section{两个二元关系的复合}
+
+\begin{lemma}{二元关系的复合的良定义性}{}
+	设$G,G^{\prime}$是二元关系,则公式$\exists y\left(\left(x,y\right)\in G\wedge\left(y,z\right)\in G^{\prime}\right)$有一个关于$x$和$z$的二元关系.
+\end{lemma}
+
+\begin{definition}{二元关系的复合}{}
+	设$G,G^{\prime}$是二元关系.把$\tau_{y}\left(\left(x,y\right)\in G\wedge\left(y,z\right)\in G^{\prime}\right)$记作$G^{\prime}\circ G$,称之为$G^{\prime}$和$G$的复合.
+\end{definition}
+
+\begin{proposition}{二元关系的复合的逆}{}
+	设$G,H$是二元关系,则$\left(H\circ G\right)^{-1}=G^{-1}\circ H^{-1}$.
+\end{proposition}
+
+\begin{proposition}{二元关系的复合}{}
+	设$G_{1},G_{2},G_{3}$是二元关系,则$\left(G_{3}\circ G_{2}\right)\circ G_{1}=G_{3}\circ\left(G_{2}\circ G_{1}\right)$.
+\end{proposition}
+
+\begin{proposition}{集合在二元关系的复合下的像}{}
+	设$G,G^{\prime}$是二元关系,$A$是集合,则$\left(G^{\prime}\circ G\right)\left(A\right)=G^{\prime}\left(G\left(A\right)\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 设$G,H$是二元关系,则$\pr_{1}\left(H\circ G\right)=G^{-1}\left(\pr_{1}\left(H\right)\right),\pr_{2}\left(H\circ G\right)=H\left(\pr_{2}\left(G\right)\right)$.
+		\item 设$G$是二元关系,$X\subseteq\pr_{1}\left(G\right)$,则$X\subseteq G^{-1}\left(G\left(X\right)\right)$.
+		\item 若$G_{1},G_{2},H_{1},H_{2}$都是二元关系,则$G_{1}\subseteq G_{2}\wedge H_{1}\subseteq H_{2}\implies H_{1}\circ G_{1}\subseteq H_{2}\circ G_{2}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{对应的复合}{}
+	设$\Gamma\coloneq\left(G,A,B\right)$和$\Gamma^{\prime}\coloneq\left(G^{\prime},B,C\right)$是对应.$\left(G^{\prime}\circ G,A,C\right)$称为$\Gamma^{\prime}$和$\Gamma$的复合,记作$\Gamma^{\prime}\circ\Gamma$.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$\Gamma_{1}\coloneq\left(G,A,B\right)$和$\Gamma_{2}\coloneq\left(G^{\prime},B,C\right)$是对应.
+	\begin{enumerate}
+		\item 对$A$的任意子集$X$,$\left(\Gamma_{2}\circ\Gamma_{1}\right)\left(X\right)=\Gamma_{2}\left(\Gamma_{1}\left(X\right)\right)$.
+		\item $\left(\Gamma_{2}\circ\Gamma_{1}\right)^{-1}=\Gamma_{1}^{-1}\circ\Gamma_{2}^{-1}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{对角线}{}
+	设$A$是集合.$\left\{\left(x,x\right)\middle|x\in A\right\}$记作$\Delta_{A}$,称为$A\times A$的对角线.$I_{A}\coloneq\left(\Delta_{A},A,A\right)$称为$A$上的恒等对应.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$A,B$是集合.
+	\begin{enumerate}
+		\item $\pr_{1}\left(\Delta_{A}\right)=\pr_{2}\left(\Delta_{A}\right)=A$.
+		\item $I_{A}^{-1}=I_{A}$.
+		\item 若$\Gamma\coloneq\left(G,A,B\right)$是对应,则$\Gamma\circ I_{A}=I_{B}\circ\Gamma=\Gamma$.
+	\end{enumerate}
+\end{proposition}
+

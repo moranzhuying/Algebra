@@ -1,0 +1,76 @@
+\section{自由模的外代数}
+
+记号约定:$A$是交换环,$M$是$A$-模.
+
+\begin{definition}{}{}
+	设$M$是自由模,$\left(e_{\lambda}\right)_{\lambda\in\Lambda}$是$M$的基,$\Lambda$是全序集.对每个$J\in\fin\left(\Lambda\right)$,定义$e_{J}$如下:
+	\begin{itemize}
+		\item 当$\left|J\right|=0$时,规定$e_{J}=1_{A}$.
+		\item 当$\left|J\right|=n\geq 1$时,设$\left(\lambda_{k}\right)_{k=1}^{n}$是$J$中的元素按$J$继承的全序按递增顺序排列所得的序列,规定$e_{J}=e_{\lambda_{1}}\wedge\ldots\wedge e_{\lambda_{n}}$.
+	\end{itemize}
+\end{definition}
+
+\begin{theorem}{}{}
+	设$M$是自由模,$\left(e_{\lambda}\right)_{\lambda\in\Lambda}$是$M$的基,$\Lambda$是全序集,则$\left(e_{J}\right)_{J\in\fin\left(\Lambda\right)}$是$\bigwedge\left(M\right)$的基.
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$M$是$n$维自由模,它的基是$\left(e_{i}\right)_{i=1}^{n}$,则
+	\begin{enumerate}
+		\item $\bigwedge\left(M\right)$的基$\left(e_{J}\right)_{J\in\fin\left(\left[1,n\right]\right)}$共有$2^{n}$项.
+		\item $\bigwedge\limits^{n}\left(M\right)$是$1$维自由模,它的基是$\left(e_{\left[1,n\right]}\right)_{\left\{1\right\}}$.
+		\item 对每个$0\leq p\leq n$,$\bigwedge\limits^{p}\left(M\right)$的基是$\left(e_{J}\right)_{\substack{J\in\fin\left(\left[1,n\right]\right)\\ \left|J\right|=p}}$,这个基有$\binom{n}{p}$项.
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	设$\Lambda$是全序集,$\left(e_{\lambda}\right)_{\lambda\in\Lambda}$是自由模$M$的基.对任意$J,K\in\fin\left(\Lambda\right)$,定义
+	\begin{align*}
+		\rho_{J,K}=
+		\begin{cases}
+			0,&J\cap K\neq\emptyset,\\
+			\left(-1\right)^{\nu},&J\cap K=\emptyset,
+		\end{cases},\text{其中}\nu=\left|\left\{\left(\lambda,\mu\right)\in J\times K\middle|\lambda>\mu\right\}\right|.
+	\end{align*}
+	\begin{itemize}
+		\item 对每个$J,K\in\fin\left(\Lambda\right)$,有$e_{J}\wedge e_{K}=\rho_{J,K}e_{J\cup K}$.
+		\item 对每个$J,K\in\fin\left(\Lambda\right)$,当$J\cap K=\emptyset$时$\rho_{J,K}\rho_{K,J}=\left(-1\right)^{\left|J\right|\cdot\left|K\right|}$.
+	\end{itemize}
+\end{remark}
+
+
+
+\begin{corollary}{}{}
+	如果$M$是投射模,那么$\bigwedge\left(M\right)$也是投射模.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$M$是投射模,$\left(x_{i}\right)_{i=1}^{n}$是$M$中的有限序列,则$\exists f\in\Alt_{A}\left(M,\ldots,M;N\right)\left(f\left(x_{1},\ldots,x_{n}\right)\neq 0\right)\iff x_{1}\wedge\ldots\wedge x_{n}=0$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

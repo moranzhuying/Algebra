@@ -1,0 +1,138 @@
+\section{理想}
+
+记号说明:$A$是环,$\mathfrak{a}$是$A$的加法群的子群.
+
+\begin{definition}{左理想,右理想,双边理想}{}
+	\begin{enumerate}
+		\item 若$A\mathfrak{a}\subseteq\mathfrak{a}$,则称$\mathfrak{a}$是$A$的左理想.
+		\item 若$\mathfrak{a}A\subseteq\mathfrak{a}$,则称$\mathfrak{a}$是$A$的右理想.
+		\item 若$A\mathfrak{a}\subseteq\mathfrak{a}$且$\mathfrak{a}A\subseteq\mathfrak{a}$,则称$\mathfrak{a}$是$A$的双边理想.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	下面的事实是显然的:
+	\begin{enumerate}
+		\item $\mathfrak{a}$是左理想(相对地,右理想)$\iff$ $\mathfrak{a}$在$a$给出的$A$在$A$上的左(相对地,右)平移作用下是不变的.
+		\item $\mathfrak{a}$是$A$的左(相对地,右)理想$\iff$ $\mathfrak{a}$是$A$的右(相对地,左)理想.
+		\item $\mathfrak{a}=A\iff 1\in\mathfrak{a}$.
+	\end{enumerate}
+	当$A$是交换环时,我们不必区分左理想,右理想和双边理想,统一称三者为理想.
+\end{remark}
+
+\begin{example}{平凡理想,非平凡理想,真理香}{}
+	$A$和$\left\{0\right\}$是$A$的双边理想,称为平凡双边理想.设$\mathfrak{a}$是$A$的左(/右/双边)理想.若$\mathfrak{a}\neq A$和$\left\{0\right\}$,则称$\mathfrak{a}$是非平凡左(右/双边)理想,否则称之为平凡左(/右/双边)理想;若$\mathfrak{a}\neq A$,则称$\mathfrak{a}$是真左(/右/双边)理想.
+\end{example}
+
+\begin{example}{左主理想,右主理想,主理想}{}
+	设$a\in A$,则$aA$和$Aa$分别是$A$的左理想和右理想,依次称为$a$生成的左主理想和右主理想.特别地:
+	\begin{enumerate}
+		\item 若$a\in Z\left(A\right)$,则称$aA$为$a$生成的主理想,记作$\langle a\rangle$.
+		\item 若$a\in A^{\times}\cap Z\left(A\right)$,则$\langle a\rangle=A$.
+	\end{enumerate}
+\end{example}
+
+\begin{example}{左零化子,右零化子}{}
+	设$M\subseteq A$.称$\left\{y\in A\middle|\forall y\in M\left(yx=0\right)\right\}$为$M$的左零化子,$\left\{y\in A\middle|\forall y\in M\left(xy=0\right)\right\}$为$M$的右零化子.二者分别是$A$的左理想和右理想.
+\end{example}
+
+\begin{example}{生成的理想}{}
+	设$X\subseteq A$.定义
+	\begin{align*}
+		\langle X\rangle_{\ell}\coloneq\bigcap\limits_{\substack{A\subseteq I\\I\text{是}A\text{的左理想}}},\langle X\rangle_{r}\coloneq\bigcap\limits_{\substack{A\subseteq I\\I\text{是}A\text{的右理想}}},\langle X\rangle_{d}\coloneq\bigcap\limits_{\substack{A\subseteq I\\I\text{是}A\text{的双边理想}}}.
+	\end{align*}
+	分别称$\langle X\rangle_{\ell},\langle X\rangle_{r},\langle X\rangle_{d}$为$X$生成的$A$的左理想,右理想和双边理想.
+\end{example}
+
+\begin{definition}{极大理想}{}
+	记$\mathcal{P}_{1}$(相对地,$\mathcal{P}_{2},\mathcal{P}_{3}$)是$A$的左理想(相对地,右理想,双边理想)组成的集合,按集合包含赋予偏序.三个偏序集的极大元分别称为$A$的极大左(相对地,右,双边)理想.
+\end{definition}
+
+\begin{theorem}{Krull定理}{}
+	设$\mathfrak{a}$是$A$的真左理想,则$A$中存在包含$\mathfrak{a}$的极大左理想$\mathfrak{m}$.
+\end{theorem}
+
+\begin{proposition}{生成的左理想,双边理想的具体表示}{}
+	设$\left(x_{i}\right)_{i\in I}$是$A$的元素族,$X=\left\{x_{i}\in A\middle|i\in I\right\}$,则
+	\begin{align*}
+		\langle X\rangle_{\ell}=\left\{\sum\limits_{i\in I}r_{i}x_{i}\middle|\left(r_{i}\right)_{i\in I}\text{是}A\text{的有限支撑族}\right\},\langle X\rangle_{d}=\left\{\sum\limits_{i\in I}r_{i}x_{i}s_{i}\middle|\left(r_{i}\right)_{i\in I},\left(s_{i}\right)_{i\in I}\text{是}A\text{的有限支撑族}\right\}.
+	\end{align*}
+\end{proposition}
+
+\begin{definition}{理想的和}{}
+	设$\left(I_{j}\right)_{j\in J}$是$A$的一族左(相对地,右,双边)理想.定义
+	\begin{align*}
+		\sum\limits_{j\in J}I_{j}=\left\{\sum\limits_{j\in J}x_{j}\in A\middle|\left(x_{j}\right)_{j\in J}\text{是}A\text{的有限支撑族}\right\},
+	\end{align*}
+	我们称$\sum\limits_{j\in J}I_{j}$为$\left(I_{j}\right)_{j\in J}$的和.
+\end{definition}
+
+\begin{proposition}{理想族的和的生成集}{}
+	若$\left(I_{j}\right)_{j\in J}$是$A$的一族左(相对地,右,双边)理想,则$\sum\limits_{j\in J}I_{j}$是由$\bigcup\limits_{j\in J}I_{j}$生成的左(相对地,右,双边)理想.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

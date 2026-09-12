@@ -1,0 +1,81 @@
+\section{模的\texorpdfstring{$n$}{n}次对称幂·\texorpdfstring{$n$}{n}重对称线性映射}
+
+记号约定:$A$是交换环,$M,N$是$A$-模.
+
+\begin{definition}{对称映射}{}
+	设$X,Y$是集合,$n\geq 1$,$f\in\Hom_{\mathsf{Set}}\left(X^{n},Y\right)$.如果
+	\begin{align*}
+		\forall\sigma\in\mathfrak{S}_{n}\forall\left(x_{i}\right)_{i=1}^{n}\in X^{n}\left(f\left(x_{\sigma\left(1\right)},\ldots,x_{\sigma\left(n\right)}\right)=f\left(x_{1},\ldots,x_{n}\right)\right),
+	\end{align*}
+	则称$f$是对称映射.
+\end{definition}
+
+\begin{definition}{对称$n$重线性映射}{}
+	定义$\Sym_{A}\left(M,\ldots,M;N\right)\coloneq\left\{f\in\Mult_{A}\left(M,\ldots,M;N\right)\middle|f\text{是对称映射}\right\}$.称其元素是从$M$到$N$的对称$n$重线性映射.显然$\Sym_{A}\left(M,\ldots,M;N\right)$是$A$-模.
+\end{definition}
+
+\begin{proposition}{对称$n$重线性映射的泛性质}{}
+	$\Hom_{A}\left(\mathsf{S}^{n}\left(M\right),N\right)\to\Sym_{A}\left(M,\ldots,M;N\right),f\mapsto\left[\left(x_{i}\right)_{i=1}^{n}\mapsto f\left(x_{1}\ldots x_{n}\right)\right]$是典范的$A$-模同构.
+\end{proposition}
+
+\begin{definition}{$n$次对称幂}{}
+	固定$n\in\N$.
+	\begin{enumerate}
+		\item 我们称$\mathsf{S}^{n}\left(M\right)$是$M$的$n$次对称幂.
+		\item 设$u\in\Hom_{A}\left(M,N\right)$.我们称$\mathsf{S}^{n}\left(u\right)$是$u$的$n$次对称幂.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{}{}
+	固定$n\in\N$.定义$\mathfrak{S}_{n}$在$\mathsf{S}^{n}\left(M\right)$上的左作用$\cdot$如下:对每个$\sigma\in\mathfrak{S}_{n}$和$\left(x_{i}\right)_{i=1}^{n}\in M^{n}$,
+	\begin{align*}
+		\sigma\cdot\left(x_{1}\otimes\ldots\otimes x_{n}\right)=x_{\sigma^{-1}\left(1\right)}\otimes\ldots\otimes x_{\sigma^{-1}\left(n\right)}.
+	\end{align*}
+	那么$\mathsf{S}^{n}\left(M\right)$是$\mathfrak{S}_{n}$-集.
+\end{definition}
+
+\begin{definition}{$n$阶反变对称张量}{}
+	设$n\in\N,z\in\mathsf{T}^{n}\left(M\right)$.如果$\forall\sigma\in\mathfrak{S}_{n}\left(\sigma z=z\right)$,则称$z$是$n$阶反变对称张量.记
+	\begin{align*}
+		\mathsf{S}_{n}^{\prime}\left(M\right)\coloneq\left\{x\in\mathsf{T}^{n}\left(M\right)\middle|\forall\sigma\in\mathfrak{S}_{n}\left(\sigma z=z\right)\right\},
+	\end{align*}
+	这是$\mathsf{T}^{n}\left(M\right)$的子模.
+\end{definition}
+
+\begin{definition}{张量的对称化}{}
+	固定$n\in\N$和$z\in\mathsf{T}^{n}\left(M\right)$.我们称$\sum\limits_{\sigma\in\mathfrak{S}_{n}}\sigma z$是张量$z$的对称化.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\mathsf{T}^{n}\left(M\right)\to\mathsf{T}^{n}\left(M\right),z\mapsto\sum\limits_{\sigma\in\mathfrak{S}_{n}}\sigma z$是自同态,它的像记作$\mathsf{S}_{n}^{\prime\prime}$.显然$\mathsf{S}_{n}^{\prime\prime}\subseteq\mathsf{S}_{n}^{\prime}\left(M\right)$,但$\mathsf{S}_{n}^{\prime\prime}\supseteq\mathsf{S}_{n}^{\prime}\left(M\right)$一般不成立.
+		\item 如果$n!\cdot 1_{A}\in A^{\times}$,那么$\mathsf{T}^{n}\left(M\right)\to\mathsf{T}^{n}\left(M\right),z\mapsto\left(n!\cdot 1_{A}\right)^{-1}\sum\limits_{\sigma\in\mathfrak{S}_{n}}\sigma z$是幂等的,它的像等于$\mathsf{S}_{n}^{\prime\prime}\left(M\right)$和$\mathsf{S}_{n}^{\prime}\left(M\right)$,它的核等于$I_{n}\coloneq I_{\text{Sym}}\cap\mathsf{T}_{n}$.因此$\mathsf{T}^{n}\left(M\right)=\mathsf{S}_{n}^{\prime}\left(M\right)\boxplus I_{n}$.
+		\item 当$n!\cdot 1_{A}\in A^{\times}$时,典范满射$\mathsf{T}^{n}\left(M\right)\to\mathsf{S}^{n}\left(M\right)$在$\mathsf{S}_{n}^{\prime}\left(M\right)$上的限制是$A$-模同构,但是这并不是代数同构,因此我们不能把$\mathsf{T}\left(M\right)$的乘积视为$\mathsf{S}\left(M\right)$中相应的元素交换后的乘积.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

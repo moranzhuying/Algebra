@@ -1,0 +1,47 @@
+\section{形成性准则}
+
+\begin{metatheorem}{析取的封闭性}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$的公式,则$\vee\boldsymbol{A}\boldsymbol{B}$是公式.
+\end{metatheorem}
+
+\begin{metatheorem}{否定封闭性}{}
+	设$\boldsymbol{A}$是理论$\mathcal{T}$的公式,则$\neg\boldsymbol{A}$是公式.
+\end{metatheorem}
+
+\begin{metatheorem}{$\tau$算子绑定封闭性}{}
+	设$\boldsymbol{A}$是理论$\mathcal{T}$的公式,$\boldsymbol{x}$是字母,则$\tau_{\boldsymbol{x}}\left(\boldsymbol{A}\right)$是项.
+\end{metatheorem}
+
+\begin{metatheorem}{算子应用的语法封闭性}{}
+	设$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$是理论$\mathcal{T}$的项,$\boldsymbol{s}$是权为$n$的非逻辑符号.
+	\begin{enumerate}
+		\item 若$\boldsymbol{s}$是谓词符号,则$\boldsymbol{s}\boldsymbol{A}_{1}\ldots\boldsymbol{A}_{n}$是公式.
+		\item 若$\boldsymbol{s}$是函数符号,则$\boldsymbol{s}\boldsymbol{A}_{1}\ldots\boldsymbol{A}_{n}$是项.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{自由变量替换下构造序列的封闭性}{}
+	设$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$是理论$\mathcal{T}$的语法构造序列,$\boldsymbol{x}$和$\boldsymbol{y}$是字母.若$\boldsymbol{y}$在$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$中的每一项都未出现过,则
+	\begin{align*}
+		\left(\boldsymbol{y}|\boldsymbol{x}\right)\boldsymbol{A}_{1},\ldots,\left(\boldsymbol{y}|\boldsymbol{x}\right)\boldsymbol{A}_{n}
+	\end{align*}
+	是$\mathcal{T}$的语法构造序列.
+\end{metatheorem}
+
+\begin{metatheorem}{变量代入的语法封闭性}{}
+	设$\boldsymbol{A}$是理论$\mathcal{T}$的公式(相对的,项),$\boldsymbol{x}$和$\boldsymbol{y}$是字母,则$\left(\boldsymbol{y}|\boldsymbol{x}\right)\boldsymbol{A}$是公式(相对的,项).
+\end{metatheorem}
+
+\begin{metatheorem}{项代入的语法封闭性}{}
+	设$\boldsymbol{A}$是理论$\mathcal{T}$的公式(相对的,项),$\boldsymbol{x}$是变量,$\boldsymbol{T}$是$\mathcal{T}$的项,则$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{A}$是公式(相对的,项).
+\end{metatheorem}
+
+\begin{remark}{}{}
+	直观地说,如果$\boldsymbol{A}$是$\mathcal{T}$中的一个公式,且我们将其视作在表达对象$\boldsymbol{x}$的某种性质,那么断言$\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{A}$相当于说对象$\boldsymbol{B}$具有这一性质.如果$\boldsymbol{A}$是$\mathcal{T}$中的一个项,它代表一个以某种方式依赖于由$\boldsymbol{x}$所指代的对象之对象,那么项$\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{A}$则代表了当我们将$\boldsymbol{x}$取为对象$\boldsymbol{B}$时,对象$\boldsymbol{A}$所转化成的结果.
+\end{remark}
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+\section{张量积元素的秩}
+
+记号约定:
+\begin{itemize}
+	\item $K$是除环,$E$是右$K$-向量空间,$F$是左$K$-向量空间.
+	\item $\varphi:E\otimes_{K}F\to\Hom_{K}\left(E^{\vee},F\right)$和$\phi:E\otimes_{K}F\to\Hom_{K}\left(F^{\vee},E\right)$是典范映射.
+	\item $u\in E\otimes_{K}F,u_{1}=\varphi\left(u\right),u_{2}=\phi\left(u\right),N=\im\left(u_{1}\right),M=\im\left(u_{2}\right)$.
+\end{itemize}
+
+把$u_{1}$视为$E^{\vee}\to F^{\vee}$的映射,在此意义下$u_{1}=u_{2}^{\top}$;把$u_{2}$视为$F^{\vee}\to E^{\vee\vee}$的映射,则$u_{2}^{\top}=u_{1}$.
+
+\begin{definition}{关联子空间}{}
+	分别称$N$和$M$是与$u$关联的子空间.称$\rank\left(u_{1}\right)$是$u$的秩,记作$\rank\left(u\right)$.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$u=\sum\limits_{i=1}^{s}\left(x_{i}\otimes y_{i}\right)$,其中$s\geq 1$,$\left(x_{i}\right)_{i=1}^{s}$和$\left(y_{i}\right)_{i=1}^{s}$分别是$E$和$F$的元素族.
+	\begin{enumerate}
+		\item $M$严格包含于$\left(x_{i}\right)_{i=1}^{s}$生成的子空间,$N$严格包含于$\left(y_{i}\right)_{i=1}^{s}$生成的子空间.
+		\item $s=\rank\left(u\right)$ $\iff$ $\left(x_{i}\right)_{i=1}^{s}$是$M$的基$\iff$ $\left(y_{i}\right)_{i=1}^{s}$是$N$的基$\iff$ $\left(x_{i}\right)_{i=1}^{s},\left(y_{i}\right)_{i=1}^{s}$线性无关.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	$\rank\left(u\right)=\min\left\{s\in\N\middle|u=u=\sum\limits_{i=1}^{s}\left(x_{i}\otimes y_{i}\right),\left(\left(x_{i},y_{i}\right)\right)_{i=1}^{n}\in\left(E\times F\right)^{n}\right\}$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$K$是域,$L$是$K$的扩域,$\rho^{\ast}:K\hookrightarrow L$是典范嵌入,$\psi:\rho^{\ast}\left(E\right)\otimes_{L}\rho^{\ast}\left(F\right)\to\rho^{\ast}\left(E\otimes_{K}F\right)$是典范同构.
+	\begin{enumerate}
+		\item $\rank\left(\rho^{\ast}\left(u\right)\right)=\rank\left(u\right)$.
+		\item 在典范同构的意义下,$M=\rho^{\ast}\left(M\right),N=\rho^{\ast}\left(N\right)$.
+	\end{enumerate}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

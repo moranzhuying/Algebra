@@ -1,0 +1,32 @@
+\section{同态的分解}
+
+记号约定:$\Omega$是集合,$G$是$\Omega$-群,$G^{\prime}$是原群,二者均采用乘法记号,
+
+\begin{proposition}{}{}
+		设$\Omega$在$G^{\prime}$上的作用是$\alpha\mapsto x^{\alpha}$,$f\in\Hom_{\mathsf{Mag}}\left(G,G^{\prime}\right)$和$\Omega$的作用相容.
+		\begin{enumerate}
+			\item $\im\left(f\right)$是$G^{\prime}$的封闭子集和不变子集.
+			\item 给$\im\left(f\right)$配备$G^{\prime}$诱导的合成律与$\Omega$诱导的作用,则$\im\left(f\right)$是$\Omega$-群.
+			\item $f^{\circ}:G\to\im\left(f\right)$是$\Omega$-群同态.
+		\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$\Omega$-群同态的核}{}
+	设$G^{\prime}$是$\Omega$-群,$G$和$G^{\prime}$的幺元分别是$e$和$e^{\prime}$,$f:G\to G^{\prime}$是$\Omega$-群同态.我们称$\ker\left(f\right)\coloneq f^{-1}\left(\left\{e^{\prime}\right\}\right)$为$f$的核.
+\end{definition}
+
+\begin{theorem}{$\Omega$-群同态的典范分解}{}
+	设$G^{\prime}$是$\Omega$-群,$f:G\to G^{\prime}$是$\Omega$-群同态.
+	\begin{enumerate}
+		\item $\ker\left(f\right)$是$G$的正规$\Omega$-子群,$\im\left(f\right)$是$G^{\prime}$的$\Omega$-子群,.
+		\item $f$与$G$上关于$\ker\left(f\right)$的左陪集关系相容.
+		\item $f$诱导的映射$\bar{f}:G/\ker\left(f\right)\to\im\left(f\right)$是$\Omega$-群同构.
+		\item 如下图表交换,其中$\pi$和$\iota$分别是典范同态与典范嵌入,$\bar{f}$如(4)所述.称$f=\iota\circ\bar{f}\circ\pi$为$f$的典范分解.
+		\begin{center}
+		\begin{tikzcd}
+		G \arrow[d, "\pi"', two heads] \arrow[r, "f"] & G^{\prime}                                  \\
+		G/\ker\left(f\right) \arrow[r, "\bar{f}"]     & \im\left(f\right) \arrow[u, "\iota"', hook]
+		\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{theorem}

@@ -1,0 +1,115 @@
+\section{几个应用}
+
+\subsection*{应用1:整数集的构造}
+
+\begin{definition}{整数群$\Z$}{}
+	我们称$\N$按加法构成的交换幺半群的差群为整数群,记作$\Z$,其元素称为整数,其加法称为整数加法,记作$+$.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	考虑$\N$上的如下等价关系$\sim$,对诸$m,n\in\N$,记$\left[m,n\right]=\left[\left(m,n\right)\right]_{\sim}$:
+	\begin{align*}
+		\forall a,b,c,d\in\N\left(\left(a,b\right)\sim\left(c,d\right)\iff a+d=b+c\right).
+	\end{align*}
+	因此$\Z=\N/\sim$,其加法为$\N$的加法诱导的商作用律,典范嵌入为$\iota:\N\hookrightarrow\Z,t\mapsto\left[t,0\right]$.在嵌入意义下$\N=\Z$,今后我们总是采用这一种等同,相关表述一概照此理解.对任一$m\in\N$,记$-m=\left[0,m\right]$.
+\end{remark}
+
+\begin{definition}{相反数}{}
+	定义$-\N=\left\{-m\in\Z\middle|m\in\N\right\},\N_{>0}=\N\setminus\left\{0\right\}$.
+\end{definition}
+
+\begin{proposition}{$\Z$的加法结构}{}
+	$\Z$对加法构成交换群,满足$\Z=\N\sqcup\left\{0\right\}\sqcup\left(-\N\right)$.同时,对诸$x\in\Z$,存在唯一的$m,n\in\N$使得$x=m-n$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	对诸$m,n\in\N$:若$m\geq n$,则$m+\left(-n\right)\in\N$;若$m\leq n$,则$m+\left(-n\right)\in -\N$;$\left(-m\right)+\left(-n\right)=-\left(m+n\right)$.
+\end{corollary}
+
+\begin{definition}{$\Z$上的标准序}{}
+	定义$\Z$上的二元关系$\leq$如下:
+	\begin{align*}
+		\forall x,y\in\Z\left(x\leq y\iff y-x\in\N\right),
+	\end{align*}
+	那么$\leq$是$\Z$上的全序.我们称该全序为$\Z$上的标准全序(或典范全序).
+\end{definition}
+
+\begin{theorem}{$\Z$在加法下按标准序构成全序群}{}
+	$\Z$上的标准全序满足下列条件:
+	\begin{enumerate}
+		\item (平移不变性)$\forall x,y,z\in\Z\left(x\leq y\iff x+z\leq y+z\right)$.
+		\item (和加法相容)$\forall x\in\Z\left(\left(x\geq 0\iff x\in\N\right)\wedge\left(x\leq 0\iff x\in -\N\right)\right)$.
+	\end{enumerate}
+\end{theorem}
+
+\subsection*{应用2:整数的乘法}
+
+\begin{lemma}{自然数的泛性质,整数集的同态的延拓}{}
+	设$E$按$\odot$是幺半群,幺元为$e$,$x\in E$.
+	\begin{enumerate}
+		\item 存在唯一的$f\in\Hom_{\mathsf{Mon}}\left(\N,E\right)$使$f\left(1\right)=e$且$\forall n\in\N\left(f\left(n\right)=\bigodot\limits^{n}x\right)$.
+		\item 若$x$可逆,则(1)中的$f$可唯一地延拓为幺半群同态$g:\Z\to E$使得$g\left(1\right)=x$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{remark}{记号说明}{}
+	进一步,对诸$n\in\N$:采用乘法记号时,定义$x^{n}\coloneq f\left(n\right)$;采用加法记号时,定义$nx\coloneq f\left(n\right)$.
+\end{remark}
+
+\begin{definition}{整数的乘法}{}
+	设对任意$m\in\Z$,群同态$f_{m}:\Z\to\Z$满足$f_{m}\left(1\right)=m$.定义$\Z$的运算$\cdot$(称为$\Z$的乘法)为$\forall n\in\Z\left(m\cdot n=f_{m}\left(n\right)\right)$.
+\end{definition}
+
+\begin{theorem}{$\Z$按加法和乘法构成交换幺环}{}
+	$\Z$对于加法和乘法分别构成交换群,并且满足下列条件:
+	\begin{enumerate}
+		\item $\forall x\in\Z\left(\left(-1\right)x=-x\right)$.
+		\item $\forall x,y\in\Z\left(\left(-x\right)\left(-y\right)=xy\right)$.
+	\end{enumerate}
+\end{theorem}
+
+\subsection*{幺半群中的广义幂}
+
+记号约定:$E$按$\odot$是幺半群,$e$是幺元,$x$是可逆元,幺半群同态$g_{x}:\Z\to E$满足$g_{x}\left(1\right)=x$.
+
+\begin{definition}{广义幂}{}
+	对任一$n\in\Z$,定义$x^{n}\coloneq g_{x}\left(n\right)$为$x$的$n$次(广义)幂.
+\end{definition}
+
+\begin{theorem}{广义幂的幂运算和指数运算}{}
+	对任一$m,n\in\Z$:
+	\begin{enumerate}
+		\item (指数加法)$x^{m+n}=x^{m}\odot x^{n}$.
+		\item (单位元)$x^{0}=1$.
+		\item (恒等元)$x^{1}=x$.
+		\item (指数乘法)$x^{mn}=\left(x^{m}\right)^{n}$.
+		\item (逆元)$x^{-n}$是$x^{n}$的逆元.
+	\end{enumerate}
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

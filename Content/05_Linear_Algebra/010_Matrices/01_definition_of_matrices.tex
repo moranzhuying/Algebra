@@ -1,0 +1,64 @@
+\chapter{矩阵}
+
+\section{矩阵的定义}
+
+记号约定:$I,J,H$是集合.
+
+\begin{definition}{矩阵}{}
+	$H^{I\times J}$的元素称为$H$上的$\left(I,J\right)$-型矩阵.
+\end{definition}
+
+\begin{definition}{矩阵的行和列,行(列)有限矩阵,行(列)矩阵,空矩阵,子矩阵,删行,加行}{}
+	设$\boldsymbol{A}\coloneq\left(a_{ij}\right)_{i\in I,j\in J}$是$H$上的$\left(I,J\right)$-型矩阵,$K\subseteq I,L\subseteq J$.记$\boldsymbol{A}^{\prime}=\left(a_{k\ell}\right)_{k\in K,\ell\in L}$.
+	\begin{enumerate}
+		\item 对任意$i\in I$,称$\row_{i}\left(\boldsymbol{A}\right)\coloneq\left(a_{ij}\right)_{j\in J}$为$\boldsymbol{A}$的第$i$行.
+		\item 对任意$j\in J$,称$\col_{j}\left(\boldsymbol{A}\right)\coloneq\left(a_{ij}\right)_{i\in I}$为$\boldsymbol{A}$的第$j$列.
+		\item 若$I$(相对的,$J$)是有限集,则称$\boldsymbol{A}$是行(相对的,列)有限矩阵的.
+		\item 若$I$(相对的,$J$)是单点集,则称$\boldsymbol{A}$是行(相对的,列)矩阵.
+		\item 若$I,J$中至少有一个是空集,则称$\boldsymbol{A}$是空矩阵.
+		\item 称$\boldsymbol{A}^{\prime}$为$\boldsymbol{A}$的一个子矩阵.
+		\item 称$\boldsymbol{A}^{\prime}$由$\boldsymbol{A}$划去所有满足$i\notin K$的行和$j\notin L$的列得到.
+		\item 称$\boldsymbol{A}$由$\boldsymbol{A}^{\prime}$加上所有满足$i\notin K$的行和$j\notin L$的列得到.
+		\item 当$I=\llbracket 1,p\rrbracket,J=\llbracket 1,q\rrbracket\subseteq\N$时,称$H^{I\times J}$的元素为$p$行$q$列矩阵(或$p\times q$矩阵),并记$\mathbf{M}_{p,q}\left(H\right)\coloneq H^{I\times J}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{术语和记号说明}{}
+	\begin{enumerate}
+		\item 在书写的时候,我们会省略行(相对的)矩阵的列(相对的,行)指标.
+		\item 在典范双射的意义下:空矩阵是陪域为$H$的空函数;当$I,J$都是单点集时,矩阵是$H$中相应的元素.
+		\item 当$I=\llbracket 1,p\rrbracket,J=\llbracket 1,q\rrbracket\subseteq\N$时,我们用表格$\begin{bmatrix}
+			a_{11}&\ldots&a_{1q}\\
+			\vdots&\ddots&\vdots\\
+			a_{p1}&\ldots&a_{pq}
+		\end{bmatrix}$来标注矩阵$\boldsymbol{A}$.当我们说矩阵是一个表格时,我们总是指对应于这个表格的矩阵.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{矩阵的转置}{}
+	设$\boldsymbol{A}\coloneq\left(a_{ij}\right)_{i\in I,j\in J}$是$H$上的$\left(I,J\right)$-型矩阵.称$\boldsymbol{A}^{\top}\coloneq\left(a_{ji}\right)_{j\in J,i\in I}$为$\boldsymbol{A}$的转置.
+\end{definition}
+
+\begin{proposition}{矩阵转置的性质}{}
+	若$\boldsymbol{A}\in H^{I\times J}$,则$A^{\top}\in H^{J\times I},\left(\boldsymbol{A}^{\top}\right)^{\top}=\boldsymbol{A}$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

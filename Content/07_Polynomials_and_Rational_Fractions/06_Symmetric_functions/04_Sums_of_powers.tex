@@ -1,0 +1,52 @@
+\section{幂和}
+
+记号约定:$\mathbf{X}\coloneq\left(X_{i}\right)_{i\in I},\mathbf{P}\coloneq\left(P_{k}\right)_{k=1}^{\infty}$是不定元族.
+
+\begin{definition}{$k$次幂和形式幂级数}{}
+	对每个$k\geq 1$,称$p_{k}\coloneq\sum\limits_{i\in I}X_{i}^{k}\in A[[\mathbf{X}]]$是$k$阶幂和形式幂级数.
+\end{definition}
+
+\begin{lemma}{Newton恒等式}{}
+	对每个$d\geq 1$有$p_{d}=\sum\limits_{k=1}^{d-1}\left(-1\right)^{k-1}s_{k}p_{d-k}+\left(-1\right)^{d+1}ds_{s}$.
+\end{lemma}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $p_{d}=\sum\limits_{k=1}^{d-1}\left(-1\right)^{k-1}s_{k}p_{d-k}+\left(-1\right)^{d+1}ds_{s}$叫做Newton恒等式.
+		\item 根据Newton恒等式的证明过程可知,Euler恒等式可以扩充到形式幂级数的情形.
+		\item 当$\left|I\right|=n$时,对每个$k>n$有$s_{k}=0$.于是
+		\begin{gather*}
+			p_{1}=s_{1},p_{2}=s_{1}p_{1}-2s_{2},p_{3}=s_{1}p_{2}-s_{2}p_{1}+3s_{3},\ldots,\\
+			p_{n}=s_{1}p_{n-1}-s_{2}p_{n-2}+\ldots+\left(-1\right)^{n-1}s_{n-1}p_{1}+\left(-1\right)^{n+1}ns_{n},\\
+			p_{k}=s_{1}p_{k-1}-s_{2}p_{k-2}+\ldots+\left(-1\right)^{n+1}s_{n}p_{k-n}(k>n).
+		\end{gather*}
+		\item 在$\Z[S_{1},\ldots,S_{d}]$上递归地定义序列$\left(P_{d}\right)_{d\in\N}$如下:
+		\begin{align*}
+			P_{n}=
+			\begin{cases}
+				S_{1},&n=1,\\
+				\sum\limits_{k=1}^{d-1}\left(-1\right)^{k-1}S_{k}P_{d-k}+\left(-1\right)^{d+1}dS_{d},&n\geq 2,
+			\end{cases}
+		\end{align*}
+		那么对每个$d\geq 1$有$p_{d}=P_{d}\left(s_{1},\ldots,s_{d}\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{幂和诱导的典范映射}{}
+	存在唯一的连续$A$-代数同态$\lambda:A[[\mathbf{P}]]\to\mathbf{A[[\mathbf{X}]]}^{\mathfrak{S}_{I}}$使$\forall k\geq 1\left(\lambda\left(P_{k}\right)=p_{k}\right)$.进一步地,
+	\begin{enumerate}
+		\item 若$\left|I\right|=n,n!\cdot 1_{A}\neq 0$,则$\lambda$诱导了拓扑$A$-代数同构$A[[P_{1},\ldots,P_{n}]]\to A[[X_{1},\ldots,X_{n}]]^{\mathfrak{S}_{I}}$.
+		\item 若$I$无限,$A$是$\Q$-代数,则$\lambda$是拓扑$A$-代数同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{多项式的根的Vieta判定与Newton判定}{}
+	设$\left(\left(\xi_{i},\eta_{i}\right)\right)_{i=1}^{n}$是$A\times A$中的元素族,$A$是整环.
+	\begin{enumerate}
+		\item 若$\forall 1\leq k\leq n\left(s_{k}\left(\left(\xi_{i}\right)_{i=1}^{n}\right)=s_{k}\left(\left(\eta_{i}\right)_{i=1}^{n}\right)\right)$,则$\exists\sigma\in\mathfrak{S}_{n}\forall 1\leq i\leq n\left(\eta_{i}=\xi_{\sigma\left(i\right)}\right)$.
+		\item 设$n!\cdot 1_{A}\neq 0$.若$\forall 1\leq k\leq n\left(\sum\limits_{i=1}^{n}\xi_{i}^{k}=\sum\limits_{i=1}^{n}\eta_{i}^{k}\right)$,则$\exists\sigma\in\mathfrak{S}_{n}\forall 1\leq i\leq n\left(\eta_{i}=\xi_{\sigma\left(i\right)}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+
+

@@ -1,0 +1,48 @@
+\section{特征多项式的性质:迹与行列式}
+
+记号约定:$\dim_{K}V=n\geq 1$.
+
+\begin{proposition}{}{}
+	设$q\in K[X]$,$L$是$K$的扩域,在$L$中$\Char_{\mathcal{T}}=\prod\limits_{i=1}^{n}\left(X-\lambda_{i}\right)$.
+	\begin{enumerate}
+		\item $\Char_{q\left(\mathcal{T}\right)}=\prod\limits_{i=1}^{n}\left(X-q\left(\lambda_{i}\right)\right),\tr\left(q\left(\mathcal{T}\right)\right)=\sum\limits_{i=1}^{n}q\left(\lambda_{i}\right),\det\left(q\left(\mathcal{T}\right)\right)=\prod\limits_{i=1}^{n}q\left(\lambda_{i}\right)$.
+		\item $q\left(\mathcal{T}\right)$可逆$\iff$ $q$和$\Char_{\mathcal{T}}$互素.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$r\in K[X]$,$L$是$K$的扩域,在$L$中$\Char_{\mathcal{T}}=\prod\limits_{i=1}^{n}\left(X-\lambda_{i}\right)$.
+	\begin{enumerate}
+		\item $\mathcal{T}$可代入$r$ $\iff$对每个$1\leq i\leq n$,$\lambda_{i}$可代入$r$.
+		\item 如果$\mathcal{T}$可代入$r$,那么$\Char_{r\left(\mathcal{T}\right)}=\prod\limits_{i=1}^{n}\left(X-r\left(\lambda_{i}\right)\right),\tr\left(r\left(\mathcal{T}\right)\right)=\sum\limits_{i=1}^{n}r\left(\lambda_{i}\right),\det\left(r\left(\mathcal{T}\right)\right)=\prod\limits_{i=1}^{n}r\left(\lambda_{i}\right)$.
+		\item $\tr\left(\mathcal{T}^{n}\right)=
+		\begin{cases}
+			\sum\limits_{i=1}^{n}\lambda_{i}^{n},&n\in\Z_{\geqslant 0},\\
+			\sum\limits_{i=1}^{n}\lambda_{i}^{n},&n\in\Z_{<0},\mathcal{T}\in\GL\left(V\right).
+		\end{cases}$
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\Char\left(K\right)=0$,则$\mathcal{T}$是$n$-幂零的$\iff$对每个$1\leq k\leq n$都有$\tr\left(\mathcal{T}^{k}\right)=0$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\rho:K\to K(X)$是环同态,则$Y\id_{V}-\rho^{\ast}\left(\mathcal{T}\right)\in\GL\left(\rho^{\ast}\left(V\right)\right)$,并且$\tr((Y\id_{V}-\rho^{\ast}\left(\mathcal{T}\right))^{-1})=\dfrac{\Char_{\mathcal{T}}^{\prime}}{\Char_{\mathcal{T}}}$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\Char\left(K\right)=0$,则在$K[[X]]$中有$-X\dfrac{\mathrm{d}}{\mathrm{d}X}\log\det\left(\id_{V}-X\mathcal{T}\right)=\sum\limits_{m=1}^{\infty}\tr\left(\mathcal{T}^{m}\right)X^{m}$.
+\end{corollary}
+
+\begin{remark}{}{}
+	对每个$q\in K[X]$有$\det\left(q\left(\mathcal{T}\right)\right)=\res\left(\Char_{\mathcal{T}},q\right)$.特别地,$\det\left(\Char_{\mathcal{T}}^{\prime}\left(\mathcal{T}\right)\right)=\left(-1\right)^{\frac{n\left(n-1\right)}{2}}\disc\left(\Char_{\mathcal{T}}\right)$.
+\end{remark}
+
+\begin{corollary}{}{}
+	记$\boldsymbol{T}=(\tr(\mathcal{T}^{i+j-2}))_{\substack{0\leq i\leq n\\ 0\leq j\leq n}}$,则$\det\left(\boldsymbol{T}\right)=\disc\left(\Char_{\mathcal{T}}\right)$.
+\end{corollary}
+
+
+
+

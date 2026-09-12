@@ -1,0 +1,116 @@
+\section{预序关系}
+
+\begin{definition}{预序关系}{}
+	设$R\left\{x,y\right\}$是公式,字母$x,y$互异.若$R$是传递的,也是对称的,则称$R$是相对$x,y$的预序关系,称$R\left\{y,x\right\}$是$R\left\{x,y\right\}$的对偶.
+\end{definition}
+
+\begin{example}{}{}
+	设$\mathfrak{R}\subseteq\mathcal{P}\left(E\right)$是集合$E$上的覆盖组成的集合,则公式``$\mathcal{R}$比$\mathcal{R}^{\prime}$粗''是关于$\mathfrak{R}$中的元素$\mathcal{R},\mathcal{R}^{\prime}$的预序关系,但不一定是偏序关系.例如,让$\mathcal{R}^{\prime}$是$\mathcal{R}$和$E$的一个包含于$\mathcal{R}$但不属于$\mathcal{R}$的集合的并,那么上述公式就不是偏序关系.
+\end{example}
+
+\begin{definition}{预序关系诱导的等价关系}{}
+	设$R\left\{x,y\right\}$是预序关系.把公式$R\left\{x,y\right\}\wedge R\left\{y,x\right\}$记作$S\left\{x,y\right\}$,则$S\left\{x,y\right\}$是与$R\left\{x,y\right\}$相容的等价关系,称为$R\left\{x,y\right\}$诱导的等价关系.
+\end{definition}
+
+\begin{definition}{集合上的预序关系}{}
+	设$E$是集合,$R\left\{x,y\right\}$是预序关系.若$R\left\{x,x\right\}\iff x\in E$,则称$R$是$E$上的预序关系.
+\end{definition}
+
+\begin{proposition}{预序诱导的偏序}{}
+	设$R\left\{x,y\right\}$是集合$E$上的预序关系,$S\left\{x,y\right\}$是$R\left\{x,y\right\}$诱导的等价关系.把公式
+	\begin{align*}
+		X\in E/S\wedge Y\in E/S\wedge \exists x\exists y\left(x\in X\wedge y\in Y\wedge R\left\{x,y\right\}\right)
+	\end{align*}
+	记作$R^{\prime}\left\{X,Y\right\}$,则$R^{\prime}$是$E/S$上的偏序关系,称为$R$在$E/S$上诱导的偏序.
+\end{proposition}
+
+\begin{definition}{预序}{}
+	设$E$是集合,$\Gamma\coloneq\left(G,E,E\right)$是对应.若公式$\left(x,y\right)\in G$是$E$上的预序关系,则称$\Gamma$是$E$上的预序.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\Gamma$是$E$上的预序$\iff$ $\Delta_{E}\subseteq G$且$G\circ G\subseteq G$.
+		\item 当$\Gamma$是预序时,记$S\left(x,y\right)$是公式$\left(x,y\right)\in G$诱导的等价关系,则相对于$S\left\{x,y\right\}$的二元关系是$G\cap G^{-1}$,相对于$R$诱导的偏序$R^{\prime}$的二元关系是$G$在典范投影$E\times E\to\left(E\times E\right)\times\left(S\times S\right)$下的像.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{}{}
+	设$A$是环.对$A$中的元素$x,y$,公式$\exists z\in A\left(y=zx\right)$是$A$上的预序关系.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

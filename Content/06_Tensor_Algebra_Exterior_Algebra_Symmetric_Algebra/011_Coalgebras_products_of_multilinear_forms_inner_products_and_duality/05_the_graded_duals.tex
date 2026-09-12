@@ -1,0 +1,220 @@
+\section{张量代数,对称代数,外代数的分次对偶}
+
+从本节开始,我们所说的代数在没有额外说明的情况下,都是含幺结合代数.
+
+记号约定:$M,N$是$A$-模,$\left(E,c\right)$是$A$-余代数.
+
+\begin{definition}{张量代数,对称代数,外代数的对偶上的分次结构}{}
+	$\mathsf{T}\left(M\right),\mathsf{S}\left(M\right),\bigwedge\left(M\right)$上的分次$A$-余代数结构分别诱导了典范的$\N$型分次代数结构:
+	\begin{enumerate}
+		\item $\underline{\mathsf{T}\left(M\right)}^{\vee}$是分次$A$-结合代数.
+		\item $\underline{\mathsf{S}\left(M\right)}^{\vee}$是分次$A$-交换代数.
+		\item $\underline{\bigwedge\left(M\right)}^{\vee}$是分次$A$-反交换代数.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	在$\underline{\bigwedge\left(M\right)}^{\vee}$中,每个次数为$1$的元素$\lambda$都满足$\lambda^{2}=0$.进一步把$\lambda$对应到$f_{\lambda}\in M^{\vee}$,那么
+	\begin{align*}
+		\forall x,y\in M\left(\left(f_{\lambda}\wedge_{\lambda}f_{\lambda}\right)\left(x,y\right)=f\left(x\right)f\left(y\right)-f\left(y\right)f\left(x\right)\right).
+	\end{align*}
+\end{remark}
+
+\begin{proposition}{伴随同态的函子性}{}
+	设$u\in\Hom_{A}\left(M,N\right)$.
+	\begin{enumerate}
+		\item $\mathsf{T}\left(u\right)$是余代数同态,$\mathsf{S}\left(u\right)$是分次余代数同态和双代数同态,$\bigwedge\left(u\right)$是分次余代数同态和反对称分次双代数同态.
+		\item $\mathsf{T}\left(u\right),\mathsf{S}\left(u\right),\bigwedge\left(u\right)$的分次转置都是分次代数同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{典范映射}{}
+	\begin{enumerate}
+		\item 设$\iota_{\mathsf{T}}:M^{\vee}\to\underline{\mathsf{T}\left(M\right)}^{\vee}$是典范单射.定义$\theta_{\mathsf{T}\left(M\right)}$是使下图交换的分次代数同态(左下方的箭头是典范映射).
+		\begin{center}
+			\begin{tikzcd}
+				{M^{\vee}} && {\underline{\mathsf{T}\left(M\right)}^{\vee}} \\
+				& {\mathsf{T}\left(M^{\vee}\right)}
+				\arrow["{\iota_{\mathsf{T}}}", from=1-1, to=1-3]
+				\arrow[from=1-1, to=2-2]
+				\arrow["{\theta_{\mathsf{T}\left(M\right)}}"', from=2-2, to=1-3]
+			\end{tikzcd}
+		\end{center}
+		\item 设$\iota_{\mathsf{S}}:M^{\vee}\to\underline{\mathsf{S}\left(M\right)}^{\vee}$是典范单射.定义$\theta_{\mathsf{S}\left(M\right)}$是使下图交换的分次代数同态(左下方的箭头是典范映射).
+		\begin{center}
+			\begin{tikzcd}
+				{M^{\vee}} && {\underline{\mathsf{S}\left(M\right)}^{\vee}} \\
+				& {\mathsf{S}\left(M^{\vee}\right)}
+				\arrow["{\iota_{\mathsf{S}}}", from=1-1, to=1-3]
+				\arrow[from=1-1, to=2-2]
+				\arrow["{\theta_{\mathsf{S}\left(M\right)}}"', from=2-2, to=1-3]
+			\end{tikzcd}
+		\end{center}
+		\item 设$\iota_{\wedge}:M^{\vee}\to\left(\underline{\bigwedge\left(M\right)}^{\vee}\right)^{\op}$是典范单射.定义$\theta_{\wedge\left(M\right)}$是使下图交换的分次代数同态(左下方的箭头是典范映射).
+		\begin{center}
+			\begin{tikzcd}
+				{M^{\vee}} && {\left(\underline{\bigwedge\left(M\right)}^{\vee}\right)^{\op}} \\
+				& {\bigwedge\left(M^{\vee}\right)}
+				\arrow["{\iota_{\wedge}}", from=1-1, to=1-3]
+				\arrow[from=1-1, to=2-2]
+				\arrow["{\theta_{\wedge\left(M\right)}}"', from=2-2, to=1-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	设$u\in\Hom_{A}\left(M,N\right)$,则如下三张图表均交换.
+	\begin{center}
+		\begin{tikzcd}
+			{\mathsf{T}\left(N^{\vee}\right)} & {\mathsf{T}\left(M^{\vee}\right)} & {\mathsf{S}\left(N^{\vee}\right)} & {\mathsf{S}\left(M^{\vee}\right)} & {\bigwedge\left(N^{\vee}\right)} & {\bigwedge\left(N^{\vee}\right)} \\
+			{\underline{\mathsf{T}\left(N\right)}^{\vee}} & {\underline{\mathsf{T}\left(M\right)}^{\vee}} & {\underline{\mathsf{S}\left(N\right)}^{\vee}} & {\underline{\mathsf{S}\left(M\right)}^{\vee}} & {\left(\underline{\bigwedge\left(N\right)}^{\vee}\right)^{\op}} & {\left(\underline{\bigwedge\left(M\right)}^{\vee}\right)^{\op}}
+			\arrow["{\mathsf{T}\left(u^{\top}\right)}", from=1-1, to=1-2]
+			\arrow["{\theta_{\mathsf{T}\left(N\right)}}"', from=1-1, to=2-1]
+			\arrow["{\theta_{\mathsf{T}\left(M\right)}}", from=1-2, to=2-2]
+			\arrow["{\mathsf{S}\left(u^{\top}\right)}", from=1-3, to=1-4]
+			\arrow["{\theta_{\mathsf{S}\left(N\right)}}"', from=1-3, to=2-3]
+			\arrow["{\theta_{\mathsf{S}\left(M\right)}}", from=1-4, to=2-4]
+			\arrow["{\bigwedge\left(u^{\top}\right)}", from=1-5, to=1-6]
+			\arrow["{\theta_{\wedge\left(N\right)}}"', from=1-5, to=2-5]
+			\arrow["{\theta_{\wedge\left(M\right)}}", from=1-6, to=2-6]
+			\arrow["{\mathsf{T}\left(u\right)^{\top}}", from=2-1, to=2-2]
+			\arrow["{\mathsf{S}\left(u\right)^{\top}}", from=2-3, to=2-4]
+			\arrow["{\bigwedge\left(u\right)^{\top}}", from=2-5, to=2-6]
+		\end{tikzcd}
+	\end{center}
+\end{remark}
+
+\begin{definition}{$n$阶余乘}{}
+	\begin{enumerate}
+		\item 设$\left(E,c\right)$是余结合的.称$c_{n}\coloneq
+		\begin{cases}
+			c,&n=2\\
+			\left(c_{n-1}\otimes\id_{E}\right)\circ c,&n\geq 3
+		\end{cases}$是$n$次余乘.
+		\item 对每个$n\in\N$,记$\mu_{n}$是典范映射.对每个$n\geq 2$,定义$\mu_{n}\coloneq\mu_{2}\circ\left(\mu_{n-1}\otimes\id_{A}\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{lemma}{}{}
+	\begin{enumerate}
+		\item 设$\left(u_{i}\right)_{i=1}^{n}$是$E^{\vee}$中的序列,则$u_{1}\ldots u_{n}=\mu_{n}\circ\left(u_{1}\otimes\ldots\otimes u_{n}\right)\circ c_{n}$.
+		\item 设$E$是余结合余代数,分次为$\left(E_{n}\right)_{n\in\N}$,$\underline{E}^{\vee}$的分次是$\left(E_{n}^{\vee}\right)_{n\in\N}$,$\left(u_{i}\right)_{i=1}^{n}$是$E_{1}^{\vee}$的序列,$\delta_{n}\in\Hom_{A}\left(E,E^{\otimes n}\right)$满足如下条件:对每个$x\in E$,$\delta_{n}\left(x\right)$是$c_{n}\left(x\right)$的多重分次为$\left(1,\ldots,1\right)$的分量.那么$u_{1}\ldots u_{n}=\mu_{n}\circ\left(u_{1}\otimes\ldots u_{n}\right)\circ\delta_{n}$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{remark}{}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$是$M$中的序列.
+	\begin{enumerate}
+		\item 当$E=\mathsf{T}\left(M\right)$时,$\delta_{n}\left(x_{1}\otimes\ldots\otimes x_{n}\right)=x_{1}\otimes\ldots\otimes x_{n}$.
+		\item 当$E=\mathsf{S}\left(M\right)$时,$\delta_{n}\left(x_{1}\ldots x_{n}\right)=\sum\limits_{\sigma\in\mathfrak{S}_{n}}x_{\sigma\left(1\right)}\otimes\ldots\otimes x_{\sigma\left(n\right)}$.
+		\item 当$E=\bigwedge\left(M\right)$时,$\delta_{n}\left(x_{1}\wedge\ldots\wedge x_{n}\right)=\sum\limits_{\sigma\in\mathfrak{S}_{n}}\sign\left(\sigma\right)x_{\sigma\left(1\right)}\otimes\ldots\otimes x_{\sigma\left(n\right)}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$\left(\left(x_{i}^{\ast},x_{i}\right)\right)_{i=1}^{n}$是$M^{\vee}\times M$中的序列.
+	\begin{enumerate}
+		\item 若$\langle\cdot,\cdot\rangle$是$\underline{\mathsf{T}\left(M\right)}^{\vee}$的典范配对(右模记号),则$\langle x_{1}^{\ast}\ldots x_{n}^{\ast},x_{1}\otimes x_{2}\otimes\ldots\otimes x_{n}\rangle=\prod\limits_{i=1}^{n}x_{i}^{\ast}\left(x_{i}\right)$.
+		\item 若$\langle\cdot,\cdot\rangle$是$\underline{\mathsf{S}\left(M\right)}^{\vee}$的典范配对(右模记号),则$\langle x_{1}^{\ast}\ldots x_{n}^{\ast},x_{1}\ldots x_{n}\rangle=\sum\limits_{\sigma\in\mathfrak{S}_{n}}\prod\limits_{i=1}^{n}x_{\sigma\left(i\right)}^{\ast}\left(x_{i}\right)$.
+		\item 若$\langle\cdot,\cdot\rangle$是$\underline{\mathsf{T}\left(M\right)}^{\vee}$的典范配对(右模记号),则$\langle x_{1}^{\ast}\wedge\ldots\wedge x_{n}^{\ast},x_{1}\otimes x_{2}\otimes\ldots\otimes x_{n}\rangle=\det\left(x_{i}^{\ast}\left(x_{j}\right)\right)_{1\leq i,j\leq n}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(x_{i}^{\ast}\right)_{i=1}^{n}$是$M^{\vee}$中的序列,则
+	\begin{gather*}
+		\theta_{\mathsf{T}\left(M\right)}\left(x_{1}^{\ast}\otimes\ldots\otimes x_{n}^{\ast}\right)=x_{1}^{\ast}\ldots x_{n}^{\ast},\\
+		\theta_{\mathsf{S}\left(M\right)}\left(x_{1}^{\ast}\ldots\otimes x_{n}^{\ast}\right)=x_{1}^{\ast}\ldots x_{n}^{\ast},\\
+		\theta_{\wedge\left(M\right)}\left(x_{1}^{\ast}\wedge\ldots\wedge x_{n}^{\ast}\right)=x_{n}^{\ast}\ldots x_{1}^{\ast}=\left(-1\right)^{\frac{n\left(n-1\right)}{2}}x_{1}^{\ast}\ldots x_{n}^{\ast}.
+	\end{gather*}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(\left(x_{i}^{\ast},x_{i}\right)\right)_{i=1}^{n}$是$M^{\vee}\times M$中的序列.
+	\begin{enumerate}
+		\item 若$\langle\cdot,\cdot\rangle$是$\underline{\mathsf{T}\left(M\right)}^{\vee}$是典范配对(右模记号),则
+		\begin{align*}
+			\langle\theta_{\mathsf{T}\left(M\right)}\left(x_{1}^{\ast}\otimes\ldots\otimes x_{n}^{\ast}\right),x_{1}\otimes\ldots\otimes x_{n}\rangle=\prod\limits_{i=1}^{n}x_{i}^{\ast}\left(x_{i}\right).
+		\end{align*}
+		\item 若$\langle\cdot,\cdot\rangle$是$\underline{\mathsf{S}\left(M\right)}^{\vee}$是典范配对(右模记号),则
+		\begin{align*}
+			\langle\theta_{\mathsf{S}\left(M\right)}\left(x_{1}^{\ast}\ldots x_{n}^{\ast},x_{1}\ldots x_{n}^{\ast}\right),x_{1}\otimes\ldots\otimes x_{n}\rangle=\sum\limits_{\sigma\in\mathfrak{S}_{n}}\prod\limits_{i=1}^{n}x_{\sigma\left(i\right)}^{\ast}\left(x_{i}\right).
+		\end{align*}
+		\item 若$\langle\cdot,\cdot\rangle$是$\underline{\mathsf{T}\left(M\right)}^{\vee}$是典范配对(右模记号),则
+		\begin{align*}
+			\langle\theta_{\wedge\left(M\right)}\left(x_{1}^{\ast}\wedge\ldots\wedge x_{n}^{\ast}\right),x_{1}\otimes x_{2}\otimes\ldots\otimes x_{n}\rangle=\left(-1\right)^{\frac{n\left(n-1\right)}{2}}\det\left(x_{i}^{\ast}\left(x_{j}\right)\right)_{1\leq i,j\leq n}.
+		\end{align*}
+	\end{enumerate}
+\end{corollary}
+
+\begin{lemma}{}{}
+	考虑如下关于集合的交换图.若$g$是单射(相对的,满射,双射),则$f$是单射(相对的,满射,双射).
+	\begin{center}
+		\begin{tikzcd}
+			{X_{1}} & {Y_{1}} & {X_{1}} \\
+			{X_{2}} & {Y_{2}} & {X_{2}}
+			\arrow["{u_{1}}", from=1-1, to=1-2]
+			\arrow["{\id_{X_{1}}}", curve={height=-18pt}, from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-1]
+			\arrow["{v_{1}}", from=1-2, to=1-3]
+			\arrow["g"', from=1-2, to=2-2]
+			\arrow["f", from=1-3, to=2-3]
+			\arrow["{u_{2}}"', from=2-1, to=2-2]
+			\arrow["{\id_{X_{2}}}"', curve={height=18pt}, from=2-1, to=2-3]
+			\arrow["{v_{2}}"', from=2-2, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{lemma}
+
+\begin{proposition}{}{}
+	如果$M$是有限生成投射模,那么$\theta_{\mathsf{T}\left(M\right)},\theta_{\wedge\left(M\right)}$都是双射,$\underline{\bigwedge\left(M\right)}^{\vee}=\bigwedge\left(M\right)^{\vee}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$M$是有限生成自由模,基为$\left(e_{i}\right)_{i=1}^{m}$.
+	\begin{itemize}
+		\item 对$\N^{m}$的每个$n$阶元素$\alpha\coloneq\left(\alpha_{1},\ldots,\alpha_{n}\right)$,记$e^{\alpha}\coloneq e_{1}^{\alpha_{1}}\ldots e_{n}^{\alpha_{n}}$.
+		\item 对$\N^{m}$的每个$n$阶元素$\alpha,\beta$,$u_{\alpha}\in\mathsf{S}^{n}\left(M\right)^{\vee}$满足$u_{\alpha}\left(e^{\beta}\right)=\delta_{\alpha,\beta}$.
+		\item 设$\mu:A\otimes_{A}A\to A$定义了$A$上的乘法,$\Delta$是$\mathsf{S}\left(M\right)$上的典范余乘.
+		\item $A$中的序列$\left(a_{\alpha\beta\gamma}\right)_{\alpha,\beta,\gamma\in\N^{m}}$满足$\forall\alpha,\beta\in\N^{m}\left(u_{\alpha}u_{\beta}=\sum\limits_{\gamma\in\N^{m}}a_{\alpha\beta\gamma}u_{\gamma}\right)$.
+	\end{itemize}
+	\begin{enumerate}
+		\item $\left(u_{\alpha}\right)_{\alpha\in\N^{m}}$是$\underline{\mathsf{S}\left(M\right)}^{\vee}$的基.
+		\item 对每个$\alpha,\beta,\gamma\in\N^{m}$有$a_{\alpha\beta\gamma}=\tau_{\alpha,\beta}\left(e^{\gamma}\right)$,其中$\tau_{\alpha,\beta}=\mu\circ\left(u_{\alpha}\otimes u_{\beta}\right)\circ\Delta$.
+		\item 对每个$\gamma\in\N^{m}$有$\Delta\left(e^{\gamma}\right)=\sum\limits_{\substack{\alpha,\beta\in\N^{m}\\ \alpha+\beta=\gamma}}\binom{\alpha+\beta}{\alpha}e^{\alpha}\otimes e^{\beta}$.
+		\item 对每个$\alpha,\beta\in\N^{m}$有$u_{\alpha}u_{\beta}=\binom{\alpha+\beta}{\alpha}u_{\alpha+\beta}$.
+		\item 设$\left(e_{i}\right)_{i=1}^{n}$的对偶基是$\left(e_{i}^{\ast}\right)_{i=1}^{m}$,对每个$\alpha=\left(\alpha_{1},\ldots,\alpha_{m}\right)\in\N^{m}$,记$e^{\ast\alpha}=\left(e_{1}^{\ast}\right)^{\alpha_{1}}\ldots\left(e_{m}^{\ast}\right)^{\alpha_{m}}$,则
+		\begin{align*}
+			\forall\alpha\in\N^{m}\left(\theta_{\mathsf{S}\left(M\right)}\left(e^{\ast\alpha}\right)=\alpha!u_{\alpha}\right).
+		\end{align*}
+		\item $\theta_{\mathsf{S}\left(M\right)}$是双射$\iff$ $\left(\alpha!u_{\alpha}\right)_{\alpha\in\N^{m}}$是$\underline{\mathsf{S}\left(M\right)}^{\vee}$的基$\iff$ $\forall n\in\N\forall\alpha\in\N^{m}\left(\left|\alpha\right|=n\implies\alpha!1_{A}\in A^{\times}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	若$A$是$\Q$-代数,则$\theta_{\mathsf{S}\left(M\right)}$是双射.
+\end{proposition}
+
+\begin{remark}{}{}
+	设$B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,则如下图表交换(水平方向的箭头是典范映射诱导的映射).
+	\begin{center}
+		\begin{tikzcd}
+			{\rho^{\ast}\left(\mathsf{T}\left(M^{\vee}\right)\right)} & {\rho^{\ast}\left(\underline{\mathsf{T}\left(M\right)}^{\vee}\right)} \\
+			{\mathsf{T}\left(\rho^{\ast}\left(M\right)^{\vee}\right)} & {\underline{\mathsf{T}\left(\rho^{\ast}\left(M\right)\right)}^{\vee}}
+			\arrow["{\rho^{\ast}\left(\theta_{\mathsf{T}\left(M\right)}\right)}", from=1-1, to=1-2]
+			\arrow[from=1-1, to=2-1]
+			\arrow[from=1-2, to=2-2]
+			\arrow["{\theta_{\mathsf{T}\left(M\right)}}"', from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+	进一步,如果$M$是有限生成投射模,那么图表中的映射都是$B$-代数同构.把$\mathsf{T}$换成$\mathsf{S}$或$\bigwedge$,结论仍然成立(把$\mathsf{T}$换成$\mathsf{S}$时,如果$A$是$\Q$-代数和$M$是有限生成投射模,那么图表中的映射都是$B$-代数同构).
+\end{remark}
+
+
+
+
+
+
+
+

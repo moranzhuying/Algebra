@@ -1,0 +1,113 @@
+\section{单调映射}
+
+\begin{definition}{单调映射}{}
+	设集合$E,F$各自配备预序$\leq,\leq^{\prime}$,$f\in\Hom_{\mathsf{Set}}\left(E,F\right)$.
+	\begin{enumerate}
+		\item 若$\forall x,y\in E\left(x\leq y\implies f\left(x\right)\leq^{\prime}f\left(y\right)\right)$,则称$f$(单调)递增.
+		\item 若$\forall x,y\in E\left(x\leq y\implies f\left(x\right)\geq^{\prime}f\left(y\right)\right)$,则称$f$(单调)递减.
+		\item 若$f$递增或递减,则称$f$单调.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+	\item 上述定义中,把$E$(或$F$)的预序替换为其对偶,则原来的递增(相对的,递减)映射变为递减(相对的,递增)映射.
+	\item 常值映射既递增又递减,但是既递增又递减的映射不一定是常值映射.例如,给集合$E$配备相等关系定义的偏序,那么$\id_{E}$既递增又递减,但不是常值映射.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{严格单调映射}{}
+	设集合$E,F$各自配备偏序$\leq,\leq^{\prime}$,$f\in\Hom_{\mathsf{Set}}\left(E,F\right)$.
+	\begin{enumerate}
+		\item 若$\forall x,y\in E\left(x<y\implies f\left(x\right)<^{\prime}f\left(y\right)\right)$,则称$f$严格(单调)递增.
+		\item 若$\forall x,y\in E\left(x<y\implies f\left(x\right)>^{\prime}f\left(y\right)\right)$,则称$f$严格(单调)递减.
+		\item 若$f$严格递增或严格递减,则称$f$严格单调.
+	\end{enumerate}
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$E$是集合.给$\mathcal{P}\left(\mathcal{E}\right)$配备包含偏序,则映射$\mathcal{P}\left(E\right)\to\mathcal{P}\left(E\right),X\mapsto E\setminus X$严格递减.
+		\item 设$E$是偏序集,给$\mathcal{P}\left(E\right)$配备包含偏序.对任意$x\in E$,令$U_{x}=\left\{y\in E\middle|y\geq x\right\}$,则$E\to\mathcal{P}\left(E\right),x\mapsto U_{x}$严格递减.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设$E,F$是偏序集,$f\in\Hom_{\mathsf{Set}}\left(E,F\right)$是单调的单射,则$f$严格单调.
+\end{proposition}
+
+\begin{remark}{}{}
+	这个命题的逆命题不一定成立(即严格单调不蕴含单调+单射),把偏序加强到全序才可以成立.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$E,F$是偏序集,$f\in\Isom_{\mathsf{Set}}\left(E,F\right)$,则$f$是序同构$\iff$ $f$和$f^{-1}$都递增.
+\end{proposition}
+
+\begin{definition}{单调和严格单调的集合族}{}
+	设$I$是偏序集,$\left(X_{i}\right)_{i\in I}$是集合$E$的子集族,给$\mathcal{P}\left(E\right)$配备包含偏序,$\iota:I\to\mathcal{P}\left(E\right),i\mapsto X_{i}$.
+	\begin{enumerate}
+		\item 若$\iota$递增(相对的,递减),则称$\left(X_{i}\right)_{i\in I}$递增(相对的,递减).
+		\item 若$\iota$严格递增(相对的,严格递减),则称$\left(X_{i}\right)_{i\in I}$严格递增(相对的,严格递减).
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	设$E,F$是偏序集,$f:E\to F$和$g:F\to E$递减,$g\circ f\geq\id_{E},f\circ g\geq\id_{F}$,则$f\circ g\circ f=f,g\circ f\circ g=g$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

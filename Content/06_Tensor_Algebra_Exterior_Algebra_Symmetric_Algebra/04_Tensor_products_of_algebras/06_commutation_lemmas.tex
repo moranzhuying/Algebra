@@ -1,0 +1,51 @@
+\section{交换性引理}
+
+记号约定:$E$是$A$-代数.
+
+\begin{lemma}{单个元素和序列的交换}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$和$\left(\lambda_{i}\right)_{i=1}^{n}$分别是$E$和$A$中的有限序列,$y\in E$.如果$\forall 1\leq i\leq n\left(x_{i}y=\lambda_{i}yx_{i}\right)$,那么
+	\begin{align*}
+		\left(x_{1}\ldots x_{n}\right)y=\left(\lambda_{1}\ldots\lambda_{n}\right)y\left(x_{1}\ldots x_{n}\right).
+	\end{align*}
+\end{lemma}
+
+\begin{lemma}{两个序列的交换}{}
+	设$\left(x_{i}\right)_{i=1}^{n},\left(y_{i}\right)_{i=1}^{n}$是$E$中的有限序列.如果$\forall 1\leq j\leq i\leq n\exists\lambda_{ij}\in A\left(x_{i}y_{j}=\lambda_{ij}y_{j}x_{i}\right)$,则
+	\begin{align*}
+		\left(x_{1}\ldots x_{n}\right)\left(y_{1}\ldots y_{n}\right)=\left(\prod\limits_{1\leq j<i\leq n}\lambda_{ij}\right)\left(x_{1}y_{1}\right)\ldots\left(x_{n}y_{n}\right).
+	\end{align*}
+\end{lemma}
+
+\begin{definition}{逆序对的标量乘积}{}
+	设$\boldsymbol{\lambda}=\left(\lambda_{ij}\right)_{1\leq j<i\leq n}$是$A$中的元素族,$\sigma\in\mathfrak{S}_{n}$.定义$\varepsilon_{\sigma}\left(\boldsymbol{\lambda}\right)\coloneq\prod\limits_{\substack{1\leq j<i\leq n\\ \sigma^{-1}\left(i\right)<\sigma^{-1}\left(j\right)}}\lambda_{ij}=\prod\limits_{\substack{1\leq i<j\leq n\\ \sigma\left(i\right)>\sigma\left(j\right)}}\lambda_{\sigma\left(i\right),\sigma\left(j\right)}$.
+\end{definition}
+
+\begin{lemma}{序列内部元素的重排置换}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$是$E$的有限序列.如果$\forall 1\leq j<i\leq n\exists\lambda_{ij}\in A\left(x_{i}x_{j}=\lambda_{ij}x_{j}x_{i}\right)$,则
+	\begin{align*}
+		\forall\sigma\in\mathfrak{S}_{n}\left(x_{\sigma\left(1\right)}\ldots x_{\sigma\left(n\right)}=\varepsilon_{\sigma}\left(\left(\lambda_{ij}\right)_{1\leq j<i\leq n}\right)x_{1}\ldots x_{n}\right).
+	\end{align*}
+\end{lemma}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

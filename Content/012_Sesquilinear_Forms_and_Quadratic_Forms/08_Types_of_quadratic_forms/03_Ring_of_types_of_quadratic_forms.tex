@@ -1,0 +1,82 @@
+\section{二次型的类型的环}
+
+记号约定:
+\begin{itemize}
+	\item $\Char\left(A\right)\neq 2$,$E,E^{\prime},E^{\prime\prime}$是$A$-向量空间,$\mathcal{Q}$是$E$上所有非退化$A$-二次型组成的集合.
+	\item $\mathcal{W}\left(A\right)$是$E$上所有非退化$A$-二次型的Witt类组成的集合.
+\end{itemize}
+
+\begin{proposition}{}{}
+	设$Q\in\Quad_{A}\left(E\right),Q^{\prime}\in\Quad_{A}\left(E^{\prime}\right),Q^{\prime\prime}\in\Quad_{A}\left(E^{\prime\prime}\right)$.
+	\begin{enumerate}
+		\item $Q\otimes_{A}Q^{\prime}\simeq Q^{\prime}\otimes_{A}Q$.
+		\item $\left(Q\otimes_{A}Q^{\prime}\right)\otimes_{A}Q^{\prime\prime}\simeq Q\otimes_{A}\left(Q^{\prime}\otimes_{A}Q^{\prime\prime}\right)$.
+		\item $\left(Q\boxplus Q^{\prime}\right)\otimes_{A}Q^{\prime\prime}\simeq\left(Q\otimes_{A}Q^{\prime\prime}\right)\boxplus\left(Q^{\prime}\otimes_{A}Q^{\prime\prime}\right)$.
+		\item 若$\dim E=2n\geq 2,\dim E^{\prime}=n^{\prime}\geq 1$,$Q$是非退化双曲二次型,$Q^{\prime}$非退化,则$Q\otimes_{A}Q^{\prime}$是$2nn^{\prime}$维双曲二次型.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$V_{1},V_{2},V_{1}^{\prime},V_{2}^{\prime}$是有限维$A$-向量空间,$Q_{1},Q_{2},Q_{1}^{\prime},Q_{2}^{\prime}$分别是$V_{1},V_{2},V_{1}^{\prime},V_{2}^{\prime}$上的非退化$A$-二次型.如果
+	\begin{align*}
+		\mathcal{W}\left(Q_{1}\right)=\mathcal{W}\left(Q_{2}\right),\mathcal{W}\left(Q_{1}^{\prime}\right)=\mathcal{W}\left(Q_{2}^{\prime}\right),
+	\end{align*}
+	那么$\mathcal{W}\left(Q_{1}\otimes_{A}Q_{2}\right)=\mathcal{W}\left(Q_{1}^{\prime}\otimes_{A}Q_{2}^{\prime}\right)$.
+\end{proposition}
+
+接下来的内容中,默认$E,E^{\prime}$是有限维$A$-向量空间.
+
+\begin{proposition}{Witt环的乘法群}{multiplicative-group-of-witt-ring}
+	定义$\mathcal{W}$上的乘法如下:对每个$Q\in\Quad_{A}\left(E\right),Q^{\prime}\in\Quad_{A}\left(E^{\prime}\right)$,有$\mathcal{W}\left(Q\right)\mathcal{W}\left(Q^{\prime}\right)\coloneq\mathcal{W}\left(Q\otimes_{A}Q^{\prime}\right)$,则$\mathcal{W}\left(A\right)$是交换环.
+\end{proposition}
+
+\begin{definition}{Witt环}{}
+	沿用命题\ref{prop:multiplicative-group-of-witt-ring}的记号.我们称$\mathcal{W}\left(A\right)$构成的交换环是$A$上的Witt环.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 对每个$a\in A^{\ast}$,记$Q_{a}\coloneq aQ_{1},T_{a}\coloneq\mathcal{W}\left(Q_{a}\right)$.
+		\begin{itemize}
+			\item 对每个$a\in A^{\ast}$和$T,T^{\prime}\in\mathcal{W}\left(A\right)$有$a\left(TT^{\prime}\right)=\left(aT\right)T^{\prime}=T\left(aT^{\prime}\right)$.
+			\item 对每个$T\in\mathcal{W}\left(A\right)$有$aT=T_{a}T$.
+		\end{itemize}
+		\item 设$T,T^{\prime}\in\mathcal{W}\left(A\right)$,其中$T=\sum\limits_{i=1}^{m}a_{i}T_{1},T^{\prime}=\sum\limits_{j=1}^{n}b_{j}T_{1},m,n\geq 1$,则$TT^{\prime}=\sum\limits_{\substack{1\leq i\leq m\\1\leq j\leq n}}a_{i}b_{j}T_{1}$.
+		\item 设$A$是极大有序域,二次模$\left(E,Q\right)$和$\left(E^{\prime},Q^{\prime}\right)$满足如下条件:
+		\begin{itemize}
+			\item $\dim E=s+t,\dim E=s^{\prime}+t^{\prime}$,$Q$和$Q^{\prime}$分别是$E$和$E^{\prime}$上的非退化$A$-二次型.
+			\item $Q$和$Q^{\prime}$的签名分别是$\left(s,t\right)$和$\left(s^{\prime},t^{\prime}\right)$.
+		\end{itemize}
+		那么,$Q\otimes_{A}Q^{\prime}$的签名是$\left(ss^{\prime}+tt^{\prime},st^{\prime}+ts^{\prime}\right)$.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

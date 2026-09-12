@@ -1,0 +1,58 @@
+\section{标量延拓}
+
+记号约定:$A,B,C$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right),\sigma\in\Hom_{\mathsf{Ring}}\left(B,C\right)$.
+
+\begin{proposition}{张量代数的标量限制的泛性质}{universal-property-of-scalar-restriction-of-tensor-algebra}
+	设$M$是$A$-模,$N$是$B$-模,$u\in\Hom_{A}\left(M,\rho_{\ast}\left(N\right)\right)$,则存在唯一的$u^{\prime}\in\Hom_{A-\mathsf{Alg}}\left(\mathsf{T}\left(A\right),\rho_{\ast}\left(\mathsf{T}\left(N\right)\right)\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			M & \rho_{\ast}\left(N\right) \\
+			{\mathsf{T}\left(M\right)} & {\rho_{\ast}\left(\mathsf{T}\left(N\right)\right)}
+			\arrow["u", from=1-1, to=1-2]
+			\arrow["{\phi_{M}}"', from=1-1, to=2-1]
+			\arrow["{\rho_{\ast}\left(\phi_{N}\right)}", from=1-2, to=2-2]
+			\arrow["{\exists!u^{\prime}}"', dashed, from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{}{}
+	沿用命题(\ref{prop:universal-property-of-scalar-restriction-of-tensor-algebra})的设定.记$u^{\prime}$为$\mathsf{T}_{A}\left(u\right)$.
+\end{definition}
+
+\begin{proposition}{张量代数的标量限制的函子性}{funcoriality-of-scalar-restriction-of-tensor-algebra}
+	设$M$是$A$-模,$N$是$B$-模,$P$是$C$-模,$u\in\Hom_{A}\left(M,\rho_{\ast}\left(N\right)\right),v\in\Hom_{A}\left(\rho_{\ast}\left(B\right),\sigma_{\ast}\left(\rho_{\ast}\left(P\right)\right)\right)$,则如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			M & {\rho_{\ast}\left(N\right)} & {\sigma_{\ast}\left(\rho_{\ast}\left(P\right)\right)} \\
+			{\mathsf{T}\left(M\right)} & {\rho_{\ast}\left(\mathsf{T}\left(P\right)\right)} & {\sigma_{\ast}\left(\rho_{\ast}\left(\mathsf{T}\left(N\right)\right)\right)}
+			\arrow["u"', from=1-1, to=1-2]
+			\arrow["{\mathsf{T}_{A}\left(v\circ u\right)}", curve={height=-24pt}, from=1-1, to=1-3]
+			\arrow["{\phi_{M}}"', from=1-1, to=2-1]
+			\arrow["v"', from=1-2, to=1-3]
+			\arrow["{\rho_{\ast}\left(\phi_{N}\right)}", from=1-2, to=2-2]
+			\arrow["{\sigma_{\ast}\left(\rho_{\ast}\left(\phi_{P}\right)\right)}", from=1-3, to=2-3]
+			\arrow["{\mathsf{T}_{A}\left(u\right)}", from=2-1, to=2-2]
+			\arrow["{\mathsf{T}_{A}\left(v\right)\circ\mathsf{T}_{A}(u)}"', curve={height=24pt}, from=2-1, to=2-3]
+			\arrow["{\mathsf{T}_{A}\left(v\right)}", from=2-2, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{张量代数和标量延拓的交换性}{}
+	设$M$是$A$-模,则$\rho^{\ast}\left(\phi_{M}\right)$诱导出典范的$\N$型分次$B$-代数同构$\psi:\mathsf{T}\left(\rho^{\ast}\left(M\right)\right)\to\rho^{\ast}\left(\mathsf{T}\left(M\right)\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

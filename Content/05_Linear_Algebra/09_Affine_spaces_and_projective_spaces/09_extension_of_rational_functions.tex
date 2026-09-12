@@ -1,0 +1,81 @@
+\section{有理函数的延拓}
+
+记号约定:$K$是除环.
+
+\begin{definition}{射影线}{}
+	设$\phi:K\hookrightarrow\mathbb{P}^{1}\left(K\right)$是典范嵌入,则$\mathbb{P}^{1}\left(K\right)\setminus\im\left(\phi\right)$是单点集,该元素的齐次坐标为$\left(0,1\right)$.称该点为无穷远点,记作$\infty$.
+\end{definition}
+
+\begin{definition}{射影除环}{}
+	我们称$\tilde{K}\coloneq K\cup\left\{\infty\right\}=\mathbb{P}^{1}\left(K\right)$为与$K$关联的射影除环.
+\end{definition}
+
+本节接下来的内容默认$K$是域.
+
+\begin{definition}{有理函数的齐次化}{}
+	设$f\in K\left(X\right)\setminus\left\{0\right\}$,则存在$\alpha\in K^{\times}$和互素的首一多项式$p,q$使得$f=\alpha\dfrac{p}{q}$.设$m=\deg p,n=\deg q,r=\max\left\{m,n\right\}$.定义
+	\begin{align*}
+		p_{1}\left(T,X\right)\coloneq T^{r}p\left(\dfrac{X}{T}\right),q_{1}\left(T,X\right)\coloneq T^{r}q\left(\dfrac{X}{T}\right).
+	\end{align*}
+\end{definition}
+
+\begin{theorem}{有理函数的典范延拓}{}
+	设$f\in K\left(X\right)\setminus\left\{0\right\}$,则$K^{2}\to K^{2},\left(\eta,\xi\right)\mapsto\left(q_{1}\left(\eta,\xi\right),\alpha p_{1}\left(\eta,\xi\right)\right)$诱导了典范映射$\tilde{f}:\tilde{K}\to\tilde{K},x\mapsto
+	\begin{cases}
+		f\left(x\right),&x\in K,\\
+		\infty,&x=\infty.
+	\end{cases}$
+\end{theorem}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$f=\dfrac{1}{X}$,则$\tilde{f}\left(0\right)=\infty,\tilde{f}\left(\infty\right)=0$.
+		\item 设$f=\dfrac{aX+b}{cX+d}$,其中$ad-bc\neq 0$,则$\tilde{f}\left(-\dfrac{d}{c}\right)=0,\tilde{f}\left(\infty\right)=\dfrac{a}{c},\tilde{f}\left(\infty\right)=
+		\begin{cases}
+			\infty,&c\neq 0,\\
+			0,&c=0.
+		\end{cases}$.
+		\item 设$f=a_{0}X^{n}+\ldots+a_{n}$且$\deg f>0$,则$\tilde{f}\left(\infty\right)=\infty$.
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+\section{补子模}
+
+记号约定:$E,F,G$是$A$-模,$M,M_{1},M_{2}$是$E$的子模.
+
+\begin{definition}{互补的子模}{}
+	若$M=N_{1}\oplus N_{2}$,则称$N_{1}$和$N_{2}$互补.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$E=M\oplus N,p:E\twoheadrightarrow E/N$是典范满射,则$p|_{M}$是同构.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$N^{\prime}$是$E$的子模,$E=M\oplus N=M\oplus N^{\prime}$,则有典范同构$N\simeq N^{\prime}$.
+\end{corollary}
+
+\begin{definition}{直因子}{}
+	若$E$有一个子模$N$满足$E=M\oplus N$,则称$M$是$E$的直因子.
+\end{definition}
+
+\begin{remark}{}{}
+	一个子模不一定有另一个与之互补的子模.当一个子模是直因子时,一般来说与其互补的子模不唯一的,但是这些互补的子模是互相同构的.
+\end{remark}
+
+\begin{proposition}{}{}
+	$N$是$M$的直因子$\iff$存在$M$上的投影$e$使$\im\left(e\right)=N$ $\iff$存在$M$上的投影$e$使$\ker\left(P\right)=N$.
+\end{proposition}
+
+\begin{proposition}{短正合列分裂的等价条件}{equivalent-condition-of-spilt-ses}
+	设$0\xlongrightarrow{}E\xlongrightarrow{f}F\xlongrightarrow{g}G\xlongrightarrow{}0$正合.下列陈述等价:
+	\begin{enumerate}
+		\item $f$有一个是$A$-线性映射的左逆$r$.
+		\item $g$有一个是$A$-线性映射的右逆$s$.
+		\item $\im\left(f\right)$是$F$的直因子.
+	\end{enumerate}
+	上述陈述之一为真时,$f+s:E\boxplus G\to F$是同构.
+\end{proposition}
+
+\begin{remark}{}{}
+	在上述定理中,给定$r$(相对地,$s$)$\iff$给出$\im\left(f\right)$在$F$中的补$\ker\left(r\right)$(相对地,$\im\left(s\right)$).
+\end{remark}
+
+\begin{definition}{分裂短正合列}{}
+	设$0\xlongrightarrow{}E\xlongrightarrow{f}F\xlongrightarrow{g}G\xlongrightarrow{}0$正合.命题(\ref{prop:equivalent-condition-of-spilt-ses})的陈述之一成立时,称该短正合列分裂.
+\end{definition}
+
+\begin{corollary}{}{}
+	设$u\in\Hom_{A}\left(E,F\right)$.下列陈述等价:
+	\begin{enumerate}
+		\item $u$有一个是$A$-线性映射的右逆$v$.
+		\item $u$是满射且$\ker\left(u\right)$是$E$的直因子.
+	\end{enumerate}
+	两条件之一成立时,$\im\left(v\right)$和$\ker\left(u\right)$互补.此时称$u$是右可逆$A$-线性映射.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$u\in\Hom_{A}\left(E,F\right)$.下列陈述等价:
+	\begin{enumerate}
+		\item $u$有一个是$A$-线性映射的左逆$v$.
+		\item $u$是单射且$\im\left(u\right)$是$F$的直因子.
+	\end{enumerate}
+	两条件之一成立时,$\ker\left(v\right)$和$\im\left(u\right)$互补.此时称$u$是左可逆$A$-线性映射.
+\end{corollary}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$E=M\oplus N$.记$p:E\twoheadrightarrow M$和$q:E\twoheadrightarrow N$是典范投影,则有典范$A$-模同构
+		\begin{align*}
+			\Hom_{A}\left(M,F\right)\boxplus\Hom_{A}\left(N,F\right)\to\Hom_{A}\left(E,F\right),\left(u,v\right)\mapsto u\circ p+v\circ q.
+		\end{align*}
+		在此同构下,$\Hom_{A}\left(M,F\right)$的像是$\left\{w\in\Hom_{A}\left(E,F\right)\middle|N\subseteq\ker\left(w\right)\right\}$.
+		\item 设$P,Q$是$E$的子模.若$M=\left(M\cap N\right)\oplus P,N=\left(M\cap N\right)\oplus Q$,则$M+N=\left(M\cap N\right)\oplus P\oplus Q$.
+	\end{enumerate}
+\end{remark}
+

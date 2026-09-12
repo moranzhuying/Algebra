@@ -1,0 +1,22 @@
+\section{正交群中的对称}
+
+记号约定:$A$是域,$E$为$A$-向量空间,$Q\in\Quad_{A}\left(E\right)$非退化,$\varphi=\varphi_{Q}$.没有说明时,默认$\Char\left(A\right)\neq 2$.
+
+\begin{lemma}{关于超平面的正交反射的显式公式}{}
+	设$H$是$E$的非迷向超平面,$a\in E\setminus\left\{0\right\}$且与$H$正交,则对每个$x\in E$有
+	\begin{align*}
+		s_{H}\left(x\right)=x-2\varphi\left(x,a\right)\left(\varphi\left(a,a\right)\right)^{-1}a=x-\varphi\left(x,a\right)\left(Q\left(a\right)\right)^{-1},
+	\end{align*}
+\end{lemma}
+
+\begin{definition}{关于向量的正交反射}{}
+	设$H$是$E$的非迷向超平面,$a\in E\setminus\left\{0\right\}$且与$H$正交.我们称$\tau_{a}\coloneq s_{H}$是$E$上关于向量$a$的正交反射.
+\end{definition}
+
+\begin{remark}{关于向量的正交反射(特征为$2$的情形)}{}
+	设$\Char\left(A\right)=2$.我们称$\tau_{a}:E\to E,x-2\varphi\left(x,a\right)\left(\varphi\left(a,a\right)\right)^{-1}a$是$E$上关于$a$的正交反射.可以验证,确实有$\tau_{a}\in\mathrm{O}\left(Q\right)$.
+\end{remark}
+
+\begin{theorem}{正交群的反射生成定理}{}
+	设$E$是$n$维向量空间(其中$n\in\N$),则$\mathrm{O}\left(Q\right)$由$\left\{\tau_{a}\in\mathrm{O}\left(Q\right)\middle|Q\left(a\right)\neq 0\right\}$生成.
+\end{theorem}

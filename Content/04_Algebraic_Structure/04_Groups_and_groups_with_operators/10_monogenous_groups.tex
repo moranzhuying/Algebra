@@ -1,0 +1,144 @@
+\section{循环群}
+
+记号说明:
+\begin{itemize}
+	\item 本节中提到的一般的群一概采用乘法记号,其幺元记作$e$.
+	\item 对群$G$的元素$x$,以$\langle x\rangle$表示$x$生成的子群.
+\end{itemize}
+
+\begin{definition}{模$p$同余}{}
+	设$p\in\Z$.定义$\Z$上的模$p$同余关系$\sim_{p}$为关于$p\Z$的左陪集关系.对$x,y\in\Z$,若$x\sim_{p}y$,则记作
+	\begin{align*}
+		x\equiv y\pmod{a}\quad \text{或}\quad x\equiv y\pmod{p\Z}.
+	\end{align*}
+\end{definition}
+
+\begin{definition}{模$p$整数群}{}
+	对$a\in\Z_{>0}$,称商群$\Z/p\Z$为模$p$整数加法群.
+\end{definition}
+
+\begin{proposition}{模$p$的完全剩余系}{}
+	设$p\in\Z_{>0}$,则$\left\{0,\ldots,p-1\right\}$是$\Z$关于$\sim_{p}$的一个完全剩余系.
+\end{proposition}
+
+\begin{corollary}{$\Z/p\Z$的阶是$p$}{}
+	设$p\in\Z_{>0}$,则$\left|\Z/p\Z\right|=p$.
+\end{corollary}
+
+\begin{proposition}{$\Z$的子群结构}{}
+	对整数加法群$\Z$的每个子群$H$,存在唯一的$a\in\Z_{\geq 0}$使得$H=a\Z$.
+\end{proposition}
+
+\begin{definition}{单源群,循环群}{}
+	如果群$G$可以由$a\in G$生成,则称$G$为单源群.进一步,若$G$是有限群,则称$G$为循环群.
+\end{definition}
+
+\begin{proposition}{单源群的性质}{}
+	\begin{enumerate}
+		\item 每个单源群都是Abel群.
+		\item 设$G$是单源群,$H$是其正规子群,$a$是$G$的生成元,$\pi:G\twoheadrightarrow G/H$是典范满射,则$G/H$是$\pi\left(a\right)$生成的单源群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{$\Z$是单源群,$\Z/p\Z$是循环群}{}
+	$\Z$是单源群,它可以由$\left\{1\right\}$或$\left\{-1\right\}$生成.对任意$p\in\Z_{>0}$,$\Z/p\Z$是循环群.
+\end{example}
+
+\begin{proposition}{单源群的分类}{}
+	设$G$是单源群.
+	\begin{enumerate}
+		\item 若$G$是有限群,$\left|G\right|=p>0$,则$G$同构于整数模$a$加法群$\Z/p\Z$.
+		\item 若$G$是无限群,则$G$同构于整数加法群$\Z$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{循环群的子群结构}{}
+	设$p\in\Z_{>0}$.
+	\begin{enumerate}
+		\item 若$H$是$G$的子群,$\left|H\right|=a\in\Z_{\geq 0},b=\left(G:H\right)\in\Z_{>0}$,则$p=ab$,$H=b\Z/p\Z$且同构于$\Z/b\Z$.
+		\item 若$a,b\in\Z_{>0}$且$p=ab$,则$p\Z\subseteq b\Z$,$b\Z/p\Z$是$\Z/p\Z$的子群,$\left|b\Z/p\Z\right|=a$,$\left(b\Z/p\Z:\Z/a\Z\right)=b$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{单源群的子群依旧单源}{}
+	每个单源群的子群都是单源群.
+\end{corollary}
+
+\begin{definition}{素数}{}
+	设$p\in\Z_{>0}$.若$p\neq 1$,除了$p$以外没有的$>1$的因子,则称$p$为素数.所有素数组成的集合记为$\mathbb{P}$.
+\end{definition}
+
+\begin{proposition}{素数$\leftrightsquigarrow$ $\Z/p\Z$的单性}{}
+	设$p\in\Z_{>0}$,则$p\in\mathbb{P}$ $\iff$ $\Z/p\Z$是单群.
+\end{proposition}
+
+\begin{proposition}{交换单群的阶数是素数}{}
+	对每个交换单群$G$都有$\left|G\right|\in\mathbb{P}$.
+\end{proposition}
+
+\begin{remark}{素数阶有限群是循环群}{}
+	若$G$是有限群且$\left|G\right|\in\mathbb{P}$,那么$G$一定是循环群,因为$G$可以由$G$中每一个不是恒等元的元素生成.
+\end{remark}
+
+\begin{lemma}{循环群的合成列与整数分解}{}
+	设$p\in\Z_{>0}$,则我们有如下的双射:
+	\begin{gather*}
+	% 第一行：集合的双射关系（居中）
+	\left\{\left(H_{i}\right)_{i=0}^{n}\in\left(\mathcal{P}\left(\Z/p\Z\right)\right)^{n}\middle|\left(H_{i}\right)_{i=0}^{n}\text{是}\Z/p\Z\text{的合成列}\right\} 
+	\xleftrightarrow{\quad 1:1 \quad} 
+	\left\{\left(s_{i}\right)_{i=1}^{n}\in\N_{>1}^{n}\middle|s_{1}\ldots s_{n}=a\right\} \\[2em]
+	% 第二行：从左到右映射（居中）
+	\left(H_{i}\right)_{i=0}^{n} \quad \longmapsto \quad \left(\left|H_{i}/H_{i-1}\right|\right)_{i=1}^{n}\\[1.5em]
+	% 第三行：从右到左映射（居中，箭头向左）
+	\left(\left(s_{1}\ldots s_{i}\right)\Z/a\Z\right)_{i=0}^{n} \quad \longmapsfrom \quad \left(s_{i}\right)_{i=1}^{n}
+	\end{gather*}
+	进一步,合成列$\left(H_{i}\right)_{i=0}^{n}$是Jordan-H\"older列$\iff$ $\left(\left|H_{i}/H_{i-1}\right|\right)_{i=1}^{n}$是一族素数.
+\end{lemma}
+
+\begin{theorem}{算术基本定理}{}
+	对任一$a\in\Z_{>0}$,$\Z_{>0}$中存在唯一的有限支撑族$\left(v_{p}\left(a\right)\right)_{p\in\mathbb{P}}$使得$a=\prod\limits_{p\in\mathbb{P}}p^{v_{p}\left(a\right)}$.
+\end{theorem}
+
+\begin{corollary}{$p$进赋值的性质}{}
+	设$a,b\in\Z_{>0}$,则
+	\begin{enumerate}
+		\item $v_{p}\left(ab\right)=v_{p}\left(a\right)+v_{p}\left(b\right)$.
+		\item $b\in a\Z\iff \forall p\in\mathbb{P}\left(v_{p}\left(a\right)\leq v_{p}\left(b\right)\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}{元素的阶}{}
+	设$G$是群,$x\in G$.定义$x$的阶$\ord\left(x\right)\coloneq
+	\begin{cases}
+		\min\left\{d\in\Z_{>0}\middle|x^{d}=e\right\},&\left|\langle x\rangle\right|=d\in\Z,\\
+		\infty,&\text{otherwise}.
+	\end{cases}$
+	
+	当$\ord\left(x\right)=d$时,称$x$是$d$阶元素,否则称$d$是无限阶元素.
+\end{definition}
+
+\begin{proposition}{Lagrange定理的推论}{}
+	若$G$是有限群,则$\forall x\in G\left(\ord\left(x\right)\mid\left|G\right|\right)$.
+\end{proposition}
+
+\begin{proposition}{有限群的幂等性质}{}
+	设$G$是$n$阶有限群($n\in\Z_{>0}$),则$\forall x\in G\left(x^{n}=e\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

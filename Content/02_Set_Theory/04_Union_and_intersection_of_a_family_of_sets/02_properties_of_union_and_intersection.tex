@@ -1,0 +1,29 @@
+\section{交与并的性质}
+
+\begin{proposition}{集合族的交和并的单调性}{}
+	设$\left(X_{i}\right)_{i\in I},\left(Y_{i}\right)_{i\in I}$是集合族.若$\forall i\in I\left(X_{i}\subseteq Y_{i}\right)$,则
+	\begin{enumerate}
+		\item $\bigcup\limits_{i\in I}X_{i}\subseteq\bigcup\limits_{i\in I}Y_{i}$.
+		\item 若$I\neq\emptyset$,则$\bigcap\limits_{i\in I}X_{i}\subseteq\bigcap\limits_{i\in I}Y_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{集合族的交和并的单调性}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合族.若$J\subseteq I$,则
+	\begin{enumerate}
+		\item $\bigcup\limits_{i\in I}X_{i}\supseteq\bigcup\limits_{i\in J}X_{i}$.
+		\item 若$J\neq\emptyset$,则$\bigcap\limits_{i\in I}X_{i}\subseteq\bigcap\limits_{i\in J}X_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{集合族的交和并的结合性}{}
+	设$\left(X_{i}\right)_{i\in I},\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是集合族,$I=\bigcup\limits_{\lambda\in\Lambda}J_{\lambda}$,则
+	\begin{enumerate}
+		\item $\bigcup\limits_{i\in I}X_{i}=\bigcup\limits_{\lambda\in\Lambda}\bigcup\limits_{i\in J_{\lambda}}X_{i}$.
+		\item 若$\Lambda\neq\emptyset$,并且$\forall\lambda\in\Lambda\left(J_{\lambda}\neq\emptyset\right)$,则$\bigcap\limits_{i\in I}X_{i}=\bigcap\limits_{\lambda\in\Lambda}\bigcap\limits_{i\in J_{\lambda}}X_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{子集族的交和并的结合性}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合$E$的子集族,$\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是集合族,$I=\bigcup\limits_{\lambda\in\Lambda}J_{\lambda}$,则$\bigcup\limits_{i\in I}X_{i}=\bigcup\limits_{\lambda\in\Lambda}\bigcup\limits_{i\in J_{\lambda}}X_{i},\bigcap\limits_{i\in I}X_{i}=\bigcap\limits_{\lambda\in\Lambda}\bigcap\limits_{i\in J_{\lambda}}X_{i}$.
+\end{corollary}

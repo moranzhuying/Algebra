@@ -1,0 +1,45 @@
+\section{有限生成Abel群}
+
+记号约定:$G$是Abel群.
+
+\begin{theorem}{有限生成Abel群的结构定理}{}
+	设$G$有限生成,则存在$p\in\N,q\in\N_{>0}$,$\N_{>0}$中的序列$\left(n_{i}\right)_{i=1}^{q}$,循环群族$\left(G_{i}\right)_{i=1}^{q}$,有限秩Abel群$H$满足下列条件:
+	\begin{enumerate}
+		\item $G=\tor\left(G\right)\oplus H$,并且$\rank H=p$.
+		\item $F$同构于$\bigboxplus\limits_{i=1}^{q}G_{i}$,其中对每个$1\leq i\leq q$有$\left|G_{i}\right|=n_{i}$.
+		\item 对每个$1\leq i\leq q-1$有$n_{i}\mid n_{i+1}$.
+		\item $p,q,\left(n_{i}\right)_{i=1}^{q}$由群$G$唯一确定.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	考虑$G\coloneq\Z/p\Z\boxplus\Z/p\Z$,其中$p\in\mathbb{P}$,那么$G$是$2$维$\F_{p}$-向量空间.因此,$G$能被分解为$2$个$1$维子空间的直和,而这种分解的方式共有$p(p+1)$种.由此可见,这里的循环子群并不是唯一的.
+\end{remark}
+
+\begin{corollary}{}{}
+	设$G$有限,则存在$a\in G$,使得$\ord\left(a\right)$是$\left(\ord\left(x\right)\right)_{x\in G}$的最小公倍数,并且$\ord\left(a\right)$是$G$的不变因子的第一项.
+\end{corollary}
+
+\begin{corollary}{无平方因子阶的有限Abel群一定循环}{}
+	设$G$有限.若$G$是无平方因子的,则$G$是循环群.
+\end{corollary}
+
+\begin{corollary}{自由$\Z$-模之间线性映射的余核及其表示矩阵的行列式的关系}{}
+	设$M,N$是$n$维自由$\Z$-模,各自的基是$\left(e_{i}\right)_{i=1}^{n},\left(\check{e}_{i}\right)_{i=1}^{n}$,$u\in\Hom_{\Z}\left(M,N\right)$,$\boldsymbol{X}$是$u$在这两个基下的表示矩阵.
+	\begin{enumerate}
+		\item $\coker\left(u\right)$是有限群$\iff$ $\det\left(\boldsymbol{X}\right)\neq 0$.
+		\item 若$\coker\left(u\right)$是有限群,则$\left|\coker\left(u\right)\right|=\left|\det\left(\boldsymbol{X}\right)\right|$.
+	\end{enumerate}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+

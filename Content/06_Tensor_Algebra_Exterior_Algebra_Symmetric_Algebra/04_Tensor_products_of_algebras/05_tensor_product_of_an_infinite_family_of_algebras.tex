@@ -1,0 +1,95 @@
+\section{无限个代数的张量积}
+
+\begin{definition}{$A$-代数族的张量积}{}
+	设$\left(E_{i}\right)_{i\in I}$是$A$-代数族,对每个$i\in I$,$e_{i}$是$E_{i}$的单位元.
+	\begin{itemize}
+		\item 对每个$J\in\fin\left(I\right)$,记$E_{J}=\bigotimes\limits_{i\in J}E_{i}$,$e_{J}=\bigotimes\limits_{i\in J}e_{i}$.
+		\item 对每个$J\in\fin\left(I\right)$和$i\in I$,记$f_{J,i}:E_{i}\to E_{J}$是典范$A$-代数同态.
+		\item 对每个$J,J^{\prime}\in\fin\left(I\right)$且$J\subseteq J^{\prime}$,记$f_{J^{\prime}J}:E_{J}\to E_{J^{\prime}}$为典范映射.
+	\end{itemize}
+	显然$\left(\left(E_{J}\right)_{J\in\fin\left(I\right)},\left(f_{J^{\prime}J}\right)_{J,J^{\prime}\in\mathcal{P}\left(I\right)}\right)$是$A$-代数的正系统,称$\varinjlim E_{J}$是$\left(E_{i}\right)_{i\in I}$的张量积.
+	
+	对每个$J\in\fin\left(I\right)$,记$f_{J}:E_{J}\to\varinjlim E_{J}$是典范映射.特别地,当$J=\left\{j\right\}$时把$f_{J}$记作$f_{j}$.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$I$是有限集,那么$\varinjlim E_{J}=\bigotimes\limits_{i\in I}E_{i}$.我们滥用记号,即便$I$是无限集,也把$\varinjlim E_{J}$记作$\bigotimes\limits_{i\in I}E_{i}$.
+		\item 当$\left(E_{i}\right)_{i\in I}$是一族交换代数时,$\bigotimes\limits_{i\in I}E_{i}$也是交换代数.
+	\end{enumerate}
+\end{remark}
+
+\begin{corollary}{张量积同态的唯一性}{uniqueness-of-tensor-product-of-family-algebra-homomorphism}
+	设$\left(E_{i}\right)_{i\in I},\left(F_{i}\right)_{i\in I}$是$A$-代数族,$\bigotimes\limits_{i\in I}E_{i},\bigotimes\limits_{i\in I}F_{i}$各自的典范映射族是$\left(f_{i}\right)_{i\in I},\left(g_{i}\right)_{i\in I}$,$\forall i\in I\left(u_{i}\in\Hom_{A-\mathsf{Alg}}\left(E_{i},F_{i}\right)\right)$,则
+	\begin{align*}
+		\exists!u\in\Hom_{A-\mathsf{Alg}}\left(\bigotimes\limits_{i\in I}E_{i},\bigotimes\limits_{i\in I}F_{i}\right)\forall i\in I\left(u\circ f_{i}=g_{i}\circ u_{i}\right)
+	\end{align*}
+\end{corollary}
+
+\begin{definition}{映射族的张量积}{}
+	沿用推论(\ref{cor:uniqueness-of-tensor-product-of-family-algebra-homomorphism})的设定,把$u$记作$\bigotimes\limits_{i\in I}u_{i}$,称之为$\left(u_{i}\right)_{i\in I}$的张量积.
+\end{definition}
+
+\begin{remark}{}{}
+	设$\left(x_{i}\right)_{i\in I}\in\prod\limits_{i\in I}E_{i}$,$\supp\left(\left(x_{i}-e_{i}\right)_{i\in I}\right)$有限,则
+	\begin{align*}
+		\forall J,J^{\prime}\in\fin\left(I\right)\left(\supp\left(\left(x_{i}-e_{i}\right)_{i\in I}\right)\subseteq J\wedge\supp\left(\left(x_{i}-e_{i}\right)_{i\in I}\right)\subseteq J^{\prime}\implies f_{J}\left(\left(x_{i}\right)_{i\in I}\right)=f_{J^{\prime}}\left(\left(x_{i}\right)_{i\in I}\right)\right).
+	\end{align*}
+\end{remark}
+
+\begin{definition}{}{}
+	设$\left(x_{i}\right)_{i\in I}\in\prod\limits_{i\in I}E_{i}$,$\supp\left(\left(x_{i}-e_{i}\right)_{i\in I}\right)$有限,$\supp\left(\left(x_{i}-e_{i}\right)_{i\in I}\right)\subseteq J\in\fin\left(I\right)$.记$f_{J}\left(\left(x_{i}\right)_{i\in I}\right)$为$\bigotimes\limits_{i\in I}E_{i}$.
+\end{definition}
+
+\begin{proposition}{代数的张量积的基}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族$A$-代数,对每个$i\in I$,$e_{i}$是$E_{i}$的单位元,$B_{i}$是$E_{i}$的包含$e_{i}$的基集,则
+	\begin{align*}
+		B\coloneq\left\{\bigotimes\limits_{i\in I}x_{i}\middle|\left(x_{i}\right)_{i\in I}\in\prod\limits_{i\in I}B_{i},\left(x_{i}-e_{i}\right)_{i\in I}\text{有限支撑}\right\}
+	\end{align*}
+	是$\bigotimes\limits_{i\in I}E_{i}$的包含单位元$\left(e_{i}\right)_{i\in I}$的基集.
+\end{proposition}
+
+\begin{remark}{}{}
+	我们称$B$是$\left(B_{i}\right)_{i\in I}$的张量积.上述命题的条件成立时,$\left(f_{J}\right)_{J\in\mathcal{P}\left(I\right)}$是一族单射.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

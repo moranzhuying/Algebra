@@ -1,0 +1,85 @@
+\section{张量代数上的模和多重模}
+
+记号约定:$A$是环.本节中,除非另有说明,所说的模都是左模,多重模都是左多重模.
+
+\begin{definition}{$E$-模}{}
+	设$E$是$A$-代数.把$E$视为环,把定义在$E$上的左(右)模称为左(右)$E$-模.
+\end{definition}
+
+\begin{remark}{}{}
+	设$M$是$E$-模.考虑环同态$\eta:A\to E$,那么$M$上可以定义一个$A$-模结构,称为该$E$-模结构的底$A$-模结构.由于
+	\begin{align*}
+		\forall\alpha\in A\forall s\in E\forall x\in M\left(\alpha\left(sx\right)=s\left(\alpha x\right)=\left(\alpha s\right)x\right),
+	\end{align*}
+	因此,对每个$s\in E$,$M$上的位似$h_{s}:M\to M,s\mapsto sx$是其底$A$-模结构的自同态.反之,在$M$上给定一个$E$-模结构,等价于在$M$上给定一个$A$-模结构,并且给定$A$-代数同态$E\to\End_{A}\left(M\right),s\mapsto h_{s}$.
+\end{remark}
+
+\begin{definition}{左双模}{}
+	设$E,F$是$A$-代数,$M$是配备$E$-模结构和$F$-模结构的集合.如果
+	\begin{enumerate}
+		\item $M$是$\left(E,F^{\op}\right)$-双模,
+		\item $M$的$E$-模结构和$F$-模结构各自诱导的底$A$-模结构相同,
+	\end{enumerate}
+	则称$M$是$\left(E,F\right)$-左双模.
+\end{definition}
+
+\begin{remark}{}{}
+	记$E,F$各自的单位元为$e,e^{\prime}$,那么``$M$的$E$-模结构和$F$-模结构各自诱导的底$A$-模结构相同''等价于
+	\begin{align*}
+		\forall\alpha\in A\forall x\in M\left(\left(\alpha e\right)x=\left(\alpha e^{\prime}\right)x\right).
+	\end{align*}
+	对每个$\alpha\in A$和$x\in M$,记$\left(\alpha e\right)x$为$\alpha x$.
+\end{remark}
+
+\begin{remark}{}{}
+	在$M$上给定一个$\left(E,F\right)$-左双模结构,等价于给定$E$上的$A$-模结构和两个$A$-代数同态
+	\begin{gather*}
+		E\to\End_{A}\left(M\right),s\mapsto h_{s}^{\prime},\\
+		F\to\End_{A}\left(M\right),t\mapsto h_{t}^{\prime\prime},
+	\end{gather*}
+	对每个$s\in E$和$t\in F$有$h_{s}^{\prime}h_{t}^{\prime\prime}=h_{t}^{\prime\prime}h_{s}^{\prime}$.这自然地诱导了典范$A$-代数同态
+	\begin{align*}
+		E\otimes_{A}F\to\End_{A}\left(M\right),u\mapsto h_{u},
+	\end{align*}
+	对每个$s\in E$和$t\in F$有$h_{s\otimes t}=h_{s}^{\prime}h_{t}^{\prime\prime}$.换言之,这在$M$上确定了一个$E\otimes_{A}F$-模结构(称为与给定的左双模结构相伴随的张量积模结构),满足$\forall s\in E\forall t\in F\forall x\in M\left(\left(s\otimes t\right)\cdot x=s\left(tx\right)=t\left(sx\right)\right)$.由此,$\left(E,F\right)$-左双模和$E\otimes_{A}F$-模一一对应:
+	\begin{itemize}
+		\item 给定$\left(E,F\right)$-左双模$M$,通过典范同态$E\to E\otimes_{A}F$和$F\to E\otimes_{A}F$的标量限制可确定$E\otimes_{A}F$-模$M$.通过典范同态确定$E\otimes_{A}F$-模$M$,必然能得到$\left(E,F\right)$-左双模$M$.
+		\item 类似的论断对于子模,子$\left(E,F\right)$-左双模,商模,模的乘积,直和,正向极限和逆向极限都有效.
+	\end{itemize}
+		此外,左$\left(E,F\right)$-双模$M$到$M^{\prime}$的同态恰好就是相应的$E\otimes_{A}F$-模同态.对于右$\left(E,F\right)$-双模,我们同样有类似的结论,只需要考虑$\left(E,F^{\op}\right)$双模.
+\end{remark}
+
+\begin{example}{代数上的左双模结构}{}
+	设$B$是$A$-代数.把环$B$视为$\left(B,B\right)$-双模,则$B$是$\left(B,B^{\op}\right)$-左双模,从而也是典范的$B\otimes_{A}B^{\op}$-模.
+\end{example}
+
+\begin{example}{模的张量积上的左双模结构}{}
+	设$E,F$是$A$-代数,各自的单位元是$e,e^{\prime}$,$M$是$E$-模,$N$是$F$-模,则$M\otimes_{A}N$是$\left(E,F\right)$-左双模,进而是$E\otimes_{A}F$-模.
+	\begin{itemize}
+		\item 取$M=E_{s}$,则通过典范同态$v:F\to E\otimes_{A}F$进行标量扩张的$M\otimes_{A}N$等同于$E\otimes_{A}F$-模$\left(E\otimes_{A}F\right)\otimes_{F}N$.
+		\item 取$M=E_{s}$,令$P$为右$E\otimes_{A}F$-模,则有典范$\Z$-模同构$P\otimes_{E\otimes_{A}F}\left(E_{s}\otimes_{A}N\right)\simeq P\otimes_{F}N$.
+	\end{itemize}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

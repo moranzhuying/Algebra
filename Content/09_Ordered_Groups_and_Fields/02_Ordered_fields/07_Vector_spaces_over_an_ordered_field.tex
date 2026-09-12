@@ -1,0 +1,78 @@
+\section{有序域上的向量空间}
+
+记号约定:$\left(K,+,\cdot,\leq\right)$是有序域,$E$是$K$-向量空间.
+
+\begin{definition}{仿射向量空间中的直线}{}
+	考虑$E\setminus\left\{0\right\}$上的等价关系$R\left\{x,y\right\}$:$\exists\lambda\in K_{>0}\left(y=\lambda x\right)$.
+	\begin{enumerate}
+		\item 对每个$x\in E\setminus\left\{0\right\}$,称$\left[x\right]_{R}$是$E$中以$0$为原点的开射线.
+		\item 设$\Delta$是$E$中以$0$为原点的开射线.我们称$\Delta\cup\left\{0_{E}\right\}$是$E$中以$0$为起点的闭射线.
+		\item 设$\Delta_{0}$是$E$中以$0$为原点的开射线(或闭射线),$a\in E$.若$a\in\Delta_{0}\setminus\left\{0_{E}\right\}$,则称$a$是$\Delta_{0}$的方向向量.
+		\item 设$\Delta_{0}$是$E$中穿过原点$0$的直线,那么它包含两条$E$中以$0$为原点的开射线(或闭射线).如果这两条直线中的一者记作$\Delta$,另一者记作$-\Delta$,则称$-\Delta$是$\Delta$的反向射线.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	如果$\Delta_{0}$是$E$中以$0$为原点的开射线(相对的,闭射线),$a\in E$,则$\Delta=K_{>0}a$(相对的,$\Delta=K_{\geq 0}a$).
+\end{remark}
+
+\begin{definition}{有序域上的仿射空间中的开(闭)射线}{}
+	设$F$是$K$-仿射空间,其平移空间为$E$,$a\in F$,而$\Delta_{0}$是$E$中的开射线(或闭射线).
+	\begin{enumerate}
+		\item 我们称$a+\Delta_{0}$是$F$中以$a$为起点的开射线(相对的,闭射线).
+		\item $a+\Delta_{0}$仅依赖$\Delta_{0}$.我们称$\Delta$是$a+\Delta_{0}$的方向,称$\Delta_{0}$的方向向量为$\Delta$的方向向量.
+	\end{enumerate}
+\end{definition}
+
+接下来的内容中,默认$\dim_{K}E=n$.
+
+\begin{definition}{有序域上向量空间的定向,正$n$-向量,负$n$-向量}{}
+	$\bigwedge\limits^{n}\left(E\right)$包含两条以$0$为起点且方向相反的闭射线,分别将二者记作$\Delta$和$-\Delta$.
+	\begin{enumerate}
+		\item $\Delta$和$-\Delta$称为$E$的定向.
+		\item $\Delta$和$-\Delta$的任意一者称为正定向,另一者称为负定向.
+		\item 为$E$选定好正定向和负定向以后,称$E$是有向向量空间.
+		\item 设我们以$\Delta$为$E$的正定向,$z\in\bigwedge\limits^{n}\left(E\right)$.若$z\in\Delta$,则称$z$是正$n$-向量;若$z\in -\Delta$,则称$z$是负$n$-向量.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{有序仿射空间的定向}{}
+	设$F$是$K$-仿射空间,其平移空间为$E$.我们称$E$的定向是$F$的定向,指定好定向以后的仿射空间$F$称为有向$K$-仿射空间.
+\end{definition}
+
+\begin{definition}{正向基,负向基}{}
+	设$\left(e_{i}\right)_{i=1}^{n}$是$E$的基,$\Delta$是$E$的正定向.
+	\begin{enumerate}
+		\item 若$e_{1}\wedge\ldots\wedge e_{n}\in\Delta$,则称$\left(e_{i}\right)_{i=1}^{n}$是$E$的正向基(或定向基).
+		\item 若$e_{1}\wedge\ldots\wedge e_{n}\in -\Delta$,则称$\left(e_{i}\right)_{i=1}^{n}$是$E$的负向基(或反向基).
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{保向自同构}{}
+	设$u\in\GL\left(E\right)$.若$\det\left(u\right)\in K_{>0}$,则称$u$是保向自同构.
+\end{definition}
+
+\begin{proposition}{保向自同构群的性质}{property-of-orientation-preserving-automorphism-group}
+	记$\GL^{+}\left(E\right)=\left\{f\in\GL\left(V\right)\middle|\det\left(u\right)\in K_{>0}\right\}$,则$\GL^{+}\left(E\right)\unlhd\GL\left(E\right)$,并且$E\neq\left\{0\right\}$时$[\GL^{+}\left(E\right):\GL\left(E\right)]=2$.
+\end{proposition}
+
+\begin{definition}{保向自同构群}{}
+	沿用命题(\ref{prop:property-of-orientation-preserving-automorphism-group})的记号.我们称$\GL^{+}\left(E\right)$是$E$上的保向自同构群.
+\end{definition}
+
+\begin{proposition}{子空间诱导的积定向}{product-quotient-orientation}
+	设$M,N$是$E$的互补子空间,各自的维数分别是$p$和$n-p$,各自的正定向分别是$\Delta_{1}^{+}$和$\Delta_{2}^{+}$.定义
+	\begin{align*}
+		\Delta_{M\times N}^{+}=\left\{z_{1}\wedge z_{2}\in\bigwedge\limits^{p}\left(E\right)\middle|z_{1}\in\Delta_{1}^{+},z_{2}\in\Delta_{2}^{+}\right\},
+	\end{align*}
+	则$\Delta_{M\times N}^{+}$是$E$的定向,并且当$p\left(n-p\right)$为奇数时依赖其中元素的顺序.这个定向叫做$\Delta_{1}^{+}$和$\Delta_{2}^{+}$的积定向.
+\end{proposition}
+
+\begin{proposition}{子空间诱导的补定向}{}
+	设$M,N$是$E$的互补子空间,各自的维数分别是$p$和$n-p$,各自的正定向分别是$\Delta$和$\Delta_{0}$.
+	\begin{enumerate}
+		\item $N$上存在唯一的定向$\Delta_{0}^{\prime}$,使得$\Delta$是$\Delta_{0}$和$\Delta_{0}^{\prime}$的积定向.这个定向称为$\Delta$相对$\Delta_{0}$的补定向.
+		\item 若$N^{\prime}$是$M$的另一个补空间,其正定向为$\Delta_{1}$,$\pi:N\to N^{\prime}$是典范的模同构,则$\pi\left(\Delta_{1}\right)=\Delta_{0}$.
+		\item 设$\pi^{\prime}:N\to E/M$是典范同构,$\Delta_{2}=\pi\left(\Delta_{0}\right)$,则$\Delta_{2}$不依赖$\Delta_{0}$,称$\Delta_{2}$是$\Delta$和$\Delta_{1}$诱导的商定向.
+	\end{enumerate}
+\end{proposition}

@@ -1,0 +1,27 @@
+\section{集合的包含}
+
+\begin{definition}{包含}{}
+	$x$和$y$出现的公式$\forall z\left(\left(z\in x\right)\implies\left(z\in y\right)\right)$简写为如下一种表达:$x\subseteq y$,$y\supseteq x$,``$x$包含于$y$'',``$y$包含$x$'',``$x$是$y$的子集''.
+	
+	$\neg\left(x\subseteq y\right)$简写为$x\nsubseteq y$或$y\nsupseteq x$.
+\end{definition}
+
+\begin{metatheorem}{代入}{}
+	设$T,U,V$是表达式,$x$是字母,则$\left(V|x\right)\left(T\subseteq U\right)$和$\left(V|x\right)T\subseteq\left(V|x\right)U$相同.
+\end{metatheorem}
+
+\begin{metatheorem}{从包含构造公式}{}
+	若$T$和$U$是项,则$T\subseteq U$是公式.
+\end{metatheorem}
+
+\begin{definition}{包含公式}{}
+	每一个形如$T\subseteq U$(其中$T$和$U$是公式)的表达式称为一个包含关系.
+\end{definition}
+
+\begin{proposition}{包含关系的自反性}{}
+	$x\subseteq x$.
+\end{proposition}
+
+\begin{proposition}{包含关系的传递性}{}
+	$\left(x\subseteq y\wedge y\subseteq z\right)\implies x\subseteq z$.
+\end{proposition}

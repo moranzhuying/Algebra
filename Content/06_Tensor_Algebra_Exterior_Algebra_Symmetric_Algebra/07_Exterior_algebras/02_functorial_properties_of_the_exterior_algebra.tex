@@ -1,0 +1,83 @@
+\section{外代数的函子性}
+
+记号约定:$A$是交换环.
+
+\begin{proposition}{外代数的自然性}{naturality-of-exterior-algebra}
+	设$M,N$是$A$-模,$u\in\Hom_{A}\left(M,N\right)$,则存在唯一的$u^{\prime}\in\Hom_{A-\mathsf{Alg}}\left(\bigwedge\left(M\right),\bigwedge\left(N\right)\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			M & N \\
+			{\bigwedge\left(M\right)} & {\bigwedge\left(N\right)}
+			\arrow["u", from=1-1, to=1-2]
+			\arrow["{\phi_{M}^{\prime\prime}}"', from=1-1, to=2-1]
+			\arrow["{\phi_{N}^{\prime\prime}}", from=1-2, to=2-2]
+			\arrow["{\exists!u^{\prime\prime}}"', dashed, from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{映射的典范扩张}{}
+	沿用命题(\ref{prop:naturality-of-exterior-algebra})的设定.我们把$u^{\prime\prime}$记作$\bigwedge\left(u\right)$,称之为$u$到$\bigwedge\left(M\right)$的典范扩张.
+\end{definition}
+
+\begin{proposition}{外代数的函子性}{}
+	设$M,N$是$A$-模,$u\in\Hom_{A}\left(M,N\right),v\in\Hom_{A}\left(N,P\right)$,则下列图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			M & N & P \\
+			{\bigwedge\left(M\right)} & {\bigwedge\left(N\right)} & {\bigwedge\left(P\right)}
+			\arrow["u", from=1-1, to=1-2]
+			\arrow["{\bigwedge(v\circ u)}", curve={height=-18pt}, from=1-1, to=1-3]
+			\arrow["{\phi_{M}^{\prime}}"', from=1-1, to=2-1]
+			\arrow["v", from=1-2, to=1-3]
+			\arrow["{\phi_{N}^{\prime\prime}}", from=1-2, to=2-2]
+			\arrow["{\phi_{P}^{\prime\prime}}", from=1-3, to=2-3]
+			\arrow["{\bigwedge\left(u\right)}"', from=2-1, to=2-2]
+			\arrow["{\bigwedge\left(v\right)\circ\bigwedge\left(u\right)}"', curve={height=24pt}, from=2-1, to=2-3]
+			\arrow["{\bigwedge\left(v\right)}"', from=2-2, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{remark}{}{}
+	设$n\in\N$.记$\bigwedge\limits^{n}\left(u\right):\bigwedge\limits^{n}\left(M\right)\to\bigwedge\limits^{n}\left(N\right),x\mapsto\bigwedge\left(u\right)\left(x\right)$,那么对$M$中的任一有限序列$\left(x_{i}\right)_{i=1}^{n}$有
+	\begin{align*}
+		\bigwedge\limits^{n}\left(u\right)\left(x_{1}\wedge\ldots\wedge x_{n}\right)=u\left(x_{1}\right)\wedge\ldots\wedge u\left(x_{n}\right).
+	\end{align*}
+	此外,$\bigwedge\limits^{0}\left(u\right)$等同于$\id_{A}$.
+\end{remark}
+
+\begin{proposition}{外代数上的典范扩张的性质}{}
+	设$M,N$是$A$-模,$u\in\Hom_{A}\left(M,N\right)$.若$u$是满射,则
+	\begin{enumerate}
+		\item $\bigwedge\left(u\right)$是满射.
+		\item $\ker\left(\bigwedge\left(u\right)\right)$是$\ker\left(u\right)$在$\bigwedge\left(M\right)$中生成的双边理想.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	如果$u$是单射,那么$\bigwedge\left(u\right)$一般不是单射.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$M$是$A$-模,$N,P$是$M$的子模,$N+P$是$M$的直因子,$N\cap P$是$N$和$P$各自的直因子.考虑典范单射
+	\begin{align*}
+		i:N\to M,j:P\to M,k:N\cap P\to M.
+	\end{align*}
+	\begin{enumerate}
+		\item $\bigwedge\left(i\right),\bigwedge\left(j\right),\bigwedge\left(k\right)$都是单射.
+		\item $\im\left(\bigwedge\left(k\right)\right)=\im\left(\bigwedge\left(i\right)\right)\cap\im\left(\bigwedge\left(j\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	如果$A$是域,那么``$N\cap P$是$N$和$P$各自的直因子''自动成立.
+\end{remark}
+
+\begin{corollary}{}{}
+	设$K$是域,$M$是$K$-向量空间,则对每个$z\in\bigwedge\left(M\right)$,$M$都有一个最小的有限维子空间$N$满足$z\in\bigwedge\left(N\right)$.
+\end{corollary}
+
+\begin{definition}{与$z$关联的向量子空间}{}
+	设$K$是域,$M$是$K$-向量空间,$z\in\bigwedge\left(M\right)$.$M$的满足$z\in\bigwedge\left(N\right)$的最小有限维子空间$N$称为$M$中与$z$关联的向量子空间.
+\end{definition}

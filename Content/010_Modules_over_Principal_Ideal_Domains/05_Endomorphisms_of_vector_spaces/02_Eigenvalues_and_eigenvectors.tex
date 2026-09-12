@@ -1,0 +1,79 @@
+\section{特征值与特征向量}
+
+\begin{definition}{特征值,特征向量,特征子空间,几何重数}{}
+	设$\lambda\in K$.
+	\begin{enumerate}
+		\item 我们称$\Eig\left(V,\mathcal{T},\lambda\right)\coloneq\Eig_{K}\left(V,\mathcal{T},\lambda\right)\coloneq\ker\left(\lambda\id_{V}-\mathcal{T}\right)$是$V$的$\lambda$-特征子空间.
+		\item 若$\Eig_{K}\left(V,\mathcal{T},\lambda\right)\neq\left\{0\right\}$,则称$\lambda$是$\mathcal{T}$在$K$中的特征值,称$\Eig_{K}\left(V,\mathcal{T},\lambda\right)$的元素是$\mathcal{T}$的$\lambda$-特征向量.
+		\item 我们称$\am_{K}\left(\lambda\right)\coloneq\dim_{K}\Eig_{K}\left(V,\mathcal{T},\lambda\right)$为$\lambda$在$K$上的几何重数.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	显然$\Eig_{K}\left(V,\mathcal{T},\lambda\right)$是$V$的$\mathcal{T}$-不变子空间.
+\end{remark}
+
+\begin{proposition}{有限维向量空间中特征值=特征多项式的根}{}
+	设$\lambda\in K$,$V$是有限维$K$-向量空间,则$\lambda$是$\mathcal{T}$在$K$上的特征值$\iff$ $\lambda$是$\Char_{\mathcal{T}}$在$K$中的根.
+\end{proposition}
+
+\begin{definition}{扩域中的特征值}{}
+	设$L$是$K$的扩域,$\rho:K\to L$是环同态.
+	\begin{enumerate}
+		\item 我们称$\rho^{\ast}\left(\mathcal{T}\right)$的特征值是$\mathcal{T}$在$L$中的特征值.
+		\item 如果$L$有一个代数闭扩张$L_{0}$包含了$K[X]$中的多项式$\Char_{\mathcal{T}}$的所有根,则称$\mathcal{T}$的所有特征值都属于$L$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{矩阵的特征值和特征向量}{}
+	设$\boldsymbol{A}\in\mathbf{M}_{n}\left(K\right)$.记$\mathcal{L}_{\boldsymbol{A}}$是$\boldsymbol{A}$在$\mathbf{M}_{n,1}\left(A\right)$上诱导的左乘.
+	\begin{enumerate}
+		\item 我们称$\mathcal{L}_{\boldsymbol{A}}$的特征值是$\boldsymbol{A}$在$K$上的特征值.
+		\item 设$L$是$K$的扩域,$\rho:K\to L$是环同态.我们称$\rho^{\ast}\left(\mathcal{L}_{\boldsymbol{A}}\right)$的特征值是$\boldsymbol{A}$在$L$中的特征值.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	设$n\geq 1$,$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$是$V$的基,$\boldsymbol{X}=\left[\mathcal{T}\right]_{\mathcal{B}}^{\mathcal{B}}$,则
+	\begin{enumerate}
+		\item $\boldsymbol{X}$的特征多项式和$\mathcal{T}$的特征多项式相等.
+		\item $\left\{\lambda\in\Lambda\middle|\ker\left(\lambda\id_{V}-\mathcal{T}\right)\neq\left\{0\right\}\right\}=\left\{\mu\in K\middle|\ker\left(\mu\id_{\mathbf{M}_{n,1}\left(K\right)}-\mathcal{L}_{\boldsymbol{A}}\right)\neq\left\{\boldsymbol{O}_{n,1}\right\}\right\}$.
+		\item 对每个$\lambda\in K$有$\ker\left(\lambda\id_{\mathbf{M}_{n,1}\left(K\right)}-\mathcal{L}_{\boldsymbol{A}}\right)=\left\{\left[x\right]_{\mathcal{B}}\in\mathbf{M}_{n,1}\left(K\right)\middle|x\in\Eig_{K}\left(V,\lambda\right)\right\}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	记$\mathscr{E}=\left\{\lambda\in K\middle|\Eig_{K}\left(V,\mathcal{T},\lambda\right)\neq\left\{0\right\}\right\}$,则$V=\bigoplus\limits_{\lambda\in\mathscr{E}}\Eig_{K}\left(V,\mathcal{T},\lambda\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

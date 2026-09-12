@@ -1,0 +1,61 @@
+\section{向量空间的维数}
+
+记号约定:$K$是除环,$E$是左$K$-向量空间,$m,n\in\N$.
+
+\begin{theorem}{基的基数不变性}{}
+	$E$的任意两个基集都等势.
+\end{theorem}
+
+\begin{definition}{向量空间的维数,子空间的维数}{}
+	\begin{enumerate}
+		\item $E$的一个基作为集合的基数称为$E$的维数,记作$\dim_{A} E$(或$\left[E:K\right]$).
+		\item 对于$E$的子集$M$,称$M$生成的$K$-向量子空间的维数为$M$在$E$中的秩,记作$\rank M$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{有限维向量空间,无限维向量空间}{}
+	如果$E$的维数(作为基数)是有限的,则称$E$是有限维的,否则称$E$是无限维的.
+\end{definition}
+
+\begin{remark}{维数和长度的关系}{}
+	$E$是有限维的$\iff$ $E$是有限长度$K$-模,并且$\dim E=\ell_{K}\left(E\right)$.
+\end{remark}
+
+\begin{corollary}{子集的秩不会超过全空间的维数}{}
+	对$E$的每个子集$M$都有$\rank M\leq\dim E$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $E$是$n$维$K$-向量空间$\iff$ $E$同构于$K_{s}^{n}$.
+		\item $K$-向量空间$K_{s}^{m}$和$K_{s}^{n}$同构$\iff$ $m=n$.
+		\item 若$E$是$n$维$K$-向量空间,则$E$的每个生成集的基数都$\geq n$,并且$E$的每个基数为$n$的生成集都是$E$的基集.
+		\item 若$E$是$n$维$K$-向量空间,则$E$的每个自由子集的基数都$\leq n$,并且$E$的每个基数为$n$的自由子集都是$E$的基集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{模的直和的维数}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族$K$-向量空间,则$\dim_{K}\bigboxplus\limits_{i\in I}E_{i}=\sum\limits_{i\in I}\dim_{K}E_{i}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	存在这样的反例:一个模具有两个有限的基集,但是这两个基集的基数不相等.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$A$是环,$D$是除环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,D\right)$.若$M$是左$A$-模,则$M$的任意两个基集都等势.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$R$是非零交换环,$M$是自由左$A$-模,则$M$的任意两个基集都等势.
+\end{corollary}
+
+\begin{remark}{自由模的秩}{}
+	\begin{enumerate}
+		\item 如果$A$是环,$E$是自由模且$E$的任意两个基集都等势,则称$E$的一个基集的基数为$E$的维数(或秩),记作$\dim_{A}E$.
+		\item 设$A$是环,$K$是$A$的子除环,并且每个自由左$A$-模的任意两个基集都等势.设$\rho:K\hookrightarrow A$是典范嵌入,则$\rho_{\ast}\left(A_{s}\right)$是$K$-向量空间.对自由$A$-模$M$,$\rho_{\ast}\left(M\right)$是$K$-向量空间,并且$\dim_{K}\rho_{\ast}\left(M\right)=\dim_{K}\rho_{\ast}\left(M\right)\dim_{K}A_{s}$.
+		\item 在第八部分,我们会看到满足命题的结论但不满足其假设的例子.
+	\end{enumerate}
+\end{remark}
+
+

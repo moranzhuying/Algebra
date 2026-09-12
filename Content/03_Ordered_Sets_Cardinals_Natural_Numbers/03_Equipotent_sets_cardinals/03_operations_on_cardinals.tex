@@ -1,0 +1,57 @@
+\section{基数的运算}
+
+\begin{definition}{基数的乘积与和}{}
+	设$\left(\mathfrak{a}_{i}\right)_{i\in I}$是一族基数.我们称$\prod\limits_{i\in I}\mathfrak{a}_{i}$是$\left(\mathfrak{a}_{i}\right)_{i\in I}$的乘积,称$\sum\limits_{i\in I}\mathfrak{a}_{i}$为是$\left(\mathfrak{a}_{i}\right)_{i\in I}$的和.
+\end{definition}
+
+\begin{proposition}{集合运算与基数运算的关系}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族集合,则$\left|\prod\limits_{i\in I}E_{i}\right|=\left|\prod\limits_{i\in I}\left|E_{i}\right|\right|,\left|\coprod\limits_{i\in I}E_{i}\right|=\left|\sum\limits_{i\in I}\left|E_{i}\right|\right|$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族集合,则$\left|\bigcup\limits_{i\in I}E_{i}\right|\leq\sum\limits_{i\in I}\left|E_{i}\right|$.
+\end{corollary}
+
+\begin{proposition}{基数运算的交换律和结合律}{}
+	设$\left(\mathfrak{a}_{i}\right)_{i\in I}$是一族基数.
+	\begin{enumerate}
+		\item 若$K$是集合,$f\in\Isom_{\mathsf{Set}}\left(I,K\right)$,则$\sum\limits_{i\in I}\mathfrak{a}_{f\left(k\right)}=\sum\limits_{i\in I}\mathfrak{a}_{i},\prod\limits_{i\in I}\mathfrak{a}_{f\left(k\right)}=\prod\limits_{i\in I}\mathfrak{a}_{i}$.
+		\item 设$\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,则$\sum\limits_{i\in I}\mathfrak{a}_{i}=\sum\limits_{\lambda\in\Lambda}\sum\limits_{i\in J_{\lambda}}\mathfrak{a}_{i},\prod\limits_{i\in I}\mathfrak{a}_{i}=\prod\limits_{\lambda\in\Lambda}\prod\limits_{i\in J_{\lambda}}\mathfrak{a}_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{基数的分配律}{}
+	设$\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是集合族,$I=\prod\limits_{\lambda\in\Lambda}J_{\lambda}$,$\left(\left(\mathfrak{a}_{\lambda,i}\right)_{i\in J_{\lambda}}\right)_{i\in I}$是一族基数族,则$\prod\limits_{\lambda\in\Lambda}\sum\limits_{i\in J_{\lambda}}\mathfrak{a}_{\lambda,i}=\sum\limits_{f\in I}\prod\limits_{i\in I}\mathfrak{a}_{\lambda,f\left(i\right)}$.
+\end{proposition}
+
+\begin{definition}{有限个基数的和}{}
+	设$\mathfrak{a}_{1},\ldots,\mathfrak{a}_{n}$是基数.我们把这些基数的和记作$\mathfrak{a}_{1}+\ldots+\mathfrak{a}_{n}$,乘积记作$\mathfrak{a}_{1}\ldots\mathfrak{a}_{n}$.
+\end{definition}
+
+\begin{corollary}{}{}
+	对任意基数$\mathfrak{a},\mathfrak{b},\mathfrak{c}$,有
+	\begin{gather*}
+		\mathfrak{a}+\mathfrak{b}=\mathfrak{b}+\mathfrak{a},\mathfrak{a}\mathfrak{b}=\mathfrak{b}\mathfrak{a},\\
+		\mathfrak{a}+\left(\mathfrak{b}+\mathfrak{c}\right)=\left(\mathfrak{a}+\mathfrak{b}\right)+\mathfrak{c},\mathfrak{a}\left(\mathfrak{b}\mathfrak{c}\right)=\left(\mathfrak{a}\mathfrak{b}\right)\mathfrak{c},\\
+		\mathfrak{a}\left(\mathfrak{b}+\mathfrak{c}\right)=\mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}.
+	\end{gather*}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

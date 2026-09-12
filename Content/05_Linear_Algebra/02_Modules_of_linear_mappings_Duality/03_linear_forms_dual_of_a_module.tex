@@ -1,0 +1,39 @@
+\section{线性泛函,对偶模}
+
+记号约定:$A$是环.
+
+\begin{definition}{对偶模,典范配对}{}
+	\begin{enumerate}
+		\item 设$E$是左$A$-模.称右$A$-模$E^{\vee}\coloneq\Hom_{A}\left(E,A_{s}\right)$为$E$的$A$-(代数)对偶,称如下映射为$E$的典范配对:
+		\begin{align*}
+			\langle -,-\rangle:E\times E^{\vee}\to A,\left(x,f\right)\mapsto f\left(x\right).
+		\end{align*}
+		\item 设$E$是右$A$-模.称左$A$-模$E^{\vee}\coloneq\Hom_{A}\left(E,A_{d}\right)$为$E$的$A$-(代数)对偶,称如下映射为$E$的典范配对:
+		\begin{align*}
+			\langle -,-\rangle:E^{\vee}\times E\to A,\left(f,x\right)\mapsto f\left(x\right).
+		\end{align*}
+	\end{enumerate}
+	当$E$是左(相对地,右)$A$-模时,称$E^{\vee}$的元素为$E$上的线性泛函.
+\end{definition}
+
+\begin{remark}{代数对偶$\neq$拓扑对偶}{}
+	这里定义的对偶空间是代数意义上的对偶空间.讨论拓扑向量空间时,我们会额外定义依赖于拓扑的拓扑对偶空间,二者的性质是不相同的.
+\end{remark}
+
+\begin{proposition}{典范配对是$A$-双线性映射}{}
+	设$E$是左(相对的,右)$A$-模,则
+	\begin{enumerate}
+		\item 对任一$x\in E,\langle x,-\rangle$(相对的,$\langle -,x\rangle$)是$A$-线性映射;
+		\item 对任一$f\in E^{\vee},\langle -,f\rangle$(相对的,$\langle f,-\rangle$)是$A$-线性映射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$\left[a,b\right]$是$\R$的非退化区间,$\mathcal{C}=\mathcal{C}\left(\left[a,b\right],\R\right)$,则$\int:\mathcal{C}\to\R,f\mapsto\int_{a}^{b}f\left(t\right)\mathrm{d}t$是$\R$-线性泛函.
+		\item $A_{s}$典范同构于$A_{d}^{\vee}$,而$A_{d}$典范同构于$A_{s}^{\vee}$.
+	\end{enumerate}
+\end{example}
+
+
+

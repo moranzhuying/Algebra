@@ -1,0 +1,174 @@
+\section{自由交换群,自由交换幺半群}
+
+记号约定:$M$是幺半群,$G$是群(二者都采用乘法记号),$X$是集合,
+
+\begin{definition}{多重指标}{}
+	$\Hom_{\mathsf{Set}}\left(X,\Z\right)$的元素在逐点加法下构成Abel群.称其元素为多重指标.
+\end{definition}
+
+\begin{definition}{直和}{}
+	$\Z^{\left(X\right)}\coloneq\left\{\alpha\in\Hom_{\mathsf{Set}}\left(X,\Z\right)\middle|\supp\left(\alpha\right)\text{有限}\right\}$是$\Hom_{\mathsf{Set}}\left(X,\Z\right)$的子群,称为由$X$构造的自由Abel群.
+\end{definition}
+
+\begin{definition}{Kronecker记号}{}
+	对任一$x\in X$,定义Kronecker函数$\delta_{x}:X\to\Z,y\mapsto
+	\begin{cases}
+		1,&y=x,\\
+		0,&y\neq x.
+	\end{cases}$
+\end{definition}
+
+\begin{definition}{权函数}{}
+	称$\left|\cdot\right|:\Z^{\left(X\right)}\to\Z,\alpha\mapsto\sum\limits_{x\in X}\alpha\left(x\right)$为权函数,对诸$\alpha\in\Z^{\left(X\right)}$,称$\left|\alpha\right|$为$\alpha$的权.
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 对任一$\alpha\in\Z^{\left(X\right)}$,$\alpha=\sum\limits_{x\in X}\alpha\left(x\right)\delta_{x}$.
+		\item 对任一$x\in X$,$\left|\delta_{x}\right|=1$.
+		\item $\left|0\right|=0$.
+		\item 对任一$\alpha,\beta\in\Z^{\left(X\right)}$,$\left|\alpha+\beta\right|=\left|\alpha\right|+\left|\beta\right|$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$\Z^{\left(X\right)}$的逐点偏序}{}
+	定义$\leq$为$\Z^{\left(X\right)}$上的逐点偏序.可以验证$\forall\alpha,\alpha^{\prime},\beta,\beta^{\prime}\left(\alpha\leq\beta\wedge\alpha^{\prime}\leq\beta^{\prime}\implies\alpha+\beta\leq\alpha^{\prime}+\beta^{\prime}\wedge\left|\alpha\right|\leq\left|\beta\right|\right)$.
+\end{definition}
+
+\begin{definition}{自由交换幺半群}{}
+	定义$\N^{\left(X\right)}\coloneq\left\{\alpha\in\Z^{\left(X\right)}\middle|\alpha\geq 0\right\}$为$X$构造的自由交换幺半群.
+\end{definition}
+
+可以验证$\N^{\left(X\right)}\setminus\left\{0\right\}$中的极小元是$\left\{\delta_{x}\in\Z^{\left(X\right)}\middle|x\in X\right\}$.
+
+\begin{proposition}{自由交换群的泛性质}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,G\right)$,则存在唯一的$\phi\in\Hom_{\mathsf{Grp}}\left(\Z^{\left(X\right)},G\right)$使下图交换(其中,$\iota$是典范嵌入).
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[rr, "\iota", hook] \arrow[rd, "f"'] &   & \Z^{\left(X\right)} \arrow[ld, "\exists!\phi", dashed] \\
+			& G &                                                         
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{诱导映射$\Z^{\left(u\right)}$}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.定义$\Z^{\left(u\right)}\in\Hom_{\mathsf{Grp}}\left(\Z^{\left(X\right)},\Z^{\left(Y\right)}\right)$为使下图交换的映射.
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[rr, "\iota", hook] \arrow[d, "u"'] &  & \Z^{\left(X\right)} \arrow[d, "\exists!\Z^{\left(u\right)}", dashed] \\
+			Y \arrow[rr, "\iota^{\prime}"', hook]       &  & \Z^{\left(Y\right)}                                               
+		\end{tikzcd}
+	\end{center}
+\end{definition}
+
+\begin{proposition}{$\Z^{\left(-\right)}$的函子性}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right),v\in\Hom_{\mathsf{Set}}\left(Y,Z\right)$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			X & {\Z^{\left(X\right)}} \\
+			Y & {\Z^{\left(Y\right)}} \\
+			Z & {\Z^{\left(Z\right)}}
+			\arrow["\iota", hook, from=1-1, to=1-2]
+			\arrow["u", from=1-1, to=2-1]
+			\arrow["{v\circ u}"'{pos=0.5}, bend right=40, from=1-1, to=3-1]
+			\arrow["{\Z^{\left(u\right)}}"', from=1-2, to=2-2]
+			\arrow["{\Z^{\left(v\circ u\right)}}"{pos=0.5}, shift left=2pt, bend left=50, from=1-2, to=3-2]
+			\arrow["{\iota^{\prime}}", hook, from=2-1, to=2-2]
+			\arrow["v", from=2-1, to=3-1]
+			\arrow["{\Z{\left(v\right)}}"', from=2-2, to=3-2]
+			\arrow["{\iota^{\prime\prime}}", hook, from=3-1, to=3-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{$\Z^{\left(-\right)}$保持单性和满性}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.若$u$是单射(相对地,满射,双射),则$\Z^{\left(u\right)}$是单射(相对地,满射,双射).
+\end{proposition}
+
+\begin{proposition}{$\Z^{\left(u\right)}$的显式表达}{}
+	对$\alpha\in\Z^{\left(X\right)},\beta=\Z^{\left(\alpha\right)}$和$y\in Y$,有$\beta\left(y\right)=\sum\limits_{x\in u^{-1\left(\left\{y\right\}\right)}}\alpha\left(x\right)$.
+\end{proposition}
+
+\begin{proposition}{子群的嵌入}{}
+	设$S\subseteq X$,$i:S\hookrightarrow X$是典范嵌入,则下图交换.故$\Z\left(S\right)$在同构意义下是$\Z^{\left(X\right)}$中支撑包含于$S$的映射在$\Z^{\left(X\right)}$中生成的子群.
+	\begin{center}
+		\begin{tikzcd}
+			S & {\Z^{\left(X\right)}} \\
+			X & {\Z^{\left(Y\right)}}
+			\arrow["\iota", hook, from=1-1, to=1-2]
+			\arrow["i"', hook, from=1-1, to=2-1]
+			\arrow["{\Z^{\left(i\right)}}", hook', from=1-2, to=2-2]
+			\arrow["{\iota^{\prime}}", hook, from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{自由交换幺半群的泛性质}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(X,M\right)$,则存在唯一的$\phi\in\Hom_{\mathsf{Mon}}\left(\N^{\left(X\right)},M\right)$使下图交换(其中,$\iota$是典范嵌入).
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[rr, "\iota", hook] \arrow[rd, "f"'] &   & \N^{\left(X\right)} \arrow[ld, "\exists!\phi", dashed] \\
+			& M &                                                         
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{诱导映射$\N^{\left(u\right)}$}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.定义$\N^{\left(u\right)}\in\Hom_{\mathsf{Mon}}\left(\N^{\left(X\right)},\N^{\left(Y\right)}\right)$为使下图交换的映射.
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[rr, "\iota", hook] \arrow[d, "u"'] &  & \N^{\left(X\right)} \arrow[d, "\exists!\Z^{\left(u\right)}", dashed] \\
+			Y \arrow[rr, "\iota^{\prime}"', hook]       &  & \N^{\left(Y\right)}                                               
+		\end{tikzcd}
+	\end{center}
+\end{definition}
+
+\begin{proposition}{$\N^{\left(-\right)}$的函子性}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right),v\in\Hom_{\mathsf{Set}}\left(Y,Z\right)$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			X & {\N^{\left(X\right)}} \\
+			Y & {\N^{\left(Y\right)}} \\
+			Z & {\N^{\left(Z\right)}}
+			\arrow["\iota", hook, from=1-1, to=1-2]
+			\arrow["u", from=1-1, to=2-1]
+			\arrow["{v\circ u}"'{pos=0.5}, bend right=40, from=1-1, to=3-1]
+			\arrow["{\N^{\left(u\right)}}"', from=1-2, to=2-2]
+			\arrow["{\N^{\left(v\circ u\right)}}"{pos=0.5}, shift left=2pt, bend left=50, from=1-2, to=3-2]
+			\arrow["{\iota^{\prime}}", hook, from=2-1, to=2-2]
+			\arrow["v", from=2-1, to=3-1]
+			\arrow["{\N{\left(v\right)}}"', from=2-2, to=3-2]
+			\arrow["{\iota^{\prime\prime}}", hook, from=3-1, to=3-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{$\N^{\left(-\right)}$保持单性和满性}{}
+	设$u\in\Hom_{\mathsf{Set}}\left(X,Y\right)$.若$u$是单射(相对地,满射,双射),则$\N^{\left(u\right)}$是单射(相对地,满射,双射).
+\end{proposition}
+
+\begin{proposition}{子群的嵌入}{}
+	设$S\subseteq X$,$i:S\hookrightarrow X$是典范嵌入,则下图交换.因此在同构意义下$\N\left(S\right)=\Z^{\left(S\right)}\cap\N^{\left(X\right)}$
+	\begin{center}
+		\begin{tikzcd}
+			S & {\Z^{\left(X\right)}} \\
+			X & {\Z^{\left(Y\right)}}
+			\arrow["\iota", hook, from=1-1, to=1-2]
+			\arrow["i"', hook, from=1-1, to=2-1]
+			\arrow["{\Z^{\left(i\right)}}", hook', from=1-2, to=2-2]
+			\arrow["{\iota^{\prime}}", hook, from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+

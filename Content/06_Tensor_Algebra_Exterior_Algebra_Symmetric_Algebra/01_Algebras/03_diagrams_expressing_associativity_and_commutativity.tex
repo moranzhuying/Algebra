@@ -1,0 +1,158 @@
+\section{结合律和交换律的图表刻画}
+
+记号约定:$A$是交换环.
+
+\begin{proposition}{$A$-代数$E$ $\leftrightsquigarrow$ $\Hom_{A}\left(E\otimes_{A}E,E\right)$}{}
+	设$E$是$A$-模,则$E$是$A$-代数$\iff$存在$A$-线性映射$m:E\otimes_{A}E\to E$.
+\end{proposition}
+
+\begin{proposition}{代数同态的图表刻画}{}
+	设$A$-代数$E,E^{\prime}$各自诱导$m\in\Hom_{A}\left(E\otimes_{A}E,E\right)$和$m^{\prime}\in\Hom_{A}\left(E^{\prime}\otimes_{A}E^{\prime},E^{\prime}\right)$,$f\in\Hom_{\mathsf{Set}}\left(E,E^{\prime}\right)$.如下陈述等价:
+	\begin{enumerate}
+		\item $f\in\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)$.
+		\item $f\in\Hom_{A}\left(E,E^{\prime}\right)$且下图交换:
+		\begin{center}
+			\begin{tikzcd}
+				{E\otimes_{A}E} && {E^{\prime}\otimes_{A}E^{\prime}} \\
+				\\
+				E && {E^{\prime}}
+				\arrow["{f\otimes f}", from=1-1, to=1-3]
+				\arrow["m"', from=1-1, to=3-1]
+				\arrow["{m^{\prime}}", from=1-3, to=3-3]
+				\arrow["f", from=3-1, to=3-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{结合代数的图表刻画}{}
+	设$E$是$A$-代数,其乘法诱导映射$m\in\Hom_{A}\left(E\otimes_{A}E,E\right)$,则$E$是$A$-结合代数$\iff$如下图表交换:
+	\begin{center}
+		\begin{tikzcd}
+			{E\otimes_{A}E\otimes_{A}E} && {E\otimes_{A}E} \\
+			\\
+			{E\otimes_{A}E} && E
+			\arrow["{m\otimes\id_{E}}", from=1-1, to=1-3]
+			\arrow["m"', from=1-1, to=3-1]
+			\arrow["m", from=1-3, to=3-3]
+			\arrow["m", from=3-1, to=3-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{交换代数的图表刻画}{}
+	设$E$是$A$-代数,其乘法诱导映射$m\in\Hom_{A}\left(E\otimes_{A}E,E\right)$,则$E$是$A$-交换代数$\iff$如下图表交换:
+	\begin{center}
+		\begin{tikzcd}
+			{E\otimes_{A}E} && {E\otimes_{A}E} \\
+			& E
+			\arrow["\sigma", from=1-1, to=1-3]
+			\arrow["m"', from=1-1, to=2-2]
+			\arrow["m", from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+	其中,对任意$x,y\in E$有$\sigma\left(x\otimes y\right)=y\otimes x$.
+\end{proposition}
+
+\begin{proposition}{$A$-代数的单位元的图表刻画}{}
+	设$E$是$A$-代数,其乘法诱导映射$m\in\Hom_{A}\left(E\otimes_{A}E,E\right)$.对诸$c\in E$,$\eta_{c}\in\Hom_{A}\left(_{d}A_{s},E\right)$满足$\eta_{c}\left(1\right)=c$.设$c\in A$,则下列陈述等价:
+	\begin{enumerate}
+		\item $c$是$E$的单位元.
+		\item 如下图表交换(其中$\tau,\tau^{\prime}$是典范同构):
+		\begin{center}
+			\begin{tikzcd}
+				{A\otimes_{A}E} &&&& {A\otimes_{A}A} \\
+				&& A \\
+				{A\otimes_{A}A} &&&& {E\otimes_{A}A}
+				\arrow["{\id_{A}\otimes\eta_{c}}", from=1-1, to=1-5]
+				\arrow["\tau"', from=1-1, to=2-3]
+				\arrow["m", from=1-5, to=2-3]
+				\arrow["m", from=3-1, to=2-3]
+				\arrow["{\tau^{\prime}}"', from=3-5, to=2-3]
+				\arrow["{\eta_{c}\otimes\id_{A}}", from=3-5, to=3-1]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{结构映射及其性质}{}
+	设$E$是含幺$A$-代数,单位元是$e$.令$\eta:A\to E,a\mapsto ae$.
+	\begin{enumerate}
+		\item $\eta\in\Hom_{A-\mathsf{Alg}}\left(A,E\right)$.
+		\item 定义$A$在$E$上的左作用为$\left(a,x\right)\mapsto\eta\left(a\right)x$,则得到的$A$-模和$A$-模$E$相等.
+		\item $\im\left(\eta\right)$是$A$的子代数,并且$\im\left(\eta\right)\subseteq Z_{A}\left(E\right)$.
+		\item $\ker\left(\eta\right)=\Ann_{A}\left(e\right)=\Ann_{A}\left(E\right)$.
+		\item 若$A$还是结合代数,则$\eta\in\Hom_{\mathsf{Ring}}\left(A,E\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$B$是环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$且$\im\left(\rho\right)\subseteq Z\left(B\right)$.定义$A$在$B$上的左作用为$\left(a,b\right)\mapsto\rho\left(a\right)b$,则$B$是$A$-含幺结合代数.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

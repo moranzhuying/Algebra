@@ -1,0 +1,47 @@
+\section{极化恒等式}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$E$是左$A$-模,$G$是$\left(A,A\right)$-双模.
+	\item $\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $\varphi\in\Sesq_{A,(B,\rho)}\left(E,E;G\right),Q:E\to G,x\mapsto\varphi\left(x,x\right)$.
+\end{itemize}
+
+
+
+\begin{proposition}{极化的加法恒等式}{}
+	对每个$\left(x,y\right)\in E\times E$有
+	\begin{gather*}
+		Q\left(x+y\right)=Q\left(x\right)+Q\left(y\right)+\varphi\left(x,y\right)+\varphi\left(y,x\right),\\
+		Q\left(x-y\right)=Q\left(x\right)+Q\left(y\right)-\varphi\left(x,y\right)-\varphi\left(y,x\right).
+	\end{gather*}
+\end{proposition}
+
+\begin{proposition}{极化的对称恒等式}{}
+	对每个$\left(x,y\right)\in E\times E$有$2\left(\varphi\left(x,y\right)+\varphi\left(y,x\right)\right)=Q\left(x+y\right)-Q\left(x-y\right)$.
+\end{proposition}
+
+\begin{proposition}{极化的带标量的恒等式}{}
+	对每个$\left(x,y,a\right)\in E\times E\times A$有
+	\begin{gather*}
+		2\left(\varphi\left(x,y\right)\bar{a}+a\varphi\left(y,x\right)\right)=Q\left(x+ay\right)-Q\left(x-ay\right),\\
+		2\left(a\varphi\left(x,y\right)-\varphi\left(x,y\right)\bar{a}\right)=aQ\left(x+y\right)-aQ\left(x-y\right)-Q\left(x+ay\right)+Q\left(x-ay\right).
+	\end{gather*}
+\end{proposition}
+
+\begin{proposition}{经典的极化恒等式}{}
+	设$K$是交换环,$\mathrm{i}$是$X^{2}+1\in K[X]$的平方根,$A=K(\mathrm{i})$.如果$\rho$和$G$满足如下条件:
+	\begin{itemize}
+		\item 对每个$\left(a,b\right)\in A\times A$有$\rho\left(a+b\mathrm{i}\right)=a-b\mathrm{i}$,
+		\item 对每个$\left(a,g\right)\in A\times G$有$ag=ga$,
+	\end{itemize}
+	那么对每个$\left(x,y\right)\in E\times E$有$4\varphi\left(x,y\right)=\sum\limits_{k=1}^{4}\mathrm{i}^{k}Q\left(x+\mathrm{i}^{k}y\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+

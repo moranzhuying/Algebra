@@ -1,0 +1,49 @@
+\section{交换环上矩阵的张量积}
+
+记号约定:
+
+\begin{itemize}
+	\item $C$是交换环,$E,F,U,V$是$C$-模,$m,n,p,q\in\N$.
+	\item $\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I},\mathcal{C}\coloneq\left(f_{j}\right)_{j\in J},\mathcal{U}\coloneq\left(u_{r}\right)_{r\in R},\mathcal{V}\coloneq\left(v_{s}\right)_{s\in S}$分别是$E,F,U,V$的有限基.
+	\item $\mathcal{G}\coloneq\left(e_{i}\otimes f_{j}\right)_{i\in I,j\in J},\mathcal{W}\coloneq\left(u_{r}\otimes v_{s}\right)_{r\in R,s\in S}$分别是$E\otimes_{C}F,U\otimes_{C}V$的基.
+\end{itemize}
+
+\begin{definition}{矩阵的张量积(Kronecker积)}{}
+	设$f\in\Hom_{C}\left(E,U\right),g\in\Hom_{C}\left(F,V\right),\boldsymbol{A}\coloneq\left[f\right]_{\mathcal{E}}^{\mathcal{U}}=\left(a_{j,i}\right)_{j\in J,i\in I},\boldsymbol{B}\coloneq\left[g\right]_{\mathcal{F}}^{\mathcal{V}}=\left(b_{s,r}\right)_{s\in S,r\in R}$.我们称
+	\begin{align*}
+		\boldsymbol{A}\otimes\boldsymbol{B}\coloneq\left(a_{j,i}b_{s,r}\right)_{\left(j,i\right)\in J\times I,\left(s,r\right)\in S\times R}
+	\end{align*}
+	是$\boldsymbol{A}$和$\boldsymbol{B}$的张量积(或Kronecker积).
+\end{definition}
+
+\begin{remark}{张量积的分块矩阵表示}{}
+	$\boldsymbol{A}\otimes\boldsymbol{B}$一一对应于$\left(a_{r,i}\boldsymbol{B}\right)_{r\in R,i\in I}$和$\left(\boldsymbol{A}b_{s,j}\right)_{s\in S,j\in J}$.
+\end{remark}
+
+\begin{proposition}{线性映射的张量积的矩阵表示}{}
+	若$f\in\Hom_{C}\left(E,U\right),g\in\Hom_{C}\left(F,V\right)$,则$\left[f\otimes g\right]_{\mathcal{G}}^{\mathcal{W}}=\left[f\right]_{\mathcal{E}}^{\mathcal{U}}\otimes\left[g\right]_{\mathcal{F}}^{\mathcal{V}}$.
+\end{proposition}
+
+\begin{proposition}{矩阵张量积的运算性质}{}
+	设集合$K,L$有限.
+	\begin{enumerate}
+		\item 若$\boldsymbol{A}\in C^{R\times I},\boldsymbol{B}_{1},\boldsymbol{B}_{2}\in C^{S\times J}$,则$\boldsymbol{A}\otimes\left(\boldsymbol{B}_{1}+\boldsymbol{B}_{2}\right)=\boldsymbol{A}\otimes\boldsymbol{B}_{1}+\boldsymbol{A}\otimes\boldsymbol{B}_{2}$.
+		\item 若$\boldsymbol{A}_{1},\boldsymbol{A}_{2}\in C^{R\times I},\boldsymbol{B}\in C^{S\times J}$,则$\left(\boldsymbol{A}_{1}+\boldsymbol{A}_{2}\right)\otimes\boldsymbol{B}=\boldsymbol{A}_{1}\otimes\boldsymbol{B}+\boldsymbol{A}_{2}\otimes\boldsymbol{B}$.
+		\item 设$\boldsymbol{A}\in C^{R\times I},\boldsymbol{B}\in C^{S\times J},c\in C$,则$\left(c\boldsymbol{A}\right)\otimes\boldsymbol{B}=\boldsymbol{A}\otimes\left(c\boldsymbol{B}\right)=c\left(\boldsymbol{A}\otimes\boldsymbol{B}\right)$.
+		\item 若$\boldsymbol{A}_{1}\in C^{I\times J},\boldsymbol{A}_{2}\in C^{J\times R},\boldsymbol{B}_{1}\in C^{S\times K},\boldsymbol{C}_{2}\in C^{K\times L}$,则$\left(\boldsymbol{A}_{1}\otimes\boldsymbol{B}_{1}\right)\left(\boldsymbol{A}_{2}\otimes\boldsymbol{B}_{2}\right)=\left(\boldsymbol{A}_{1}\boldsymbol{A}_{2}\right)\otimes\left(\boldsymbol{B}_{1}\boldsymbol{B}_{2}\right)$.
+		\item 若$\boldsymbol{A}\in C^{I\times J},\boldsymbol{B}\in C^{R\times S}$,则$\left(\boldsymbol{A}\otimes\boldsymbol{B}\right)^{\top}=\boldsymbol{A}^{\top}\otimes\boldsymbol{B}^{\top}$.
+		\item 若$\boldsymbol{A}\in C^{I\times I},\boldsymbol{B}\in C^{J\times J}$都可逆,则$\boldsymbol{A}\otimes\boldsymbol{B}$可逆,并且$\left(\boldsymbol{A}\otimes\boldsymbol{B}\right)^{-1}=\boldsymbol{A}^{-1}\otimes\boldsymbol{B}^{-1}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{张量积和基变换}{}
+	若$\mathcal{B}^{\prime}\coloneq\left(e_{i}^{\prime}\right)_{i\in I},\mathcal{C}^{\prime}\coloneq\left(f_{j}^{\prime}\right)_{j\in J},\mathcal{F}^{\prime}\coloneq\left(e_{i}^{\prime}\otimes_{R}f_{j}^{\prime}\right)_{\left(i,j\right)\in I^{\prime}}$分别是$E,F$,$E\otimes_{C}F$的基,则$\left[\id_{E\otimes_{C}F}\right]_{\mathcal{F}}^{\mathcal{F}^{\prime}}=\left[\id_{E}\right]_{\mathcal{B}}^{\mathcal{B}^{\prime}}\otimes \left[\id_{f}\right]_{\mathcal{C}}^{\mathcal{C}^{\prime}}$.
+\end{proposition}
+
+\begin{corollary}{矩阵的张量积保持相抵}{}
+	设$\boldsymbol{A}_{1},\boldsymbol{A}_{2}\in\mathbf{M}_{m,p}\left(C\right),\boldsymbol{B}_{1},\boldsymbol{B}_{2}\in\mathbf{M}_{n,q}\left(C\right)$.若$\boldsymbol{A}_{1}\overset{\text{相抵}}{\sim}\boldsymbol{A}_{2},\boldsymbol{B}_{1}\overset{\text{相抵}}{\sim}\boldsymbol{B}_{2}$,则$\boldsymbol{A}_{1}\otimes\boldsymbol{A}_{2}\overset{\text{相抵}}{\sim}\boldsymbol{B}_{1}\otimes\boldsymbol{B}_{2}$.
+\end{corollary}
+
+\begin{corollary}{矩阵的张量积保持相似}{}
+	设$\boldsymbol{A}_{1},\boldsymbol{A}_{2}\in\mathbf{M}_{m}\left(C\right),\boldsymbol{B}_{1},\boldsymbol{B}_{2}\in\mathbf{M}_{n}\left(C\right)$.若$\boldsymbol{A}_{1}\overset{\text{相似}}{\sim}\boldsymbol{A}_{2},\boldsymbol{B}_{1}\overset{\text{相似}}{\sim}\boldsymbol{B}_{2}$,则$\boldsymbol{A}_{1}\otimes\boldsymbol{A}_{2}\overset{\text{相似}}{\sim}\boldsymbol{B}_{1}\otimes\boldsymbol{B}_{2}$.
+\end{corollary}

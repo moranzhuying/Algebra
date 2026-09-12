@@ -1,0 +1,63 @@
+\section{逆向极限非空的条件}
+
+\begin{proposition}{可数共尾的逆向系统的典范映射族由满射构成}{}
+	设上定向集$I$有一个至多可数的共尾子集,$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统.若$\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}$由满射构成,那么上述逆向系统的典范映射族由满射构成.
+\end{proposition}
+
+\begin{definition}{紧性类子集族}{}
+	设$\left(E_{\alpha}\right)_{\alpha\in I}$是集合族,对任意$\alpha\in I$有$\mathfrak{S}_{\alpha}\subseteq\mathcal{P}\left(E_{\alpha}\right)$,满足以下条件:
+	\begin{itemize}
+		\item 对任意$\mathfrak{S}\subseteq\mathfrak{S}_{\alpha}$有$\bigcap\limits_{S\in\mathfrak{S}}S\in\mathfrak{S}_{\alpha}$.
+		\item 对任意$\mathfrak{F}\subseteq\mathfrak{S}_{\alpha}$,若$\mathfrak{F}$中有限个子集的交集非空,则$\bigcap\limits_{M\in\mathfrak{F}}M$非空.
+	\end{itemize}
+	我们称$\left(\mathfrak{S}_{\alpha}\right)_{\alpha\in I}$是$\left(E_{\alpha}\right)_{\alpha\in I}$的紧性类子集族.
+\end{definition}
+
+\begin{theorem}{}{}
+	设$I$是上定向集,$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统,$\left(\mathfrak{S}_{\alpha}\right)_{\alpha\in I}$是$\left(E_{\alpha}\right)_{\alpha\in I}$的紧性类子集族.假设
+	\begin{enumerate}
+		\item $\forall\alpha,\beta\in I\forall x_{\alpha}\in E_{\alpha}\left(\alpha\leq\beta\implies f_{\alpha,\beta}^{-1}\left(\left\{x_{\beta}\right\}\right)\in\mathfrak{S}_{\beta}\right)$.
+		\item $\forall\alpha,\beta\in I\forall M_{\beta}\in E_{\beta}\left(\alpha\leq\beta\implies f_{\alpha,\beta}\left(M_{\beta}\right)\in\mathfrak{S}_{\alpha}\right)$.
+	\end{enumerate}
+	记$\left(f_{\alpha}\right)_{\alpha\in I}$是上述逆向系统的典范映射族.
+	\begin{enumerate}
+		\item 对任意$\alpha\in I$有$f_{\alpha}\left(E\right)=\bigcap\limits_{\substack{\beta\in I\\ \alpha\leq\beta}}f_{\alpha,\beta}\left(E_{\beta}\right)$.
+		\item 若对任意$\alpha\in I$有$E_{\alpha}\neq\emptyset$,则$\varprojlim E_{\alpha}\neq\emptyset$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	上述定理的条件(1)可以进一步弱化:$\forall\alpha\in I\forall M_{\alpha}\in\mathfrak{S}_{\alpha}\setminus\left\{\emptyset\right\}\exists x_{\alpha}\in M_{\alpha}\forall\beta\in I\left(\alpha\leq\beta\implies f_{\alpha,\beta}^{-1}\left(\left\{x_{\beta}\right\}\right)\in\mathfrak{S}_{\beta}\right)$.此外,在此条件下,如果$\bigcap\limits_{\substack{\beta\in I\\ \alpha\leq\beta}}f_{\alpha,\beta}\left(E_{\beta}\right)\neq\emptyset$,取$x_{\alpha}\in\bigcap\limits_{\substack{\beta\in I\\ \alpha\leq\beta}}f_{\alpha,\beta}\left(E_{\beta}\right)$使得$\forall\beta\in I\left(\alpha\leq\beta\implies f_{\alpha,\beta}^{-1}\left(\left\{x_{\alpha}\right\}\right)\in\mathfrak{S}_{\beta}\right)$,则
+	\begin{align*}
+		\exists y\in E\left(f_{\alpha}\left(y\right)=x_{\alpha}\right).
+	\end{align*}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

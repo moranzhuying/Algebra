@@ -1,0 +1,99 @@
+\section{分次子模}
+
+记号约定:$\Delta$是交换幺半群(加法记号),$A$是$\Delta$型分次环,$M$是$\Delta$型分次$A$-模,分次是$\left(M_{\lambda}\right)_{\lambda\in\Delta}$.
+
+\begin{proposition}{$\Delta$型分次子模的等价条件}{equivalent-condition-of-graded-submodules}
+	设$N$是$M$的子模.下列陈述等价:
+	\begin{enumerate}
+		\item $N=\sum\limits_{\lambda\in\Delta}\left(N\cap M_{\lambda}\right)$.
+		\item 每个$x\in N$在$M$中的所有齐次分量都属于$N$.
+		\item $N$有一个由齐次元组成的生成系.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{齐次关系式的消解}{}
+	设$\left(x_{i}\right)_{i\in I}$是$N$的一族非零的齐次元组成的生成系,每个$x_{i}$的次数是$\delta_{i}$,$\left(a_{i}\right)_{i\in I}$是$A$中的有限支撑族,则
+	\begin{align*}
+		\sum\limits_{i\in I}a_{i}x_{i}=0\iff\forall\lambda\in\Delta\left(\sum\limits_{i\in I,\mu+\delta\left(i\right)=\lambda}a_{i,\mu}x_{i}=0\right),
+	\end{align*}
+	其中$a_{i,\mu}$是$a_{i}$的$\mu$次齐次分量.当$\Delta$是群时,上式可写为
+	\begin{align*}
+		\sum\limits_{i\in I}a_{i}x_{i}=0\iff\forall\lambda\in\Delta\left(\sum\limits_{i\in I}a_{i,\lambda-\delta\left(i\right)}x_{i}=0\right).
+	\end{align*}
+\end{remark}
+
+\begin{definition}{$\Delta$型分次子模}{}
+	设$N$是$M$的子模.命题(\ref{prop:equivalent-condition-of-graded-submodules})的陈述之一为真时,称$\left(N\cap M_{\lambda}\right)_{\lambda\in\Delta}$是$M$在$N$上诱导的分次,配备该分次的$N$称为$M$的$\Delta$型分次子模.
+\end{definition}
+
+\begin{corollary}{生成元的齐次分解}{}
+	设$N$是$M$的$\Delta$型分次子模,$\left(x_{i}\right)_{i\in I}$是$N$的生成系,则$\left(x_{i}\right)_{i\in I}$的所有齐次分量构成的族是$N$作为分次子模的齐次生成元.
+\end{corollary}
+
+\begin{corollary}{有限生成的分次子模}{}
+	若$N$是$M$的分次子模,不考虑分次时是有限生成的,则$N$有一个由齐次元组成的有限生成系.
+\end{corollary}
+
+\begin{definition}{分次理想}{}
+	\begin{enumerate}
+		\item $A_{s}$(相对的,$A_{d}$)作为分次模的子模称为$A$的分次左(相对的,右)理想.
+		\item 同时是$A_{s}$和$A_{d}$作为分次模的子模的模称为$A$的分次双边理想.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	若$M$是$\Delta$型分次$A$-模,$N$是其$\Delta$型分次子模,则典范嵌入$\iota:N\hookrightarrow M$是$0$次分次$A$-模同态.
+\end{remark}
+
+\begin{definition}{分次子环}{}
+	设$B$是$A$的子环.把$A$视为$\Z$-模,若$B$是$A$的$\Delta$型分次子模,则称$B$是$A$的$\Delta$型分次子环.
+\end{definition}
+
+\begin{remark}{}{}
+	若$S$是$R$的$\Delta$型分次子环,则典范嵌入$\iota:N\hookrightarrow M$是分次环同态.
+\end{remark}
+
+\begin{definition}{商分次,分次商模}{}
+	设$N$是$M$的$\Delta$型分次子模.我们称$\left(\left(M_{\lambda}+N\right)/N\right)_{\lambda\in\Delta}$为$M$关于$N$的商分次,配备该分次的$M/N$为$\Delta$型分次商模.
+\end{definition}
+
+\begin{remark}{}{}
+	典范投影$M\twoheadrightarrow M/N$是$0$次分次$A$-模同态.
+\end{remark}
+
+\begin{definition}{分次商环}{}
+	设$\mathfrak{a}$是$A$的$\Delta$型分次双边理想.我们称$R/\mathfrak{a}$是$\Delta$型分次商环.
+\end{definition}
+
+\begin{proposition}{分次模同态的核与像}{}
+	设$\delta\in\Delta$,$N$是$\Delta$型分次$A$-模,$f:M\to N$是$\delta$次分次$A$-模同态.
+	\begin{enumerate}
+		\item $\im\left(f\right)$是$N$的$\Delta$型分次子模.
+		\item 若$\delta$可消去,则$\ker\left(f\right)$是$M$的$\Delta$型分次子模.
+		\item 若$\delta=0$,则有典范的$0$次分次$A$-模同构$M/\ker\left(f\right)\simeq\im\left(f\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{分次子模的交,和与零化子}{}
+	\begin{enumerate}
+		\item 若$\left(M_{i}\right)_{i\in I}$是$M$的一族$\Delta$型分次子模,则$\bigcap\limits_{i\in I}M_{i}$和$\sum\limits_{i\in I}M_{i}$都是$M$的$\Delta$型分次子模.
+		\item 若$\mu\in\Delta$可消去,$x\in M$是次数为$\mu$的齐次元,则$\Ann_{A}\left(x\right)$是$A$的$\Delta$型分次左理想.
+		\item 若$\Delta$的每个元素都可消去,$N$是$M$的$\Delta$型分次子模,则$\Ann_{A}\left(N\right)$是$A$的$\Delta$型分次双边理想.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{包络分次子模}{}
+	设$N$是$M$的子模.
+	\begin{enumerate}
+		\item $M$具有包含$E$的最大$\Delta$型分次子模,它是$N^{\prime}=\left\{x\in E\middle|x\text{的所有齐次分量都属于}E\right\}$.
+		\item $M$具有包含$E$的最小$\Delta$型分次子模,他由$E$的一个生成系的所有齐次分量生成.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{中心化子的分次性质}{}
+	若$\Delta$的诸元素都可消去,则$A$的每个齐次元$a$在$A$中的中心化子都是$A$的$\Delta$型分次子环.
+\end{proposition}
+
+\begin{corollary}{子环的中心化子的分次性质}{}
+	若$\Delta$的诸元素都可消去,则$A$的每个子环$B$在$A$中的中心化子都是$A$的$\Delta$型分次子环.特别地,$Z\left(A\right)$是$A$的$\Delta$型分次子环.
+\end{corollary}

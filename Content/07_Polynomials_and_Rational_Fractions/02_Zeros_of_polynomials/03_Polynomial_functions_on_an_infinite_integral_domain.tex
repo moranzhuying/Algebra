@@ -1,0 +1,44 @@
+\section{无限整环上的多项式函数}
+
+记号约定:$A$是整环.
+
+\begin{proposition}{非零多项式的非零点集的基数}{}
+	设$\left(H_{i}\right)_{i\in I}$是$A$的一族无限子集,$H=\prod\limits_{i\in I}$,$f\in A\left[\left(X_{i}\right)_{i\in I}\right]$非零.记$H_{f}=\left\{\mathbf{x}\in H^{I}\middle|f\left(\mathbf{x}\right)\neq 0\right\}$.
+	\begin{enumerate}
+		\item $\left|H\right|=\left|H_{f}\right|$.
+		\item 若$I\neq\emptyset$,则$H_{f}$是无限集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{多项式函数相等$\implies$多项式相等}{}
+	设$A$满足如下条件之一:$A$是无限集;存在无限域$K$使$A$是$K$-代数.对每个$f\in A\left[\left(X_{i}\right)_{i\in I}\right]$,记$\tilde{f}$是$f$诱导的多项式函数,则
+	\begin{align*}
+		A\left[\left(X_{i}\right)_{i\in I}\right]\to\Hom_{\mathsf{Set}}\left(A^{I},A\right),f\mapsto\tilde{f}
+	\end{align*}
+	是单射.
+\end{corollary}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 考虑到上述映射是单射,我们经常滥用术语,对每个$f\in A\left[\left(X_{i}\right)_{i\in I}\right]$,把$\tilde{f}$记作$f$.
+		\item 当$A$是有限集时,上述映射不是单射.考虑$f=\prod\limits_{\alpha\in A}\left(X-\alpha\right)$,显然$f\neq 0,\tilde{f}=0$.
+	\end{enumerate}
+\end{remark}
+
+\begin{theorem}{代数恒等式的延拓定理}{}
+	设$A$是无限集,$f,g_{1},\ldots,g_{n}\in A\left[\left(X_{i}\right)_{i\in I}\right]$.如果
+	\begin{enumerate}
+		\item $\forall 1\leq i\leq n\left(g_{i}\neq 0\right)$,
+		\item $\forall\mathbf{x}\in A^{I}\left(\forall 1\leq i\leq n\left(g_{i}\left(\mathbf{x}\right)\neq 0\right)\implies f\left(\mathbf{x}\right)=0\right)$,
+	\end{enumerate}
+	则$f=0$.
+\end{theorem}
+
+\begin{remark}{证明代数恒等式的方法}{}
+	代数恒等式的延拓定理为证明代数恒等式提供了一种非常便利的方法.
+	\begin{itemize}
+		\item 为了证明$f=0$,只需构造或找到一个以$A$为子环的无限整环$E$,证明对于所有的$\mathbf{x}\in E^{I}$(更一般地,在$E^I$中的一些让$g_{1},\ldots,g_{n}$不取零值的点上)均有 $f(\mathbf{x})=0$成立.如果$A$不是无限的,可让$E$为$\Frac\left(A\left[\left(X_{i}\right)_{i\in I}\right]\right)$或$\Frac\left(A\right)$.若已证得$f=0$,则对每个$A$-含幺交换结合代数$F$和$\mathbf{y}\in F^{I}$都有$f(\mathbf{y})=0$.
+		\item 特别地,设$A=\Z$.若对每个$\mathbf{x}\in\Z^{I}$有$f(\mathbf{x})=0$(可以有前置条件:对某些$k$有$g_{k}(\mathbf{x})\neq 0$),那就证明了$f=0$.由此可知,对每个交换环$B$和$\mathbf{x}\in B^{I}$都有$f(\mathbf{x})=0$.
+	\end{itemize}
+\end{remark}
+

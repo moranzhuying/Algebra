@@ -1,0 +1,20 @@
+\section{指数记号}
+
+记号约定:$M$是幺半群(乘法记号,幺元记作$1$),$X$是集合,$\mathbf{u}\coloneq\left(u_{x}\right)_{x\in X}$是$M$的一族两两可交换的元素.
+
+\begin{definition}{多重指标幂}{}
+	对任意$\alpha\in\N^{\left(X\right)}$,称$\mathbf{u}^{\alpha}\coloneq\prod\limits_{x\in X}u_{x}^{\alpha\left(x\right)}$为$\mathbf{u}$的$\alpha$次幂.
+\end{definition}
+
+\begin{proposition}{指数法则}{}
+	定义$f:\N^{\left(X\right)}\to M,\alpha\mapsto\mathbf{u}^{\alpha}$,则$f\in\Hom_{\mathsf{Mon}}\left(\N^{\left(X\right)},M\right)$,并且$\forall x\in X\left(f\left(\delta_{x}\right)=u_{x}\right)$.
+\end{proposition}
+
+\begin{proposition}{底数法则}{}
+	设$\mathbf{v}\coloneq\left(v_{x}\right)_{x\in X}$是$M$的元素族,$\bigcup\limits_{x\in X}\left\{u_{x},v_{x}\right\}$的元素可交换,则$\forall\alpha\in\N^{\left(X\right)}\left(\mathbf{u}^{\alpha}\mathbf{v}^{\alpha}=\left(\mathbf{u}\mathbf{v}\right)^{\alpha}\right)$.
+\end{proposition}
+
+\begin{example}{算术基本定理的代数刻画}{}
+	考虑$\Z_{>0}$构成的乘法幺半群,$u\in\Hom_{\mathsf{Mon}}\left(\N^{\left(\mathbb{P}\right)},\Z_{>0}\right)$,满足$\forall p\in\mathbb{P}\left(u\left(\delta_{p}\right)=p\right)$,则$\forall\alpha\in\N^{\left(\mathbb{P}\right)}\left(u\left(\alpha\right)=\prod\limits_{p\in\mathbb{P}}p^{\alpha\left(p\right)}\right)$.
+\end{example}
+

@@ -1,0 +1,71 @@
+\section{归纳原理}
+
+\begin{metatheorem}{数学归纳法原理}{}
+	设$R\left\{n\right\}$是理论$\mathfrak{T}$中的理论(其中$n$不是$\mathfrak{T}$的常元).若公式
+	\begin{align*}
+		R\left\{0\right\}\wedge\forall n\left(n\text{是自然数}\wedge R\left\{n\right\}\right)\implies R\left\{n+1\right\}
+	\end{align*}
+	是$\mathfrak{T}$的定理,则公式$\forall n\left(n\text{是自然数}\implies R\left\{n\right\}\right)$是$\mathfrak{T}$中的定理.
+\end{metatheorem}
+
+\begin{corollary}{强数学归纳法}{}
+	设$R\left\{n\right\}$是公式,把公式$\forall p\left(n\text{是自然数}\wedge p\text{是自然数}\wedge p<n\implies R\left\{p\right\}\right)$记作$S\left\{n\right\}$.若$S\left\{n\right\}\implies R\left\{n\right\}$,则
+	\begin{align*}
+		\forall n\left(n\text{是自然数}\implies R\left\{n\right\}\right)
+	\end{align*}
+	为真.
+\end{corollary}
+
+\begin{corollary}{从第$k$项开始的归纳法}{}
+	设$k$是自然数,$R\left\{n\right\}$为公式且$R\left\{k\right\}\wedge\forall n\left(n\text{是自然数}\wedge n\geq k\wedge R\left\{n\right\}\implies R\left\{n+1\right\}\right)$为真,则
+	\begin{align*}
+		\forall n\left(n\text{是自然数}\wedge n\geq k\implies R\left\{n\right\}\right)
+	\end{align*}
+	为真.
+\end{corollary}
+
+\begin{corollary}{限制在有限闭区间上的归纳法}{}
+	设$a,b$是自然数且$a\leq b$,$R\left\{n\right\}$是公式且$R\left\{a\right\}\wedge\forall n\left(n\text{是自然数}\wedge a\leq n<b\wedge R\left\{n\right\}\implies R\left\{n+1\right\}\right)$为真,则
+	\begin{align*}
+		\forall n\left(n\text{是自然数}\wedge a\leq n\leq b\implies R\left\{n\right\}\right)
+	\end{align*}
+	为真.
+\end{corollary}
+
+\begin{corollary}{递降归纳法}{}
+	设$a,b$是自然数且$a\leq b$,$R\left\{n\right\}$是公式且$R\left\{b\right\}\wedge\forall n\left(n\text{是自然数}\wedge a\leq n<b\wedge R\left\{n+1\right\}\implies R\left\{n\right\}\right)$为真,则
+	\begin{align*}
+		\forall n\left(n\text{是自然数}\wedge a\leq n\leq b\implies R\left\{n\right\}\right)
+	\end{align*}
+	为真.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

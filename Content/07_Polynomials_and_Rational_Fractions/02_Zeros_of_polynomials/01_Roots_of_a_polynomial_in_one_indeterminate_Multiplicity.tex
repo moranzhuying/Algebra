@@ -1,0 +1,132 @@
+\chapter{多项式的零点}
+
+\section{一元多项式的根·重数}
+
+\begin{definition}{多项式的零点}{}
+	设$g\in A\left[\left(X_{i}\right)_{i\in I}\right]$,$E$是$A$-含幺结合代数,$\mathbf{x}\in E^{I}$是$E$中一族两两可交换的元素.若$g\left(\mathbf{x}\right)=0$,则称$\mathbf{x}$为$g$在$E$中的零点.
+\end{definition}
+
+\begin{definition}{多项式的零点}{}
+	设$E$是$A$-含幺结合代数,$f\in A\left[X\right]$.我们称$f$在$E$中的零点为$f$在$E$中的根.
+\end{definition}
+
+\begin{proposition}{余数定理和因式定理}{}
+	设$f\in A\left[X\right],\alpha\in A$.
+	\begin{enumerate}
+		\item $f$被$X-\alpha$除的余式为$f\left(\alpha\right)$.
+		\item $\alpha$是$f$的根$\iff$ $X-\alpha$整除$f$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{重根的等价条件}{}
+	设$f\in A\left[X\right],\alpha\in A,h\in\N$.下列陈述等价:
+	\begin{enumerate}
+		\item $\left(X-\alpha\right)^{h}$整除$f$且$\left(X-\alpha\right)^{h+1}$不能整除$f$.
+		\item 存在$g\in A\left[X\right]$使得$f=\left(X-\alpha\right)^{h}g$且$g\left(\alpha\right)\neq 0$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{根的重数的唯一性}{}
+	设$f\in A\left[X\right]$非零,$\alpha\in A$,则存在唯一的$h\in\N$使得$\left(X-\alpha\right)^{h}$整除$f$且$\left(X-\alpha\right)^{h+1}$不能整除$f$.
+\end{proposition}
+
+\begin{definition}{根的重数}{}
+	设$f\in A\left[X\right]$非零,$\alpha\in A$,$h\in\N$满足$\left(X-\alpha\right)^{h}$整除$f$且$\left(X-\alpha\right)^{h+1}$不能整除$f$.
+	\begin{enumerate}
+		\item 我们称$\mult_{A}\left(f,\alpha\right)\coloneq h$是$\alpha$关于$f$的阶(或重数).当$h>0$时,称$\alpha$为$f$的$h$重根.
+		\item 若$h>1$,则称$\alpha$是$f$的$h$重根;若$h=1$,则称$\alpha$是$f$的单根;若$h=2$,则称$h$是$f$的二重根.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 没有歧义时,直接把$\mult_{K}\left(f,\alpha\right)$记作$\mult\left(f,\alpha\right)$.如果$f=0$,对每个$\beta\in A$和$k\in\N$,约定$\mult\left(f,\beta\right)\geq h$.
+		\item 固定$k\in\N$,则$\mult\left(f,\alpha\right)\geq k$ $\iff$ $\left(X-\alpha\right)^{k}$整除$f$.
+		\item 若交换环$B$是$A$的扩环,则$\mult_{B}\left(f,\alpha\right)=\mult_{A}\left(f,\alpha\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{多项式的积与和的重数的性质}{}
+	设$f,g\in A\left[X\right]$且非零,$\alpha\in A,\mult\left(f,\alpha\right)=p,\mult\left(g,\alpha\right)=q$.
+	\begin{enumerate}
+		\item $\mult\left(f+g,\alpha\right)\geq\inf\left(p,q\right)$.若$p\neq q$,则$\mult\left(f+g,\alpha\right)=\inf\left(p,q\right)$.
+		\item $\mult\left(fg,\alpha\right)\geq p+q$.若$p\neq q$,则$\mult\left(fg,\alpha\right)=pq$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{多重根的因式分解}{}
+	设$A$是整环,$f\in A\left[X\right]$非零,$\alpha_{1},\ldots,\alpha_{p}$是$f$在$A$中两两不同的根,其重数依次为$k_{1},\ldots,k_{p}$,则存在$g\in A\left[X\right]$使得
+	\begin{align*}
+		f\left(X\right)=\left(\prod\limits_{i=1}^{p}\left(X-\alpha\right)^{k_{i}}\right)g\left(X\right)\wedge\forall 1\leq i\leq p\left(g\left(\alpha_{i}\right)\neq 0\right).
+	\end{align*}
+\end{proposition}
+
+\begin{theorem}{多项式的根的重数上界}{}
+	设$A$是整环,$n\in\N$,$f\in A\left[X\right]$且$0\leq\deg\left(f\right)\leq n$,则$f$在$A$中所有的根的重数之和$\leq n$.
+\end{theorem}
+
+\begin{corollary}{多项式恒等定理}{}
+	设$A$是整环,$n\in\N$,$f,g\in A\left[X\right]$且$\deg\left(f\right),\deg\left(g\right)\leq n$.若$A$中有两两不同的元素$x_{1},\ldots,x_{n+1}$使
+	\begin{align*}
+		f\left(x_{1}\right)=g\left(x_{1}\right),\ldots,f\left(x_{n+1}\right)=g\left(x_{n+1}\right),
+	\end{align*}
+	则$f=g$.
+\end{corollary}
+
+\begin{proposition}{Lagrange插值基多项式}{}
+	设$\left(\left(\alpha_{i},\beta_{i}\right)\right)_{i=1}^{n}$是$K\times K$中的序列,$\left(\alpha_{i}\right)_{i=1}^{n}$各项互异.对每个$1\leq i\leq n$,定义$f_{i}\left(X\right)=\prod\limits_{1\leq j\neq i\leq n}\left(\alpha_{i}-\alpha_{j}\right)^{-1}\left(X-\alpha_{j}\right)$.
+	\begin{enumerate}
+		\item $\left(f_{i}\right)_{i=1}^{n}$是一族$\left(n-1\right)$次多项式,对每个$1\leq i,j\leq n$有$f_{i}\left(\alpha_{j}\right)=\delta_{i,j}$.
+		\item $\left(f_{i}\right)_{i=1}^{n}$线性无关.
+		\item $f\coloneq\sum\limits_{i=1}^{n}\beta_{i}f_{i}$是$K\left[X\right]$中唯一满足$\deg\left(f\right)<n$和$\forall 1\leq i\leq n\left(f\left(\alpha_{i}\right)=\beta_{i}\right)$的元素.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{子环上的插值多项式}{}
+	设$A$是整环,$K$是$A$的子环,$f\in A\left[X\right]$且$\deg\left(f\right)<n$.若$A$中有两两不等的元素$x_{1},\ldots,x_{n}$满足
+	\begin{align*}
+		\left(\alpha_{1},f\left(\alpha_{1}\right)\right)\in K\times K,\ldots,\left(\alpha_{n},f\left(\alpha_{n}\right)\right)\in K\times K,
+	\end{align*}
+	则$f\in K\left[X\right]$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

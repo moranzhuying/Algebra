@@ -1,0 +1,91 @@
+\section{导子的一般定义}
+
+记号约定:
+
+\begin{itemize}
+	\item $\Delta$是交换群(加法记号),$A,A^{\prime},A^{\prime\prime},B,B^{\prime},B^{\prime\prime}$是$\Delta$型分次$K$-模.
+	\item $\mu:A\times A^{\prime}\to A^{\prime\prime}, \quad \lambda_{1}:B\times A^{\prime}\to B^{\prime\prime},\lambda_{2}:A\times B^{\prime}\to B^{\prime\prime}$是$K$-双线性映射,各自诱导的典范映射
+	\begin{align*}
+		A\otimes_{K}A^{\prime}\to A^{\prime\prime},B\otimes_{K}A^{\prime}\to B^{\prime\prime},A\otimes_{K}B^{\prime}\to B^{\prime\prime}
+	\end{align*}
+	均为$0$次$\Delta$型分次$K$-线性映射.
+	\item 对每个$a\in A,a^{\prime}\in A^{\prime}$,把$\mu\left(a,a^{\prime}\right)$记作$aa^{\prime}$,对另外两个双线性映射也采用类似的简记法,如此
+	\begin{align*}
+		\deg\left(aa^{\prime}\right)=\deg\left(a\right)+\deg\left(a^{\prime}\right).
+	\end{align*}
+\end{itemize}
+
+\begin{definition}{$\epsilon$-导子($\left(K,\epsilon\right)$-导子)}{epsilon-derivation}
+	设$\epsilon$是$\Delta\times\Delta$上的导子,$d:A\to B,d^{\prime}:A^{\prime}\to B^{\prime},d^{\prime\prime}:A^{\prime\prime}\to B^{\prime\prime}$是$\delta$次$\Delta$型分次$K$-线性映射.若如下条件成立:
+	\begin{center}
+		(广义Leibniz律):对于$A$中每个齐次元$a$和$A^{\prime}$中每个齐次元$a^{\prime}$,有$d^{\prime\prime}(aa^{\prime})=d\left(a\right)a^{\prime}+\epsilon\left(\delta, \deg(a)\right)ad^{\prime}\left(a^{\prime}\right)$,
+	\end{center}
+	则称$\left(d,d^{\prime},d^{\prime\prime}\right)$是$\left(A,A^{\prime},A^{\prime\prime}\right)$到$\left(B,B^{\prime},B^{\prime\prime}\right)$的$\delta$次$\epsilon$-导子(或$\left(K,\epsilon\right)$-导子).
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 根据线性映射的加性,我们只需要让$a,a^{\prime}$各自遍历$A,A^{\prime}$各自的生成系,再验证广义Leibniz律成立.
+		\item 为了方便,通常把$d,d^{\prime},d^{\prime\prime}$记作$\delta$次$\Delta$型分次$K$-线性映射
+		\begin{align*}
+			d:A\boxplus A^{\prime}\boxplus A^{\prime\prime}\to B\boxplus B^{\prime}\boxplus B^{\prime\prime},\left(a,a^{\prime},a^{\prime\prime}\right)\mapsto\left(d\left(a\right),d^{\prime}\left(a^{\prime}\right),d^{\prime\prime}\left(a^{\prime\prime}\right)\right).
+		\end{align*}
+		此时广义Leibniz律写作$d\left(aa^{\prime}\right)=d\left(a\right)a^{\prime}+\epsilon\left(\delta,\deg\left(a\right)\right)ad\left(a^{\prime}\right)$.
+		\item 从$\left(A,A^{\prime},A^{\prime\prime}\right)$到$\left(B,B^{\prime},B^{\prime\prime}\right)$的$\delta$次$\epsilon$-导子构成的集合是$\underline{\Hom}_{K}\left(A\boxplus A^{\prime}\boxplus A^{\prime\prime},B\boxplus B^{\prime}\boxplus B^{\prime\prime}\right)$的$K$-子模.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{导子,反导子}{}
+	\begin{enumerate}
+		\item 当$\epsilon$是平凡交换因子时,我们把$\epsilon$-导子叫做导子(或$K$-导子).
+		\item 当$\Delta=\Z$且$\epsilon$是标准分次交换因子时,把奇数次的$\epsilon$-导子叫做反导子.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 所有导子组成的集合是$\Hom_{K}\left(A\boxplus A^{\prime}\boxplus A^{\prime\prime},B\boxplus B^{\prime}\boxplus B^{\prime\prime}\right)$的$K$-子模.
+		\item 当$\Delta=\Z$且$\epsilon$是标准分次交换因子时,每个偶数次的$\epsilon$-导子都是导子.
+		\item 如果$d$是反导子,那么对$A$中每个齐次元$a$和$A^{\prime}$中每个齐次元$a^{\prime}$都有
+		\begin{align*}
+			d\left(aa^{\prime}\right)=d\left(a\right)a^{\prime}+\left(-1\right)^{\deg\left(a\right)}ad\left(a^{\prime}\right).
+		\end{align*}
+		\item 对于一般的非分次模,为其配备平凡分次,就可以在上面定义导子.
+		\item 如果仅考虑$\delta$次$\epsilon$-导子,我们可以通过修改$\lambda_{2}$的定义来消去交换因子$\epsilon$:设有$K$-双线性映射$\lambda^{\prime}_2: A \times B^{\prime} \to B^{\prime\prime}$,对于$A$中每个齐次元$a$和每个$b^{\prime}\in B^{\prime}$都有$\lambda^{\prime}_{2}\left(a,b^{\prime}\right)=\epsilon\left(\delta,\deg\left(a\right)\right)\lambda_{2}\left(a,b^{\prime}\right)$.
+		此时,$d$相对于$\left(\mu,\lambda_{1},\lambda_{2}^{\prime}\right)$是导子.
+	\end{enumerate}	
+\end{remark}
+
+\begin{example}{特殊的$\epsilon$-导子}{}
+	现在考察两种$\epsilon$-导子的特例.
+	\begin{enumerate}
+		\item $A=B,A^{\prime}=B^{\prime},A^{\prime\prime}=B^{\prime\prime},\mu=\lambda_{1}=\lambda_{2}$.
+		\item $A=A^{\prime}=A^{\prime\prime},B=B^{\prime}=B^{\prime\prime}$.此时$A$是分次代数,$\lambda_{1}$和$\lambda_{2}$诱导的典范映射都是$0$次分次映射.
+		
+		于是,从$A$到$B$的$\delta$次数$\epsilon$-导子$d:A\to B$是$\delta$次$\Delta$型分次$K$-线性映射,对$A$中所有齐次元$x$和每个$y\in A$,
+		\begin{align*}
+			d\left(xy\right)=d\left(x\right)y+\epsilon\left(\delta,\deg\left(x\right)\right)xd\left(y\right).
+		\end{align*}
+		\item 在(2)的设定下,进一步考虑$A$是一个含幺结合$K$-代数,$\lambda_{1},\lambda_{2}$诱导了$\left(A,A\right)$-双模的乘法的情形.如果$A,B$是含幺结合$K$-代数,$\rho:A\to B$是分次$K$-代数同态,
+		\begin{align*}
+			\lambda_{1}:B\times A\to B,\left(b,a\right)\mapsto b\rho\left(a\right),\\
+			\lambda_{2}:A\times B\to B,\left(a,b\right)\mapsto\rho\left(a\right)b,
+		\end{align*}
+		那么我们通过$\rho$就在$B$上定义了一个$\left(A,A\right)$-双模结构.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{}{}
+	设$A$是分次$K$-代数,$B=A$,$\lambda_{1},\lambda_{2}$是$A$上的乘法,$d:A\to A$是$\delta$次分次$K$-线性映射.若对$A$的每个齐次元$x$和每个$y\in A$,
+	\begin{align*}
+		d\left(xy\right)=d\left(x\right)y+\epsilon\left(\delta,\deg\left(a\right)\right)xd\left(y\right),
+	\end{align*}
+	则称$d$是$A$上的$\epsilon$-导子.特别地,如果$A$是分次环(视作结合$\Z$-代数),则称之为环$A$上的$\epsilon$-导子.
+\end{definition}
+
+\begin{remark}{}{}
+	设$A$是含幺交换结合$K$-代数,$B$是$A$-模,默认$B$配备典范的$\left(A,A\right)$-双模结构.此时,导子$d:A\to B$满足
+	\begin{align*}
+		\forall x,y\in A\left(d\left(xy\right)=xd\left(y\right)+yd\left(x\right)\right).
+	\end{align*}
+\end{remark}

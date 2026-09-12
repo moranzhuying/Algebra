@@ -1,0 +1,123 @@
+\section{向量空间的对偶}
+
+记号约定:$K$是除环,$E,F,E_{1},E_{2},E_{3},F_{1},F_{2},F_{3}$是左$K$-向量空间,$p,m,n\in\N$.
+
+\begin{theorem}{}{}
+	$\dim E\leq\dim E^{\vee}$.进一步,$E^{\vee}$是有限维的$\iff$ $E$是有限维的,这两条件之一成立时$\dim E=\dim E^{\vee}$.
+\end{theorem}
+
+\begin{corollary}{}{}
+	$E=\left\{0\right\}\iff E^{\vee}=\left\{0\right\}$.
+\end{corollary}
+
+\begin{theorem}{}{}
+	\begin{enumerate}
+		\item 若序列$0\xlongrightarrow{}E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}\xlongrightarrow{}0$正合,则如下序列正合且分裂:
+		\begin{align*}
+			0\xlongrightarrow{}\Hom_{K}\left(E_{3},F\right)\xlongrightarrow{\Hom_{K}\left(g,\id_{F}\right)}\Hom_{K}\left(E_{2},F\right)\xlongrightarrow{\Hom_{K}\left(f,\id_{F}\right)}\Hom_{K}\left(E_{1},F\right)\xlongrightarrow{}0.
+		\end{align*}
+		\item 若序列$0\xlongrightarrow{}F_{1}\xlongrightarrow{p}F_{2}\xlongrightarrow{q}F_{3}\xlongrightarrow{}0$正合,则如下序列正合且分裂:
+		\begin{align*}
+			0\xlongrightarrow{}\Hom_{K}\left(E,F_{1}\right)\xlongrightarrow{\Hom_{K}\left(\id_{E},p\right)}\Hom_{K}\left(E,F_{2}\right)\xlongrightarrow{\Hom_{K}\left(\id_{E},q\right)}\Hom_{K}\left(E,F_{3}\right)\xlongrightarrow{}0.
+		\end{align*}
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{}{}
+	若序列$0\xlongrightarrow{}E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}\xlongrightarrow{}0$正合,则$0\xlongrightarrow{}E_{3}^{\vee}\xlongrightarrow{g^{\top}}E_{2}\xlongrightarrow{f^{\top}}E_{1}\xlongrightarrow{}0$正合且分裂.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$M$是$E$的子空间,则典范映射$E^{\vee}/M^{\circ}\to M^{\vee}$是双射.
+\end{corollary}
+
+\begin{theorem}{}{}
+	典范映射$\ev_{E}:E\to E^{\vee\vee}$是单射.进一步,$\ev_{E}$是双射$\iff$ $E$是有限维的.
+\end{theorem}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{K}\left(E,F\right)$,则有典范同构$\im\left(f\right)^{\circ}\simeq\im\left(f^{\top}\right),\ker\left(f\right)^{\circ}\simeq\coker\left(f^{\top}\right),\coker\left(f\right)^{\top}\simeq\ker\left(f^{\top}\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{K}\left(E,F\right)$.
+	\begin{enumerate}
+		\item $f^{\top}$是单射(相对的,满射)$\iff$ $f^{\top}$是满射(相对的,单射).
+		\item $\rank\left(f\right)\leq\rank\left(f^{\top}\right)$.若$\rank\left(f\right)$有限则$\rank\left(f\right)=\rank\left(f^{\top}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{}{}
+	设$M$是$E$的子空间.
+	\begin{enumerate}
+		\item $\dim M^{\circ}\geq\codim_{E}M$.进一步,$\dim M^{\circ}$有限$\iff$ $\codim_{E}M$有限,这两条件之一成立时$\dim M^{\circ}=\codim_{E}M$.
+		\item $M^{\circ\circ}=M$.
+		\item $E^{\vee}$的每个有限维子空间$G^{\prime}$都和$E$的一个余维数有限的子空间$H$正交,并且$G^{\prime}=H^{\circ\circ}$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	$E^{\vee}$的无限维子空间$G^{\prime}$不一定和$E$的子空间正交.
+\end{remark}
+
+\begin{corollary}{}{}
+	设$\left(x_{i}^{\ast}\right)_{i=1}^{p}$是$E^{\vee}$的元素族,$F=\bigcap\limits_{i=1}^{p}\ker\left(x_{i}^{\ast}\right)$.
+	\begin{enumerate}
+		\item $\codim_{E}F$等于$\left(x_{i}^{\ast}\right)_{i=1}^{n}$生成的子空间的秩.
+		\item 对每个$f\in\Hom_{K}\left(E,F\right)$,若$\im\left(f\right)=\left\{0\right\}$,则$f$是$\left(x_{i}^{\ast}\right)_{i=1}^{p}$的线性组合.
+		\item $\codim_{E}F\leq p$.进一步,$\codim_{E}F=p$ $\iff$ $\left(x_{i}\right)_{i=1}^{n}$是自由族.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	\begin{enumerate}
+		\item 设$\left(x_{i}^{\ast}\right)_{i=1}^{p}$是$E^{\vee}$的元素族,则$\left(x_{i}^{\ast}\right)_{i=1}^{n}$是自由族$\iff$存在$E$的元素族$\left(x_{i}\right)_{i=1}^{p}$满足$\forall 1\leq i,j\leq p\left(x_{j}^{\ast}\left(x_{j}\right)=\delta_{i,j}\right)$.
+		\item 设$\left(x_{i}\right)_{i=1}^{p}$是$E$的元素族,则$\left(x_{i}\right)_{i=1}^{n}$是自由族$\iff$存在$E^{\vee}$的元素族$\left(x_{i}^{\ast}\right)_{i=1}^{p}$满足$\forall 1\leq i,j\leq p\left(x_{j}^{\ast}\left(x_{j}\right)=\delta_{i,j}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$S$是集合,$V$是$K_{d}^{S}$的子空间,则$\dim V\geq p$ $\iff$存在$S\times V$的元素族$\left(\left(s_{i},f_{i}\right)\right)_{i=1}^{n}$,对诸$1\leq i\leq p$有$f_{i}\left(s_{j}\right)=\delta_{i,j}$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$M,N$是$E$的余维数有限的子空间,则$\left(M\cap N\right)^{\circ}=M^{\circ}+N^{\circ}$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E$是$n$维向量空间.
+	\begin{enumerate}
+		\item 对$E$的每个$p$维子空间$M$,它在$E^{\vee}$中的正交子模$M^{\circ}$是$n-p$维向量空间.
+		\item 对$E^{\vee}$的每个$q$维子空间$N$,它在$E^{\vee}$中的正交子模$N^{\circ}$是$n-q$维向量空间.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\mathcal{H}$是$E$中的超平面组成的集合.考虑$E^{\vee}\setminus\left\{0\right\}$上的等价关系
+	\begin{align*}
+		x^{\ast}\sim y^{\ast}\iff\exists\alpha\in K^{\times}\left(y^{\ast}=\alpha x^{\ast}\right),
+	\end{align*}
+	那么$\left(E^{\vee}\setminus\left\{0\right\}\right)/\sim\to\mathcal{H},\left[x^{\ast}\right]_{\sim}\mapsto\ker\left(x^{\ast}\right)$是双射.
+\end{proposition}
+
+\begin{definition}{超平面的方程}{}
+	设$H$是$E$中的超平面,$x^{\ast}\in E^{\vee}$且$H=\ker\left(x^{\ast}\right)$.称$x^{\ast}\left(x\right)=0$是$H$的方程.
+\end{definition}
+
+\begin{definition}{子空间的方程组}{}
+	设$\left(x_{i}^{\ast}\right)_{i\in I}$是$E^{\vee}$的元素族,$F=\bigcap\limits_{i\in I}\ker\left(x^{\ast}\right)$.称$x_{i}^{\ast}\left(x\right)=0\left(i\in I\right)$是$F$的方程组.
+\end{definition}
+
+\begin{remark}{超平面和线性方程组}{}
+	\begin{itemize}
+		\item 给定$E$的一个余维数为$p$的子空间$F$,那么$F$可以用$E$上$p$个线性无关的线性泛函定义的方程组来描述.
+		\item 相反,给定$E$上的$p$个线性泛函,他们导出的子空间$F$的余维数一定$\leq p$,这些线性泛函线性无关$\iff$ $F$的余维数是$p$.换言之,$F$不能被$E$上个数$\leq p-1$的线性泛函来定义.
+	\end{itemize}
+\end{remark}
+
+
+
+
+
+
+

@@ -1,0 +1,109 @@
+\section{子代数,理想,商代数}
+
+记号约定:$A$是交换环,$E,E^{\prime}$是$A$-代数.
+
+\begin{definition}{$A$-子代数}{}
+	设$F$是$E$的$A$-子模.若在$E$于$F$上诱导的乘法下,$F$是$A$-代数,则称$F$是$E$的$A$-子代数.
+\end{definition}
+
+\begin{definition}{生成子代数}{}
+	设$\left(x_{i}\right)_{i\in I}$是$E$的元素族.$E$中所有包含$\left(x_{i}\right)_{i\in I}$的全部元素的子代数的交称为$\left(x_{i}\right)_{i\in I}$生成的子代数,称$\left(x_{i}\right)_{i\in I}$是该子代数的生成系.
+\end{definition}
+
+\begin{proposition}{代数同态保持子代数}{}
+	若$u\in\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)$,$F$是$E$的子代数,则$u\left(E\right)$是$E^{\prime}$的子代数.
+\end{proposition}
+
+\begin{definition}{代数的中心化子}{}
+	设$E$是结合代数,$X\subseteq E$.
+	\begin{enumerate}
+		\item $C_{A}\left(X\right)\coloneq\left\{x\in X\middle|\forall a\in A\left(ax=xa\right)\right\}$称为$X$在$A$中的中心化子.
+		\item $C_{A}\left(C_{A}\left(X\right)\right),C_{A}\left(C_{A}\left(C_{A}\left(X\right)\right)\right)$分别称为$X$在$A$中的双中心化子,三中心化子.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{中心化子的性质}{}
+	设$E$是结合代数,$X\subseteq E$.
+	\begin{enumerate}
+		\item $C_{A}\left(X\right)$是$E$的子代数.
+		\item $X\subseteq C_{A}\left(C_{A}\left(X\right)\right)$.
+		\item $X=C_{A}\left(\left(C_{A}\left(C_{A}\left(X\right)\right)\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{子代数的中心}{}
+	设$E$是结合代数,$F$是其子代数.我们称$Z_{A}\left(B\right)\coloneq B\cap C_{A}\left(B\right)$是$B$在$A$中的中心.
+\end{definition}
+
+\begin{proposition}{交换子代数的中心及其中心化子}{}
+	设$E$是结合代数,$F$是其交换子代数.
+	\begin{enumerate}
+		\item $B\subseteq C_{A}\left(B\right),C_{A}\left(C_{A}\left(B\right)\right)\subseteq C_{A}\left(B\right)$.
+		\item $C_{A}\left(C_{A}\left(F\right)\right)=Z_{A}\left(E\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{代数的左,右,双边理想}{}
+	设$\mathfrak{a}$是$E$的$A$-子模.
+	\begin{enumerate}
+		\item 若$\forall x\in E\forall y\in\mathfrak{a}\left(xy\in\mathfrak{a}\right)$,则称$\mathfrak{a}$是$E$的左理想.
+		\item 若$\forall x\in \mathfrak{a}\forall y\in E\left(xy\in\mathfrak{a}\right)$,则称$\mathfrak{a}$是$E$的右理想.
+		\item 若$\mathfrak{a}$是$E$的左理想和右理想,则称$\mathfrak{a}$是$E$的双边理想.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{代数的左理想$=$相反代数的右理想}{}
+	设$\mathfrak{a}$是$E$的$A$-子模,则$\mathfrak{a}$是$E$的左(相对的,右)理想$\iff$ $\mathfrak{a}$是$E^{\op}$的右(相对的,左)理想.
+\end{proposition}
+
+\begin{proposition}{含幺结合代数的理想$=$自身作为环的理想}{}
+	若$E$是含幺结合代数,则$E$是环,它作为环的左(相对的,右,双边)理想和作为代数的左(相对的,右,双边)理想相等.
+\end{proposition}
+
+\begin{definition}{生成的左(相对的,右,双边)理想}{}
+	设$X\subseteq E$.我们称$E$中所有包含$X$的左(相对的,右,双边)理想的交是$X$在$E$中生成的左(相对的,右,双边)理想.
+\end{definition}
+
+\begin{definition}{商代数}{}
+	设$\mathfrak{b}$是$E$的双边理想,则$A/\mathfrak{b}$上的运算$\left(x+\mathfrak{b},y+\mathfrak{b}\right)\mapsto xy+\mathfrak{b}$良定义,典范映射$A\twoheadrightarrow A/\mathfrak{b}$是代数同态,$A/\mathfrak{b}$是$A$-代数.
+	
+	我们称$A$-代数$E/\mathfrak{b}$是$E$关于$\mathfrak{b}$的商代数.
+\end{definition}
+
+\begin{proposition}{代数同态基本定理}{}
+	设$f\in\Hom_{A-\mathsf{Alg}}\left(E,E^{\prime}\right)$.
+	\begin{enumerate}
+		\item $\im\left(f\right)$是$E^{\prime}$的子代数,$\ker\left(f\right)$是$E$的双边理想.
+		\item 存在唯一的$\bar{f}\in\Isom_{A-\mathsf{Alg}}\left(E/\ker\left(f\right),\im\left(f\right)\right)$使得下图交换,其中$\pi$是典范满射,$\iota$是典范嵌入.
+		\begin{center}
+			\begin{tikzcd}
+				E & {E^{\prime}} \\
+				{E/\ker\left(f\right)} & {\im\left(f\right)}
+				\arrow["f", from=1-1, to=1-2]
+				\arrow["\pi"', two heads, from=1-1, to=2-1]
+				\arrow["{\exists!\bar{f}}"', dashed, from=2-1, to=2-2]
+				\arrow["\iota"', hook, from=2-2, to=1-2]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{环的理想乘法的推广}{}
+	关于环的理想的结论和证明对$A$-代数仍然成立,只需要把表述中的``环''替换为``$A$-代数''.
+\end{remark}
+
+\begin{definition}{$A$-代数的幺化}{}
+	令$\tilde{E}\coloneq A\times E$.在$A$-模$\tilde{E}$上定义运算$\cdot$为$\left(\left(\lambda,x\right),\left(\mu,y\right)\right)\mapsto\left(\lambda\mu,xy+\mu x+\lambda y\right)$,则
+	\begin{itemize}
+		\item $\tilde{E}$是$A$-含幺代数,单位元是$\left(1,0\right)$.
+		\item $\left\{0\right\}\times A$是$\tilde{E}$的双边理想.
+		\item $\iota:E\to\left\{0\right\}\times E,x\mapsto\left(0,x\right)$是$A$-代数同构.
+		\item $\tilde{E}$是$A$-结合(相对的,交换)代数$\iff$ $E$是$A$-结合(相对的,交换)代数.
+	\end{itemize}
+	我们称$A$-含幺代数$\tilde{E}$是$E$的幺化.
+\end{definition}
+
+
+
+
+

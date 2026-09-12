@@ -1,0 +1,64 @@
+\section{模的\texorpdfstring{$n$}{n}次外幂,\texorpdfstring{$n$}{n}重交错线性映射}
+
+记号约定:$A$是交换环,$M,N$是$A$-模.固定$n\in\N$.
+
+\begin{definition}{交错$n$重线性映射}{}
+	设$f\in\Mult\left(M,\ldots,M;N\right)$是$n$重线性映射.如果
+	\begin{align*}
+		\forall 1\leq p\leq n\forall x\in M\forall\left(u_{i}\right)_{i=1}^{p}\in M^{p}\forall\left(v_{j}\right)_{j=1}^{n-p-2}\in M^{n-p-2}\left(f\left(u_{1},\ldots,u_{p},x,x,v_{1},\ldots,v_{n-p-2}\right)=0\right),
+	\end{align*}
+	则称$f$是交错$n$重线性映射.记$\Alt_{A}\left(M,\ldots,M;N\right)=\left\{f\in\Mult_{A}\left(M,\ldots,M;N\right)\middle|f\text{是交错}n\text{重线性映射}\right\}$.
+\end{definition}
+
+\begin{remark}{}{}
+	显然$\Alt_{A}\left(M,\ldots,M;N\right)$是$A$-模.
+\end{remark}
+
+\begin{proposition}{线性映射的外幂的泛性质}{}
+	$\Hom_{A}\left(\bigwedge\limits^{n}\left(M\right),N\right)\to\Alt_{A}\left(M,\ldots,M;N\right),f\mapsto\left[\left(x_{i}\right)_{i=1}^{n}\mapsto f\left(x_{1}\wedge\ldots\wedge x_{n}\right)\right]$是典范双射.
+\end{proposition}
+
+\begin{definition}{$n$次外幂}{}
+	\begin{enumerate}
+		\item 我们称$\bigwedge\limits^{n}\left(M\right)$是$n$的$n$次外幂.
+		\item 设$u\in\Hom_{A}\left(M,N\right)$.我们称$\bigwedge\limits^{n}\left(u\right)$是$u$的$n$次外幂.
+	\end{enumerate}
+\end{definition}
+
+\begin{corollary}{}{}
+	设$f\in\Alt_{A}\left(M,\ldots,M;N\right)$.
+	\begin{enumerate}
+		\item $\forall\sigma\in\mathfrak{S}_{n}\forall\left(x_{i}\right)_{i=1}^{n}\in M^{n}\left(\left(f\left(x_{\sigma\left(1\right)},\ldots,x_{\sigma\left(n\right)}\right)=\sign\left(\sigma\right)f\left(x_{1},\ldots,x_{n}\right)\right)\right)$.
+		\item $\forall\left(x_{i}\right)_{i=1}^{n}\in M^{n}\left(\exists 1\leq i\neq j\leq n\left(x_{i}=x_{j}\right)\implies f\left(x_{1},\ldots,x_{n}\right)=0\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\left(x_{i}\right)_{i=1}^{n}\in M^{n}$且$x_{1}\wedge\ldots\wedge x_{n}=0$,则$\forall f\in\Alt_{A}\left(M,\ldots,M;N\right)\left(f\left(x_{1},\ldots,x_{n}\right)=0\right)$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$f:M^{n-1}\to N$是交错$\left(n-1\right)$重线性映射,$\left(x_{i}\right)_{i=1}^{n}\in M^{n}$.若$x_{1}\wedge\ldots\wedge x_{n}=0$,则
+	\begin{align*}
+		\sum\limits_{i=1}^{n}\left(-1\right)^{i}f\left(x_{1},\ldots,x_{i-1},\ldots,x_{i+1},\ldots,x_{n}\right)x_{i}=0.
+	\end{align*}
+\end{proposition}
+
+\begin{definition}{$n$阶逆变斜对称张量}{}
+	设$z\in\mathsf{T}^{n}\left(M\right)$.如果$\forall\sigma\in\mathfrak{S}_{n}\left(\sigma z=\sign\left(\sigma\right)z\right)$,则称$z$是$n$阶逆变反对称张量.记
+	\begin{align*}
+		\mathsf{A}_{n}^{\prime}=\left\{x\in\mathsf{T}^{n}\left(M\right)\middle|\forall\sigma\in\mathfrak{S}_{n}\left(\sigma z=\sign\left(\sigma\right)z\right)\right\},
+	\end{align*}
+	这是$\mathsf{T}^{n}\left(M\right)$的一个子模.
+\end{definition}
+
+\begin{definition}{张量的斜对称化}{}
+	设$z\in\mathsf{T}^{n}\left(M\right)$.我们称$\sum\limits_{\sigma\in\mathfrak{S}_{n}}\sign\left(\sigma\right)\sigma z$是张量$z$的斜对称化.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$n!\cdot 1_{A}\in A^{\times}$,那么$\mathsf{T}^{n}\left(M\right)\to\mathsf{A}_{n}^{\prime}\left(M\right),z\mapsto\left(n!\cdot 1_{A}\right)^{-1}\sum\limits_{\sigma\in\mathfrak{S}_{n}}\sigma z$是幂等的,它的像等于$\mathsf{A}_{n}^{\prime\prime}\left(M\right)$和$\mathsf{A}_{n}^{\prime}\left(M\right)$,它的核等于$I_{n}^{\prime}\coloneq I_{\wedge}\cap\mathsf{T}^{n}\left(M\right)$.因此$\mathsf{T}^{n}\left(M\right)=\mathsf{A}_{n}^{\prime}\left(M\right)\boxplus I_{n}^{\prime}$.
+		\item 当$n!\cdot 1_{A}\in A^{\times}$时,典范满射$\mathsf{T}^{n}\left(M\right)\to\mathsf{A}^{n}\left(M\right)$在$\mathsf{A}_{n}^{\prime}\left(M\right)$上的限制是$A$-模同构,但是这并不是代数同构,因此我们不能把$\mathsf{A}_{n}^{\prime}\left(M\right)$的乘积视为$\bigwedge\limits^{n}\left(M\right)$中相应的元素交换后的乘积.
+	\end{enumerate}
+\end{remark}

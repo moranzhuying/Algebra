@@ -1,0 +1,104 @@
+\section{张量积中某个元素的秩}
+
+记号约定:$K,L$是除环.
+
+\begin{proposition}{}{}
+	折$0\xlongrightarrow{}E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}\xlongrightarrow{}0$是右$K$-向量空间的正合列,$F$是左$K$-向量空间,则有$\Z$-模的分裂短正合列
+	\begin{align*}
+		0\xlongrightarrow{}E_{1}\otimes_{K}F\xlongrightarrow{\Hom_{K}\left(g,\id_{F}\right)}E_{2}\otimes_{K}F\xlongrightarrow{\Hom_{K}\left(f,\id_{F}\right)}E_{3}\otimes_{K}F\xlongrightarrow{}0
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$E$是右$K$-向量空间,$F$是左$K$-向量空间,$\left(E_{i}\right)_{i\in I}$和$\left(F_{j}\right)_{j\in J}$分别是$E$和$F$的一族子空间.在典范同构的意义下,
+	\begin{align*}
+		\left(\bigcap\limits_{i\in I}M_{i}\right)\otimes_{K}\left(\bigcap\limits_{j\in J}N_{j}\right)=\bigcap\limits_{\left(i,j\right)\in I\times J}\left(M_{i}\otimes_{K}N_{j}\right).
+	\end{align*}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(E_{i}\right)_{i\in I}$和$\left(F_{j}\right)_{j\in J}$分别是一族右$K$-向量空间和左$K$-向量空间,则典范映射
+	\begin{align*}
+		\prod\limits_{i\in I}E_{i}\otimes_{K}\prod\limits_{j\in J}F_{j}\to\prod\limits_{\left(i,j\right)\in I\times J}\left(E_{i}\otimes_{K}F_{j}\right)
+	\end{align*}
+	是单射.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$F$是右$K$-向量空间,$X$是集合,则$K_{d}^{X}\otimes_{K}F$典范等同于$X$到$F$的有限秩$K$-线性映射组成的$F^{X}$的子空间.
+\end{corollary}
+
+\begin{remark}{}{}
+	设$X,Y$是集合.在典范同构的意义下,$K_{d}^{Y}\otimes_{K}K_{s}^{Y}$是$K^{X\times Y}$的子空间.
+\end{remark}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 设$E$是左$K$-向量空间,$F$是左$L$-向量空间,$G$是$\left(K,L\right)$-双模,则典范$\Z$-线性映射
+		\begin{align*}
+			\nu:\Hom_{K}\left(E,G\right)\otimes_{L}F\to\Hom_{K}\left(E,G\otimes_{L}F\right)
+		\end{align*}
+		是单射.若$E,F$都是有限维的,则$\nu$是双射.
+		\item 设$K$是域,$E_{1},E_{2},F_{1},F_{2}$是$K$-向量空间,则典范$K$-线性映射
+		\begin{align*}
+			\lambda:\Hom_{K}\left(E_{1},F_{1}\right)\otimes_{K}\Hom_{K}\left(E_{2},F_{2}\right)\to\Hom_{K}\left(E_{1}\otimes_{K}E_{2},F_{1}\otimes_{K}F_{2}\right)
+		\end{align*}
+		是单射.若$\left(E_{1},E_{2}\right),\left(E_{1},F_{1}\right),\left(E_{2},F_{2}\right)$三者有一个由有限维$K$-向量空间组成,则$\lambda$是双射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$E,F$是左$K$-向量空间,则典范映射$E^{\vee}\otimes_{K}F\to\Hom_{K}\left(E,F\right)$是单射,$E,F$中有一个是有限维的时它是双射.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E$是右$K$-向量空间,$F$是左$K$-向量空间,则典范映射$E\otimes_{K}F\to\Hom_{K}\left(E^{\vee},F\right)$是单射,$E$是有限维的时它是双射.
+\end{corollary}
+
+\begin{remark}{}{}
+	设$K$是域.
+	\begin{enumerate}
+		\item 若$E,F$是$K$-向量空间,则$\dim_{K}\left(E\otimes_{K}F\right)=\left(\dim_{K}E\right)\cdot\left(\dim_{K}F\right)$.
+		\item 若$E_{1},F_{1},E_{2},F_{2}$是$K$-向量空间,$f\in\Hom_{K}\left(E_{1},F_{1}\right),g\in\Hom_{K}\left(E_{2},F_{2}\right)$,则$\rank\left(f\otimes g\right)=\rank\left(f\right)\rank\left(g\right)$.
+		\item 若$E,F$是$K$-向量空间,则$\dim_{K}\left(\Hom_{K}\left(E,F\right)\right)\geq\left(\dim_{K}E\right)\left(\dim_{K}F\right)$,当$E$是有限维的时等号成立.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

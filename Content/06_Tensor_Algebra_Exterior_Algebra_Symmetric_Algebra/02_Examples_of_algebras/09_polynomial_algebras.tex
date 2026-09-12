@@ -1,0 +1,264 @@
+\section{多项式代数}
+
+记号约定:$A$是交换环,$I$是集合,$B$是$A$-含幺交换结合代数,其单位元是$1_{B}$,$F$是$A$-含幺结合代数,其单位元是$1_{F}$.
+
+\begin{definition}{}{}
+	设$\left(x_{i}\right)_{i\in I}$是$B$的元素族.记$\left(x_{i}\right)_{i\in I}$的元素和$1_{B}$在$B$中生成的元素为$A\left[\left(x_{i}\right)_{i\in I}\right]_{B}$(没有歧义时记作$A\left[\left(x_{i}\right)_{i\in I}\right]$).
+\end{definition}
+
+\begin{definition}{多项式代数}{}
+	我们将$\Libasc_{A}\left(I\right)$记作$A\left[\left(X_{i}\right)_{i\in I}\right]$(或$A\left[X_{i}\right]_{i\in I}$),称之为$A$上的多项式代数,其元素称为以$\left(X_{i}\right)_{i\in I}$为不定元,系数在$A$中的多项式.
+\end{definition}
+
+\begin{remark}{记号和术语约定}{}
+	\begin{enumerate}
+		\item 当$J\subseteq I$时,我们把$A\left[\left(X_{j}\right)_{j\in J}\right]$典范等同于$\left(X_{j}\right)_{j\in J}$和单位元在$A\left[\left(X_{i}\right)_{i\in I}\right]$中生成的子代数.
+		\item 当我们说``令$A\left[\left(X_{i}\right)_{i\in I}\right]$是一个多项式代数''时,$X_{i}$总是应该理解为不定元.
+		\item 当$I=\left\{1,\ldots,n\right\}$时,记$A\left[\left(X_{i}\right)_{i\in I}\right]$为$A\left[X_{1},\ldots,X_{n}\right]$.
+		\item 当$I$的基数为$1,,2,\ldots,n$时,我们采用$A\left[X\right],A\left[X,Y\right],A\left[X,Y,Z\right],\ldots$等记号.
+		\item 当$A$不是零环时,在上述约定下,$A\left[X\right],A\left[Y\right]$是$A\left[X,Y,Z\right]$的不相同的子代数.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	若$I^{\prime}$是和$I$等势的集合,则$A\left[\left(X_{i}\right)_{i\in I}\right]$同构于$A\left[\left(X_{i^{\prime}}\right)_{i^{\prime}\in I^{\prime}}\right]$.
+\end{proposition}
+
+\begin{definition}{单项式}{}
+	设$\nu\in\N^{\left(I\right)},X^{\nu}\coloneq\prod\limits_{i\in I}X_{i}^{\nu\left(i\right)}$.
+	\begin{enumerate}
+		\item 我们称$X^{\nu}$为关于$\left(X_{i}\right)_{i\in I}$的单项式.
+		\item 我们称$\left|\nu\right|\coloneq\sum\limits_{i\in I}\nu\left(i\right)$为$X^{\nu}$的次数(或全次数).
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	次数为$0$的多项式是唯一的.我们通常将其和$A$的单位元$1$等同.
+\end{remark}
+
+\begin{proposition}{多项式代数的典范单项式基}{}
+	$\left(X^{\nu}\right)_{\nu\in\N^{\left(I\right)}}$是$A\left[\left(X_{i}\right)_{i\in I}\right]$的基.
+\end{proposition}
+
+\begin{definition}{多项式的系数}{}
+	设$u=\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}\in A\left[\left(X_{i}\right)_{i\in I}\right]$,其中$\left(\alpha_{\nu}\right)_{\nu\in\N^{\left(I\right)}}$是$A$的有限支撑族.
+	\begin{enumerate}
+		\item 我们称$\left(\alpha_{\nu}\right)_{\nu\in\N^{\left(I\right)}}$是$u$的系数.
+		\item 对任意$\nu\in\N^{\left(I\right)}$,称$a_{\nu}X^{\nu}$为$X^{\nu}$上的项.
+		\item 我们称$\alpha_{0}X^{0}$为$u$的常数项.
+		\item 若$\left|\nu\right|>n\implies\alpha_{\nu}=0$,则称$u$是次数$\leq n$的多项式.
+		\item 若$\alpha_{\nu}=0$,则(滥用语言)称$u$没有$X^{\nu}$项.特别地,若$\alpha_{0}=0$,则称$u$没有常数项.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	我们通常把$\alpha_{0}X^{0}$典范等同于$\alpha_{0}$.
+\end{remark}
+
+\begin{definition}{多项式的(总)次数}{}
+	设$u=\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}$是$A\left[\left(X_{i}\right)_{i\in I}\right]$的非零多项式.称$\deg\left(u\right)\coloneq\max\left\{\left|\nu\right|\in\Z_{\geq 0}\middle|\alpha_{\nu}\neq 0\right\}$为$u$的次数(或总次数).
+\end{definition}
+
+\begin{definition}{多项式的代入,赋值同态,多项式关系元}{evaluation-of-polynomial}
+	设$\mathbf{x}\coloneq\left(x_{i}\right)_{i\in I}$是$F$中一族两两可交换的元素.
+	\begin{enumerate}
+		\item 对任一$u\in A\left[\left(X_{i}\right)_{i\in I}\right]$,把不定元$X_{i}$替换为$x_{i}$得到的$F$中元素称为用$\mathbf{x}$代入,记作$u\left(\mathbf{x}\right)$.
+		\item 我们称$\ev_{\mathbf{x}}:A\left[\left(X_{i}\right)_{i\in I}\right]\to F,h\mapsto h\left(\mathbf{x}\right)$为$\mathbf{x}$诱导的赋值同态,
+		\item 我们称$\ker\left(\ev_{\mathbf{x}}\right)$为$\mathbf{x}$在$A\left[\left(X_{i}\right)_{i\in I}\right]$中的多项式关系元.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	记号同定义(\ref{def:evaluation-of-polynomial}),则有$A$-模的短正合列$0\xlongrightarrow{}\ker\left(\ev_{\mathbf{x}}\right)\xlongrightarrow{}A\left[\left(X_{i}\right)_{i\in I}\right]\xlongrightarrow{\ev_{\mathbf{x}}^{\circ}}A\left[\left(x_{i}\right)_{i\in I}\right]\xlongrightarrow{}0$.
+\end{proposition}
+
+\begin{proposition}{多项式代数的偏变元分解}{degree-respect-to-a-subset-of-variables}
+	设$J\subseteq I,K=I\setminus J,A^{\prime}=A\left[\left(X_{j}\right)_{j\in J}\right]$.则有唯一的$\phi\in\Hom_{\mathsf{Ring}}\left(A^{\prime}\left[\left(X_{k}^{\prime}\right)_{k\in K}\right],A\left[\left(X_{i}\right)_{i\in I}\right]\right)$满足下列条件:
+	\begin{itemize}
+		\item 对任一$u\in A^{\prime},\phi\left(u\right)=u$.
+		\item 对任一$k\in K,\phi\left(X_{k}^{\prime}\right)=X_{k}$.
+	\end{itemize}
+\end{proposition}
+
+\begin{definition}{多项式的偏次数}{}
+	记号同命题(\ref{prop:degree-respect-to-a-subset-of-variables}).设$u\in A\left[\left(X_{i}\right)_{i\in I}\right]$非零.称$\deg\left(\phi^{-1}\left(u\right)\right)$为$u$关于不定元$\left(X_{k}\right)_{k\in K}$的次数(或偏次数).
+\end{definition}
+
+\begin{remark}{多项式恒等式}{}
+	设$B$是环,$\left(P_{j}\right)_{j\in J}$是$\Z\left[\left(X_{i}\right)_{i\in I}\right]$的元素族,$Q\in\Z\left[\left(X_{j}\right)_{j\in J}\right]$.如果$Q\left(\left(P_{j}\right)_{j\in J}\right)=0$,则对$B$的每一个由两两可交换的元素构成的族$\left(b_{i}\right)_{i\in I}$,有$Q\left(\left(P_{j}\left(\left(b_{i}\right)_{i\in I}\right)\right)_{j\in J}\right)$.满足上述性质的关系式$Q\left(\left(P_{j}\right)_{j\in J}\right)=0$称为多项式恒等式.
+\end{remark}
+
+\begin{example}{多项式恒等式的例子}{}
+	\begin{enumerate}
+		\item $\left(X_{1}+X_{2}\right)^{2}-X_{1}^{2}-X_{2}^{2}-2X_{1}X_{2}=0$是多项式恒等式.
+		\item $X_{1}^{n}-X_{2}^{n}-\left(X_{1}-X_{2}\right)\left(X_{1}^{n-1}+X_{1}^{n-2}X_{2}+\ldots+X_{2}^{n-1}\right)=0$是多项式恒等式.
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

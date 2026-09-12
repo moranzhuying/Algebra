@@ -1,0 +1,98 @@
+\section{齐性集}
+
+记号说明:$G$是群,$E$是集合.
+
+\begin{definition}{传递作用}{}
+	设$E$是左$G$-集(相对地,右$G$-集).若$\exists x\in E\left(\mathcal{O}_{x}=E\right)$,则称$G$在$E$上的作用传递,称$E$是左(相对地,右)$G$-齐性空间。
+\end{definition}
+
+\begin{proposition}{传递作用的等价描述}{}
+	设$E$是左$G$-集,则$G$在$E$上的作用是传递的$\iff$ $E\neq\emptyset$且$\forall x,y\in E\exists g\in G\left(y=gx\right)$.
+\end{proposition}
+
+\begin{example}{轨道是齐性空间}{}
+	设$E$是$G$-集,则$E$的每个轨道在诱导作用下是$G$-齐次空间.
+\end{example}
+
+\begin{proposition}{}{}
+	设$H$是$G$的子群,$N=N\left(H\right)$,$G$在$G/H$上的典范作用和$N$在$G/H$上的典范作用诱导$N/H$在$G/H$上的右作用.
+	\begin{enumerate}
+		\item $G/H$在$N/H$的右作用下是右$G$-齐次空间.
+		\item $N/H$在$G/H$上的右作用诱导同构$\left(N/H\right)^{\op}\simeq\Aut_{G-\mathsf{Grp}}\left(G/H\right)$.
+	\end{enumerate}
+	这里,$\Aut_{G-\mathsf{Grp}}\left(G/H\right)$是$G/H$上所有是$G$-等变同构的自同构组成的集合.
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 称$G$在$G/H$上的左作用$\left(g,xH\right)\mapsto gxH$的核为$H$在$G$中的核心,记作$\Core_{G}\left(H\right)$,无歧义时记作$\Core\left(H\right)$.
+		\begin{enumerate}
+			\item $\Core\left(H\right)=\bigcap\limits_{g\in G}gHg^{-1}$,并且是$G$的包含于$H$的最大正规子群.
+			\item $G$在$G/H$上的左作用是忠实的$\iff$ $\Core\left(H\right)=\left\{e\right\}$.
+		\end{enumerate}
+		\item 设$H,K$是$G$的子群,$H$是$K$的正规子群,则$K/H$在$G/H$上的右平移作用和典范映射$G/H\to G/K$诱导出典范的$G$-等变同构$\left(G/H\right)/\left(K/H\right)\simeq G/K$.
+	\end{enumerate}
+\end{remark}
+
+\begin{theorem}{轨道-稳定子定理}{}
+	设$E$是$G$-齐性空间,$a\in E,H=\Stab\left(a\right)$,$K$是$G$的包含于$H$的子群
+	\begin{enumerate}
+		\item 存在唯一的$G$-等变映射$f:G/K\to E$使$f\left(K\right)=a$.
+		\item (1)中的映射$f$是$G$-等变同构$\iff$ $K=H$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}{$G$-齐性空间的分类}{}
+	\begin{enumerate}
+		\item 若$E$是$G$-齐性空间,则存在$G$的子群$H$使得$E$和$G/H$作为$G$-集是同构的.
+		\item 设$H,H^{\prime}$是$G$的子群,则$G/H$和$G/H^{\prime}$作为$G$-集是同构的$\iff$ $H$和$H^{\prime}$共轭.
+	\end{enumerate}
+\end{theorem}
+
+\begin{example}{对称群在集合上的作用}{}
+	设$E\neq\emptyset,a\in E,F=E\setminus\left\{a\right\}$,$\mathfrak{S}_{E}$在$E$上的典范作用传递,则$E$作为$\mathfrak{S}_{E}$-齐性空间同构于$\mathfrak{S}_{E}/\mathfrak{S}_{F}$.
+\end{example}
+
+\begin{example}{集合的分拆}{}
+	设$n\in\N_{>0}$,$E$是$n$元集,$\N$的有限元素族$\left(p_{i}\right)_{i\in I}$满足$\sum\limits_{i\in I}p_{i}=n$.记
+	\begin{align*}
+		X=\left\{\left(F_{i}\right)_{i\in I}\middle|\left(F_{i}\right)_{i\in I}\text{是有序分拆},\forall i\in I\left(\left|F_{i}\right|=p_{i}\right)\right\}.
+	\end{align*}
+	又设$\mathfrak{S}_{E}$在$E$上的典范作用传递.取$\left(F_{i}\right)_{i\in I}\in X$,令$H$是其稳定化子,则$H\simeq\prod\limits_{i\in I}\mathfrak{S}_{F_{i}}$,进而$\left|H\right|=\prod\limits_{i\in I}p_{i}!$.于是
+	\begin{align*}
+		\left|X\right|=\frac{n!}{\prod\limits_{i\in I}p_{i}!}.
+	\end{align*}
+\end{example}
+
+\begin{example}{正交群和球面}{}
+	设$n\in\N_{>0}$,$\mathrm{O}_{n}\left(\R\right)$在$\R^{n}$的单位球面$\mathbb{S}^{n-1}$的作用传递,则$\left(0,\ldots,0,1\right)$的不变子群同构于$\mathrm{O}_{n-1}\left(\R\right)$,故有$\mathrm{O}_{n}\left(\R\right)$-集同构
+	\begin{align*}
+		\mathbb{S}^{n-1}\simeq\mathrm{O}_{n}\left(\R\right)/\mathrm{O}_{n-1}\left(\R\right).
+	\end{align*}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

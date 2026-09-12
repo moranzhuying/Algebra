@@ -1,0 +1,76 @@
+\chapter{Hermite型与二次型}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$且$\rho$是对合,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $E$是左$A$-模,$\varphi\in\Sesq_{A,\rho}\left(E\right),\varepsilon\in Z\left(A\right)$.
+\end{itemize}
+
+\section{Hermite型与\texorpdfstring{$\varepsilon$}{epsilon}-Hermite型}
+
+\begin{definition}{$\varepsilon$-Hermite型}{}
+	\begin{enumerate}
+		\item 如果对每个$\left(x,y\right)\in E\times E$有$\varphi\left(x,y\right)=\bar{\varphi\left(y,x\right)}$,则称$\varphi$是$\varepsilon$-Hermite型.
+		\item 如果$\varphi$是$1$-Hermite型,则称$\varphi$是Hermite型.
+		\item 如果$\varphi$是$-1$-Hermite型,则称$\varphi$是反Hermite型.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{}{}
+	分别记$\Herm_{A,\rho}^{\varepsilon}\left(E\right),\SHerm_{A,\rho}\left(E\right),\AHerm_{A,\rho}\left(E\right)$为$E$上的$\varepsilon$-Hermite型,Hermite型和反Hermite型组成的集合.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$\rho=\id_{A}$时,$E$上的Hermite型=$E$上的对称双线性型,$E$上的Hermite型=$E$上的反对称双线性型.
+		\item 如果$\im\left(\varphi\right)\cap A^{\times}\neq\emptyset$,那么$\varepsilon\bar{\varepsilon}=1$.
+		\item 如果$\mathrm{i}\in Z\left(A\right)^{\times}$且$\bar{\mathrm{i}}=\mathrm{i}\varepsilon$,那么$\varphi\in\Herm_{A,\rho}^{\varepsilon}\left(E\right)\iff \mathrm{i}\varphi\in\SHerm_{A,\rho}\left(E\right)$.
+		\item 如果$S$是$E$的生成集,那么$\varphi\in\Herm_{A,\rho}^{\varepsilon}\left(E\right)$ $\iff$ 对每个$\left(x,y\right)\in S\times S$有$\varphi\left(x,y\right)=\varepsilon\overline{\varphi\left(y,x\right)}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{}{}
+	对每个$\alpha\in A^{\times}$,定义$T_{\alpha}:A\to A^{\op},x\mapsto\alpha^{-1}\bar{\lambda}\alpha,\varphi\alpha:E\times E\to A,\left(x,y\right)\mapsto\varphi\left(x,y\right)\alpha$.
+	\begin{enumerate}
+		\item 对每个$\alpha\in A^{\times}$,$T_{\alpha}$是环同构,$\varphi\alpha\in\Sesq_{A,T_{\alpha}}\left(E\right)$.
+		\item 对每个$\alpha\in A^{\times}$,若$\bar{\alpha}=\alpha$,则$T_{\alpha}$是对合,并且$\varphi\in\Herm_{A,\rho}^{\varepsilon}\left(E\right)\iff\varphi\alpha\in\Herm_{A,T_{\alpha}}^{\varepsilon}\left(E\right)$.
+		\item 当$A$是除环时,$K\coloneq Z\left(A\right)\cap\Fix_{A}\left(\rho\right)$是$A$的子除环,$\Herm_{A,\rho}^{\varepsilon}\left(E\right)$是典范的左$K$-向量空间.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{$\varepsilon$-Hermite矩阵,(反)Hermite矩阵,(反)对称矩阵,交错矩阵}{}
+	设$\boldsymbol{A}\in\mathbf{M}_{n}\left(A\right)$,把$\boldsymbol{A}_{\rho}$记作$\overline{\boldsymbol{A}}$.
+	\begin{enumerate}
+		\item 若$\boldsymbol{A}^{\top}=\varepsilon\overline{\boldsymbol{A}}$,则称$\boldsymbol{A}$是$A$上的$\varepsilon$-Hermite矩阵.
+		\item 若$\boldsymbol{A}^{\top}=\overline{\boldsymbol{A}}$,则称$\boldsymbol{A}$是$A$上的Hermite矩阵;若$\boldsymbol{A}^{\top}=-\overline{\boldsymbol{A}}$,则称$\boldsymbol{A}$是$A$上的反Hermite矩阵.
+		\item 若$\boldsymbol{A}^{\top}=\boldsymbol{A}$,则称$\boldsymbol{A}$是$A$上的对称矩阵;若$\boldsymbol{A}^{\top}=-\boldsymbol{A}$,则称$\boldsymbol{A}$是$A$上的反对称矩阵.
+		\item 若$\boldsymbol{A}^{\top}=-\boldsymbol{A}$,并且$\boldsymbol{A}$的对角元都是$0$,则称$\boldsymbol{A}$是$A$上的交错矩阵.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{有限维自由模上$\varepsilon$-Hermite型的矩阵刻画}{}
+	设$\dim_{A}E=n\geq 1$,则$\varphi\in\Herm_{A,\rho}^{\varepsilon}\left(E\right)$ $\iff$对$E$的每个基$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$,矩阵$\Gram_{\mathcal{B}}^{\mathcal{B}}\left(\varphi\right)$是$\varepsilon$-Hermite矩阵.
+\end{proposition}
+
+\begin{proposition}{$\varepsilon$-Hermite型的左右伴随映射刻画}{}
+	$\varphi\in\Herm_{A,\rho}^{\varepsilon}\left(E\right)\iff s_{\varphi}=\bar{\varepsilon}d_{\varphi}$ $\iff$ $d_{\varphi}=\varepsilon s_{\varphi}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\varphi$是非退化$\varepsilon$-Hermite型,则对每个$u\in\End_{A-\mathsf{Mod}}\left(E\right)$有$u^{\ast\ast}=\bar{\varepsilon}u$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\varphi\in\Herm_{A,\rho}^{\varepsilon}\left(E\right)$.若$\varphi$非退化,则$\tilde{\varphi}\in\Herm_{A,\rho}^{\bar{\varepsilon}}\left(E\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$A$是交换环,$\varphi\in\Herm_{A,\rho}^{\varepsilon}\left(E\right)$,则对每个$n\in\N$,$\varphi^{\otimes n}\in\Herm_{A,\rho}^{\varepsilon^{n}}\left(E^{\otimes n}\right),\bigwedge\limits^{n}\varphi\in\Herm_{A,\rho}^{\varepsilon^{n}}\left(\bigwedge\limits^{n}E\right)$.
+\end{proposition}
+
+
+
+
+
+
+

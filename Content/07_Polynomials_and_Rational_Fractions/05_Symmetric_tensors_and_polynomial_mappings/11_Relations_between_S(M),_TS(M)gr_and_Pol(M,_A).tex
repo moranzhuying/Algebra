@@ -1,0 +1,35 @@
+\section{\texorpdfstring{$\mathsf{S}\left(M^{\vee}\right)$}{M*}的对称代数,\texorpdfstring{$\underline{\mathsf{TS}\left(M\right)}^{\vee}$}{TS(M)的分次对偶}和\texorpdfstring{$\Pol\left(M,A\right)$}{Pol(M,A)}的关系}
+
+记号约定:$M$是自由模
+
+\begin{definition}{$\underline{\mathsf{TS}\left(M\right)}^{\vee}$上的分次代数结构}{}
+	考虑$\mathsf{TS}\left(M\right)$上的余乘,它在$\underline{\mathsf{TS}\left(M\right)}^{\vee}$上诱导了一个典范的余乘,使得$\underline{\mathsf{TS}\left(M\right)}^{\vee}$是分次$A$-含幺交换结合代数.
+\end{definition}
+
+\begin{proposition}{}{}
+	存在唯一的分次$A$-代数同态$\theta:\mathsf{S}\left(M^{\vee}\right)\to\underline{\mathsf{TS}\left(M\right)}^{\vee}$.
+\end{proposition}
+
+\begin{proposition}{有限生成自由模的对偶的对称代数与其对称张量代数的对偶同构}{}
+	若$M$有限生成,则典范映射$\mathsf{S}\left(M^{\vee}\right)\to\underline{\mathsf{TS}\left(M\right)}^{\vee}$是分次$A$-代数同构.
+\end{proposition}
+
+\begin{remark}{}{}
+	进一步,$\underline{\mathsf{S}\left(M\right)}^{\vee}$典范同构于$\mathsf{TS}\left(M^{\vee}\right)$.
+\end{remark}
+
+\begin{proposition}{多项式函数模与对称张量代数的对偶的关系}{}
+	典范的$A$-线性映射$u:\underline{\mathsf{TS}\left(M\right)}^{\vee}\to\Pol_{A}\left(M,A\right)$是代数同态.
+\end{proposition}
+
+\begin{remark}{}{}
+	记$\lambda_{M}=u\circ\theta$,这是唯一一个诱导典范映射$\Pol_{A}^{1}\left(M,A\right)\hookrightarrow\Pol_{A}\left(M,A\right)$的$A$-含幺代数同态.如果$M$有限生成,$A$是无限整环,则$\lambda_{M}$是同构.特别地,当$M=A^{n}$时,我们有典范的代数同构$A[X_{1},\ldots,X_{n}]\to\Pol_{A}\left(A^{n},A\right),f\mapsto\tilde{f}$.
+\end{remark}
+
+\begin{remark}{}{}
+	考虑余乘$c_{S}:\mathsf{S}\left(M^{\vee}\right)\to\mathsf{S}\left(M^{\vee}\times M^{\vee}\right)$.对每个$v\in\mathsf{S}\left(M^{\vee}\right)$,有
+	\begin{align*}
+		\lambda_{M\times M}\left(c_{S}\left(v\right)\right):M\times M\to A,\left(x,y\right)\mapsto\lambda_{M}\left(v\right)\left(x,y\right).
+	\end{align*}
+\end{remark}
+

@@ -1,0 +1,79 @@
+\section{酉群与正交群}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$,
+	\item $E$是左$A$-模,$\varphi\in\SHerm_{A,\rho}\left(E\right),Q\in\Quad_{A}\left(E\right)$.
+\end{itemize}
+
+\begin{definition}{酉变换}{}
+	设$,u\in\Aut_{A-\mathsf{Mod}}\left(E\right)$.若$\varphi\circ\left(u\times u\right)=\varphi$,则称$u$是关于$\varphi$的酉变换(或$\varphi$-酉变换).
+\end{definition}
+
+\begin{lemma}{酉群的良定义性}{well-definedness-of-unitary-group}
+	记$\mathrm{U}\left(\varphi\right)$是$E$上所有关于$\varphi$的酉变换组成的集合,则$\mathrm{U}\left(\varphi\right)$按映射复合构成群.
+\end{lemma}
+
+\begin{definition}{酉群}{}
+	沿用引理\ref{lem:well-definedness-of-unitary-group}的记号.我们称$\mathrm{U}\left(\varphi\right)$是$\varphi$的酉群.
+\end{definition}
+
+\begin{definition}{正交变换}{}
+	设$Q\neq 0$,$u\in\Aut_{A-\mathsf{Mod}}\left(E\right)$.若$Q\circ u=Q$,则称$u$是关于$Q$的正交变换(或$Q$-正交变换).
+\end{definition}
+
+\begin{lemma}{酉群的良定义性}{well-definedness-of-orthogonal-group}
+	记$\mathrm{O}\left(\varphi\right)$是$E$上所有关于$\varphi$的正交变换组成的集合,则$\mathrm{O}\left(\varphi\right)$按映射复合构成群.
+\end{lemma}
+
+\begin{definition}{正交群}{}
+	沿用引理\ref{lem:well-definedness-of-orthogonal-group}的记号.我们称$\mathrm{O}\left(\varphi\right)$是$\varphi$的正交群.
+\end{definition}
+
+\begin{remark}{正交群和酉群的关系}{}
+	\begin{enumerate}
+		\item 设$Q\neq 0$,则$\mathrm{O}\left(Q\right)\subseteq\mathrm{U}\left(\varphi_{Q}\right)$.
+		\item 若$2\cdot 1_{A}\neq 0$且不是$A$中的零因子,则$\mathrm{O}\left(Q\right)\supseteq\mathrm{U}\left(\varphi_{Q}\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{酉矩阵,正交矩阵}{}
+	设$\boldsymbol{U}\in\GL_{n}\left(A\right)$.
+	\begin{enumerate}
+		\item 若$\boldsymbol{U}^{\top}\overline{\boldsymbol{U}}=\boldsymbol{I}_{n\times n}$,则称$\boldsymbol{U}$是$A$上的$n$阶酉矩阵.
+		\item 若$\rho=\id_{A}$,$2\cdot 1_{A}\neq 0$且不是$A$中的零因子,$\boldsymbol{U}^{\top}\overline{\boldsymbol{U}}=\boldsymbol{I}_{n\times n}$,则称$\boldsymbol{U}$是$A$上的$n$阶正交矩阵.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$A$是交换环或除环时,$A$上每个满足$\boldsymbol{A}^{\top}\overline{\boldsymbol{A}}=\boldsymbol{I}_{n\times n}$的$n$阶方阵$\boldsymbol{A}$都是$n$阶酉矩阵.
+		\item 当$\rho=\id_{A}$,$2\cdot 1_{A}\neq 0$且不是$A$中的零因子时,$A$是交换环,$A$上每个$n$阶酉矩阵都是$n$阶正交矩阵.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{$n$元酉变换}{}
+	设$E=A^{n}$,$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$,$\varphi_{0}\in\SHerm_{A,\rho}\left(E\right)$且$\Gram_{\mathcal{B}}^{\mathcal{B}}\left(\varphi_{0}\right)=\boldsymbol{I}_{n\times n}$.
+	\begin{enumerate}
+		\item 我们称$\varphi_{0}$是$n$元酉变换,称$\mathrm{U}_{n}\left(A\right)\coloneq\mathrm{U}\left(\varphi_{0}\right)$是$A$上的$n$阶酉群.
+		\item 当$\rho=\id_{A}$,$2\cdot 1_{A}\neq 0$且不是$A$中的零因子时,我们称$\varphi_{0}$是$n$元正交变换,称$\mathrm{O}_{n}\left(A\right)\coloneq\mathrm{O}\left(\varphi_{0}\right)$是$A$上的$n$阶正交群.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	$\Gram_{\mathcal{B}}^{\mathcal{B}}\left(\varphi_{0}\right)$恰好就是酉矩阵.
+\end{remark}
+
+本节接下来的内容中,$A$是域,$E$是有限维非零向量空间,$\varphi$非退化,$H=\left\{\lambda\in A\middle|\lambda\bar{\lambda}=1\right\}$.
+
+\begin{lemma}{}{}
+	$H\leq A^{\times}$,并且$\psi:\mathrm{U}\left(\varphi\right)\to H,u\mapsto\det\left(u\right)$既是群同态又是满射.
+\end{lemma}
+
+\begin{definition}{特殊酉群}{}
+	设$\psi:\mathrm{U}\left(\varphi\right)\to H,u\mapsto\det\left(u\right),Q:E\to {}_{s}A_{d},x\mapsto\varphi\left(x,x\right)$.
+	\begin{enumerate}
+		\item 我们称$\SU\left(\varphi\right)\coloneq\ker\left(\psi\right)$是关于$\varphi$的特殊酉群.当$E=A^{n}$且$\varphi$是$n$元酉变换时,记$\SU_{n}\left(A\right)\coloneq\SU\left(\varphi\right)$.
+		\item 当$\rho=\id_{A}$且$\Char\left(A\right)\neq 2$时,称$\SO\left(Q\right)\coloneq\SU\left(\varphi\right)$是$Q$的正交变换群.当$E=A^{n}$且$\varphi$是$n$元酉变换时,记$\SO_{n}\left(A\right)\coloneq\SO\left(Q\right)$.
+	\end{enumerate}
+\end{definition}

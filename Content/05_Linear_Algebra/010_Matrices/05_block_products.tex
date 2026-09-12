@@ -1,0 +1,148 @@
+\section{分块矩阵}
+
+记号约定:
+
+\begin{itemize}
+	\item $A$是环,$E,F,G$都是右$A$-模,各自的一族子模是$\mathcal{E}\coloneq\left(E_{i}\right)_{i\in I},\mathcal{F}\coloneq\left(F_{j}\right)_{j\in J},\mathcal{G}\coloneq\left(G_{k}\right)_{k\in K}$.
+	\item $E=\bigoplus\limits_{i\in I}E_{i},F=\bigoplus\limits_{j\in J}F_{j},G=\bigoplus\limits_{k\in K}G_{k}$.
+\end{itemize}
+
+\begin{definition}{向量关于直和分解的分块坐标矩阵}{}
+	设$x\in E$且$x=\sum\limits_{i\in I}x_{i0}$,其中$\left(x_{i0}\right)_{i\in I}$是$\prod\limits_{i\in I}$的元素.称列矩阵$\left(x_{i0}\right)_{\left(i,0\right)\in I\times\left\{0\right\}}$是$x$在直和分解$\mathcal{E}$下的矩阵.
+\end{definition}
+
+\begin{definition}{直和分解下的坐标映射}{}
+	定义$\mathcal{E}$诱导的坐标映射$\left[\cdot\right]_{\mathcal{B}}:E\to R^{I\times\left\{0\right\}}$如下:对任一$x\in E$,$\left[x\right]_{\mathcal{B}}$是$x$在直和分解$\mathcal{E}$下的坐标矩阵.
+\end{definition}
+
+\begin{definition}{线性映射关于直和分解的分块矩阵}{}
+	设$f\in\Hom_{K}\left(E,F\right)$,它在典范同构$\Hom_{A}\left(E,F\right)\simeq\prod\limits_{\left(i,j\right)\in I\times J}\Hom_{A}\left(E_{i},F_{j}\right)$下对应到$\left(f_{ji}\right)_{j\in J,i\in I}$,称之为$f$在$\mathcal{E}$和$\mathcal{F}$给出的$E$和$F$各自的直和分解下的矩阵.
+\end{definition}
+
+\begin{definition}{直和分解下的分块映射}{}
+	定义$\mathcal{E}$和$\mathcal{F}$诱导的分块映射$\left[\cdot\right]_{\mathcal{F},\mathcal{E}}:\Hom_{A}\left(E,F\right)\to\prod\limits_{\left(i,j\right)\in I\times J}\Hom_{A}\left(E_{i},F_{j}\right)$如下:
+	\begin{center}
+		对任一$f\in\Hom_{A}\left(E,F\right)$,$\left[f\right]_{\mathcal{F},\mathcal{E}}$是$f$在$\mathcal{E}$和$\mathcal{F}$给出的$E$和$F$各自的直和分解下的矩阵.
+	\end{center}
+\end{definition}
+
+\begin{proposition}{分块映射是模同态}{}
+	$\left[\cdot\right]_{\mathcal{F},\mathcal{E}}$是$Z\left(A\right)$-模同态.
+\end{proposition}
+
+\begin{proposition}{}{}
+	若集合$I,J,K$都有限,则如下图表交换:
+	\begin{center}
+		\begin{tikzcd}
+			{\Hom_{A}\left(F\times G\right)\times\Hom_{A}\left(E\times F\right)} &&&& {\Hom_{A}\left(E,G\right)} \\
+			\\
+			\\
+			{A^{K\times J}\times A^{J\times I}} &&&& {A^{K\times I}}
+			\arrow["\text{映射复合}\circ", from=1-1, to=1-5]
+			\arrow["{\left[\cdot\right]_{\mathcal{G},\mathcal{F}}\times\left[\cdot\right]_{\mathcal{F},\mathcal{E}}}", from=1-1, to=4-1]
+			\arrow["{\left[\cdot\right]_{\mathcal{G},\mathcal{E}}}"', from=1-5, to=4-5]
+			\arrow["{\text{矩阵乘法}}", from=4-1, to=4-5]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{}{}
+	若$J$是有限集,则对任一$f\in\Hom_{A}\left(E,F\right)$,下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			E &&&& F \\
+			\\
+			\\
+			{A^{I\times\left\{0\right\}}} &&&& {A^{J\times\left\{0\right\}}}
+			\arrow["f", from=1-1, to=1-5]
+			\arrow["{\left[\cdot\right]_{\mathcal{E}}}", from=1-1, to=4-1]
+			\arrow["{\left[\cdot\right]_{\mathcal{F}}}"', from=1-5, to=4-5]
+			\arrow["{\mathcal{L}_{\left[f\right]_{\mathcal{F},\mathcal{E}}}}", from=4-1, to=4-5]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设集合$I,J$有限,$f\in\Hom_{K}\left(E,F\right)$且$\left[f\right]_{\mathcal{F},\mathcal{E}}=\left(f_{ji}\right)_{j\in J,i\in I}$,$E^{\vee},F^{\vee}$分别典范等同于$\bigoplus\limits_{i\in I}E_{i}^{\vee},\bigoplus\limits_{j\in J}F_{j}^\vee$.若
+	\begin{align*}
+		\mathcal{E}^{\ast}=\left(E_{i}^{\vee}\right)_{i\in I},\mathcal{F}^{\ast}=\left(F_{j}^{\vee}\right)_{j\in J},\left[f\right]_{\mathcal{F},\mathcal{E}}=\left(f_{ji}\right)_{j\in J,i\in I},
+	\end{align*}
+	则$\left[f^{\top}\right]_{\mathcal{E^{\ast}},\mathcal{F}^{\ast}}=\left[f_{ij}^{\top}\right]_{i\in I,j\in J}$.
+\end{proposition}
+
+本节接下来的内容做如下约定:
+
+\begin{itemize}
+	\item $I,J,K$是有限集,$\left(R_{i}\right)_{i\in I},\left(S_{j}\right)_{j\in J},\left(T_{k}\right)_{k\in K}$分别是$I,J,K$的划分.
+	\item $\mathcal{B}\coloneq\left(e_{r}\right)_{r\in I}$是$E$的基,对任一$i\in I$,$\mathcal{B}_{i}\coloneq\left(e_{r}\right)_{r\in R_{i}}$是$E_{i}$的基.
+	\item $\mathcal{C}\coloneq\left(c_{s}\right)_{s\in J}$是$F$的基,对任一$j\in J$,$\mathcal{C}_{j}\coloneq\left(c_{s}\right)_{s\in S_{j}}$是$F_{j}$的基.
+	\item $\mathcal{D}\coloneq\left(d_{t}\right)_{t\in T}$是$G$的基,对任一$k\in K$,$\mathcal{D}_{k}\coloneq\left(d_{t}\right)_{t\in T_{k}}$是$G_{k}$的基.
+\end{itemize}
+
+\begin{proposition}{分块矩阵和基底划分的等价性}{}
+	\begin{enumerate}
+		\item 设$f\in\Hom_{A}\left(E,F\right)$.若$\boldsymbol{X}=\left[f\right]_{\mathcal{B}}^{\mathcal{C}},\left[f\right]_{\mathcal{F},\mathcal{E}}=\left(f_{ji}\right)_{j\in J,i\in I}$,则对任一$j\in J,i\in I$,$\boldsymbol{X}_{ji}=\left[f_{ji}\right]_{\mathcal{B}_{i}}^{\mathcal{C}_{j}}$是$\boldsymbol{X}$去掉不属于$R_{i}$的行和不属于$S_{j}$的列得到的矩阵.
+		\item 存在双射$\psi_{\mathcal{E},\mathcal{F}}:A^{J\times I}\to\prod\limits_{\left(j,i\right)\in J\times I}A^{S_{j}\times R_{i}}$使下图交换(其中$\phi$是典范映射).
+		\begin{center}
+			\begin{tikzcd}
+				{\Hom_{A}\left(E,F\right)} &&&& {\prod\limits_{\left(j,i\right)\in J\times I}\left(E_{i},F_{j}\right)} \\
+				\\
+				\\
+				{A^{J\times I}} &&&& {\prod\limits_{\left(j,i\right)\in J\times I}A^{S_{j}\times R_{i}}}
+				\arrow["\phi", from=1-1, to=1-5]
+				\arrow["{\left[\cdot\right]_{\mathcal{B}}^{\mathcal{C}}}"', from=1-1, to=4-1]
+				\arrow["{\prod\limits_{\left(j,i\right)\in J\times I}\left[\cdot\right]_{\mathcal{B}_{i}}^{\mathcal{C}_{j}}}", from=1-5, to=4-5]
+				\arrow["{\exists\psi_{\mathcal{E},\mathcal{F}}}"',dashed, from=4-1, to=4-5]
+			\end{tikzcd}
+		\end{center}
+		\item 如下图表交换,下方水平方向的映射定义为$\left(\left(\boldsymbol{X}_{ij}\right)_{i\in I,j\in J},\left(\boldsymbol{Y}_{jk}\right)_{j\in J,k\in K}\right)\mapsto\left(\sum\limits_{j\in I}\boldsymbol{X}_{ij}\boldsymbol{Y}_{jk}\right)_{i\in I,k\in K}$.
+		\begin{center}
+			\begin{tikzcd}
+				{A^{I\times J}\times A^{J\times K}} &&&& {\prod\limits_{\left(j,i\right)\in J\times I}\left(E_{i},F_{j}\right)} \\
+				\\
+				\\
+				{\left(\prod\limits_{\left(i,j\right)\in I\times J}A^{R_{i}\times S_{j}}\right)\times\left(\prod\limits_{\left(j,k\right)\in J\times K}A^{S_{j}\times T_{k}}\right)} &&&& {\prod\limits_{\left(i,K\right)\in I\times K}A^{R_{i}\times T_{k}}}
+				\arrow["{\text{矩阵乘法}}", from=1-1, to=1-5]
+				\arrow["{\psi_{\mathcal{E},\mathcal{F}}\times\psi_{\mathcal{F},\mathcal{G}}}"', from=1-1, to=4-1]
+				\arrow["{\psi_{\mathcal{E},\mathcal{G}}}", from=1-5, to=4-5]
+				\arrow["{\text{分块矩阵乘法}}"', from=4-1, to=4-5]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

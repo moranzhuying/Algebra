@@ -1,0 +1,88 @@
+\section{判别式}
+
+\begin{definition}{首一多项式的判别式}{}
+	设$f\in A[X]$首一,$\deg\left(f\right)=m,E=A[X]/\langle f\rangle$,记$x=X+\langle f\rangle$.称$\disc\left(f\right)\coloneq D_{E/A}\left(\left(x^{k-1}\right)_{k=1}^{m}\right)$是$f$的判别式.
+\end{definition}
+
+\begin{remark}{}{}
+	对每个$k>0$记$p_{k}=\Tr_{E/A}\left(x^{k}\right)$,则$\disc\left(f\right)$是$\left(p_{i+j}\right)_{\substack{0\leq i\leq m-1\\ 0\leq j\leq m-1}}$的行列式.
+\end{remark}
+
+\begin{example}{}{}
+	设$f\in A[X]$.
+	\begin{enumerate}
+		\item 若$\deg\left(f\right)\in\left\{0,1\right\}$,则$\disc\left(f\right)=1$.
+		\item 若$f=X^{2}+a_{1}X+a_{0}$,则$\disc\left(f\right)=a_{1}^{2}-4a_{2}$,
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{多项式的判别式的性质}{}
+	设$f\in A[X]$且$\deg\left(f\right)=m$.
+	\begin{enumerate}
+		\item 设$B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right),\xi_{1},\ldots,\xi_{m}\in B$.若$^{\rho}\left(f\right)=\prod\limits_{i=1}^{m}\left(X-\xi_{i}\right)$,则$\rho\left(\disc\left(f\right)\right)=\prod\limits_{1\leq i<j\leq n}\left(\xi_{i}-\xi_{j}\right)^{2}$.
+		\item $\res\left(f,\mathrm{D}f\right)=\res\left(\mathrm{D}f,f\right)=\left(-1\right)^{\frac{m\left(m-1\right)}{2}}\disc\left(f\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{泛判别式多项式的唯一性}{}
+	设$m\geq 1$.
+	\begin{enumerate}
+		\item 存在唯一的$\Delta\in\Z[A_{1},\ldots,A_{m}]$,对每个交换环$B$和$B[X]$的首一多项式$f=X^{m}+\sum\limits_{i=1}^{m}a_{i}X^{m-i}$有
+		\begin{align*}
+			\disc\left(f\right)=\Delta\left(a_{1},\ldots,a_{m}\right).
+		\end{align*}
+		\item $\deg\left(\Delta\right)\leq 2m-2$.
+		\item 为$\Z[A_{1},\ldots,A_{m}]$配备$\N$型分次,使得对每个$1\leq i\leq m$,$A_{i}$的权为$i$,则$\Delta$是总权重为$m\left(m-1\right)$的等权多项式.
+		\item $\Z[A_{0},\ldots,A_{m}]$中存在唯一的$\left(2m-2\right)$次齐次多项式$\tilde{\Delta}$满足$\Delta\left(A_{1},\ldots,A_{m}\right)=\tilde{\Delta}\left(1,A_{1},\ldots,A_{m}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{非首一多项式的判别式}{}
+	设$f=\sum\limits_{k=0}^{m}a_{k}X^{m-k}\in A[X]$且$\deg\left(f\right)\leq m$.
+	\begin{enumerate}
+		\item 我们称$\disc_{m}\left(f\right)\coloneq\tilde{\Delta}\left(a_{0},\ldots,a_{m}\right)$是$f$的判别式.
+		\item 当$\deg\left(f\right)=m$时,记$\disc\left(f\right)\coloneq\disc_{m}\left(f\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{多项式的判别式的性质}{}
+	设$f\in A[X]$且$\deg\left(f\right)\leq m$.
+	\begin{enumerate}
+		\item 若$B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,则$\disc_{m}\left(^{\rho}f\right)=\rho\left(\disc_{m}\left(f\right)\right)$.
+		\item 若$B$是$A$的扩环,$\lambda,\alpha_{1},\ldots,\alpha_{m}\in B$,在$B$中$f\left(X\right)=\lambda\prod\limits_{i=1}^{n}\left(X-\alpha_{i}\right)$,则$\disc_{m}\left(f\right)=\lambda^{2m-2}\prod\limits_{1\leq i<j\leq n}\left(\alpha_{i}-\alpha_{j}\right)^{2}$.
+		\item 设$f$中$X^{m}$的系数为$a_{0}$,则$\res_{m,m-1}\left(f,\mathrm{D}f\right)=\res_{m-1,m}\left(\mathrm{D}f,f\right)=\left(-1\right)^{\frac{m\left(m-1\right)}{2}}a_{0}\disc_{m}\left(f\right)$.
+		\item 若$\lambda\in A$,则$\disc_{m}\left(\lambda f\right)=\lambda^{2m-2}\disc_{m}\left(f\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{多项式乘积的判别式}{}
+	设$f,g\in A[X],\deg\left(f\right)\leq m,\deg\left(g\right)\leq n$,则$\disc_{m+n}\left(fg\right)=\disc_{m}\left(f\right)\disc_{n}\left(g\right)\res_{m,n}\left(f,g\right)^{2}$.
+\end{corollary}
+
+\begin{corollary}{降次时多项式的判别式退化}{}
+	若$f\in A[X]$的首项系数为$a_{0}$且$\deg\left(f\right)\leq m$,则$\disc_{m+1}\left(f\right)=a_{0}^{2}\disc_{m}\left(f\right)$.
+\end{corollary}
+
+\begin{corollary}{多项式的重根判定}{}
+	设$A$是域,$f\in A[X]$且$\deg\left(f\right)\neq 0$,则$\gcd\left(f,\mathrm{D}f\right)=1\iff\disc\left(f\right)\neq 0$.
+\end{corollary}
+
+\begin{example}{}{}
+	设$f\in A[X]$.
+	\begin{enumerate}
+		\item 若$f=a_{2}X^{2}+a_{1}X+a_{0}$,则$\disc_{2}\left(f\right)=b^{2}-4ac$.
+		\item 若$A=\Q,f=a_{0}X^{3}+a_{1}X^{2}+a_{2}X+a_{3}$,则$\disc\left(f\right)=a_{1}^{2}a_{2}^{2}+18a_{0}a_{1}a_{2}a_{3}-4a_{1}^{3}a_{3}-4a_{0}a_{2}^{3}-27a_{0}^{2}a_{3}^{2}$.
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+

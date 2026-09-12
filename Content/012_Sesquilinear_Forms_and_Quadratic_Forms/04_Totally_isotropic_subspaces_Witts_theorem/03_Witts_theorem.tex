@@ -1,0 +1,106 @@
+\section{Witt定理}
+
+记号约定:
+\begin{itemize}
+	\item $E_{1},E_{2}$是$A$-向量空间,$\varphi_{1}\in\Herm_{A,\rho}^{\varepsilon}\left(E_{1}\right),\varphi_{2}\in\Herm_{A,\rho}^{\varepsilon}\left(E_{2}\right)$.
+	\item 当$A$是域时,$Q_{1}\in\Quad_{A}\left(E_{1}\right),Q_{2}\in\Quad_{A}\left(E_{2}\right),\varphi_{1}=\varphi_{Q_{1}},\varphi_{2}=\varphi_{Q_{2}}$.
+\end{itemize}
+
+\begin{definition}{度量同态}{}
+	设$u\in\Hom_{A}\left(E_{1},E_{2}\right)$.
+	\begin{enumerate}
+		\item 若$\varphi_{2}\circ\left(u\times u\right)=\varphi_{1}$,则称$u$是度量同态.记
+		\begin{align*}
+			\Hom_{\varepsilon-\mathsf{Herm}}\left(E_{1},E_{2}\right)=\left\{f\in\Hom_{A}\left(E_{1},E_{2}\right)\middle|u\text{是度量同态}\right\}.
+		\end{align*}
+		\item 设$A$是域.若$Q_{2}\circ u=Q$,则称$u$是度量同态.记
+		\begin{align*}
+			\Hom_{\mathsf{Quad}}\left(E_{1},E_{2}\right)=\left\{f\in\Hom_{A}\left(E_{1},E_{2}\right)\middle|u\text{是度量同态}\right\}.
+		\end{align*}
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{度量同构}{}
+	\begin{enumerate}
+		\item 若存在$u\in\Isom_{A}\left(E_{1},E_{2}\right)$使得$\varphi_{2}\circ\left(u\times u\right)=\varphi_{1}$,则称$\left(E_{1},\varphi\right)$和$\left(E_{2},\varphi_{2}\right)$度量同构,记作$\left(E_{1},\varphi\right)\simeq\left(E_{2},\varphi_{2}\right)$.
+		\item 设$A$是域.若存在$u\in\Isom_{A}\left(E_{1},E_{2}\right)$使得$Q_{2}\circ u=Q_{1}$,则称$\left(E_{1},Q\right)$和$\left(E_{2},Q_{2}\right)$度量同构,记作$\left(E_{1},Q\right)\simeq\left(E_{2},Q_{2}\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	统一考虑$A$是除环和$A$是域的情形.如果$E_{1},E_{2}$都是有限维的,$\varphi$非退化,则每个度量同态$u:E_{1}\to E_{2}$都是单射.
+\end{remark}
+
+\begin{theorem}{Witt延拓定理($\varepsilon$-Hermite型,二次型)}{}
+	设$E_{1},E_{2}$有限维.
+	\begin{enumerate}
+		\item 设$\varphi_{1},\varphi_{2}$迹值且非退化,$\left(E_{1},\varphi_{1}\right)\simeq\left(E_{2},\varphi_{2}\right)$,则对$E_{1}$的每个子空间$F$,对每个是单射的度量同态$u:F\to E_{2}$,存在度量同构$v:E_{1}\to E_{2}$使得下图交换(其中,$\iota$是典范单射).
+		\begin{center}
+			\begin{tikzcd}
+				F && {E_{2}} \\
+				& {E_{1}}
+				\arrow["u", from=1-1, to=1-3]
+				\arrow["\iota"', hook, from=1-1, to=2-2]
+				\arrow["{\exists!v}"', dashed, from=2-2, to=1-3]
+			\end{tikzcd}
+		\end{center}
+		\item 设$A$是域,$Q_{1},Q_{2}$非退化,$\left(E_{1},Q_{1}\right)\simeq\left(E_{2},Q_{2}\right)$.则对$E_{1}$的每个子空间$F$,对每个是单射的度量同态$u:F\to E_{2}$,存在度量同构$v:E_{1}\to E_{2}$使得下图交换(其中,$\iota$是典范单射).
+		\begin{center}
+			\begin{tikzcd}
+				F && {E_{2}} \\
+				& {E_{1}}
+				\arrow["u", from=1-1, to=1-3]
+				\arrow["\iota"', hook, from=1-1, to=2-2]
+				\arrow["{\exists!v}"', dashed, from=2-2, to=1-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{Witt消去定理($\varepsilon$-Hermite型,二次型)}{}
+	设$E_{1},E_{2}$是有限维的.
+	\begin{enumerate}
+		\item 设$\varphi_{1},\varphi_{2}$非退化,对每个$1\leq i\leq 2$有$E_{i}=E_{i}^{\prime}\oplus E_{i}^{\prime\prime}$,其中$E_{i}^{\prime}$和$E_{i}^{\prime}$是$E_{i}$的关于$\varphi_{i}$正交的子空间.若
+		\begin{align*}
+			\left(E_{1},\varphi_{1}\right)\simeq\left(E_{2},\varphi_{2}\right),
+			\left(E_{1}^{\prime},\varphi_{1}|_{E_{1}^{\prime}\times E_{1}^{\prime}}\right)\simeq\left(E_{2}^{\prime},\varphi_{2}|_{E_{2}^{\prime}\times E_{2}^{\prime}}\right),
+		\end{align*}
+		则$\left(E_{1}^{\prime\prime},\varphi_{1}|_{E_{1}^{\prime\prime}\times E_{1}^{\prime\prime}}\right)\simeq\left(E_{2}^{\prime\prime},\varphi_{2}|_{E_{2}^{\prime\prime}\times E_{2}^{\prime\prime}}\right)$.
+		\item 设$Q_{1},Q_{2}$非退化,对每个$1\leq i\leq 2$有$E_{i}=E_{i}^{\prime}\oplus E_{i}^{\prime\prime}$,其中$E_{i}^{\prime}$和$E_{i}^{\prime}$是$E_{i}$的关于$Q_{i}$正交的子空间.若
+		\begin{align*}
+			\left(E_{1},Q_{1}\right)\simeq\left(E_{2},Q_{2}\right),
+			\left(E_{1}^{\prime},Q_{1}|_{E_{1}^{\prime}\times E_{1}^{\prime}}\right)\simeq\left(E_{2}^{\prime},Q_{2}|_{E_{2}^{\prime}\times E_{2}^{\prime}}\right),
+		\end{align*}
+		则$\left(E_{1}^{\prime\prime},Q_{1}|_{E_{1}^{\prime\prime}\times E_{1}^{\prime\prime}}\right)\simeq\left(E_{2}^{\prime\prime},Q_{2}|_{E_{2}^{\prime\prime}\times E_{2}^{\prime\prime}}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E_{1},E_{2}$有限维,$\varphi_{1},\varphi_{2}$迹值且非退化,$\left(E_{1},\varphi_{1}\right)\simeq\left(E_{2},\varphi_{2}\right)$,$\varphi_{1}$的Witt指数为$\nu_{1}$.定义集合$\mathcal{I}$和集合族$\left(\mathcal{I}_{k}\right)_{k=0}^{\nu}$如下:
+	\begin{center}
+		$\mathcal{I}=\bigcup\limits_{k=0}^{\nu}\mathcal{I}_{k}$,其中对每个$0\leq k\leq\nu$,$\mathcal{I}_{k}$是$E_{1}$的所有$k$维全迷向子空间组成的集合.
+	\end{center}
+	\begin{enumerate}
+		\item 那么对每个$0\leq k\leq\nu$,$\Aut_{\varepsilon-\mathsf{Herm}}\left(E_{1}\right)$传递地作用于$\mathcal{I}_{k}$.
+		\item 对每个$F\in\mathcal{I}$和$u\in\GL\left(F\right)$,存在$\tilde{u}\in\Aut_{\varepsilon-\mathsf{Herm}}\left(E_{1}\right)$使得$\tilde{u}|_{F}=u$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$A$是域,$E_{1},E_{2}$有限维,$Q_{1},Q_{2}$非退化,$\left(E_{1},Q_{1}\right)\simeq\left(E_{2},Q_{2}\right)$,$Q$的Witt指数为$\nu$.定义集合$\mathcal{S}$和集合族$\left(\mathcal{S}_{k}\right)_{k=0}^{\nu}$如下:
+	\begin{center}
+		$\mathcal{S}=\bigcup\limits_{k=0}^{\nu}\mathcal{S}_{k}$,其中对每个$0\leq k\leq\nu$,$\mathcal{S}_{k}$是$E_{1}$的所有$k$维全奇异子空间组成的集合.
+	\end{center}
+	\begin{enumerate}
+		\item 那么对每个$0\leq k\leq\nu$,$\Aut_{\mathsf{Quad}}\left(E_{1}\right)$传递地作用于$\mathcal{S}_{k}$.
+		\item 对每个$F\in\mathcal{S}$和$u\in\GL\left(F\right)$,存在$\tilde{u}\in\Aut_{\mathsf{Quad}}\left(E_{1}\right)$使得$\tilde{u}|_{F}=u$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$A$是代数闭域,$E$是有限维的,$Q$非退化,其Witt指数为$\nu$.定义集合$\mathcal{S}$和集合族$\left(\mathcal{S}_{k}\right)_{k=0}^{\nu}$如下:
+	\begin{center}
+		$\mathcal{S}=\bigcup\limits_{k=0}^{\nu}\mathcal{S}_{k}$,其中对每个$0\leq k\leq\nu$,$\mathcal{S}_{k}$是$E$的所有$k$维全奇异子空间组成的集合.
+	\end{center}
+	则对每个$0\leq k\leq\nu$,$\Aut_{\Quad}\left(E\right)$传递地作用于$\mathcal{S}_{k}$.
+\end{corollary}

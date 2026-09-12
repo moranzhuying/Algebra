@@ -1,0 +1,72 @@
+\section{分配律公式}
+
+\begin{proposition}{并集和交集的广义分配律}{}
+	设$\Lambda$是非空集合,$\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是一族非空集合,$\left(\left(X_{\lambda,i}\right)_{i\in J_{\lambda}}\right)_{\lambda\in\Lambda}$是一族集合族,$I=\prod\limits_{\lambda\in\Lambda}J_{\lambda}$,则
+	\begin{align*}
+		\bigcup\limits_{\lambda\in\Lambda}\bigcap\limits_{i\in J_{\lambda}}X_{\lambda,i}=\bigcap\limits_{f\in I}\bigcup\limits_{\lambda\in\Lambda}X_{\lambda,f\left(\lambda\right)},\bigcap\limits_{\lambda\in\Lambda}\bigcup\limits_{i\in J_{\lambda}}X_{\lambda,i}=\bigcup\limits_{f\in I}\bigcap\limits_{\lambda\in\Lambda}X_{\lambda,f\left(\lambda\right)}.
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{二元版本的集合的分配律}{}
+	设集合$I,J$非空,$\left(X_{i}\right)_{i\in I}$和$\left(Y_{j}\right)_{j\in J}$是集合族,则
+	\begin{align*}
+		\bigcap\limits_{i\in I}X_{i}\cup\bigcap\limits_{j\in J}Y_{j}=\bigcap\limits_{\left(i,j\right)\in I\times J}\left(X_{i}\cup Y_{j}\right),\bigcup\limits_{i\in I}X_{i}\cap\bigcup\limits_{j\in J}Y_{j}=\bigcup\limits_{\left(i,j\right)\in I\times J}\left(X_{i}\cap Y_{j}\right).
+	\end{align*}
+\end{corollary}
+
+\begin{proposition}{集合族的乘积对并集和交集的广义分配律}{}
+	设$\Lambda$是集合,$\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是集合族,$\left(\left(X_{\lambda,i}\right)_{i\in J_{\lambda}}\right)_{\lambda\in\Lambda}$是一族集合族,$I=\prod\limits_{\lambda\in\Lambda}J_{\lambda}$,则
+	\begin{align*}
+		\prod\limits_{\lambda\in\Lambda}\bigcup\limits_{i\in J_{\lambda}}X_{\lambda,i}=\bigcup\limits_{f\in I}\prod\limits_{\lambda\in\Lambda}X_{\lambda,f\left(\lambda\right)}.
+	\end{align*}
+	当$\Lambda\neq\emptyset$且$\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是一族非空集合时,有
+	\begin{align*}
+		\prod\limits_{\lambda\in\Lambda}\bigcap\limits_{i\in J_{\lambda}}X_{\lambda,i}=\bigcap\limits_{f\in I}\prod\limits_{\lambda\in\Lambda}X_{\lambda,f\left(\lambda\right)}.
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\Lambda$是非空集合,$\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是一族非空集合,$\left(\left(X_{\lambda,i}\right)_{i\in J_{\lambda}}\right)_{\lambda\in\Lambda}$是一族集合族,$I=\prod\limits_{\lambda\in\Lambda}J_{\lambda}$.若对任一$\lambda\in\Lambda$有
+	\begin{align*}
+		\bigsqcup\limits_{i\in J_{\lambda}}X_{\lambda,i}=\bigcup\limits_{i\in I}X_{i,\lambda},
+	\end{align*}
+	那么$\prod\limits_{\lambda\in\Lambda}\bigcup\limits_{i\in J_{\lambda}}X_{\lambda,i}=\bigsqcup\limits_{f\in I}\prod\limits_{\lambda\in\Lambda}X_{\lambda,f\left(\lambda\right)}$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\left(X_{i}\right)_{i\in I},\left(Y_{j}\right)_{j\in J}$是集合族,则$\bigcup\limits_{i\in I}X_{i}\times\bigcup\limits_{j\in J}Y_{j}=\bigcup\limits_{\left(i,j\right)\in I\times J}\left(X_{i}\times Y_{j}\right)$.当$I,J$都非空时,有
+	\begin{align*}
+		\bigcap\limits_{i\in I}X_{i}\times\bigcap\limits_{j\in J}Y_{j}=\bigcap\limits_{\left(i,j\right)\in I\times J}\left(X_{i}\times Y_{j}\right).
+	\end{align*}
+\end{corollary}
+
+\begin{proposition}{集合族的乘积和交集的可交换性}{}
+	设$\left(X_{i,j}\right)_{i\in I,j\in J}$是集合族.若$J\neq\emptyset$,则$\bigcap\limits_{j\in J}\prod\limits_{i\in I}X_{i,j}=\prod\limits_{i\in I}\bigcap\limits_{j\in J}X_{i,j}$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(X_{i}\right)_{i\in I},\left(Y_{i}\right)_{i\in I}$是集合族.若$I\neq\emptyset$,则
+	\begin{align*}
+		\prod\limits_{i\in I}X_{i}\cap\prod\limits_{i\in I}Y_{i}=\prod\limits_{i\in I}\left(X_{i}\cap Y_{i}\right),\bigcap\limits_{i\in I}X_{i}\times\bigcap\limits_{i\in I}Y_{i}=\bigcap\limits_{i\in I}\left(X_{i}\times Y_{i}\right).
+	\end{align*}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

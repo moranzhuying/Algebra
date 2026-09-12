@@ -1,0 +1,191 @@
+\chapter{偏序关系,偏序集}
+
+\section{偏序关系的定义}
+
+\begin{definition}{偏序关系}{}
+	设表达式$R\left\{x,y\right\}$(字母$x,y$互异)相对$x$和$y$是传递的,自反的.如果
+	\begin{align*}
+		R\left\{x,y\right\}\wedge R\left\{y,x\right\}\implies x=y,
+	\end{align*}
+	则称$R\left\{x,y\right\}$是相对$x$和$y$的偏序关系.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 相等关系$x=y$是偏序关系.
+		\item 公式$X\subseteq Y$是相对$X$和$Y$的偏序关系,通常被称为包含关系.
+		\item 设$R\left\{x,y\right\}$是相对$x$和$y$的偏序关系,则$R\left\{y,x\right\}$是相对$x$和$y$的偏序,称为$R\left\{x,y\right\}$的对偶.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{集合上的偏序关系}{}
+	设$E$是集合,$R\left\{x,y\right\}$是偏序关系.若$R\left\{x,x\right\}\iff x\in E$,则称$R$是$E$上的偏序关系.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 相等关系和包含关系都不是某个集合上的偏序关系.
+		\item 设$R\left\{x,y\right\}$是偏序关系,集合$E$满足$x\in E\implies R\left\{x,x\right\}$.把公式
+		\begin{align*}
+			R\left\{x,y\right\}\wedge x\in E\wedge y\in E
+		\end{align*}
+		记作$S\left\{x,y\right\}$,则$S\left\{x,y\right\}$是集合$E$上的偏序关系,称为$R\left\{x,y\right\}$在$E$上诱导的偏序关系.在实践中,我们通常滥用语言,把``$S\left\{x,y\right\}$是$E$上的偏序关系''说成``公式$S\left\{x,y\right\}\wedge x\in E\wedge y\in E$是$E$上的偏序关系''.
+		\item 设$E,F$是集合,$\PFunc\left(E,F\right)$是$E$到$F$的偏函数组成的集合,$f,g\in\PFunc\left(E,F\right)$,则
+		\begin{center}
+			``$g$是$f$的延拓''
+		\end{center}
+		是$\PFunc\left(E,F\right)$上的偏序关系,称为函数延拓偏序.
+		\item 设$E$是集合,$\mathfrak{P}$是$E$的划分组成的集合.对$E$的每个划分$\omega$,记$\tilde{\omega}$为相对于$\omega$在$E$上诱导的等价关系的二元关系,那么公式``划分$\omega$比$\omega^{\prime}$粗''等价于$\tilde{\omega}\supseteq\tilde{\omega}^{\prime}$,从而是$\mathfrak{P}$上的关于$\omega$和$\omega^{\prime}$的偏序关系.称该偏序关系为划分的粗细序.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{偏序}{}
+	设$E$是集合,$\Gamma\coloneq\left(G,E,E\right)$是对应.若公式$\left(x,y\right)\in G$是$E$上的偏序关系,则称$\Gamma$是$E$上的偏序.通过语言滥用,我们有时候会说$G$是$E$上的偏序.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$E$是集合,$R\left\{x,y\right\}$是集合$E$上的偏序,则存在相对$R$的二元关系$G$使得$\left(G,E,E\right)$是$E$上的偏序.
+\end{proposition}
+
+\begin{proposition}{偏序的二元关系刻画}{}
+	设$\Gamma\coloneq\left(G,E,E\right)$是集合$E$上的对应,则$\Gamma$是偏序$\iff$ $\Gamma\circ\Gamma=\Gamma$且$G\cap G^{-1}=\Delta_{E}$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+\section{射影空间结构}
+
+记号约定:$K$是除环,$E$是非空集合.
+
+\begin{definition}{射影空间结构}{}
+	设$\Phi=\left\{f\in\Isom_{\mathsf{Set}}\left(W,E\right)\middle|W\subseteq\mathbb{P}\left(K^{\left(E\right)}\right)\right\}\neq\emptyset$,并且满足下列条件:
+	\begin{enumerate}
+		\item (\text{EP1})对任一$f\in\Phi$,$\dom\left(f\right)$是$\mathbb{P}\left(K^{\left(E\right)}\right)$的射影线性簇.
+		\item (\text{EP2})对任一$f,g\in\Phi$,若二者各自的定义域分别为射影线性簇$\mathbb{P}\left(V\right),\mathbb{P}\left(W\right)$,则$g^{-1}\circ f:\mathbb{P}\left(V\right)\to\mathbb{P}\left(W\right)$是射影同构.
+		\item (\text{EP3})对任一$f\in\Phi$,若其定义域为射影线性簇$V$,$h:\mathbb{P}\left(V\right)\to\mathbb{P}\left(W\right)$是射影同构,则$f\circ h^{-1}\in\Phi$.
+	\end{enumerate}
+	我们称$\Phi$是射影图册,其元素称为射影图,称配备$\Phi$的$E$是射影空间结构.
+\end{definition}
+
+\begin{theorem}{向量空间族诱导的射影空间结构}{}
+	设$\left(V_{i}\right)_{i\in I}$是一族$K$-向量空间,$\forall i\in I\left(f_{i}\in\Isom_{\mathsf{Set}}\left(\mathbb{P}\left(V_{i}\right),E\right)\right)$.若对任一$i,j\in I$,$f_{i}^{-1}\circ f_{j}$是射影同构,则$E$上存在唯一一个和$\left(f_{i}\right)_{i\in I}$相容的射影图册$\Phi$.
+\end{theorem}
+
+\begin{corollary}{标准射影空间诱导的射影空间结构}{}
+	设$V$是$K$-向量空间,则$\mathbb{P}\left(V\right)$典范且唯一地诱导一个射影图册.
+\end{corollary}
+
+\begin{definition}{射影空间(内蕴)}{}
+	配备了射影图册的集合$E$称为射影空间.
+\end{definition}
+
+\begin{definition}{射影线性簇(内蕴)}{}
+	设$E$是射影图册是$\Phi$的射影空间,$M\subseteq E$.若存在$f\in\Phi$(设其定义域为$\mathbb{P}\left(V\right)$),使得$f^{-1}\left(M\right)$是$\mathbb{P}\left(V\right)$的射影线性簇,则称$M$是$E$的射影线性簇.
+\end{definition}
+
+\begin{theorem}{射影线性簇继承射影图册}{}
+	若$E$是射影图册是$\Phi$的射影空间,$M$是其射影线性簇,则$M$典范且唯一地继承$\Phi$限制在$E$上的射影图册.
+\end{theorem}
+
+\begin{definition}{射影空间的维数(内蕴)}{}
+	设$E$是射影图册是$\Phi$的射影空间.若存在$f\in\Phi$,使得$\dom\left(f\right)$是$n$为射影空间,则称$E$的维数是$n$.记$E$的维数为$\dim E$.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

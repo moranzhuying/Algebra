@@ -1,0 +1,135 @@
+\section{换位子}
+
+记号约定:$G,G^{\prime}$是群.对$x,y\in G$,记$x^{y}\coloneq y^{-1}xy$.
+
+\begin{definition}{换位子}{}
+	设$x,y\in G$.称$\left[x,y\right]\coloneq x^{-1}y^{-1}xy$为$x$和$y$的换位子.
+\end{definition}
+
+\begin{proposition}{换位子的性质}{}
+	设$x,y\in G$,则$\left[y,x\right]=\left[x,y\right]^{-1}$,$xy=yx\left[x,y\right]$.进一步,$x$和$y$交换$\iff$ $\left[x,y\right]=e$.
+\end{proposition}
+
+\begin{proposition}{换位子和共轭}{}
+	设$x,y,z\in G$,则$x^{y}=x\left[x,y\right]=\left[y,x^{-1}\right]x,\left[x,y\right]^{z}=\left[x^{z},y^{z}\right]$.
+\end{proposition}
+
+\begin{theorem}{换位子恒等式}{}
+	设$x,y,z\in G$.
+	\begin{enumerate}
+		\item $\left[x,yz\right]=\left[x,z\right]\left[x,y\right]^{z}=\left[x,z\right]\left[x,\left[y,x\right]\right]\left[x,y\right]$.
+		\item $\left[xy,z\right]=\left[x,z\right]^{y}\left[y,z\right]=\left[x,z\right]\left[\left[z,x\right],y\right]\left[y,z\right]$.
+		\item (Hall-Witt恒等式)$\left[x^{y},\left[y,z\right]\right]\left[y^{z},\left[z,x\right]\right]\left[z^{x},\left[x,y\right]\right]=e$.
+		\item $\left[x,yz\right]\left[z,xy\right]\left[y,xz\right]=e$.
+		\item $\left[xy,z\right]\left[yz,x\right]\left[zx,y\right]=e$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{换位子子群}{}
+	设$A,B$是$G$的子群.定义$\left[A,B\right]$为$\left\{\left[a,b\right]\in G\middle|a\in A,b\in B\right\}$生成的子群.
+\end{definition}
+
+\begin{proposition}{换位子子群的性质}{}
+	设$A,B$是$G$的子群.
+	\begin{enumerate}
+		\item $\left[A,B\right]=\left\{e\right\}$ $\iff$ $A$中心化$B$.
+		\item $\left[A,B\right]\subseteq A$ $\iff$ $B$正规化$A$.
+		\item 若$A,B$都是$G$的正规子群,则$\left[A,B\right]$是$G$的正规子群.
+		\item 若$A,B$都是$G$的特征子群,则$\left[A,B\right]$是$G$的特征子群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{子群的换位子的性质}{}
+	设$A,B,C$是$G$的子群.
+	\begin{enumerate}
+		\item $A$正规化$\left[A,B\right]$.
+		\item 若$\left[B,C\right]$正规化$A$,则$\left[A,\left[B,C\right]\right]$是$\left\{\left[a,\left[b,c\right]\right]\in G\middle|a\in A,b\in B,c\in C\right\}$生成的子群.
+		\item (三子群引理)若$A,B,C$是$G$的正规子群,则$\left[A,\left[B,C\right]\right]\subseteq\left[C,\left[B,A\right]\right]\left[B,\left[C,A\right]\right]$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{导群}{}
+	我们称$D\left(G\right)\coloneq\left[G,G\right]$为$G$的导群(或换位子子群).
+\end{definition}
+
+\begin{proposition}{导群的性质}{}
+	$G$是Abel群$\iff$ $D\left(G\right)=\left\{e\right\}$.
+\end{proposition}
+
+\begin{proposition}{交换群的同态性质}{}
+	设$G^{\prime}$是群,$f\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$,则$f\left(D\left(G\right)\right)\subseteq D\left(G^{\prime}\right)$.进一步,$f$是满射时$f\left(D\left(G\right)\right)=D\left(G^{\prime}\right)$.
+\end{proposition}
+
+\begin{corollary}{导群的正规性}{}
+	$D\left(G\right)$是$G$的特征子群,从而是$G$的正规子群.
+\end{corollary}
+
+\begin{corollary}{Abel化}{}
+	$G/D\left(G\right)$是Abel群.
+\end{corollary}
+
+\begin{corollary}{导群的泛性质}{}
+	设$\pi:G\twoheadrightarrow G/D\left(G\right)$是典范满射,$f\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$,则存在唯一的$\bar{f}\in\Hom_{\mathsf{Grp}}\left(G/D\left(G\right),G^{\prime}\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			G && {G/D\left(G\right)} \\
+			& {G^{\prime}}
+			\arrow["\pi", two heads, from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\bar{f}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{corollary}{包含导群的子群}{}
+	设$H$是$G$的子群,则$H\supseteq D\left(G\right)$ $\iff$ $H$是$G$的正规子群,$G/H$是Abel群.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$X$生成$G$,的$D\left(G\right)$是$\left\{\left[x,x^{\prime}\right]\in X\middle|x,x^{\prime}\in X\right\}$生成的正规子群.
+\end{corollary}
+
+\begin{example}{非交换单群}{}
+	若$G$是非交换的单群,则$D\left(G\right)=G$.
+\end{example}
+
+\begin{example}{置换群和交错群}{}
+	设$n\in\N$,则$D\left(\mathfrak{S}_{n}\right)=\mathfrak{A}_{n}$.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

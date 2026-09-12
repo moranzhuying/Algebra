@@ -1,0 +1,49 @@
+\section{对偶意义下的正交}
+
+记号约定:$A$是环,$E$是左$A$-模,$\langle -,-\rangle$是$E$上的典范配对.
+
+\begin{definition}{对偶意义下的正交(元素版本)}{}
+	设$x\in E,x^{\ast}\in E^{\vee}$.若$\langle x,x^{\ast}\rangle=0$,则称$x$和$x^{\ast}$正交.
+\end{definition}
+
+\begin{definition}{对偶意义下的正交(集合版本)}{}
+	设$M\subseteq E,N\subseteq E^{\vee}$.
+	\begin{enumerate}
+		\item 若$\forall x\in M\forall x^{\ast}\in N\left(\langle x,x^{\ast}\rangle=0\right)$,则称$M$和$N$正交.
+		\item 若$N=\left\{x^{\ast}\right\}$且和$M$正交,则称$x^{\ast}$和$M$正交.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{正交子模}{}
+	设$M\subseteq E,N\subseteq E^{\vee}$.定义
+	\begin{align*}
+		M^{\circ}\coloneq\bigcap\limits_{x\in M}\ker\left(\langle x,-\rangle\right),N^{\circ}\coloneq\bigcap\limits_{x^{\ast}\in E^{\vee}}\ker\left(\langle -,x^{\ast}\rangle\right).
+	\end{align*}
+	分别称二者为$M$在$E^{\vee}$中的零化子和$N$在$E$中的正交子模.
+\end{definition}
+
+\begin{definition}{}{}
+	$M\subseteq E,N\subseteq E^{\vee}$.定义$M^{\circ\circ}\coloneq\left(M^{\circ}\right)^{\circ},M^{\circ\circ\circ}\coloneq\left(M^{\circ\circ}\right)^{\circ},N^{\circ\circ}\coloneq\left(N^{\circ}\right)^{\circ},N^{\circ\circ\circ}\coloneq\left(N^{\circ\circ}\right)^{\circ}$.
+\end{definition}
+
+\begin{proposition}{全空间和零空间的零化子}{}
+	$E^{\circ}=\left\{0\right\},\left\{0\right\}^{\circ}=E^{\vee}$.
+\end{proposition}
+
+\begin{proposition}{正交子模关于$\subseteq$是反序的}{}
+	\begin{enumerate}
+		\item 设$M,N\subseteq X,\bar{M}$.若$M\subseteq N$,则$M^{\circ}\supseteq N^{\circ}$.
+		\item 设$\bar{N}\subseteq E^{\vee}$.若$\bar{M}\subseteq\bar{N}$,则$\bar{M}^{\circ}\supseteq\bar{N}^{\circ}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{并集的正交子模=正交的交集}{}
+	\begin{enumerate}
+		\item 设$\left(M_{i}\right)_{i\in I}$是$E$的一族子集,则$\left(\bigcup\limits_{i\in I}M_{i}\right)^{\circ}=\bigcap\limits_{i\in I}M_{i}^{\circ}=\langle\bigcup\limits_{i\in I}M_{i}\rangle^{\circ}$.
+		\item 设$\left(N_{j}\right)_{j\in J}$是$E^{\vee}$的一族子集,则$\left(\bigcup\limits_{j\in J}N_{j}\right)^{\circ}=\bigcap\limits_{j\in J}N_{j}^{\circ}=\langle\bigcup\limits_{j\in J}N_{j}\rangle^{\circ}$
+\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{双重正交和三重正交}{}
+	设$M$是$E$的子模,则$M\subseteq M^{\circ\circ},M^{\circ\circ\circ}=M^{\circ}$.
+\end{proposition}

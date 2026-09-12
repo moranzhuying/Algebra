@@ -1,0 +1,67 @@
+\section{等价}
+
+\begin{definition}{等价}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$的表达式.定义$\boldsymbol{A}$和$\boldsymbol{B}$的等价式$\boldsymbol{A}\iff\boldsymbol{B}$为表达式$\left(\boldsymbol{A}\implies\boldsymbol{B}\right)\wedge\left(\boldsymbol{B}\implies\boldsymbol{A}\right)$的缩写.
+\end{definition}
+
+\begin{metatheorem}{代入对等价的分配律}{}
+	设$\boldsymbol{A},\boldsymbol{B},\boldsymbol{T}$是理论$\mathcal{T}$的表达式,$\boldsymbol{x}$是字母,则$\left(\boldsymbol{T}|\boldsymbol{x}\right)\left(\boldsymbol{A}\iff\boldsymbol{B}\right)$和$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{A}\iff\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{B}$相同.
+\end{metatheorem}
+
+\begin{metatheorem}{等价公式的封闭性}{}
+	若$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$中的公式,则$\boldsymbol{A}\iff\boldsymbol{B}$是$\mathcal{T}$中的一个公式.
+\end{metatheorem}
+
+\begin{definition}{等价公式}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$中的公式.若$\boldsymbol{A}\iff\boldsymbol{B}$是定理,则称$\boldsymbol{A}$和$\boldsymbol{B}$在理论$\mathcal{T}$中\textbf{等价}.
+\end{definition}
+
+\begin{corollary}{保持满足性}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$中关于字母$\boldsymbol{x}$的两个公式,$\boldsymbol{x}$不是$\mathcal{T}$的常元.若$\boldsymbol{A}$和$\boldsymbol{B}$在$\mathcal{T}$中等价,则对$\mathcal{T}$中的任意项$\boldsymbol{T}$,$\boldsymbol{T}$满足$\boldsymbol{A}$当且仅当$\boldsymbol{T}$满足$\boldsymbol{B}$.
+\end{corollary}
+
+\begin{metatheorem}{等价公式的对称性与传递性}{}
+	设$\boldsymbol{A},\boldsymbol{B},\boldsymbol{C}$是理论$\mathcal{T}$的公式.
+	\begin{enumerate}
+		\item (对称性)若$\boldsymbol{A}\iff\boldsymbol{B}$是$\mathcal{T}$的公式,则$\boldsymbol{B}\iff\boldsymbol{A}$是$\mathcal{T}$的定理.
+		\item (传递性)若$\boldsymbol{A}\iff\boldsymbol{B}$和$\boldsymbol{B}\iff\boldsymbol{C}$都是$\mathcal{T}$的公式,则$\boldsymbol{A}\iff\boldsymbol{C}$是$\mathcal{T}$的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{等价公式的替换}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$中等价的公式,$\boldsymbol{C}$是$\mathcal{T}$的公式.
+	\begin{enumerate}
+		\item (否定算子的替换)$\neg\boldsymbol{A}\iff\boldsymbol{B}$是$\mathcal{T}$中的定理.
+		\item (蕴含算子后件的替换)$\left(\boldsymbol{A}\implies\boldsymbol{C}\right)\iff\left(\boldsymbol{B}\implies\boldsymbol{C}\right)$是$\mathcal{T}$中的定理.
+		\item (蕴含算子前件的替换)$\left(\boldsymbol{C}\implies\boldsymbol{A}\right)\iff\left(\boldsymbol{C}\implies\boldsymbol{B}\right)$是$\mathcal{T}$中的定理.
+		\item (合取算子的替换)$\left(\boldsymbol{A}\wedge\boldsymbol{C}\right)\iff\left(\boldsymbol{B}\wedge\boldsymbol{C}\right)$是$\mathcal{T}$中的定理.
+		\item (析取算子的替换)$\left(\boldsymbol{A}\vee\boldsymbol{C}\right)\iff\left(\boldsymbol{B}\vee\boldsymbol{C}\right)$是$\mathcal{T}$中的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{经典命题逻辑中的等价公式}{}
+	设$\boldsymbol{A},\boldsymbol{B},\boldsymbol{C}$是理论$\mathcal{T}$的公式.
+	\begin{enumerate}
+		\item (双重否定律)$\neg\neg\boldsymbol{A}\iff\boldsymbol{A}$是$\mathcal{T}$中的定理.
+		\item (逆否命题律)$\left(\boldsymbol{A}\implies\boldsymbol{B}\right)\iff\left(\left(\neg\boldsymbol{B}\implies\neg\boldsymbol{A}\right)\right)$是$\mathcal{T}$中的定理.
+		\item (合取幂等律)$\boldsymbol{A}\wedge\boldsymbol{A}\iff\boldsymbol{A}$是$\mathcal{T}$中的定理.
+		\item (合取交换律)$\boldsymbol{A}\wedge\boldsymbol{B}\iff\boldsymbol{B}\wedge\boldsymbol{A}$	是$\mathcal{T}$中的定理.
+		\item (合取结合律)$\boldsymbol{A}\wedge\left(\boldsymbol{B}\wedge\boldsymbol{C}\right)\iff\left(\boldsymbol{A}\wedge\boldsymbol{B}\right)\wedge\boldsymbol{C}$是$\mathcal{T}$中的定理.
+		\item (De Morgan律)$\boldsymbol{A}\vee\boldsymbol{B}\iff\neg\left(\neg\boldsymbol{A}\wedge\neg\boldsymbol{B}\right)$是$\mathcal{T}$中的定理.
+		\item (析取幂等律)$\boldsymbol{A}\vee\boldsymbol{A}\iff\boldsymbol{A}$是$\mathcal{T}$中的定理.
+		\item (析取交换律)$\boldsymbol{A}\vee\boldsymbol{B}\iff\boldsymbol{B}\vee\boldsymbol{A}$是$\mathcal{T}$中的定理.
+		\item (析取结合律)$\boldsymbol{A}\vee\left(\boldsymbol{B}\vee\boldsymbol{C}\right)\iff\left(\boldsymbol{A}\vee\boldsymbol{B}\right)\vee\boldsymbol{C}$是$\mathcal{T}$中的定理.
+		\item (合取对析取的分配律)$\boldsymbol{A}\wedge\left(\boldsymbol{B}\vee\boldsymbol{C}\right)\iff\left(\boldsymbol{A}\wedge\boldsymbol{B}\right)\vee\left(\boldsymbol{A}\wedge\boldsymbol{C}\right)$是$\mathcal{T}$中的定理.
+		\item (析取对合取的分配律)$\boldsymbol{A}\vee\left(\boldsymbol{B}\wedge\boldsymbol{C}\right)\iff\left(\boldsymbol{A}\vee\boldsymbol{B}\right)\wedge\left(\boldsymbol{A}\vee\boldsymbol{C}\right)$是$\mathcal{T}$中的定理.
+		\item (蕴含的否定)$\boldsymbol{A}\wedge\neg\boldsymbol{B}\iff\neg\left(\boldsymbol{A}\implies\boldsymbol{B}\right)$是$\mathcal{T}$中的定理.
+		\item (蕴含的析取表示)$\boldsymbol{A}\vee\boldsymbol{B}\iff\left(\neg\boldsymbol{A}\implies\boldsymbol{B}\right)$是$\mathcal{T}$中的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{真/假件消去律}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$中的公式.
+	\begin{enumerate}
+		\item (真件合取化简)若$\boldsymbol{A}$是$\mathcal{T}$中的一个定理,则$\left(\boldsymbol{A}\wedge\boldsymbol{B}\right)\iff\boldsymbol{B}$是$\mathcal{T}$中的定理.
+		\item (假件析取化简)若$\neg\boldsymbol{A}$是$\mathcal{T}$中的一个定理,则$\left(\boldsymbol{A}\vee\boldsymbol{B}\right)\iff\boldsymbol{B}$是$\mathcal{T}$中的定理.
+	\end{enumerate}
+\end{metatheorem}

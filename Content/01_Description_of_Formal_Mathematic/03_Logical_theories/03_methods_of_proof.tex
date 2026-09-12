@@ -1,0 +1,64 @@
+\section{证明方法}
+
+\subsection*{辅助假设法}
+
+\begin{metatheorem}{演绎定理}{}
+	设$\boldsymbol{A}$是理论$\mathcal{T}$中的一个公式,$\mathcal{T}^{\prime}$是通过将公式$\boldsymbol{A}$作为新公理添加到$\mathcal{T}$中所得到的扩张理论.若$\boldsymbol{B}$是扩张理论$\mathcal{T}^{\prime}$中的一个定理,则$\boldsymbol{A}\implies\boldsymbol{B}$是$\mathcal{T}$的一个定理.
+\end{metatheorem}
+
+\begin{remark}{演绎定理的直观语义释义}{}
+	在实践中,我们通常用诸如``假定$\boldsymbol{A}$为真''之类的措辞来表示将要使用这一准则.这句话的意思是,推理将暂时在理论$\mathcal{T}^{\prime}$中进行,直到公式$\boldsymbol{B}$得到证明.一旦证明完成,就确立了$\boldsymbol{A}\implies\boldsymbol{B}$是理论$\mathcal{T}$中的一个定理,随后推理在$\mathcal{T}$中继续进行,通常无须显式说明此时已经脱离了理论$\mathcal{T}^{\prime}$.作为新公理引入的关系$\boldsymbol{A}$被称为\textbf{辅助假设}.
+	
+	例如,当我们说``设$\boldsymbol{x}$为一个实数''时,我们实际上正在构建一个理论,在该理论中,公式``$\boldsymbol{x}$是实数''就是一个辅助假设.
+\end{remark}
+
+\subsection*{反证法}
+
+\begin{metatheorem}{反证法}{}
+	设$\boldsymbol{A}$是理论$\mathcal{T}$中的一个公式,$\mathcal{T}^{\prime}$是通过将$\neg\boldsymbol{A}$作为新公理添加到$\mathcal{T}$中所得到的理论$\mathcal{T}^{\prime}$.若$\mathcal{T}^{\prime}$是不一致的,则$\boldsymbol{A}$是$\mathcal{T}$中的一个定理.
+\end{metatheorem}
+
+\begin{remark}{反证法的直观语义释义}{}
+	实践中,我们通常用诸如``假定$\boldsymbol{A}$为假''之类的措辞来表示将要使用这一准则.这句话的意思是,推理将暂时在理论$\mathcal{T}^{\prime}$中进行,直到证明了两个形如$\boldsymbol{B}$和``非$\boldsymbol{B}$''的定理.一旦完成这一点,便确立了$\boldsymbol{A}$是理论$\mathcal{T}$中的一个定理,这通常用诸如``而这(即在前述记法中的$\boldsymbol{B}$和``非$\boldsymbol{B}$'')是荒谬的,因此$\boldsymbol{A}$为真''之类的措辞来表达.随后,推理在理论$\mathcal{T}$中继续进行。
+\end{remark}
+
+\begin{metatheorem}{双重否定消去律}{}
+	设$\boldsymbol{A}$是理论$\mathcal{T}$中的公式,则$\neg\neg\boldsymbol{A}\implies\boldsymbol{A}$是$\mathcal{T}$中的定理.
+\end{metatheorem}
+
+\begin{metatheorem}{逆反律}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$中的公式,则$\left(\neg\boldsymbol{B}\implies\neg\boldsymbol{A}\right)\implies\left(\boldsymbol{A}\implies\boldsymbol{B}\right)$是$\mathcal{T}$中的定理.
+\end{metatheorem}
+
+\subsubsection*{分情况讨论法}
+
+\begin{metatheorem}{析取消去律(分情况讨论法)}{}
+	设$\boldsymbol{A},\boldsymbol{B},\boldsymbol{C}$是理论$\mathcal{T}$中的公式.若$\boldsymbol{A}\vee\boldsymbol{B}$,$\boldsymbol{A}\implies\boldsymbol{C}$和$\boldsymbol{B}\implies\boldsymbol{C}$均是$\mathcal{T}$中的定理,则$\boldsymbol{C}$是$\mathcal{T}$中的定理.
+\end{metatheorem}
+
+\begin{remark}{析取消去律的直观语义释义}{}
+	为了证明$\boldsymbol{C}$,当我们知道定理``$\boldsymbol{A}\vee\boldsymbol{B}$''时,只需先将$\boldsymbol{A}$添加到$\mathcal{T}$的公理中来证明$\boldsymbol{C}$,然后再将$\boldsymbol{B}$添加入$\mathcal{T}$的公理中来证明$\boldsymbol{C}$.这一方法的有趣之处在于,即便``$\boldsymbol{A}\vee\boldsymbol{B}$''为真,我们通常也无法断言$\boldsymbol{A}$为真或$\boldsymbol{B}$为真.
+\end{remark}
+
+\begin{corollary}{排中分情况讨论法}{}
+	设$\boldsymbol{A},\boldsymbol{B}$是理论$\mathcal{T}$的公式.若$\boldsymbol{A}\implies\boldsymbol{B}$和$\neg\boldsymbol{A}\implies\boldsymbol{B}$都是$\mathcal{T}$中的定理,则$\boldsymbol{B}$是$\mathcal{T}$中的定理.
+\end{corollary}
+
+
+\subsubsection*{辅助常元法(存在消去法)}
+
+\begin{metatheorem}{辅助常元定理}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$中的公式,$\boldsymbol{x}$是一个字母,满足以下两个条件：
+	\begin{itemize}
+		\item $\boldsymbol{x}$不是$\mathcal{T}$的常元,并且未在$\boldsymbol{B}$中出现.
+		\item $\mathcal{T}$中有一个项$\boldsymbol{T}$满足$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{A}$是$\mathcal{T}$中的一个定理.
+	\end{itemize}
+	令$\mathcal{T}^{\prime}$是通过将公式$\boldsymbol{A}$作为新公理添加到$\mathcal{T}$中得到的理论.若$\boldsymbol{B}$是$\mathcal{T}^{\prime}$中的一个定理,则$\boldsymbol{B}$是$\mathcal{T}$的一个定理.
+\end{metatheorem}
+
+\begin{remark}{辅助常元定理的直观语义释义}{}
+	从直觉上看,该方法为了证明$\boldsymbol{B}$,使用了一个被假定赋予了某些性质(记作$\boldsymbol{A}$)的任意对象$\boldsymbol{x}$(\textbf{辅助常元}).例如,在几何证明中,若涉及一条直线 $\boldsymbol{D}$,我们可能会在该直线上``取''一个点$\boldsymbol{x}$,此时公式$\boldsymbol{A}$就是$\boldsymbol{x}\in\boldsymbol{D}$.
+	
+	为了能在证明过程中使用一个具有某些特定性质的对象,这类对象必须存在.定理$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{A}$被称为\textbf{合法化定理},它保证了这种存在性.在实践中,我们通常用诸如``设$\boldsymbol{x}$是一个使得$\boldsymbol{A}$成立的对象''之类的措辞来表示将要使用该方法.与辅助假设法不同的是,该论证的最终结论并不涉及$\boldsymbol{x}$.
+\end{remark}
+

@@ -1,0 +1,74 @@
+\section{基变换}
+
+记号约定:
+
+\begin{itemize}
+	\item $A$是环,$E,F$都是左(相对的,右)$A$-模,$m,n\geq 1$.
+	\item $\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n},\bar{\mathcal{B}}\coloneq\left(\bar{e}_{i}\right)_{i=1}^{n}$是$E$的基.
+	\item $\mathcal{B}^{\ast}\coloneq\left(e_{i}^{\ast}\right)_{i=1}^{n},\bar{\mathcal{B}}^{\ast}\coloneq\left(\bar{e}_{i}^{\ast}\right)_{i=1}^{n}$分别是$\mathcal{B},\bar{\mathcal{B}}$的对偶基.
+	\item $\mathcal{C}\coloneq\left(d_{j}\right)_{j=1}^{m},\bar{\mathcal{C}}\coloneq\left(\bar{d}_{j}\right)_{j=1}^{m}$是$F$的基.
+\end{itemize}
+
+\begin{proposition}{基转换矩阵和基}{}
+	设$\left(a_{j,i}\right)_{\substack{1\leq j\leq n\\1\leq i\leq n}}$是$A$中的矩阵,$\left(e_{i}^{\prime}\right)_{i=1}^{n}$是$E$的元素族,满足如下条件:
+	\begin{itemize}
+		\item 当$E$是左$A$-模时,$\forall 1\leq i\leq n\left(e_{i}^{\prime}=\sum\limits_{j=1}^{n}a_{j,i}e_{j}\right)$.
+		\item 当$E$是右$A$-模时,$\forall 1\leq i\leq n\left(e_{i}^{\prime}=\sum\limits_{j=1}^{n}e_{j}a_{j,i}\right)$.
+	\end{itemize}
+	则$\left(e_{i}^{\prime}\right)_{i=1}^{n}$是$E$的基$\iff$ $\left(a_{j,i}\right)_{\substack{1\leq j\leq n\\1\leq i\leq n}}$是可逆矩阵.
+\end{proposition}
+
+\begin{definition}{基转换矩阵}{}
+	我们称$\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}$是从$\mathcal{B}$到$\bar{\mathcal{B}}$的基转换矩阵(或过渡矩阵).
+\end{definition}
+
+\begin{proposition}{对偶基之间的基转换矩阵}{}
+	$\left[\id_{E}\right]_{\bar{\mathcal{B}}^{\ast}}^{\mathcal{B}^{\ast}}$是$\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}$的反变矩阵.
+\end{proposition}
+
+\begin{proposition}{线性映射的基变换公式}{}
+	设$f\in\Hom_{A}\left(E,F\right)$.
+	\begin{enumerate}
+		\item 若$E,F$是左$A$-模,则$\left(\left[f\right]_{\bar{\mathcal{B}}}^{\bar{\mathcal{C}}}\right)^{\top}=\left(\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}\right)^{\top}\ast\left(\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\right)^{\top}\ast\left(\left[\id_{F}\right]_{\mathcal{C}}^{\bar{\mathcal{C}}}\right)^{\top}$
+		\item 若$E,F$是右$A$-模,则$\left[f\right]_{\bar{\mathcal{B}}}^{\bar{\mathcal{C}}}=\left[\id_{F}\right]_{\mathcal{C}}^{\bar{\mathcal{C}}}\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{自同态的基变换公式}{}
+	设$f\in\End_{A}\left(E\right)$.
+	\begin{enumerate}
+		\item 若$E$是左$A$-模,则$\left(\left[f\right]_{\bar{\mathcal{B}}}^{\bar{\mathcal{B}}}\right)^{\top}=\left(\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}\right)^{\top}\ast\left(\left[f\right]_{\mathcal{B}}^{\mathcal{B}}\right)^{\top}\ast\left(\left[\id_{E}\right]_{\mathcal{B}}^{\bar{\mathcal{B}}}\right)^{\top}$
+		\item 若$E$是右$A$-模,则$\left[f\right]_{\bar{\mathcal{B}}}^{\bar{\mathcal{B}}}=\left[\id_{E}\right]_{\mathcal{B}}^{\bar{\mathcal{B}}}\left[f\right]_{\mathcal{B}}^{\mathcal{B}}\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{坐标的变换公式}{}
+	设$x\in E$.
+	\begin{enumerate}
+		\item 若$E$是左$A$-模,则$\left[x\right]_{\mathcal{B}}=\left[x\right]_{\bar{\mathcal{B}}}\left(\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}\right)^{\top}$.
+		\item 若$E$是右$A$-模,则$\left[x\right]_{\mathcal{B}}=\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}\left[x\right]_{\bar{\mathcal{B}}}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{对偶空间中的坐标变换}{}
+	设$x^{\ast}\in E^{\vee}$.
+	\begin{enumerate}
+		\item 若$E$是左$A$-模,则$\left[x^{\ast}\right]_{\bar{\mathcal{B}}^{\ast}}=\left(\left[\id_{E^{\vee}}\right]_{\bar{\mathcal{B}}^{\ast}}^{\mathcal{B}^{\ast}}\right)^{\top}\left[x\right]_{\mathcal{B}^{\ast}}$.
+		\item 若$E$是右$A$-模,则$\left[x\right]_{\bar{\mathcal{B}}^{\ast}}=\left[\id_{E^{\vee}}\right]_{\bar{\mathcal{B}}^{\ast}}^{\mathcal{B}^{\ast}}\left[x\right]_{\mathcal{B}}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{半线性映射的基变换}{}
+	若$B$是环,$\sigma\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,$F$是左(相对的,右)$B$-模,$f\in\Hom_{A}\left(E,F\right)$是关于$\sigma$的半线性映射,则
+	\begin{enumerate}
+		\item 当$E,F$都是左模时,$\left(\left[f\right]_{\bar{\mathcal{B}}}^{\bar{\mathcal{C}}}\right)=\left(\left(\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}\right)^{\sigma}\right)^{\top}\ast\left(\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\right)^{\top}\ast\left(\left[\id_{F}\right]_{\mathcal{C}}^{\bar{\mathcal{C}}}\right)^{\top}$.
+		\item 当$E,F$都是右模时,$\left[f\right]_{\bar{\mathcal{B}}}^{\bar{\mathcal{C}}}=\left[\id_{F}\right]_{\mathcal{C}}^{\bar{\mathcal{C}}}\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\left(\left[\id_{E}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}\right)^{\sigma}$.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
