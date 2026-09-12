@@ -1,0 +1,18 @@
+\section{外延公理}
+
+\begin{axiom}{外延公理}{}
+	$\forall x\forall y\left(\left(x\subseteq y\wedge y\subseteq x\right)\implies x=y\right)$.
+\end{axiom}
+
+\begin{metatheorem}{集合相等的证明方法}{}
+	在理论$\mathcal{T}$中,要证明$x=y$,只需要分别完成以下两个方向的证明:
+	\begin{itemize}
+		\item 把临时假设$z\in x$加入$\mathcal{T}$的公理中,证明$z\in y$.
+		\item 把临时假设$z\in y$加入$\mathcal{T}$的公理中,证明$z\in x$. 
+	\end{itemize}
+	其中,$z$是一个不同于$x,y$和常元的字母.
+\end{metatheorem}
+
+\begin{metatheorem}{唯一性定理}{}
+	设$R$是公式,$x$是字母,$y$是没有在$R$中出现且不同于$x$的字母,则公式$\left(\forall x\right)\left(\left(x\in y\right)\iff R\right)$关于$y$是单值的.
+\end{metatheorem}

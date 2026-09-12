@@ -1,0 +1,141 @@
+\chapter{模}
+
+\section{模,向量空间,线性组合}
+
+记号约定:$E$是Abel群(加法记号),$A$是环,$A$在$E$上的左作用和右作用都采用乘法记号.
+
+\begin{definition}{左$A$-模,右$A$-模}{}
+	\begin{enumerate}
+		\item 设$A$的加法群左作用于$E$.若该作用对$E$的加法分配,对$A$的加法分配,则称配备该左作用的$E$为左$A$-模.
+		\item 设$A$的加法群左作用于$E$.若该作用对$E$的加法分配,对$A$的加法分配,则称配备该右作用的$E$为右$A$-模.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{术语说明}{}
+	当$E$是左(相对地,右)$A$-模时,称$E$的元素为标量,$A$在$E$上的左(相对地,右)作用为标量乘法.左模和右模的标量乘法分别采用左乘记号和右乘记号.
+\end{remark}
+
+\begin{remark}{左模和右模的转化}{}
+	当$E$是右$A$-模时,$A$在$E$上的右作用诱导$A^{\op}$在$E$上的左作用,使得$E$成为左$A^{\op}$-模.特别地,当$A$是交换环时,$E$作为左$A$-模和右$A$-模的记号是相同的.因此,我们可以把注意力聚焦于左模或者右模上.在本节和下一节中,在没有特意强调的情况下,当我们说``模''的时候,总是指左模.
+\end{remark}
+
+本节接下来的内容里,默认$E$是$A$-模.
+
+\begin{definition}{位似,中心位似}{}
+	设$\alpha\in A$.我们称$h_{\alpha}:E\to E,x\mapsto\alpha x$是比率为$\alpha$的位似.特别地,$\alpha\in Z\left(E\right)$时称$h_{\alpha}$是比率为$\alpha$的中心位似.
+\end{definition}
+
+\begin{proposition}{位似的性质}{}
+	设$\alpha\in A$,则$h_{\alpha}\in\End_{\mathsf{Grp}}\left(E\right)$,并且$\alpha\in A^{\times}$时$h_{\alpha}\in\Aut_{\mathsf{Grp}}\left(E\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$x\in E$,则$\phi_{x}:A\to E,\alpha\mapsto\alpha x$是群同态.
+\end{proposition}
+
+\begin{remark}{零环上的模}{}
+	当$A$是零环时,$E$的元素只有其零元.
+\end{remark}
+
+\begin{example}{环同态诱导的模,加法Abel群和$\Z$-模的转化,加法Abel群和自同态环的作用}{}
+	\begin{enumerate}
+		\item 设$A,B$是环,$\phi\in\Hom_{\mathsf{Ring}}\left(A,B\right)$.分别定义$A$的加法群在$B$上的左作用和右作用为
+		\begin{align*}
+			\left(a,b\right)\mapsto\phi\left(a\right)b,\left(a,b\right)\mapsto b\phi\left(a\right),
+		\end{align*}
+		则$B$是左$A$-模和右$A$-模.若$B=A,\phi=\id_{A}$,则$A$是左$A$-模和右$A$-模.分别记$A$构成的左$A$-模和右$A$-模为$A_{s}$和$A_{d}$.
+		\item 设$G$是Abel群(加法记号),则$\Z$在$G$上的左作用$\left(n,x\right)\mapsto nx$使$G$是$\Z$-模.
+		\item 设$G$是Abel群(加法记号).定义$\End_{\mathsf{Grp}}\left(G\right)$在$G$上的左作用为$\left(f,x\right)\mapsto f\left(x\right)$,则$E$是左$\End_{\mathsf{Grp}}\left(G\right)$-模.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{左(相对地,右)$A$-模$E$ $\leftrightsquigarrow$环同态$\Hom_{\mathsf{Ring}}\left(A,\mathscr{E}\right)$(相对地,$\Hom_{\mathsf{Ring}}\left(A^{\op},\mathscr{E}\right)$)}{}
+	当$E$是左(相对地,右)$A$-模时,记$\mathscr{E}$为$E$中所有位似组成的集合.
+	\begin{enumerate}
+		\item 若$E$是左(相对地,右)$A$-模,则$\phi:A\to\mathscr{E},\alpha\mapsto h_{\alpha}$(相对地,$\phi^{\prime}:A^{\op}\to\mathscr{E},\alpha\mapsto h_{\alpha}$)是环同态.
+		\item 若$\phi:A\to\mathscr{E},\alpha\mapsto h_{\alpha}$(相对地,$\phi^{\prime}:A^{\op}\to\mathscr{E},\alpha\mapsto h_{\alpha}$)是环同态,则$A$的加法群在$E$上的左(相对地,右)作用
+		\begin{align*}
+			\left(\alpha,x\right)\mapsto\left(\phi\left(\alpha\right)\right)x(\text{相对地},\left(x,\alpha\right)\mapsto\left(\phi\left(\alpha\right)\right)\left(x\right))
+		\end{align*}
+		使得$E$是左(相对地,右)$A$-模.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{左$K$-向量空间,右$K$-向量空间}{}
+	设$K$是除环.我们分别称左$K$-模和右$K$-模为左$K$-向量空间和右$K$-向量空间.
+\end{definition}
+
+\begin{remark}{术语说明}{}
+	向量空间的元素一般称为向量.
+\end{remark}
+
+\begin{example}{除环是相对子除环的向量空间,$\R^{3}$是$\R$-向量空间,$\Hom_{\mathsf{Set}}\left(F,\R\right)$是向量空间}{}
+	\begin{enumerate}
+		\item 每个除环都是相对它的任意一个子除环上的向量空间.
+		\item $\R^{3}$是$\R$-向量空间.
+		\item 对任意集合$F$,$\Hom_{\mathsf{Set}}\left(F,\R\right)$配备逐点的加法和纯量乘法$\left(t,f\right)\mapsto\left[x\mapsto tf\left(x\right)\right]$后是$\R$-向量空间.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{模中的求和}{}
+	设$\alpha\in A$,$\left(x_{i}\right)_{i\in I},\left(y_{i}\right)_{i\in I}$是$E$的有限支撑族,则$\sum\limits_{i\in I}\left(x_{i}+y_{i}\right)=\sum\limits_{i\in I}x_{i}+\sum\limits_{i\in I}y_{i},\alpha\sum\limits_{i\in I}x_{i}=\sum\limits_{i\in I}\alpha x_{i}$.
+\end{proposition}
+
+\begin{definition}{线性组合}{}
+	设$x\in E$,$\left(a_{i}\right)_{i\in I}$是$E$的元素族.若存在$A$的有限支撑族$\left(\lambda_{i}\right)_{i\in I}$使$x=\sum\limits_{i\in I}\lambda_{i}a_{i}$,则称$x$是$\left(a_{i}\right)_{i\in I}$的线性组合,$\left(\lambda_{i}\right)_{i\in I}$为系数.
+\end{definition}
+
+\begin{remark}{线性组合不一定唯一,$0$可以由空族表出}{}
+	上述定义中的$\left(\lambda_{i}\right)_{i\in I}$一般来说不是唯一的.此外,$0$只能是$E$中指标集为$\emptyset$的元素族的线性组合.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

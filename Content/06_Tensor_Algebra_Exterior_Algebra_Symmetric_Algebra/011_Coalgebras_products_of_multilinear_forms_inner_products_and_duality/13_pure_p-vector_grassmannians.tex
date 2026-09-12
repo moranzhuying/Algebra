@@ -1,0 +1,85 @@
+\section{纯\texorpdfstring{$p$}{p}-向量·Grassmann簇}
+
+记号约定:$K$是除环,$E$是$K$-向量空间.
+
+\begin{definition}{纯$p$-向量}{}
+	设$z$是$\bigwedge\limits^{p}\left(E\right)$的非零元素.若存在$E$中的序列$\left(x_{i}\right)_{i=1}^{p}$使得$z=x_{1}\wedge\ldots\wedge x_{p}$,则称$z$是纯$p$-向量.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $z$是纯$p$向量$\iff$与$z$关联的子空间$M_{z}$的维数是$p$.
+		\item 当$p\in\left\{0,1\right\}$时,$\bigwedge\left(E\right)$的每个非零元素都是纯$p$-向量;当$\dim E=n$时,$\bigwedge\limits^{n}\left(E\right)$的每个非零元素都是纯$n$-向量.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$\dim E=n$,$e$是$\bigwedge\limits^{n}\left(E\right)$的非零元素,$\phi:\bigwedge\left(E\right)\to\bigwedge\left(E^{\vee}\right)$是$e$诱导的代数Poincar\'{e}对偶,$z\in\bigwedge\limits^{p}\left(E\right)$是纯$p$-向量.
+	\begin{enumerate}
+		\item $\phi\left(z\right)$是$\bigwedge\limits^{n-p}\left(E^{\vee}\right)$中的纯$\left(n-p\right)$-向量.
+		\item $M_{\phi\left(z\right)}=M_{z}^{\perp}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	若$\dim E=n$,则$\bigwedge\limits^{n-1}\left(E\right)$的每个非零$\left(n-1\right)$-向量都是纯$\left(n-1\right)$-向量.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$z$是$\bigwedge\limits^{p}\left(E\right)$的非零元素,则$z$是纯$p$-向量$\iff$对每个$u^{\ast}\in\bigwedge\limits^{p-1}\left(E^{\vee}\right)$有$\left(u^{\ast}\lrcorner z\right)\wedge z=0$.
+\end{proposition}
+
+\begin{definition}{Pl\"{u}cker关系}{}
+	设$\left(e_{i}\right)_{i=1}^{n}$是$E$的基,$z\in\bigwedge\limits^{p}\left(E\right)$且$z=\sum\limits_{I\in\fin_{p}\left(\left[1,n\right]\right)}a_{I}e_{I}$,则
+	\begin{align*}
+		\forall J\in\fin_{p+1}\left(\left[1,n\right]\right)\forall H\in\fin_{p-1}\left(\left[1,n\right]\right)\left(\sum\limits_{i\in J\setminus H}\varepsilon_{i,J,H}a_{J\setminus\left\{i\right\}}a_{H\cup\left\{i\right\}}=0\right),
+	\end{align*}
+	其中$\varepsilon_{i,J,H}\in\left\{-1,1\right\}$.我们称上述公式是Pl\"{u}cker关系.
+\end{definition}
+
+\begin{definition}{Grassmann簇}{}
+	设$D_{p}\left(E\right)$是$\bigwedge\limits^{p}\left(E\right)$中所有非零纯$p$-向量构成的集合,它在典范映射$\bigwedge\limits^{p}\left(E\right)\to\mathbb{P}\left(\bigwedge\limits^{p}\left(E\right)\right)$下的像记作$\mathbf{G}_{p}\left(E\right)$.
+	\begin{enumerate}
+		\item 我们称$\mathbf{G}_{p}\left(E\right)$是$E$的$p$阶Grassmann簇.
+		\item 当$E=K^{n}$时,把$\mathbf{G}_{p}\left(E\right)$记作$\mathbf{G}_{n,p}\left(K\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$\dim E=n$且$E$选定一个基时,$\mathbf{G}_{p}\left(E\right)$是$\mathbb{P}\left(\bigwedge\limits^{p}\left(E\right)\right)$中所有满足Pl\"{u}cker关系的齐次坐标构成的射影代数簇.
+		\item 当$E=K^{n}$时,取定其典范基与相应地对偶基,考虑
+		\begin{align*}
+			\left\{E\text{的}p\text{维子空间}\right\}\to\left\{E^{\vee}\text{的}p\text{维子空间}\right\},M\mapsto M^{\perp}
+		\end{align*}
+		诱导的典范双射$\mathbf{G}_{n,p}\left(K\right)\to\mathbf{G}_{n,n-p}\left(K\right)$,这是同构$\mathbb{P}\left(\bigwedge\limits^{p}\left(E\right)\right)\to\mathbb{P}\left(\bigwedge\limits^{n-p}\left(E\right)\right)$限制在$\mathbf{G}_{n,p}\left(K\right)$上所得的映射.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

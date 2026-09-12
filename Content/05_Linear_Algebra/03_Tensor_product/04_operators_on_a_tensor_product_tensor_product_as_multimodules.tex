@@ -1,0 +1,149 @@
+\section{张量积上的算子,作为多模的张量积}
+
+记号约定:$A$是环,$\mathsf{B}\coloneq\left(B_{i}\right)_{i\in I},\mathsf{B}^{\prime}\coloneq\left(B_{h}^{\prime}\right)_{h\in H},\mathsf{C}\coloneq\left(C_{j}\right)_{j\in J},\mathsf{C}^{\prime}\coloneq\left(C_{k}^{\prime}\right)_{k\in K}$是环族.
+
+\begin{proposition}{张量积上的自同态作用}{}
+	设$E$是右$A$-模,$F$是左$A$-模,则
+	\begin{gather*}
+		\varphi:\End_{\mathsf{Mod}-A}\left(E\right)\to\End_{\Z}\left(E\otimes_{A}F\right),u\mapsto u\otimes\id_{F}\\
+		\varphi^{\prime}:\End_{A-\mathsf{Mod}}\left(F\right)\to\End_{\Z}\left(E\otimes_{A}F\right),v\mapsto \id_{E}\otimes v
+	\end{gather*}
+	是可交换的环同态,因此$E\otimes_{A}F$是典范的左$\left(\End_{\mathsf{Mod}-A}\left(E\right),\End_{A-\mathsf{Mod}}\left(F\right)\right)$-双模.
+\end{proposition}
+
+\begin{definition}{多模的张量积}{}
+	设$E$是$\left(\mathsf{B};A,\mathsf{C}\right)$-多模,$F$是$\left(A;\mathsf{B}^{\prime},\mathsf{C}^{\prime}\right)$-多模,则$E\otimes_{A}F$是典范的$\left(\mathsf{B},\mathsf{B}^{\prime};\mathsf{C},\mathsf{C}^{\prime}\right)$-多模,称之为$E$和$F$的张量积.
+\end{definition}
+
+\begin{proposition}{多模的张量积的泛性质}{}
+	设$E$是$\left(\mathsf{B};A,\mathsf{C}\right)$-多模,$F$是$\left(A;\mathsf{B}^{\prime},\mathsf{C}^{\prime}\right)$-多模,$G$是$\left(\mathsf{B},\mathsf{B}^{\prime};\mathsf{C},\mathsf{C}^{\prime}\right)$-多模.
+	\begin{enumerate}
+		\item 若$g:E\otimes_{A}F\to G$是多模同态,则$f:E\times F\to G,\left(x,y\right)\mapsto g\left(x,y\right)$是$A$-平衡映射和多模同态.
+		\item 对任一满足多模兼容条件的$\Z$-双线性映射$f:E\times F\to G$,下图交换(其中$g$是多模同态,$\otimes$是典范映射).
+		\begin{center}
+			\begin{tikzcd}
+				{E\times F} && {E\otimes_{A}F} \\
+				& G & {}
+				\arrow["\otimes", two heads, from=1-1, to=1-3]
+				\arrow["f"', from=1-1, to=2-2]
+				\arrow["{\exists!g}", dashed, from=1-3, to=2-2]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 定义线性映射$g:E\otimes_{A}F\to G$时,只需要验证存在满足下列条件的$f\in\Hom_{\mathsf{Set}}\left(E\times F,G\right)$便说明$g$是良定义的.
+		\begin{itemize}
+			\item $f$是$A$-平衡映射.
+			\item $f$是多模同态.
+			\item 对诸$x\in E,y\in F$有$g\left(x\otimes y\right)=f\left(x,y\right)$.
+		\end{itemize}
+		\item 若典范映射$g:E\otimes_{A}A_{s}\to E,x\otimes a\mapsto xa$是多模同构,则$g$的逆$h:E\to E\otimes_{A}A_{s},x\mapsto x\otimes 1$也是多模同构.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{单位元对象的同构}{}
+	设$E$是右$A$-模,$F$是左$A$-模.
+	\begin{enumerate}
+		\item $h:E\to E\otimes_{A}\left(_{s}A_{d}\right),x\mapsto x\otimes 1$是右$A$-模同构,其逆为$g:E\otimes_{A}\left(_{s}A_{d}\right)\to E,x\otimes a\mapsto xa$.
+		\item $h^{\prime}:F\to \left(_{s}A_{d}\right)\otimes_{A}F,x\mapsto 1\otimes x$是左$A$-模同构,其逆为$g^{\prime}:\left(_{s}A_{d}\right)\otimes_{A}F\to F,a\otimes x\mapsto ax$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{标量环的张量积同构}{}
+	$\left(_{s}A_{d}\right)\otimes_{A}\left(_{d}A_{s}\right)\to {}_{d}A_{s},\lambda\otimes_{A}\mu\mapsto \lambda\mu$是典范的$\left(A,A\right)$-双模同构.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

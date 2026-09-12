@@ -1,0 +1,28 @@
+\section{格序群的Riez分解定理}
+
+记号约定:$\left(G,+,\leq\right)$是有序群.
+
+\begin{definition}{格序群的Riez细分性质}{}
+	若对每个$m,n\geq 1$和$x_{1},\ldots,x_{m},y_{1},\ldots,y_{n}\in G$,当$\sum\limits_{i=1}^{m}x_{i}=\sum\limits_{j=1}^{n}y_{j}$时,存在$\left(z_{i,j}\right)_{\substack{1\leq i\leq m\\ 1\leq j\leq n}}\in\mathbf{M}_{m,n}\left(G_{\geq 0}\right)$,使得
+	\begin{enumerate}
+		\item 对每个$1\leq i\leq m$有$x_{i}=\sum\limits_{j=1}^{n}z_{i,j}$,
+		\item 对每个$1\leq j\leq n$有$y_{j}=\sum\limits_{i=1}^{m}z_{i,j}$,
+	\end{enumerate}
+	则称$G$满足Riez细分性质.
+\end{definition}
+
+\begin{definition}{格序群的Riez分解性质}{}
+	若对每个$x,y_{1},y_{2}\in G_{\geq 0}$,当$0\leq x\leq y_{1}+y_{2}$时,存在$x_{1},x_{2}\in G_{\geq 0}$使得
+	\begin{align*}
+		x=x_{1}+x_{2},0\leq x_{1}\leq y_{1},0\leq x_{2}\leq y_{2},
+	\end{align*}
+	则称$G$满足Riez分解性质.
+\end{definition}
+
+\begin{theorem}{格序群的Riez细分性质}{}
+	若$G$是格序群,则$G$满足Riez细分性质.
+\end{theorem}
+
+\begin{corollary}{格序群的Riez分解定理}{}
+	若$G$是格序群,则$G$满足Riez分解性质.
+\end{corollary}

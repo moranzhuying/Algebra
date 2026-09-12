@@ -1,0 +1,85 @@
+\section{Clifford代数的结构}
+
+记号约定:
+\begin{itemize}
+	\item $A$是域,$E$是有限维$A$-向量空间,$\dim E=m$,$Q$非退化.
+	\item 我们通过$\rho\coloneq\rho_{Q}$把$E$视为$\Cl\left(E,Q\right)$的子空间.
+\end{itemize}
+
+\begin{theorem}{}{}
+	设$\dim E=2r\geq 0$,$Q$是双曲型的.
+	\begin{enumerate}
+		\item $\Cl\left(E,Q\right)$是可分代数,并且存在$2^{r}$维$A$-向量空间$S$使得$\Cl\left(E,Q\right)\simeq\End_{A}\left(S\right)$.
+		\item 若$r\geq 1$,则$\Cl^{+}\left(E,Q\right)$是可分代数,并且存在$S$的$2^{r-1}$维$A$-子代数$S^{+},S^{-}$使得
+		\begin{align*}
+			\Cl\left(E,Q\right)\simeq\End_{A}\left(S^{+}\right)\times\End_{A}\left(S^{-}\right).
+		\end{align*}
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$\dim E=2r\geq 0$,$Q$非退化.
+	\begin{enumerate}
+		\item $\Cl\left(E,Q\right)$是$A$上的$2^{m}$维中心单代数.
+		\item 当$r\geq 1$时,$\Cl\left(E,Q\right)$是可分代数,$Z\coloneq Z\left(\Cl\left(E,Q\right)\right)$是$2$维$A$-向量空间.
+		\begin{itemize}
+			\item 若$Z$是域,则$Z$是$A$的可分二次代数扩张,并且$\Cl^{+}\left(E,Q\right)$作为$Z$-代数是中心单代数.
+			\item 若$Z$不是域,则$Z\simeq A\times A$,并且存在两个$A$上的$2^{m-2}$维中心单代数$S_{1},S_{2}$使得$\Cl^{+}\left(E,Q\right)\simeq S_{1}\times S_{2}$.
+		\end{itemize}
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 由于$\Cl\left(E,Q\right)$为单代数,它仅有唯一的不可约表示类$\tau$,称为旋子表示,其表示空间中的向量称为旋子.
+		\begin{itemize}
+			\item $\Cl^{+}\left(E,Q\right)$不是单代数时,$\tau|_{\Cl^{+}\left(E,Q\right)}$分裂为两个互不等价的绝对不可约表示的直和.
+			\item $\Cl^{+}\left(E,Q\right)$是单代数时,$\tau|_{\Cl^{+}\left(E,Q\right)}$仍为不可约表示(仅在扩张到代数闭包后才分裂).
+		\end{itemize}
+		对于第一种情形,我们称这两个表示空间中的元素为半旋子.
+		\item 设$\Char\left(A\right)\neq 2$,$\left(e_{i}\right)_{i=1}^{m}$是$E$的$\varphi$-正交基.令$z=2^{r}e_{1}\ldots e_{n}\in\Cl\left(E,Q\right)$,那么
+		\begin{align*}
+			z\in Z\setminus A,z^{2}=\left(-1\right)^{r}D,
+		\end{align*}
+		其中$D$是$\varphi$关于$\left(e_{i}\right)_{i=1}^{m}$的判别式.
+	\end{enumerate}
+\end{remark}
+
+\begin{theorem}{}{}
+	设$\Char\left(A\right)\neq 2,\dim E=2r+1\geq 1$,$Q$非退化.
+	\begin{enumerate}
+		\item $\Cl^{+}\left(E,Q\right)$是中心单代数.若$Q$的Witt指数为$r$,则$\Cl^{+}\left(E,Q\right)\simeq\End_{A}\left(A\right)$.
+		\item $\Cl\left(E,Q\right)$是可分代数,$\dim Z\left(\Cl\left(E,Q\right)\right)=2$,并且$\Cl\left(E,Q\right)\simeq Z\left(\Cl\left(E,Q\right)\right)\otimes_{A}\Cl^{+}\left(E,Q\right)$.
+		\item 下列情形有且只有一种成立:
+		\begin{itemize}
+			\item $\Cl\left(E,Q\right)$是中心单代数;
+			\item 存在$A$-中心单代数$S_{1},S_{2}$使得$\Cl\left(E,Q\right)\simeq S_{1}\times S_{2}$.
+		\end{itemize}
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	设$\left(e_{i}\right)_{i=1}^{2r}$是$E$的$\varphi$-正交基,它相对$\varphi$的判别式为$D$,$z=2^{r+1}x_{0}\ldots x_{2r}$,则
+	\begin{itemize}
+		\item $Z\left(\Cl\left(E,Q\right)\right)$由$\left\{1,z\right\}$生成,并且$z^{2}=\left(-1\right)^{r}2D$.
+		\item $\Cl\left(E,Q\right)$是单代数$\iff$ $z^{2}$不是$A$中的平方元.
+	\end{itemize}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+\section{线性映射的有理性}
+
+记号约定:
+
+\begin{itemize}
+	\item $K$是除环,$K^{\prime}$是其子除环,$\rho:K^{\prime}\hookrightarrow K$是典范嵌入.
+	\item $V_{1}$和$V_{2}$是右$K$-向量空间,各自的$K^{\prime}$-结构是$V_{1}^{\prime}$和$V_{2}^{\prime}$.
+\end{itemize}
+
+\begin{definition}{$K^{\prime}$-有理线性映射}{}
+	设$f\in\Hom_{K}\left(V_{1},V_{2}\right)$.若$\rho_{\ast}\left(f\right)\left(V_{1}^{\prime}\right)\subseteq V_{2}^{\prime}$,则称$f$在$K^{\prime}$上有理($f$是$K^{\prime}$-有理线性映射).
+\end{definition}
+
+\begin{remark}{有理线性映射对映射复合封闭}{}
+	若$V_{3}$是右$K$-向量空间,$K^{\prime}$-结构是$V_{3}^{\prime}$,$f\in\Hom_{K}\left(V_{1},V_{2}\right)$和$g\in\Hom_{K}\left(V_{2},V_{3}\right)$都是$K^{\prime}$-有理线性映射,则$g\circ f$也是$K^{\prime}$-有理线性映射.
+\end{remark}
+
+\begin{proposition}{}{}
+	记$\mathcal{R}=\left\{f\in\Hom_{K}\left(V_{1},V_{2}\right)\middle|f\text{是}K^{\prime}\text{-有理的}\right\}$,则
+	\begin{align*}
+		\varphi:\Hom_{K^{\prime}}\left(V_{1}^{\prime},V_{2}^{\prime}\right)\to\mathcal{R},f\mapsto\rho_{\ast}\left(f\right)
+	\end{align*}
+	是双射,其逆映射为$\psi:\mathcal{R}\to\Hom_{K^{\prime}}\left(V_{1}^{\prime},V_{2}^{\prime}\right),f\mapsto\rho_{\ast}\left(f\right)|_{V_{1}^{\prime}}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{K}\left(V_{1},V_{2}\right)$是$K^{\prime}$-有理线性映射,则$f\left(V_{1}^{\prime}\right)=\rho_{\ast}\left(f\left(V_{1}\right)\right)\cap V_{2}^{\prime},\rho_{\ast}\left(f^{-1}\left(V_{2}\right)\right)=V_{1}^{\prime}+\rho_{\ast}\left(\ker\left(f\right)\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$f\in\Hom_{K}\left(V_{1},V_{2}\right)$是$K^{\prime}$-有理线性映射.
+	\begin{enumerate}
+		\item 若$W_{1}$是$V_{1}$的$K^{\prime}$-有理子空间,则$f\left(W_{1}\right)$是$V_{2}$的$K^{\prime}$-有理子空间.
+		\item 若$W_{2}$是$V_{2}$的$K^{\prime}$-有理子空间,则$f^{-1}\left(W_{2}\right)$是$V_{1}$的$K^{\prime}$-有理子空间.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}{乘积$K^{\prime}$-结构}{}
+	在典范同构$\rho_{\ast}\left(V_{1}\right)\times\rho_{\ast}\left(V_{2}\right)\simeq\rho_{\ast}\left(V_{1}\times V_{2}\right)$的意义下,称$V_{1}^{\prime}\times V_{2}^{\prime}$是$V_{1}\times V_{2}$的乘积$K^{\prime}$-结构.
+\end{definition}
+
+\begin{proposition}{图像的有理化}{}
+	设$f\in\Hom_{K}\left(V_{1},V_{2}\right)$,则$f$在$K^{\prime}$上有理$\iff$ $\Gr\left(f\right)$是$V_{1}\times V_{2}$的$K^{\prime}$-有理子空间.
+\end{proposition}

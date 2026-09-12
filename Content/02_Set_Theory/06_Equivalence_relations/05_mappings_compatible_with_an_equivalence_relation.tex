@@ -1,0 +1,95 @@
+\section{与等价关系相容的函数}
+
+\begin{proposition}{映射和等价关系相容的等价条件}{equivalent-condition-of-the-compability-of-mapping-with-equivalent-relation}
+	设$R$是集合$E$上的等价关系,$F$是集合,$f:E\to F$是映射,$p:E\to E/R$是典范投影,则下列陈述等价:
+	\begin{enumerate}
+		\item 公式$y=f\left(x\right)$和$R\left\{x,x^{\prime}\right\}$相容.
+		\item 对任意$x\in E$,映射$f|_{\left[x\right]_{R}}$是常值映射.
+		\item 对任意$x,x^{\prime}\in E$有$p\left(x\right)=p\left(x^{\prime}\right)\implies f\left(x\right)=f\left(x^{\prime}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{映射和等价关系相容}{}
+	设$R$是集合$E$上的等价关系,$F$是集合,$f:E\to F$是映射.命题(\ref{prop:equivalent-condition-of-the-compability-of-mapping-with-equivalent-relation})的陈述之一为真时,称$f$和$R$相容.
+\end{definition}
+
+\begin{metatheorem}{诱导映射的存在性}{}
+	设$R$是集合$E$上的等价关系,$F$是集合,$f:E\to F$是映射,$p:E\to E/R$是典范投影.下列陈述等价:
+	\begin{enumerate}
+		\item $f$和$R$相容.
+		\item 存在唯一的映射$h:E/R\to F$使得下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				E && {E/R} \\
+				& F
+				\arrow["p", from=1-1, to=1-3]
+				\arrow["f"', from=1-1, to=2-2]
+				\arrow["{\exists!h}", dashed, from=1-3, to=2-2]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+	这样的映射$h$存在时,称为$f$诱导的映射.
+\end{metatheorem}
+
+\begin{proposition}{映射的典范分解}{}
+	设$E,F$是集合,$f:E\to F$是映射,$R$是$f$诱导的等价关系,$p:E\to E/R$是典范投影.
+	\begin{enumerate}
+		\item $f$和$R$相容,并且$f$诱导的映射$h:E/R\to F$是单射.
+		\item 映射$h|^{\im\left(f\right)}:E/R\to\im\left(f\right),x\mapsto h\left(x\right)$是双射.
+		\item 记$\iota:\im\left(f\right)\to F$是典范单射,则如下图标交换.我们称公式$f=\iota\circ h\circ p$是$f$相对$R$的典范分解.
+		\begin{center}
+			\begin{tikzcd}
+				E & F \\
+				{E/R} & {\im\left(f\right)}
+				\arrow["f", from=1-1, to=1-2]
+				\arrow["p"', from=1-1, to=2-1]
+				\arrow["h"', from=2-1, to=2-2]
+				\arrow["\iota"', from=2-2, to=1-2]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{}{}
+	设$E,F$是集合,各自配备等价关系$R,S$,$f:E\to F$是映射,$v:F\to F/S$是典范投影.若$v\circ f$和$R$相容,则称$f$与$R$和$S$相容.
+\end{definition}
+
+\begin{proposition}{诱导映射的自然性}{}
+	设$E,F$是集合,各自配备等价关系$R,S$,$u:E\to E/R$和$v:F\to F/S$是典范投影,$f:E\to F$是映射,则存在唯一的$g:E/R\to F/S$使下图交换.我们称$h$是$f$诱导的映射.
+	\begin{center}
+		\begin{tikzcd}
+			E & F \\
+			{E/R} & {F/S}
+			\arrow["f", from=1-1, to=1-2]
+			\arrow["u"', from=1-1, to=2-1]
+			\arrow["v", from=1-2, to=2-2]
+			\arrow["{\exists!g}"', dashed, from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

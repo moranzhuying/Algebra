@@ -1,0 +1,30 @@
+\section{重心演算}
+
+记号约定:
+
+\begin{itemize}
+	\item $K$是除环,$\rho_{\ast}$是$K$-向量空间,$E$是向量部分为$\rho_{\ast}$的仿射空间.
+	\item $\left(x_{i}\right)_{i\in I}$是$E$的元素族,$\left(\lambda_{i}\right)_{i\in I}$是$K$中的有限支撑族.
+\end{itemize}
+
+\begin{proposition}{仿射组合的基点独立性和良定义性}{}
+	\begin{enumerate}
+		\item 若$\sum\limits_{i\in I}\lambda_{i}=1$,则对任一$a\in E$,存在唯一的$x\in E$使得$x\aminus a=\sum\limits_{i\in I}\lambda_{i}\left(x_{i}\aminus a\right)$.
+		\item 若$\sum\limits_{i\in I}\lambda_{i}=1$,则对任一$a,b\in E$,有$\sum\limits_{i\in I}\lambda_{i}\left(x_{i}\aminus a\right)=\sum\limits_{i\in I}\lambda_{i}\left(x_{i}\aminus b\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{重心}{}
+	设$a\in E$.
+	\begin{enumerate}
+		\item 当$\sum\limits_{i\in I}\lambda_{i}=1$时,定义$\sum\limits_{i\in I}\lambda_{i}x_{i}$是$E$中满足$x\aminus a=\sum\limits_{i\in I}\left(x_{i}\aminus a\right)$的元素$x$.称$\sum\limits_{i\in I}\lambda_{i}x_{i}$是$\left(x_{i}\right)_{i\in I}$关于$\left(\lambda_{i}\right)_{i\in I}$的重心.
+		\item 当$\sum\limits_{i\in I}\lambda_{i}=0$时,定义$\sum\limits_{i\in I}\lambda_{i}x_{i}$是$\rho_{\ast}$中满足$\mathbf{v}=\sum\limits_{i\in I}\lambda_{i}\left(x_{i}\aminus a\right)$的元素$\mathbf{v}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{等权重心}{}
+	设$m\geq 1,a_{1},\ldots,a_{m}\in E$.当$\Char\left(K\right)\nmid m$时,我们滥用术语,称$\sum\limits_{i=1}^{m}\dfrac{1}{m}a_{i}$是$\left(a_{i}\right)_{i=1}^{m}$的等权重心.当$m=2$时称之为中点.
+\end{remark}
+
+
+

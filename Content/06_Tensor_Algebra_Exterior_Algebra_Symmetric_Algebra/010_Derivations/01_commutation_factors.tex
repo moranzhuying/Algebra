@@ -1,0 +1,28 @@
+\chapter{导子}
+
+本章中,除非另有明确说明,所讨论的代数不假定满足结合律,也不假定必然存在单位元;$K$是交换环.
+
+\section{交换因子}
+
+记号约定:$\Delta$是交换群(加法记号),本节所说的分次未作具体指明时默认指$\Delta$型分次.
+
+\begin{definition}{交换因子}{}
+	设$\epsilon\in\Hom_{\mathsf{Set}}\left(\Delta\times\Delta,\left\{-1,1\right\}\right)$.如果
+	\begin{enumerate}
+		\item $\forall\alpha,\alpha^{\prime},\beta\in\Delta\left(\epsilon\left(\alpha+\alpha^{\prime},\beta\right)=\epsilon\left(\alpha,\beta\right)\epsilon\left(\alpha^{\prime}, \beta\right)\right)$,
+		\item $\forall\alpha,\beta,\beta^{\prime}\in\Delta\left(\epsilon\left(\alpha,\beta+\beta^{\prime}\right)=\epsilon\left(\alpha,\beta\right)\epsilon\left(\alpha,\beta^{\prime}\right)\right)$,
+		\item $\forall\alpha,\beta\in\Delta\left(\epsilon\left(\alpha,\beta\right)=\epsilon\left(\beta,\alpha\right)\right)$,
+	\end{enumerate}
+	则称$\epsilon$是$\Delta$上的一个交换因子.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 由交换因子的定义,$\forall\alpha,\beta\in\Delta\left(\epsilon\left(2\alpha,\beta\right)=\epsilon\left(\alpha,2\beta\right)=1\right)$.
+		\item 当$\Delta=\Z$时,$\epsilon$由$\epsilon\left(1,1\right)$唯一确定.因此$\Z$上仅有以下两种交换因子:
+		\begin{itemize}
+			\item 平凡交换因子:$\forall p,q\in\Z\left(\epsilon\left(p,q\right)=1\right)$,
+			\item 标准分次交换因子:$\forall p,q\in\Z\left(\epsilon\left(p,q\right)=\left(..\right)\right)$
+		\end{itemize}
+	\end{enumerate}
+\end{remark}

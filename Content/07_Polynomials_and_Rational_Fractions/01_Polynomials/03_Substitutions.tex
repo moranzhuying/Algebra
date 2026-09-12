@@ -1,0 +1,102 @@
+\section{多项式的代入}
+
+记号约定:$E$是$A$-含幺结合代数,$\mathbf{X}\coloneq\left(X_{i}\right)_{i\in I},\mathbf{Y}\coloneq\left(Y_{j}\right)_{j\in J},\mathbf{Z}\coloneq\left(Z_{k}\right)_{k\in K}$是三族不定元.
+
+\begin{proposition}{多项式的代入}{substitution-of-polynomials}
+	设$\mathbf{x}\coloneq\left(x_{i}\right)_{i\in I}$是$E$的一族两两可交换的元素,则存在唯一的含幺代数同态$f:A[\mathbf{X}]\to E$使得$\forall i\in I\left(f\left(X_{i}\right)=x_{i}\right)$.
+\end{proposition}
+
+\begin{definition}{多项式环中的赋值映射}{}
+	沿用命题(\ref{prop:substitution-of-polynomials})的记号.
+	\begin{enumerate}
+		\item 我们把$f$记作$\ev_{\mathbf{x}}$,称为$\mathbf{x}$诱导的赋值.
+		\item 对每个$u\in A[\mathbf{X}]$,称$u\left(\mathbf{x}\right)\coloneq\ev_{\mathbf{x}}\left(u\right)$是$u$用$\mathbf{x}$代入.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	如果$M$是$A$-模,那么对$v\in M[\mathbf{X}]\coloneq M\otimes_{A}A[\mathbf{X}]$,记$v\left(\mathbf{x}\right)\coloneq\left(\id_{M}\otimes\ev_{\mathbf{x}}\right)\left(v\right)$.
+\end{remark}
+
+\begin{definition}{代数无关,代数相关}{}
+	设$\mathbf{x}\coloneq\left(x_{i}\right)_{i\in I}$是$E$的一族两两可交换的元素.
+	\begin{enumerate}
+		\item 若$\ev_{\mathbf{x}}$是单射,则称$\left(x_{i}\right)_{i\in I}$是$E$-代数无关的.
+		\item 若$\ev_{\mathbf{x}}$不是$E$-代数无关的,则称$\left(x_{i}\right)_{i\in I}$是$E$-代数相关的.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	$\left(x_{i}\right)_{i\in I}$是$E$-代数无关的$\iff$ $\left(\mathbf{x}^{\nu}\right)_{\nu\in\N^{\left(I\right)}}$是$A$-线性无关族.
+\end{remark}
+
+\begin{definition}{多项式函数}{}
+	设$E$是$A$-含幺交换结合代数,$u\in A[\mathbf{X}]$.我们称$\tilde{u}:E^{I}\to E,\left(x_{i}\right)_{i\in I}\mapsto u\left(x_{i}\right)_{i\in I}$是$u$在$E$上定义的多项式代数.
+\end{definition}
+
+\begin{remark}{}{}
+	有时候滥用术语把$\tilde{u}$写作$u$.
+\end{remark}
+
+\begin{proposition}{赋值同态和代入可交换}{}
+	设$F$是$A$-含幺结合代数,$f:E\to F$是含幺代数同态,$\left(x_{i}\right)_{i\in I}$是$E$的一族两两可交换的元素,$u\in A[\left(X_{i}\right)_{i\in I}]$,则
+	\begin{align*}
+		f\left(u\left(\left(x_{i}\right)_{i\in I}\right)\right)=u\left(\left(f\left(x_{i}\right)\right)_{i\in I}\right).
+	\end{align*}
+\end{proposition}
+
+\begin{definition}{多项式的复合}{}
+	设$\mathbf{f}\coloneq\left(f_{i}\right)_{i\in I}$是$A[\mathbf{X}]$的元素族,$\mathbf{g}\coloneq\left(g_{j}\right)_{j\in J}$是$A[\mathbf{Y}]$的元素族.称$\mathbf{f}\circ\mathbf{g}\coloneq\left(f_{i}\left(\mathbf{g}\right)\right)_{i\in I}$是$\mathbf{f}$与$\mathbf{g}$的复合.
+\end{definition}
+
+\begin{definition}{多项式复合诱导的映射}{}
+	设$E$是$A$-含幺交换结合代数,$\mathbf{f}\coloneq\left(f_{i}\right)_{i\in I}$是$A[\mathbf{X}]$的元素族.定义$\tilde{\mathbf{f}}:E^{J}\to E^{I},\mathbf{x}\mapsto\left(f_{i}\left(\mathbf{x}\right)\right)_{i\in I}$.
+\end{definition}
+
+\begin{proposition}{多项式的复合的性质}{}
+	设$\mathbf{f}\coloneq\left(f_{i}\right)_{i\in I}$是$A[\mathbf{X}]$的元素族,$\mathbf{g}\coloneq\left(g_{j}\right)_{j\in J}$是$A[\mathbf{Y}]$的元素族,
+	\begin{enumerate}
+		\item 若$\mathbf{h}=\mathbf{f}\circ\mathbf{g}$,则$\tilde{\mathbf{h}}=\tilde{\mathbf{f}}\circ\tilde{\mathbf{g}}$.
+		\item 若$\mathbf{h}\coloneq\left(h_{k}\right)_{k\in K}$是$A[\mathbf{Z}]$的元素族,则$\mathbf{f}\circ\left(\mathbf{g}\circ\mathbf{h}\right)=\left(\mathbf{f}\circ\mathbf{g}\right)\circ\mathbf{h}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{平移代换}{}
+	设$\mathbf{a}\coloneq\left(a_{i}\right)_{i\in I}\in A^{I},u,v\in A[\mathbf{X}]$.若$v=u\left(\left(X_{i}+a_{i}\right)_{i\in I}\right)$,则$v$的常数项是$u\left(\mathbf{a}\right)$.
+\end{proposition}
+
+\begin{corollary}{赋值理想的生成元}{}
+	设$\mathbf{a}\coloneq\left(a_{i}\right)_{i\in I}\in A^{I},\mathfrak{m}=\left\{u\in A[\mathbf{X}]\middle|u\left(\mathbf{a}\right)=0\right\}$,则$\mathfrak{m}$是$\left(X_{i}-a_{i}\right)_{i\in I}$生成的理想.
+\end{corollary}
+
+\begin{corollary}{对角理想的生成元}{}
+	设$I=J$,则$\left\{u\in A[\mathbf{X},\mathbf{Y}]\middle|u\left(\mathbf{X},\mathbf{X}\right)=0\right\}$是$\left(X_{i}-Y_{i}\right)_{i\in I}$生成的理想.
+\end{corollary}
+
+\begin{proposition}{齐次分量的代入}{}
+	设$u\in A[\mathbf{X}]$,$Z$是不定元,$\mathbf{X}Z$为$(A[\mathbf{X}])[Z]$的元素族$\left(X_{i}Z\right)_{i\in I}$,则对每个$k\in\N$,$u\left(\mathbf{X}Z\right)$中$Z^{k}$的系数是$u$的$k$次齐次分量.
+\end{proposition}
+
+\begin{proposition}{齐次多项式的等价条件}{}
+	设$u\in A[\mathbf{X}]$,$Z$是一个新的不定元,$k\in\N$,则$u$是$k$次齐次多项式$\iff$ $u\left(\mathbf{X}Z\right)=u\left(\mathbf{X}\right)Z$.
+\end{proposition}
+
+\begin{proposition}{系数在模中的多项式的代入}{}
+	设$M$是$A$-模,$\mathbf{x}\in A^{I},v=\sum\limits_{\nu\in\N^{\left(I\right)}}e_{\nu}X^{\nu}\in M[\mathbf{X}],f:A[X]\to A,u\mapsto u\left(\mathbf{x}\right)$,则$\left(\id_{A}\otimes f\right)\left(v\right)=v\left(\mathbf{x}\right)=\sum\limits_{\nu\in\N^{\left(I\right)}}\mathbf{x}^{\nu}e_{\nu}$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

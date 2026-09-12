@@ -1,0 +1,157 @@
+\section{商群}
+
+记号约定:$\Omega$是集合,$G$是群(乘法记号,幺元为$e$),$H,K$是$G$的子群,$\sim$是$G$上的等价关系,$\pi:G\twoheadrightarrow G/\sim$是典范满射.
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 若$\sim$和商运算左相容,则$\left\{\pi\left(e\right)\right\}$是$G$的$\Omega$-子群,且$\forall x,y\in G\left(\pi\left(x\right)=\pi\left(y\right)\iff x^{-1}y\in\left\{\pi\left(e\right)\right\}\right)$.
+		\item 若$\sim$和商运算右相容,则$\left\{\pi\left(e\right)\right\}$是$G$的$\Omega$-子群,且$\forall x,y\in G\left(\pi\left(x\right)=\pi\left(y\right)\iff yx^{-1}\in\left\{\pi\left(e\right)\right\}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$H$是$G$的不变子群,$a,b\in G$.
+	\begin{enumerate}
+		\item 若$\forall x,y\in G\left(\pi\left(x\right)=\pi\left(y\right)\iff x^{-1}y\in H\right)$,则$\sim$和$G/\sim$的商运算左相容,$H=\left\{\pi\left(e\right)\right\}$,并且
+		\begin{align*}
+			\pi\left(a\right)=\pi\left(b\right)\iff b\in aH.
+		\end{align*}
+		\item 若$\forall x,y\in G\left(\pi\left(x\right)=\pi\left(y\right)\iff yx^{-1}\in H\right)$,则$\sim$和$G/\sim$的商运算右相容,$H=\left\{\pi\left(e\right)\right\}$,并且
+		\begin{align*}
+			\pi\left(a\right)=\pi\left(b\right)\iff b\in Ha,
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{左陪集,右陪集,子群的指数}{}
+	\begin{enumerate}
+		\item 我们称$aH$是$a$模$H$的左陪集,$Ha$是$a$模$H$的右陪集.
+		\item 若$\forall x,y\in G\left(\pi\left(x\right)=\pi\left(y\right)\iff x^{-1}y\in H\right)$,则称$\sim$为关于$H$的左陪集关系.
+		\item 若$\forall x,y\in G\left(\pi\left(x\right)=\pi\left(y\right)\iff yx^{-1}\in H\right)$,则称$\sim$为关于$H$的右陪集关系.
+		\item 可以验证$\left|aH\right|=\left|Ha\right|$.我们称$\left(G:H\right)\coloneq\left|\left\{xH\subseteq G\middle|x\in G\right\}\right|$为$H$在$G$中的指标.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{引入$\Omega$-正规子群的动机:商运算的良定义性}{}
+	若$\sim$和$\Omega$的作用相容,和商运算相容,$H=\left\{\pi\left(e\right)\right\}$,则对诸$x\in G$都有$xH=Hx$,亦即$xHx^{-1}=H$.后面会看到,$\Omega$-正规子群可以完美地解决这个问题.
+\end{remark}
+
+\begin{remark}{$G$的子集关于左右陪集关系的饱和化,左右陪集的转化}{}
+	对于$A\subseteq G$,它关于左陪集关系的饱和化是$AH$,关于右陪集关系的饱和化是$HA$.此外,$f:G\to G^{\op},x\mapsto x^{-1}$满足
+	\begin{align*}
+		f\left(aH\right)=Ha^{-1},f\left(Ha\right)=a^{-1}H,
+	\end{align*}
+	这就实现了左陪集和右陪集的转化.
+\end{remark}
+
+\begin{proposition}{子群指标的传递性,Lagrange定理}{}
+	\begin{enumerate}
+		\item 若$H\subseteq K\subseteq G$,则$\left(G:H\right)=\left(G:K\right)\left(K:H\right)$.
+		\item (Lagrange定理)若$G$是有限群,则$\left|G\right|=\left|H\right|\left(G:H\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{正规$\Omega$-子群,正规子群}{}
+	设$H$是$G$的$\Omega$-子群.若$\forall x\in G\left(xHx^{-1}=H\right)$,则称$H$是$G$的正规$\Omega$-子群.进一步,若$\Omega=\emptyset$,称$H$为$G$的正规子群.
+\end{definition}
+
+显然:交换群的每个子群都是正规子群;$\Omega$-子群$H$是正规子群$\iff$ $\forall x\in G\left(xHx^{-1}\subseteq H\right)$.
+
+\begin{proposition}{左相容$\iff$右相容}{}
+	$\sim$和商运算相容$\iff$ $\sim$是关于$G$的某个子群的左陪集关系.此时$\sim$也是关于该子群的右陪集关系.
+\end{proposition}
+
+\begin{definition}{商$\Omega$-群}{}
+	设$H$是$G$的正规$\Omega$-子群,$\sim$是关于$H$左陪集关系.
+	\begin{enumerate}
+		\item 配备商运算的$G/\sim$记作$G/H$,称为$G$模$H$的商$\Omega$-群,$\pi$称为典范同态.
+		\item 当$G$是群,$H$是其正规子群时,称配备商运算的$G/\sim$为$G$模$H$的商群.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	如果$x,y\in G$且$x\sim y$,则记作$x\equiv y \pmod{H}$.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$G^{\prime}$是$\Omega$-群,$f\in\Hom_{\mathsf{Set}}\left(G/H,G^{\prime}\right)$,则$f$是$\Omega$-群同态$\iff$ $\pi\circ f$是$\Omega$-群同态.
+\end{proposition}
+
+\begin{proposition}{同态的相容性,诱导同态}{}
+	设$G^{\prime}$是$\Omega$-群,$H^{\prime}$是其正规$\Omega$-子群,$\Omega$-群同态$f:G\to G^{\prime}$满足$f\left(H\right)\subseteq H^{\prime}$,则
+	\begin{enumerate}
+		\item $f$与关于$H$和$H^{\prime}$各自的左陪集关系相容.
+		\item 记$\pi^{\prime}:G^{\prime}\twoheadrightarrow G^{\prime}/H^{\prime}$为典范同态,则诱导映射$\bar{f}:G/H\to G^{\prime}/H^{\prime}$是$\Omega$-群同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{对正规子群和商群的几个注记}{}
+	\begin{enumerate}
+		\item 对任一$A\subseteq G$有$AH=HA$,$A$是关于$H$的左陪集关系(和右陪集关系)的饱和集.
+		\item 若$\left(G:H\right)$有限,则$\left|G/H\right|=\left(G:H\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{正规子群不具有传递性}{}
+	若$H$是$G$的正规子群,$K$是$H$的正规子群,则$K$不一定是$G$的正规子群.
+\end{remark}
+
+\begin{definition}{生成的正规$\Omega$-子群}{}
+	定义$\langle X\rangle_{\Omega}\coloneq\bigcap\limits_{\substack{W\subseteq G\\S\text{是}\Omega\text{-正规子群}}}W$,称之为$X$生成的正规$\Omega$-子群.
+\end{definition}
+
+显然,$G$和$\Omega$都是正规$\Omega$-子群.
+
+\begin{definition}{单群}{}
+	如果$G\neq\left\{e\right\}$且$G$的正规$\Omega$-子群只有$G$和$\left\{e\right\}$,则称$G$为单$\Omega$-群.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

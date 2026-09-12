@@ -1,0 +1,142 @@
+\section{分次环和分次模}
+
+记号约定:$A,A^{\prime},A^{\prime\prime}$是环,$\Delta,\Delta^{\prime}$是交换幺半群(加法记号).
+
+\begin{definition}{$\Delta$型分次环}{}
+	设$\left(A_{\lambda}\right)_{\lambda\in\Delta}$是$A$的加法群的分次.若$\forall\lambda,\mu\in\Delta\left(R_{\lambda}R_{\mu}\subseteq R_{\lambda+\mu}\right)$,则称$A$是$\Delta$型分次环.
+\end{definition}
+
+\begin{proposition}{$0$次分量的性质}{}
+	设$A$是$\Delta$型分次环.若$\Delta$的每个元素都可消去,则$A_{0}$是$A$的子环,$1\in A_{0}$.
+\end{proposition}
+
+\begin{definition}{$\Delta$型分次左$A$-模}{}
+	设$A$是$\Delta$型分次环,$M$是左(相对的,右)$A$-模,$\left(M_{\lambda}\right)_{\lambda\in\Delta}$是$M$的加法群的分次.若对任一$\lambda,\mu\in\Delta$,有
+	\begin{align*}
+		A_{\lambda}M_{\mu}\subseteq M_{\lambda+\mu}\left(\text{相对的},M_{\mu}A_{\lambda}\subseteq M_{\lambda+\mu}\right),
+	\end{align*}
+	则称$M$是分次左(相对的,右)$A$-模.
+\end{definition}
+
+\begin{corollary}{}{}
+	设$A$是$\Delta$型分次环,$M$是分次左(相对的,右)$A$-模.若$\Delta$的每个元素都可消去,则$M$是左(相对的,右)$A_{0}$-模.
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$A$是$\Delta$型分次环,则$A_{s}$(相对的,$A_{d}$)是$\Delta$型分次左(相对的,右)$A$-模.
+\end{corollary}
+
+\begin{example}{分次环和分次模的例子:平凡分次}{}
+	$A$的加法群的平凡分次使得$A$是$\Delta$型分次环,称该分次为$A$的平凡分次.
+	
+	若$A$是配备平凡分次的$\Delta$型分次环,$M$是左$A$-模,$\left(M_{\lambda}\right)_{\lambda\in\Delta}$是$M$的加法群的分次,则
+	\begin{center}
+		$M$在分次$\left(M_{\lambda}\right)_{\lambda\in\Delta}$是$\Delta$型分次左$A$-模$\iff$ $\left(M_{\lambda}\right)_{\lambda\in\Delta}$是$M$的一族左$A$-子模.
+	\end{center}
+\end{example}
+
+\begin{example}{分次环和分次模的例子:映射诱导的分次}{}
+	设$A$是$\Delta$型分次环,$M$是$\Delta$型分次左$A$-模,$\rho\in\Hom_{\mathsf{Mon}}\left(\Delta,\Delta^{\prime}\right)$.
+	\begin{itemize}
+		\item $A$(相对的,$M$)上的分次通过$\rho$诱导的分次使$A$(相对的,$M$)是$\Delta^{\prime}$型分次环(相对的,分次左$A$-模).
+		\item 若$\Delta_{1},\Delta_{2}$是交换幺半群,$\Delta=\Delta_{1}\times\Delta_{2}$,则$A$(相对的,$M$)上的分次通过$\pr_{1},\pr_{2}$诱导的分次是$A$(相对的,$M$)上的分次的$\Delta_{1},\Delta_{2}$的偏分次,并且均使$A$(相对的,$M$)是分次环(相对的,分次左$A$-模).
+		\item 若$\Delta_{0}$是交换幺半群(加法记号)且$\Delta=\Delta_{0}$,$\rho$是余对角映射,则$A$(相对的,$M$)上的分次通过$\rho$诱导的分次使$A$(相对的,$M$)是分次环(相对的,分次左$A$-模).
+	\end{itemize}
+\end{example}
+
+\begin{example}{分次模的例子:移位分次}{}
+	设$A$是$\Delta$型分次环,$M$是$\Delta$型分次左$A$-模,$\lambda_{0}\in\Delta$.对任一$\lambda\in\Delta$,记$M_{\lambda}^{\prime}=M_{\lambda+\lambda_{0}}$.令$M^{\prime}=\bigoplus\limits_{\lambda\in\Delta}M_{\lambda}^{\prime}$.那么:
+	\begin{itemize}
+		\item $M^{\prime}$是左$A$-模,$\left(M_{\lambda}^{\prime}\right)_{\lambda\in\Delta}$是$M$的$\Delta$型分次.
+		\item 当$\Delta$是群时,$M^{\prime}$作为$A$-模和$M$相等.
+	\end{itemize}
+	我们称$M^{\prime}$是$M$移位$\lambda_{0}$得到的$\Delta$型分次左$A$-模,并将其记作$M\left(\lambda_{0}\right)$.
+\end{example}
+
+\begin{example}{多项式环的分次}{}
+	设$B$是交换环,则$B\left[X\right]$有一个$\N$型分次$\left(BX^{n}\right)_{n=0}^{\infty}$,从而是一个$\N$型分次环.
+\end{example}
+
+\begin{example}{Clifford代数的分次}{}
+	设$B$是交换环,$E$是$B$-模,$Q$是$E$上的二次型,$C\left(Q\right)$的子模$C^{+}\left(Q\right),C^{-}\left(Q\right)$构成分次,使$C\left(Q\right)$是$\Z/2\Z$型分次环.
+\end{example}
+
+\begin{remark}{术语说明}{}
+	\begin{enumerate}
+		\item 常用的分次类型是$\Z$型或$\Z^{n}$型.不指明分次环(相对的,分次模)的分次类型时,默认指$\Z$(相对的,$\Z^{2},\Z^{3}$,等等)型分次环(相对的,分次模).$\N$型分次环(相对的,分次模)通常称为正次数的分次环(相对的,分次模).
+		\item 给$\Z$配备平凡分次.那么,$\Delta$型分次$\Z$-模就是分次交换群,其次数集是交换幺半群.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{同次数的分次环同态}{}
+	设$A,A^{\prime}$是$\Delta$型分次环,各自的分次是$\left(A_{\lambda}\right)_{\lambda\in\Delta},\left(A_{\lambda}^{\prime}\right)_{\lambda\in\Delta}$,$\rho\in\Hom_{\mathsf{Ring}}\left(A,A^{\prime}\right)$.若
+	\begin{align*}
+		\forall\lambda\in\Delta\left(\rho\left(A_{\lambda}\right)\subseteq A_{\lambda}^{\prime}\right),
+	\end{align*}
+	则称$\rho$是$\Delta$型分次环同态.记$\Hom_{\Delta-\mathsf{GrRing}}\left(A,A^{\prime}\right)$是$A$到$A^{\prime}$的$\Delta$型分次环同态组成的集合.
+\end{definition}
+
+\begin{definition}{$\delta$次分次模同态}{}
+	设$A$是$\Delta$型分次环,$M,M^{\prime}$是$\Delta$型分次$A$-模,各自的分次是$\left(M_{\lambda}\right)_{\lambda\in\Delta},\left(M_{\lambda}^{\prime}\right)_{\lambda\in\Delta},\delta\in\Delta,f\in\Hom_{A}\left(M,M^{\prime}\right)$.若
+	\begin{align*}
+		\forall\lambda\in\Delta\left(f\left(M_{\lambda}\right)\subseteq M_{\lambda+\delta}^{\prime}\right),
+	\end{align*}
+	则称$f$是$\delta$次分次$A$-模同态,$\delta$是其次数.记$\Hom_{\Delta-A}\left(M,M^{\prime}\right)_{\delta}$是$M$到$M^{\prime}$的$\delta$次分次$A$-模同态组成的集合.
+\end{definition}
+
+\begin{definition}{跨分次的分次环同态}{}
+	设$A,A^{\prime}$分别是$\Delta,\Delta^{\prime}$型分次环,各自有分次$\left(A_{\lambda}\right)_{\lambda\in\Delta},\left(A_{\mu}^{\prime}\right)_{\mu\in\Delta^{\prime}}$,$\rho\in\Hom_{\mathsf{Mon}}\left(\Delta,\Delta^{\prime}\right),h\in\Hom_{\mathsf{Ring}}\left(A,A^{\prime}\right)$.若
+	\begin{align*}
+		\forall\lambda\in\Delta\left(h\left(A_{\lambda}\right)\subseteq A_{\rho\left(\lambda\right)}^{\prime}\right),
+	\end{align*}
+	则称$h$是$\Delta,\Delta^{\prime}$分次环同态.记$\Hom_{\Delta,\Delta^{\prime}-\mathsf{GrRing}}\left(A,A^{\prime}\right)$是$A$到$A^{\prime}$的$\Delta,\Delta^{\prime}$分次环同态组成的集合.
+\end{definition}
+
+\begin{definition}{分次模同态}{}
+	设$A$是$\Delta$型分次环,$M,M^{\prime}$是$\Delta$型分次$A$-模,$f\in\Hom_{A}\left(M,M^{\prime}\right)$.若有$\delta\in\Delta$使$f$是$\delta$次分次模同态,则称$f$是分次模同态.
+\end{definition}
+
+\begin{proposition}{分次环同态的次数的唯一性}{}
+	设$A$是$\Delta$型分次环,$M,M^{\prime}$是$\Delta$型分次$A$-模,$f:M\to M^{\prime}$是分次模同态.若$\Delta$的元素都可消去,则$f$的次数唯一.
+\end{proposition}
+
+\begin{proposition}{分次环同态的性质}{}
+	设$A,A^{\prime},A^{\prime\prime}$是$\Delta$型分次环.
+	\begin{enumerate}
+		\item 若$f:A\to A^{\prime}$和$g:A^{\prime}\to A^{\prime\prime}$是$\Delta$型分次环同态,则$g\circ f$是$\Delta$型分次环同态.
+		\item 若$f:A\to A^{\prime}$是$\Delta$型分次环同态,则$f$是$\Delta$型分次环同构$\iff$ $f$是双射且$f^{-1}$是$\Delta$型分次环同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{分次模同态的性质}{}
+	设$A$是$\Delta$型分次环,$M,M^{\prime},M^{\prime\prime}$是$\Delta$型分次$A$-模,$\delta,\delta^{\prime}\in\Delta$.
+	\begin{enumerate}
+		\item 若$f:M\to M^{\prime}$和$g:M^{\prime}\to M^{\prime\prime}$是$\delta$次和$\delta^{\prime}$次分次模同态,则$g\circ f$是$\delta+\delta^{\prime}$次分次模同态.
+		\item 若$f:A\to A^{\prime}$是双射和$\Delta$型分次环同态,$\delta$有负元,则$f^{-1}$是$-\delta$次分次模同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$\Delta$型分次自由模}{}
+	设$A$是$\Delta$型分次环,$M$是$\Delta$型分次$A$-模.若$A$有一个由齐次元组成的基(称为齐次基),则称$M$是$\Delta$型分次自由$A$-模.
+\end{definition}
+
+\begin{proposition}{分次自由摸的结构定理}{}
+	设$\Delta$是交换群,$R$是$\Delta$型分次幺环,$M$是分次左$A$-模.
+	\begin{enumerate}
+		\item 设$M$是$\Delta$型分次自由$A$-模,$\left(m_{i}\right)_{i\in I}$是$M$的齐次元组成的基,诸$m_{i}$的次数为$\lambda_{i}$,$e_{i}$为$A\left(-\lambda_{i}\right)$中次数是$\lambda_{i}$的元素.若
+		\begin{align*}
+			u:\bigoplus\limits_{i\in I}A\left(-\lambda_{i}\right)\to M
+		\end{align*}
+		是$A$-线性映射且$\forall i\in I\left(u\left(e_{i}\right)=m_{i}\right)$,则$u$是$0$次分次$A$-模同构.
+		\item 设$N$是$\Delta$型分次自由$A$-模,其齐次元组成生成系$\left(m_{i}\right)_{i\in I}$,诸$m_{i}$的次数为$\lambda_{i}$,$e_{i}$为$A\left(-\lambda_{i}\right)$中次数是$\lambda_{i}$的元素.若
+		\begin{align*}
+			u:\bigoplus\limits_{i\in I}A\left(-\lambda_{i}\right)\to M
+		\end{align*}
+		是$A$-线性映射且$\forall i\in I\left(u\left(e_{i}\right)=m_{i}\right)$,则$u$是$0$次分次$A$-模同态和满射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{有限生成分次模的性质}{}
+	设$A$是$\Delta$型分次环,$M$是有限生成的$\Delta$型分次$A$-模,则$M$有一个由$M$中的齐次元组成的生成系.
+\end{corollary}
+

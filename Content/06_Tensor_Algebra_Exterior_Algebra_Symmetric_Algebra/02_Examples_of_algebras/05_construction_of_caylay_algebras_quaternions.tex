@@ -1,0 +1,130 @@
+\section{Caylay代数的构造,四元数}
+
+记号约定:$A$是交换环,$\left(E,s\right)$是$A$上的Caylay代数,单位元是$1_{E}$,$F=E\boxplus E$,$\gamma\in A$.
+
+\begin{proposition}{Caylay-Dickson构造}{}
+	定义$F$上的乘法$\cdot$为$\left(\left(x_{1},y_{1}\right),\left(x_{2},y_{2}\right)\right)\mapsto\left(x_{1}x_{2}+\gamma \bar{y}_{2}y_{1},y_{1}\bar{x}_{2}+y_{2}x_{1}\right)$,记$1_{F}\coloneq\left(1_{E},0\right),j=\left(0,1_{E}\right)$.令
+	\begin{align*}
+		t:F\to F,\left(x,y\right)\mapsto\left(\bar{x},-y\right).
+	\end{align*}
+	\begin{enumerate}
+		\item $F$按上述乘法构成$A$-含幺代数,单位元是$1_{E}$.
+		\item $E\times\left\{0\right\}$是$F$的子代数,并且同构于$E$.
+		\item $\left(F,t\right)$是$A$上的Caylay代数.
+		\item 分别记$F$上的Caylay迹和Caylay范数为$T_{F}$和$N_{F}$,令,则对任一$\left(x,y\right)\in F$,
+		\begin{align*}
+			\left(x,y\right)=x\cdot 1_{F}+y\cdot j,T_{F}\left(x\cdot 1_{F}+y\cdot j\right)=T\left(\left(x,0\right)\right),N_{F}\left(x\cdot 1_{F}+y\cdot j\right)=N\left(\left(x,0\right)\right)-\gamma N\left(\left(y,0\right)\right).
+		\end{align*}
+		\item $F$是$A$-结合代数$\iff$ $E$是$A$-交换结合代数.
+		\item 对任一$\left(x,y\right)\in F$,有
+		\begin{align*}
+			yj=j\bar{y},x\left(yj\right)=\left(yx\right)j,\left(xj\right)y=\left(x\bar{y}\right)j,\left(xj\right)\left(yj\right)=\gamma\bar{y}x\cdot 1_{F},j^{2}=\gamma 1_{F}.
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$\gamma$-Caylay扩展(Cayley-Dickson倍增)}{}
+	记号同上.称Caylay代数$\left(F,t\right)$为$\left(E,s\right)$的$\gamma$-Caylay扩展(或Cayley-Dickson倍增).
+\end{definition}
+
+\begin{example}{二次代数的重建}{}
+	取$E=A,s=\id_{A}$,则$F$是$\left(\gamma,0\right)$型的二次$A$-代数.
+\end{example}
+
+\begin{example}{四元数代数}{}
+	设$E$是$\left(\alpha,\beta\right)$型的二次代数.称$F$是$\left(\alpha,\beta,\gamma\right)$型的四元数代数.
+\end{example}
+
+\begin{definition}{四元数代数}{}
+	设$G$是$A$-含幺结合代数.若$G$和$\left(\alpha,\beta,\gamma\right)$型四元数代数同构,则称$G$是四元数代数.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$F$是$\left(\alpha,\beta,\gamma\right)$型的四元数代数.
+	\begin{enumerate}
+		\item $F$是$A$-结合代数.
+		\item $F$是秩为$4$的$A$-模.若其典范基是$\left(1_{F},i,j,k\right)$,其中$k=ij=\left(0,i\right)$,则其乘法表满足
+		\begin{gather*}
+			i^{2}=\alpha 1_{F}+\beta i,ij=k,ik=\alpha j+\beta k,\\
+			ji=\beta j-k,j^{2}=\gamma 1_{F},jk=\beta\gamma 1_{F}-\gamma i,\\
+			ki=-\alpha j,kj=\gamma i,k^{2}=-\alpha\gamma 1_{F}.
+		\end{gather*}
+		\item 设$u=\rho 1_{F}+\xi i+\eta j+\zeta k\in F$,其中$\rho,\xi,\eta,\zeta\in A$,则
+		\begin{align*}
+			\bar{u}=\left(\rho+\beta\xi\right)1_{F}-\xi i-\eta j-\zeta k,T_{F}\left(u\right)=2\rho+\beta\xi,N_{F}\left(u\right)=\rho^{2}+\beta\rho\xi-\alpha\xi^{2}-\gamma\left(\eta^{2}+\beta\eta\zeta-\alpha\zeta^{2}\right).
+		\end{align*}
+		\item $\forall u,v\in F\left(N_{F}\left(uv\right)=N_{F}\left(u\right)N_{F}\left(v\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{四元数代数的$\left(\alpha,\beta,\gamma\right)$型的基}{}
+	设$G$是$A$上的$\left(\alpha,\beta,\gamma\right)$型四元数代数.若$G$的一个基满足上述命题中的乘法表,则称该基是$\left(\alpha,\beta,\gamma\right)$型的基.
+\end{definition}
+
+\begin{definition}{分裂四元数}{}
+	若$G$是$A$上的$\left(\alpha,0,\gamma\right)$型四元数代数,则称$G$是$A$上的$\left(\alpha,\gamma\right)$型四元数代数.
+\end{definition}
+
+\begin{proposition}{$\left(\alpha,\gamma\right)$型四元数代数的性质}{}
+	设$F$是$\left(\alpha,\gamma\right)$型四元数代数.
+	\begin{enumerate}
+		\item $F$的乘法表满足
+		\begin{gather*}
+			i^{2}=\alpha 1_{F},ij=k,ik=\alpha j,\\
+			ji=-k,j^{2}=\gamma 1_{F},jk=-\gamma i,\\
+			ki=-\alpha j,kj=\gamma i,k^{2}=-\alpha\gamma 1_{F}.
+		\end{gather*}
+		\item 设$u=\rho 1_{F}+\xi i+\eta j+\zeta k\in F$,其中$\rho,\xi,\eta,\zeta\in A$,则
+		\begin{align*}
+			\bar{u}=\rho 1_{F}-\xi i-\eta j-\zeta k,T_{F}\left(u\right)=2\rho,N_{F}\left(u\right)=\rho^{2}-\alpha\xi^{2}-\gamma\left(\eta^{2}-\alpha\zeta^{2}\right).
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{Hamilton四元数代数}{}
+	取$A=\R,\alpha=\gamma=-1\cdot 1_{A},\beta=0$.称$F$是Hamilton四元数代数,记作$\mathbb{H}$.
+\end{example}
+
+\begin{proposition}{四元数代数的简单性质}{}
+	\begin{enumerate}
+		\item 设$u=\rho 1_{F}+\xi i+\eta j+\zeta k\in\mathbb{H}$,其中$\rho,\xi,\eta,\zeta\in\R$,则$N\left(u\right)=\rho^{2}+\xi^{2}+\eta^{2}+\zeta^{2}$.
+		\item 设$u\in\mathbb{H}$且$u\neq 0$,则$u$在$\mathbb{H}$中可逆,并且$u^{-1}=\bar{u}\left(N\left(u\right)\right)^{-1}$.
+		\item $\mathbb{H}$是非交换的除环.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{八元数代数}{}
+	取$E$为四元数代数,则对任一$\delta\in A$,$E$的$\delta$扩展是非结合的$A$-代数,称该代数为$A$上的八元数代数.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

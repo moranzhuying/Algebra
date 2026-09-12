@@ -1,0 +1,116 @@
+\section{结式}
+
+记号约定:
+\begin{itemize}
+	\item $f=\sum\limits_{k=0}^{m}a_{m-k}X^{m-k}\in A[X],g=\sum\limits_{\ell=0}^{n}b_{n-\ell}X^{\ell}\in A[X],\deg\left(f\right)\leq p,\deg\left(g\right)\leq q$.
+	\item 对每个$n\in\N$,记$S_{n}=\left\{p\in A[X]\middle|\deg\left(f\right)\leq n\right\},\mathcal{B}_{n}\coloneq\left(X^{n-k}\right)_{k=1}^{n}$.
+	\item 对每个$m,n\in\N$,定义$A[X]$中的元素族$\mathcal{B}_{m,n}\coloneq\left(x_{k}\right)_{k=1}^{m+n}$如下:
+	\begin{align*}
+		x_{k}=
+		\begin{cases}
+			\left(X_{n-k},0\right),&1\leq k\leq n,\\
+			\left(0,X^{m+n-k}\right),&n+1\leq k\leq m.
+		\end{cases}
+	\end{align*}
+	\item 对每个$m,n\in\N$,定义$A[X]$中的元素族$\mathcal{C}_{m,n}\coloneq\left(X^{m+2-k}\right)_{k=1}^{m+2}$.
+\end{itemize}
+
+\begin{definition}{Sylvester映射}{}
+	固定$m,n\in\N$.
+	\begin{enumerate}
+		\item $\varphi_{m,n}:S_{m}\boxplus S_{n}\to S_{m+n},\left(t_{i}\right)_{i=1}^{2}\mapsto t_{1}f+t_{2}g$称为$\left(m,n\right)$-Sylvester映射.
+		\item $\left[\varphi_{m,n}\right]_{\mathcal{B}_{m,n}}^{\mathcal{C}_{m,n}}$称为$f$和$g$的Sylvester矩阵.
+		\item 当$\deg\left(f\right)=m,\deg\left(g\right)=n$时,称$\res\left(f,g\right)\coloneq\res_{m,n}\left(f,g\right)\coloneq\det\left(\left[\varphi_{m,n}\right]_{\mathcal{B}_{m,n}}^{\mathcal{C}_{m,n}}\right)$为$f$和$g$的结式.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\left[\varphi_{m,n}\right]_{\mathcal{B}_{m,n}}^{\mathcal{C}_{m,n}}$是$A$中以$\left[0,m+n-1\right]$为指标的方阵.
+		\item 若$\left[\varphi_{m,n}\right]_{\mathcal{B}_{m,n}}^{\mathcal{C}_{m,n}}=\left(t_{i,j}\right)_{\substack{0\leq i\leq m+n-1\\ 0\leq j\leq p+q-1}}$,则
+		\begin{align*}
+			\forall i\in\left[0,p+q-2\right]\left(\left(\forall j\in\left[0,n-1\right]\left(r_{i,j}=a_{m-i+j}\right)\right)\wedge\forall j\in\left[n,m+n-1\right]\left(r_{i,j}=b_{j-i}\right)\right)
+		\end{align*}
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$\lambda,\mu\in A$,则$\res_{m,0}\left(f,\lambda\right)=\lambda^{m},\res_{0,n}\left(\mu,g\right)=\mu^{n},\res_{m,1}\left(f,\lambda\right)=\lambda^{m}a_{m},\res_{1,n}\left(\mu,g\right)=\left(-1\right)^{n}\mu^{n}b_{n}$.
+		\item $\res_{1,1}\left(a_{1}X+a_{0},b_{1}X+b_{0}\right)=a_{1}b_{0}-b_{1}a_{0}$.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{结式的性质}{}
+	\begin{enumerate}
+		\item 若$\lambda,\mu\in A$,则$\res_{m,n}\left(\lambda f,\mu g\right)=\lambda^{n}\mu^{m}\res_{p,q}\left(f,g\right)$.
+		\item $\res_{n,m}\left(g,f\right)=\left(-1\right)^{mn}\res_{m,n}\left(f,g\right)$.
+		\item 若$B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,则$\res_{m,n}\left(^{\rho}f,^{\rho}g\right)=\rho\left(\res_{m,n}\left(f,g\right)\right)$.
+		\item 若$m+n\geq 1$,则$\exists u,v\in S_{n}\times S_{m}\left(\res_{m,n}=uf+vg\right)$.
+		\item 若$m\geq n$,$h\in A[X]$且$\deg\left(h\right)\leq m-n$,则$\res_{m,n}\left(f,g\right)=\res_{m,n}\left(f+gh,g\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{结式和泛分解代数的范数的性质}{}
+	设$f$首一且$\deg\left(f\right)=m$.令$E=A[X]/\langle f\rangle$,则$\res_{m,n}\left(f,g\right)=N_{E/A}\left(g+\langle f\rangle\right)$.
+\end{proposition}
+
+\begin{corollary}{互素和结式的关系}{}
+	设$f$首一,则$\res_{m,n}\left(f,g\right)=0\iff$ $f$和$g$互素$\iff$ $g+\langle f\rangle\in\left(A[X]/\langle f\rangle\right)^{\times}$.
+\end{corollary}
+
+\begin{corollary}{域上结式为$0$的等价条件}{}
+	设$A$是域,$f,g$都非零,则$\res_{m,n}\left(f,g\right)=0$ $\iff$ $f$和$g$在$A[X]$中不互素$\iff$ 存在$A$的扩域$L$使得$f$和$g$在$L$中有公共根.
+\end{corollary}
+
+\begin{corollary}{一次多项式的结式}{}
+	设$\lambda\in A$,则$\res_{m,1}\left(f,\lambda-X\right)=f\left(\lambda\right),\res_{1,n}\left(X-\lambda,g\right)=g\left(\lambda\right)$.
+\end{corollary}
+
+\begin{proposition}{二元多项式和结式的关系}{}
+	设$f,g$都首一,$\deg\left(f\right)=m,\deg\left(g\right)=n,F=A[X,Y]/\langle f\left(X\right),g\left(Y\right)\rangle$,$x$和$y$分别是$X$和$Y$在典范映射$A[X,Y]\to F$下的像,则$\res_{m,n}\left(f,g\right)=\mathrm{N}_{F/A}\left(x-y\right)$.
+\end{proposition}
+
+\begin{proposition}{结式的乘法性质}{}
+	设$p_{1},q_{1}>0,f_{1},g_{1}\in A[X],\deg\left(f_{1}\right)\leq m_{1},\deg\left(g_{1}\right)\leq n_{1}$,则
+	\begin{align*}
+		\res_{m,n+n_{1}}\left(f,gg_{1}\right)=\res_{m,n}\left(f,g\right)\res_{m,n_{1}}\left(f,g_{1}\right),\res_{m+m_{1},n}\left(ff_{1},g\right)=\res_{m,n}\left(f,g\right)\res_{m_{1},n}\left(f_{1},g\right).
+	\end{align*}
+\end{proposition}
+
+\begin{lemma}{}{}
+	设$t\in A$,则存在交换环$C$和$C$的子环$B$,环同态$\rho:B\to A$和$\tau\in B^{\times}$,使得$C$以$A$为子环,$A\subseteq B$,$\rho\left(\tau\right)=t$且
+	\begin{align*}
+		\forall x\in A\left(\rho\left(x\right)=x\right).
+	\end{align*}
+\end{lemma}
+
+\begin{corollary}{结式的根表达式}{}
+	设$\lambda,\mu,\alpha_{1},\ldots,\alpha_{m},\beta_{1},\ldots,\beta_{n}\in A$.
+	\begin{enumerate}
+		\item 若$f=\lambda\prod\limits_{i=1}^{m}\left(X-\alpha_{i}\right)$,则$\res_{m,n}\left(f,g\right)=\lambda^{n}\prod\limits_{i=1}^{m}g\left(\alpha_{i}\right)$.
+		\item 若$f=\lambda\prod\limits_{i=1}^{m}\left(X-\alpha_{i}\right),g=\lambda\prod\limits_{j=1}^{n}\left(X-\beta_{j}\right)$,则$\res_{m,n}\left(f,g\right)=\lambda^{n}\mu^{m}\prod\limits_{\substack{1\leq i\leq m\\ 1\leq j\leq n}}\left(\alpha_{i}-\beta_{j}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{提升次数界给结式带来的系数}{}
+	对每个$r\in\N$有$\res_{m,n+r}\left(f,g\right)=a_{m}^{r}\res_{m,n}\left(f,g\right)$.
+\end{corollary}
+
+\begin{remark}{}{}
+	设$f$首一,$B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right),\xi_{1},\ldots,\xi_{m}\in B$且$^{\rho}f=\prod\limits_{i=1}^{n}\left(X-\xi_{i}\right)$,则$\rho\left(\res\left(f,g\right)\right)=\prod\limits_{i=1}^{n}g\left(\xi_{i}\right)$.这为我们提供了一种计算结式的方法,特别地,可以应用到$E_{f}$上.
+\end{remark}
+
+\begin{example}{}{}
+	在$A[X]$中$\res_{2,2}\left(a_{1}X^{2}+b_{1}X+c_{1},a_{2}X^{2}+b_{2}X+c_{2}\right)=\left(a_{1}c_{2}-c_{2}a_{1}\right)^{2}+\left(b_{1}c_{2}-c_{1}b_{2}\right)\left(b_{1}a_{2}-a_{1}b_{2}\right)$.
+\end{example}
+
+
+
+
+
+
+
+
+
+

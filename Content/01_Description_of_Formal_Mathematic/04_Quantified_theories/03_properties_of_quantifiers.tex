@@ -1,0 +1,74 @@
+\section{量词的性质}
+
+自本节起,我们仅讨论量化理论.
+
+设$\mathcal{T}$为一个量化理论,$\mathcal{T}_{0}$为无显式公理的逻辑理论,其公理仅由逻辑理论和量化理论的公理模式导出.
+
+\begin{metatheorem}{存在量词否定转换律}{}
+	设$\boldsymbol{R}$是$\mathcal{T}$中的公式,$\boldsymbol{x}$是一个字母,则$\neg\left(\exists\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\forall\boldsymbol{x}\right)\neg\boldsymbol{R}$在$\mathcal{T}$中等价.
+\end{metatheorem}
+
+\begin{remark}{}{}
+	这一元定理使得我们能够从存在量词(相对地,全程量词)的性质推导出全程量词(相对的,存在量词)的性质.
+\end{remark}
+
+\begin{metatheorem}{全称量词消去律(全称实例化)}{}
+	设$\boldsymbol{R}$是$\mathcal{T}$中的公式,$\boldsymbol{T}$是$\mathcal{T}$中的项,$\boldsymbol{x}$是一个字母,则$\left(\forall\boldsymbol{x}\right)\boldsymbol{R}\implies\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$的定理.
+\end{metatheorem}
+
+\begin{remark}{}{}
+	设$\boldsymbol{R}$为$\mathcal{T}$中的一个公式.只要字母$\boldsymbol{x}$不是$\mathcal{T}$中的常元,那么,无论是陈述$\mathcal{T}$中的定理$\boldsymbol{R}$,定理$\left(\forall\boldsymbol{x}\right)\boldsymbol{R}$,还是陈述元数学规则,这三者在效果上是相同的。
+\end{remark}
+
+\begin{corollary}{定理的等价陈述形式}{}
+	设$\boldsymbol{R}$是量化理论$\mathcal{T}$中的公式,字母$\boldsymbol{x}$不是$\mathcal{T}$的常元.那么,以下三种说法是相同的：
+		\begin{enumerate}
+			\item $\boldsymbol{R}$是$\mathcal{T}$中的定理.
+			\item $\left(\forall\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$中的定理.
+			\item 对于$\mathcal{T}$中的每个项$\boldsymbol{T}$,$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$中的定理.
+		\end{enumerate}	
+\end{corollary}
+
+\begin{metatheorem}{量词的单调性与等价分布律}{}
+	设$\boldsymbol{R}$和$\boldsymbol{S}$是$\mathcal{T}$中的公式,字母$\boldsymbol{x}$不是$\mathcal{T}$的常元.
+	\begin{enumerate}
+		\item (蕴含单调性)若$\boldsymbol{R}\implies\boldsymbol{S}$是$\mathcal{T}$中的定理,则$\left(\forall\boldsymbol{x}\right)\boldsymbol{R}\implies\left(\forall\boldsymbol{x}\right)\boldsymbol{S}$和$\left(\exists\boldsymbol{x}\right)\boldsymbol{R}\implies\left(\exists\boldsymbol{x}\right)\boldsymbol{S}$均是$\mathcal{T}$中的定理.
+		\item (等价的替换)若$\boldsymbol{R}\iff\boldsymbol{S}$是$\mathcal{T}$中的定理,则$\left(\forall\boldsymbol{x}\right)\boldsymbol{R}\iff\left(\forall\boldsymbol{x}\right)\boldsymbol{S}$和$\left(\exists\boldsymbol{x}\right)\boldsymbol{R}\iff\left(\exists\boldsymbol{x}\right)\boldsymbol{S}$均是$\mathcal{T}$中的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{量词对合取与析取的分配律}{}
+	设$\boldsymbol{R}$和$\boldsymbol{S}$是$\mathcal{T}$中的公式,$\boldsymbol{x}$是字母.
+	\begin{enumerate}
+		\item (全称量词对合取的分配)$\left(\forall\boldsymbol{x}\right)\left(\boldsymbol{R}\wedge\boldsymbol{S}\right)\iff\left(\forall\boldsymbol{x}\right)\boldsymbol{R}\wedge\left(\forall\boldsymbol{x}\right)\boldsymbol{S}$是$\mathcal{T}$的定理.
+		\item (存在量词对合取的分配)$\left(\exists\boldsymbol{x}\right)\left(\boldsymbol{R}\vee\boldsymbol{S}\right)\iff\left(\exists\boldsymbol{x}\right)\boldsymbol{R}\vee\left(\exists\boldsymbol{x}\right)\boldsymbol{S}$是$\mathcal{T}$的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{辖域扩张/收缩律}{}
+	设$\boldsymbol{R}$和$\boldsymbol{S}$是$\mathcal{T}$中的公式,字母$\boldsymbol{x}$未在$\mathcal{R}$中出现.
+	\begin{enumerate}
+		\item (全称量词的辖域迁移)$\left(\forall\boldsymbol{x}\right)\left(\boldsymbol{R}\vee\boldsymbol{S}\right)\iff\boldsymbol{R}\vee\left(\forall\boldsymbol{x}\right)\boldsymbol{S}$是$\mathcal{T}$的定理.
+		\item (存在量词的辖域迁移)$\left(\exists\boldsymbol{x}\right)\left(\boldsymbol{R}\wedge\boldsymbol{S}\right)\iff\boldsymbol{R}\wedge\left(\exists\boldsymbol{x}\right)\boldsymbol{S}$是$\mathcal{T}$的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{remark}{}{}
+	需要注意的是，即便$\left(\forall\boldsymbol{x}\right)\left(\boldsymbol{R}\vee\boldsymbol{S}\right)$是理论$\mathcal{T}$中的一个定理,我们也不能由此推断出 $\left(\left(\forall\boldsymbol{x}\right)\boldsymbol{R}\vee\left(\forall\boldsymbol{x}\right)\boldsymbol{S}\right)$也是该理论的一个定理.直观而言,说公式$\left(\forall\boldsymbol{x}\right)\left(\boldsymbol{R}\vee\boldsymbol{S}\right)$为真,意味着对于每一个对象$\boldsymbol{x}$,公式$\boldsymbol{R}$和公式$\boldsymbol{S}$至少有一个成立.但在一般情况下,两者中往往只有一个成立,究竟是$\boldsymbol{R}$还是$\boldsymbol{S}$成立,取决于对$\boldsymbol{x}$的选取.
+	
+	同样地,即便$\left(\forall\boldsymbol{x}\right)\boldsymbol{R}\wedge\left(\exists\boldsymbol{x}\right)\boldsymbol{S}$是理论$\mathcal{T}$中的一个定理,也不能由此得出$\left(\exists\boldsymbol{x}\right)\left(\boldsymbol{R}\wedge\boldsymbol{S}\right)$是$\mathcal{T}$的一个定理.
+\end{remark}
+
+\begin{metatheorem}{量词换位定理}{}
+	设$\boldsymbol{R}$是$\mathcal{T}$中的公式,$\boldsymbol{x}$和$\boldsymbol{y}$是两个不同的字母.
+	\begin{enumerate}
+		\item $\left(\forall\boldsymbol{x}\right)\left(\forall\boldsymbol{y}\right)\boldsymbol{R}\iff\left(\forall\boldsymbol{y}\right)\left(\forall\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$的定理.
+		\item $\left(\exists\boldsymbol{x}\right)\left(\exists\boldsymbol{y}\right)\boldsymbol{R}\iff\left(\exists\boldsymbol{y}\right)\left(\exists\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$的定理.
+		\item $\left(\exists\boldsymbol{x}\right)\left(\forall\boldsymbol{y}\right)\boldsymbol{R}\implies\left(\forall\boldsymbol{y}\right)\left(\exists\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{remark}{}{}
+	即便$\left(\forall\boldsymbol{y}\right)\left(\exists\boldsymbol{x}\right)\boldsymbol{R}$是理论$\mathcal{T}$中的一个定理,我们也不能推断出$\left(\exists\boldsymbol{x}\right)\left(\forall\boldsymbol{y}\right)\boldsymbol{R}$是$\mathcal{T}$的定理.直观地说,公式$\left(\forall\boldsymbol{y}\right)\left(\exists\boldsymbol{x}\right)\boldsymbol{R}$为真,意味着对于任意给定的对象$\boldsymbol{y}$,都存在一个对象$\boldsymbol{x}$,使得$\boldsymbol{R}$是关于对象$\boldsymbol{x}$和$\boldsymbol{y}$的一个成立的公式.然而在一般情况下,对象$\boldsymbol{x}$往往依赖于对象$\boldsymbol{y}$的选取;而说出$\left(\exists\boldsymbol{x}\right)\left(\forall\boldsymbol{y}\right)\boldsymbol{R}$为真,则意味着存在一个固定的对象$\boldsymbol{x}$,使得对于任何对象$\boldsymbol{y}$,$\boldsymbol{R}$都是一个成立的公式.
+\end{remark}
+

@@ -1,0 +1,48 @@
+\chapter{对称张量和多项式函数}
+
+\section{相对迹}
+
+记号约定:
+\begin{itemize}
+	\item $G$是群,$H\leq G$,$M$是左$A[G]$-模.
+	\item 记$M^{G}=\left\{m\in M\middle|\forall h\in H\left(hm=m\right)\right\}$.
+\end{itemize}
+注意,在这里不要把$M^{G}$和$M$中以$G$为指标集的元素族构成的集合混为一谈.
+
+\begin{remark}{}{}
+	对每个$\left(m,g,g^{\prime}\right)\in M^{H}\times G\times G$,有$\left(gH\right)m=\left\{gm\right\},g^{\prime}\left(\left(gH\right)m\right)=\left(g^{\prime}\left(gH\right)\right)m$,因此我们把$gm$记作$xm$,其中$x=gH$.
+\end{remark}
+
+本节的剩余内容中,默认$H$在$G$中具备有限指数,如此有$\forall m\in M^{H}\left(\sum\limits_{x\in G/H}xm\in M^{G}\right)$.
+
+\begin{definition}{相对迹映射}{}
+	我们称$A$-线性映射$\Tr_{G/H}:M^{H}\to M^{G},m\mapsto\sum\limits_{x\in G/H}xm$是相对迹.
+\end{definition}
+
+\begin{proposition}{相对迹的性质}{}
+	\begin{enumerate}
+		\item 设$\left(m,g\right)\in M^{H}\times G$,则$gm\in M^{gHg^{-1}}$,并且$\Tr_{G/gHg^{-1}}\left(gm\right)=\Tr_{G/H}\left(m\right)$.
+		\item 设$F\leq H$且$F$在$H$中的指数有限,则$\Tr_{G/H}\circ\Tr_{H/F}=\Tr_{G/F}$.
+		\item 若$m\in M^{G}$,则$\Tr_{G/H}\left(m\right)=\left(G:H\right)m$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

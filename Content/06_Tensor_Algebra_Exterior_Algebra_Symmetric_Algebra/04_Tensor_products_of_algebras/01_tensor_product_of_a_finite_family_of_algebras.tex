@@ -1,0 +1,99 @@
+\chapter{代数的张量积}
+
+从第$4$节到第$8$节,$A$总是一个交换环.没有额外说明s时,默认所说的代数含幺且结合,代数同态都含幺.
+
+\section{有限个代数的张量积}
+
+记号约定:$A$是交换环.
+
+\begin{definition}{有限个代数的张量积}{}
+	设$I$是有限集,$\left(E_{i}\right)_{i\in I}$是$A$-代数族,则$A$-模族$\left(E_{i}\right)_{i\in I}$的张量积$\bigotimes\limits_{i\in I}$在乘法
+	\begin{align*}
+		\left(\bigotimes\limits_{i\in I}E_{i}\right)\times\left(\bigotimes\limits_{i\in I}E_{i}\right)\to\bigotimes\limits_{i\in I}E_{i},\left(\left(x_{i}\right)_{i\in I},\left(y_{i}\right)_{i\in I}\right)\mapsto\bigotimes\limits_{i\in I}\left(x_{i}y_{i}\right)
+	\end{align*}
+	下是$A$-代数.如此得到的代数称为$\left(E_{i}\right)_{i\in I}$的张量积.特别地，
+	\begin{itemize}
+		\item 当$I=\left[1,\ldots,n\right]$时,记$\bigotimes\limits_{i\in I}E_{i}$为$E_{1}\otimes_{A}\ldots\otimes_{A}E_{n}$或$E_{1}\otimes\ldots\otimes E_{n}$.
+		\item 当$I=\left[1,n\right]$,对每个$i\in I$,$E_{i}$等于另一个$A$-代数$E$时,记$\bigotimes\limits_{i\in I}E_{i}$为$E^{\otimes n}$.
+	\end{itemize}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\bigotimes\limits_{i\in I}E_{i}^{\op}$和$\left(\bigotimes\limits_{i\in I}E_{i}\right)^{\op}$作为$A$-代数相等.
+		\item 如果$\left(E_{i}\right)_{i\in I}$还是一族交换代数,则$\bigotimes\limits_{i\in I}E_{i}$是交换代数.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{代数同态的张量积}{}
+	设$I$是有限集,$\left(E_{i}\right)_{i\in I},\left(F_{i}\right)_{i\in I}$是$A$-代数族,对每个$i\in I$有$f_{i}\in\Hom_{A-\mathsf{Alg}}\left(E_{i},F_{i}\right)$,则
+	\begin{align*}
+		\bigotimes\limits_{i\in I}f_{i}\in\Hom_{A-\mathsf{Alg}}\left(\bigotimes\limits_{i\in I}E_{i},\bigotimes\limits_{i\in I}F_{i}\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{代数的张量积的结合同构是代数同构}{}
+		设$I$是有限集,$\left(E_{i}\right)_{i\in I}$是$A$-代数族,$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,则典范$A$-模同构$\bigotimes\limits_{\lambda\in\Lambda}\bigotimes\limits_{i\in I_{\lambda}}\to\bigotimes\limits_{i\in I}E_{i}$是$A$-代数同构.
+\end{proposition}
+
+\begin{proposition}{理想的张量积}{}
+	设$E,F$是$A$-代数,$\mathfrak{a}$是$E$的左(右,双边)理想,则典范映射$\mathfrak{a}\otimes_{A}F\to E\otimes_{A}F$的像是$E\otimes_{A}F$的左(右,双边)理想.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E,F$是$A$-代数,$\mathfrak{a},\mathfrak{b}$分别是$E,F$的双边理想,则典范的$A$-模同构
+	\begin{align*}
+		\left(E/\mathfrak{a}\right)\otimes_{A}\left(F/\mathfrak{b}\right)\to\left(E\otimes_{A}F\right)/\left(\im\left(\mathfrak{a}\otimes_{A}F\right)+\im\left(E\otimes_{A}b\right)\right)
+	\end{align*}
+	是$A$-代数同构.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$E$是$A$-代数,$\mathfrak{a}$是$A$的理想,则$\mathfrak{a}E$是$E$的双边理想,典范$A/\mathfrak{a}$-模同构$\left(A/\mathfrak{a}\right)\otimes_{A}E\to E/\mathfrak{a}E$是$A/\mathfrak{a}$-代数同构.
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$\mathfrak{a},\mathfrak{b}$是$A$的双边理想,则典范$A$-模同构$\left(A/\mathfrak{a}\right)\otimes_{A}\left(A/\mathfrak{b}\right)\to A/\left(\mathfrak{a}+\mathfrak{b}\right)$是$A$-代数同构.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E,F$是$A$-代数,$\mathfrak{a}$是$A$的理想,$\mathfrak{a}\subseteq\Ann_{A}\left(F\right)$,则典范$A/\mathfrak{a}$-模同构$E\otimes_{A}F\to\left(E/\mathfrak{a}E\right)\otimes_{A/\mathfrak{a}}F$是$A$-代数同构.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(E_{i}\right)_{i\in I},\left(F_{j}\right)_{j\in J}$是$A$-代数族,则典范$A$-模同构$\left(\bigboxplus\limits_{i\in I}E_{i}\right)\otimes_{A}\left(\bigboxplus\limits_{j\in J}F_{j}\right)\to\bigboxplus\limits_{\left(i,j\right)\in I\times J}\left(E_{i}\otimes_{A}F_{j}\right)$是$A$-代数同构.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E,F$是$A$-代数,$B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,则典范$A$-模同构$\rho_{\ast}\left(F\right)\otimes_{A}E\to\rho_{\ast}\left(F\otimes_{B}\rho^{\ast}\left(E\right)\right)$是$A$-代数同构.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(\left(A_{i}\right)_{i\in I},\left(\phi_{ji}\right)_{i,j\in I}\right)$是交换环的正系统,$\left(\left(E_{i}\right)_{i\in I},\left(f_{ji}\right)_{i,j\in I}\right),\left(\left(F_{i}\right)_{i\in I},\left(g_{ji}\right)_{i,j\in I}\right)$是$A_{i}$-代数的正系统,则典范映射
+	\begin{align*}
+		\varinjlim\left(E_{i}\otimes_{A_{i}}F_{i}\right)\to\left(\varinjlim E_{i}\right)\otimes_{\varinjlim A_{i}}\left(\varinjlim F_{i}\right)
+	\end{align*}
+	是$\varinjlim A_{i}$-代数同构.
+\end{proposition}
+
+\begin{example}{自同态代数的张量积}{}
+	设$M,N$是$A$-模,则典范映射$\End_{A}\left(M\right)\otimes_{A}\End_{A}\left(N\right)\to\End_{A}\left(M\otimes_{A}N\right)$是$A$-代数同态.特别地,当$M,N$中有一个是有限生成的投射模时,上述映射是$A$-代数同构.由此可以覆盖两个方阵的张量积的定义.
+\end{example}
+
+\begin{example}{幺半群代数的张量积}{}
+	设$S,T$是幺半群,则存在典范的$A$-代数同构$A^{\left(S\right)}\otimes_{A}A^{\left(T\right)}\to A^{\left(S\times T\right)}$.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

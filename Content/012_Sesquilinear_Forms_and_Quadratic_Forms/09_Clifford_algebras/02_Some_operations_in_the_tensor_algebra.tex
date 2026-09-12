@@ -1,0 +1,63 @@
+\section{张量代数中的若干运算}
+
+记号约定:对每个$x\in E$,定义$e_{x}:\mathsf{T}\left(E\right)\to\mathsf{T}\left(E\right),u\mapsto x\otimes u$.
+
+\begin{lemma}{内乘的存在性}{}
+	对每个$f\in E^{\vee}$,存在唯一的$i_{f}\in\End_{A}\left(\mathsf{T}\left(E\right)\right)$满足如下条件:
+	\begin{enumerate}
+		\item $i_{f}\left(1\right)=0$;
+		\item 对每个$x\in E$有$i_{f}\circ e_{x}+e_{x}\circ i_{f}=f\left(x\right)\id_{\mathsf{T}\left(E\right)}$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $E^{\vee}\to\End_{A}\left(\mathsf{T}\left(E\right)\right),f\mapsto i_{f}$是$A$-线性映射.
+		\item 对每个$f\in E^{\vee}$和$n\geq 1$有$i_{f}\left(\mathsf{T}^{n}\left(E\right)\right)=\mathsf{T}^{n-1}\left(E\right)$.
+		\item 对每个$f\in E^{\vee}$有$i_{f}\circ i_{f}=0$;对每个$f,g\in E^{\vee}$有$i_{f}\circ i_{g}+i_{g}\circ i_{f}=0$.
+		\item 对每个$f\in E^{\vee}$,它在$\ker\left(f\right)$生成的代数$\mathcal{A}$上的限制是零映射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$Q\in\Quad_{A}\left(E\right),f\in E^{\vee}$.
+	\begin{enumerate}
+		\item $\mathrm{I}\left(Q\right)$是$i_{f}$-不变的.
+		\item $i_{f}$诱导了典范的$A$-线性映射$\bar{i}_{f}:\Cl\left(E,Q\right)\to\Cl\left(E,Q\right)$.
+	\end{enumerate}
+\end{proposition}
+
+本节接下来的内容中,约定:对每个$B\in\Bil_{A}\left(E\right)$和$x\in E$,记$f_{x}\coloneq B\left(x,\cdot\right),i_{f}^{B}\coloneq i_{f_{x}}$.
+
+\begin{lemma}{}{}
+	设$F\in\Bil_{A}\left(E\right)$,则存在唯一的$\lambda_{F}\in\End_{A}\left(\mathsf{T}\left(E\right)\right)$满足如下条件:
+	\begin{enumerate}
+		\item $\lambda_{F}\left(1\right)=1$;
+		\item 对每个$x\in E$有$\lambda_{F}\circ e_{x}=\left(e_{x}+i_{x}^{F}\right)\circ\lambda_{F}$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{proposition}{}{}
+	对每个$F\in\Bil_{A}\left(E\right)$和$f\in E^{\vee}$有$\lambda_{F}\circ i_{f}=i_{f}\circ\lambda_{F}$.
+\end{proposition}
+
+\begin{lemma}{}{}
+	设$F,G\in\Bil_{A}\left(E\right)$.
+	\begin{enumerate}
+		\item $\lambda_{F}\circ\lambda_{G}=\lambda_{F+G}$.
+		\item 若$F=0$,则$\lambda_{F}=\id_{\mathsf{T}\left(E\right)}$.
+		\item $\lambda_{F}$是双射,并且$\lambda_{F}^{-1}=\lambda_{-F}$.
+	\end{enumerate}
+\end{lemma}
+
+
+
+
+
+
+
+
+
+
+
+

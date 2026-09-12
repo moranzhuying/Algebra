@@ -1,0 +1,67 @@
+\section{双代数,反对称双代数}
+
+\begin{definition}{分次双代数,反对称分次双代数}{}
+	设$E$是$\N$型分次$A$-模,既是分次$A$-代数又是分次$A$-余代数,分次为$\left(E_{n}\right)_{n\in\N}$,并且
+	\begin{itemize}
+		\item 作为分次$A$-代数,$E$是结合的,并且有单位元$1_{E}$;
+		\item 作为分次$A$-余代数,$E$是余结合的,并且有余单位元$\varepsilon$.
+		\item $\varepsilon$是$E$到配备平凡分次的$A$的含幺代数同态.
+	\end{itemize}
+	如果$E$上的余乘$c:E\to E\otimes_{A}E$(相对的,$c:E\to E\otimes_{A}^{g}E$)是代数同态,则称$E$是$A$-分次双代数(相对的,$A$-反对称分次双代数).进一步,
+	\begin{enumerate}
+		\item 若分次双代数$E$配备平凡分次,则称$E$是双代数.
+		\item 若分次双代数$E$作为分次代数是交换的,则称$E$是交换的.
+		\item 若分次双代数$E$作为分次余代数是余交换的,则称$E$是余交换的.
+		\item 若反对称分次双代数$E$作为分次代数是分次反交换的,则称$E$是分次反交换的.
+		\item 若反对称分次双代数$E$作为分次余代数是分次余交换的,则称$E$是分次反余交换的.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{分次双代数同态,反对称分次双代数同态}{}
+	设$E,F$都是分次双代数(相对的,反对称分次双代数),歌词的余单位元分别是$\varepsilon_{E}$和$\varepsilon_{F}$,$\phi:E\to F$.若
+	\begin{enumerate}
+		\item $\phi$是分次代数同态,
+		\item $\phi$是分次余代数同态,并且$\varepsilon_{E}=\varepsilon_{F}\circ\phi$,
+	\end{enumerate}
+	则称$\phi$是分次双代数同态(相对的,反对称分次双代数同态).分别记
+	\begin{gather*}
+		\underline{\Hom}_{A-\mathsf{BiAlg}}\left(E,F\right)=\left\{f\in\Hom_{A-\mathsf{Alg}}\left(E,F\right)\middle|f\text{是分次双代数同态}\right\},\\
+		\underline{\Hom}_{A-\mathsf{SkewBiAlg}}\left(E,F\right)=\left\{f\in\Hom_{A-\mathsf{Alg}}\left(E,F\right)\middle|f\text{是分次双代数同态}\right\}.
+	\end{gather*}
+\end{definition}
+
+\begin{example}{双代数,斜对称分次双代数的例子}{}
+	\begin{enumerate}
+		\item 设$S$是幺半群(单位元为$u$),$A^{\left(S\right)}$(单位元为$e_{u}$),则
+		\begin{itemize}
+			\item $A^{\left(S\right)}$是余交换双代数,称为幺半群$S$在$A$上的双代数.
+			\item 若$T$是幺半群(单位元为$v$),$f\in\Hom_{\mathsf{Mon}}\left(S,T\right)$,则$f$诱导的代数同态$f_{A}:A^{\left(S\right)}\to A^{\left(T\right)}$是双代数同态.
+		\end{itemize}
+		\item 设$M$是$A$-模,则$\mathsf{S}\left(M\right)$是交换且余交换的分次双代数,$\bigwedge\left(M\right)$是分次反交换且分次余反交换的反对称分次双代数.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{}{}
+	若$M\otimes_{A}M\neq\left\{0\right\}$,那么$\mathsf{T}\left(M\right)$不是双代数,因为$\mathsf{T}\left(M\right)$上的余乘一般不是代数同态.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

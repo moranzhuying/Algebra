@@ -1,0 +1,82 @@
+\section{从代数\texorpdfstring{$A$}{A}到\texorpdfstring{$A$}{A}-模的导子}
+
+记号约定:
+\begin{itemize}
+	\item $A$是$\Delta$型分次$K$-代数,$E$是$\Delta$型分次$K$-模.
+	\item $\lambda_{1}:E\otimes_{K}A\to E$和$\lambda_{2}:A\otimes_{K}E\to E$是典范映射.
+	\item 对每个$\lambda\in A,x\in E$,记$\lambda_{1}\left(x\otimes\lambda\right)=x\lambda,\lambda_{2}\left(\lambda\otimes x\right)=\lambda x$.
+\end{itemize}
+
+\begin{proposition}{导子的核}{}
+	设$d:A\to E$是$\delta$次$\epsilon$-导子.
+	\begin{enumerate}
+		\item $\ker\left(d\right)$是$A$的分次子代数.
+		\item 若$A$有单位元$1_{A}$,则$1_{A}\in\ker\left(d\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$d_{1},d_{2}$是$A$到$E$的$\delta$次$\epsilon$-导子,$S$是$A$的生成系.若$d_{1}|_{S}=d_{2}|_{S}$,则$d_{1}=d_{2}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$A$有单位元$1$,$x$是$A$中的可逆齐次元,$d:A\to E$是$\delta$次$\epsilon$-导子,则
+	\begin{align*}
+		d\left(x^{-1}\right)=-\epsilon\left(\delta,\deg\left(x\right)\right)x^{-1}\left(d\left(x\right)x^{-1}\right)=-\epsilon\left(\delta,\deg\left(x\right)\right)\left(x^{-1}d\left(x\right)\right)x^{-1}.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{商的求导法则}{}
+	设$A$是整环,$L=\Frac\left(A\right)$,$\tau:A\to L$是典范映射,$E$是$L$-模,则每个导子$d:A\to\tau_{\ast}\left(E\right)$都可以唯一地延拓为导子
+	\begin{align*}
+		\bar{d}:L\to E.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{乘积的求导法则}{}
+	设$A$是有单位元$1_{A}$的交换结合分次$K$-代数,$E$是分次$\left(A,A\right)$-双模.若
+	\begin{enumerate}
+		\item $d:A\to E$是$\delta$次$\epsilon$-导子,
+		\item $\left(x_{i}\right)_{i=1}^{n}$是$A$中的一族齐次元,其中对每个$1\leq i\leq n$有$\deg\left(x_{i}\right)=\xi_{i}$,
+	\end{enumerate}
+	则$d\left(x_{1}\ldots x_{n}\right)=\sum\limits_{i=1}^{n}\epsilon\left(\delta,\sum\limits_{j=1}^{i-1}\xi_{j}\right)x_{1}\ldots x_{i-1}d\left(x_{i}\right)x_{i+1}\ldots x_{n}$.
+\end{proposition}
+
+\begin{corollary}{含幺交换结合代数中的幂函数求导}{}
+	设$A$是含幺交换结合代数(视为平凡分次代数),$E$是$A$-模.若$d:A\to E$是导子,则
+	\begin{align*}
+		\forall n\geq 0\forall x\in A\left(d\left(x^{n}\right)=nx^{n-1}d\left(x\right)\right).
+	\end{align*}
+\end{corollary}
+
+\begin{definition}{$\epsilon$-中心化子}{}
+	设$d:A\to E$是$\delta$次$\epsilon$-导子.定义$Z_{\epsilon}$是$A$中满足下列条件的元素$a$组成的集合:对于$a$的每个$\alpha$次齐次分量$a_{\alpha}$和$E$的每个齐次元$x$,都有$xa_{\alpha}=\epsilon\left(\alpha,\deg\left(x\right)\right)a_{\alpha}x$.称$Z_{\epsilon}$是$A$的$\epsilon$-中心化子.
+\end{definition}
+
+\begin{remark}{}{}
+	当$A$是含幺交换结合代数(视为平凡分次代数),$E$是分次$\left(A,A\right)$-双模时,$Z_{\epsilon}$是$A$的含幺分次子代数.
+\end{remark}
+
+\begin{proposition}{$\epsilon$-导子构成的$Z_{\epsilon}$-模结构}{}
+	当$A$是含幺交换结合代数,$E$是分次$\left(A,A\right)$-双模,$d:A\to E$是$\delta$次$\epsilon$-导子,$a\in Z_{\epsilon}$且$\deg\left(a\right)=\alpha$,则
+	\begin{align*}
+		A\to E,x\mapsto ad\left(x\right)
+	\end{align*}
+	是$\delta+\alpha$次$\epsilon$-导子,于是从$A$到$E$的$\epsilon$-导子构成的$K$-模是典范的$\Delta$型分次$Z_{\epsilon}$-模.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

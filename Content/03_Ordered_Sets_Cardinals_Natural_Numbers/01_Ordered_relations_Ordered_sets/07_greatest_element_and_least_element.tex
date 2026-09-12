@@ -1,0 +1,115 @@
+\section{最大元和最小元}
+
+\begin{proposition}{最小元的唯一性}{}
+	设集合$E$配备偏序$\leq$.若存在$a\in E$使得$\forall x\in E\left(x\geq a\right)$,则$a$是唯一的.
+\end{proposition}
+
+\begin{definition}{最大元和最小元}{}
+	设集合$E$配备偏序$\leq$,$a\in E$.
+	\begin{enumerate}
+		\item 若$\forall x\in E\left(x\geq a\right)$,则称$a$是$E$(在$\leq$下)的最小元,记作$\min E$.
+		\item 若$\forall x\in E\left(x\leq a\right)$,则称$a$是$E$(在$\leq$下)的最大元,记作$\max E$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 偏序集不一定有最大元或最小元.后面我们会知道这个条件什么时候成立.
+		\item 如果$\leq^{\prime}$是$\leq$的对偶,$a$是$E$在$\leq$下的最小元(相对的,最大元),则$a$是$E$在$\leq^{\prime}$下的最大元(相对的,最小元).
+		\item 如果$a$是$E$中的最小元,那么$a$也是$E$中唯一的极小元.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{}{}
+	设$E$是集合.
+	\begin{enumerate}
+		\item 设$\emptyset\neq\mathfrak{S}\subseteq\mathcal{P}\left(E\right)$,给$\mathcal{P}\left(E\right)$配备包含偏序.
+		
+		如果$\mathfrak{S}$有最小元(相对的,最大元),则$\min\mathfrak{S}=\bigcap\limits_{S\in\mathfrak{S}}S$(相对的,$\max\mathfrak{S}=\bigcup\limits_{S\in\mathfrak{S}}S$);
+		
+		如果$\bigcap\limits_{S\in\mathfrak{S}}\in\mathfrak{S}$(相对的,$\bigcup\limits_{S\in\mathfrak{S}}S\in\mathfrak{S}$),则$\min\mathfrak{S}=\bigcap\limits_{S\in\mathfrak{S}}S$(相对的,$\max\mathfrak{S}=\bigcup\limits_{S\in\mathfrak{S}}S$).
+		\item 在集合$E$的幂集中,$\emptyset$和$E$分别是包含偏序下的最小元和最大元.
+		\item 设$E,F$是集合,则空函数是配备函数延拓偏序的$\PFunc\left(E,F\right)$的最小元.除非$F$是单点集,否则$\PFunc\left(E,F\right)$无最大元.
+		\item 集合$E$上的等价对应(相对的,等价关系)组成的集合中的最小元是$\Delta_{E}$.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设集合$E$配备偏序$\leq$,$E^{\prime}=E\sqcup\left\{a\right\}$,则$\leq$可以唯一地延拓为$E^{\prime}$的偏序$\leq^{\prime}$,使得$a$是$E$在$\leq^{\prime}$下的最大元.
+\end{proposition}
+
+\begin{definition}{共尾,共首}{}
+	设集合$E$配备预序$\leq$,$A\subseteq E$.
+	\begin{enumerate}
+		\item 若$\forall x\in E\exists y\in A\left(x\leq y\right)$,则称$A$是$E$(在$\leq$下)的共尾子集.
+		\item 若$\forall x\in E\exists y\in A\left(x\geq y\right)$,则称$A$是$E$(在$\leq$下)的共首子集.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	设集合$E$配备偏序$\leq$,则$E$有最大元(相对的,最小元)$\iff$ $E$有一个共尾(相对的,共首)子集是单点集.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

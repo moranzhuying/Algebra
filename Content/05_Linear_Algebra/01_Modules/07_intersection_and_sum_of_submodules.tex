@@ -1,0 +1,89 @@
+\section{子模的交,和}
+
+记号约定:$A$是环,$E,F$是$A$-模,$\left(M_{i}\right)_{i\in I}$是$E$的一族子模.
+
+\begin{proposition}{子模的交还是子模}{}
+	$\bigcap\limits_{i\in I}M_{i}$是$E$的子模.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\phi:E\twoheadrightarrow\prod\limits_{i\in I}\left(E/M_{i}\right)$是典范映射,则存在正合列
+	\begin{align*}
+		0\xlongrightarrow{}\bigcap\limits_{i\in I}M_{i}\xlongrightarrow{\tau}E\xlongrightarrow{\phi}\prod\limits_{i\in I}\left(E/M_{i}\right),
+	\end{align*}
+	其中$\tau$是典范嵌入.若$\bigcap\limits_{i\in I}M_{i}=0$,则$\phi$同构于$\prod\limits_{i\in I}\left(E/M_{i}\right)$的一个子模.
+\end{proposition}
+
+\begin{definition}{生成子模,生成系}{}
+	设$X\subseteq E$.定义$\langle X\rangle=\bigcap\limits_{\substack{X\subseteq N\subseteq M\\N\text{是子模}}}N$是$S$生成的$R$-模,$X$是$\langle X\rangle$的生成系.
+\end{definition}
+
+\begin{definition}{有限生成模}{}
+	若$E$右一个生成集是有限的,则称$E$是有限生成集.
+\end{definition}
+
+\begin{proposition}{线性组合的等价性}{}
+	设$\left(a_{i}\right)_{i\in I}$是$E$的元素族,则$\left(a_{i}\right)_{i\in I}$生成的子模是$\left(a_{i}\right)_{i\in I}$的线性组合组成的集合.
+\end{proposition}
+
+\begin{corollary}{同态下的像}{}
+	设$u\in\Hom_{A}\left(E,F\right),S\subseteq E$,则$u\left(\langle S\rangle\right)=\langle u\left(S\right)\rangle$.
+\end{corollary}
+
+\begin{remark}{线性扩张原则}{}
+	设$u,v\in\Hom_{A}\left(E,F\right)$.若$\forall x\in S\left(u\left(x\right)=v\left(x\right)\right)$,则$\forall x\in\langle S\rangle\left(u\left(x\right)=v\left(x\right)\right)$.
+	
+	特别地,要验证下图交换,只要验证$\forall x\in\langle S\rangle\left(u\left(x\right)=0\right)$.
+	\begin{center}
+		\begin{tikzcd}
+			E && {E/\langle S\rangle} \\
+			& F
+			\arrow["\pi", two heads, from=1-1, to=1-3]
+			\arrow["u"', from=1-1, to=2-2]
+			\arrow["w", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{remark}
+
+\begin{definition}{子模族的和}{}
+	我们称$\sum\limits_{i\in I}M_{i}\coloneq\langle\bigcup\limits_{i\in I}M_{i}\rangle$为$\left(M_{i}\right)_{i\in I}$的和.
+\end{definition}
+
+\begin{corollary}{子模族的和的具体形式}{}
+	$\sum\limits_{i\in I}M_{i}=\left\{\sum\limits_{i\in I}x_{i}\middle|\left(x_{i}\right)_{i\in I}\in\bigboxplus\limits_{i\in I}M_{i},\forall i\in I\left(x_{i}\in M_{i}\right)\right\}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设对任意$i\in I$,$h_{i}:M_{i}\hookrightarrow E$是典范嵌入,$h:\bigboxplus\limits_{i\in I}M_{i}\to E,\left(x_{i}\right)_{i\in I}\mapsto\sum\limits_{i\in I}h_{i}\left(x_{i}\right)$,则有正合列
+	\begin{align*}
+		\bigboxplus\limits_{i\in I}M_{i}\xlongrightarrow{h}E\xlongrightarrow{}E/\sum\limits_{i\in I}M_{i}\xlongrightarrow{}0.
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$I$是右定向集,则$\sum\limits_{i\in I}M_{i}=\bigcup\limits_{i\in I}M_{i}$.
+\end{corollary}
+
+\begin{corollary}{生成集的提升}{}
+	设$0\xlongrightarrow{}E\xlongrightarrow{f}F\xlongrightarrow{g}G\xlongrightarrow{}0$正合,$E=\langle S\rangle,G=\langle T\rangle$.若$T^{\prime}\subseteq F$且$g\left(T^{\prime}\right)=T$,则$\langle T^{\prime}\cup f\left(S\right)\rangle=F$.
+\end{corollary}
+
+\begin{corollary}{有限生成性+短正合列的``三推二''}{}
+	设$0\xlongrightarrow{}E\xlongrightarrow{f}F\xlongrightarrow{g}G\xlongrightarrow{}0$正合.若$E,G$都有限生成,则$F$也有限生成.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$M,N$是$E$的子模.定义
+	\begin{gather*}
+		u:M\cap N\hookrightarrow M\boxplus N,x\mapsto\left(x,-x\right),\\
+		d:M\boxplus N\to M+N,\left(x,y\right)\mapsto x-y,\\
+		v:E/\left(M\cap N\right)\to\left(E/M\right)\boxplus\left(E/N\right),z+\left(M\cap N\right)\mapsto\left(z+M,z+N\right),\\
+		\delta:E/\left(M\cap N\right)\to\left(E/M\cap N\right),\left(x+M,y+N\right)\mapsto\left(x-y\right)+\left(M+N\right),
+	\end{gather*}
+	则如下序列正合:
+	\begin{gather*}
+		0\xlongrightarrow{}M\cap N\xlongrightarrow{u}M\boxplus N\xlongrightarrow{d}M+N\xlongrightarrow{}0,\\
+		0\xlongrightarrow{}E/\left(M\cap N\right)\xlongrightarrow{v}\left(E/M\right)\boxplus\left(E/N\right)\xlongrightarrow{\delta}E/\left(M+N\right)\xlongrightarrow{}0.
+	\end{gather*}
+\end{proposition}
+

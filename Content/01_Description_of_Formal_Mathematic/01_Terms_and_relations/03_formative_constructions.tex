@@ -1,0 +1,75 @@
+\section{语法构造序列}
+
+\begin{definition}{谓词符号(关系符号),函数符号(实体符号)}{}
+	理论$\mathcal{T}$中的非逻辑常元分为两类:
+	\begin{enumerate}
+		\item \textbf{谓词符号}(或\textbf{关系符号}),用于构建命题.
+		\item \textbf{函数符号}(或\textbf{实体符号}),用于构建对象或函数.
+	\end{enumerate}
+	每个非逻辑常元$\boldsymbol{s}$都关联一个自然数$n$,这个自然数称为$\boldsymbol{s}$的\textbf{权}.
+\end{definition}
+
+\begin{definition}{准项,准公式}{}
+	理论$\mathcal{T}$的表达式分为如下两类:
+	\begin{enumerate}
+		\item \textbf{准项}(或\textbf{第一类前驱组合}).这是$\mathcal{T}$中满足下列三种条件之一的表达式:以$\tau$开头,以一个非逻辑常元开头,只包含一个字母.
+		\item \textbf{准公式}(或\textbf{第二类前驱组合}).这是$\mathcal{T}$中不是准项的表达式.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{语法构造序列}{}
+	理论$\mathcal{T}$的一个\textbf{语法构造序列}是指$\mathcal{T}$中一个由表达式组成的序列,该序列满足如下条件:序列中的每个表达式$\boldsymbol{A}$满足下列条件之一:
+	\begin{enumerate}
+		\item $\boldsymbol{A}$是一个字母.
+		\item 序列中存在先于$\boldsymbol{A}$出现的准公式$\boldsymbol{B}$,使得$\boldsymbol{A}$和$\neg\boldsymbol{B}$相同.
+		\item 序列中存在先于$\boldsymbol{A}$出现的两个准公式$\boldsymbol{B}$和$\boldsymbol{C}$,使得$\boldsymbol{A}$和$\vee\boldsymbol{B}\boldsymbol{C}$相同.
+		\item 序列中存在先于$\boldsymbol{A}$出现的准公式$\boldsymbol{B}$和一个字母$\boldsymbol{x}$,使得$\boldsymbol{A}$和$\tau_{\boldsymbol{x}}\left(\boldsymbol{B}\right)$相同.
+		\item $\mathcal{T}$中有一个权为$n$的非逻辑常元$\boldsymbol{s}$,序列中有$n$个先于$\boldsymbol{A}$出现的准项$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$,使得$\boldsymbol{A}$和$\boldsymbol{s}\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$相同.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	我们可以将考虑范围限制在权重为$2$的特定符号内,从而在定义语法构造序列时避免使用``自然数$n$''这一表达.
+\end{remark}
+
+\begin{definition}{理论的项,公式}{}
+	\begin{enumerate}
+		\item 理论$\mathcal{T}$的\textbf{项}是在$\mathcal{T}$的一个语法构造序列中出现过的准项.
+		\item 理论$\mathcal{T}$的\textbf{公式}(或\textbf{关系})是在$\mathcal{T}$的一个语法构造序列中出现过的准公式.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{对语法构造序列涉及的五个条件的理解}{}
+	直观地说,``项''是代表``对象''的表达式,而``公式''则是代表可以对这些对象所作出的``断言''的表达式.我们现在再来看语法构造序列的定义中涉及的条件怎么理解:
+	\begin{enumerate}
+		\item 字母代表对象.
+		\item 如果$\boldsymbol{B}$是一个断言,那么$\neg\boldsymbol{B}$也是一个断言.$\neg\boldsymbol{B}$称为$\boldsymbol{B}$的否定,读作``非$\boldsymbol{B}$''.
+		\item 如果$\boldsymbol{B}$和$\boldsymbol{C}$都是断言,那么$\vee\boldsymbol{B}\boldsymbol{C}$也是一个断言.$\vee\boldsymbol{B}\boldsymbol{C}$称为$\boldsymbol{B}$和$\boldsymbol{C}$的析取,读作``$\boldsymbol{B}$或$\boldsymbol{C}$''.因此,$\implies\boldsymbol{B}\boldsymbol{C}$也是一个断言.$\implies\boldsymbol{B}\boldsymbol{C}$读作``非$\boldsymbol{B}$或$\boldsymbol{C}$''或``$\boldsymbol{B}$蕴含$\boldsymbol{C}$''.
+		\item $\boldsymbol{B}$是一个断言且$\boldsymbol{x}$是一个字母,那么$\tau_{\boldsymbol{x}}\left(\boldsymbol{B}\right)$是一个对象.我们可以将断言$\boldsymbol{B}$看作是描述对象$\boldsymbol{x}$的某种性质.那么,如果存在具有该性质的对象,$\tau_{\boldsymbol{x}}\left(\boldsymbol{B}\right)$就代表一个具有该性质的特定对象;否则,$\tau_{\boldsymbol{x}}\left(\boldsymbol{B}\right)$代表一个我们无法对其进行任何描述的对象。
+		\item 如果$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$是对象,$\boldsymbol{s}$是一个权为$n$的谓词符号(相应的,函数符号),则$\boldsymbol{s}\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$是关于对象$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$的一个断言(相应地,依赖于$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$的对象).
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{项和公式的例子,既不是项也不是公式的例子}{}
+	\begin{enumerate}
+		\item $\emptyset$,$\N$,``实直线'',``$\Gamma$函数'',$f\circ g$都代表项.
+		\item $\pi=\sqrt{2}+\sqrt{3}$,$1\in 2$,``每个有限除环都是域'',``$\zeta\left(s\right)$除$-2,-4,-6,\ldots$之外的零点都在直线$\Re\left(s\right)=\frac{1}{2}$上''代表公式.
+		\item 符号``3和4''既不代表项,也不代表公式.
+	\end{enumerate}
+\end{example}
+
+\begin{metatheorem}{关系与项的首符号定理}{}
+	\begin{enumerate}
+		\item 每个公式的首个符号一定是$\vee$,$\neg$或某个谓词符号.
+		\item 每个不是单个字母的项的首个符号一定是$\tau$或某个函数符号.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{公式的语法结构分解定理}{}
+	设$\boldsymbol{A}$是一个公式,则$\boldsymbol{A}$必然不是字母,不以$\tau$开头,且以下三种情况之一必然成立一种:
+	\begin{itemize}
+		\item 存在公式$\boldsymbol{B}$使得$\boldsymbol{A}$和$\neg\boldsymbol{B}$相同.
+		\item 存在公式$\boldsymbol{B}$和$\boldsymbol{C}$使得$\boldsymbol{A}$和$\vee\boldsymbol{B}\boldsymbol{C}$相同.
+		\item 存在$n$元关系符号$\boldsymbol{s}$和$n$个项$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$,使得$\boldsymbol{A}$和$\boldsymbol{s}\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$相同.
+	\end{itemize}
+\end{metatheorem}

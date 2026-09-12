@@ -1,0 +1,140 @@
+\section{对称张量函子\texorpdfstring{$\mathsf{TS}$}{TS}}
+
+\begin{definition}{}{}
+	设$u\in\Hom_{A}\left(M,N\right)$.定义$\mathsf{TS}\left(u\right):\mathsf{TS}\left(M\right)\to\mathsf{TS}\left(N\right)$是$\mathsf{T}\left(u\right)$诱导的$\N$型分次$A$-含幺代数同态.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 对每个$p\geq 0$,如下图表交换.
+		\begin{center}
+			\begin{tikzcd}
+				M & {\mathsf{TS}\left(M\right)} \\
+				N & {\mathsf{TS}\left(N\right)}
+				\arrow["{\gamma_{p}}", hook, from=1-1, to=1-2]
+				\arrow["u"', from=1-1, to=2-1]
+				\arrow["{\mathsf{TS}\left(u\right)}", from=1-2, to=2-2]
+				\arrow["{\gamma_{p}}"', hook, from=2-1, to=2-2]
+			\end{tikzcd}
+		\end{center}
+		\item 根据定义,如下图表交换.如果$M$是$N$的直因子,那么$\mathsf{TS}\left(M\right)$等同于$\mathsf{TS}\left(N\right)$的直因子.
+		\begin{center}
+			\begin{tikzcd}
+				M & {\mathsf{TS}\left(M\right)} & {\mathsf{T}\left(M\right)} \\
+				N & {\mathsf{TS}\left(N\right)} & {\mathsf{T}\left(N\right)}
+				\arrow[hook, from=1-1, to=1-2]
+				\arrow["u"', from=1-1, to=2-1]
+				\arrow[hook, from=1-2, to=1-3]
+				\arrow["{\mathsf{TS}\left(u\right)}", from=1-2, to=2-2]
+				\arrow["{\mathsf{T}\left(u\right)}", from=1-3, to=2-3]
+				\arrow[hook, from=2-1, to=2-2]
+				\arrow[hook, from=2-2, to=2-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$u\in\Hom_{A}\left(M,N\right),v\in\Hom_{A}\left(N,P\right)$,则如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			M & N & P \\
+			{\mathsf{TS}\left(M\right)} & {\mathsf{TS}\left(N\right)} & {\mathsf{TS}\left(P\right)}
+			\arrow["u"', from=1-1, to=1-2]
+			\arrow["{v\circ u}", curve={height=-18pt}, from=1-1, to=1-3]
+			\arrow[from=1-1, to=2-1]
+			\arrow["v"', from=1-2, to=1-3]
+			\arrow[from=1-2, to=2-2]
+			\arrow[from=1-3, to=2-3]
+			\arrow["{\mathsf{TS}\left(u\right)}", from=2-1, to=2-2]
+			\arrow["{\mathsf{TS}\left(v\circ u\right)}"', curve={height=18pt}, from=2-1, to=2-3]
+			\arrow["{\mathsf{TS}\left(v\right)}", from=2-2, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{对称张量代数在内直和上诱导的典范映射}{}
+	设$\left(M_{\lambda}\right)_{\lambda\in\Lambda}$是$M$的一族子模,$M=\bigoplus\limits_{\lambda\in\Lambda}M_{\lambda}$,则存在典范的分次$A$-含幺代数同态$h:\bigotimes\limits_{\lambda\in\Lambda}\mathsf{TS}\left(M_{\lambda}\right)\to\mathsf{TS}\left(M\right)$.
+\end{proposition}
+
+\begin{remark}{}{}	
+	设$\lambda_{1},\ldots,\lambda_{n}$是$\Lambda$中两两不等的元素,$x_{1}\in M_{\lambda_{1}},\ldots,x_{n}\in M_{\lambda_{n}}$,则$h\left(\sum\limits_{\substack{\left(p_{1},\ldots,p_{n}\right)\in\N^{n}\\p_{1}+\ldots+p_{n}=p}}\gamma_{p_{1}}\left(x_{1}\right)\otimes\ldots\otimes\gamma_{p_{n}}\right)=\gamma_{p}\left(\sum\limits_{i=1}^{n}x_{i}\right)$.
+\end{remark}
+
+\begin{proposition}{对称张量代数诱导的典范映射的自然性}{}
+	设$\left(M_{\lambda}\right)_{\lambda\in\Lambda},\left(N_{\lambda}\right)_{\lambda\in\Lambda}$分别是$M,N$的子模族,$M=\bigoplus\limits_{\lambda\in\Lambda}M_{\lambda},N=\bigoplus\limits_{\lambda\in\Lambda}N_{\lambda}$,对每个$\lambda\in\Lambda$有$u_{\lambda}\in\Hom_{A}\left(M_{\lambda},N_{\lambda}\right)$,
+	\begin{align*}
+		u:M\to N
+	\end{align*}
+	是$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$诱导的典范映射,则如下图表交换(竖直方向的箭头都是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			{\bigotimes\limits_{\lambda\in\Lambda}\mathsf{TS}\left(M_{\lambda}\right)} && {\bigotimes\limits_{\lambda\in\Lambda}\mathsf{TS}\left(N_{\lambda}\right)} \\
+			{\mathsf{TS}\left(M\right)} && {\mathsf{TS}\left(N\right)}
+			\arrow["{\bigotimes\limits_{\lambda\in\Lambda}\mathsf{TS}\left(u_{\lambda}\right)}", from=1-1, to=1-3]
+			\arrow[from=1-1, to=2-1]
+			\arrow[from=1-3, to=2-3]
+			\arrow["{\mathsf{TS}\left(u\right)}"', from=2-1, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{自由模的内直和等同于其对称张量代数}{}
+	设$\left(M_{\lambda}\right)_{\lambda\in\Lambda}$是$M$的子模族,$M=\bigoplus\limits_{\lambda\in\Lambda}M_{\lambda}$.若$\left(M_{\lambda}\right)_{\lambda\in\Lambda}$是一族自由模,则典范映射$\bigotimes\limits_{\lambda\in\Lambda}\mathsf{TS}\left(M_{\lambda}\right)\to\mathsf{TS}\left(M\right)$是分次$A$-含幺代数同构.
+\end{proposition}
+
+\begin{remark}{}{}
+	我们通常把$\bigotimes\limits_{\lambda\in\Lambda}\mathsf{TS}\left(M_{\lambda}\right)$和$\mathsf{TS}\left(M\right)$等同.注意,如果$\lambda,\mu\in\Lambda$且$\lambda\neq\mu$,$z\in\mathsf{TS}\left(M_{\lambda}\right),z^{\prime}\in\mathsf{TS}\left(M_{\mu}\right)$,那么$z\otimes z^{\prime}$等同于二者在$\mathsf{TS}\left(M\right)$中的对称积$zz^{\prime}$.
+\end{remark}
+
+\begin{proposition}{对称积的态射刻画}{}
+	设$u:M\boxplus M\to M$和$h:\mathsf{TS}\left(M\right)\otimes_{A}\mathsf{TS}\left(N\right)\to\mathsf{TS}\left(M\boxplus N\right)$是典范映射,$f=\mathsf{TS}\left(u\right)\circ h$,则
+	\begin{align*}
+		\forall z,z^{\prime}\in\mathsf{TS}\left(M\right)\left(f\left(z\otimes z^{\prime}\right)=zz^{\prime}\right).
+	\end{align*}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

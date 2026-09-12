@@ -1,0 +1,38 @@
+\chapter{有序域}
+
+\section{有序环}
+
+记号约定:$A$是交换环,$\leq$是$A$上的偏序.
+
+\begin{definition}{有序环}{}
+	如果$\left(A,+,\leq\right)$的加法群按$\leqslant$是有序群,$A_{\geq 0}A_{\geq 0}\subseteq K_{\geq 0}$,则称$\leqslant$和$A$的乘法相容,称$\left(A,+,\cdot,\leq\right)$是有序环.
+\end{definition}
+
+\begin{remark}{}{}
+	$A$的(严格)正元素集和(严格)负元素集总是指$A$的加法群的(严格)正元素集和(严格)负元素集.
+\end{remark}
+
+\begin{example}{有序环的例子}{}
+	\begin{enumerate}
+		\item $\Q$和$\Z$各自按照通常的偏序构成有序环.
+		\item 设$\left(A_{i}\right)_{i\in I}$是一族有序环,则$\prod\limits_{i\in I}A_{i}$配备逐点偏序后是有序环.特别地,给定集合$I$,那么$\Hom_{\mathsf{Set}}\left(I,A\right)$是有序环.
+		\item 有序环的子环在诱导偏序下是有序环.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{有序环的性质}{}
+	设$\left(A,+,\cdot,\leq\right)$是有序环.
+	\begin{enumerate}
+		\item $\forall x,y,z\in A\left(x\geq y\wedge z\geq 0\implies xz\geq yz\right)$.
+		\item $A_{\geq 0}A_{\geq 0}\subseteq A_{\geq 0},A_{\leq 0}A_{\leq 0}\subseteq A_{\geq 0},A_{\geq 0}A_{\leq 0}\subseteq A_{\leq 0},A_{\leq 0}A_{\geq 0}\subseteq A_{\leq 0}$.
+		\item 若$A$是全序环,则$\forall x\in A\left(x^{2}\geq 0\right)$.特别地,$A$的每个幂等元都是正元.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{}{}
+	$\Z$上能让$\Z$成为全序环的全序只有一种.但是,通常全序下的$2\Z_{\geq 0}$诱导的全序不能让$\Z$成为全序环.
+\end{example}
+
+\begin{proposition}{全序环必定无挠}{}
+	如果$A$是全序环,那么它作为$\Z$-模无挠.
+\end{proposition}

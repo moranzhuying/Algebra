@@ -1,0 +1,52 @@
+\section{导子的例子}
+
+\begin{example}{求导泛函}{}
+	设$A$是从$\R$到$\R$的可微函数组成的$\R$-代数,$x_{0}\in\R$.定义$A$在$\R$上的左作用为$\left(f,a\right)\mapsto f\left(x_{0}\right)a$,则$\R$是$A$-模.于是
+	\begin{align*}
+		A\to\R,f\mapsto Df\left(x_{0}\right)
+	\end{align*}
+	是$A$到$\R$的导子.
+\end{example}
+
+\begin{example}{外微分}{}
+	设$X$是$C^{\infty}$流形,$A$是$X$上的微分形式构成的分次$\R$-代数$\Omega^{\ast}\left(X\right)$,则$\Omega^{\ast}\left(X\right)\to\Omega^{\ast}\left(X\right),\omega\mapsto \mathrm{d}\omega$是次数为$1$的反导子.
+\end{example}
+
+\begin{example}{内导子}{}
+	设$A$是结合$K$-代数,$a\in A$,则$\ad_{a}:A\to A,x\mapsto ax-xa$是$A$上的导子.
+\end{example}
+
+\begin{example}{内乘}{}
+	设$M$是$K$-模,$A=\bigwedge\left(M^{\vee}\right)$配备典范分次,则对每个$x\in M$,关于$x$的内乘$i_{x}$是$A$上的$-1$次反导子.
+\end{example}
+
+\begin{example}{导子的标量扩张}{}
+	沿用定义(\ref{def:epsilon-derivation})的记号.设$\bar{K}$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(K,\bar{K}\right)$,$\bar{A},\bar{A}^{\prime},\bar{A}^{\prime\prime},\bar{B},\bar{B}^{\prime},\bar{B}^{\prime\prime}$分别是把$A,A^{\prime},A^{\prime\prime},B,B^{\prime},B^{\prime\prime}$通过$\rho$延拓到$\bar{K}$得到的分次$\bar{K}$-模,$\bar{\lambda}=\rho^{\ast}\left(\mu\right),\bar{\lambda}_{1}=\rho^{\ast}\left(\lambda\right),\bar{\lambda}_{2}=\rho^{\ast}\left(\lambda_{2}\right)$.若
+	\begin{align*}
+		d:A\boxplus A^{\prime}\boxplus A^{\prime\prime}\to B\boxplus B^{\prime}\boxplus B^{\prime\prime}
+	\end{align*}
+	是$\delta$次$\epsilon$-导子,则$\bar{d}\coloneq\rho^{\ast}\left(d\right):\bar{A}\boxplus \bar{A}^{\prime}\boxplus \bar{A}^{\prime\prime}\to \bar{B}\boxplus \bar{B}^{\prime}\boxplus \bar{B}^{\prime\prime}$是$\delta$次$\epsilon$-导子.
+\end{example}
+
+\begin{example}{欧拉导子}{}
+	设$A$是$K$-代数,分次为$\left(A_{n}\right)_{n\in\Z}$.定义$0$次分次$K$-线性映射$d:A\to A$如下:
+	\begin{center}
+		对每个$n\in\Z$和$A_{n}$的每个$n$次齐次元$x_{n}$,$d\left(x_{n}\right)=nx_{n}$.
+	\end{center}
+	那么$d$是$A$上的导子(称为欧拉导子/次数导子).
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

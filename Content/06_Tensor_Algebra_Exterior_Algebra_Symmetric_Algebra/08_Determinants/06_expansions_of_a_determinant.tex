@@ -1,0 +1,90 @@
+\section{行列式的展开}
+
+记号约定:$A$是交换环,$I$是有限全序集,$\left|I\right|=n$.
+
+\begin{definition}{}{}
+	对每个$p\in\N$和$H\in\fin_{p}\left(I\right)$,记$H^{\prime}\coloneq I\setminus H$.
+\end{definition}
+
+\begin{proposition}{行列式的Laplace展开}{}
+	设$\boldsymbol{X}$是$A$上的$I$型方阵,$q\leq n,H\in\fin_{q}\left(I\right)$,则
+	\begin{enumerate}
+		\item $\det\left(\boldsymbol{X}\right)=\rho_{H,H^{\prime}}\sum\limits_{R\in\fin_{q}\left(I\right)}\rho_{R,R^{\prime}}\det\left(\boldsymbol{X}_{R,H}\right)\det\left(\boldsymbol{X}_{R^{\prime}},H^{\prime}\right)$.
+		\item 当$K\in\fin_{n-q}\left(I\right)\setminus\left\{H^{\prime}\right\}$时,$\sum\limits_{R\in\fin_{q}\left(I\right)}\rho_{R,R^{\prime}}\det\left(\boldsymbol{X}_{R,H}\right)\det\left(\boldsymbol{X}_{R^{\prime},K}\right)=0$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{代数余子式}{}
+	设$\boldsymbol{X}\coloneq\left(\xi_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}\in\mathbf{M}_{n}\left(A\right)$.对每个$1\leq i,j\leq n$,记$\boldsymbol{X}^{i,j}$是从$\boldsymbol{X}$中删去第$i$行和第$j$列后得到的子矩阵,称
+	\begin{align*}
+		\left(-1\right)^{j+i}\det\left(\boldsymbol{X}^{i,j}\right)
+	\end{align*}
+	是$\xi_{i,j}$的代数余子式.
+\end{definition}
+
+\begin{definition}{余子式矩阵,古典伴随}{}
+	设$\boldsymbol{X}\in\mathbf{M}_{n}\left(A\right)$.
+	\begin{enumerate}
+		\item 定义$\boldsymbol{Y}\in\mathbf{M}_{n}\left(A\right)$如下:对每个$1\leq i,j\leq n$,$\boldsymbol{Y}$的$\left(i,j\right)$元是$\left(-1\right)^{j+i}\det\left(\boldsymbol{X}^{i,j}\right)$.称$\cf\left(\boldsymbol{X}\right)\coloneq\boldsymbol{Y}$是$\boldsymbol{X}$的余子式矩阵.
+		\item 我们称$\adj\left(\boldsymbol{X}\right)\coloneq\cf\left(\boldsymbol{A}\right)^{\top}$为$\boldsymbol{X}$的古典伴随.
+	\end{enumerate}
+\end{definition}
+
+\begin{corollary}{行列式的按列展开}{}
+	设$\boldsymbol{X}\coloneq\left(\xi_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}\in\mathbf{M}_{n}\left(A\right)$,则
+	\begin{enumerate}
+		\item $\det\left(\boldsymbol{X}\right)=\sum\limits_{i=1}^{n}\left(-1\right)^{j+i}\xi_{i,j}\det\left(\boldsymbol{X}^{i,j}\right)$.
+		\item 对每个$1\leq k,j\leq n$,当$k\neq j$时$\sum\limits_{i=1}^{n}\left(-1\right)^{j+i}\xi_{i,j}\det\left(\boldsymbol{X}^{i,k}\right)=0$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	这条推论和$\adj\left(\boldsymbol{X}\right)\boldsymbol{A}=\det\left(\boldsymbol{X}\right)\boldsymbol{I}_{n\times n}$等价:
+	\begin{itemize}
+		\item 第一个性质描述的是$\det\left(\boldsymbol{X}\right)\boldsymbol{I}_{n\times n}$的每个对角元都为$\det\left(\boldsymbol{X}\right)$.
+		\item 第二个性质描述的是$\det\left(\boldsymbol{X}\right)\boldsymbol{I}_{n\times n}$的每个非对角元都为$0$.
+	\end{itemize}
+\end{remark}
+
+\begin{definition}{线性自同态的余转置}{}
+	设$M$的基为$\left(e_{i}\right)_{i=1}^{n}$,$u\in\End_{A}\left(M\right)$.定义$u$的余转置$\tilde{u}$如下:对每个$x,y_{2},\ldots,y_{n}\in M$,有
+	\begin{align*}
+		\tilde{u}\left(x\right)\wedge y_{2}\wedge\ldots\wedge y_{n}=x\wedge u\left(x_{2}\right)\wedge\ldots\wedge u\left(x_{n}\right).
+	\end{align*}
+\end{definition}
+
+\begin{remark}{}{}
+	$\tilde{u}$是唯一的.如果$\boldsymbol{X}$是$u$关于$\left(e_{i}\right)_{i=1}^{n}$的矩阵,那么$\adj\left(\boldsymbol{X}\right)$是$\tilde{u}$关于$\left(e_{i}\right)_{i=1}^{n}$的矩阵.
+\end{remark}
+
+\begin{example}{几个典型的行列式}{}
+	\begin{enumerate}
+		\item 给定$A$中的序列$\left(\xi_{i}\right)_{i=1}^{n}$.称$\left(\xi_{i}^{j-1}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$的行列式为$\left(\xi_{i}\right)_{i=1}^{n}$的Vandermonde行列式,记作$V\left(\xi_{1},\ldots,\xi_{n}\right)$.可以验证
+		\begin{align*}
+			V\left(\xi_{1},\ldots,\xi_{n}\right)=\prod\limits_{1\leq i<j\leq n}\left(\xi_{j}-\xi_{i}\right).
+		\end{align*}
+		\item 如果$A$上的有限阶方阵$\boldsymbol{X}$可以分块为$
+		\begin{bmatrix}
+			\boldsymbol{X}_{1,1}&\boldsymbol{X}_{1,2}\\
+			\boldsymbol{O}&\boldsymbol{X}_{2,2}
+		\end{bmatrix}$,那么$\det\left(\boldsymbol{X}\right)=\det\left(\boldsymbol{X}_{1,1}\right)\det\left(\boldsymbol{X}_{2,2}\right)$.更一般地,若
+		\begin{align*}
+			\boldsymbol{X}=\begin{bmatrix}
+				\boldsymbol{X}_{1,1}&\boldsymbol{X}_{1,2}&\ldots&\boldsymbol{X}_{1,p}\\
+				\boldsymbol{O}&\boldsymbol{X}_{2,2}&\ldots&\boldsymbol{X}_{2,p}\\
+				\vdots&\vdots&\ddots&\vdots\\
+				\boldsymbol{O}&\boldsymbol{O}&\ldots&\boldsymbol{X}_{p,p}
+			\end{bmatrix}
+		\end{align*}
+		那么$\det\left(\boldsymbol{X}\right)=\prod\limits_{i=1}^{p}\det\left(\boldsymbol{X}_{i,i}\right)$.特别地,若$\boldsymbol{X}=\diag\left(\alpha_{1},\ldots,\alpha_{n}\right)$,则$\det\left(\boldsymbol{X}\right)=\prod\limits_{i=1}^{n}\alpha_{i}$.
+		\item 设$M,N$是自由$A$-模,各自的维数为$m,n$,$u\in\End_{A}\left(M\right),v\in\End_{A}\left(N\right)$,则$\det\left(u\otimes v\right)=\left(\det\left(u\right)\right)^{m}\left(\det\left(v\right)\right)^{n}$.
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+
+
+

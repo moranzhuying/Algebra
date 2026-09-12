@@ -1,0 +1,128 @@
+\chapter{作用}
+
+\section{作用}
+
+记号约定:$\Omega,\Omega^{\prime},E,F,G$是集合.
+
+\begin{definition}{作用}{}
+	我们称$\Hom_{\mathsf{Set}}\left(\Omega,\End_{\mathsf{Set}}\left(E\right)\right)$的元素是$\Omega$在$E$上的作用,称配备该作用的$E$是$\Omega$-集.
+\end{definition}
+
+\begin{definition}{左作用律,右作用律}{}
+	设$\Omega\to\End_{\mathsf{Set}}\left(E\right),\alpha\mapsto f_{\alpha}$是$\Omega$在$E$上的作用.
+	\begin{enumerate}
+		\item 映射$\Omega\times E,\left(\alpha,x\right)\mapsto f_{\alpha}\left(x\right)$称为和该作用相关联的左作用法则.
+		\item 映射$E\times\Omega,\left(x,\alpha\right)\mapsto f_{\alpha}\left(x\right)$称为和该作用相关联的右作用法则.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{术语说明}{}
+	\begin{enumerate}
+		\item $\Omega$及其元素通常分别被称为算子集和算子,不引起混淆的情况下,``左作用法则''和``右作用法则''通常简称为``左作用''和``右作用'',或者``由$\ldots$诱导/给出的左作用/右作用'',有时也被称为以$\Omega$为算子集的$E$上的外部作用律.
+		\item 对$\alpha\in\Omega$和$x\in E$,$f_{\alpha}\left(x\right)$有多种称呼:``$x$在$\alpha$下的变换'',``$\alpha$与$x$的合成'',``$\alpha$与$x$的乘积''.
+		\item 左作用和右作用有几种记法:
+		\begin{itemize}
+			\item (乘法记号/算子记号)左作用记作$\alpha\cdot x$或$\alpha x$,右作用记作$x\cdot\alpha$或$x\alpha$.
+			\item (指数记号)把$f_{\alpha}\left(x\right)$记作$x^{\alpha}$.
+		\end{itemize}
+	\end{enumerate}	
+\end{remark}
+
+\begin{theorem}{作用$\iff$映射的Curry化}{}
+	下列陈述为真:
+	\begin{enumerate}
+		\item 对诸$g\in\Hom_{\mathsf{Set}}\left(\Omega\times E,E\right)$,$\Omega$在$E$上有唯一的作用$\Omega\to\End_{\mathsf{Set}}\left(E\right),\alpha\mapsto f_{\alpha}$,使得与之关联的左作用法则是$g$.
+		\item 对诸$g\in\Hom_{\mathsf{Set}}\left(E\times\Omega,E\right)$,$\Omega$在$E$上有唯一的作用$\Omega\to\End_{\mathsf{Set}}\left(E\right),\alpha\mapsto f_{\alpha}$,使得与之关联的右作用法则是$g$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{example}{幂运算作用}{}
+	\begin{enumerate}
+		\item 设$E$是半群(采用乘法记号),对诸$n\in\Z_{>0}$,记$f_{n}:E\to E,x\mapsto x^{n}$,则$n\mapsto f_{n}$给出$\Z_{>0}$在$E$上的左作用.
+		\item 设$E$是群(采用乘法记号),对诸$n\in\Z$,记$f_{n}:E\to E,x\mapsto x^{n}$,则$n\mapsto f_{n}$给出$\Z$在$E$上的左作用.
+	\end{enumerate}
+\end{example}
+
+\begin{example}{$\End_{\mathsf{Set}}\left(E\right)$给出的赋值映射}{}
+	$\id_{E}$诱导$\End_{\mathsf{Set}}\left(E\right)$在$E$上的左作用$\langle,\rangle:\End_{\mathsf{Set}}\left(E\right)\times E\to E,\left(f,x\right)\mapsto f\left(x\right)$,该左作用称为典范作用(或赋值映射).
+\end{example}
+
+\begin{example}{幂集上运算的作用}{}
+	设$E$是原群(合成律为$\odot$),对诸$x\in E$,记$\mathcal{L}_{x}:\mathcal{P}\left(E\right)\to\mathcal{P}\left(E\right),A\mapsto x\odot A$,则$x\mapsto\mathcal{L}_{x}$给出$E$在$\mathcal{P}\left(E\right)$上的左作用.
+\end{example}
+
+\begin{example}{作用的族与并}{}
+	设$\left(\Omega_{i}\right)_{i\in I}$是集合族,对诸$i\in I$有$f_{i}\in\Hom_{\mathsf{Set}}\left(\Omega_{i},\End_{\mathsf{Set}}\left(E\right)\right)$,$\Omega=\coprod\limits_{i\in I}\Omega_{i}$,$f\in\Hom_{\mathsf{Set}}\left(\Omega,\End_{\mathsf{Set}}\left(E\right)\right)$满足
+	\begin{align*}
+		\forall i\in I\left(f|_{\Omega_{i}}=f_{i}\right).
+	\end{align*}
+	显然,$f$是一个作用,因此研究一族作用$\leftrightsquigarrow$研究单个作用.
+\end{example}
+
+\begin{example}{作用的拉回}{}
+	设$\phi\in\Hom_{\mathsf{Set}}\left(\Omega,\End_{\mathsf{Set}}\left(E\right)\right),g\in\Hom_{\mathsf{Set}}\left(\Omega^{\prime},\Omega\right)$,则$\beta\mapsto\phi\left(g\left(\beta\right)\right)$是$\Omega^{\prime}$在$E$上的左作用.
+\end{example}
+
+\begin{example}{左平移作用,右平移作用}{}
+	设$E$是原群(合成律为$\odot$),则$a\mapsto\mathcal{L}_{a}$和$a\mapsto\mathcal{R}_{a}$给出$E$在$E$上的作用,$\mathcal{L}_{a}$诱导的左作用和$\mathcal{R}_{a}$诱导的右作用都是$\odot$,而$\mathcal{L}_{a}$诱导的右作用和$\mathcal{R}_{a}$诱导的左作用都是$\odot^{\op}$.
+\end{example}
+
+\begin{example}{作用在幂集上的扩张}{}
+	设$\Omega$在$E$上的作用给出的左作用是$\top$.对$\Xi\in\Omega$和$X\subseteq E$,记$\Xi\top X=\left\{\xi\top x\in E\middle|\xi\in\Xi,x\in X\right\}$,当$\Xi=\left\{\alpha\right\}$时记$\alpha\top X=\left\{\alpha\right\}\top X$,并定义$\mathcal{L}_{\alpha}:\mathcal{P}\left(E\right)\to\mathcal{P}\left(E\right),X\mapsto \alpha\top X$,则$\alpha\mapsto\mathcal{L}_{\alpha}$给出$\Omega$在$\mathcal{P}\left(E\right)$上的作用,称该作用为原作用扩张到幂集诱导的作用.
+\end{example}
+
+\begin{definition}{$\Omega$-态射/$\Omega$-等变映射}{omega-equivariant-map}
+	设$\alpha\mapsto f_{\alpha}$和$\alpha\mapsto g_{\alpha}$分别给出$\Omega$在$E$和$F$上的作用,$h\in\Hom_{\mathsf{Set}}\left(E,F\right)$.若
+	\begin{align*}
+		\forall\alpha\in\Omega\left(g_{\alpha}\circ h=h\circ f_{\alpha}\right),
+	\end{align*}
+	则称$h$是$\Omega$-态射(或$\Omega$-等变映射,$h$和$\Omega$的作用相容).
+\end{definition}
+
+\begin{definition}{$\phi$-态射}{}
+	设$\alpha\mapsto f_{\alpha}$和$\beta\mapsto g_{\beta}$分别给出$\Omega$和$\Omega^{\prime}$各自在$E$和$F$上的作用,$\phi\in\Hom_{\mathsf{Set}}\left(\Omega,\Omega^{\prime}\right),h\in\Hom_{\mathsf{Set}}\left(E,F\right)$.若
+	\begin{align*}
+		\forall\alpha\in\Omega\left(g_{\phi\left(\alpha\right)}\circ h=h\circ f_{\alpha}\right),
+	\end{align*}
+	则称$h$是$\phi$-态射.
+\end{definition}
+
+显然:$h$是$\Omega$-态射$\iff$对每个$\alpha\in\Omega$,左侧的图表交换;$h$是$\phi$-态射$\iff$对每个$\alpha\in\Omega$,右侧的图表交换.
+\begin{center}
+\begin{tikzcd}
+	E \arrow[r, "h"] \arrow[d, "f_{\alpha}"'] & F \arrow[d, "g_{\alpha}"] &  & E \arrow[d, "f_{\alpha}"'] \arrow[r, "h"] & F \arrow[d, "g\left(\phi\left(\alpha\right)\right)"] \\
+	E \arrow[r, "h"]                          & F                         &  & E \arrow[r, "h"]                          & F                                                   
+\end{tikzcd}
+\end{center}
+
+不难验证,两个$\Omega$-态射的复合还是$\Omega$-态射.
+
+\begin{definition}{$\Omega$-等变同构}{}
+	设$E,F$是$\Omega$,$h:E\to F$是$\Omega$-态射.若存在$\Omega$-态射$g:F\to E$使得$g\circ f=\id_{E}$且$f\circ g=\id_{F}$,则称$f$是$\Omega$-(等变)同构.
+	
+	如果存在从$E$到$F$的$\Omega$-等边同构,则称$E$和$F$是$\Omega$-(等变)同构的.
+\end{definition}
+
+可以验证,若$h:E\to F$是$\Omega$-态射,则$h$是$\Omega$-同构$\iff$ $h$是双射.这两个条件之一成立时,$h^{-1}$也是$\Omega$-态射.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

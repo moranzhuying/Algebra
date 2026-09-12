@@ -1,0 +1,39 @@
+\chapter{定理}
+
+从本节开始,我们对前文的记号进行简化:对理论$\mathcal{T}$的公式$\boldsymbol{A}$和$\boldsymbol{B}$,
+\begin{itemize}
+	\item $\vee\boldsymbol{A}\boldsymbol{B}$简记为$\left(\boldsymbol{A}\right)\vee\left(\boldsymbol{B}\right)$或$\left(\boldsymbol{A}\right)\&\left(\boldsymbol{B}\right)$.
+	\item $\implies\boldsymbol{A}\boldsymbol{B}$简记为$\left(\boldsymbol{A}\right)\implies\left(\boldsymbol{B}\right)$.
+\end{itemize}
+在不引起歧义的情况下,外层的括号可以省略.
+
+
+\section{公理}
+
+\begin{definition}{显式公理}{}
+	在理论$\mathcal{T}$的构建之初,直接给出的若干个特定且具体的公式,称为该理论的\textbf{显式公理}.
+\end{definition}
+
+\begin{definition}{理论的常元}{}
+	理论$\mathcal{T}$的显式公理中出现的所有字母称为理论$\mathcal{T}$的\textbf{常元}.
+\end{definition}
+
+\begin{definition}{公理模式}{}
+	理论$\mathcal{T}$中,用于产生公式且满足如下条件的规则$\mathcal{R}$称为\textbf{公理模式}:
+	\begin{itemize}
+		\item 应用规则$\mathcal{R}$所产生的任何表达式都是$\mathcal{T}$中的公式.
+		\item 若公式$\boldsymbol{R}$是通过公理模式$\mathcal{R}$构造出的,则对于$\mathcal{T}$中的任意项$\boldsymbol{T}$和任意字母$\boldsymbol{x}$,$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{R}$也能通过$\mathcal{R}$构造出来.
+	\end{itemize}
+\end{definition}
+
+\begin{definition}{隐式公理}{}
+	应用理论$\mathcal{T}$的公理模式构造出来的任何公式称为该理论的\textbf{隐式公理}.
+\end{definition}
+
+\begin{remark}{}{}
+	直观地看,公理代表的要么是显而易见的断言,要么是人们希望从中推导出结论的假设,常元则代表定义明确的对象.对于这些对象,由显式公理所表达的性质被假定为真.
+	
+	如果字母$\boldsymbol{x}$不是常元,它就代表一个完全不确定的对象;如果通过公理假定对象$\boldsymbol{x}$的某种性质为真,那么这个公理必然是隐式的,从而使得该性质对任何对象$\boldsymbol{T}$都保持为真.
+\end{remark}
+
+ 

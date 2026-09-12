@@ -1,0 +1,113 @@
+\chapter{角}
+
+记号约定:
+\begin{itemize}
+	\item $A$是特征$\neq 2$的域,$E$是$2$维$A$-向量空间,$\varphi\in\Bil_{A}\left(E\right)$非退化且对称.
+	\item $\mathrm{S}=\Sim\left(\varphi\right),\mathrm{S}^{+}=\Sim^{+}\left(\varphi\right),\mathrm{S}^{-}=\Sim^{-}\left(\varphi\right)$.
+	\item $\mathrm{H}$是$E$上的非零位似变换按映射复合所构成的群.
+\end{itemize}
+
+\section{平面中的正向相似}
+
+\begin{definition}{}{}
+	令$A\left(\varphi\right)$是$S$生成的$\End_{A}\left(E\right)$的子代数.
+\end{definition}
+
+\begin{proposition}{正相似代数的结构}{}
+	\begin{enumerate}
+		\item $\mathrm{S}^{+}=A\left(\varphi\right)^{\times}$,$A\left(\varphi\right)$是$2$维交换代数.
+		\begin{itemize}
+			\item 若$E$中没有非零$\varphi$-迷向向量,则$A\left(\varphi\right)$是域,并且是$A$的二次扩张.
+			\item 若$E$中有非零$\varphi$-迷向向量,则$A\left(\varphi\right)\simeq A\times A$.
+		\end{itemize}
+		\item 设$\mathcal{B}\left(e_{i}\right)_{i=1}^{2}$是$E$的$\varphi$-正交基,对每个$i\in\left\{1,2\right\}$记$\alpha_{i}=\varphi\left(e_{i},e_{i}\right)$,令$\delta=-\alpha_{1}^{-1}\alpha_{2}$.那么
+		\begin{align*}
+			\left\{\left[u\right]_{\mathcal{B}}^{\mathcal{B}}\middle|u\in A\left(\varphi\right)\right\}\subseteq
+			\left\{
+			\begin{bmatrix}
+				a&\delta b\\
+				b&a
+			\end{bmatrix}
+			\middle|a,b\in K
+			\right\}.
+		\end{align*}
+		\item $E$作为$A\left(\varphi\right)$-模是$1$维自由模,并且$V$中每个$\varphi$-非迷向向量都能生成$E$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$v\in A\left(\varphi\right)$满足$\left(v\left(e_{1}\right),v\left(e_{2}\right)\right)=\left(e_{2},\delta e_{1}\right)$,那么
+		\begin{align*}
+			\forall u\in A\left(\varphi\right)\exists a,b\in A\left(u=a\id_{E}+bv\right).
+		\end{align*}
+		设$u=a\id_{E}+bv\in A\left(\varphi\right)$.定义$\bar{u}\coloneq a\id_{E}-bv\in A\left(\varphi\right)$是$u$的共轭.因此$\Norm\left(u\right)=\det\left(u\right)$.进一步:
+		\begin{itemize}
+			\item $u$是旋转$\iff$ $\Norm\left(u\right)=1$.
+			\item $u$是位似$\iff$ 存在$k\in A^{\times}$使得$u=k\id_{E}$.
+		\end{itemize}
+		\item 设$u,v\in A\left(\varphi\right),a,b\in A,u=a\id_{E}+bv$.如果$u^{2}$是位似变换,那么下列条件有且只有一个成立:
+		\begin{itemize}
+			\item $b=0$;
+			\item $a=0,b\neq 0$.此时,对每个$x\in E$有$\varphi\left(x,u\left(x\right)\right)=0$.
+		\end{itemize}
+		\item 对每个$x,y\in E$和$u\in A\left(\varphi\right)$有$\varphi\left(u\left(x\right),y\right)=\varphi\left(x,\bar{u}\left(y\right)\right)$.
+		\item 设$u\in S^{-}$,则存在$v\in \mathrm{S}^{+}$和$E$上关于$Ae_{1}$的反射变换$w$使得$u=v\circ w$,进而
+		\begin{align*}
+			\left[u\right]_{\mathcal{B}}^{\mathcal{B}}=
+			\begin{bmatrix}
+				a&-\delta b\\
+				b&-a
+			\end{bmatrix},\text{其中}a,b\in A,a^{2}-\delta b^{2}\neq 0.
+		\end{align*}
+	\end{enumerate}
+\end{remark}
+
+\begin{corollary}{}{}
+	\begin{enumerate}
+		\item $\mathrm{S}^{+}$是交换群.
+		\item 对$E$的任意两个$\varphi$-非迷向向量$x,y$,存在唯一的$u\in \mathrm{S}^{+}$使得$y=u\left(x\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	\begin{enumerate}
+		\item $\mathrm{O}^{+}\left(\varphi\right)$是交换群.
+		\item 对$E$的任意两个长度相等的$\varphi$-非迷向向量$x,y$,存在唯一的$u\in\mathrm{O}^{+}\left(\varphi\right)$使得$y=u\left(x\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	记$\mathcal{I}$是$E$的$1$维$\varphi$-非迷向子空间组成的集合.
+	\begin{enumerate}
+		\item $\mathrm{S}^{+}/\mathrm{H}$是交换群,并典范地左作用于$\mathcal{I}$.
+		\item 对每个$D_{1},D_{2}\in\mathcal{I}$,存在唯一的$\psi\in\mathrm{S}^{+}/\mathrm{H}$使得$D_{2}=\psi\left(D_{1}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	典范同态$\mathrm{O}^{+}\to\mathrm{S}^{+}/\mathrm{H}$的核是$\left\{-\id_{E},\id_{E}\right\}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\tau:\mathrm{O}^{+}\to\mathrm{S}^{+}/\mathrm{H}$是典范同态,$d:\mathrm{S}^{+}\to\mathrm{S}^{+},u\mapsto u^{2}\Norm\left(u\right)^{-1}$.
+	\begin{enumerate}
+		\item $d$是群同态,$\ker\left(d\right)=H$.记$\bar{d}:\mathrm{S}^{+}/\mathrm{H}\to\mathrm{O}^{+}$是$d$诱导的群同构.
+		\item 给$\mathrm{O}^{+}$和$\mathrm{S}^{+}/\mathrm{H}$采用加法记号,则对每个$\alpha\in\mathrm{O}^{+}$有$\bar{d}\left(\tau\left(\alpha\right)\right)=2\alpha$,对每个$\beta\in\mathrm{S}^{+}/\mathrm{H}$有$\tau\left(\bar{d}\left(\beta\right)\right)=2\beta$.
+		\item 给$\mathrm{O}^{+}$和$\mathrm{S}^{+}/\mathrm{H}$采用乘法记号,则对每个$\alpha\in\mathrm{O}^{+}$有$\bar{d}\left(\tau\left(\alpha\right)\right)=\alpha^{2}$,对每个$\beta\in\mathrm{S}^{+}/\mathrm{H}$有$\tau\left(\bar{d}\left(\beta\right)\right)=\beta^{2}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

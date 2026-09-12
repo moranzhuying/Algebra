@@ -1,0 +1,35 @@
+\section{角区}
+
+记号约定:$\left(A,+,\cdot,\leq\right)$是有序域,$E$是装备了定向$\Delta_{0}$的$2$维$A$-向量空间.
+
+\begin{definition}{正向半直线三元组}{}
+	设$D_{0},D_{1},D_{2}\in\mathbb{P}^{+}\left(E\right)$.若对每个$\left(x_{1},x_{2},x_{3}\right)\in D_{1}\times D_{2}\times D_{3}$,在$x_{1}\wedge x_{2},x_{2}\wedge x_{3},x_{3}\wedge x_{1}$中至少有两个正$2$-向量,我们就说$\left(D_{1},D_{2},D_{3}\right)$是正向的.
+\end{definition}
+
+\begin{definition}{开角区,闭角区}{}
+	设$D_{1},D_{2}\in\mathbb{P}^{+}\left(E\right)$.
+	\begin{enumerate}
+		\item 我们称$\left\{D\in\mathbb{P}^{+}\left(E\right)\middle|\left(D_{1},D,D_{2}\right)\text{是正向的}\right\}$是以$D_{1}$为始边,$D_{2}$为终边的开角区.
+		\item 我们称$\left\{D\in\mathbb{P}^{+}\left(E\right)\middle|\left(D_{1},D,D_{2}\right)\text{是正向的}\right\}\cup\left\{D_{1},D_{2}\right\}$是以$D_{1}$为始边,$D_{2}$为终边的闭角区.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{$\mathbb{P}^{+}\left(E\right)$上的全序}{}
+	设$D_{0}\in\mathbb{P}^{+}\left(E\right),G=\mathbb{P}^{+}\left(E\right)\setminus\left\{D_{0}\right\}$.定义$G$上的公式$\preccurlyeq\left\{D_{1},D_{2}\right\}$如下:
+	\begin{center}
+		$D_{1}\prec D_{2}$ $\iff$ $D_{1}=D_{2}$或$\left(D_{0},D_{1},D_{2}\right)$是正向的.
+	\end{center}
+	那么$\preccurlyeq$是$G$上的全序关系.我们称$\preccurlyeq$确定的全序是$D_{0}$诱导的全序.
+\end{proposition}
+
+\begin{corollary}{角区的区间记号}{}
+	设$D_{0},D_{1},D_{2}\in\mathbb{P}^{+}\left(E\right),D_{1}\neq D_{2},G=\mathbb{P}^{+}\left(E\right)$.为$G$装备$D_{0}$诱导的全序.
+	\begin{enumerate}
+		\item $G$中的开区间$\left(D_{1},D_{2}\right)$等于以$D_{1}$为始边,$D_{2}$为终边的开角区.
+		\item $G$中的闭区间$\left[D_{1},D_{2}\right]$等于以$D_{1}$为始边,$D_{2}$为终边的闭角区.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$A$是极大有序域,$D_{0}\in\mathbb{P}^{+}\left(E\right)$,$G\coloneq\mathbb{P}^{+}\left(E\right)\setminus\left\{D_{0}\right\}$装备了$D_{0}$诱导的全序,那么$G$和$A$作为偏序集是同构的.
+\end{proposition}

@@ -1,0 +1,60 @@
+\chapter{群,带算子群}
+
+\section{群}
+
+记号说明:$G,H$是群,$E$是集合.本节提到的群一概采用乘法记号.	
+
+\begin{definition}{群同态,群同构}{}
+	定义
+	\begin{align*}
+		&\Hom_{\mathsf{Grp}}\left(G,H\right)=\Hom_{\mathsf{Mon}}\left(G,H\right),\End_{\mathsf{Grp}}\left(G\right)=\End_{\mathsf{Mon}}\left(G\right),\\
+		&\Isom_{\mathsf{Grp}}\left(G,H\right)=\Isom_{\mathsf{Mon}}\left(G,H\right),\Aut_{\mathsf{Grp}}\left(G\right)=\Aut_{\mathsf{Mon}}\left(G\right).
+	\end{align*}
+	$\Hom_{\mathsf{Grp}}\left(G,H\right)$和$\Isom_{\mathsf{Grp}}\left(G,H\right)$的元素分别称为群同态和群同构,$\End_{\mathsf{Grp}}\left(G\right)$和$\Aut_{\mathsf{Grp}}\left(G\right)$的元素分别称为$G$的群自同态和群自同构,
+\end{definition}
+
+\begin{example}{对称群}{}
+	设$E$是幺半群,其可逆元组成的集合在$E$诱导的合成律下是群.对于集合$F$,以映射复合为合成律,则$\mathfrak{S}_{F}\coloneq\Aut_{\mathsf{Set}}\left(F\right)$是群,称为$F$的对称群.
+\end{example}
+
+\begin{definition}{有限群,无限群,群的阶数}{}
+	如果$G$是有限集,则称$G$为有限群,否则称之为无限群.$\left|G\right|$称为$G$的阶数.
+\end{definition}
+
+\begin{proposition}{群及其反群是同构的}{}
+	$f:G\to G^{\op},x\mapsto x^{-1}$是群同构.
+\end{proposition}
+
+\begin{definition}{逐点逆}{}
+	设$A\subseteq G$.定义$A^{-1}$是$A$在映射$G\to G^{\op},x\mapsto x^{-1}$下的像,称$A^{-1}$为$A$的(逐点)逆.
+\end{definition}
+
+\begin{definition}{Minkowski乘积}{}
+	设$A,B\subseteq G$.我们称$AB$是$A$和$B$的(Minkowski)乘积(采用加法记号时称为Minkowski和).
+\end{definition}
+
+\begin{definition}{群的对称子集}{}
+	设$A\subseteq G$.若$A=A^{-1}$,则称$A$是$G$的对称子集.
+\end{definition}
+
+\begin{remark}{集合的乘积使$\mathcal{P}\left(G\right)$成为幺半群}{}
+	$\mathcal{P}\left(G\right)$在合成律$\left(X,Y\right)\mapsto XY$下构成幺半群.注意,对$A\subseteq G$,它是可逆的$\iff$ $A$是单点集,因此$A^{-1}$不一定是这个合成律的逆元.
+\end{remark}
+
+\begin{proposition}{对称子集的构造}{}
+	设$A\subseteq G$,则$A\cup A^{-1},A\cap A^{-1},AA^{-1}$都是$G$的对称子集.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

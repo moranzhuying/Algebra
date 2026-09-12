@@ -1,0 +1,116 @@
+\section{域上的代数的张量积}
+
+记号约定:$K$是域.
+
+\begin{proposition}{}{}
+	设$E,F$是$K$-代数,各自的单位元分别是$e,e^{\prime}$,并且二者都非零.
+	\begin{enumerate}
+		\item 典范映射$\eta_{E}:K\to E$和$\eta_{F}:K\to F$都是单射,从而$K$等同于$E$和$F$各自的一个子域.
+		\item 典范映射$u:E\to E\otimes_{K}F,x\mapsto x\otimes e^{\prime}$和$v:F\to E\otimes_{K}F,y\mapsto e\otimes y$是单射,于是$E$和$F$都典范地等同于$E\otimes_{K}F$的一个子代数,$e\otimes e^{\prime}$是$\im\left(u\right)$和$\im\left(v\right)$的单位元.
+		\item 如果$E^{\prime},F^{\prime}$分别是$E,F$的子代数,则典范映射$E^{\prime}\otimes_{K}F^{\prime}\to E\otimes_{K}F$是单射,从而$E^{\prime}\otimes_{K}F^{\prime}$典范等同于$E\otimes_{K}F$中由$E^{\prime}\cup F^{\prime}$生成的子代数.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{代数的张量积的中心化子}{}
+	设$E,F$是$K$上的非零代数,$C,D$分别是$E,F$的子代数,则$C_{E\otimes_{K}F}\left(C\otimes_{K}D\right)=C_{E}\left(C\right)\otimes_{K}C_{F}\left(D\right)$.
+\end{proposition}
+
+\begin{corollary}{代数的张量积的中心}{}
+	设$E,F$是$K$上的非零代数,则$Z\left(E\otimes_{K}F\right)=Z\left(E\right)\otimes_{K}Z\left(F\right)$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$G$是$K$-代数,$E,F$是$G$的子代数.如果$\forall x\in E\forall y\in F\left(xy=yx\right)$,则典范映射$E\otimes_{K}F\to G$是$K$-代数同态.
+\end{proposition}
+
+\begin{definition}{线性无交}{}
+	设$G$是$K$-代数,$E,F$是$G$的子代数.如果
+	\begin{enumerate}
+		\item $\forall x\in E\forall y\in F\left(xy=yx\right)$,
+		\item 典范映射$E\otimes_{K}F\to G$是单射,
+	\end{enumerate}
+	则称$E$和$F$在$K$上线性无交.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$G$是$K$-代数,$E,F$是$G$的子代数,$\forall x\in E\forall y\in F\left(xy=yx\right)$,则下列陈述等价:
+	\begin{enumerate}
+		\item $E$和$F$在$K$上线性无交.
+		\item $E$有一个$K$-基集,为$G$配备右$F$-模结构后该基集是右$F$-模$G$的自由子集.
+	\end{enumerate}
+	这两个条件之一成立时,
+	\begin{enumerate}
+		\item 典范映射$E\otimes_{K}F\to G$是$K$-代数同构,它的像是$G$中由$E\cup F$生成的子代数.
+		\item $E\cap F$典范等同于$K$.
+		\item $E$(相对的,$F$)的每个$K$-自由子集都是$G$作为左(或右)$F$-模(相对的,$E$-模)的自由子集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$G$是$K$-代数,$E,F$是$G$的子代数,则下列陈述等价:
+	\begin{enumerate}
+		\item 典范映射$E\otimes_{K}\to G$是双射.
+		\item $E$有一个$K$-基集是左(右)$F$-模$G$的基集.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$G$是$K$-代数,$E,F$是$G$的子代数,$\dim_{K}E$和$\dim_{K}F$有限,$\forall x\in E\forall y\in F\left(xy=yx\right)$,$H$是$E\cup F$生成的子代数,则
+	\begin{center}
+		$E$和$F$在$K$上线性无交$\iff$ $\dim_{K}H=\dim_{K}E\cdot\dim_{K}F$.
+	\end{center}
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

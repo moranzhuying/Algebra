@@ -1,0 +1,74 @@
+\section{次数}
+
+\begin{definition}{多项式环的典范分次}{}
+	设$P\coloneq A[(X_{i})_{i\in I}]$是多项式代数.对每个$n\in\N$,记$P_{n}$是$\left\{X^{\nu}\middle|\nu\in\N^{\left(I\right)},\left|\nu\right|=n\right\}$生成的子模.
+	\begin{enumerate}
+		\item $\left(P_{n}\right)_{n\in\N}$是$P$的$\N$型分次,称为$P$的典范分次.
+		\item 对每个$n\in\N$,称$A[(X_{i})_{i\in I}]$的$n$次齐次元是关于不定元$X_{i}$的$n$次形式.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	给$\N$并接一个新元素$-\infty$,定义$\N\sqcup\left\{-\infty\right\}$上的运算和偏序$\leq$如下:对每个$n\in\N$,
+	\begin{align*}
+		-\infty<n,\left(-\infty\right)+n=n+\left(-\infty\right)=-\infty,\left(-\infty\right)+\left(-\infty\right)=-\infty.
+	\end{align*}
+	处理$A[(X_{i})_{i\in I}]$中的非齐次多项式时,我们总是采用这一规定.
+\end{remark}
+
+\begin{definition}{多项式的其次分量和全次数}{}
+	设$u=\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}\in A[(X_{i})_{i\in I}]$,对每个$n\in\N$有$u_{n}=\sum\limits_{\substack{\nu\in\N^{\left(I\right)}\\ \left|\nu\right|=n}}\alpha_{\nu}X^{\nu}$.显然$u=\sum\limits_{n\in\N}u_{n}$.
+	\begin{enumerate}
+		\item 当$u\neq 0$时,称$\deg\left(u\right)\coloneq\sup\left\{n\in\N\middle|u_{n}\neq 0\right\}$是$u$的(全)次数.
+		\item 当$u=0$时,称$\deg\left(u\right)\coloneq -\infty$是$u$的次数.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	我们有如下推论:$\forall p\in\N\left(\deg\left(u\right)\leq p\iff\forall\nu\in\N^{\left(I\right)}\left(\left|\nu\right|>p\implies\alpha_{\nu}=0\right)\right)$.对固定的$p\in\N$,
+	\begin{align*}
+		\left\{f\in A[(X_{i})_{i\in I}]\middle|\deg\left(f\right)\leq p\right\}
+	\end{align*}
+	是$A[(X_{i})_{i\in I}]$的$A$-子模,并且等于$\sum\limits_{i=0}^{p}P_{i}$($\left(P_{n}\right)_{n\in\N}$的具体定义如上,接下来没有说明默认如此理解).
+\end{remark}
+
+\begin{remark}{}{}
+	设$E$是$A$-模,$Q\coloneq E[(X_{i})_{i\in I}]$.对每个$n\in\N$,记$Q_{n}=E\otimes_{A}P_{n}$,则$\left(Q_{n}\right)_{n\in\N}$是$Q$的$\N$型分次.于是,上面定义多项式次数的方式同样可以应用到$Q$上,只需要把$A[(X_{i})_{i\in I}]$换成$E[(X_{i})_{i\in I}]$.
+\end{remark}
+
+\begin{proposition}{多项式次数的性质}{}
+	设$u,v\in A[(X_{i})_{i\in I}]$.
+	\begin{enumerate}
+		\item 若$\deg\left(u\right)\neq\deg\left(v\right)$,则$u+v\neq 0,\deg\left(u+v\right)=\sup\left(\deg\left(u\right),\deg\left(v\right)\right)$.
+		\item 若$\deg\left(u\right)=\deg\left(v\right)$,则$\deg\left(u+v\right)\leq\deg\left(u\right)$.
+		\item $\deg\left(uv\right)\leq\deg\left(u\right)+\deg\left(v\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{多项式的偏次数}{}
+	设$J\subseteq I,B=A[(X_{i})_{i\in I\setminus J}]$,$\sigma:A[(X_{i})_{i\in I}]\to B[(X_{i})_{i\in J}]$是典范同构,$u\in A[(X_{i})_{i\in I}]$.我们称$\deg\left(\sigma\left(u\right)\right)$是$u$关于不定元族$\left(X_{i}\right)_{i\in J}$的偏次数.
+\end{definition}
+
+\begin{definition}{首项系数,首一多项式}{}
+	设$u=\sum\limits_{k=0}^{n}\alpha_{k}X^{k}\in A[X]$是$n$次非零多项式.
+	\begin{enumerate}
+		\item 我们称$\alpha_{n}$是$u$的首项系数.
+		\item 若$\alpha_{n}=1$,则称$u$是首一多项式.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}{固定次数的单项式的计数}{}
+	设$p,q\in\N$,则$A\left[X_{1},\ldots,X_{q}\right]$中次数为$p$的单项式的个数是$\binom{q+p-1}{p}$.
+\end{theorem}
+
+\begin{definition}{全}{}
+	设$\Delta$是交换幺半群,$\left(\delta_{i}\right)_{i\in I}$是$\Delta$的元素族,则$A[(X_{i})_{i\in I}]$具备唯一的$\Delta$型分次,对每个$\nu\coloneq\left(\nu_{i}\right)_{i\in I}\in\N^{\left(I\right)}$有
+	\begin{align*}
+		\deg\left(X^{\nu}\right)=\sum\limits_{i\in I}\nu_{i}\delta_{i}.
+	\end{align*}
+	在这种情况下,我们用``权''代替``次数'',用``等权的''代替``齐次的''.
+\end{definition}
+
+\begin{example}{}{}
+	$A\left[\left(X_{i}\right)_{i=1}^{\infty}\right]$上存在唯一的$\N$型分次,对每个$i\geq 1$,多项式$X_{i}$的权是$1$.此时,对每个$n\in\N$,$A\left[\left(X_{i}\right)_{i=1}^{\infty}\right]$中权位$n$的等权元组成的集合是$\left\{\sum\limits_{\nu\in\N^{n}}\alpha_{\nu}X^{\nu}\middle|\nu=\left(\nu_{i}\right)_{i=1}^{n}\wedge\left(\sum\limits_{i=1}^{n}i\nu_{i}\neq n\implies\alpha_{\nu}=0\right)\right\}$.
+\end{example}

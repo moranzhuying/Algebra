@@ -1,0 +1,52 @@
+\section{矩阵计算}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right),\sigma=\rho^{-1}$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $E$和$E^{\prime}$都是自由左$A$模,$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}$和$\bar{\mathcal{B}}\coloneq\left(e_{s}^{\prime}\right)_{s\in S}$分别是$E$和$E^{\prime}$的有限基.
+	\item $F$和$F^{\prime}$都是自由右$A$-模或都是自由左$A$-模,$\mathcal{C}\coloneq\left(f_{j}\right)_{j\in J}$和$\bar{\mathcal{C}}\coloneq\left(f_{t}^{\prime}\right)_{t\in T}$分别是$F$和$F^{\prime}$的有限基.
+	\item $\mathcal{B}^{\ast}\coloneq\left(e_{i}^{\ast}\right)_{i\in I}$是$\mathcal{B}$的对偶基,$\mathcal{C}^{\ast}\coloneq\left(f_{j}^{\ast}\right)_{j\in J}$是$\mathcal{C}$的对偶基.
+	\item 当$F$是右$A$-模时$\varphi\in\Bil_{A}\left(E,F\right)$,当$F$是左$A$-模时$\varphi\in\Sesq_{A,\rho}\left(E,F\right)$.
+	\item 当$F^{\prime}$是右$A$-模时$\varphi\in\Bil_{A}\left(E^{\prime},F^{\prime}\right)$,当$F$是左$A$-模时$\varphi^{\prime}\in\Sesq_{A,\rho}\left(E^{\prime},F^{\prime}\right)$.
+	\item 对每个$\boldsymbol{T}\in A^{I\times J}$,定义$\langle\cdot,\cdot\rangle_{\boldsymbol{T}}:A^{\left\{1\right\}\times I}\times A^{J\times\left\{1\right\}}\to{}_{s}A_{d},\left(\boldsymbol{X},\boldsymbol{Y}\right)\mapsto\tr\left(\boldsymbol{X}^{\top}\boldsymbol{T}\boldsymbol{Y}\right)$.
+	\item $u\in\Hom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right)$,$F$和$F^{\prime}$都是右$A$-模时$v\in\Hom_{\mathsf{Mod}-A}\left(F,F^{\prime}\right)$,$F$和$F^{\prime}$都是左$A$-模时$v\in\Hom_{A-\mathsf{Mod}}\left(F,F^{\prime}\right)$.
+	\item $\boldsymbol{R}=\Gram_{\mathcal{B}}^{\mathcal{C}}\left(\varphi\right),\boldsymbol{R}^{\prime}=\Gram_{\bar{\mathcal{B}}}^{\bar{\mathcal{C}}}\left(\varphi^{\prime}\right),\boldsymbol{U}=\left[u\right]_{\mathcal{B}}^{\mathcal{C}},\boldsymbol{V}=\left[v\right]_{\bar{\mathcal{B}}}^{\bar{\mathcal{C}}}$.
+	\item 当$s_{\varphi}$是双射且$F$和$F^{\prime}$都是右$A$-模时,记${}^{\ast}u$是$u$相对$\left(\varphi,\varphi^{\prime}\right)$的左伴随,${}^{\ast}\boldsymbol{U}=\left[{}^{\ast}u\right]_{\bar{\mathcal{C}}}^{\mathcal{C}}$.
+	\item 当$d_{\varphi}$是双射且$F$和$F^{\prime}$都是左$A$-模时,记$v^{\ast}$是$v$相对$\left(\varphi,\varphi^{\prime}\right)$的右伴随,$\boldsymbol{V}^{\ast}=\left[v^{\ast}\right]_{\bar{\mathcal{B}}}^{\mathcal{B}}$.
+\end{itemize}
+
+\begin{proposition}{(半)双线性型的坐标表示}{}
+	\begin{enumerate}
+		\item 当$F$是右$A$-模时,对每个$\left(x,y\right)\in E\times F$有$\varphi\left(x,y\right)=\langle\left[x\right]_{\mathcal{B}},\left[y\right]_{\mathcal{C}}\rangle_{\boldsymbol{R}}$.
+		\item 当$F$是左$A$-模时,对每个$\left(x,y\right)\in E\times F$有$\varphi\left(x,y\right)=\langle\left[x\right]_{\mathcal{B}},\left(\left[y\right]_{\mathcal{C}}\right)_{\rho}^{\top}\rangle_{\boldsymbol{R}}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{(半)双线性型及其的拉回的关系}{}
+	\begin{enumerate}
+		\item 当$F$和$F^{\prime}$都是右$A$-模,$\varphi=\varphi^{\prime}\circ\left(u\times v\right)$时,$\boldsymbol{R}=\boldsymbol{U}^{\top}\boldsymbol{R}^{\prime}\boldsymbol{V}$.
+		\item 当$F$和$F^{\prime}$都是左$A$-模,$\varphi=\varphi^{\prime}\circ\left(u\times v\right)$时,$\boldsymbol{R}=\boldsymbol{U}^{\top}\boldsymbol{R}^{\prime}\boldsymbol{V}_{\rho}^{\top}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{(半)双线性型及其左右伴随的关系}{}
+	\begin{enumerate}
+		\item 当$F$是右$A$-模时$\left[s_{\varphi}\right]_{\mathcal{B}}^{\mathcal{C}^{\ast}}=\boldsymbol{R}^{\top},\left[d_{\varphi}\right]_{\mathcal{C}}^{\mathcal{B}^{\ast}}=\boldsymbol{R}$.
+		\item 当$F$是左$A$-模时$\left[s_{\varphi}\right]_{\mathcal{B}}^{\mathcal{C}^{\ast}}=\boldsymbol{R}_{\rho}^{\top},\left[d_{\varphi}\right]_{\mathcal{C}}^{\mathcal{B}^{\ast}}=\boldsymbol{R}$.
+		\item 当$A$是域且$\varphi$非退化时,$\boldsymbol{R}$可逆,并且$\boldsymbol{R},\boldsymbol{R}^{\top}$和$\boldsymbol{R}_{\rho}^{\top}$有相同的秩.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{(半)双线性型及其逆型的关系}{}
+	若$s_{\varphi}$和$d_{\varphi}$都是双射,则$\boldsymbol{R}$可逆,$\Gram_{\mathcal{C}^{\ast}}^{\mathcal{B}^{\ast}}\left(\tilde{\varphi}\right)=\boldsymbol{R}^{-1}$.
+\end{proposition}
+
+\begin{proposition}{线性映射及其左右伴随之间的关系}{}
+	设$s_{\varphi}$和$d_{\varphi}$都是双射.
+	\begin{enumerate}
+		\item 当$F$和$F^{\prime}$都是右$A$-模时,$^{\ast}\boldsymbol{U}=\boldsymbol{R}^{-1}\boldsymbol{U}\boldsymbol{R}^{\prime},\boldsymbol{V}^{\ast}=\boldsymbol{R}^{\prime}\boldsymbol{V}\boldsymbol{R}^{-1}$.
+		\item 当$F$和$F^{\prime}$都是左$A$-模时,$^{\ast}\boldsymbol{U}=\left(\boldsymbol{R}^{-1}\boldsymbol{U}\boldsymbol{R}^{\prime}\right)_{\rho}^{\top},\boldsymbol{V}^{\ast}=\boldsymbol{R}^{\prime}\boldsymbol{V}_{\rho}^{\top}\boldsymbol{R}^{-1}$.
+	\end{enumerate}
+\end{proposition}
+
+

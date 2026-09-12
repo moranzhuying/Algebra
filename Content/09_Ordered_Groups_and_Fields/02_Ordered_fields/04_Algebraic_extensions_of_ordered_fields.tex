@@ -1,0 +1,39 @@
+\section{有序域的代数扩张}
+
+记号约定:$\left(K,+,\cdot,\leq\right)$是有序域.
+
+\begin{definition}{可序}{}
+	设$\left(E,u\right)$是$K$的代数扩张.若$E$上有一个全序$\preccurlyeq$,它通过$u$在$K$上诱导的全序就是$\leqslant$,则称$E$可序.
+\end{definition}
+
+\begin{definition}{有序域中多项式的编号}{}
+	设$f\in K\left[X\right]$.
+	\begin{enumerate}
+		\item 设$a,b\in K$.若$f\left(a\right)f\left(b\right)<0$,则称$f$在$a$和$b$之间变号.
+		\item 若存在$a,b\in K$使得$f$在$a$和$b$之间变号,则称$f$在$K$上变号.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{变号不可约多项式的有序扩张可序}{}
+	设$f\in K\left[X\right],a,b\in K$.若$f$不可约且在$a$和$b$之间变号,则$K\left[X\right]/\langle f\rangle$是$\left(K,\leq\right)$-可序的.
+\end{proposition}
+
+\begin{remark}{}{}
+	$K[X]$中有一些不变号的不可约多项式$p$,它对应的扩张域$K[X]/\langle p\rangle$是$\left(K,\leq\right)$-可序的.
+\end{remark}
+
+\begin{corollary}{奇数次代数扩张可序}{}
+	$K$的每个奇数次有限代数扩张都是$\left(K,\leq\right)$-可序的.
+\end{corollary}
+
+\begin{corollary}{正元素的平方根扩张可序}{}
+	设$a\in K_{\geq 0}$,则$X^{2}-a\in K[X]$的每个分裂域$E$都是$\left(K,\leq\right)$-可序的.
+\end{corollary}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$K$包含$a$的平方根时,默认$\sqrt{a}$是指$a$的正平方根.
+		\item 如果$K$不包含$a$在分裂域$E$中的平方根$b$和$-b$,那么我们有两种办法让$K(\sqrt{a})$是$K$的有序扩张.一旦选定了两种全序中的一种,我们就确定了$b$和$-b$中哪一个是正的,那个根就被记作$\sqrt{a}$.
+		\item 如果$a,a^{\prime}\in K_{\geq 0}$且二者的平方根都在$K$中,那么$\sqrt{aa^{\prime}}=\sqrt{a}\sqrt{a^{\prime}}$.
+	\end{enumerate}
+\end{remark}

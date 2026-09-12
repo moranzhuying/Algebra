@@ -1,0 +1,51 @@
+\section{映射集}
+
+\begin{definition}{偏函数关系集,集合的Hom集,同构集,自同态集和自同构集}{}
+	设$E,F$是集合.
+	\begin{enumerate}
+		\item $E\times F$上的偏函数关系组成的集合记作$\FuncRel\left(E,F\right)$.
+		\item 从$E$到$F$的映射组成的集合记作$\Hom_{\mathsf{Set}}\left(E,F\right)$或$F^{E}$,从$E$到$F$的双射组成的集合记作$\Isom_{\mathsf{Set}}\left(E,F\right)$.
+		\item 把$\Hom_{\mathsf{Set}}\left(E,E\right)$记作$\End_{\mathsf{Set}}\left(E\right)$,把$\Isom_{\mathsf{Set}}\left(E,E\right)$记作$\Aut_{\mathsf{Set}}\left(E\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{偏函数关系和映射一一对应}{}
+	设$E,F$是集合,则$\FuncRel\left(E,F\right)\to\Hom_{\mathsf{Set}}\left(E,F\right),G\mapsto\left(G,E,F\right)$是双射,称为典范双射.
+\end{proposition}
+
+\begin{definition}{集合的Hom函子}{}
+	设$E,E^{\prime},F,F^{\prime}$是集合,$u:E^{\prime}\to E$和$v:F\to F^{\prime}$是映射.定义$ $
+	\begin{align*}
+		\Hom_{\mathsf{Set}}\left(u,v\right):\Hom_{\mathsf{Set}}\left(E,F\right)\to\Hom_{\mathsf{Set}}\left(E^{\prime},F^{\prime}\right),f\mapsto v\circ f\circ u.
+	\end{align*}
+\end{definition}
+
+\begin{proposition}{Hom函子保持单性和满性}{}
+	设$E,E^{\prime},F,F^{\prime}$是集合,$u:E^{\prime}\to E$和$v:F\to F^{\prime}$是映射.
+	\begin{enumerate}
+		\item 若$u,v$都是单射,则$\Hom_{\mathsf{Set}}\left(u,v\right)$是单射.
+		\item 若$u,v$都是满射,则$\Hom_{\mathsf{Set}}\left(u,v\right)$是满射.
+		\item 若$u,v$都是双射,则$\Hom_{\mathsf{Set}}\left(u,v\right)$是双射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{集合映射的Curry化}{}
+	设$A,B,C$是集合,则有如下的典范双射
+	\begin{gather*}
+		\Hom_{\mathsf{Set}}\left(C,\Hom_{\mathsf{Set}}\left(B,A\right)\right)\leftarrow\Hom_{\mathsf{Set}}\left(B\times C,A\right)\rightarrow\Hom_{\mathsf{Set}}\left(B,\Hom_{\mathsf{Set}}\left(C,A\right)\right)\\
+		\left[y\mapsto f\left(-,y\right)\right]\longmapsfrom f\longmapsto\left[x\mapsto f\left(x,-\right)\right]
+	\end{gather*}
+\end{proposition}
+
+\begin{corollary}{偏函数关系集的Curry化}{}
+	设$A,B,C$是集合,则存在$\FuncRel\left(A\times B,C\right)$到$\FuncRel\left(B,\FuncRel\left(C,A\right)\right)$和$\FuncRel\left(C,\FuncRel\left(B,A\right)\right)$的双射.
+\end{corollary}
+
+
+
+
+
+
+
+
+

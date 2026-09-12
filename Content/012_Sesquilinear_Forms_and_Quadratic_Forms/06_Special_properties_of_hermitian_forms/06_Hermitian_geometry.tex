@@ -1,0 +1,178 @@
+\section{Hermite几何}
+
+
+记号约定:
+\begin{itemize}
+	\item $K$是除环,$\rho\in\Isom_{\mathsf{Ring}}\left(K,K^{\op}\right)$是对合,对每个$a\in K$记$\bar{a}=\rho\left(a\right)$.
+	\item $E$是左$K$-仿射空间,$V$是$E$的向量部分,$\varphi\in\SHerm_{K,\rho}\left(V\right)$.
+	\item 对每个$\left(c,\lambda\right)\in E\times A^{\times}$,定义$h_{c,\lambda}:E\to E,x\mapsto c\aplus\lambda\left(x\aminus c\right)$.
+\end{itemize}
+
+\begin{definition}{Hermite空间,度量,伪欧式空间}{}
+	若$\varphi$非退化,则称$E$是$K$-Hermite空间,称$\varphi$是$E$的度量形式.进一步,若$\rho=\id_{K}$,则称$E$是伪欧氏空间.
+\end{definition}
+
+本节接下来的内容中,默认$E$是$K$-Hermite空间.
+
+\begin{definition}{平方距离}{}
+	设$d:E\times E\to K,\left(x,y\right)\mapsto\varphi\left(y-x,y-x\right)$.
+	\begin{enumerate}
+		\item 我们称$d$是$E$上的平方距离.
+		\item 对每个$x,y\in E$,我们称$d\left(x,y\right)$是$x$和$y$之间的平方距离.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{勾股定理}{}
+	设$d:E\times E\to K$是平方距离,$x,y,z\in E$.
+	\begin{enumerate}
+		\item 若$y\aminus x$和$z\aminus x$关于$\varphi$正交,则$d\left(x,y\right)+d\left(x,z\right)=d\left(y,z\right)$.
+		\item 若$\rho=\id_{K}$,$\Char\left(K\right)\neq 2$,$d\left(x,y\right)+d\left(x,z\right)=d\left(y,z\right)$,则$y\aminus x$和$z\aminus x$关于$\varphi$正交.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{(全/非)迷向仿射子空间}{}
+	设$S$是$E$的仿射子空间.
+	\begin{enumerate}
+		\item 若$\Dir\left(S\right)$是$V$的$\varphi$-迷向子空间,则称$S$是$E$的$\varphi$-迷向仿射子空间.
+		\item 若$\Dir\left(S\right)$是$V$的$\varphi$-非迷向子空间,则称$S$是$E$的$\varphi$-非迷向仿射子空间.
+		\item 若$\Dir\left(S\right)$是$V$的$\varphi$-全迷向子空间,则称$S$是$E$的$\varphi$-全迷向仿射子空间.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{向量和仿射子空间的正交性}{}
+	设$S$是$E$的仿射子空间,$v\in V$.若$v$和$\Dir\left(S\right)$关于$\varphi$正交,则称$v$和$S$关于$\varphi$正交.
+\end{definition}
+
+\begin{definition}{仿射子空间的正交性}{}
+	设$S_{1},S_{2}$是$E$的仿射子空间.若$\Dir\left(S_{1}\right)$和$\Dir\left(S_{2}\right)$关于$\varphi$正交,则称$S_{1}$和$S_{2}$关于$\varphi$正交.
+\end{definition}
+
+\begin{lemma}{完全正交仿射子空间的良定义性}{}
+	设$S$是$E$的仿射子空间.对每个$x\in E$,集合$\left\{y\in E\middle|y\aminus x\text{和}\Dir\left(V\right)\text{关于}\varphi\text{正交}\right\}$是$E$中经过点$x$的仿射子空间.
+\end{lemma}
+
+\begin{definition}{经过某点的法仿射子空间}{}
+	设$S$是$E$的仿射子空间,$x\in E$.我们称$S_{x}^{\circ}\coloneq\left\{y\in E\middle|y\aminus x\text{和}\Dir\left(V\right)\text{关于}\varphi\text{正交}\right\}$为$E$中经过点$x$的法仿射子空间.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 若$E$是有限维仿射空间,则$\dim S_{x}^{\circ}=\codim_{E}S$.
+		\item 若$S$是$E$的$\varphi$-非迷向仿射子空间,则$V=\Dir\left(S\right)\oplus\Dir\left(S_{x}^{\circ}\right)$,并且$S\cap S_{x}^{\circ}$是单点集.
+	\end{enumerate}
+\end{remark}
+
+\begin{lemma}{仿射正交投影的良定义性}{well-definedness-of-affine-orthogonal-projection}
+	设$S$是$E$的$\varphi$-非迷向仿射子空间.定义$P_{V}:E\to S$如下:对每个$x\in E$有$S_{x}^{\circ}\cap S=\left\{P_{V}\left(x\right)\right\}$.
+	\begin{enumerate}
+		\item $P_{V}$是幂等的仿射线性映射.
+		\item $P_{V}$的向量部分是$V$到$\Dir\left(S\right)$的正交投影.
+	\end{enumerate}
+\end{lemma}
+
+\begin{definition}{仿射正交投影}{}
+	沿用引理\ref{lem:well-definedness-of-affine-orthogonal-projection}的记号.我们称$P_{V}$是$S$在$V$上的仿射正交投影.
+\end{definition}
+
+\begin{definition}{仿射位移变换,仿射相似变换}{}
+	设$u:E\to E$是仿射同构,其向量部分为$\vec{u}$.
+	\begin{enumerate}
+		\item 若$\vec{u}\in\mathrm{U}\left(\varphi\right)$,则称$u$是$E$上相对$\varphi$的仿射位移变换.
+		\item 若$\vec{u}\in\GU\left(\varphi\right)$,则称$u$是$E$上相对$\varphi$的仿射相似变换.
+	\end{enumerate}
+\end{definition}
+
+\begin{lemma}{仿射位移群和仿射相似群的良定义性}{well-definedness-of-affine-displacement-group-and-affine-similitude-group}
+	分别记$\Disp\left(\varphi\right)$和$\Sim\left(\varphi\right)$是$E$上相对$\varphi$的仿射位移变换和仿射相似变换组成的集合,则二者按映射复合均构成群.
+\end{lemma}
+
+\begin{definition}{仿射位移群,仿射相似群}{}
+	沿用引理\ref{lem:well-definedness-of-affine-displacement-group-and-affine-similitude-group}的记号.
+	\begin{enumerate}
+		\item 我们称$\Disp\left(\varphi\right)$是$E$上相对$\varphi$的仿射位移变换群.
+		\item 我们称$\Sim\left(\varphi\right)$是$E$上相对$\varphi$的仿射相似变换群.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\Tran\left(E\right)$是$\Sim\left(\varphi\right)$和$\Disp\left(\varphi\right)$的正规子群.
+		\item 设$a\in E,G_{a}=\left\{u\in\Disp\left(\varphi\right)\middle|u\left(a\right)=a\right\}$.
+		\begin{itemize}
+			\item 一方面,$\pi:G_{a}\to\mathrm{U}\left(\varphi\right),f\mapsto\vec{f}$是典范的群同构.
+			\item 另一方面,对每个$u\in\Disp\left(\varphi\right)$,存在$u_{1},u_{2}\in G_{a}$和$t_{1},t_{2}\in V$使得$u=\pi\left(t_{1}\right)\circ u_{1}=u_{2}\circ\pi\left(t_{2}\right)$.
+		\end{itemize}
+		因此,我们有$\Disp\left(\varphi\right)=T\rtimes G_{a}\simeq T\rtimes\mathrm{U}\left(\varphi\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{仿射相似变换的相似比和行列式}{}
+	设$u\in\Sim\left(\varphi\right)$.我们称$\mu\left(u\right)\coloneq\mu\left(\vec{u}\right)$是$u$的相似比,称$\det\left(u\right)\coloneq\det\left(\vec{u}\right)$是$u$的行列式.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 根据上一节的结论,$\mu\left(u\right)$确实良好定义,并且$\overline{\mu\left(u\right)}=\mu\left(u\right)\in Z\left(A\right)$.
+		\item $\mu:\Sim\left(\varphi\right)\to Z\left(A\right)^{\times},f\mapsto\mu\left(f\right)$是群同态,$\ker\left(\mu\right)=\Disp\left(\varphi\right)$.
+		\item 设$a\in A$.若$\beta\in Z\left(A\right)^{\times}$且$\mu\left(u\right)=\beta\bar{\beta}$,则$u=h_{a,\beta}\circ\left(h_{a,\beta}^{-1}\circ u\right)$,其中$h_{a,\beta}$是仿射位似,$h_{a,\beta}^{-1}\circ u$是仿射位移.
+	\end{enumerate}
+\end{remark}
+
+\begin{theorem}{仿射相似变换群的结构定理}{}
+	设$A$是域,$\dim E=n\in\N$,$\varphi$非退化,$u\in\Sim\left(\varphi\right),\alpha=\mu\left(u\right)$.
+	\begin{enumerate}
+		\item $\det\left(u\right)\overline{\det\left(u\right)}=\alpha^{n}$.
+		\item 设$n=2q$且$q\in\N$,$\rho=\id_{A}$,则$\det\left(u\right)\in\left\{\alpha^{q},\alpha^{-q}\right\}$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{正相似变换,负相似变换}{}
+	设$A$是域,$\dim E=n=2q$(其中$n,q\in\N$),$\rho=\id_{K},u\in\Sim\left(\varphi\right),\mu\left(u\right)=\alpha$.
+	\begin{enumerate}
+		\item 若$\det\left(u\right)=\alpha^{q}$,则称$u$是相对$\varphi$的正仿射相似变换.记$\Sim^{+}\left(\varphi\right)$是$E$上相对$\varphi$的正仿射相似变换组成的集合.
+		\item 若$\det\left(u\right)=-\alpha^{q}$,则称$u$是相对$\varphi$的反仿射相似变换.记$\Sim^{-}\left(\varphi\right)$是$E$上相对$\varphi$的负仿射相似变换组成的集合.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\Sim^{+}\left(\varphi\right)$是$\Sim\left(\varphi\right)$中指数为$2$的正规子群,并且包含$\Tran\left(E\right)$.
+		\item $\GU^{-}\left(\varphi\right)$是$\GU\left(\varphi\right)$中的陪集,并且$\GU\left(\varphi\right)=\GU^{+}\left(\varphi\right)\sqcup\GU^{-}\left(\varphi\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{仿射相似变换的不动点定理}{}
+	设$E$有限维,$\varphi$的Witt指数是$0$,那么对每个$u\in\Sim\left(\varphi\right)$,当$\mu\left(u\right)\neq 1$时$u$在$E$中只有一个不动点.
+\end{proposition}
+
+\begin{lemma}{特殊仿射位移群的良定义性}{well-definedness-of-special-affine-displacement-group}
+	记$\Disp^{+}\left(\varphi\right)=\left\{u\in\Disp\left(\varphi\right)\middle|\det\left(u\right)=1\right\}$.
+	\begin{enumerate}
+		\item $\Disp^{+}\left(\varphi\right)$是$\Disp\left(\varphi\right)$的正规子群.
+		\item 当$A$是特征$\neq 2$的域,$\rho=\id_{A}$时,$\Disp^{+}\left(\varphi\right)$在$\Disp\left(\varphi\right)$中的指数为$2$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{definition}{特殊仿射位移变换群}{}
+	沿用引理\ref{lem:well-definedness-of-special-affine-displacement-group}的记号.我们称$\Disp^{+}\left(\varphi\right)$是$\varphi$的特殊仿射位移变换群.
+\end{definition}
+
+\begin{proposition}{对合的仿射位移变换的不动点定理}{}
+	设$\Char\left(A\right)\neq 2$,$u\in\Disp\left(\varphi\right)$是对合.
+	\begin{enumerate}
+		\item $u$在$E$中一定有一个不动点.
+		\item 设$a$是$u$的不动点.以$a$为$E$的原点,那么$\vec{u}$是$V$上的对合.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{关于仿射子空间的反射和对称}{}
+	设$S$是$E$的$\varphi$-非迷向仿射子空间,$u\in\Disp\left(\varphi\right)$.如果任取$a\in V$作为$E$的原点时,对每个$x\in\Dir\left(S\right)$和$y\in\Dir\left(S\right)^{\circ}$有
+	\begin{align*}
+		\vec{u}\left(x\right)=x,\vec{u}\left(y\right)=-y,
+	\end{align*}
+	则称$u$是关于$V$的仿射反射变换.
+\end{definition}
+
+\begin{remark}{}{}
+	设对每个$x\in E$有$x_{1}\in S$且$x-x_{1}\in \Dir\left(S\right)^{\circ}$.那么,$u$是关于$V$的仿射反射变换$\iff$对每个$x\in S$有$u\left(x\right)=2x_{1}\aminus x$.
+\end{remark}

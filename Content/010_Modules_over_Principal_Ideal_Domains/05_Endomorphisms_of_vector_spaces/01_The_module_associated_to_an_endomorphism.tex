@@ -1,0 +1,85 @@
+\chapter{向量空间上的自同态}
+
+本章中,我们默认$K$是域,$V$是$K$-向量空间.论及向量在基下的坐标向量时,没有额外说明的情况下,一概采用右模的记号.
+
+\section{与自同态相伴的模}
+
+\begin{definition}{线性映射的相似}{}
+	设$A$是环,$M,N$是$A$-模,$u\in\End_{A}\left(M\right),v\in\End_{A}\left(N\right)$.若存在$\varphi\in\Isom_{A}\left(M,N\right)$使下图交换,则称$u$和$v$相似.
+	\begin{center}
+		\begin{tikzcd}
+			M & M \\
+			N & N
+			\arrow["u", from=1-1, to=1-2]
+			\arrow["g"', dashed, from=1-1, to=2-1]
+			\arrow["g", dashed, from=1-2, to=2-2]
+			\arrow["v"', from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{definition}
+
+\begin{remark}{}{}
+	设$M,N$有限生成且自由.
+	\begin{enumerate}
+		\item 设$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}$和$\mathcal{C}\coloneq\left(\check{e}_{i}\right)_{i\in I}$分别是$M$和$N$的基,则$u$和$v$相似$\iff$ $\left[u\right]_{\mathcal{B}}^{\mathcal{B}}$和$\left[v\right]_{\mathcal{C}}^{\mathcal{C}}$相似.
+		\item $\Char_{A,u}$和$\Char_{A,v}$相等.
+	\end{enumerate}
+\end{remark}
+
+本节接下来的内容中,默认$\mathcal{T}\in\End_{K}\left(V\right)$.
+
+\begin{proposition}{$K[X]$-模与$K$-模的表述转化}{}
+	设$W$是$V$的$K$-子空间,$\mathfrak{a}$是$K[X]$的理想.
+	\begin{enumerate}
+		\item $W_{\mathcal{T}}$是$V_{\mathcal{T}}$的$K[X]$-子模$\iff$ $W$是$\mathcal{T}$-不变子空间.
+		\item $W_{\mathcal{T}}$是$V_{\mathcal{T}}$的循环$K[X]$-子模$\iff$存在$x\in C$使得$W$由$\left(\mathcal{T}^{n}x\right)_{n\in\N}$生成.
+		\item $W_{\mathcal{T}}$是$V_{\mathcal{T}}$的不可分解$K[X]$-子模$\iff$ $W\neq\left\{0\right\}$且$V$中不存在两个$\mathcal{T}$-不变子空间$W_{1},W_{2}$使$W=W_{1}\oplus W_{2}$.
+		\item $\mathfrak{a}=\Ann_{K\left[X\right]}\left(V_{\mathcal{T}}\right)$ $\iff$ $\mathfrak{a}=\left\{p\in K[X]\middle|\forall x\in V\left(p\left(\mathcal{T}\right)x=0\right)\right\}$.
+		\item $V_{\mathcal{T}}$是挠$K[X]$-模$\iff$ $V_{\mathcal{T}}$的每个循环$K[X]$-子模(作为$K$-向量空间)都是$V$的有限维$K$-子空间.
+		\item $V_{\mathcal{T}}$是有限生成的挠$K[X]$-模$\iff$ $V$是有限维$K$-向量空间.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{多项式的友矩阵}{}
+	设$g\in K[X],n\geq 1,a_{0},\ldots,a_{n-1}\in K$.下列陈述等价:
+	\begin{enumerate}
+		\item $V_{\mathcal{T}}$是循环$K[X]$-模,$g=X^{n}+a_{n-1}X^{n-1}+\ldots+a_{0}$且$\Ann_{K[X]}\left(V\right)=\langle g\rangle$.
+		\item 存在$x\in V$使得$\left(\mathcal{T}^{i}x\right)_{i=0}^{n-1}$是$V$的基且$g\left(\mathcal{T}\right)x=0$.
+		\item 存在$V$的基$\left(e_{i}\right)_{i=1}^{n}$,使得$\mathcal{T}$在这个基下的表示矩阵为
+		\begin{align*}
+			\begin{bmatrix}
+				0 & 0 & \ldots & 0 & -\alpha_{0}\\
+				1 & 0 & \ldots & 0 & -\alpha_{1}\\
+				0 & 1 & \ldots & 0 & -\alpha_{2}\\
+				\vdots & \vdots & \ddots & \vdots & \vdots\\
+				0  & 0 & \ldots & 1 &-\alpha_{n-1}
+			\end{bmatrix}.
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$\mathcal{T}$-循环子空间}{}
+	设$W$是$V$的子空间.若$W_{\mathcal{T}}$是$V_{\mathcal{T}}$的循环$K[X]$-子模,则称$W$是$V$的$\mathcal{T}$-循环子空间.
+\end{definition}
+
+\begin{definition}{极小多项式}{}
+	设$g\in K[X]$是首一多项式.
+	\begin{enumerate}
+		\item 我们称$\Ann_{K[X]}\left(V\right)$是$V$的零化理想.
+		\item 若$\Ann_{K[X]}\left(V\right)=\langle g\rangle$,则称$g$是$\mathcal{T}$在$V$上的极小多项式,将其记作$\Min_{\mathcal{T},V}$,无歧义时记作$\Min_{\mathcal{T}}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{多项式的友矩阵}{}
+	设$n\geq 1,a_{0},\ldots,a_{n-1}\in K,g=X^{n}+a_{n-1}X^{n-1}+\ldots+a_{0}\in K[X]$.我们称
+	\begin{align*}
+		\begin{bmatrix}
+			0 & 0 & \ldots & 0 & -\alpha_{0}\\
+			1 & 0 & \ldots & 0 & -\alpha_{1}\\
+			0 & 1 & \ldots & 0 & -\alpha_{2}\\
+			\vdots & \vdots & \ddots & \vdots & \vdots\\
+			0  & 0 & \ldots & 1 &-\alpha_{n-1}
+		\end{bmatrix}
+	\end{align*}
+	为多项式$g$的友矩阵,记作$\Com\left(g\right)$.
+\end{definition}

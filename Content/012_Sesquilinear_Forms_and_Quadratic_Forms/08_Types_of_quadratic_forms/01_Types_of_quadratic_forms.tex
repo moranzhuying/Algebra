@@ -1,0 +1,38 @@
+\chapter{二次型的类型}
+
+记号约定:$A$是域,$A^{\ast}=A\setminus\left\{0\right\}$.
+
+\section{二次型的类型}
+
+记号约定:$E$是$A$-向量空间.
+
+\begin{definition}{二次型的定义空间}{}
+	设$Q\in\Quad_{A}\left(E\right)$.我们称$E$是$Q$的定义空间,称$\dim E$是$Q$的维数.
+\end{definition}
+
+本节接下来的内容中,默认$E$是有限维的.
+
+\begin{definition}{Witt等价}{}
+	设$E$是有限维的,$Q_{1},Q_{2}\in\Quad_{A}\left(E\right)$非退化.定义公式$Q_{1}\sim Q_{2}$如下:
+	\begin{center}
+		存在$N_{1},N_{2}\in\Quad_{A}\left(E\right)$,使得$N_{1},N_{2}$是双曲型的,并且$Q_{1}\boxplus N_{1}\simeq Q_{2}\boxplus N_{2}$.
+	\end{center}
+	如果$Q_{1}\sim Q_{2}$,则称$Q_{1}$和$Q_{2}$是Witt等价的.
+\end{definition}
+
+\begin{remark}{}{}
+	可以验证,$\sim$是$\Quad_{A}\left(E\right)$上的等价关系.如果$Q_{1}\simeq Q_{2}$,那么$Q_{1}\sim Q_{2}$.
+\end{remark}
+
+\begin{definition}{Witt类}{}
+	对每个$Q\in\Quad_{A}\left(E\right)$,称$\mathcal{W}\left(Q\right)\coloneq\tau_{X}\left(X\sim Q\right)$是$Q$的Witt类.
+\end{definition}
+
+\begin{proposition}{}{}
+	对每个$Q_{1},Q_{2}\in\Quad_{A}\left(E\right)$有$\mathcal{W}\left(Q_{1}\right)=\mathcal{W}\left(Q_{2}\right)\iff Q_{1}\sim Q_{2}$.
+\end{proposition}
+
+\begin{proposition}{Witt环的良定义性}{}
+	公式``存在$E$上的非退化$A$-二次型$Q$使得$X=\mathcal{W}\left(Q\right)$''是$X$上的集化公式.
+\end{proposition}
+

@@ -1,0 +1,80 @@
+\chapter{Hermite型的特殊性质}
+
+\section{正交基}
+
+记号约定:
+\begin{itemize}
+	\item $A$是除环,$\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$且为对合,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $E$是左$A$-向量空间,$\varphi\in\SHerm_{A,\rho}\left(E\right),\boldsymbol{M}\in\mathbf{M}_{n}\left(A\right)$.
+	\item 若$A$是特征为$2$的域,$\rho=\id_{K}$,$\varphi$非零且交错,则称条件(C)成立.
+	\item 若$A$是特征为$2$的域,$\rho=\id_{K}$,$\boldsymbol{M}$是非零交错矩阵,则称条件(D)成立.
+\end{itemize}
+
+\begin{definition}{正交集,规范正交集}{}
+	设$\left(e_{i}\right)_{i\in I}$是$V$的基.
+	\begin{enumerate}
+		\item 若$\forall i,j\in I\left(i\neq j\implies\varphi\left(e_{i},e_{j}\right)=0\right)$,则称$\left(e_{i}\right)_{i\in I}$是关于$\varphi$的正交基(或$\varphi$-正交基).
+		\item 若$\left(e_{i}\right)_{i\in I}$是$\varphi$-正交基,并且$\forall i\in I\left(\varphi\left(e_{i},e_{i}\right)=1\right)$,则称$\left(e_{i}\right)_{i\in I}$是关于$\varphi$的规范正交基(或$\varphi$-规范正交基).
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	设$\left(e_{i}\right)_{i\in I}$是$\varphi$-正交基,对每个$i\in I$记$\alpha_{i}=\varphi\left(e_{i},e_{i}\right)$.那么对$A$的每个有限支撑族$\left(\xi_{i}\right)_{i\in I}$和$\left(\eta_{i}\right)_{i\in I}$有
+	\begin{align*}
+		\varphi\left(\sum\limits_{i\in I}\xi_{i}e_{i},\sum_{i\in I}\eta_{i}e_{i}\right)=\sum\limits_{i\in I}\xi_{i}\alpha_{i}\bar{\eta}_{i}.
+	\end{align*}
+\end{remark}
+
+\begin{lemma}{全迷向Hermite型的退化性质}{}
+	设$\varphi$非零.若$E$中每个向量都是$\varphi$-迷向向量,则条件(C)成立.
+\end{lemma}
+
+\begin{theorem}{Hermite型的正交基存在定理}{}
+	设$E$是$n$维$A$-向量空间(其中$n\in\N$),则$E$有一个$\varphi$-正交基$\iff$条件(C)不成立.
+\end{theorem}
+
+\begin{corollary}{Hermite型的规范正交基的存在性定理}{}
+	设$E$是$n$维$A$-向量空间(其中$n\in\N$).若
+	\begin{enumerate}
+		\item $\varphi$非退化,条件(C)不成立,
+		\item $\forall x\in E\exists u\in A\left(\varphi\left(x,x\right)=u\bar{u}\right)$,
+	\end{enumerate}
+	则$E$中存在$\varphi$-规范正交基.
+\end{corollary}
+
+\begin{remark}{}{}
+	当$\rho=\id_{A}$且$\forall x\in A\exists y\in A\left(x=y^{2}\right)$时(例如$A$是代数闭域),公式$\forall x\in E\exists u\in A\left(\varphi\left(x,x\right)=u\bar{u}\right)$自动成立
+\end{remark}
+
+\begin{corollary}{Hermite矩阵的对角化}{}
+	设$\boldsymbol{A}$是$A$上的$n$阶Hermite矩阵,$\rank\left(\boldsymbol{A}\right)=r$.若条件(D)不成立,则存在$\boldsymbol{P}\in\GL_{n}\left(A\right)$和$\alpha_{1},\ldots,\alpha_{r}\in A\setminus\left\{0\right\}$,使得
+	\begin{enumerate}
+		\item $\boldsymbol{P}^{\top}\boldsymbol{A}\overline{\boldsymbol{P}}=\diag\left(\alpha_{1},\ldots,\alpha_{r},0,\ldots,0\right)$,
+		\item 对每个$1\leq i\leq r$有$\bar{\alpha}_{i}=\alpha_{i}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{Gram-Schimidt正交化方法}{}
+	设$A$是域,$I\in\left\{\N_{>0},\left[1,m\right]\right\}$,$\left(x_{i}\right)_{i\in I}$是$E$中的线性无关族.定义$E$的子空间族$\left(E_{i}\right)_{i\in I}$和$A$的族$\left(D_{j,n}\right)_{j=1}^{n}$如下:
+	\begin{itemize}
+		\item 对每个$i\in I$有$E_{i}=\sum\limits_{k=1}^{i}Ax_{i}$,并且$E_{i}$是$E$的$\varphi$-非迷向子空间;
+		\item 对每个$1\leq j\leq n$,$D_{j,n}$是$\left(\varphi\left(x_{s},x_{t}\right)\right)_{\substack{1\leq s\leq n\\ 1\leq t\leq n}}$中元素$\varphi\left(x_{j},x_{n}\right)$的代数余子式.
+	\end{itemize}
+	\begin{enumerate}
+		\item $\left(D_{j,n}\right)_{j=1}^{n}$的每一项都非零.
+		\item 对每个$i\in I$,定义$e_{i}=\sum\limits_{j=1}^{i}D_{n,n}^{-1}D_{j,n}x_{j}$.那么,对每个$n\in I$,
+		\begin{itemize}
+			\item $\left(e_{i}\right)_{i=1}^{n}$是$E_{n}$的$\varphi$-正交基,
+			\item $\varphi\left(e_{n},e_{n}\right)=D_{n,n}^{-1}D_{n+1,n+1}$.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(e_{i}\right)_{i=1}^{n}$是$V$关于$\varphi$的正交基(相对的,规范正交基),其对偶基是$\left(e_{i}^{\ast}\right)_{i=1}^{n}$,$p\in\Z_{\geqslant 1}$.
+	\begin{enumerate}
+		\item $\left(e_{i_{1}}\otimes\ldots\otimes e_{i_{p}}\right)_{1\leqslant i_{1},\ldots,i_{p}\leqslant n}$是$V^{\otimes p}$上关于$\varphi^{\otimes p}$的正交基(相对的,规范正交基).
+		\item $\left(e_{H}\right)_{H\in\fin\left(I\right)}$是$\bigwedge^{p}V$上关于$\bigwedge\limits^{p}\varphi$的正交基(相对的,规范正交基).
+		\item 若$\varphi$是非退化,则$\left(e_{i}^{\ast}\right)_{i=1}^{n}$是$V^{\vee}$中关于$\varphi$的逆型的正交基(相对的,规范正交基).
+	\end{enumerate}
+\end{proposition}

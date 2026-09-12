@@ -1,0 +1,172 @@
+\section{线性无关族,基}
+
+记号约定:$A$是环,$T,T^{\prime}$是集合,$E,F$是$A$-模.
+
+\begin{definition}{自由$A$-模$A_{s}^{\left(T\right)}$及其典范基}{}
+	我们称$A_{s}^{\left(I\right)}\coloneq\bigboxplus\limits_{t\in T}A_{s}$是索引集为$T$的自由$A$-模,$\left(e_{i}\right)_{i\in I}$是$A_{s}^{\left(T\right)}$的典范基,其中$\forall t\in T\left(e_{t}=\left(\delta_{t,t^{\prime}}\right)_{t^{\prime}\in T}\right)$.
+\end{definition}
+
+\begin{proposition}{自由模的泛性质}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(T,E\right)$.记$\left(e_{t}\right)_{t\in T}$是$A_{s}^{\left(T\right)}$的典范基,$\iota:T\to A_{s}^{\left(T\right)},t\mapsto e_{t}$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			T && {A_{s}^{\left(T\right)}} \\
+			& E
+			\arrow["\iota", from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}", dashed, from=1-3, to=2-2]
+			\end{tikzcd}
+	\end{center}
+	具体而言,$\bar{f}:A_{s}^{\left(T\right)}\to E,\left(\xi_{t}\right)_{t\in T}\mapsto\sum\limits_{t\in T}\xi_{t}f\left(t\right)$.我们称$\bar{f}$是由$\left(f\left(t\right)\right)_{t\in T}$决定的$A$-线性映射.
+\end{proposition}
+
+\begin{remark}{}{}
+	我们称$\phi$是典范映射.当$A$不是零环时,$\phi$是单射.
+\end{remark}
+
+\begin{definition}{线性关系模}{}
+	设$\bar{f}:A_{s}^{\left(T\right)}\to E$由$f\in\Hom_{\mathsf{Set}}\left(T,E\right)$决定.称$\ker\left(\bar{f}\right)$是$\left(f\left(t\right)\right)_{t\in T}$的线性关系模,正合列
+	\begin{align*}
+		0\xlongrightarrow{}\ker\left(\bar{f}\right)\xlongleftarrow{}A_{s}^{\left(T\right)}\xlongrightarrow{\bar{f}}E
+	\end{align*}
+	由$\left(f\left(t\right)\right)_{t\in T}$决定.
+\end{definition}
+
+\begin{corollary}{自由模的函子性}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(T,T^{\prime}\right)$,则如下图表交换(其中,$\phi,\phi^{\prime}$是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			T \arrow[r, "f"] \arrow[d, "\phi"']         & T^{\prime} \arrow[d, "\phi^{\prime}"] \\
+			A_{s}^{\left(T\right)} \arrow[r, "\exists!\bar{f}"', dashed] & A_{s}^{\left(T^{\prime}\right)}              
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{corollary}{生成系和元素族决定的映射}{}
+	设$\left(a_{t}\right)_{t\in T}$是$E$的元素族,则$\left(a_{t}\right)_{t\in T}$生成$E$ $\iff$ $\left(a_{t}\right)_{t\in T}$定义的线性映射$A^{\left(T\right)}\to E$是满射.
+\end{corollary}
+
+\begin{definition}{模的自由族和基(元素族形式)}{}
+	设$\left(a_{t}\right)_{t\in T}$是$E$的元素族,$\varphi:A_{s}^{\left(T\right)}\to E$是$\left(a_{t}\right)_{t\in T}$定义的$A$-线性映射.
+	\begin{enumerate}
+		\item 若$\varphi$是单射,则称$\left(a_{t}\right)_{t\in T}$是自由族,否则称$\left(a_{t}\right)_{t\in T}$是相关族.
+		\item 若$\varphi$是双射,则称$\left(a_{t}\right)_{t\in T}$是基.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{基中的元素在坐标下的分量,坐标映射}{}
+	设$E$的元素族$\left(a_{t}\right)_{t\in T}$是基.
+	\begin{enumerate}
+		\item 设$x\in E$且$x=\sum\limits_{t\in T}\xi_{t}a_{t}$.我们称$\left(\xi_{t}\right)_{t\in T}$是$x$关于基$\left(a_{t}\right)_{t\in T}$的坐标.
+		\item 对诸$t\in T$,定义$c_{t}:E\to A,\sum\limits_{\lambda\in T}\xi_{\lambda}a_{\lambda}\mapsto \xi_{t}$为第$t$个坐标映射.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{自由模}{}
+	若$E$有基,则称$E$是自由模.
+\end{definition}
+
+\begin{definition}{自由Abel群}{}
+	设$G$是Abel群(加法记号).若$G$视为$\Z$-模后是自由模,则称$G$为自由Abel群.
+\end{definition}
+
+\begin{theorem}{线性映射的唯一延拓定理}{}
+	设$\left(a_{t}\right)_{t\in T}$是$E$的基,$\left(b_{t}\right)_{t\in T}$是$F$的元素族,则存在唯一的$f\in\Hom_{A}\left(E,F\right)$使$\forall t\in T\left(f\left(a_{t}\right)=b_{t}\right)$.进一步:
+	\begin{enumerate}
+		\item $f$是单射$\iff$ $\left(b_{t}\right)_{t\in T}$是$F$的自由族.
+		\item $f$是满射$\iff$ $\left(b_{t}\right)_{t\in T}$是$F$的生成系.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{自由子集,基,相关子集(集合版本)}{}
+	设$A$不是零环,$S\subseteq E,\varphi:A_{s}^{\left(S\right)}\to E$是$\left(s\right)_{s\in S}$决定的$A$-线性映射.
+	\begin{enumerate}
+		\item 若$\varphi$是单射,则称$S$是$E$的自由子集(或线性无关集),否则称$S$是$E$的相关子集(或线性相关集),$S$的元素线性相关.
+		\item 若$\varphi$是满射,则称$S$是$E$的生成系.
+		\item 若$\varphi$是双射,则称$S$是$E$的基集.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{线性无关性不依赖指标}{}
+	设$A$不是零环,$S\subseteq E,I$是集合,$\sigma\in\Isom_{\mathsf{Set}}\left(I,S\right)$.
+	\begin{enumerate}
+		\item 若$S$是$E$的无关子集,则$\left(\sigma\left(i\right)\right)_{i\in I}$是$E$的自由族.
+		\item 若$S$是$E$的基集,则$\left(\sigma\left(i\right)\right)_{i\in I}$是$E$的基.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{自由集的子集一定自由}{}
+	设$A$不是零环.若$S$是$E$的自由集,则$S$的子集也是$E$的自由集.特别地,$\emptyset$是$E$的零子模的基集.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(a_{t}\right)_{t\in T}$是$E$的元素族,则$\left(a_{t}\right)_{t\in T}$是自由族$\iff$ $\left(a_{t}\right)_{t\in T}$的每个子族都是$E$的自由族.
+\end{proposition}
+
+\begin{remark}{模的自由子集组成的集合按集合包含构成偏序集}{}
+	设$\mathcal{P}=\left\{S\subseteq M\middle|S\text{是无关子集}\right\}$.按$\subseteq$赋之以偏序,则$\mathcal{P}$有极大元.设$\left(a_{t}\right)_{t\in T}$是$E$的基.$A$不是零环时,对任一$x\in E$,存在$\mu\in A\setminus\left\{0\right\}$和$A$的元素族$\left(\xi_{t}\right)_{t\in T}$使得$\mu x=\sum\limits_{t\in T}\xi_{t}a_{t}$.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$\left(M_{i}\right)_{i\in I}$是$E$的一族子模,对任一$i\in I$有$S_{i}\subseteq M_{i}$.记$S=\bigcup\limits_{i\in I}S_{i}$.
+	\begin{enumerate}
+		\item 若对任一$i\in I,S_{i}$是$M_{i}$的自由集,则$S$是$E$的自由集.
+		\item 若对任一$i\in I,S_{i}$是$M_{i}$的生成集,则$S$是$E$的生成集.
+		\item 若对任一$i\in I,S_{i}$是$M_{i}$的基集,则$S$是$E$的基集.
+	\end{enumerate}	
+\end{proposition}
+
+\begin{remark}{}{}
+	设$A$不是零环,$\left(a_{i}\right)_{i\in I}$是$E$的元素族.若$\left(a_{i}\right)_{i\in I}$线性无关,则对每个$i\in I,a_{i}$不是$\left(a_{k}\right)_{k\in I,k\neq i}$的线性组合,反之则不成立.
+	
+	例如,$A$为整环,$E=A_{s}$,取$a,b\in A\setminus\left\{0\right\}$并假设$a\nmid b,b\nmid a$,则$a$和$b$组成的集合是相关集,但$a$不是$b$的线性组合,$b$也不是$a$的线性组合.一般来说,不存在$x\in A$使得$a=xb$且$b=xa$.
+\end{remark}
+
+\begin{definition}{无挠元}{}
+	设$x\in E$.若$\left\{x\right\}$是自由集,则称$x$无挠.
+\end{definition}
+
+\begin{proposition}{}{}
+	$E$的每个线性无关子集的每个元素都无挠.特别地,当$A$不是零环时,$0$不可能属于$E$的每个线性无关子集.
+\end{proposition}
+
+\begin{remark}{无挠$\neq$线性无关}{}
+	\begin{enumerate}
+		\item 自由模中可能有非零的挠元.例如,$A_{s}$是自由模,但是$A$的每个右零因子都不是无挠元.
+		\item 挠模一定不是自由模.例如,$\Z/2\Z$($n\geq 2$)作为$\Z$-模就不是自由模.
+		\item 一个模的所有非零元素都无挠,它也不一定自由.例如,把$\Q$视为$\Z$-模,那么$\Q$的每个非零元素都无挠.但是,$\Q$的任意两个非零元素一定线性相关,因此$\Q$的基最多有一个元素,但是$\Q$不可能是循环$\Z$-模,因此$\Q$不是自由$\Z$-模.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	$E$是有限生成摸$\iff$存在$n\in\N$和正合列$A_{s}^{n}\xlongrightarrow{}E\xlongrightarrow{}0$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$A$不是零环.若$E$是有限生成的自由模,则$E$的每个基集都有限.
+\end{proposition}
+
+\begin{theorem}{短正合列一定分裂}{}
+	设$0\xlongrightarrow{}G\xlongrightarrow{g}E\xlongrightarrow{f}F\xlongrightarrow{}0$是短正合列.若$F$是自由模,则该正合列分裂.
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$0\xlongrightarrow{}G\xlongrightarrow{g}E\xlongrightarrow{f}F\xlongrightarrow{}0$是短正合列,$F$是自由模.
+	\begin{enumerate}
+		\item 设$\left(b_{\lambda}\right)_{\lambda\in\Lambda}$是$F$的基.对任一$\lambda\in\Lambda$,存在$a_{\lambda}\in E$使得$f\left(a_{\lambda}\right)=b_{\lambda}$.则存在唯一的$h\in\Hom_{A}\left(F,E\right)$使$h$为$f$的右逆且
+		\begin{align*}
+			\forall\lambda\in\Lambda\left(h\left(b_{\lambda}\right)=a_{\lambda}\right).
+		\end{align*}
+		\item (1)中定义的元素族$\left(a_{\lambda}\right)_{\lambda\in\Lambda}$是自由族,他生成的子模$\im\left(h\right)$满足$E=\im\left(g\right)\oplus\im\left(h\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	$E$同构于一个自由$A$-模的商模.
+\end{proposition}
+
+\begin{corollary}{}{}
+	存在典范满射$\pi:A_{s}^{\left(E\right)}\twoheadrightarrow E$.进一步,$E\simeq A_{s}^{\left(E\right)}/\ker\left(\pi\right)$.
+\end{corollary}
+
+

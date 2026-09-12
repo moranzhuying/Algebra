@@ -1,0 +1,33 @@
+\section{正元}
+
+记号约定:$\left(G,+,\leq\right)$是有序群.
+
+\begin{proposition}{正锥在有序群上诱导的预序}{}
+	设$P\subseteq G$满足$0\in P$和$P+P\subseteq P$,则公式$y-x\in P$在$G$上定义了预序$\preccurlyeq$且使$\left(G,+,\preccurlyeq\right)$为预序群.进一步的:
+	\begin{enumerate}
+		\item $\preccurlyeq$是偏序$\iff$ $P\cap\left(-P\right)=\left\{0\right\}$,
+		\item $\preccurlyeq$是全序$\iff$ $P\cap\left(-P\right)=\left\{0\right\}\wedge P\cup\left(-P\right)=G$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{正元,负元,严格正元,严格负元}{}
+	\begin{enumerate}
+		\item 对每个$a\in G$,记$G_{\geqslant a}=\left\{x\in G\middle|x\geqslant a\right\},G_{\leqslant a}=\left\{x\in G\middle|x\leqslant a\right\},G_{>a}=\left\{x\in G\middle|x>a\right\},G_{<a}=\left\{x\in G\middle|x<a\right\}$.
+		\item $G_{\geqslant 0},G_{\leqslant 0},G_{>0},G_{<0}$的元素依次称为$G$中的正元,负元,严格正元,严格负元.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $G_{\geq 0}\cap G_{\leq 0}=\left\{0\right\}$.
+		\item $G_{\geq 0}$满足$0\in G_{\geq 0}$和$G_{\geq 0}+G_{\geq 0}\subseteq G_{\geq 0}$,并且$\forall x,y\in G\left(x\leq y\iff y-x\in G_{\geq 0}\right)$.因此$G_{\geq 0}$在$G$上诱导的偏序刚好就是$G$作为有序群的偏序.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{}{}
+	在加法群$\Z\times\Z$上,记$P=\left\{\left(x,y\right)\in\Z\times\Z\middle|\left(a,b,c,d\right)\in\R^{4}\cup\Z^{4},ax+by\geq 0,cx+dy\geq 0,ad-bc\neq 0\right\}$,则$P$恰好满足先前的命题的条件.可见,我们能在$\Z\times\Z$上定义各种与其群结构相容的偏序,但是在这些偏序下$\Z\times\Z$都不是全序群.
+\end{example}
+
+\begin{remark}{}{}
+	在有序群$G$中,$\forall x\in G\left(x\in G_{\geq 0}\implies \N x\subseteq G_{\geq 0}\right)$.如果$x\in G$且$\ord\left(x\right)=n$,则$x=0$.特别地,若$G$的每个元素的阶都有限,那么$G_{\geq 0}=\left\{0\right\}$,此时$G$上的偏序就是相等关系,我们称这个偏序为$G$上的离散序.
+\end{remark}

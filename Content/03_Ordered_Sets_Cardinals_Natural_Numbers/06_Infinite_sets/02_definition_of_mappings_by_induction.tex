@@ -1,0 +1,31 @@
+\section{递归定义的函数}
+
+\begin{definition}{}{}
+	给定映射$f$,对任意$n\in\N$,记$f^{\left(n\right)}\coloneq f|_{\left[0,n\right)}$.
+\end{definition}
+
+\begin{metatheorem}{原始递归}{}
+	设$S\left\{v\right\}$和$a$是项,则存在唯一的集合$V$和映射$f:\N\to V$使得$f\left(0\right)=a$且$\forall n\in\N\left(n\geq 1\implies f\left(n\right)=S\left\{f\left(n-1\right)\right\}\right)$.
+\end{metatheorem}
+
+\begin{metatheorem}{强数学归纳法原理}{}
+	设$u$是字母,$T\left\{u\right\}$是项,则存在唯一的集合$U$和映射$f:\N\to U$使得$\forall n\in\N\left(f\left(n\right)=T\left\{f^{\left(n\right)}\right\}\right)$.
+\end{metatheorem}
+
+\begin{example}{}{}
+	设$E$是集合.
+	\begin{enumerate}
+		\item 设$a\in E,g\in\End_{\mathsf{Set}}\left(E\right)$,则存在唯一的$f\in\Hom_{\mathsf{Set}}\left(\N,E\right)$使得$f\left(0\right)=a\wedge\forall n\in\Z\left(f\left(n+1\right)=g\left(f\left(n\right)\right)\right)$.
+		\item 设$h\in\Hom_{\mathsf{Set}}\left(\N\times E,E\right)$,则存在唯一的$f\in\Hom_{\mathsf{Set}}\left(\N,E\right)$使得$f\left(0\right)=a\wedge\forall n\in\N\left(f\left(n+1\right)=h\left(n,f\left(n\right)\right)\right)$.
+		\item 设$f\in\End_{\mathsf{Set}}\left(E\right)$.定义$f^{0}=\id_{E},\forall n\in\N\left(f^{n+1}=f\circ f^{n}\right)$.我们称$f^{n}$是$f$的$n$次迭代.
+		\item 存在唯一的集合$V\left(E\right)$和映射$E\to V\left(E\right),n\mapsto\mathcal{P}^{n}\left(E\right)$使得$\mathcal{P}^{0}\left(E\right)=E\wedge\forall n\in\N\left(\mathcal{P}^{n+1}\left(E\right)=\mathcal{P}\left(\mathcal{P}^{n}\left(E\right)\right)\right)$.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{}{}
+	设$E$是集合,$A\subseteq E,a\in A,g\in\Hom_{\mathsf{Set}}\left(A,E\right)$,则存在$f:\N\to V$使$f\left(0\right)=a\wedge\forall n\in\N\left(f\left(n+1\right)=g\left(f\left(n\right)\right)\right)$,当$V\subseteq A$时这是可行的.如果$V\nsubseteq A$,记$p$是让$f\left(\left[0,p\right]\right)\subseteq A$的最大自然数,则$f$只在$\left[0,p+1\right]$上有定义.我们称这一种情形为受限递归.
+\end{remark}
+
+
+
+

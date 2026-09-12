@@ -1,0 +1,71 @@
+\chapter{一族集合的交与并}
+
+\section{集合族的交与并的定义}
+
+\begin{definition}{集合族}{}
+	设$X$是一个族,$I$是其指标集.我们称$X$是一个集合族,记作$\left(X_{i}\right)_{i\in I}$.
+\end{definition}
+
+\begin{definition}{子集族}{}
+	设$E$是集合,$X$是一个族,$I$是其指标集,集合$\mathfrak{E}$满足
+	\begin{align*}
+		Y\in\mathfrak{E}\implies Y\subseteq E.
+	\end{align*}
+	若$\left(X,I,\mathfrak{E}\right)$是集合$E$的子集族,则称$\left(X_{i}\right)_{i\in I}$为$E$的子集族.
+\end{definition}
+
+\begin{definition}{集合族的并}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合族(相对的,集合$E$的子集族).把$\left\{x\middle|\exists i\left(i\in I\wedge x\in X_{i}\right)\right\}$记作$\bigcup\limits_{i\in I}X_{i}$,称为$\left(X_{i}\right)_{i\in I}$的并.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$\left(X_{i}\right)_{i\in I}$是集合$E$的子集族,则$\bigcup\limits_{i\in I}X_{i}\subseteq E$.注意$\bigcup\limits_{i\in I}X_{i}$不依赖$E$,也不依赖元素集和映射$i\mapsto X_{i}$.
+		\item 如果$I=\emptyset$,则$\bigcup\limits_{i\in I}X_{i}=\emptyset$;如果$I\neq\emptyset$,则公式$\forall i\left(i\in I\implies x\in X_{i}\right)$是集化的.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{集合族的交}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合族,$I\neq\emptyset$.把$\left\{x\middle|\forall i\left(i\in I\implies x\in X_{i}\right)\right\}$记作$\bigcap\limits_{i\in I}X_{i}$,称为$\left(X_{i}\right)_{i\in I}$的交.
+\end{definition}
+
+\begin{remark}{}{}
+	如果$I=\emptyset$,则公式$\forall i\left(i\in I\wedge x\in X_{i}\right)$不是集化的,因此无法定义$\bigcap\limits_{i\in I}X_{i}$.
+\end{remark}
+
+\begin{definition}{子集族的交}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合$E$的子集族.把$\left\{x\in E\middle|\forall i\in I\left(x\in X_{i}\right)\right\}$记作$\bigcap\limits_{i\in I}X_{i}$,称为$\left(X_{i}\right)_{i\in I}$的交.
+\end{definition}
+
+\begin{remark}{}{}
+	如果$I\neq\emptyset$,则$\bigcap\limits_{i\in I}X_{i}$不依赖$E$的选择;如果$I=\emptyset$,则$\bigcap\limits_{i\in I}X_{i}=E$.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合族,$f:K\to I$是满射.
+	\begin{enumerate}
+		\item $\bigcup\limits_{k\in I}X_{f\left(k\right)}=\bigcup\limits_{i\in I}X_{i}$.若$I\neq\emptyset$,则$\bigcap\limits_{k\in K}X_{f\left(k\right)}=\bigcap\limits_{i\in I}X_{i}$.
+		\item 若$\left(X_{i}\right)_{i\in I}$是集合$E$的子集族,则$\bigcup\limits_{k\in K}X_{f\left(k\right)}=\bigcup\limits_{i\in I}X_{i},\bigcap\limits_{k\in K}X_{f\left(k\right)}=\bigcap\limits_{i\in I}X_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合族,$\forall i\in I\left(X_{i}=X\right)$,则$\bigcup\limits_{i\in I}X_{i}=X$.若$I\neq\emptyset$,则$\bigcap\limits_{i\in I}X_{i}=\emptyset$.
+\end{corollary}
+
+\begin{definition}{集合系的并}{}
+	设$\mathcal{F}$是集合组成的集合.
+	\begin{enumerate}
+		\item $\left\{x\middle|\exists F\left(x\in F\wedge F\in\mathcal{F}\right)\right\}$记作$\bigcup\limits_{F\in\mathcal{F}}F$,称为$\mathcal{F}$的并.
+		\item  当$\mathcal{F}$不是空集时,$\left\{x\middle|\forall F\left(x\in F\implies F\in\mathcal{F}\right)\right\}$记作$\bigcap\limits_{F\in\mathcal{F}}F$,称为$\mathcal{F}$的交.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{集合族的并与集合系的并的转换}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合族,$\mathcal{X}=\left\{X_{i}\middle|i\in I\right\}$,则$\bigcup\limits_{i\in I}X_{i}$等于.当$\mathcal{X}\neq\emptyset$时,$\bigcap\limits_{i\in I}X_{i}$等于$\mathcal{X}$的交.
+\end{proposition}
+
+
+
+
+

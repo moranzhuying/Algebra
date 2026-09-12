@@ -1,0 +1,165 @@
+\section{余结合性,余交换性,余单位元}
+
+记号约定:
+\begin{itemize}
+	\item $A$是交换环,$\left(E,c\right)$是$A$-余代数,$N,N^{\prime},N^{\prime\prime}$是$A$-模.
+	\item $m\in\Bil_{A}\left(N,N^{\prime};N^{\prime\prime}\right)$,它诱导的典范映射为$\tilde{m}:N\otimes_{A}N^{\prime}\to N^{\prime\prime}$.
+\end{itemize}
+
+\begin{definition}{线性映射的卷积}{}
+	对固定的$u\in\Hom_{A}\left(E,N\right)$和$v\in\Hom_{A}\left(E,N^{\prime}\right)$,称$u\ast v\coloneq m\left(u,v\right)\coloneq\tilde{m}\circ\left(u\otimes v\right)\circ c$为$u$和$v$的卷积.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 按此构造,我们有$A$-双线性映射$\Hom_{A}\left(E,N\right)\times\Hom_{A}\left(E,N^{\prime}\right)\to\Hom_{A}\left(E,N^{\prime\prime}\right),\left(u,v\right)\mapsto m\left(u,v\right)$.
+		\item 当$E$是分次余代数,$N,N^{\prime},N^{\prime\prime}$是$\N$型分次$A$-模,$\tilde{m}$是$k$次分次线性映射,$u\in\Hom_{A}\left(E,N\right)$和$v\in\Hom_{A}\left(E,N^{\prime}\right)$分别是$p$次和$q$次分次线性映射时,$m\left(u,v\right)$是$p+q+k$次分次线性映射.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{}{}
+	设$M$是$A$-模.下列三种情形中,$E$分别等于$\mathsf{T}\left(M\right),\mathsf{S}\left(M\right),\bigwedge\left(M\right)$.
+	\begin{enumerate}
+		\item 把多线性映射$u:M^{p}\to N$和$v:M^{q}\to N^{\prime}$分别对应到分次线性映射$\bar{u}:\mathsf{T}\left(M\right)\to N$和$\bar{v}:\mathsf{T}\left(M\right)\to N^{\prime}$,又记$m\left(\bar{u},\bar{v}\right)$对应的多线性映射为$m_{u,v}$(称为$u$和$v$的$m$-积).那么,对$M$中每个序列$\left(x_{i}\right)_{i=1}^{p+q}$,
+		\begin{align*}
+			m_{u,v}\left(x_{1},\ldots,x_{p+q}\right)=m\left(u\left(x_{1},\ldots,x_{p}\right),v\left(x_{p+1},\ldots,y_{p+q}\right)\right).
+		\end{align*}
+		\item 把对称多线性映射$u:M^{p}\to N$和$v:M^{q}\to N^{\prime}$分别对应到分次线性映射$\bar{u}:\mathsf{T}\left(M\right)\to N$和$\bar{v}:\mathsf{T}\left(M\right)\to N^{\prime}$,又记$m\left(\bar{u},\bar{v}\right)$对应的多线性映射为$u\cdot_{m}v$(称为$u$和$v$的$m$-对称积).那么,对$M$中每个序列$\left(x_{i}\right)_{i=1}^{p+q}$,
+		\begin{align*}
+			\left(u\cdot_{m}v\right)\left(x_{1},\ldots,x_{p+q}\right)=\sum\limits_{\sigma\in\Shuffle_{p,q}}m\left(u\left(x_{\sigma\left(1\right)},\ldots,x_{\sigma\left(p\right)}\right),v\left(x_{\sigma\left(p+1\right)},\ldots,x_{\sigma\left(p+q\right)}\right)\right).
+		\end{align*}
+		\item 把交错多线性映射$u:M^{p}\to N$和$v:M^{q}\to N^{\prime}$分别对应到分次线性映射$\bar{u}:\mathsf{T}\left(M\right)\to N$和$\bar{v}:\mathsf{T}\left(M\right)\to N^{\prime}$,又记$m\left(\bar{u},\bar{v}\right)$对应的交错多线性映射为$u\wedge_{m}v$(称为$u$和$v$的$m$-交错积).那么,对$M$中每个序列$\left(x_{i}\right)_{i=1}^{p+q}$,
+		\begin{align*}
+			m_{u,v}\left(x_{1},\ldots,x_{p+q}\right)=\sum\limits_{\sigma\in\Shuffle_{p,q}}\sign\left(\sigma\right)m\left(u\left(x_{\sigma\left(1\right)},\ldots,x_{\sigma\left(p\right)}\right),v\left(x_{\sigma\left(p+1\right)},\ldots,x_{\sigma\left(p+q\right)}\right)\right).
+		\end{align*}
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{卷积代数}{}
+	设$E$是分次$A$-余代数,$B$是$\Z$型分次$A$-代数,$\tilde{m}$是$0$次分次$A$-线性映射.我们称分次$A$-代数$\underline{\Hom}_{A}\left(E,B\right)$是卷积代数.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$B$配备平凡分次且$B=A$时,$\underline{E}^{\vee}$是分次$A$-代数.
+		\item 设$\left(F,d\right)$是$A$-余代数,$\phi\in\Hom_{A-\mathsf{CoAlg}}\left(E,F\right)$,则$\Hom\left(\phi,\id_{F}\right):\underline{\Hom}_{A}\left(F,B\right)\to\underline{\Hom}_{A}\left(E,B\right),f\mapsto f\circ\phi$是分次$A$-代数同态.特别地,$\phi$的分次对偶是分次代数同态.
+		\item 设$E_{p}$是有限生成的投射$A$-模,把分次$A$-模$\underline{\left(E\otimes_{A}E\right)}^{\vee}$典范等同于$\underline{E}^{\vee}\otimes_{A}\underline{E}^{\vee}$,把$A$-模$A\otimes_{A}A$典范等同于$A$,则定义了$\underline{E}^{\vee}$上的乘法的线性映射$\underline{E}^{\vee}\otimes_{A}\underline{E}^{\vee}\to\underline{E}^{\vee}$称为余乘$c$的分次对偶.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{余结合性的等价条件}{equivalent-condition-of-coassociativity}
+	对每个$A$-结合代数$B$,$\Hom_{A}\left(E,B\right)$是$A$-结合代数$\iff$如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			E & {E\otimes_{A}E} \\
+			{E\otimes_{A}E} & {E\otimes_{A}E\otimes_{A}E}
+			\arrow["c", from=1-1, to=1-2]
+			\arrow["c"', from=1-1, to=2-1]
+			\arrow["{\id_{E}\otimes c}", from=1-2, to=2-2]
+			\arrow["{c\otimes\id_{E}}"', from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{余结合余代数}{}
+	若$E$满足命题(\ref{prop:equivalent-condition-of-coassociativity})的条件之一,则称$E$为余结合余代数.
+\end{definition}
+
+\begin{example}{余结合余代数的例子}{}
+	\begin{enumerate}
+		\item $A$构成的平凡余代数是余结合的.对每个集合$X$,$A^{\left(X\right)}$是余结合余代数.对每个$A$-模$M$,$\mathsf{T}\left(M\right)$是余结合余代数.
+		\item 设$B$是$A$-代数,作为$A$-模是有限生成投射模,则$B^{\vee}$是余结合余代数$\iff$ $B$是结合代数.
+		\item 设$M$是$A$-模,则$\mathsf{S}\left(M\right)$和$\bigwedge\left(M\right)$都是余结合余代数.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{余交换性的等价条件}{equivalent-condition-of-cocommutativity}
+	对每个$A$-交换代数$B$,$\Hom_{A}\left(E,B\right)$是$A$-交换代数$\iff$如下图表交换(其中,$\sigma$是交换约束).
+	\begin{center}
+		\begin{tikzcd}
+			& E & \\
+			{E\otimes_{A}E} && {E\otimes_{A}E}
+			\arrow["c"', from=1-2, to=2-1]
+			\arrow["c", from=1-2, to=2-3]
+			\arrow["\sigma"', from=2-1, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{余结合余代数}{}
+	若$E$满足命题(\ref{prop:equivalent-condition-of-cocommutativity})的条件之一,则称$E$为余交换余代数.
+\end{definition}
+
+\begin{example}{余交换余代数的例子}{}
+	\begin{enumerate}
+		\item $A$构成的平凡余代数是余交换的.对每个集合$X$,$A^{\left(X\right)}$是余交换余代数.对每个$A$-模$M$,$\mathsf{S}\left(M\right)$是余交换余代数.
+		\item 设$B$是$A$-代数,作为$A$-模是有限生成投射模,则$B^{\vee}$是余交换余代数$\iff$ $B$是交换代数.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{余单位元存在的等价条件}{equivalent-condition-of-existence-of-counit}
+	对每个$A$-含幺代数$B$,$\Hom_{A}\left(E,B\right)$是$A$-含幺代数$\iff$存在$\varepsilon\in E^{\vee}$使如下图表交换(其中,$h,h^{\prime}$是典范同构).
+	\begin{center}
+		\begin{tikzcd}
+			& E & \\
+			{E\otimes_{A}A} & {E\otimes_{A}E} & {A\otimes_{A}E}
+			\arrow["h"', from=1-2, to=2-1]
+			\arrow["c"', from=1-2, to=2-2]
+			\arrow["{h^{\prime}}", from=1-2, to=2-3]
+			\arrow["{\id_{E}\otimes\varepsilon}", from=2-2, to=2-1]
+			\arrow["{\varepsilon\otimes\id_{E}}"', from=2-2, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{remark}{}{}
+	这里的$\varepsilon$如果存在,就必定唯一.
+\end{remark}
+
+\begin{definition}{余单位元}{}
+	若$E$满足命题(\ref{prop:equivalent-condition-of-existence-of-counit})的条件之一,则称$E$为余含幺余代数,称$\varepsilon$是$E$的余单位元.
+\end{definition}
+
+\begin{example}{余单位元的例子}{}
+	\begin{enumerate}
+		\item $A$的余单位元是$\id_{A}$.
+		\item 设$X$是集合,$A^{\left(X\right)}$的典范基为$\left(e_{x}\right)_{x\in X}$,则$A^{\left(X\right)}$的余单位元是满足$\forall x\in X\left(\varepsilon\left(e_{x}\right)=1_{A}\right)$的$\varepsilon\in\Hom_{A}\left(A^{\left(X\right)},A\right)$.
+		\item 设$M$是$A$-模,$E\in\left\{\mathsf{T}\left(M\right),\mathsf{S}\left(M\right),\bigwedge\left(M\right)\right\}$,其分次为$\left(E_{n}\right)_{n\in\N}$,$\varepsilon\in E^{\vee}$满足
+		\begin{align*}
+			\varepsilon\left(1_{E}\right)=1_{A}\wedge\forall n\geq 1\forall z\in E_{n}\left(\varepsilon\left(z\right)=0\right),
+		\end{align*}
+		则$\varepsilon$是$E$的余单位元.
+		\item 设$B$是$A$-代数,作为$A$-模是有限生成投射模.
+		\begin{itemize}
+			\item 若$B$是含幺代数(单位元是$1_{B}$),则$\varepsilon:B^{\vee}\to A,f\mapsto f\left(1_{B}\right)$是$B^{\vee}$的余单位元.
+			\item 若$\kappa:B\to B^{\vee\vee}$是典范同构,$B^{\vee}$的余单位元是$\varepsilon\in B^{\vee\vee}$,则$1_{B}\coloneq\kappa^{-1}\left(\varepsilon\right)$是$B$的单位元.
+		\end{itemize}
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{余单位元诱导的分解}{}
+	设$\varepsilon$是$\left(E,c\right)$的余单位元,$e\in E$满足$\varepsilon\left(e\right)=1_{A}$,$E_{\varepsilon}=\ker\left(\varepsilon\right)$.
+	\begin{enumerate}
+		\item 作为$A$-模,$E$有直和分解$E=Ae\oplus E_{\varepsilon}$.
+		\item $c\left(e\right)=e\otimes e+\left(E_{\varepsilon}\otimes E_{\varepsilon}\right)$,对每个$x\in E_{\varepsilon}$有$c\left(x\right)=x\otimes e+e\otimes x+\left(E_{\varepsilon}+E_{\varepsilon}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	设$C$是余结合的$A$-余含幺余代数,$B$是$A$-含幺结合代数,$M$是左$B$-模,则$B$在$M$上的左乘诱导了$A$-双线性映射
+	\begin{align*}
+		\Hom_{A}\left(C,B\right)\times\Hom_{A}\left(C,M\right)\to\Hom_{A}\left(C,M\right),
+	\end{align*}
+	由此$\Hom_{A}\left(C,M\right)$是典范的左$\Hom_{A}\left(C,B\right)$-模.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+

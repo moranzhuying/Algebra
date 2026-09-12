@@ -1,0 +1,139 @@
+\section{可交换元,交换律}
+
+记号约定:
+\begin{itemize}
+	\item $E$是原群,合成律为$\odot$,$X,Y\subseteq E$.
+	\item $I,J,K$是非空有限全序集,$J,K$的底集都是$I$但各自配备不同的全序,$\left(x_{i}\right)_{i\in I}$是$E$中的元素族.
+\end{itemize}
+
+\begin{definition}{可交换}{}
+	设$x,y\in E$.若$x\odot y=y\odot x$,则称$x$和$y$在$\odot$下可交换.
+\end{definition}
+
+\begin{definition}{交换律,交换原群}{}
+	若$\forall x,y\in E\left(x\odot y=y\odot x\right)$,则称$\odot$满足交换律,配备$\odot$的$E$称为交换原群.
+\end{definition}
+
+显然,$\odot$满足交换律$\iff$ $\odot=\odot^{\op}$.
+
+\begin{example}{$\N$对加法和乘法构成交换原群}{}
+	$\N$上的加法和乘法都满足交换律,因此$\N$对二者分别构成交换半群.
+\end{example}
+
+\begin{example}{在格中取上下确界满足交换律}{}
+	设$L$是格,则$L\times L\to L,\left(x,y\right)\mapsto\sup\left(x,y\right)$和$L\times L\to L,\left(x,y\right)\mapsto\inf\left(x,y\right)$都满足交换律.特别地,$\bigcup$和$\bigcap$在$\mathcal{P}\left(E\right)$上满足交换律.
+\end{example}
+
+\begin{example}{基数$\geq 2$中的集合上的映射对复合不交换,但恒等映射和每个映射都可交换}{}
+	设$X$是基数$\geq 2$的集合,则$\circ:X^{X}\times X^{X}\to X^{X},\left(f,g\right)\mapsto f\circ g$不满足交换律,但在映射复合下$\id_{E}$和诸$f\in E^{E}$都可交换.
+\end{example}
+
+\begin{example}{幂集上的诱导运算继承交换性}{}
+	设$\odot$满足交换律,则$\mathcal{P}\left(E\right)\times\mathcal{P}\left(E\right)\to\mathcal{P}\left(E\right),\left(X,Y\right)\mapsto X\odot Y$满足交换律.
+\end{example}
+
+\begin{definition}{中心子}{}
+	定义$C_{E}\left(X\right)\coloneq\left\{x\in A\middle|\forall y\in E\left(xy=yx\right)\right\}$.我们称其为$X$的中心化子.对任一$a\in E$,记$C_{E}\left(a\right)\coloneq C_{E}\left(\left\{a\right\}\right)$.
+\end{definition}
+
+\begin{definition}{双重中心子,三重中心子}{}
+	我们分别称$C_{E}\left(C_{E}\left(X\right)\right)$和$C_{E}\left(C_{E}\left(X\right)\right)$为$X$的双重中心子和三重中心子.
+\end{definition}
+
+\begin{proposition}{集合的包含关系和中心子的包含关系相反}{}
+	若$X\subseteq Y$,则$C_{E}\left(X\right)\supseteq C_{E}\left(Y\right)$.
+\end{proposition}
+
+\begin{proposition}{子集族的并的中心子是每个子集的中心子构成的集族的交}{}
+	设$\left(X_{i}\right)_{i\in I}$是$E$的一族子集,则$C_{E}\left(\bigcup\limits_{i\in I}X_{i}\right)=\bigcap\limits_{i\in I}C_{E}\left(X_{i}\right)$.
+\end{proposition}
+
+\begin{proposition}{诸集合都包含于其双重中心子,并且其中心子和三重中心子相等}{}
+	$X\subseteq C_{E}\left(C_{E}\left(X\right)\right),C_{E}\left(C_{E}\left(C_{E}\left(X\right)\right)\right)=C_{E}\left(X\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\odot$满足结合律,$x\in E$,则$\forall y,z\in E\left(x\odot y=y\odot x\wedge x\odot z=z\odot x\implies x\odot\left(y\odot z\right)=\left(y\odot z\right)\odot x\right)$.
+\end{proposition}
+
+\begin{corollary}{半群中每个集合的中心子都是封闭子集}{}
+	设$\odot$满足结合律,则$C_{E}\left(X\right)$是$E$的封闭子集.
+\end{corollary}
+
+\begin{definition}{原群的中心}{}
+	定义$Z\left(E\right)=C_{E}\left(E\right)$.我们称$Z\left(E\right)$是$E$的中心,其元素称为中心元.
+\end{definition}
+
+\begin{proposition}{半群的中心是交换半群}{}
+	若$\odot$满足结合律,则$Z\left(E\right)$是交换半群.
+\end{proposition}
+
+\begin{proposition}{}{}
+	若$X\subseteq C_{E}\left(Y\right)$,则$\langle X\rangle\subseteq C_{E}\left(\langle Y\rangle\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\odot$满足结合律,$x,y\in X$可交换,则对诸$m,n\geq 1$,$\bigodot\limits^{m}x$和$\bigodot\limits^{n}y$可交换.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\odot$满足结合律.若$\odot$在$X$上诱导的合成律满足交换律,则$\langle X\rangle$配备$\odot$诱导的合成律后是交换半群.
+\end{corollary}
+
+\begin{theorem}{交换性定理}{commutative-theorem}
+	设$\odot$满足结合律,$\left(x_{i}\right)_{i\in I}$的元素两两可交换,则$\prod\limits_{i\in J}x_{i}=\prod\limits_{i\in K}x_{i}$.
+\end{theorem}
+
+\begin{proof}
+	设$\left|I\right|=n$,对其施加数学归纳法.$n=1$时定理显然成立,现设$n\geq 2$且对于所有基数小于$n$的索引集,定理均成立.不失一般性,设全序集$K$配备$\llbracket 0,n-1\rrbracket$的典范全序,则$\bigodot\limits_{i\in K}x_{i}=\bigodot\limits_{i=0}^{p-1}x_{i}$.令$h$是$I$在$J$配备的全序下的最小元,$I^{\prime}=I\setminus\left\{h\right\}$同样配备$J$上的全序.由归纳假设,定理对$I^{\prime}$成立.假设$1\leq h\leq p-2$,并令$P=\llbracket 0,h-1\rrbracket,Q=\llbracket h+1,p-1\rrbracket$,则$\left\{P,Q\right\}$给出$I^{\prime}$在$K$的全序下的一个连续划分.于是$\bigodot\limits_{i\in I^{\prime}}x_{i}=\left(\bigodot\limits_{i=0}^{h-1}x_{i}\right)\odot\left(\bigodot\limits_{i=h+1}^{p-1}x_{i}\right)$,进而
+	\begin{align*} 
+		\bigodot\limits_{i\in J}x_{i}=x_{h}\odot\left(\bigodot\limits_{i\in I^{\prime}}x_{i}\right)=x_{h}\odot\left(\left(\bigodot\limits_{i=0}^{h-1}x_{i}\right)\odot\left(\bigodot\limits_{i=h+1}^{p-1}x_{i}\right)\right)=\left(\bigodot\limits_{i=0}^{h-1}x_{i}\right)\odot x_{h}\odot\left(\bigodot\limits_{i=h+1}^{p-1}x_{i}\right)=\bigodot\limits_{i=0}^{p-1}x_{i},
+	\end{align*}
+	因此结论成立.若$h=0$或$h=p-1$,上述推导依然成立,定理获证.
+\end{proof}
+
+\begin{definition}{有限元素族的合成}{}
+	设$\odot$满足交换律和结合律,$\left(x_{\lambda}\right)_{\lambda\in\Lambda}$是$E$中的元素族,$\Lambda$有限,配备全序后得到的序列是$\left(x_{i}\right)_{i\in I}$.定义
+	\begin{align*}
+		\bigodot\limits_{\lambda\in\Lambda}x_{\lambda}\coloneq\bigodot\limits_{i\in I}x_{i}.
+	\end{align*}
+	我们称$\bigodot\limits_{\lambda\in\Lambda}x_{\lambda}$是$\left(x_{\lambda}\right)_{\lambda\in\Lambda}$的合成.在加法记法下,将其记作$\sum\limits_{\lambda\in\Lambda}x_{\lambda}$,在乘法记法下记作$\prod\limits_{\lambda\in\Lambda}x_{\lambda}$. 
+\end{definition}
+
+\begin{theorem}{半群中序列合成的Fubini定理}{fubini-theorem-of-sequence-composition-in-semi-group}
+	设$\odot$满足结合律,$\left(x_{i}\right)_{i\in I}$的元素两两可交换,$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,则$\bigodot\limits_{i\in I}x_{i}=\bigodot\limits_{\lambda\in\Lambda}\bigodot\limits_{i\in I_{\lambda}}x_{i}$.
+\end{theorem}
+
+\begin{corollary}{有限元素族合成的Fubini定理(一般形式)}{}
+	设$A,B$是非空有限集,$\left(x_{a,b}\right)_{a\in A,b\in B}$是$E$中的元素族,则$\bigodot\limits_{\left(a,b\right)\in A\times B}=\bigodot\limits_{a\in A}\bigodot\limits_{b\in B}x_{a,b}=\bigodot\limits_{b\in B}\bigodot\limits_{a\in A}x_{a,b}$.特别地:
+	\begin{enumerate}
+		\item 若$\left|B\right|=n\geq 1$,对任一$a\in A,b\in B$,有$x_{a,b}=x_{a}$,则$\bigodot\limits_{a\in A}\bigodot\limits^{n}x_{a}=\bigodot\limits^{n}\bigodot\limits_{a\in A}x_{a}$.
+		\item 若$B=\left\{b,b^{\prime}\right\}$,则$\bigodot\limits_{a\in A}\left(x_{a,b}\odot x_{a,b^{\prime}}\right)=\left(\bigodot\limits_{a\in A}x_{a,b}\right)\odot\left(\bigodot\limits_{a\in A}x_{a,b^{\prime}}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{有限元素族合成的Fubini定理(三角形式)}{}
+	设$n\geq 1,\Lambda=\left\{\left(i,j\right)\in\N\times\N\middle|0\leq i<j\leq n\right\}$,$\left(x_{i,j}\right)_{i,j\in\Lambda}$是$E$的元素族,则$\bigodot\limits_{\left(i,j\right)\in \Lambda}x_{i,j}=\bigodot\limits_{i=0}^{n-1}\bigodot\limits_{j=i+1}^{n}x_{i,j}=\bigodot\limits_{j=1}^{n}\bigodot\limits_{i=0}^{j-1}x_{i,j}$.
+\end{corollary}
+
+\begin{corollary}{有限元素族合成的Fubini定理(一般的多重笛卡尔积形式)}{}
+	设$n\geq 1$,$\left(A_{i}\right)_{i=1}^{n}$是一族有限集,$\left(x_{i_{1},\ldots,i_{n}}\right)_{i_{1}\in A_{1},\ldots,i_{n}\in A_{n}}$,$\sigma:\llbracket 1,n\rrbracket\to\llbracket 1,n\rrbracket$是排列,则
+	\begin{align*}
+		\bigodot\limits_{\left(i_{1},\ldots,i_{n}\right)\in A_{1}\times\ldots\times A_{n}}=\bigodot\limits_{i_{\sigma\left(1\right)}}\bigodot\limits_{i_{\sigma\left(2\right)}\in A_{\sigma\left(2\right)}}\ldots\bigodot\limits_{i_{n}\in A_{\sigma\left(n\right)}}x_{i_{1},\ldots,i_{n}}.
+	\end{align*}
+\end{corollary}
+
+\begin{corollary}{有限元素族合成的Fubini定理(一般的$n$阶单纯形情形)}{}
+	设$n,p\geq 1,1\leq p\leq n+1,S_{p}=\left\{\left(i_{1},\ldots,i_{n}\right)\in\N^{p}\middle|0\leq i_{1}<\ldots<i_{p}\leq n\right\}$,$\left(x_{i_{1},\ldots,i_{p}}\right)_{\left(i_{1},\ldots,i_{n}\right)\in S_{p}}$是$E$的元素族,则
+	\begin{align*}
+		\bigodot\limits_{\left(i_{1},\ldots,i_{n}\right)\in S_{p}}x_{i_{1},\ldots,i_{n}}=\bigodot\limits_{i_{1}=0}^{n-p+1}\bigodot\limits_{i_{2}=i_{1}+1}^{n-p+2}\ldots\bigodot\limits_{i_{p}=i_{p-1}+1}^{n}x_{i_{1},\ldots,i_{n}}.
+	\end{align*}
+\end{corollary}
+
+\begin{proposition}{}{}	
+	设$f,g\in\Hom_{\mathsf{Mag}}\left(E,F\right)$.定义$f\odot g:E\to F,x\mapsto f\left(x\right)\odot g\left(x\right)$.若$F$是交换半群,则$f\odot g\in\Hom_{\mathsf{Mag}}\left(E,F\right)$.
+\end{proposition}
+
+
+
+

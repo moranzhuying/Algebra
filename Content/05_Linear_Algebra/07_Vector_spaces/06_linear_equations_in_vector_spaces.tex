@@ -1,0 +1,51 @@
+\section{向量空间中的线性方程组}
+
+记号约定:
+
+\begin{itemize}
+	\item $K$是除环,$E,F$是左$K$-向量空间.
+	\item $\left(\eta_{i}\right),\left(x_{i}^{\ast}\right)_{i\in I}$分别是$K$和$E^{\vee}$的元素族,$r,n\geq 1$.
+	\item $u:E\to K_{s}^{I},x\mapsto\left(x_{i}^{\ast}\left(x\right)\right)_{i\in I}$
+\end{itemize}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{K}\left(E,F\right),y_{0}\in F$,则线性方程$f\left(x\right)=y_{0}$有解$\iff$ $y_{0}\in\ker\left(^{t}f\right)^{\circ}$.
+\end{proposition}
+
+\begin{definition}{线性方程组的秩}{}
+	考虑线性方程组$x_{i}^{\ast}\left(x\right)=\eta_{i}\left(i\in I\right)$.我们称$\left(x_{i}^{\ast}\right)_{i\in I}$生成的子空间的秩是该方程组的秩.
+\end{definition}
+
+\begin{proposition}{线性方程组的秩的另一定义}{}
+	线性方程组$x_{i}^{\ast}\left(x\right)=\eta_{i}\left(i\in I\right)$的秩为$r$ $\iff$ $\rank\left(u\right)=r$.
+\end{proposition}
+
+\begin{remark}{}{}
+	记$H$是$\left(x_{i}^{\ast}\right)_{i\in I}$生成的子空间,则$\ker\left(u\right)=H^{\circ}$.若$\dim H=r$,则$\codim_{E}F=\rank\left(f\right)=r$.
+\end{remark}
+
+\begin{theorem}{线性方程组有解的条件}{}
+	\begin{enumerate}
+		\item 若线性方程组$x_{i}^{\ast}\left(x\right)=\eta_{i}\left(i\in I\right)$有解,则对$K$的诸有限支撑族$\left(\rho_{i}\right)_{i\in I}$,$\sum\limits_{i\in I}x_{i}^{\ast}\rho_{i}=0\implies\sum\limits_{i\in I}\eta_{i}\rho_{i}=0$.
+		\item 若线性方程组$x_{i}^{\ast}\left(x\right)=\eta_{i}\left(i\in I\right)$的秩有限,则(1)中的条件也是充分的.
+	\end{enumerate}
+\end{theorem}{}
+
+\begin{corollary}{}{}
+	若$I$有限且$\left(x_{i}^{\ast}\right)_{i\in I}$线性无关,则线性方程组$x_{i}^{\ast}\left(x\right)=\eta_{i}\left(i\in I\right)$有解.
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$\left|I\right|=n$,线性方程组$x_{i}^{\ast}\left(x\right)=\eta_{i}\left(i\in I\right)$的秩为$r$,则该方程组有非零解$\iff$ $r<n$.
+\end{corollary}
+
+\begin{remark}{}{}
+	特别地,若$\left|I\right|<n$,则该方程组有非零解.
+\end{remark}
+
+\begin{corollary}{}{}
+	若$\left|I\right|=n$且$\left(x_{i}^{\ast}\right)_{i\in I}$生成的子空间是$n$维的,则
+	\begin{center}
+		线性方程组$x_{i}^{\ast}\left(x\right)=\eta_{i}\left(i\in I\right)$有唯一解$\iff$相伴的线性方程组$x_{i}^{\ast}\left(x\right)=0\left(i\in I\right)$只有零解$\iff$ $\left(x_{i}\right)_{i\in I}$线性无关.
+	\end{center}
+\end{corollary}

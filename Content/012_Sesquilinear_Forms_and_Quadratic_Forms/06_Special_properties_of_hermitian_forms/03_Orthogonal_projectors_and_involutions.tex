@@ -1,0 +1,59 @@
+\section{正交投影与对合}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $2\cdot 1_{A}\in A^{\times}$.记$\frac{1}{2}\coloneq\left(2\cdot 1_{A}\right)^{-1}$.
+	\item $E$是左$A$-模,$\varphi\in\SHerm_{A,\rho}\left(E\right)$.
+\end{itemize}
+
+\begin{lemma}{线性映射是对合的等价条件}{}
+	设$u\in\End_{A-\mathsf{Mod}}\left(E\right)$.
+	\begin{enumerate}
+		\item $u$是对合$\iff$ $\frac{1}{2}\left(\id_{E}-u\right)$是$E$上的投影.
+		\item 若$u$是对合,则$u=\frac{1}{2}\left(\id_{E}+u\right)+\frac{1}{2}\left(\id_{E}-u\right)$,并且$\frac{1}{2}\left(\id_{E}+u\right)$和$\frac{1}{2}\left(\id_{E}-u\right)$是$E$上正交的投影.
+	\end{enumerate}
+\end{lemma}
+
+\begin{definition}{正分量投影,负分量投影}{}
+	设$u\in\End_{A-\mathsf{Mod}}\left(E\right)$是对合.
+	\begin{enumerate}
+		\item 我们称$u_{+}\coloneq\frac{1}{2}\left(\id_{E}+u\right)$和$u_{-}\coloneq\frac{1}{2}\left(\id_{E}-u\right)$是$u$在$E$上的正投影分量和负投影分量.
+		\item 我们分别记$E_{u}^{+}\coloneq\im\left(u_{+}\right),E_{u}^{-}\coloneq\im\left(u_{-}\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	显然$E=E_{u}^{+}\oplus E_{u}^{-}$,对每个$x\in E_{u}^{+}$有$u_{+}\left(x\right)=x$,对每个$x\in E_{u}^{-}$有$u_{-}\left(x\right)=-x$.特别地,当$A$是除环且$E$有限维时,
+	\begin{align*}
+		E_{u}^{+}=\Eig_{A}\left(E,u,1\right),E_{u}^{-}=\Eig_{A}\left(E,u,-1\right).
+	\end{align*}
+\end{remark}
+
+\begin{proposition}{酉对合的等价条件}{}
+	设$u\in\GL\left(E\right)$且是对合,它关于$\varphi$的右伴随是$u^{\ast}$.
+	\begin{enumerate}
+		\item $u\in\mathrm{U}\left(\varphi\right)$ $\iff$ $E_{u}^{-}$和$E_{u}^{+}$关于$\varphi$正交.
+		\item 设$K$是除环,$E$是有限维的,则$u\in\mathrm{U}\left(\varphi\right)$ $\iff$ $V^{-}$和$V^{+}$关于$\varphi$正交$\iff$ $u=u^{\ast}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{酉对合与非迷向子空间一一对应}{correspondence-of-unitary-involutions-and-non-isotropic-subspaces}
+	设$A$是除环,$V$有限维,$\mathcal{I}\left(\varphi\right)=\left\{u\in\mathrm{U}\left(\varphi\right)\middle|u^{2}=\id_{E}\right\}$,$\mathcal{S}$是$E$的$\varphi$-非迷向子空间组成的集合,则
+	\begin{align*}
+		\Phi:\mathcal{I}\left(\varphi\right)\to\mathcal{S},u\mapsto E_{u}^{+}
+	\end{align*}
+	是双射.具体的,对每个$M\in\mathcal{S}$,$s_{M}\coloneq\varphi\left(M\right)$满足$\forall\left(x,y\right)\in M\times M^{\circ}\left(s_{M}\left(x+y\right)=x-y\right)$.
+\end{corollary}
+
+\begin{definition}{关于子空间的正交反射}{}
+	沿用推论\ref{cor:correspondence-of-unitary-involutions-and-non-isotropic-subspaces}的记号.对$E$的$\varphi$-非迷向子空间$M$,我们称$s_{M}\coloneq\varphi\left(M\right)$是$E$上关于$M$的正交反射.
+\end{definition}
+
+\begin{corollary}{正交投影的等价定义}{}
+	设$A$是特征$\neq 2$的除环,$E$有限维,$\varphi$非退化,$u$是$E$上的投影,则$\im\left(u\right)$和$\ker\left(u\right)$关于$\varphi$正交$\iff$ $u=u^{\ast}$.
+\end{corollary}
+
+\begin{definition}{正交投影}{}
+	设$A$是特征$\neq 2$的除环,$E$有限维,$\varphi$非退化,$u$是$E$上的投影.若$u=u^{\ast}$,则称$u$是$E$上的正交投影.
+\end{definition}

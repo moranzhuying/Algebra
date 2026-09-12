@@ -1,0 +1,31 @@
+\section{分配作用}
+
+记号约定:$E$是原群,$\oplus$和$\odot$是$E$上的合成律.
+
+\begin{definition}{分配律}{}
+	如果下列条件成立,则称$\odot$对$\oplus$是分配的(或满足分配律):
+	\begin{enumerate}
+		\item ($\odot$对$\oplus$是左分配的)$\forall x,y,z\in E\left(x\odot\left(y\oplus z\right)=\left(x\odot y\right)\oplus\left(x\oplus z\right)\right)$;
+		\item ($\odot$对$\oplus$是右分配的)$\forall x,y,z\in E\left(\left(x\oplus y\right)\odot z=\left(x\odot z\right)\oplus\left(y\oplus z\right)\right)$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{交换性影响左分配和右分配}{}
+	如果$\odot$满足交换律,则这两个条件是等价的.
+\end{remark}
+
+\begin{remark}{记号说明}{}
+	在数学实践中,我们通常把$\odot$记作加法$+$,把$\odot$记作乘法$\cdot$,此时分配律表现为我们熟悉的代数形式:
+	\begin{align*}
+		x\cdot\left(y+z\right)=x\cdot y+x\cdot z,\left(x+y\right)\cdot z=x\cdot z+y\cdot z
+	\end{align*}
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 在全序集中,取上确界运算$\sup$和取下确界运算$\inf$是相互分配的(即$\sup$对$\inf$是分配的,$\inf$对$\sup$是分配的),也是自分配的($\sup$对$\sup$是分配的,$\inf$对$\inf$是分配的).
+		\item 在$\mathcal{P}\left(E\right)$中,$\bigcup$和$\bigcap$是相互分配的,也是自分配的.
+		\item 在幺环中,乘法对加法是分配的.
+		\item 在$\N$中,加法和乘法对$\sup$和$\inf$都是分配的.
+	\end{enumerate}
+\end{example}

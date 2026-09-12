@@ -1,0 +1,46 @@
+\section{自由模中元素的容度}
+
+记号约定:$A$是PID,$M$是自由$A$-模.
+
+\begin{definition}{容度理想,容度,本原元}{}
+	设$x\in M$.
+	\begin{enumerate}
+		\item 我们把$\left\{f\left(x\right)\in A\middle|f\in M^{\vee}\right\}$生成的理想记错$\cont_{A}\left(x\right)$,称之为$x$在$A$中的容度理想.
+		\item 如果$\cont_{A}\left(x\right)$由$c$生成,则称$c$是$x$在$M$中的容度.
+		\item 如果$\cont_{A}\left(x\right)=A$,则称$x$是$M$中的本原元.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	设$\left(e_{i}\right)_{i\in I}$是$M$的基,$x=\sum\limits_{i\in I}a_{i}e_{i},c\in A$.
+	\begin{enumerate}
+		\item $c$是$x$在$M$中的容度$\iff$ $c$是$\left(a_{i}\right)_{i\in I}$的最大公因子.
+		\item $x$是$M$的本原元$\iff$ $\left(a_{i}\right)_{i\in I}$整体互素.
+	\end{enumerate}
+\end{remark}
+
+\begin{lemma}{本原元的等价刻画}{}
+	设$x\in M$,则如下陈述等价:
+	\begin{enumerate}
+		\item $x$是$M$中的本原元不可分.
+		\item 存在$f\in M^{\vee}$使得$f\left(x\right)=1$.
+		\item $x\neq 0$,并且$Ax$是$M$的一个直和项.
+		\item 存在$M$的基集$\mathcal{B}$使得$x\in\mathcal{B}$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$x\neq 0$,则存在唯一的$y\in M$使得$x=cy$.我们把$y$记作$x/c$,那么$x/c$是$M$中的本原元.
+		\item $\cont_{A}\left(x\right)$是$\tor\left(M/Ax\right)$的零化子.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$N$是$M$的非零子模,$x\in M$且$\cont_{A}\left(x\right)$是$A$的极大理想,$c$是$x$在$M$中的容度,$f\in M^{\vee}$且$f\left(x\right)=c$.
+	\begin{enumerate}
+		\item $M=A\left(x/c\right)\oplus\ker\left(f\right)$.
+		\item $N=Ax\oplus\left(\ker\left(f\right)\cap M\right)$.
+		\item 对每个$g\in M^{\vee}$有$g\left(N\right)\subseteq Ac$.
+	\end{enumerate}
+\end{proposition}

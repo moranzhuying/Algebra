@@ -1,0 +1,45 @@
+\section{有理数域}
+
+\begin{definition}{有理数域}{}
+	我们称$\Z$的分式域为有理数域,记作$\Q$,其元素称为有理数.
+\end{definition}
+
+\begin{definition}{正有理数集}{}
+	定义$\Q_{\geq 0}=\left\{\dfrac{a}{b}\in\Q\middle|a\in\N,b\in\N_{>0}\right\},\Q_{\leq 0}=-\Q_{\geq 0},\Q_{>0}=\Q_{\geq 0}\setminus\left\{0\right\},\Q_{<0}=-\Q_{>0}$.
+\end{definition}
+
+\begin{proposition}{}{}
+	$\Q_{\geq 0}$是$\Q$的子环,$\Q=\Q_{<0}\sqcup\left\{0\right\}\sqcup\Q_{>0}$,在同构的意义下$\Q_{\geq 0}\cap\Z=\N$.
+\end{proposition}
+
+\begin{definition}{$\Q$上的全序}{}
+	定义$\Q$上的关系$\leq$如下:$\forall x,y\in\Q\left(x\leq y\iff y-x\in\Q_{\geq 0}\right)$.
+\end{definition}
+
+\begin{proposition}{$\Q$上的标准全序的性质}{}
+	\begin{enumerate}
+		\item $\leq$是$\Q$上的全序,配备该全序后$\Q$和$\Z$是序同构的.
+		\item (加法相容性)$\forall x,x^{\prime},y,y^{\prime}\in\Q\left(x\leq y\wedge x^{\prime}\wedge y^{\prime}\implies x+x^{\prime}\leq y+y^{\prime}\right)$.
+		\item (加法相容性)$\forall x,,y\in\Q\left(x\leq y\implies \forall z\in\Q\left(\left(z\in\Q_{\geq 0}\implies xz\leq yz\right)\right)\wedge\left(z\in\Q_{\leq 0}\implies xz\geq yz\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{$\Q^{\times}$的分解}{}
+	我们有典范的群同构$\Q^{\times}\simeq\left\{-1,1\right\}\times\Q_{>0}$.
+\end{proposition}
+
+\begin{definition}{$\Q$上的绝对值}{}
+	记$\varphi:\Q^{\times}\to\Q_{>0}\times\left\{-1,1\right\}$为典范同构.
+	\begin{enumerate}
+		\item 定义$\left|\cdot\right|:\Q\to\Q_{>0}$如下:对$x\in\Q^{\times}$,$\left|x\right|$是$\varphi\left(x\right)$在$\Q_{>0}$中的分量;对$x=0$,$\left|x\right|=0$.
+		\item 定义$\sgn:\Q\to\left\{-1,0,1\right\},x\mapsto
+		\begin{cases}
+			1,&x\in\Q_{>0},\\
+			0,&x=0,\\
+			-1,&x\in\Q_{<0}.
+		\end{cases}$
+	\end{enumerate}
+	我们称$\left|\cdot\right|$是$\Q$上的绝对值,称$\sgn$为$\Q$的符号函数.
+\end{definition}
+
+

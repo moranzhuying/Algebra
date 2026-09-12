@@ -1,0 +1,101 @@
+\section{互素元}
+
+记号约定:$\left(G,+,\leq\right)$是全序群,$A$是整环,$K=\Frac\left(A\right)$.
+
+\begin{definition}{格序群中的互素}{}
+	设$x,y\in G$.若$\inf\left(x,y\right)=0$,则称$x$和$y$互素,记作$x\bot y$.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 在某些场合下,当$\inf\left(\left|x\right|,\left|y\right|\right)=0$时我们称$x$和$y$互素.我们在这里不采用这个约定.
+		\item 若$x\bot y$,则$x,y\geq 0$.特别地,$x^{+}\bot x^{-}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{格序群中元素族的整体互素,两两互素}{}
+	设$\left(x_{i}\right)_{i\in I}$是$G$中的元素族.
+	\begin{enumerate}
+		\item 若$\forall i,j\in I\left(i\neq j\implies x_{i}\bot x_{j}\right)$,则称$\left(x_{i}\right)_{i\in I}$两两互素.
+		\item 若$\inf\limits_{i\in I}x_{i}=0$,则称$\left(x_{i}\right)_{i\in I}$整体互素.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{分式域中的互素}{}
+	设$x,y\in K$.若$\left(x\right)$和$\left(y\right)$都非零且在$\mathscr{P}^{\ast}\left(K\right)$中互素,则称$x$和$y$互素,记作$x\bot y$.
+\end{definition}
+
+\begin{definition}{分式域中元素族的整体互素和两两互素}{}
+	设$\left(x_{i}\right)_{i\in I}$是$K$中的元素族,$\left(\left(x_{i}\right)\right)_{i\in I}$的各项都不等于$\left\{0\right\}$.
+	\begin{enumerate}
+		\item 若$\forall i,j\in I\left(i\neq j\implies x_{i}\bot x_{j}\right)$,则称$\left(x_{i}\right)_{i\in I}$两两互素.
+		\item 若$\inf\limits_{i\in I}\left(x_{i}\right)=\left(0\right)$,则称$\left(x_{i}\right)_{i\in I}$整体互素.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{下确界与互素的关系}{}
+	对每个$x,y,z\in G$有$\left(x-z\right)\bot\left(y-z\right)\iff z=\inf\left(x,y\right)$.
+\end{proposition}
+
+\begin{proposition}{最大公因子和商的互素的关系}{}
+	设$a,b\in K,c\in K^{\times}$,则$c$是$a$和$b$的最大公因子$\iff$ $ac^{-1}$和$bc^{-1}$互素.
+\end{proposition}
+
+\begin{proposition}{下确界的次可加性}{}
+	设$\left(x_{i}\right)_{i\in I}$和$\left(y_{j}\right)_{j\in J}$是$G_{\geq 0}$中的元素族.若$I$和$J$有限,则$\inf\left(\sum\limits_{i\in I}x_{i},\sum\limits_{j\in J}y_{j}\right)\leq\sum\limits_{\left(i,j\right)\in I\times J}\inf\left(x_{i},y_{j}\right)$.
+\end{proposition}
+
+\begin{corollary}{互素元素的平移}{}
+	\begin{enumerate}
+		\item 设$x,y,z\in G$.
+		\begin{enumerate}
+			\item 若$x\bot y,z\in G_{\geq 0}$,则$\inf\left(x,y+z\right)\leq\inf\left(x,z\right)$.
+			\item 若$x\bot y,z\in G_{\geq 0},x\leq y+z$,则$x\leq z$.
+			\item 若$x\bot y,x\bot z$,则$x\bot\left(y+z\right)$.
+		\end{enumerate}
+		\item 设$\left(x_{i}\right)_{i=1}^{m}$和$\left(y_{j}\right)_{j=1}^{n}$是$G$中的元素族.若$\forall 1\leq i\leq m\forall 1\leq j\leq n\left(x_{i}\bot y_{j}\right)$,则$\left(\sum\limits_{i=1}^{m}x_{i}\right)\bot\left(\sum\limits_{j=1}^{n}y_{j}\right)$.
+		\item 对每个$n\in\Z_{\geq 0}$和$x\in G$有$\left(nx\right)^{+}=nx^{+}$和$\left(nx\right)^{-}=nx^{-}$.
+		\item 对每个$n\in\Z$和$x\in G$有$\left|nx\right|=\left|n\right|\cdot\left|x\right|$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(a_{i}\right)_{i\in I}$和$\left(b_{j}\right)_{j\in J}$是$A$中的有限元素族,则$\prod\limits_{i\in I}a_{i}$和$\prod\limits_{j\in J}b_{j}$的最大公因子整除$\prod\limits_{\left(i,j\right)\in I\times J}\gcd\left(a_{i},b_{j}\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	\begin{enumerate}
+		\item 设$a,b,c\in A$.
+		\begin{enumerate}
+			\item 若$a$和$b$互素,则$a$和$c$的每个最大公因子都是$a$和$bc$的最大公因子.
+			\item 若$a$和$b$互素,$a\mid bc$,则$a\mid c$.
+			\item 若$a$和$b$互素,$a$和$c$互素,则$a$和$bc$互素.
+		\end{enumerate}
+		\item 设$\left(x_{i}\right)_{i=1}^{m}$和$\left(y_{j}\right)_{j=1}^{n}$是$G$中的元素族.若$\forall 1\leq i\leq m\forall 1\leq j\leq n\left(\gcd\left(x_{i},y_{j}\right)=1\right)$,则$\prod\limits_{i=1}^{m}x_{i}$和$\prod\limits_{j=1}^{n}y_{j}$互素.
+		\item 设$a,b,d\in A$.若$d$是$a$和$b$的最大公因子,则对每个$n\in\N$,$d^{n}$是$a^{n}$和$b^{n}$的最大公因子.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(x_{i}\right)_{i\in I}$是$G$中的有限元素族.若$\left(x_{i}\right)_{i\in I}$两两互素,则$\sup\limits_{i\in I}x_{i}=\sum\limits_{i\in I}x_{i}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(a_{i}\right)_{i\in I}$是$A$中的有限元素族.若$\left(a_{i}\right)_{i\in I}$两两互素,则$\prod\limits_{i\in I}a_{i}$是$\left(a_{i}\right)_{i\in I}$的最小公倍数.
+\end{proposition}
+
+\begin{proposition}{确界运算的无限分配律}{}
+	设$\left(x_{i}\right)_{i\in I}$是$G$的元素族,$z\in G$.
+	\begin{enumerate}
+		\item 若$\left(x_{i}\right)_{i\in I}$有下确界,则$\left(\sup\left(z,x_{i}\right)\right)_{i\in I}$有下确界,并且$\inf\limits_{i\in I}\sup\left(z,x_{i}\right)=\sup\left(z,\inf\limits_{i\in I}x_{i}\right)$.
+		\item 若$\left(x_{i}\right)_{i\in I}$有下确界上确界,则$\left(\inf\left(z,x_{i}\right)\right)_{i\in I}$有上确界,并且$\sup\limits_{i\in I}\inf\left(z,x_{i}\right)=\inf\left(z,\sup\limits_{i\in I}x_{i}\right)$.
+		\item 若$\left(x_{i}\right)_{i\in I}$有下确界,并且$\forall i\in I\left(z\bot x_{i}\right)$,则$z\bot\inf\limits_{i\in I}x_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{格序群的分配性质}{}
+	$G$作为格是分配格,即对每个$x,y,z\in G$有
+	\begin{align*}
+		\sup\left(z,\inf\left(x,y\right)\right)=\inf\left(\sup\left(z,x\right),\sup\left(z,y\right)\right),\inf\left(z,\sup\left(x,y\right)\right)=\sup\left(\inf\left(z,x\right),\inf\left(z,y\right)\right).
+	\end{align*}
+\end{corollary}

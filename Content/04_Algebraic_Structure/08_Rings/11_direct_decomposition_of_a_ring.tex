@@ -1,0 +1,54 @@
+\section{环的直分解}
+
+记号约定:$A$是环,$\left(\mathfrak{b}_{i}\right)_{i\in I}$是$A$的一族双边理想.定义
+\begin{align*}
+	\phi:A\to\prod\limits_{i\in I}\left(A/\mathfrak{b}_{i}\right),x\mapsto\left(x+\mathfrak{b}_{i}\right)_{i\in I}.
+\end{align*}
+
+\begin{proposition}{}{}
+	$\phi$是典范的环同态.
+\end{proposition}
+
+\begin{proposition}{两两互素的理想给出的分解}{}
+	设$n\in\N,I=\left\{1,\ldots,n\right\}$,并且$\forall 1\leq i\neq j\leq n\left(\mathfrak{b}_{i}+\mathfrak{b}_{j}=A\right)$,则$\phi$是漫满射,$\ker\left(\phi\right)=\bigcap\limits_{i=1}^{n}\mathfrak{b}_{i}=\prod\limits_{i=1}^{n}\mathfrak{b}_{i}$.
+\end{proposition}
+
+\begin{definition}{直分解}{}
+	若$\phi$是环同构,则称$\left(\mathfrak{b}_{i}\right)_{i\in I}$是$A$的直分解.
+\end{definition}
+
+\begin{proposition}{直分解的等价条件}{}
+	设$I$有限.下列陈述等价:
+	\begin{enumerate}
+		\item $\left(\mathfrak{b}_{i}\right)_{i\in I}$是$A$的直分解.
+		\item 存在$A$的一族中心幂等元$\left(e_{i}\right)_{i\in I}$,使得$\forall i,j\in I\left(i\neq j\implies e_{i}e_{j}=0\right)$,$\sum\limits_{i\in I}e_{i}=1$,$\forall i\in I\left(\mathfrak{b}_{i}=A\left(1-e_{i}\right)\right)$.
+		\item $\forall i,j\in I\left(i\neq j\implies\mathfrak{b}_{i}+\mathfrak{b}_{j}=A\right)$,$\bigcap\limits_{i\in I}\mathfrak{b}_{i}=\left\{0\right\}$.
+		\item $\forall i,j\in I\left(i\neq j\implies\mathfrak{b}_{i}+\mathfrak{b}_{j}=A\right)$,$\prod\limits_{i\in I}\mathfrak{b}_{i}=\left\{0\right\}$.
+		\item 存在$Z\left(A\right)$的直分解$\left(\mathfrak{b}_{i}^{\prime}\right)$,使得$\forall i\in I\left(\mathfrak{b}_{i}=A\mathfrak{b}_{i}^{\prime}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{加法群的理想族直和分解给出直分解}{}
+	设$\left(\mathfrak{a}_{i}\right)_{i\in I}$是$A$的加法群的一族理想,并且$A$的加法群是$\left(\mathfrak{a}_{i}\right)_{i\in I}$的直和.若$\forall i,j\in I\left(i\neq j\implies \mathfrak{a}_{i}\mathfrak{a}_{j}=0\right)$,则$\left(\mathfrak{a}_{i}\right)_{i\in I}$是$A$的直分解.
+\end{remark}
+
+\begin{example}{$\Z$的理想及其分解}{}
+	\begin{enumerate}
+		\item $\Z$的每个理想都能唯一表示成$n\Z$,其中$n\geq 0$.对固定的$p\in\N$,理想$p\Z$极大$\iff$ $p\in\mathbb{P}$.对固定的$m,n\in\N$,$m\Z\supseteq n\Z$ $\iff$ $m$整除$n$.
+		\item 对固定的$m,n\in\N$,存在$d,r\in\N$使得$m\Z+n\Z=d\Z,m\Z\cap n\Z=r\Z$.$d$称为$m,n$的最大公因子,$r$称为$m,n$的最小公倍数,分别记作$\gcd\left(x,y\right)$和$\lcm\left(x,y\right)$.
+		\item (中国剩余定理,CRT)设$r,n_{1},\ldots,n_{r},n\in\N$,$n=\prod\limits_{i=1}^{r}n_{i}$且$\left(n_{i}\right)_{i=1}^{r}$的元素两两互素,则有典范的环同构
+		\begin{align*}
+			\Z/n\Z\simeq\prod\limits_{i=1}^{r}\left(\Z/n_{i}\Z\right).
+		\end{align*}
+		\item 对固定的$p\in\N$,当$p\geq 1$时称$\Z/p\Z$为模$p$整数环,当$p=0$时$\Z/p\Z\simeq\left\{0\right\}$.
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+
+
+
+

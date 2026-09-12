@@ -1,0 +1,53 @@
+\section{形式幂级数环中的方程的解}
+
+\begin{lemma}{形式幂级数环的微扰自同构}{}
+	设$\left(g_{i}\right)_{i\in I}$是$A[[(X_{i})_{i\in I}]]$中一族阶数$\geq 2$的元素($I$无限时,设$\left(g_{i}\right)_{i\in I}$收敛到$0$),则存在唯一的连续$A$-代数同构
+	\begin{align*}
+		T:A[[(X_{i})_{i\in I}]]\to A[[(X_{i})_{i\in I}]]
+	\end{align*}
+	满足$\forall i\in I\left(T\left(X_{i}\right)=X_{i}+g_{i}\right)$.此外,对每个$u\in A[[(X_{i})_{i\in I}]]$有$\omega\left(T\left(u\right)-u\right)\geq\omega\left(u\right)+1$.
+\end{lemma}
+
+\begin{definition}{无常数项的幂级数族}{}
+	定义$A\left\{I\right\}$是$A[[(X_{i})_{i\in I}]]$中满足如下条件的元素族$\left(f_{i}\right)_{i\in I}$构成的集合:
+	\begin{enumerate}
+		\item $\left(f_{i}\right)_{i\in I}$的每一项都没有常数项,
+		\item 当$I$无限时,$\left(f_{i}\right)_{i\in I}$收敛到$0$.
+	\end{enumerate}
+	按形式幂级数的复合为$A\left\{I\right\}$配备乘法,则$A\left\{I\right\}$是幺半群,幺元为$(X_{i})_{i\in I}$.
+\end{definition}
+
+\begin{definition}{形式幂级数族诱导的切线性映射}{}
+	设$\mathbf{f}\coloneq\left(f_{i}\right)_{i\in I}\in A\left\{I\right\}$,对每个$i\in I$,形式幂级数$f_{i}$的一次齐次部分为$\sum\limits_{j\in I}a_{ij}X_{j}$.我们称$A$-线性映射
+	\begin{align*}
+		T_{\mathbf{f}}:A^{\left(I\right)}\to A^{\left(I\right)},\left(\lambda_{i}\right)_{i\in I}\mapsto\left(\sum\limits_{j\in J}a_{ij}\lambda_{j}\right)_{i\in I}
+	\end{align*}
+	为$\mathbf{f}$在原点处的切线性映射.
+\end{definition}
+
+\begin{remark}{}{}
+	可以验证$\forall\mathbf{u},\mathbf{v}\in A\left\{I\right\}\left(T_{\mathbf{u}\circ\mathbf{v}}=T_{\mathbf{u}}\circ T_{\mathbf{v}}\right)$.
+\end{remark}
+
+\begin{proposition}{形式幂级数环中的形式反函数定理}{}
+	设$\mathbf{f}\in A\left\{I\right\}$,则$\mathbf{f}\in\left(A\left\{I\right\}\right)^{\times}\iff T_{\mathbf{f}}\in\left(\End_{A}\left(A^{\left(I\right)}\right)\right)^{\times}$.
+\end{proposition}
+
+\begin{corollary}{形式幂级数环中的形式隐函数定理}{}
+	设$f_{1},\ldots,f_{q}\in A[[X_{1},\ldots,X_{q},Y_{1},\ldots,Y_{p}]]$无常数项,$D=\det\left(\frac{\partial f_{i}}{\partial Y_{j}}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$.若$D$的常数项系数可逆,则存在唯一的
+	\begin{align*}
+		u_{1},\ldots,u_{q}\in A[[X_{1},\ldots,X_{q}]],
+	\end{align*}
+	对每个$1\leq i\leq q$,形式幂级数$u_{i}$无常数项,并且$f_{i}\left(u_{1},\ldots,u_{q},X_{1},\ldots,X_{p}\right)=0$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+

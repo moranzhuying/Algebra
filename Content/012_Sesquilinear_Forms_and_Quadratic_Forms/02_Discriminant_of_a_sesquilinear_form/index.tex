@@ -1,0 +1,115 @@
+\chapter{半双线性型的判别式}
+
+记号约定:
+\begin{itemize}
+	\item $n,p,k_{1},\ldots,k_{p}\geq 1$,$A$是交换环,$A$是环同构,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $E$是$n$维自由$A$-模,$\varphi\in\Sesq_{A,\rho}\left(E\right)$.
+\end{itemize}
+
+\begin{definition}{关于半双线性型的判别式}{}
+	设$\left(x_{i}\right)_{i=1}^{m}$是$E$中的序列.我们称$\left(\varphi\left(x_{i},x_{j}\right)\right)_{\substack{1\leq i\leq m\\ 1\leq j\leq m}}$为$\left(x_{i}\right)_{i=1}^{m}$关于$\varphi$的判别式,记作$D_{\varphi}\left(x_{1},\ldots,x_{m}\right)$.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 记$\bar{\varphi}=\bigwedge\limits^{m}\varphi$,则$D_{\bar{\varphi}}\left(x_{1},\ldots,x_{m}\right)=\bar{\varphi}\left(x_{1}\wedge\ldots\wedge x_{m},x_{1}\wedge\ldots\wedge x_{m}\right)$.
+		\item 对每个$\sigma\in\mathfrak{S}_{m}$有$D_{\varphi}\left(x_{1},\ldots,x_{n}\right)=D_{\varphi}\left(x_{\sigma\left(1\right)},\ldots,x_{\sigma\left(m\right)}\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{迹形式是双线性形式}{}
+	设$B$是$A$-导数,则$B\times B\to A,\left(x,y\right)\mapsto\Tr_{B/A}\left(xy\right)$是$B$上的$\left(A,A\right)$-双线性形式.对$B$中的每个序列$\left(x_{i}\right)_{i=1}^{n}$,称
+	\begin{align*}
+		D_{B/A}\left(x_{1},\ldots,x_{n}\right)\coloneq\det\left(\Tr_{B/A}\left(x_{i}x_{j}\right)\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}
+	\end{align*}
+	是$\left(x_{i}\right)_{i=1}^{n}$在$A$上的判别式.
+\end{example}
+
+\begin{remark}{}{}
+	设$\left(e_{i}\right)_{i=1}^{n}$是$B$的基,乘法表如下:对每个$1\leq i,j\leq n$有$e_{i}e_{j}=\sum\limits_{k=1}^{n}c_{i,j,k}e_{k}$.那么.
+	\begin{align*}
+		D_{B/A}\left(e_{1},\ldots,e_{n}\right)=\det\left(\sum\limits_{1\leq k,r\leq n}c_{i,j,k}c_{r,r,r}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}.
+	\end{align*}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$\left(\left(x_{i},y_{i}\right)\right)_{i=1}^{n}$是$E\times E$中的序列,$\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$是$A$中的矩阵.若对每个$1\leq i\leq n$有$y_{i}=\sum\limits_{j=1}^{n}a_{j,i}x_{i}$,则
+	\begin{align*}
+		D_{B/A}\left(y_{1},\ldots,y_{n}\right)=\det\left(\boldsymbol{A}\right)\overline{\det\left(\boldsymbol{A}\right)}D_{\varphi}\left(x_{1},\ldots,x_{n}\right).
+	\end{align*}
+\end{proposition}
+
+\begin{remark}{}{}
+	特别地,如果$\left(x_{i}\right)_{i=1}^{n}$和$\left(y_{i}\right)_{i=1}^{n}$是$E$的基,那么$D_{B/A}\left(y_{1},\ldots,y_{n}\right)$和$D_{B/A}\left(x_{1},\ldots,x_{n}\right)$在$A$中生成的主理想相同.
+\end{remark}
+
+\begin{definition}{判别式理想}{}
+	设$\left(e_{i}\right)_{i=1}^{n}$是$E$的基.我们称$D_{B}\left(e_{1},\ldots,e_{n}\right)$在$A$中生成的主理想是$\varphi$的判别式理想.
+\end{definition}
+
+\begin{corollary}{直和分解下的判别式}{}
+	设$\left(E_{i}\right)_{i=1}^{p}$是一族自由$A$-模,满足如下条件:
+	\begin{enumerate}
+		\item 对每个$1\leq i\leq p$,$\mathcal{B}_{i}\coloneq\left(e_{i,j}\right)_{j=1}^{k_{i}}$是$E_{i}$的基.
+		\item 对每个$1\leq i\leq p$有$\varphi_{i}\in\Sesq_{(A,\rho)}\left(E_{i}\right)$.
+		\item $E=\bigboxplus\limits_{i=1}^{p}E_{i},\varphi=\bigboxplus\limits_{i=1}^{p}\varphi_{i}$,$\mathcal{B}\coloneq\left(\check{e}_{r}\right)_{r=1}^{p_{0}}$是$E$的基,其中:
+		\begin{itemize}
+			\item $p_{0}=\sum\limits_{j=1}^{p}k_{j}$,对每个$1\leq i\leq p$有$K_{i}=\sum\limits_{s=1}^{i}k_{s}$;
+			\item 对每个$1\leq i\leq p$和$1\leq j\leq k_{i}$有$\check{e}_{K_{i-1}+j}=e_{i,j}$.
+		\end{itemize}
+	\end{enumerate}
+	那么,$D_{\varphi}\left(\check{e}_{1},\ldots,\check{e}_{p_{0}}\right)=\prod\limits_{i=1}^{p}D_{\varphi_{i}}\left(e_{i,1},\ldots,e_{i,k_{i}}\right)$.
+\end{corollary}
+
+\begin{corollary}{标量扩张下的行列式}{}
+	设$A^{\prime}$是交换环,$h\in\Hom_{\mathsf{Ring}}\left(A,A^{\prime}\right)$,$\left(x_{i}\right)_{i=1}^{n}$是$E$中的序列,$\varphi^{\prime}=h^{\ast}\varphi$,则
+	\begin{align*}
+		D_{\varphi^{\prime}}\left(1_{A}\otimes x_{1},\ldots,1_{A}\otimes x_{n}\right)=h\left(D_{\varphi}\left(x_{1},\ldots,x_{n}\right)\right).
+	\end{align*}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$A$是整环,$\left(e_{i}\right)_{i=1}^{n}$是$E$的基,并且$D_{\varphi}\left(e_{1},\ldots,e_{n}\right)\neq 0$,$\left(x_{i}\right)_{i=1}^{n}$是$E$中的序列.
+	\begin{enumerate}
+		\item $\left(x_{i}\right)_{i=1}^{n}$线性无关$\iff$ $D_{\varphi}\left(x_{1},\ldots,x_{n}\right)\neq 0$.
+		\item $\left(x_{i}\right)_{i=1}^{n}$是基$\iff$ $D_{\varphi}\left(x_{1},\ldots,x_{n}\right)$和$D_{\varphi}\left(e_{1},\ldots,e_{n}\right)$在$A$中相伴.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(e_{i}\right)_{i=1}^{n}$是$E$的基,则$s_{\varphi}$是双射$\iff$ $d_{\varphi}$是双射$\iff$ $D_{\varphi}\left(e_{1},\ldots,e_{n}\right)\in A^{\times}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$A$是整环,$\left(e_{i}\right)_{i=1}^{n}$是$E$的基,则$\varphi$非退化$\iff$ $D_{\varphi}\left(e_{1},\ldots,e_{n}\right)\neq 0$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$A$是域,$B$是$n$维$A$-交换代数,$\left(e_{i}\right)_{i=1}^{n}$是$B$的基,则$B$是可分$A$-代数$\iff$ $D_{B/A}\left(e_{1},\ldots,e_{n}\right)\neq 0$.
+\end{proposition}
+
+\begin{remark}{}{}
+	进一步假设$B$是$A$的扩域,$\left(x_{i}\right)_{i=1}^{n}$是$B$的基,$B$到$A$的代数闭包$\bar{A}$的所有$A$-嵌入构成的族是$\left(s_{i}\right)_{i=1}^{n}$,则
+	\begin{align*}
+		\left(\det\left(s_{j}\left(x_{i}\right)\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}\right)^{2}=D_{B/A}\left(x_{1},\ldots,x_{n}\right).
+	\end{align*}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$K$是$A$的子环,$\iota:K\to A$是典范映射,$\iota_{\ast}\left(A\right)$是$m$维有限秩生成$K$-模,$\left(e_{i}\right)_{i=1}^{n}$和$\left(f_{j}\right)_{j=1}^{m}$分别是$E$和$A$的基.
+	\begin{enumerate}
+		\item $\left(f_{j}e_{i}\right)_{\substack{1\leq i\leq n\\1\leq j\leq m}}$是$\iota_{\ast}\left(E\right)$的基.
+		\item 定义$\varphi^{\prime}:\iota_{\ast}\left(E\right)\times\iota_{\ast}\left(E\right)\to K,\left(x,y\right)\mapsto\Tr_{A/K}\left(\varphi\left(x,y\right)\right)$,则$\varphi^{\prime}\in\Bil_{K}\left(\iota_{\ast}\left(E\right)\right)$,并且
+		\begin{align*}
+			D_{\varphi^{\prime}}\left(\left(f_{j}e_{i}\right)_{\substack{1\leq i\leq n\\1\leq j\leq m}}\right)=N_{A/K}\left(D_{E/A}\left(e_{1},\ldots,e_{n}\right)\right)\left(D_{A/K}\left(f_{1},\ldots,f_{m}\right)\right)^{n}.
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$K$是交换环,$A$是$K$-交换代数,基为$\left(f_{j}\right)_{j=1}^{m}$,$E$是$A$-代数,基为$\left(e_{i}\right)_{i=1}^{n}$,则$\left(f_{j}e_{i}\right)_{\substack{1\leq i\leq n\\1\leq j\leq m}}$是$E$在$K$上的基,并且
+	\begin{align*}
+		D_{E/K}\left(\left(f_{j}e_{i}\right)_{\substack{1\leq i\leq n\\1\leq j\leq m}}\right)=N_{A/K}\left(D_{E/A}\left(e_{1},\ldots,e_{n}\right)\right)\left(D_{A/K}\left(f_{1},\ldots,f_{m}\right)\right)^{n}.
+	\end{align*}
+\end{corollary}
+

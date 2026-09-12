@@ -1,0 +1,80 @@
+\section{主理想环上有限长度模的对偶}
+
+记号约定:
+\begin{itemize}
+	\item $A$是PID但不是域,$K=\Frac(A)$.
+	\item 对每个$A$-模$M$,定义$D\left(M\right)=\Hom_{A}\left(M,K/A\right)$,这是典范的$A$-模.
+	\item 对每个$A$-模$M,N$和$f\in\Hom_{A}\left(M,N\right)$,定义$D\left(f\right):D\left(N\right)\to D\left(M\right),\varphi\mapsto f\circ\varphi$.
+	\item 对每个$A$-模$M$,定义典范配对$\langle\cdot,\cdot\rangle_{M}:M\times D\left(M\right)\to K/A,\left(x,x^{\ast}\right)\mapsto x^{\ast}\left(x\right)$,这是典范的$A$-双线性映射.
+	\item 对每个$A$-模$M$,定义典范$A$-线性映射$c_{M}:A\to D\left(D\left(M\right)\right),x\mapsto\langle x,\cdot\rangle_{M}$.
+	\item 对每个$A$-模$M$和$M$的子模$N$,记$N^{\circ}=\bigcap\limits_{x^{\ast}\in D\left(M\right)}\left(\ker\left(\langle \cdot,x^{\ast}\rangle_{M}\right)\cap N\right)$.
+	\item 对每个$A$-模$M$和$D\left(M\right)$的子模$N_{0}$,记$N_{0}^{\circ}=\bigcap\limits_{x\in M}\left(\ker\left(\langle x,\cdot\rangle_{M}\right)\cap N_{0}\right)$.
+		\item 对每个$A$-模$M$,记$\mathfrak{S}\left(M\right)$是$M$的所有子模构成的集合.
+\end{itemize}
+
+\begin{proposition}{有限长度模的自反性}{}
+	若$M$是有限长度$A$-模,则$D\left(M\right)$(一般不是自然地)同构于$M$,并且$c_{M}$是$A$-模同构.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$M,N$是有限长度$A$-模,$\varphi\in\Bil_{A}\left(M,N;K/A\right)$.若
+	\begin{enumerate}
+		\item $\forall x\in M\left(\ker\left(\varphi\left(x,\cdot\right)\right)=\left\{0\right\}\implies x=0\right)$,
+		\item $\forall y\in N\left(\ker\left(\varphi\left(\cdot,y\right)\right)=\left\{0\right\}\implies y=0\right)$,
+	\end{enumerate}
+	那么$\varphi$诱导的典范$A$-线性映射$s_{\varphi}:M\to D\left(N\right)$和$d_{\varphi}:N\to D\left(M\right)$都是$A$-模同构.
+\end{corollary}
+
+\begin{proposition}{}{}
+	如果$M_{1}\xlongrightarrow{u}M_{2}\xlongrightarrow{v}M_{3}$是有限长度$A$-模的正合列,那么$D\left(M_{3}\right)\xlongrightarrow{D\left(v\right)}D\left(M_{2}\right)\xlongrightarrow{D\left(u\right)}D\left(M_{1}\right)$也是正合列.
+\end{proposition}
+
+\begin{remark}{}{}
+	事实上,可以证明$K/A$是内射模.因此,去掉``有限长度''的条件,上述结论也成立.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$M$是有限长度$A$-模,$\varphi:\mathfrak{S}\left(M\right)\to\mathfrak{S}\left(D\left(M\right)\right),N\mapsto N^{\circ}$.
+	\begin{enumerate}
+		\item $\varphi$是双射,并且$\varphi^{-1}:\mathfrak{S}\left(D\left(M\right)\right)\to\mathfrak{S}\left(M\right),N_{0}\mapsto N_{0}^{\circ}$.
+		\item 对每个$N\in\mathfrak{S}\left(M\right)$,我们有典范的模同构$D\left(N\right)\simeq D\left(M\right)/N^{\circ},D\left(M/N\right)\simeq N^{\circ}$.
+		\item 对每个$N_{1},N_{2}\in\mathfrak{S}\left(M\right)$有$\varphi\left(N_{1}+N_{2}\right)=\varphi\left(N_{1}\right)\cap\varphi\left(N_{2}\right),\varphi\left(N_{1}\cap N_{2}\right)=\varphi\left(N_{1}\right)+\varphi\left(N_{2}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{有限Abel群的Pontryagin对偶}{}
+	设$A=\Z$.留意到有限长度$\Z$-模(视为群后)就是有限Abel群.在定义$D\left(M\right)$时,有时候不用$\Q/\Z$,而是取一个与$\Q/\Z$同构的$\Z$-模,例如特征为$0$的代数闭域上的乘法单位根群$R$.此时定义$D\left(M\right)=\Hom_{\Z}\left(M,R\right)$.本节的所有结果都可以用这种记号应用于有限Abel群上.
+\end{example}
+
+\begin{example}{周期模的对偶化简}{}
+	设$a\in A\setminus\left\{0\right\}$,则$A\to K,x\mapsto x/a$诱导了模同构$A/\langle a\rangle\to(K/A)\langle a\rangle$.如果$M$是$A/\langle a\rangle$-模,那么有典范同构
+	\begin{align*}
+		D\left(M\right)\simeq\Hom_{A/\langle a\rangle}\left(M,A/\langle a\rangle\right).
+	\end{align*}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

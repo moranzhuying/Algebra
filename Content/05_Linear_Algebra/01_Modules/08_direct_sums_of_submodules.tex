@@ -1,0 +1,48 @@
+\section{子模的直和}
+
+记号约定:$A$是环,$E,F,G$是$A$-模,$\left(M_{i}\right)_{i\in I}$是$E$的一族子模,$\varphi:\bigboxplus\limits_{i\in I}M_{i}\to E$是典范映射.
+
+\begin{definition}{内直和}{}
+	若$\varphi\in\Isom_{A}\left(\bigboxplus\limits_{i\in I}M_{i},E\right)$,则称$E$是$\left(M_{i}\right)_{i\in I}$的内直和,并记$\bigoplus\limits_{i\in I}M_{i}\coloneq E$.
+\end{definition}
+
+\begin{proposition}{模的内直和的等价条件}{}
+	下列陈述等价:
+	\begin{enumerate}
+		\item $E=\bigoplus\limits_{i\in I}M_{i}$.
+		\item $E=\sum\limits_{i\in I}M_{i}$,并且对任一$j\in I$有$M_{j}\cap\sum\limits_{i\in I\setminus\left\{j\right\}}M_{i}=\left\{0\right\}$.
+		\item 对每个$x\in E$,在$E$中都有唯一的有限支撑族$\left(x_{i}\right)_{i\in I}$使得$x=\sum\limits_{i\in I}x_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{幂等算子}{}
+	$\End_{{A}}\left(E\right)$中的幂等元称为$E$上的幂等算子(或投影).
+\end{definition}
+
+\begin{definition}{两两正交的幂等算子}{}
+	设$\left(e_{i}\right)_{i\in I}$是$E$上的一族幂等算子(或投影).若$\forall i,j\in I\left(i\neq j\implies e_{i}\circ e_{j}=0\right)$,则称$\left(e_{i}\right)_{i\in I}$两两正交.
+\end{definition}
+
+\begin{proposition}{内直和投影是一一对应的}{}
+	\begin{enumerate}
+		\item 若$E=\bigoplus\limits_{i\in I}M_{i}$,则$E$上有一族正交的投影$\left(e_{i}\right)_{i\in I}$满足$\sum\limits_{i\in I}e_{i}=\id_{E}$和$\forall i\in I\left(\im\left(e_{i}\right)=M_{i}\right)$.
+		\item 若$\left(e_{i}\right)_{i\in I}$是$E$的一族正交的投影,$\sum\limits_{i\in I}e_{i}=\id_{E}$,则$E=\bigoplus\limits_{i\in I}\im\left(e_{i}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{分裂引理}{}
+	设$e$是$E$上的投影,则
+	\begin{enumerate}
+		\item $E=\ker\left(e\right)\oplus\im\left(e\right)$.
+		\item $\id_{E}-e$是$E$上的投影,并且$\ker\left(\id_{E}-e\right)=\im\left(e\right),\im\left(\id_{E}-e\right)=\ker\left(e\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{内直和分解诱导的线性映射的矩阵表示}{}
+	设$m,n,p\geq 1,E=\bigoplus\limits_{i=1}^{m}E_{i},F=\bigoplus\limits_{j=1}^{n}F_{j},G=\bigoplus\limits_{k=1}^{p}G_{k},u\in\Hom_{A}\left(E,F\right),v\in\Hom_{A}\left(F,G\right)$.考虑典范同构
+	\begin{gather*}
+		\Hom_{A}\left(E,F\right)\simeq\prod\limits_{i=1}^{m}\prod\limits_{j=1}^{n}\Hom_{A}\left(E_{i},F_{j}\right),\Hom_{A}\left(F,G\right)\simeq\prod\limits_{j=1}^{n}\prod\limits_{k=1}^{p}\Hom_{A}\left(F_{j},G_{k}\right),\\
+		\Hom_{A}\left(E,G\right)\simeq\prod\limits_{i=1}^{m}\prod\limits_{k=1}^{p}\Hom_{A}\left(E_{i},G_{k}\right).
+	\end{gather*}
+	若$u$和$v$按前两个同构分别对应到$\left(u_{j,i}\right)_{\substack{1\leq j\leq n\\1\leq i\leq m}}$和$\left(v_{k,j}\right)_{\substack{1\leq k\leq p\\1\leq j\leq n}}$,则$v\circ u$按第三个同构对应到$\left(v_{k,j}\circ u_{j,i}\right)_{\substack{1\leq k\leq p\\1\leq i\leq m}}$.
+\end{remark}

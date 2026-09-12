@@ -1,0 +1,247 @@
+\section{双模族的张量积}
+
+记号约定:
+
+\begin{itemize}
+	\item $\left(G_{\lambda}\right)_{\lambda\in L},\left(G_{\lambda}^{\prime}\right)_{\lambda\in L}$是两族$\Z$-模,$H$是$\Z$-模,$G=\prod\limits_{\lambda\in L}G_{\lambda}$.
+	\item $\Omega$是集合,$\left(L_{i}\right)_{i=1}^{n}$是$L$的划分($n\geq 1$).
+	\item $\rho\in\Hom_{\mathsf{Set}}\left(\Omega,L\right),\forall w\in\Omega\left(p_{w}\in\End_{\Z}\left(G_{\rho\left(w\right)}\right)\wedge p_{w}^{\prime}\in\End_{\Z}\left(G_{p\left(w\right)}^{\prime}\right)\right)$.
+	\item $\sigma\in\Hom_{\mathsf{Set}}\left(\Omega,L\right),\forall w\in\Omega\left(q_{w}\in\End_{\Z}\left(G_{\sigma\left(w\right)}\right)\wedge q_{w}^{\prime}\in\End_{\Z}\left(G_{\sigma\left(w\right)}^{\prime}\right)\right)$.
+	\item $\forall 1\leq i\leq n\left(\Omega_{i}^{\prime}=\left\{w\in\Omega\middle|\rho\left(w\right),\sigma\left(w\right)\in L_{i}\right\}\right),\Omega^{\prime}=\Omega\setminus\bigcup\limits_{i=1}^{n}\Omega_{i}^{\prime}$.
+\end{itemize}
+
+\begin{definition}{$\Z$-多重线性映射}{}
+	设对任一$\mu\in L$,映射$\tau_{\mu}:G_{\mu}\times\prod\limits_{\lambda\in L,\lambda\neq\mu}G_{\lambda}\to G$为典范双射,$u\in\Hom_{\mathsf{Set}}\left(G,H\right)$.
+	
+	若对诸$\mu\in L$,$x,y\in G_{\mu}$和$G$的元素族$\left(a_{\lambda}\right)_{\lambda\in L,\lambda\neq\mu}$,有
+	\begin{align*}
+		u\left(\tau_{\mu}\left(x+y,\left(a_{\lambda}\right)_{\lambda\in L,\lambda\neq\mu}\right)\right)=u\left(\tau_{\mu}\left(x,\left(a_{\lambda}\right)_{\lambda\in L,\lambda\neq\mu}\right)\right)+u\left(\tau_{\mu}\left(y,\left(a_{\lambda}\right)_{\lambda\in L,\lambda\neq\mu}\right)\right).
+	\end{align*}
+	则称$u$是$\Z$-多重线性的.
+\end{definition}
+
+\begin{definition}{$\Z$上的绝对张量积}{}
+	设$D=\left\{\left(x_{i}+y_{i},\left(z_{j}\right)_{j\in I\setminus\left\{i\right\}}\right)-\left(x_{i},\left(z_{j}\right)_{j\in I\setminus\left\{i\right\}}\right)-\left(y_{i},\left(z_{j}\right)_{j\in I\setminus\left\{i\right\}}\right)\in C\middle|i\in I,x_{i},y_{i}\in M_{i},z_{j}\in M_{j}\right\}$.记
+	\begin{align*}
+		\bigotimes\limits_{\lambda\in L}G_{\lambda}\coloneq\Z^{\left(G\right)}/\langle D\rangle,
+	\end{align*}
+	称该$\Z$-模为$\left(G_{\lambda}\right)_{\lambda\in L}$在$\Z$上的张量积.对诸$\left(x_{i}\right)_{i\in I}\in G$,记$\bigotimes\limits_{i\in I}x_{i}\coloneq\left(x_{i}\right)_{i\in I}+\langle D\rangle$,称之为$\left(x_{i}\right)_{i\in I}$的张量积.
+	
+	记典范映射为$\bigotimes:G\twoheadrightarrow\bigotimes\limits_{\lambda\in L}G_{\lambda},\left(x_{i}\right)_{i\in I}\mapsto\bigotimes\limits_{i\in I}x_{i}$,它是$\Z$-多重线性映射.
+\end{definition}
+
+\begin{proposition}{张量积的泛性质}{}
+	对诸$\Z$-多重线性映射$f:G\to H$,存在唯一的$\Z$-线性映射$g:\bigotimes\limits_{\lambda\in L}G_{\lambda}\to H$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			G && {\bigotimes\limits_{\lambda\in L}G_{\lambda}} \\
+			& H
+			\arrow["\otimes", two heads, from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\exists!g}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{张量积的函子性}{}
+	设$\forall\lambda\in L\left(f_{i}\in\Hom_{\Z}\left(G_{\lambda},G_{\lambda}^{\prime}\right)\right)$,则有唯一$f\in\Hom_{\Z}\left(\bigotimes\limits_{\lambda\in L}G_{\lambda},\bigotimes\limits_{\lambda\in L}G_{\lambda}^{\prime}\right)$,对诸$\left(x_{i}\right)_{i\in I}\in G$有$f\left(\bigotimes\limits_{\lambda\in L}x_{\lambda}\right)=\bigotimes\limits_{\lambda\in L}f_{\lambda}\left(x_{\lambda}\right)$.
+\end{proposition}
+
+\begin{definition}{线性映射的张量积}{}
+	设$\forall \lambda\in L\left(f_{i}\in\Hom_{\Z}\left(G_{\lambda},G_{\lambda}^{\prime}\right)\right)$.称$\bigotimes\limits_{\lambda\in L}f_{\lambda}:\bigotimes\limits_{\lambda\in L}G_{\lambda}\to\bigotimes\limits_{\lambda\in L}G_{\lambda}^{\prime},\bigotimes\limits_{\lambda\in I}x_{\lambda}\mapsto\bigotimes\limits_{\lambda\in L}f_{\lambda}\left(x_{\lambda}\right)$是$\left(f_{\lambda}\right)_{\lambda\in L}$的张量积.
+\end{definition}
+
+\begin{definition}{广义张量积}{}
+	对任一$w\in\Omega$,定义$\tilde{p}_{w}=\bigotimes\limits_{\lambda\in L}u_{\lambda},\tilde{q}_{w}=\bigotimes\limits_{\lambda\in L}v_{\lambda}$,其中$
+	u_{\lambda}=
+	\begin{cases}
+		p_{w},&\lambda=\rho\left(w\right),\\
+		\id_{G_{\lambda}},&\lambda\neq\rho\left(w\right),
+	\end{cases}
+	v_{\lambda}=
+	\begin{cases}
+		q_{w},&\lambda=\sigma\left(w\right),\\
+		\id_{G_{\lambda}},&\lambda\neq\sigma\left(w\right).
+	\end{cases}$记
+	\begin{gather*}
+		c:\Omega\to L\times L,w\mapsto\left(\rho\left(w\right),\sigma\left(w\right)\right).\\
+		\bigotimes\limits_{\left(c,p,q\right)}G_{\lambda}\coloneq\left(\bigotimes\limits_{\lambda\in L}G_{\lambda}\right)\Big/\left(\sum\limits_{w\in\Omega}\im\left(\tilde{p}_{w}-\tilde{q}_{w}\right)\right)
+	\end{gather*}
+	\begin{enumerate}
+		\item 称$\bigotimes\limits_{\left(c,p,q\right)}G_{\lambda}$为$\left(G_{\lambda}\right)_{\lambda\in L}$相对于$\left(c,p,q\right)$的广义张量积.
+		\item 对诸$\left(x_{i}\right)_{i\in I}\in G$,其在典范映射$\phi_{c,p,q}:G\to\bigotimes\limits_{\left(\Omega,p,q\right)}G_{\lambda}$下的像记作$\bigotimes\limits_{\left(c,p,q\right)}x_{i}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{和广义张量积相容的$\Z$-多线性映射}{}
+	对诸$\omega\in\Omega$,定义$\bar{p}_{w},\bar{q}_{w}\in\End_{\mathsf{Set}}\left(G\right)$如下:对诸$\left(x_{\lambda}\right)_{\lambda\in L}\in G$,
+	\begin{align*}
+		\bar{p}_{w}\left(\left(x_{\lambda}\right)_{\lambda\in L}\right)=
+		\begin{cases}
+			p_{w}\left(x_{\rho\left(w\right)}\right),&\lambda=\rho\left(w\right),\\
+			x_{\rho\left(w\right)},&\lambda\neq\rho\left(w\right),
+		\end{cases}
+		\\
+		\bar{q}_{w}\left(\left(x_{\lambda}\right)_{\lambda\in L}\right)=
+		\begin{cases}
+			q_{w}\left(x_{\sigma\left(w\right)}\right),&\lambda=\sigma\left(w\right),\\
+			x_{\sigma\left(w\right)},&\lambda\neq\sigma\left(w\right).
+		\end{cases}
+	\end{align*}
+	设$f:G\to H$是$\Z$-多线性映射.若$\forall w\in\Omega\left(f\circ\bar{p}=f\circ\bar{q}\right)$,则称$f$和$\left(c,p,q\right)$相容.
+\end{definition}
+
+\begin{proposition}{}{}
+	典范映射$G\to\bigotimes\limits_{\left(\Omega,p,q\right)}G_{\lambda}$是和$\left(c,p,q\right)$相容的$\Z$-多线性映射.
+\end{proposition}
+
+\begin{proposition}{广义张量积的泛性质}{}
+	记$\phi_{c,p,q}:G\to\bigotimes\limits_{\left(\Omega,p,q\right)}G_{\lambda}$为典范映射.对诸$\Z$-模$H^{\prime}$和与$\left(c,p,q\right)$相容的$\Z$-多线性映射$f:G\to H^{\prime}$,下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			G && {\bigotimes\limits_{\left(c,p,q\right)}G_{\lambda}} \\
+			& {H^{\prime}}
+			\arrow["{\phi_{c,p,q}}", two heads, from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{广义张量积的函子性}{}
+	设$\forall\lambda\in L\left(v_{\lambda}\in\Hom_{\Z}\left(G_{\lambda},G_{\lambda}^{\prime}\right)\right)$.若$\forall w\in\Omega\left(v_{\rho\left(w\right)}\circ p_{w}=p_{w}^{\prime}\circ v_{\rho\left(w\right)}\wedge v_{\sigma\left(w\right)}\circ q_{w}=q_{w}^{\prime}\circ v_{\sigma\left(w\right)}\right),$则存在唯一的$\Z$-线性映射$\bigotimes v_{\lambda}:\bigotimes\limits_{\left(c,p,q\right)}G_{\lambda}\to\bigotimes\limits_{\left(\Omega,p^{\prime},q^{\prime}\right)}G_{\lambda}^{\prime}$.
+\end{proposition}
+
+\begin{theorem}{广义张量积的结合约束}{}
+	对诸$1\leq i\leq n$和$\lambda\in L_{i}$,定义$F_{i}=\bigotimes\limits_{\left(\Omega_{i},p,q\right)}G_{\lambda}$.设对诸$w\in\Omega^{\prime},1\leq i,j\leq n$,当$\rho\left(w\right)\in L_{i}$和$\sigma\left(w\right)\in L_{j}$时如下条件成立:
+	\begin{itemize}
+		\item $\forall\xi\in\Omega_{i}\left(\rho\left(\xi\right)=\rho\left(w\right)\implies p_{w}\circ p_{\xi}=p_{\xi}\circ p_{w}\right)$;
+		\item $\forall\eta\in\Omega_{i}\left(\sigma\left(\eta\right)=\rho\left(w\right)\implies p_{w}\circ q_{\eta}=q_{\eta}\circ p_{w}\right)$;
+		\item $\forall\xi\in\Omega_{j}\left(\rho\left(\xi\right)=\sigma\left(w\right)\implies q_{w}\circ p_{\xi}=p_{\xi}\circ q_{w}\right)$;
+		\item $\forall\eta\in\Omega_{k}\left(\sigma\left(\eta\right)=\sigma\left(w\right)\implies q_{w}\circ q_{\eta}=q_{\eta}\circ q_{w}\right)$;
+	\end{itemize}
+	设对诸$\omega\in\Omega^{\prime}$和$1\leq i,j\leq n$,分别记$r_{w}\in\End_{\Z}\left(F_{i}\right)$和$s_{w}\in\End_{\Z}\left(F_{j}\right)$是$p_{w}$和$q_{w}$诱导的$\Z$-线性映射,则有典范同构
+	\begin{align*}
+		\bigotimes\limits_{\left(\Omega,p,q\right)}\simeq\bigotimes\limits_{\left(\Omega^{\prime},r,s\right)}F_{i}.
+	\end{align*}
+\end{theorem}
+
+\begin{definition}{双模链的张量积}{}
+	设$\left(A_{i}\right)_{i=1}^{n-1}$是一族环,$E_{1}$是右$A_{1}$-模,$E_{n}$是左$A_{n-1}$-模,对$2\leq i\leq n-1$,$E_{i}$是$\left(A_{i-1},A_{i}\right)$-双模.定义
+	\begin{align*}
+		E_{1}\otimes_{A_{1}}E_{2}\otimes\ldots\otimes_{A_{n-1}}E_{n}\coloneq\bigotimes\limits_{i=1}^{n}E_{i}.
+	\end{align*}
+\end{definition}
+
+\begin{remark}{张量积的$C$-模提升}{}
+	设$C$是交换环,$\forall 1\leq i\leq n\left(\rho_{i}\in\Hom_{\mathsf{Ring}}\left(C,A_{i}\right)\wedge\im\left(\rho_{i}\right)\subseteq Z\left(A_{i}\right)\right)$.若
+	\begin{align*}
+		\forall 2\leq i\leq n-1\forall\gamma\in C\forall x\in E_{i}\left(\rho_{i-1}\left(\gamma\right)x=x\rho_{i}\left(\gamma\right)\right),
+	\end{align*}
+	则$\bigotimes\limits_{i=1}^{n}E_{i}$是典范的$C$-模,典范映射$\prod\limits_{i=1}^{n}E_{i}\to\bigotimes\limits_{i=1}^{n}E_{i}$是$C$-多线性映射.
+\end{remark}
+
+\begin{remark}{多模链的张量积}{}
+	我们来考虑更一般的情况.定义模族$\left(E_{i}\right)_{i=1}^{n}$如下:
+	\begin{itemize}
+		\item $E_{1}$是右$A_{1}$-模,$E_{n}$是左$A_{n-1}$-模.
+		\item 对$2\leq i\leq n-1$,$E_{i}$是$\left(A_{i-1},A_{i}\right)$-双模.
+	\end{itemize}
+	定义环族$\left(\mathcal{L}_{i}\right)_{i=1}^{n},\left(\mathcal{R}_{i}\right)_{i=1}^{n}$如下:
+	\begin{itemize}
+		\item $\mathcal{L}_{1}=\left\{A\in\mathsf{A}_{1}\middle|E\text{是左}A\text{-模}\right\},\mathcal{R}_{1}=\left\{B\in\mathsf{B}_{1}\middle|E_{1}\text{是右}B\text{-模}\right\}\cup\left\{A_{1}\right\}$.
+		\item $\mathcal{L}_{n}=\left\{A\in\mathsf{A}_{n}\middle|E_{1}\text{是左}B\text{-模}\right\}\cup\left\{A_{n-1}\right\},\mathcal{R}_{1}=\left\{B\in\mathsf{B}_{n}\middle|E\text{是右}B\text{-模}\right\}$.
+		\item 对$2\leq i\leq n$,$\mathcal{L}_{i}=\left\{A\in\mathsf{A}_{i}\middle|E\text{是左}A\text{-模}\right\}\cup\left\{A_{i-1}\right\},\mathcal{R}_{i}=\left\{B\in\mathsf{B}_{i}\middle|E_{1}\text{是右}B\text{-模}\right\}\cup\left\{A_{i}\right\}$.
+	\end{itemize}
+	设$\mathsf{L}$是$\bigcup\limits_{i=1}^{n}\mathcal{L}_{i}$构成的族,$\mathsf{R}$是$\bigcup\limits_{i=1}^{n}\mathcal{R}_{i}$构成的族,则$\bigotimes\limits_{i=1}^{n}E_{i}$是$\left(\mathsf{L},\mathsf{R}\right)$-多模.
+\end{remark}
+
+本节接下来的内容里,默认$C$是交换环,$\left(E_{i}\right)_{i=1}^{n},\left(F_{i}\right)_{i=1}^{n}$是两族$C$-模,$F$是$C$-模.
+
+\begin{definition}{$C$-$n$重线性映射}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(\prod\limits_{i=1}^{n}E_{i},F\right)$,对诸$1\leq i\leq n$,它都是$\Z$-线性映射.若对诸$1\leq i\leq n,\gamma\in C,\left(x_{i}\right)_{i=1}^{n}\in\prod\limits_{i=1}^{n}E_{i}$有
+	\begin{align*}
+		f\left(x_{1},\ldots,\gamma x_{i},\ldots,x_{n}\right)=\gamma f\left(x_{1},\ldots,x_{i},\ldots,x_{n}\right),
+	\end{align*}
+	则称$f$是$C$-$n$重线性映射.记$\Mult_{C}\left(E_{1},\ldots,E_{n};F\right)\coloneq\left\{\varphi\in\Hom_{\mathsf{Set}}\left(\prod\limits_{i=1}^{n}E_{i},F\right)\middle|\varphi\text{是}C\text{-}n\text{重线性映射}\right\}$.
+\end{definition}
+
+\begin{proposition}{}{}
+	$\Mult_{C}\left(E_{1},\ldots,E_{n};F\right)$是$C$-模.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\Mult_{C}\left(E_{1},\ldots,E_{n};F\right)$,则存在唯一的$\phi\in\Hom_{C}\left(\bigotimes\limits_{i=1}^{n}E_{i},F\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			{\prod\limits_{i=1}^{n}E_{i}} && {\bigotimes\limits_{i=1}^{n}E_{i}} \\
+			& F
+			\arrow["\otimes", two heads, from=1-1, to=1-3]
+			\arrow["f", from=1-1, to=2-2]
+			\arrow["{\exists!g}"', dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{函子性}{}
+	存在唯一的$\phi\in\Hom_{C}\left(\bigotimes\limits_{i=1}^{n}E_{i},\bigotimes\limits_{i=1}^{n}F_{i}\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			{\prod\limits_{i=1}^{n}E_{i}} && {\bigotimes\limits_{i=1}^{n}F_{i}} \\
+			\\
+			{\prod\limits_{i=1}^{n}F_{i}} && {\bigotimes\limits_{i=1}^{n}F_{i}}
+			\arrow["\phi", two heads, from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=3-1]
+			\arrow["{\exists!g}", dashed, from=1-3, to=3-3]
+			\arrow["{\phi^{\prime}}"', two heads, from=3-1, to=3-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{corollary}{$\Hom$算子的张量积映射}{}
+	存在典范的$\phi\in\Hom_{C}\left(\bigotimes\limits_{i=1}^{n}\Hom_{C}\left(E_{i},F_{i}\right),\Hom_{C}\left(\bigotimes\limits_{i=1}^{n}E_{i},\bigotimes\limits_{i=1}^{n}F_{i}\right)\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			{\prod\limits_{i=1}^{n}\Hom_{C}\left(E_{i},F_{i}\right)} && \\
+			&& {\Hom_{C}\left(\bigotimes\limits_{i=1}^{n}E_{i},\bigotimes\limits_{i=1}^{n}F_{i}\right)} \\
+			{\bigotimes\limits_{i=1}^{n}\Hom_{C}\left(E_{i},F_{i}\right)}
+			\arrow["\psi", from=1-1, to=2-3]
+			\arrow["\pi"', two heads, from=1-1, to=3-1]
+			\arrow["{\exists!\phi}"', dashed, from=3-1, to=2-3]
+			\end{tikzcd}
+	\end{center}
+	其中,$\pi$是典范投影,$\psi$是典范映射.
+\end{corollary}
+
+\begin{proposition}{张量积的结合约束}{}
+	设$\left(J_{k}\right)_{k=1}^{m}$是$\left\{1,\ldots,n\right\}$的有序划分,则存在唯一的典范$C$-模同构$\bigotimes\limits_{k=1}^{m}\bigotimes\limits_{i\in J_{k}}E_{i}\simeq\bigotimes\limits_{i=1}^{n}E_{i}$.
+\end{proposition}
+
+\begin{corollary}{张量积和$C$-多重双线性映射之间的对应}{}
+	存在典范的$C$-同构$\Mult_{C}\left(E_{1},\ldots,E_{n};F\right)\simeq\bigotimes\limits_{i=1}^{n}E_{i}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	对诸$\sigma\in\mathfrak{S}_{n}$,存在典范的$C$-模同构$\bigotimes\limits_{i=1}^{n}E_{\sigma\left(i\right)}\simeq\bigotimes\limits_{i=1}^{n}E_{i}$.
+\end{proposition}
+
+\begin{proposition}{自由模的张量积也是自由模}{}
+	设对诸$1\leq i\leq n$,$\left(e_{i,\lambda_{i}}\right)_{\lambda_{i}\in\Lambda_{i}}$是$E_{i}$的基,$\Lambda=\prod\limits_{i=1}^{n}\Lambda_{i}$,则$\left(\bigotimes\limits_{i=1}^{n}e_{i,\lambda_{i}}\right)_{\left(\lambda_{1},\ldots,\lambda_{n}\right)\in\Lambda}$是$\bigotimes\limits_{i=1}^{n}E_{i}$的基.
+\end{proposition}
+
+\begin{remark}{}{}
+	设$A,B$是环,$E$是右$A$-模,$E^{\prime}$是左$A$-模,$F$是右$B$-模,$F^{\prime}$是左$B$-模,$P$是$\Z$-模.
+	
+	对$\Z$-多线性映射$f\in\Hom_{\mathsf{Set}}\left(E,E^{\prime},F,F^{\prime}\right)$,下列条件成立时称其为$\left(A,B\right)$-双平衡映射.
+	\begin{itemize}
+		\item 对诸$x\in E,x^{\prime}\in E^{\prime},y\in F,y^{\prime}\in F^{\prime},\lambda\in A$,有$f\left(x\lambda,x^{\prime},y,y^{\prime}\right)=f\left(x,\lambda x^{\prime},y,y^{\prime}\right)$.
+		\item 对诸$x\in E,x^{\prime}\in E^{\prime},y\in F,y^{\prime}\in F^{\prime},\mu\in A$,有$f\left(x,x^{\prime},y\mu,y^{\prime}\right)=f\left(x,\lambda x^{\prime},y,\mu y^{\prime}\right)$.
+	\end{itemize}
+	记$\mathscr{E}$是$E\times E^{\prime}\times F\times F^{\prime}$到$G$的$\left(A,B\right)$-双平衡映射组成的集合.一方面,存在典范的$\Z$-模同构
+	\begin{align*}
+		\left(E\otimes_{A}E^{\prime}\right)\otimes_{\Z}\left(F\otimes_{B}F^{\prime}\right)\simeq E\otimes_{A}E^{\prime}\otimes_{\Z}F\otimes_{B}F^{\prime}.
+	\end{align*}
+	另一方面,存在典范的双射$\Bil_{\Z}\left(E\otimes_{A}E^{\prime},F\otimes_{B}F^{\prime};P\right)\to\mathscr{E}$.
+\end{remark}
+
+

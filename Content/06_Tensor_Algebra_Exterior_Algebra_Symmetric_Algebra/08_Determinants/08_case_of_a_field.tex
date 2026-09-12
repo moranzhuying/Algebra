@@ -1,0 +1,31 @@
+\section{域上的行列式}
+
+记号约定:$K$是域,$E$是$K$-向量空间.
+
+\begin{proposition}{}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$是$E$中的有限序列,则$\left(x_{i}\right)_{i=1}^{n}$是自由族$\iff$ $x_{1}\wedge\ldots\wedge x_{p}\neq 0$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\boldsymbol{X}\in\mathbf{M}_{m,n}\left(K\right)$,则$\rank\left(\boldsymbol{X}\right)=\max\left\{p\in\N\middle|\boldsymbol{X}\text{有一个}p\text{阶子式}\neq 0\right\}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	考察$K$上的线性方程组$\sum\limits_{j=1}^{n}a_{i,j}x_{j}=b_{j}\left(1\leq i\leq m\right)\quad(\ast)$.设
+	\begin{align*}
+		\boldsymbol{A}=\left(a_{i,j}\right)_{\substack{1\leq i\leq m\\1\leq j\leq n}},\boldsymbol{b}=\left[b_{1}\ldots b_{n}\right]^{\top},\widetilde{\boldsymbol{A}}=\left[\boldsymbol{A}|\boldsymbol{b}\right],\rank\left(\boldsymbol{M}\right)=r,
+	\end{align*}
+	在$\boldsymbol{M}$中去掉指标$>r$的行和列后得到的$r$阶子式$\Delta_{r}\neq 0$,则
+	\begin{enumerate}
+		\item 方程组($\ast$)有解$\iff$ $\boldsymbol{M}$中列指标属于$\left[1,p\right]\cup\left\{n+1\right\}$的每个$p+1$阶子式都为$0$.
+		\item 方程组($\ast$)有解时,它的解和方程组$\sum\limits_{j=1}^{n}a_{i,j}x_{j}=b_{j}\left(1\leq i\leq p\right)$的解相同.进一步,如果将其写作
+		\begin{align*}
+			\sum\limits_{j=1}^{n}a_{i,j}x_{j}=b_{j}-\sum\limits_{k=p+1}^{n}a_{i,k}x_{k}\left(1\leq i\leq p\right),
+		\end{align*}
+		则方程组($\ast$)的解可通过如下方式得到:让满足$p+1\leq k\leq n$的$x_{k}$任意取值,再利用Cramer法则求出满足$1\leq j\leq p$的$x_{j}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+

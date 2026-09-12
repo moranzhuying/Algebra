@@ -1,0 +1,155 @@
+\section{二次代数}
+
+记号约定:$A$是交换环.
+
+\begin{definition}{$\left(\alpha,\beta\right)$型二次代数}{}
+	设$\alpha,\beta\in A$,$\left(e_{i}\right)_{i=1}^{2}$是$A_{s}^{2}$的典范基,乘法表为
+	\begin{align*}
+		e_{1}^{2}=e_{1},e_{1}e_{2}=e_{2}e_{1}=e_{2},e_{2}^{2}=\alpha e_{1}+\beta e_{2}.
+	\end{align*}
+	我们称$A_{s}^{2}$为$\left(\alpha,\beta\right)$型二次代数.
+\end{definition}
+
+\begin{definition}{二次代数}{}
+	设$E$是$A$-代数.若存在$\alpha,\beta\in A$使得$E$同构于$\left(\alpha,\beta\right)$型二次代数$A_{s}^{2}$,则称$E$是二次代数.
+\end{definition}
+
+\begin{proposition}{二次代数的等价刻画}{}
+	设$E$是$A$-含幺代数,则$E$是二次代数$\iff$ $E$是秩为$2$的自由模.
+\end{proposition}
+
+\begin{definition}{二次代数的基}{}
+	设$E$是二次$A$-代数.
+	\begin{enumerate}
+		\item 设$\left(1_{E},i\right)$是$E$的基.若$i^{2}=\alpha 1_{E}+\beta i$,则称$\left(1_{E},i\right)$是$\left(\alpha,\beta\right)$型的基.
+		\item 设$\alpha,\beta\in E$.若$E$有一个$\left(\alpha,\beta\right)$型的基,则称$E$是$\left(\alpha,\beta\right)$型的.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{二次代数的结合律和交换律}{}
+	若$E$是二次$A$-代数,则$E$是$A$-交换结合代数.
+\end{proposition}
+
+\begin{proposition}{二次代数的基变换}{}
+	设$E$是$\left(\alpha,\beta\right)$型二次$A$-代数,有一个基是$\left(1_{E},i\right)$.
+	\begin{enumerate}
+		\item 对$E$的每个包含$1_{E}$的基,存在$\gamma,\delta\in A$使得这个基能表示成$\left(1_{E},\gamma 1_{E}+\delta i\right)$.
+		\item 设$\gamma,\delta\in A$,则$\left(1_{E},\gamma 1_{E}+\delta i\right)$是$E$的基$\iff$ $\delta\in A^{\times}$.
+		\item 若$\gamma,\delta\in A$且$\left(1_{E},\gamma 1_{E}+\delta i\right)$是$E$的基,则$E$是$\left(\alpha\delta^{2}-\gamma^{2}-\beta\gamma\delta,2\gamma+\beta\delta\right)$型的.
+		\item 若$E$是$\left(\alpha,2\tilde{\beta}\right)$型的,则$E$也是$\left(\alpha+\tilde{\beta}^{2},0\right)$型的.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{共轭自同构}{}
+	设$E$是二次$A$-代数,则$s:E\to E,u\mapsto\tr\left(\mathcal{L}_{u}\right)1_{E}-u$是$A$-代数自同构和对合.
+\end{proposition}
+
+\begin{definition}{$E$的共轭;共轭元}{}
+	设$E$是二次$A$-代数.我们称$s:E\to E,u\mapsto\tr\left(\mathcal{L}_{u}\right)1_{E}-u$是$E$的共轭.对任一$u\in E$,称$s\left(u\right)$是$u$的共轭元.
+\end{definition}
+
+\begin{proposition}{迹和范数的坐标表示}{}
+	设$E$是二次$A$-代数,$\left(1_{E},i\right)$是$E$的$\left(\alpha,\beta\right)$型的基.定义
+	\begin{gather*}
+		T:E\to A,\xi 1_{E}+\eta i\mapsto 2\xi+\beta\eta\\
+		N:E\to A,\xi 1_{E}+\eta i\mapsto \xi^{2}+\beta\xi\eta-\alpha\eta^{2}
+	\end{gather*}
+	\begin{enumerate}
+		\item 设$u=\xi 1_{E}+\eta i\in E$,其中$\xi,\eta\in A$,则$s\left(u\right)=\left(\xi+\beta\eta\right)1_{E}-\eta i$.
+		\item $T\in E^{\vee}$且$T1_{E}=\id_{E}+s$.当$\beta=0$时$\forall\xi,\eta\in A\left(s\left(\xi 1_{E}+\eta i\right)=\xi 1_{E}-\eta i\wedge T\left(\xi 1_{E}+\eta i\right)=2\xi\right)$.
+		\item $N1_{E}=\id_{E}s$.当$\beta=0$时,$\forall\xi,\eta\in A\left(N\left(\xi 1_{E}+\eta i\right)=\xi^{2}-\alpha\eta^{2}\right)$.
+		\item $\forall u,v\in E\left(N\left(uv\right)=N\left(u\right)N\left(v\right)\right)$.
+		\item 设$u\in E$,则$u\in E^{\times}\iff N\left(u\right)\in A^{\times}$.两条件之一成立时,$u^{-1}=\left(N\left(u\right)\right)^{-1}s\left(u\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{迹,范数}{}
+	假设同上.设$u\in E$.我们称$T\left(u\right)$和$N\left(u\right)$(相对的,当典范等同$A$和$A1_{E}$时,元素$T\left(u\right)1_{E}$和$N\left(u\right)1_{E}$)分别是$u$的迹和范数.
+\end{definition}
+
+\begin{remark}{}{}
+	$N$是$E$上的二次型,并且对任一$u\in E$,$N\left(u\right)=\det\left(\mathcal{L}_{u}\right)$.
+\end{remark}
+
+\begin{proposition}{二次代数的分类}{}
+	设$E$是$\left(\alpha,\beta\right)$型二次代数.
+	\begin{enumerate}
+		\item 若$A$是除环,并且不存在$\zeta\in A$使得$\zeta^{2}-\beta\zeta-\alpha=0$,则$E$是域.
+		\item 设存在$\zeta\in A$使得$\zeta^{2}-\beta\zeta-\alpha=0$.若$\beta-2\zeta\in A^{\times}$,则代数$E$同构于$A\times A$;若$\beta-2\zeta=0$,则$E$是$\left(0,0\right)$型的.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

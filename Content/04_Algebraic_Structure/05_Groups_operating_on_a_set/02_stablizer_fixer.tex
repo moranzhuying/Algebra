@@ -1,0 +1,104 @@
+\section{稳定子和不动子}
+
+记号约定:$M$是幺半群,$G$是群(二者都采用乘法记号,幺元为$e$),$E$是集合,$A,B\subseteq E$.
+
+\begin{definition}{转移子,严格转移子,稳定子,严格稳定子,不动子}{}
+	设$E$是$M$-集.
+	\begin{enumerate}
+		\item $\left\{\alpha\in M\middle|\alpha A\subseteq B\right\}$称为从$A$到$B$的转移子.当$A=B$时,称从$A$到$B$的转移子为$A$的稳定子.
+		\item $\left\{\alpha\in M\middle|\alpha A=B\right\}$称为从$A$到$B$的严格转移子.当$A=B$时,称从$A$到$B$的转移子为$A$的严格稳定子.
+		\item $\left\{\alpha\in M\middle|\forall a\in A\left(\alpha a=a\right)\right\}$称为$A$的固定子.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	$A$的稳定子和固定子分别记作$\Stab_{M}\left(A\right)$和$\Fix_{M}\left(A\right)$,$A=\left\{\alpha\right\}$时分别记作$\Fix_{M}\left(\alpha\right)$和$\Stab_{M}\left(\alpha\right)$.
+	
+	没有歧义的时候,直接把$A$的稳定子和固定子记作$\Stab\left(A\right)$和$\Fix\left(A\right)$.
+\end{remark}
+
+\begin{definition}{(元素版本)稳定,严格稳定,固定}{}
+	设$E$是$M$-集,$\alpha\in M$.
+	\begin{enumerate}
+		\item 若$\alpha$属于$A$的稳定子,则称$\alpha$稳定$A$.
+		\item 若$\alpha$属于$A$的严格稳定子,则称$\alpha$严格稳定$A$.
+		\item 若$\alpha$属于$A$的固定子,则称$\alpha$固定$A$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{(集合版本)稳定,严格稳定,固定}{}
+	设$E$是$M$-集,$P\subseteq M$.
+	\begin{enumerate}
+		\item 若$P$的每个元素都稳定$A$,则称$P$稳定$A$.
+		\item 若$P$的每个元素都严格稳定$A$,则称$P$严格稳定$A$.
+		\item 若$P$的每个元素都固定$A$,则称$P$固定$A$.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{稳定子,严格稳定子,固定子是子幺半群}{}
+	设$E$是$M$-集,则$A$的稳定子、严格稳定子和固定子都是$M$的子幺半群.
+\end{proposition}
+
+\begin{proposition}{可逆元继承严格稳定性和固定性}{}
+	设$E$是$M$-集,$\alpha\in M$可逆.若$\alpha$严格稳定(相应地,固定)$A$,则$\alpha^{-1}$严格稳定(相应地,固定)$A$.
+\end{proposition}
+
+\begin{corollary}{严格稳定子,固定子是子群,固定子是严格稳定子的正规子群}{}
+	设$E$是$G$-集,$A$的严格稳定子和固定子分别是$S$和$F$,则$S$和$F$都是$G$的子集,$F$是$S$的正规子群.
+\end{corollary}
+
+\begin{proposition}{固定子$\subseteq$严格稳定子$\subseteq$稳定子}{}
+	$\left\{\alpha\in M\middle|\forall a\in A\left(\alpha a=a\right)\right\}\subseteq\left\{\alpha\in M\middle|\alpha A=A\right\}\subseteq\left\{\alpha\in M\middle|\alpha A\subseteq A\right\}$.
+\end{proposition}
+
+\begin{proposition}{群作用忠实$\iff$作用是单射}{}
+	设$E$是$G$-集,则$G$在$E$上的作用是忠实的$\iff$ $\Fix\left(E\right)=\left\{e\right\}$.
+\end{proposition}
+
+\begin{proposition}{元素的固定子}{}
+	设$E$是$M$-集,则对任一$a\in E$,$\left\{a\right\}$的固定子、严格稳定子和稳定子是相等的.
+\end{proposition}
+
+\begin{definition}{元素的稳定子}{}
+	设$E$是$M$-集.我们称$\Stab\left(a\right)$是$a$的稳定子(或固定子).
+\end{definition}
+
+\begin{proposition}{$A$的固定子=$A$中所有元素的固定子的交}{}
+	设$E$是$M$-集,则$\Fix\left(A\right)=\bigcap\limits_{a\in A}\Fix\left(a\right)$.
+\end{proposition}
+
+\begin{definition}{不变元素}{}
+	设$E$是$M$-集,$a\in E$.若$\Stab\left(a\right)=M$,则称$a$是$E$中的不动元素.
+\end{definition}
+
+\begin{definition}{平凡作用}{}
+	设$E$是$M$-集.若$E$中的每个元素都是不变元素,则称$M$在$E$上的作用是平凡的.
+\end{definition}
+
+\begin{proposition}{$G$-集$E$中每个元素的稳定子都是共轭子群}{}
+	设$E$是$G$-集,$x\in E,\alpha\in G$,则$\Stab\left(\alpha x\right)=\alpha\Stab\left(x\right)\alpha^{-1}$.
+\end{proposition}
+
+\begin{proposition}{$G$-集$E$中两个子集之间的转移子和严格转移子都是共轭子群}{}
+	设$E$是$G$-集,$\alpha\in G,T\subseteq E$.若$T$是$A$到$B$的转移子(相对地,严格转移子),则$\alpha T\alpha^{-1}$是$\alpha A$到$\alpha B$的转移子(相对地,严格转移子).
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

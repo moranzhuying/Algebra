@@ -1,0 +1,62 @@
+\section{商模的对偶,直和的对偶,对偶基}
+
+记号约定:$A$是幺环,$E,E_{1},E_{2},E_{3}$是$A$-模,$\langle -,-\rangle_{E}$是$E$上的典范配对.
+
+\begin{proposition}{对偶函子$\Hom_{A}\left(-,A_{s}\right)$是左整合的}{}
+	若序列$E_{1}\xlongrightarrow{f}E_{2}\xlongrightarrow{g}E_{3}\xlongrightarrow{}0$正合,则序列$0\xlongrightarrow{}E_{3}^{\vee}\xlongrightarrow{g^{\top}}E_{2}\xlongrightarrow{f^{\top}}E_{1}$正合.
+\end{proposition}
+
+\begin{corollary}{商模的对偶}{}
+	设$M$是$E$的子模,$\pi:E\twoheadrightarrow E/M$是典范满射.
+	\begin{enumerate}
+		\item $\pi^{\top}$诱导典范映射$\left(E/M\right)^{\vee}\simeq M^{\circ}$.
+		\item 设$\iota:M\hookrightarrow E$是典范嵌入,则有典范单射$E^{\vee}/M^{\circ}\hookrightarrow M^{\vee}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族$A$-模,则有典范同构$\left(\bigboxplus\limits_{i\in I}E_{i}\right)^{\vee}\simeq\prod\limits_{i\in I}E_{i}^{\vee}$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$E$有两个互补子模$M,N$,映射$p_{1}:E\twoheadrightarrow M$和$p_{2}:E\twoheadrightarrow N$是典范投影.
+	\begin{enumerate}
+		\item 我们有典范同构$E^{\vee}\simeq M^{\vee}\oplus N^{\vee}$.
+		\item $p_{1}^{\top}$和$p_{2}^{\top}$是同构,并且$\im\left(p_{1}^{\top}\right)=N^{\circ},\im\left(p_{2}^{\top}\right)=M^{\circ}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}{}{}
+	设$E$是以$\left(e_{t}\right)_{t\in T}$为基的自由模,$\left(e_{i}^{\ast}\right)_{i\in I}$是$E^{\vee}$的元素族满足
+	\begin{align*}
+		\forall t,t^{\prime}\in T\left(\langle e_{t^{\prime}},e_{t}^{\ast}\rangle_{E}=\delta_{t^{\prime},t}\right).
+	\end{align*}
+	注意$\left(e_{t}^{\ast}\right)_{t\in T}$是自由族.
+	\begin{itemize}
+		\item 我们称$\left(e_{t}^{\ast}\right)_{t\in T}$是$E$相对于$\left(e_{t}\right)_{t\in T}$的坐标泛函.
+		\item 当$T$有限时,$\left(e_{t}^{\ast}\right)_{t\in T}$是$E^{\vee}$的基,此时称$\left(e_{t}^{\ast}\right)_{t\in T}$是$\left(e_{t}\right)_{t\in T}$在$E^{\vee}$中的对偶基.
+	\end{itemize}
+\end{definition}
+
+\begin{proposition}{}{}
+	设$n\geq 1$.若$E$有一个基集的基数为$n$,则$E^{\vee}$是有一个基集的基数为$n$的自由模.
+\end{proposition}
+
+\begin{corollary}{}{}
+	若$E$是有限生成的投射模,则$E^{\vee}$是有限生成的投射模.
+\end{corollary}
+
+\begin{remark}{}{}
+	当$T$是有限集,$\left(e_{t}\right)_{t\in T}$是$E$的基,$\left(e_{t}^{\ast}\right)_{t\in T}$是$\left(e_{t}\right)_{t\in T}$在$E^{\vee}$中的对偶基,$x=\sum\limits_{t\in T}\xi_{t}e_{t}\in E,x_{\ast}=\sum\limits_{t\in T}\xi_{t}^{\ast}e_{t}^{\ast}$,则
+	\begin{align*}
+		\langle x,x^{\ast}\rangle_{E}=\sum\limits_{t\in T}\xi_{t}\xi_{t}^{\ast}.
+	\end{align*}
+\end{remark}
+
+\begin{proposition}{投射摸的对偶基引理}{}
+	设$\left(a_{t}\right)_{t\in T}$是$E$的生成系.下列命题等价:
+	\begin{enumerate}
+		\item $E$是投射模.
+		\item $E^{\vee}$有一个元素族$\left(e_{i}^{\ast}\right)_{i\in I}$满足下列条件:对诸$x\in E$,元素族$\left(\langle x,a_{i}^{\ast}\rangle\right)_{i\in I}$有限支撑,$x=\sum\limits_{t\in T}\langle x,a_{t}^{\ast}\rangle a_{t}$.
+	\end{enumerate}
+\end{proposition}

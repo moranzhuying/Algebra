@@ -1,0 +1,80 @@
+\section{把函数延拓到集合的乘积}
+
+\begin{definition}{映射族的乘积}{}
+	设$\left(X_{i}\right)_{i\in I},\left(Y_{i}\right)_{i\in I}$是集合族,映射族$\left(g_{i}\right)_{i\in I}$满足$\forall i\in I\left(g_{i}\in\Hom_{\mathsf{Set}}\left(E_{i},F_{i}\right)\right)$.我们称
+	\begin{align*}
+		\prod\limits_{i\in I}f_{i}:\prod\limits_{i\in I}X_{i}\to\prod\limits_{i\in I}Y_{i},\left(x_{i}\right)_{i\in I}\mapsto\left(f_{i}\left(x_{i}\right)\right)_{i\in I}
+	\end{align*}
+	是$\left(f_{i}\right)_{i\in I}$的乘积(或$\left(f_{i}\right)_{i\in I}$的典范延拓).
+\end{definition}
+
+\begin{proposition}{映射族的乘积的函子性}{}
+	设$\left(X_{i}\right)_{i\in I},\left(Y_{i}\right)_{i\in I},\left(Z_{i}\right)_{i\in I}$是集合族,对任意$i\in I$,$f_{i}$是$X_{i}$到$Y_{i}$的映射,$g_{i}$是$Y_{i}$到$Z_{i}$的映射,则如下图表交换:
+	\begin{center}
+		\begin{tikzcd}
+			{\prod\limits_{i\in I}X_{i}} && \\
+			&& {\prod\limits_{i\in I}Z_{i}} \\
+			{\prod\limits_{i\in I}Y_{i}}
+			\arrow["{\prod\limits_{i\in I}\left(g_{i}\circ f_{i}\right)}", from=1-1, to=2-3]
+			\arrow["{\prod\limits_{i\in I}f_{i}}"', from=1-1, to=3-1]
+			\arrow["{\prod\limits_{i\in I}g_{i}}"', from=3-1, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\left(X_{i}\right)_{i\in I},\left(Y_{i}\right)_{i\in I}$是集合族,映射族$\left(g_{i}\right)_{i\in I}$满足$\forall i\in I\left(g_{i}\in\Hom_{\mathsf{Set}}\left(E_{i},F_{i}\right)\right)$.
+	\begin{enumerate}
+		\item 若$\left(f_{i}\right)_{i\in I}$是一族单射,则$\prod\limits_{i\in I}f_{i}$是单射.
+		\item 若$\left(f_{i}\right)_{i\in I}$是一族满射,则$\prod\limits_{i\in I}f_{i}$是满射.
+		\item 若$\left(f_{i}\right)_{i\in I}$是一族双射,则$\prod\limits_{i\in I}f_{i}$是双射.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{集合族的乘积和投影映射的泛性质}{}
+	设$E$是集合,$\left(X_{i}\right)_{i\in I}$是集合族,$X=\prod\limits_{i\in I}X_{i}$,$d:E\to\Hom_{\mathsf{Set}}\left(E,I\right)$是对角映射.
+	\begin{enumerate}
+		\item 对任意$f\in\Hom_{\mathsf{Set}}\left(E,X\right)$,映射族$\left(\pr_{i}\circ f\right)_{i\in I}$满足如下条件:
+		\begin{itemize}
+			\item 对任意$i\in I$有$\pr_{i}\circ f\in\Hom_{\mathsf{Set}}\left(E,X_{i}\right)$.
+			\item $f=\left(\prod\limits_{i\in I}f_{i}\right)\circ d$.
+		\end{itemize}
+		\item 对诸满足$\forall i\in I\left(f_{i}\in\Hom_{\mathsf{Set}}\left(E,X_{i}\right)\right)$的映射族$\left(f_{i}\right)_{i\in I}$,存在唯一的$f\in\Hom_{\mathsf{Set}}\left(E,X\right)$使$\forall i\in I\left(\pr_{i}\circ f=f_{i}\right)$.
+		\begin{center}
+			\begin{tikzcd}
+				E && \\
+				&& {X_{i}} \\
+				X
+				\arrow["{f_{i}}", from=1-1, to=2-3]
+				\arrow["{\exists!f}"', dashed, from=1-1, to=3-1]
+				\arrow["{\pr_{i}}"', from=3-1, to=2-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$E$是集合,$\left(X_{i}\right)_{i\in I}$是集合族,则存在典范双射$\prod\limits_{i\in I}\Hom_{\mathsf{Set}}\left(E,X_{i}\right)\to\Hom_{\mathsf{Set}}\left(E,\prod\limits_{i\in I}X_{i}\right)$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

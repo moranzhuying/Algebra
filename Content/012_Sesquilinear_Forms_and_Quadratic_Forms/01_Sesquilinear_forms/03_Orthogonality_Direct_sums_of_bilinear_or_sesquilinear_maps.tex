@@ -1,0 +1,154 @@
+\section{正交性·(半)双线性映射的直和}
+
+记号约定:
+\begin{itemize}
+	\item $A,B$是环,$\rho\in\Isom_{\mathsf{Ring}}\left(B,B^{\op}\right)$.对每个$b\in B$,记$\bar{b}=\rho\left(b\right)$.
+	\item $E$是左$A$-模,$F$是右$B$-模或左$B$-模,$G$是$\left(A,B\right)$-双模.
+	\item 当$B$是右$B$-模时,$\varphi\in\Bil_{A,B}\left(E,F;G\right)$;当$F$是左$B$-模时,$\varphi\in\Sesq_{A,(B,\rho)}\left(E,F;G\right)$.
+	\item $\mathfrak{S}\left(M\right)$是$M$的所有子模组成的集合,$\mathfrak{S}\left(N\right)$等记号同理.
+\end{itemize}
+
+\begin{definition}{关于(半)双线性映射的正交性}{}
+	\begin{enumerate}
+		\item 设$x\in E,y\in F$.若$\varphi\left(x,y\right)=0$,则称$x$和$y$关于$\varphi$正交(或$x$和$y$是$\varphi$-正交的).
+		\item 设$E_{0}\subseteq E,F_{0}\subseteq F$.若$\forall\left(x,y\right)\in E_{0}\times F_{0}\left(\varphi\left(x,y\right)=0\right)$,则称$E_{0}$和$F_{0}$关于$\varphi$-正交.
+		\item 设$M\in\mathfrak{S}\left(E\right)$.我们称$M^{\circ}\coloneq\rad_{L}\left(\varphi\right)\cap M$是$M$关于$\varphi$的正交子模.
+		\item 设$N\in\mathfrak{S}\left(F\right)$.我们称$N^{\circ}\coloneq\rad_{R}\left(\varphi\right)\cap N$是$N$关于$\varphi$的正交子模.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{关于(半)双线性映射的正交子模诱导子模格之间的反序Galois连接}{}
+	定义$f:\mathfrak{S}\left(E\right)\to\mathfrak{S}\left(M\right),M\mapsto M^{\circ},g:\mathfrak{S}\left(F\right)\to\mathfrak{S}\left(E\right),N\mapsto N^{\circ}$.
+	\begin{enumerate}
+		\item $f$和$g$都是反序映射.
+		\item 对每个$M\in\mathfrak{S}\left(E\right)$和$N\in\mathfrak{S}\left(F\right)$有$M\subseteq g\left(N\right)\iff f\left(M\right)\supseteq N\iff\varphi\left(M,N\right)=\left\{0\right\}$.特别地:
+		\begin{itemize}
+			\item 对每个$M\in\mathfrak{S}\left(E\right)$有$g\left(f\left(M\right)\right)=M^{\circ\circ}$和$M\subseteq g\left(f\left(M\right)\right)$.
+			\item 对每个$N\in\mathfrak{S}\left(F\right)$有$f\left(g\left(N\right)\right)=N^{\circ\circ}$和$N\subseteq f\left(g\left(N\right)\right)$.
+		\end{itemize}
+		\item $f=f\circ g\circ f,g=g\circ f\circ g$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{(半)双线性映射非退化的正交子模刻画}{}
+	$\varphi$是非退化的$\iff$ $F^{\circ}=\left\{0\right\}$且$E^{\circ}=\left\{0\right\}$.
+\end{proposition}
+
+\begin{lemma}{商模上诱导的(半)双线性映射良好定义}{}
+	对每个$\left(x,y,x_{0},y_{0}\right)\in E\times F\times E^{\circ}\times F^{\circ}$有$\varphi\left(x+x_{0},y+y_{0}\right)=\varphi\left(x,y\right)$.
+\end{lemma}
+
+\begin{proposition}{商模上的(半)双线性映射}{sesqualinear-or-bilinear-mappings-over-quotient-module}
+	设$\pi_{1}:E/F^{\circ}\to G$和$\pi_{2}:F/E^{\circ}\to G$是典范映射.
+	\begin{enumerate}
+		\item $F$是右$B$-模时,存在唯一的$\bar{\varphi}\in\Bil_{A,B}\left(E/F^{\circ},F/E^{\circ};G\right)$使$\bar{\varphi}$且下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				{E\times F} && {\left(E/F^{\circ}\right)\times\left(F/E^{\circ}\right)} \\
+				& G
+				\arrow["{\pi_{1}\times\pi_{2}}", from=1-1, to=1-3]
+				\arrow["\varphi"', from=1-1, to=2-2]
+				\arrow["{\exists!\bar{\varphi}}", dashed, from=1-3, to=2-2]
+			\end{tikzcd}
+		\end{center}
+		\item $F$是左$B$-模时,存在唯一的$\bar{\varphi}\in\Sesq_{A,(B,\rho)}\left(E/F^{\circ},F/E^{\circ};G\right)$使$\bar{\varphi}$且下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				{E\times F} && {\left(E/F^{\circ}\right)\times\left(F/E^{\circ}\right)} \\
+				& G
+				\arrow["{\pi_{1}\times\pi_{2}}", from=1-1, to=1-3]
+				\arrow["\varphi"', from=1-1, to=2-2]
+				\arrow["{\exists!\bar{\varphi}}", dashed, from=1-3, to=2-2]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{(半)双线性映射诱导的非退化(半)双线性映射}{}
+	沿用命题(\ref{prop:sesqualinear-or-bilinear-mappings-over-quotient-module})的设定.
+	\begin{enumerate}
+		\item $F$是右$B$-模时,称$\bar{\varphi}$是$\varphi$诱导的非退化$\left(A,B\right)$-双线性映射.
+		\item $F$是左$B$-模时,称$\bar{\varphi}$是$\varphi$诱导的的关于$\rho$的非退化右半$\left(A,B\right)$-双线性映射.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{用半=双线性映射构造双线性映射族}{construction-of-direct-sum-of-bilinear-mappings}
+	设$\left(E_{i}\right)_{i\in I}$是左$A$-模族,$\left(F_{i}\right)_{i\in I}$是右$B$-模族,$E=\bigboxplus\limits_{i\in I}E_{i},F=\bigboxplus\limits_{i\in I}F_{i}$,$\left(\iota_{i}\right)_{i\in I}$和$\left(\iota_{i}^{\prime}\right)_{i\in I}$分别是$\left(E_{i}\right)_{i\in I}$和$\left(F_{i}\right)_{i\in I}$的嵌入映射族.如果
+	\begin{itemize}
+		\item 对每个$i\in I$有$\varphi_{i}\in\Bil_{A,B}\left(E_{i},F_{i};G\right)$,
+		\item 对每个$\left(x_{i}\right)_{i\in I}\in E$和$\left(y_{i}\right)_{i\in I}\in F$有$\varphi\left(\left(x_{i}\right)_{i\in I},\left(y_{i}\right)_{i\in I}\right)=\sum\limits_{i\in I}\varphi_{i}\left(x_{i},y_{i}\right)$,
+	\end{itemize}
+	则$\varphi\in\Bil_{A,B}\left(E,F;G\right)$,并且$\forall\left(i,j\right)\in I\times J\left(i\neq j\implies\varphi\left(E_{i}\times F_{j}\right)\subseteq\left\{0\right\}\right)$.
+\end{proposition}
+
+\begin{definition}{双线性映射的直和}{}
+	沿用命题(\ref{prop:construction-of-direct-sum-of-bilinear-mappings})的设定.我们称$\varphi$是$\left(\varphi_{i}\right)_{i\in I}$的直和,并将$\varphi$记作$\bigboxplus\limits_{i\in I}\varphi_{i}$.
+\end{definition}
+
+\begin{proposition}{用双线性映射构造双线性映射族}{}
+	设$F$是右$B$-模,$\left(E_{i}\right)_{i\in I}$和$\left(F_{i}\right)_{i\in I}$分别是$E$和$F$的子模族,满足如下条件:
+	\begin{itemize}
+		\item $E=\bigoplus\limits_{i\in I}E_{i},F=\bigoplus\limits_{i\in I}F_{i}$.
+		\item $\left(\iota_{i}\right)_{i\in I}$和$\left(\iota_{i}^{\prime}\right)_{i\in I}$分别是$\left(E_{i}\right)_{i\in I}$和$\left(F_{i}\right)_{i\in I}$的嵌入映射族.
+		\item $\forall\left(i,j\right)\in I\times J\left(i\neq j\implies\varphi\left(E_{i}\times F_{j}\right)\subseteq\left\{0\right\}\right)$.
+		\item 对每个$i\in I$有$\varphi_{i}=\varphi\circ\left(\iota_{i}\times\iota_{i}^{\prime}\right)$.
+	\end{itemize}
+	那么,如下结论成立:
+	\begin{enumerate}
+		\item 对每个$i\in I$有$\varphi_{i}\in\Bil_{A,B}\left(E_{i},F_{i};G\right)$.
+		\item $\prod\limits_{i\in I}\Bil_{A,B}\left(E_{i},F_{i};G\right)$中满足$\varphi=\bigboxplus\limits_{i\in I}\varphi_{i}$的元素族只有$\left(\varphi_{i}\right)_{i\in I}$.
+		\item $\varphi$是非退化的$\iff$对每个$i\in I$,$\varphi_{i}$是非退化的.
+		\item 当$\varphi$非退化时,对每个$i\in I$有$E_{i}^{\circ}=\sum\limits_{j\in I\setminus\left\{i\right\}}F_{j},F_{i}^{\circ}=\sum\limits_{j\in I\setminus\left\{i\right\}}E_{j}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{用半双线性映射构造半双线性映射族}{construction-of-direct-sum-of-sesqualinear-mappings}
+	设$\left(E_{i}\right)_{i\in I}$是左$A$-模族,$\left(F_{i}\right)_{i\in I}$是左$B$-模族,$E=\bigboxplus\limits_{i\in I}E_{i},F=\bigboxplus\limits_{i\in I}F_{i}$,$\left(\iota_{i}\right)_{i\in I}$和$\left(\iota_{i}^{\prime}\right)_{i\in I}$分别是$\left(E_{i}\right)_{i\in I}$和$\left(F_{i}\right)_{i\in I}$的嵌入映射族.如果
+	\begin{itemize}
+		\item 对每个$i\in I$有$\varphi_{i}\in\Sesq_{A,(B,\rho)}\left(E_{i},F_{i};G\right)$,
+		\item 对每个$\left(x_{i}\right)_{i\in I}\in E$和$\left(y_{i}\right)_{i\in I}\in F$有$\varphi\left(\left(x_{i}\right)_{i\in I},\left(y_{i}\right)_{i\in I}\right)=\sum\limits_{i\in I}\varphi_{i}\left(x_{i},y_{i}\right)$,
+	\end{itemize}
+	那么$\varphi\in\Sesq_{A,(B,\rho)}\left(E,F;G\right)$,并且$\forall\left(i,j\right)\in I\times J\left(i\neq j\implies\varphi\left(E_{i}\times F_{j}\right)\subseteq\left\{0\right\}\right)$.
+\end{proposition}
+
+\begin{definition}{半双线性映射的直和}{}
+	沿用命题(\ref{prop:construction-of-direct-sum-of-sesqualinear-mappings})的设定.我们称$\varphi$是$\left(\varphi_{i}\right)_{i\in I}$的直和,并将$\varphi$记作$\bigboxplus\limits_{i\in I}\varphi_{i}$.
+\end{definition}
+
+\begin{proposition}{用半双线性映射族构造半双线性映射}{}
+	设$F$是左$B$-模,$\left(E_{i}\right)_{i\in I}$和$\left(F_{i}\right)_{i\in I}$分别是$E$和$F$的子模族,满足如下条件:
+	\begin{itemize}
+		\item $E=\bigoplus\limits_{i\in I}E_{i},F=\bigoplus\limits_{i\in I}F_{i}$.
+		\item $\left(\iota_{i}\right)_{i\in I}$和$\left(\iota_{i}^{\prime}\right)_{i\in I}$分别是$\left(E_{i}\right)_{i\in I}$和$\left(F_{i}\right)_{i\in I}$的嵌入映射族.
+		\item $\forall\left(i,j\right)\in I\times J\left(i\neq j\implies\varphi\left(E_{i}\times F_{j}\right)\subseteq\left\{0\right\}\right)$.
+		\item 对每个$i\in I$有$\varphi_{i}=\varphi\circ\left(\iota_{i}\times\iota_{i}^{\prime}\right)$.
+	\end{itemize}
+	那么,如下结论成立:
+	\begin{enumerate}
+		\item 对每个$i\in I$有$\varphi_{i}\in\Sesq_{A,(B,\rho)}\left(E_{i},F_{i};G\right)$.
+		\item $\prod\limits_{i\in I}\Sesq_{A,(B,\rho)}\left(E_{i},F_{i};G\right)$中满足$\varphi=\bigboxplus\limits_{i\in I}\varphi_{i}$的元素族只有$\left(\varphi_{i}\right)_{i\in I}$.
+		\item $\varphi$是非退化的$\iff$对每个$i\in I$,$\varphi_{i}$是非退化的.
+		\item 当$\varphi$非退化时,对每个$i\in I$有$E_{i}^{\circ}=\sum\limits_{j\in I\setminus\left\{i\right\}}F_{j},F_{i}^{\circ}=\sum\limits_{j\in I\setminus\left\{i\right\}}E_{j}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

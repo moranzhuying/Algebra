@@ -1,0 +1,66 @@
+\section{\texorpdfstring{$n$}{n}维自由模的同构}
+
+记号约定:
+\begin{itemize}
+	\item $M$是$n$维有限生成自由$A$-模.
+	\item $e\in\bigwedge\limits^{n}\left(M\right)$且$\left\{e\right\}$是$\bigwedge\limits^{n}\left(M\right)$的基集.
+	\item $e^{\ast}\in\bigwedge\limits^{n}\left(M\right)$且$\left\{\left(-1\right)^{\frac{n\left(n-1\right)}{2}}e^{\ast}\right\}$是$e$在$\bigwedge\limits^{n}\left(M\right)^{\vee}$中的对偶基集.
+	\item $\phi:\bigwedge\left(M\right)\to\bigwedge\left(M^{\vee}\right),z\mapsto z\lrcorner e^{\ast}$.对每个$0\leq p\leq n$,记$\phi_{p}:\bigwedge\limits^{p}\left(M\right)\to\bigwedge\limits^{n-p}\left(M^{\vee}\right),z\mapsto z\lrcorner e^{\ast}$.
+	\item $\phi^{\prime}:\bigwedge\left(M^{\vee}\right)\to\bigwedge\left(M\right),z^{\ast}\mapsto z^{\ast}\lrcorner e$.对每个$0\leq p\leq n$,记$\phi_{p}^{\prime}:\bigwedge\limits^{p}\left(M^{\vee}\right)\to\bigwedge\limits^{n-p}\left(M\right),z^{\ast}\mapsto z^{\ast}\lrcorner e$.
+\end{itemize}
+
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $\phi$是左$\bigwedge\left(M\right)$-模同构,$\phi^{\prime}$是左$\bigwedge\left(M^{\vee}\right)$-模同构,$\phi^{-1}=\phi^{\prime}$.
+		\item 对每个$p\in\N$,$\phi_{p}$和$\phi_{p}^{\prime}$都是模同构.
+		\item 定义$B:\bigwedge\left(M\right)\times\bigwedge\left(M^{\vee}\right)\to A,\left(u,v^{\ast}\right)\mapsto v^{\ast}\left(u\right)$,则对每个$0\leq p\leq n,u^{\ast}\in\bigwedge\limits^{p}\left(M^{\vee}\right),v^{\ast}\in\bigwedge\limits^{n-p}\left(M^{\vee}\right)$,
+		\begin{align*}
+			B\left(\phi_{p}^{\prime}\left(u^{\ast}\right),v^{\ast}\right)=\left(-1\right)^{p\left(n-p\right)}B\left(u^{\ast},\phi_{n-p}^{\prime}\left(v^{\ast}\right)\right).
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(e_{i}\right)_{i=1}^{n}$是$M$的基,$\left(e_{i}^{\ast}\right)_{i=1}^{n}$是其对偶基,$e=e_{1}\wedge\ldots\wedge e_{n},e^{\ast}=e_{1}^{\ast}\wedge\ldots\wedge e_{n}^{\ast}$.
+	\begin{enumerate}
+		\item 对每个$1\leq p\leq n$和$J\in\fin_{p}\left(\left[1,n\right]\right)$,
+		\begin{align*}
+			\phi\left(e_{J}\right)=\left(-1\right)^{\frac{n\left(n-1\right)}{2}+\frac{p\left(p-1\right)}{2}}\rho_{J,\left[1,n\right]\setminus J}e_{\left[1,n\right]\setminus J}^{\ast},
+			\phi^{\prime}\left(e_{J}^{\ast}\right)=\left(-1\right)^{\frac{n\left(n-1\right)}{2}+\frac{p\left(p-1\right)}{2}}\rho_{J,\left[1,n\right]\setminus J}e_{\left[1,n\right]\setminus J}^{\ast}.
+		\end{align*}
+		\item 对每个$f\in\End_{A}\left(M\right)$有$\det\left(f\right)\phi=\bigwedge\left(f^{\top}\right)\circ\phi\circ\bigwedge\left(f\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	对每个$f\in\Aut_{A}\left(M\right)$有$\bigwedge\left(\left(f^{-1}\right)^{\top}\right)=\det\left(f\right)^{-1}\phi\circ\bigwedge\left(f\right)\circ\phi^{-1}$.
+\end{corollary}
+
+\begin{definition}{代数Poincar\'{e}对偶}{}
+	我们称$\phi$是$e$诱导的代数Poincar\'{e}对偶.对每个$p\in\N$,称$\phi_{p}$是$p$阶无度量Hodge对偶(或$p$阶代数Poincar\'{e}对偶).
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+\chapter{量化理论}
+
+\section{量词的定义}
+
+\begin{definition}{存在量词,全称量词}{}
+	设$\boldsymbol{R}$是一个表达式,$\boldsymbol{x}$是一个字母.
+	\begin{enumerate}
+		\item 定义\textbf{存在量词}$\left(\exists x\right)\boldsymbol{R}$读作(``存在$\boldsymbol{x}$使得$\boldsymbol{R}$成立'')为$\left(\tau_{\boldsymbol{x}}\left(\boldsymbol{R}\right)|\boldsymbol{x}\right)\boldsymbol{R}$的缩写.
+		\item 定义\textbf{全称量词}$\left(\forall x\right)\boldsymbol{R}$读作(``对任意的$\boldsymbol{x}$,$\boldsymbol{R}$成立'')为$\neg\left(\left(\exists\boldsymbol{x}\right)\boldsymbol{R}\right)$的缩写.
+	\end{enumerate}
+\end{definition}
+
+\begin{metatheorem}{约束变元的重命名($\alpha$-等价)}{}
+	设$\boldsymbol{R}$是一个表达式,$\boldsymbol{x}$和$\boldsymbol{x}^{\prime}$是两个字母.若$\boldsymbol{x}^{\prime}$未在$\boldsymbol{R}$中出现,则
+	\begin{enumerate}
+		\item $\left(\exists\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\exists\boldsymbol{x}^{\prime}\right)\left(\boldsymbol{x}^{\prime}|\boldsymbol{x}\right)\boldsymbol{R}$相同.
+		\item $\left(\forall\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\forall\boldsymbol{x}^{\prime}\right)\left(\boldsymbol{x}^{\prime}|\boldsymbol{x}\right)\boldsymbol{R}$相同.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{自由代入与量词的交换律}{}
+	设$\boldsymbol{R}$和$\boldsymbol{U}$是两个公式,$\boldsymbol{x}$和$\boldsymbol{y}$是两个不同的字母.若字母$\boldsymbol{x}$在$\boldsymbol{U}$中未出现,则
+	\begin{enumerate}
+		\item $\left(\boldsymbol{U}|\boldsymbol{y}\right)\left(\exists\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\exists\boldsymbol{x}\right)\left(\boldsymbol{U}|\boldsymbol{y}\right)\boldsymbol{R}$相同.
+		\item $\left(\boldsymbol{U}|\boldsymbol{y}\right)\left(\forall\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\forall\boldsymbol{x}\right)\left(\boldsymbol{U}|\boldsymbol{y}\right)\boldsymbol{R}$相同.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{量化公式的封闭性}{}
+	若$\boldsymbol{R}$是理论$\mathcal{T}$中的一个公式,$\boldsymbol{x}$是一个字母,则$\left(\exists\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\forall\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$中的公式.
+\end{metatheorem}
+
+\begin{remark}{}{}
+	直观地看,我们可以将$\boldsymbol{R}$视为表达由$\boldsymbol{x}$所指代之对象的某种性质.从项$\tau_{\boldsymbol{x}}\left(\boldsymbol{R}\right)$的直观含义出发,断言$\left(\exists\boldsymbol{x}\right)\boldsymbol{R}$意味着存在一个具有性质$\boldsymbol{R}$的对象,断言$\neg\left(\exists\boldsymbol{x}\right)\left(\neg\boldsymbol{R}\right)$则意味着不存在具有性质``非$\boldsymbol{R}$''的对象,由此也就意味着每一个对象都具有性质$\boldsymbol{R}$.
+\end{remark}
+
+\begin{metatheorem}{全称量词引入律}{}
+	设$\mathcal{T}$是一个逻辑理论,$\boldsymbol{R}$是$\mathcal{T}$中的公式.若$\boldsymbol{R}$是$\mathcal{T}$中的一个定理,$\boldsymbol{x}$不是$\mathcal{T}$的常元,则$\left(\forall\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$中的一个定理.
+\end{metatheorem}
+
+\begin{remark}{}{}
+	如果$\boldsymbol{x}$是理论$\mathcal{T}$中的一个常元,那么$\boldsymbol{R}$为真并不意味着$\left(\forall\boldsymbol{x}\right)\boldsymbol{R}$也为真.直观而言,即便$\boldsymbol{R}$是关于$\boldsymbol{x}$(它是$\mathcal{T}$中一个确定的对象)的一个真实性质,这显然也并不意味着$\boldsymbol{R}$是每一个对象都具备的真实性质.
+\end{remark}
+
+\begin{metatheorem}{量词否定的De Morgan律}{}
+	设$\mathcal{T}$是一个逻辑理论,$\boldsymbol{R}$是$\mathcal{T}$中的公式,$\boldsymbol{x}$是字母,则$\neg\left(\forall\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\exists\boldsymbol{x}\right)\neg\boldsymbol{R}$在$\mathcal{T}$中等价.
+\end{metatheorem}

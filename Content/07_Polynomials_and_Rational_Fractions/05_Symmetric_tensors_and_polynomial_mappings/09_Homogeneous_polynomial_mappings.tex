@@ -1,0 +1,72 @@
+\section{齐次多项式函数}
+
+\begin{proposition}{齐次多项式函数的等价定义}{equivalent-condition-of-homogeneous-polynomial-mappings}
+	设$f\in\Hom_{\mathsf{Set}}\left(M,N\right),q\in\N$,$M$是自由模.下列陈述等价:
+	\begin{enumerate}
+		\item 存在$q$重$A$-线性映射$g:M^{q}\to N$使得$f=g\circ\id_{M^{q}}$.
+		\item 存在$A$-线性映射$h:\mathsf{TS}^{q}\left(M\right)\to N$使得$f=h\circ\gamma_{q}$.
+		\item 存在$M$的基和$N$中的族$\left(u_{\nu}\right)_{\substack{\nu\in\N^{\left(I\right)}\\ \left|\nu\right|=q}}$,对每个$\left(\lambda_{i}\right)_{i\in I}\in A^{\left(I\right)}$有$	f\left(\sum\limits_{i\in I}\lambda_{i}e_{i}\right)=\sum\limits_{\substack{\nu\in\N^{\left(I\right)}\\ \left|\nu\right|=q}}\lambda^{\nu}u_{\nu}$.
+		\item 对$M$的每个基$\left(e_{i}\right)_{i\in I}$,存在$N$中的族$\left(u_{\nu}\right)_{\substack{\nu\in\N^{\left(I\right)}\\ \left|\nu\right|=q}}$,对每个$\left(\lambda_{i}\right)_{i\in I}\in A^{\left(I\right)}$有$f\left(\sum\limits_{i\in I}\lambda_{i}e_{i}\right)=\sum\limits_{\substack{\nu\in\N^{\left(I\right)}\\ \left|\nu\right|=q}}\lambda^{\nu}u_{\nu}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{齐次多项式函数}{}
+	沿用命题(\ref{prop:equivalent-condition-of-homogeneous-polynomial-mappings})的设定.其中的陈述之一成立时,称$f$为从$M$到$N$的$q$次齐次多项式函数.记
+	\begin{align*}
+		\Pol_{A}^{q}\left(M,N\right)\coloneq\Pol^{q}\left(M,N\right)
+	\end{align*}
+	为从$M$到$N$的齐次多项式函数组成的集合.
+\end{definition}
+
+\begin{remark}{}{}
+	我们有如下典范的$A$-模同态,它们都是满射:
+	\begin{gather*}
+		\Mult_{A}\left(M,\ldots,M;N\right)\to\Pol_{A}^{q}\left(M,N\right),g\mapsto g\circ\id_{M^{q}},\\
+		\Hom_{A}\left(\mathsf{TS}^{q}\left(M\right),N\right)\to\Pol_{A}^{q}\left(M,N\right),h\mapsto h\circ\gamma_{q}.
+	\end{gather*}
+\end{remark}
+
+\begin{proposition}{多项式映射的复合}{}
+	设$M,N,P$是自由模,$q,r\in\N$.若$f\in\Pol_{A}^{q}\left(M,N\right),g\in\Pol_{A}^{r}\left(N,P\right)$,则$g\circ f\in\Pol_{A}^{qr}\left(M,P\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$M$是自由模,$q\in\N$.若$N\to N,y\mapsto q!y$是模自同构,则对每个$f\in\Pol_{A}^{q}\left(M,N\right)$,存在唯一的$q$重线性映射$h:M^{q}\to N$使$f=h\circ\id_{M^{q}}$.具体地,对每个$x_{1},\ldots,x_{q}\in M$有
+	\begin{align*}
+		h\left(x_{1},\ldots,x_{q}\right)=\frac{\left(-1\right)^{q}}{q!}\sum\limits_{H\subseteq\left[1,q\right]}\left(-1\right)^{\left|H\right|}f\left(\sum\limits_{i\in H}x_{i}\right).
+	\end{align*}
+	我们称$h$是$f$的极化形式,上述公式称为极化公式.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$M$是自由模,$q\geq 1$,$u:\Hom_{A}\left(\mathsf{TS}^{q}\left(M\right),N\right)\to\Pol_{A}^{q}\left(M,N\right)$是典范满射.下列情形之一成立时,$u$是$A$-模同构:
+	\begin{itemize}
+		\item $A$是无限整环,$N$无挠.
+		\item $N\to N,y\mapsto q!y$是单射.
+	\end{itemize}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$M$是自由模,$q\geq 1$,$\left(e_{i}\right)_{i\in I}$是$M$的基.若下列情形之一成立:
+	\begin{itemize}
+		\item $A$是无限整环,$N$无挠;
+		\item $N\to N,y\mapsto q!y$是单射,
+	\end{itemize}
+	则对每个$h\in\Pol_{A}^{q}\left(M,N\right)$,在$N$中有唯一的族$\left(u_{\nu}\right)_{\substack{\nu\in\N^{\left(I\right)}\\ \left|\nu\right|=q}}$,对每个$\left(\lambda_{i}\right)_{i\in I}\in A^{\left(I\right)}$有$h\left(\sum\limits_{i\in I}\lambda_{i}e_{i}\right)=\sum\limits_{\substack{\nu\in\N^{\left(I\right)}\\ \left|\nu\right|=q}}\lambda^{\nu}u_{\nu}$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

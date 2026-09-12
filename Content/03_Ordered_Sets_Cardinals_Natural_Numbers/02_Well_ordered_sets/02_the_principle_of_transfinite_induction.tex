@@ -1,0 +1,82 @@
+\section{超限归纳原理}
+
+\begin{lemma}{}{}
+	设$E$是良序集,$\mathfrak{S}$是$E$的一些始段组成的集合,满足下列条件:
+	\begin{itemize}
+		\item 对任意$\mathfrak{S}_{0}\subseteq\mathfrak{S}$有$\bigcup\limits_{S\in\mathfrak{S}_{0}}S\in\mathfrak{S}$.
+		\item 对任意$x\in E$有$S_{x}\in\mathfrak{S}\implies S_{x}\cup\left\{x\right\}\in\mathfrak{S}$.
+	\end{itemize}
+	那么$E$的每个始段都属于$\mathfrak{S}$.
+\end{lemma}
+
+\begin{metatheorem}{超限归纳原理}{}
+	设$\mathfrak{T}$是理论,集合$E$配备良序$\leq$,$R\left\{x\right\}$是$\mathfrak{T}$的公式(其中$x$不是$\mathfrak{T}$的常元),满足
+	\begin{align*}
+		x\in E\wedge\left(\forall y\in E\left(y<x\right)\implies R\left\{y\right\}\right)\implies R\left\{x\right\}
+	\end{align*}
+	是$\mathfrak{T}$的定理(上述公式称为归纳假设),则公式$x\in E\implies R\left\{x\right\}$是$\mathfrak{T}$中的定理.
+\end{metatheorem}
+
+\begin{definition}{}{}
+	设$E$是良序集,$F$是集合.对任意$x\in E$和$g:E\to F$,记$g^{\left(x\right)}\coloneq g|_{S_{x}}$.
+\end{definition}
+
+\begin{metatheorem}{超限递归原理}{}
+	设$\mathfrak{T}$是理论,$E$是良序集,$u$和$T\left\{u\right\}$分别是$\mathfrak{T}$的项和公式,则存在唯一的集合$U$和$f:E\to U$使得
+	\begin{align*}
+		\forall x\in E\left(f\left(x\right)=T\left\{f^{\left(x\right)}\right\}\right).
+	\end{align*}
+\end{metatheorem}
+
+\begin{remark}{}{}
+	记号同上.若存在集合$F$,对每个从$E$的一个始段$E$到$F$的一个子集的映射$h$有$T\left\{h\right\}\in F$,则应用上述元定理所得到的集合$U$是$F$的子集.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

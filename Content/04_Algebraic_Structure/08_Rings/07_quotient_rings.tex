@@ -1,0 +1,56 @@
+\section{商环}
+
+记号约定:$A,B$是幺环,$\mathfrak{a}$是$A$的双边理想.
+
+\begin{definition}{模$\mathfrak{a}$同余关系}{}
+	定义$A$上的关系$\sim_{\mathfrak{a}}$如下:$\forall x,y\in A\left(x\sim_{\mathfrak{a}} y\iff x-y\in\mathfrak{a}\right)$.称$\sim_{\mathfrak{a}}$为模$\mathfrak{a}$同余关系.
+\end{definition}
+
+\begin{proposition}{模$\mathfrak{a}$同余关系是相容等价关系}{}
+	$\sim_{\mathfrak{a}}$是$R$上的等价关系,它和$A$的加法和乘法相容.
+\end{proposition}
+
+\begin{remark}{记号说明}{}
+	对$x,y\in A$,若$x\sim_{\mathfrak{a}}y$,则记$x\equiv y\pmod{\mathfrak{a}}$.
+\end{remark}
+
+\begin{definition}{商环}{}
+	记$A/\mathfrak{a}\coloneq A/\sim_{\mathfrak{a}}$,为其配备$A$上的加法和乘法定义的商运算.称$A/\mathfrak{a}$为$A$关于$\mathfrak{a}$的商环.
+\end{definition}
+
+显然$A/A\simeq\left\{0\right\},A/\left\{0\right\}\simeq A$.本节接下来的内容里,记$\pi:A\twoheadrightarrow A/I$为典范满射.
+
+\begin{proposition}{典范满射$\pi$是环同态}{}
+	$\pi\in\Hom_{\mathsf{Ring}}\left(A,A/\mathfrak{a}\right)$.
+\end{proposition}
+
+\begin{theorem}{商环的泛性质}{}
+	设$f\in\Hom_{\mathsf{Ring}}\left(A,B\right)$.若$\mathfrak{a}\subseteq\ker\left(f\right)$,则如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			A && {A/\mathfrak{a}} \\
+			& B
+			\arrow["\pi", two heads, from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{theorem}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,则$\ker\left(f\right)$是$B$的双边理想,$\im\left(B\right)$是$B$的子环.
+\end{proposition}
+
+\begin{theorem}{环同构的典范分解(环同构第一定理)}{}
+	设$f\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,$\iota:A/\ker\left(f\right)\hookrightarrow\im\left(f\right)$是典范嵌入,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			A & {A/\ker\left(f\right)} \\
+			B & {\im\left(f\right)}
+			\arrow["\pi", two heads, from=1-1, to=1-2]
+			\arrow["f"', from=1-1, to=2-1]
+			\arrow["\iota", hook', from=1-2, to=2-2]
+			\arrow["{\exists!\bar{f}}", from=2-2, to=2-1]
+		\end{tikzcd}
+	\end{center}
+\end{theorem}

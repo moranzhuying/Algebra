@@ -1,0 +1,58 @@
+\section{半单自同态·绝对半单自同态}
+
+记号约定:$V$是有限维$K$-向量空间.
+
+\begin{definition}{半单自同态}{}
+	若$V$的每个$\mathcal{T}$-不变子空间$W$都有一个$\mathcal{T}$-不变的直和补,则称$\mathcal{T}$是半单的.
+\end{definition}
+
+\begin{remark}{}{}
+	$V_{\mathcal{T}}$是半单$K[X]$-模$\iff$ $\mathcal{T}$是半单的.
+\end{remark}
+
+\begin{proposition}{线性自同态半单的极小多项式判定}{}
+	$\mathcal{T}$半单$\iff$ $\Min_{\mathcal{T}}$在$K\left[X\right]$中没有重因子.
+\end{proposition}
+
+\begin{corollary}{域扩张保持线性自同态的半单性}{}
+	设$L$是$K$的扩域,$\rho:K\to L$是环同态.
+	\begin{enumerate}
+		\item 若$\rho^{\ast}\left(\mathcal{T}\right)$是半单的,则$\mathcal{T}$是半单的.
+		\item 若$\mathcal{T}$是半单的,$L$是$K$的可分扩张,则$\rho^{\ast}\left(\mathcal{T}\right)$是半单的.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{绝对半单自同态的等价条件}{equivalent-condition-of-absolute-semisimple-endomorphisms}
+	下列陈述等价:
+	\begin{enumerate}
+		\item 对$K$的每个扩域$L$和每个环同态$\rho:K\to L$,线性自同态$\rho^{\ast}\left(\mathcal{T}\right)$都是半单的.
+		\item 存在$K$的扩域$F$和环同态$\sigma:K\to F$,使得$\sigma^{\ast}\left(\mathcal{T}\right)$可对角化.
+		\item $\Min_{\mathcal{T}}$是$K[X]$中的可分多项式.
+		\item 存在$K$的扩域$L$,存在环同态$\rho:K\to L$,使得$L$是完美域且$\rho^{\ast}\left(\mathcal{T}\right)$是半单的.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{绝对半单线性自同态}{}
+	命题(\ref{prop:equivalent-condition-of-absolute-semisimple-endomorphisms})的陈述之一为真时,称$\mathcal{T}$是绝对半单的.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$\mathfrak{F}\subseteq\End_{K}\left(V\right)$,$A$是$\mathfrak{F}\cup\left\{\id_{V}\right\}$生成的$K$-子代数.下列陈述等价:
+	\begin{enumerate}
+		\item 存在$F$的扩域$L$和环同态$\rho:K\to L$,使得$\rho^{\ast}\left(\mathfrak{F}\right)$可对角化.
+		\item $A$是平坦$K$-代数.
+		\item $\mathfrak{F}$的每个元素都是绝对半单的,并且$\mathfrak{F}$中的任意两个元素都可交换.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	这三个陈述之一为真时,存在$K$的有限扩张$F$和环同态$\sigma:K\to F$使得$\sigma^{\ast}\left(\mathfrak{F}\right)$可对角化.具体而言:
+	\begin{itemize}
+		\item $F$可以是$K$的Galois扩张,
+		\item $L$可以是$\mathfrak{F}$中所有元素的极小多项式的分裂域.
+	\end{itemize}
+\end{remark}
+
+\begin{corollary}{}{}
+	设$\mathcal{U}\in\End_{K}\left(V\right)$.若$\mathcal{T},\mathcal{U}$可交换且都是绝对半单的,则$\mathcal{T}+\mathcal{U}$和$\mathcal{T}\circ\mathcal{U}$都是绝对半单的.
+\end{corollary}

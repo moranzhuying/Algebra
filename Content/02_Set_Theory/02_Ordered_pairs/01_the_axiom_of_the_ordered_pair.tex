@@ -1,0 +1,47 @@
+\chapter{有序对}
+
+\section{有序对公理}
+
+\begin{definition}{有序对}{}
+	设$T,U$是项.我们把$\tau TU$记作$\left(T,U\right)$.
+\end{definition}
+
+\begin{axiom}{有序对公理}{}
+	$\left(\forall x\right)\left(\forall x^{\prime}\right)\left(\forall y\right)\left(\forall y^{\prime}\right)\left(\left(\left(x,y\right)=\left(x^{\prime},y^{\prime}\right)\right)\implies\left(x=y\wedge x^{\prime}=y^{\prime}\right)\right)$.
+\end{axiom}
+
+\begin{theorem}{有序对相等的等价条件}{}
+	$\left(\forall x\right)\left(\forall x^{\prime}\right)\left(\forall y\right)\left(\forall y^{\prime}\right)\left(\left(\left(x,y\right)=\left(x^{\prime},y^{\prime}\right)\right)\iff\left(x=y\wedge x^{\prime}=y^{\prime}\right)\right)$.
+\end{theorem}
+
+\begin{definition}{是有序对关系}{}
+	公式$\left(\exists x\right)\left(\exists y\right)\left(z=\left(x,y\right)\right)$读作``$z$是一个有序对''.
+\end{definition}
+
+\begin{definition}{有序对的分量}{}
+	公式$\left(\exists x\right)\left(\exists y\right)\left(z=\left(x,y\right)\right)$为真时,把$\tau_{x}\left(\left(\exists y\right)\left(z=\left(x,y\right)\right)\right)$和$\tau_{y}\left(\left(\exists x\right)\left(z=\left(x,y\right)\right)\right)$记作$\pr_{1}\left(z\right)$和$\pr_{2}\left(z\right)$,依次称为$z$的第一分量和第二分量.
+\end{definition}
+
+\begin{proposition}{投影的等价性质}{}
+	设$z$是有序对,则$\exists y\left(z=\left(x,y\right)\right)\iff x=\pr_{1}\left(z\right)$和$\exists x\left(z=\left(x,y\right)\right)\iff y=\pr_{2}\left(z\right)$都是定理.
+\end{proposition}
+
+\begin{proposition}{有序对的完全表征}{}
+	$z=\left(x,y\right)\iff \left(z\text{是有序对}\wedge x=\pr_{1}\left(z\right)\wedge y=\pr_{2}\left(z\right)\right)$.
+\end{proposition}
+
+\begin{proposition}{投影运算的性质}{}
+	\begin{enumerate}
+		\item $\forall x\forall y\left(\pr_{1}\left(x,y\right)=x\wedge\pr_{2}\left(x,y\right)=y\right)$.
+		\item $\forall z\left(z=\left(\pr_{1}\left(z\right),\pr_{2}\left(z\right)\right)\iff z\text{是有序对}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{二元公式和一元公式的等价转换}{}
+	设$R\left\{x,y\right\}$是含不同字母$x,y$的公式,字母$z$在$R$中未出现,公式$S\left\{z\right\}$和$\exists x\exists y\left(z=\left(x,y\right)\wedge R\left\{x,y\right\}\right)$相同.
+	\begin{enumerate}
+		\item $S\left\{z\right\}$和$z\text{是有序对}\wedge R\left\{\pr_{1}\left(z\right),\pr_{2}\left(z\right)\right\}$等价.
+		\item $R\left\{x,y\right\}$和$S\left\{\left(x,y\right)\right\}$等价.
+		\item $R\left\{x,y\right\}$和$\exists z\left(z=\left(x,y\right)\wedge S\left\{z\right\}\right)$等价.
+	\end{enumerate}
+\end{proposition}

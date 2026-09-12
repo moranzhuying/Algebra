@@ -1,0 +1,47 @@
+\chapter{向量空间的标量除环限制}
+
+\section{\texorpdfstring{$K'$}{K'}-结构}
+
+记号约定:
+
+\begin{itemize}
+	\item $K$是除环,$K^{\prime}$是其子除环,$\rho:K^{\prime}\hookrightarrow K$是典范嵌入.
+	\item $V$是右$K$-向量空间,$V^{\prime}$是$V$的右$K$-子空间.
+\end{itemize}
+
+\begin{proposition}{$K^{\prime}$-结构的等价条件}{equivalent-condition-of-k-prime-structure}
+	下列陈述等价:
+	\begin{enumerate}
+		\item 典范映射$\rho_{\ast}\left(V^{\prime}\right)\to V$是双射.
+		\item 对每个$K$-向量空间$W$和$f\in\Hom_{K^{\prime}}\left(V,W\right)$,如下图表交换:
+		\begin{center}
+			\begin{tikzcd}
+				{V^{\prime}} && {\rho_{\ast}\left(V\right)} \\
+				& W
+				\arrow["{\phi_{V}}", hook, from=1-1, to=1-3]
+				\arrow["f"', from=1-1, to=2-2]
+				\arrow["{\rho_{\ast}\left(f\right)}", from=1-3, to=2-2]
+			\end{tikzcd}
+		\end{center}
+		\item 对$V^{\prime}$的每个基集$B$,$\rho_{\ast}\left(B\right)$都是$V$的基集.
+		\item $V^{\prime}$有一个基集$B$使得$\rho_{\ast}\left(B\right)$是$V$的基集.
+		\item $V^{\prime}$生成$V$,并且对$V^{\prime}$的每个自由子集$S$,$\rho_{\ast}\left(S\right)$是$V$的自由子集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$K^{\prime}$-结构}{}
+	命题(\ref{prop:equivalent-condition-of-k-prime-structure})中的陈述有一个为真时,称$V^{\prime}$是$V$上的一个$K^{\prime}$-结构.
+\end{definition}
+
+\begin{example}{$K$-结构的例子}{}
+	\begin{enumerate}
+		\item 设$B$是$V$的基集,则$\rho_{\ast}\left(B\right)$生成的$K^{\prime}$-子空间是$V$上的$K^{\prime}$-结构.
+		\item 设$K$是域,$V=K\left[X_{1},\ldots,X_{n}\right]$(其中$n\geq 1$),则$K^{\prime}\left[X_{1},\ldots,X_{n}\right]$是$V$的一个$K^{\prime}$-结构.
+	\end{enumerate}
+\end{example}
+
+
+
+
+
+

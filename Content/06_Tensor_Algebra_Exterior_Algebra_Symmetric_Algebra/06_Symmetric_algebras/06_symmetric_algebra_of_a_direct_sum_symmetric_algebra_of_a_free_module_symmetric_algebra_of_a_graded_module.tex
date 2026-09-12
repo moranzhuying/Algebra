@@ -1,0 +1,82 @@
+\section{直和,自由模,分次模的对称代数}
+
+记号约定:$A$是交换环.
+
+\begin{proposition}{}{}
+	设$\left(M_{\lambda}\right)_{\lambda\in\Lambda}$是一族$A$-模,对每个$\lambda\in\Lambda$,$f_{\lambda}:\mathsf{S}\left(M_{\lambda}\right)\to\bigotimes\limits_{\lambda\in\Lambda}\mathsf{S}\left(M_{\lambda}\right)$是典范代数同态,$j_{\lambda}:M_{\lambda}\to\bigboxplus\limits_{\lambda\in\Lambda}M_{\lambda}$是典范单射.
+	\begin{enumerate}
+		\item 存在唯一的$A$-代数同构$g_{M}:\bigotimes\limits_{\lambda\in\Lambda}\mathsf{S}\left(M_{\lambda}\right)\to\mathsf{S}\left(\bigboxplus\limits_{\lambda\in\Lambda}M_{\lambda}\right)$满足$\forall\lambda\in\Lambda\left(\mathsf{S}\left(j_{\lambda}\right)=g\circ f_{\lambda}\right)$.
+		\item $g_{M}$也是$\N$型分次代数同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	设$\left(N_{\lambda}\right)_{\lambda\in\Lambda}$是一族$A$-模,$\forall\lambda\in\Lambda\left(v_{\lambda}\in\Hom_{A-\mathsf{Alg}}\left(M_{\lambda},N_{\lambda}\right)\right)$,则如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			{\bigboxplus\limits_{\lambda\in\Lambda}S(M_{\lambda})} & {S(\bigboxplus\limits_{\lambda\in\Lambda}M_{\lambda})} \\
+			{\bigboxplus\limits_{\lambda\in\Lambda}S(N_{\lambda})} & {S(\bigboxplus\limits_{\lambda\in\Lambda}N_{\lambda})}
+			\arrow["{g_{M}}", from=1-1, to=1-2]
+			\arrow["{\bigboxplus\limits_{\lambda\in\Lambda}S(v_{\lambda})}"', from=1-1, to=2-1]
+			\arrow["{S(\bigboxplus\limits_{\lambda\in\Lambda}v_{\lambda})}", from=1-2, to=2-2]
+			\arrow["{g_{N}}"', from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{remark}
+
+\begin{corollary}{对称幂的直和分解}{}
+	设$\left(M_{\lambda}\right)_{\lambda\in\Lambda}$是一族$A$-模,对每个$\boldsymbol{\nu}=\left(\nu_{\lambda}\right)_{\lambda\in\Lambda}\in\N^{\left(\Lambda\right)}$,记
+	\begin{align*}
+		J_{\boldsymbol{\nu}}=\supp\left(\boldsymbol{\nu}\right),\mathsf{S}^{\boldsymbol{\nu}}\left(M\right)=\bigotimes\limits_{\lambda\in J}\mathsf{S}^{n_{\lambda}}\left(M_{\lambda}\right).
+	\end{align*}
+	那么对每个$n\in\N$,$\mathsf{S}^{n}\left(M\right)$典范同构于$\bigboxplus\limits_{\substack{\boldsymbol{\nu}\in\N^{\left(\Lambda\right)}\\ \left|\boldsymbol{\nu}\right|=n}}\mathsf{S}^{\nu}\left(M\right)$.
+\end{corollary}
+
+\begin{theorem}{自由模的对称代数基}{}
+	设$M$是自由$A$-模,基为$\left(e_{\lambda}\right)_{\lambda\in\Lambda}$.对每个$\boldsymbol{\alpha}\in\N^{\left(\Lambda\right)}$,记$e^{\boldsymbol{\alpha}}=\prod\limits_{\lambda\in\Lambda}e_{\lambda}^{\boldsymbol{\alpha}\left(\lambda\right)}$,则$\left(e^{\boldsymbol{\alpha}}\right)_{\boldsymbol{\alpha}\in\N^{\left(\Lambda\right)}}$是$A$-模$\mathsf{S}\left(M\right)$的基.
+\end{theorem}
+
+\begin{remark}{}{}
+	这个定理表明$\mathsf{S}\left(M\right)\to A\left[\left(X_{\lambda}\right)_{\lambda\in\Lambda}\right],e_{\lambda}\mapsto X_{\lambda}$是典范的$A$-模同构.特别地,如果$E$是交换$A$-代数,那么
+	\begin{align*}
+		\forall f\in\Hom_{\mathsf{Set}}\left(\Lambda,E\right)\exists!\bar{f}\in\Hom_{A-\mathsf{Alg}}\left(\mathsf{S}\left(M\right),E\right)\forall\lambda\in\Lambda\left(\bar{f}\left(e_{\lambda}\right)=f\left(\lambda\right)\right).
+	\end{align*}
+	上述结果同样可以通过多项式代数和对称代数的泛性质得到.
+\end{remark}
+
+\begin{corollary}{投射模的对称代数也是投射模}{}
+	如果$M$是投射模,那么$\mathsf{S}\left(M\right)$也是投射模.
+\end{corollary}
+
+\begin{proposition}{分次模的张量代数}{}
+	设$\Delta$是交换幺半群(加法记号),$M$是带有分次$\left(M_{\alpha}\right)_{\alpha\in\Delta}$的$A$-模.对每个$\left(\alpha,n\right)\in\Delta\times\N$,定义
+	\begin{align*}
+		\mathsf{S}^{\alpha,n}\left(M\right)=\bigboxplus\limits_{\substack{\nu=\left(n_{\lambda}\right)_{\lambda\in\Lambda}\in\N^{\left(\Lambda\right)},\left(\alpha_{\lambda}\right)_{\lambda\in\supp\left(\nu\right)}\in\Delta^{\supp\left(\nu\right)}\\ \sum\limits_{\lambda\in\Lambda}n_{\lambda}=n,\sum\limits_{\lambda\in\Lambda}n_{\lambda}\alpha_{\lambda}=\alpha}}\mathsf{S}^{n_{\lambda}}\left(M_{\alpha_{\lambda}}\right).
+	\end{align*}
+	\begin{enumerate}
+		\item $\left(\mathsf{S}^{\alpha,n}\left(M\right)\right)_{\alpha\in\Delta,n\in\N}$是$\mathsf{T}\left(M\right)$上的$\Delta\times\N$型分次.
+		\item $\mathsf{S}\left(M\right)$上既与$\mathsf{S}\left(M\right)$的$A$-代数结构相容,又诱导$\mathsf{S}^{1}\left(M\right)$上的$\Delta$型分次的分次只有$\left(\mathsf{S}^{\alpha,n}\left(M\right)\right)_{\alpha\in\Delta,n\in\N}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	如果$\Delta=\Z$,那么可以为$\mathsf{S}\left(M\right)$配备$\Z$型全分次.在此全分次结构下,如果$F$是$\Z$型分次交换代数,$f:M\to F$是$0$次齐次线性映射,则$f$诱导的代数同态$\mathsf{S}\left(M\right)\to F$也是$\Z$型分次代数同态.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

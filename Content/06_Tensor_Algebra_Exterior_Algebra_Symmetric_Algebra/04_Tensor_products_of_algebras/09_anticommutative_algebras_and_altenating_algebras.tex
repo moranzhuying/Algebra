@@ -1,0 +1,101 @@
+\section{反交换代数和交错代数}
+
+记号约定:$A$是环,$E$是$\Z$型分次$A$-代数.
+
+\begin{definition}{反交换代数,交错代数}{}
+	\begin{enumerate}
+		\item 若$E$中任意两个非零的齐次元素$x,y$都满足$xy=\left(-1\right)^{\deg\left(x\right)\deg\left(y\right)}$,则称$E$是反交换$A$-代数.
+		\item 若$E$是反交换$A$-代数,并且$E$中每个奇数次的齐次元$x$都满足$x^{2}=0_{E}$,则称$E$是交错$A$-代数.
+		\item 设$E$的分次为$\left(E_{n}\right)_{n\in\Z}$.定义$E^{+}=\bigotimes\limits_{n\in\Z}E_{2n}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$E$是反交换的,那么$E^{+}\subseteq Z\left(E\right)$,从而是$E$的交换子代数.
+		\item 如果$2\cdot 1_{E}\neq 0_{E}$,那么$E$是反交换的$\implies$ $E$是交错的.
+	\end{enumerate}
+\end{remark}
+
+\begin{lemma}{满足饭交换代数的子代数}{}
+	设$S$是$E$中所有非零齐次元素构成的集合,$F\subseteq E$,并且$F$中元素的所有非零齐次分量$x$和每个$y\in S$都满足
+	\begin{align*}
+		xy=\left(-1\right)^{\deg\left(x\right)\deg\left(y\right)},
+	\end{align*}
+	那么$F$是$E$的$\Z$型分次子代数.
+\end{lemma}
+
+\begin{proposition}{反交换代数和交错代数的生成集判定}{}
+	设$S$是$E$中的非零齐次元构成的生成集.
+	\begin{enumerate}
+		\item $E$是反交换的$\iff$ $\forall x,y\in S\left(xy=\left(-1\right)^{\deg\left(x\right)\deg\left(y\right)}\right)$.
+		\item $E$是交错的的$\iff$ $E$是反交换的,并且$S$中每个奇数次齐次元$x$都满足$x^{2}=0_{E}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{斜张量积保持反交换性和反交错性}{}
+	设$F$是$\Z$型分次$A$-代数.
+	\begin{enumerate}
+		\item 若$E,F$都是反交换的,则$E{}^{g}\otimes_{A}F$是反交换的.
+		\item 若$E,F$都是交错的,则$E{}^{g}\otimes_{A}F$是交错的.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{标量延拓保持反交换性和交错性}{}
+	设$B$是环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$.
+	\begin{enumerate}
+		\item 若$E$是反交换的,则$\rho^{\ast}\left(B\right)$是反交换的.
+		\item 若$E$是交错的,则$\rho^{\ast}\left(B\right)$是交错的.
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	设$E$是反交换的,则典范映射$m:E\otimes_{A}E\to E$是从$E{}^{g}\otimes_{A}E$到$E$的分次$A$-代数同态.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

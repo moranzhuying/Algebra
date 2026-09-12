@@ -1,0 +1,94 @@
+\chapter{等价关系}
+
+\section{等价关系的定义}
+
+\begin{definition}{对称关系,传递关系}{}
+	设$R\left\{x,y\right\}$是关于两个不同的字母$x,y$的公式.
+	\begin{enumerate}
+		\item 如果$R\left\{x,y\right\}\implies R\left\{y,x\right\}$,则称$R\left\{x,y\right\}$(相对$x,y$)是对称的.
+		\item 设$z$是未在$R$中出现的字母.若$\left(R\left\{x,y\right\}\wedge R\left\{y,z\right\}\right)\implies R\left\{x,z\right\}$,称$R\left\{x,y\right\}$(相对$x,y$)是传递的.
+	\end{enumerate}
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 公式$x=y$既是对称的,也是传递的.
+		\item 公式$X\subseteq Y$是传递的,但不是对称的.
+		\item 公式$X\cap Y=\emptyset$是对称的,但不是传递的.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{(逻辑意义的)等价关系}{}
+	设$R\left\{x,y\right\}$是关于两个不同的字母$x,y$的公式.若$R$既是对称的,又是传递的,则称$R$是等价(型)关系.
+	
+	此时,我们通常把$R\left\{x,y\right\}$记作$x\equiv y\pmod{R}$,读作``$x$和$y$模$R$等价''.
+\end{definition}
+
+\begin{remark}{}{}
+	$R$是等价关系时$R\left\{x,y\right\}\implies R\left\{x,x\right\}\wedge R\left\{y,y\right\}$.
+\end{remark}
+
+\begin{definition}{自反关系}{}
+	设$E$是集合,$R\left\{x,y\right\}$是关于两个不同的字母$x,y$的公式.如果$R\left\{x,x\right\}\iff x\in E$,则称$R$(在$E$上)是自反的.
+\end{definition}
+
+\begin{definition}{集合上的(逻辑意义的)等价关系}{}
+	设$E$是集合.$E$上的等价关系是指在$E$上是自反的等价关系.
+\end{definition}
+
+\begin{proposition}{等价关系与集合的关系}{}
+	\begin{enumerate}
+		\item 如果$E$是集合,$R\left\{x,y\right\}$是$E$上的等价关系,则$E$上存在相对$R$的二元关系.
+		\item 如果$G$是相对等价关系$R\left\{x,y\right\}$的二元关系,那么$R\left\{x,y\right\}$是$\pr_{1}\left(G\right)$上的等价关系.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{等价对应}{}
+	设$E$是集合,$\Gamma\coloneq\left(G,E,E\right)$是对应.若$G$使得公式$\left(x,y\right)\in G$是$E$上的等价关系,则称$\Gamma$是等价对应.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 公式$x=y$是等价关系,但是不存在相对它的二元关系.
+		\item 设$E$是集合,则公式$x=y\wedge x\in E$是$E$上的等价关系,相对它的二元关系是$E\times E$的对角线.
+		\item 设$X,Y$是集合,那么公式``存在从$X$到$Y$的双射''是等价关系,但是不存在相对它的二元关系.
+		\item 设$E$是集合,则公式$x\in E\wedge y\in E$是$E$上的等价关系,相对它的二元关系是$E\times E$.
+		\item 设$E$是集合,$A\subseteq E$,则公式$\left(x\in E\setminus A\wedge y=x\right)\vee\left(x\in A\wedge y\in A\right)$是$E$上的等价关系.
+		\item 公式$x\in\Z\wedge y\in\Z\wedge \left(x-y\right)\mid 4$是$\Z$上的等价关系.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{等价对应的判别条件}{}
+	设$X$是集合,$\Gamma$是$X$到$X$的等价关系,则$\Gamma$是$X$上的等价对应$\iff$ $X$是$\Gamma$的定义域,$\Gamma=\Gamma^{-1}$且$\Gamma\circ\Gamma=\Gamma$.
+\end{proposition}
+
+\begin{remark}{术语说明(重要!)}{}
+	注意,现代的教科书通常不会严格区分对应和对应和图像,而是认为二者相等.在此意义下,我们先前提到的二元关系就是这里的图像.现代术语中提到的二元关系,在布尔巴基的术语下都应该理解为图像满足某些性质的对应.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

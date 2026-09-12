@@ -1,0 +1,90 @@
+\section{正合列}
+
+记号约定:$A$是环,$E,F,G,H$是$A$-模.
+
+\begin{definition}{正合列,短正合列}{}
+	设$n\geq 1$,$\left(E_{i}\right)_{i\in\Z}$是一族$A$-模,除$M_{1},\ldots,M_{n}$外的模都是零模,$\forall i\in\Z\left(f_{i}\in\Hom_{A}\left(E_{i-1},E_{i}\right)\right)$.将$\left(\left(E_{i},f_{i}\right)\right)_{i\in\Z}$写作
+	\begin{align*}
+		\cdots\xlongrightarrow{f_{i-1}}E_{i}\xlongrightarrow{f_{i}}E_{i+1}\xlongrightarrow{f_{i+1}}\cdots.
+	\end{align*}
+	\begin{enumerate}
+		\item 设$i\in\Z$.若$\im\left(f_{i-1}\right)=\ker\left(f_{i}\right)$,则称该序列在$E_{i}$处正合.
+		\item 若$\forall i\in\Z\left(\im\left(f_{i-1}\right)=\ker\left(f_{i}\right)\right)$,则称该序列正合(或该序列为正合列).
+		\item 若该序列正合,$n=5$,$M_{1}$和$M_{5}$是零模,则称该序列为短正合列.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	在正合列中,当论证过程中不需要明确引用同态的名称时,通常会省略掉标记这些同态的字母.
+\end{remark}
+
+\begin{proposition}{基本的短正合列}{}
+	设$f\in\Hom_{A}\left(E,F\right)$.
+	\begin{enumerate}
+		\item $0\xlongrightarrow{}E\xlongrightarrow{f}F$正合$\iff$ $f$是单射.
+		\item $E\xlongrightarrow{f}F\xlongrightarrow{}0$正合$\iff$ $f$是满射.
+		\item $0\xlongrightarrow{}E\xlongrightarrow{f}F\xlongrightarrow{}0$正合$\iff$ $f$是双射.
+		\item 设$M$是$E$的子模,$i:M\hookrightarrow E$和$p:E\twoheadrightarrow E/M$都是典范映射,则$0\xlongrightarrow{}M\xlongrightarrow{i}E\xlongrightarrow{p}E/M\xlongrightarrow{}0$正合.
+		\item 设$i:\ker\left(f\right)\hookrightarrow E$和$p:F\twoheadrightarrow\coker\left(f\right)$均为典范映射,则$0\xlongrightarrow{}\ker\left(f\right)\xlongrightarrow{i}E\xlongrightarrow{f}F\xlongrightarrow{p}\coker\left(f\right)\xlongrightarrow{}0$正合.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{短正合列与扩张}{}
+	若$0\xlongrightarrow{}E\xlongrightarrow{f}F\xlongrightarrow{g}G\xlongrightarrow{}0$正合,则称$F$是$G$被$E$的扩张.
+\end{remark}
+
+\begin{remark}{长正合列中的同构}{}
+	若$E\xlongrightarrow{f}F\xlongrightarrow{g}G\xlongrightarrow{h}H$正合,则有典范同构$\coker\left(f\right)\simeq\ker\left(h\right)$.
+\end{remark}
+
+\begin{remark}{长度为$3$的正合列的分解}{}
+	$E\xlongrightarrow{f}F\xlongrightarrow{g}G$正合$\iff$存在$A$-模$S,T$和$A$-线性映射$a,b,c,d$使如下序列正合,并且$f=b\circ a,g=d\circ c$.
+	\begin{align*}
+		E\xlongrightarrow{a}S\xlongrightarrow{}0,0\xlongrightarrow{}S\xlongrightarrow{b}F\xlongrightarrow{c}T\xlongrightarrow{}0,0\xlongrightarrow{}T\xlongrightarrow{d}G.
+	\end{align*}
+\end{remark}
+
+\begin{remark}{正合性的推广}{}
+	本节的所有内容都可以推广到不一定交换的群,只需要做如下替换:
+	\begin{itemize}
+		\item 模$\mapsto$群(采用乘法记号,幺元用$1$).
+		\item 子模$\mapsto$正规子群.
+	\end{itemize}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

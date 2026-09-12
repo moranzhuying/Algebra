@@ -1,0 +1,35 @@
+\section{双重正向极限,正向极限的乘积}
+
+\begin{proposition}{}{}
+	设$I,J$是定向集,$\left(\left(E_{\alpha}^{\lambda}\right)_{\alpha\in I,\lambda\in J},\left(f_{\alpha\beta}^{\lambda\mu}\right)_{\alpha,\lambda\in I,\beta,\mu\in J}\right)$是集合的正向系统,则存在典范双射$\varinjlim\limits_{I\times J}E_{\alpha}^{\lambda}\to\varinjlim\limits_{J}\varinjlim\limits_{I}E_{\alpha}^{\lambda}$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$I,J$是定向集,$\left(\left(E_{\alpha}^{\lambda}\right)_{\alpha\in I,\lambda\in J},\left(f_{\alpha\beta}^{\lambda\mu}\right)_{\alpha,\lambda\in I,\beta,\mu\in J}\right),\left(\left(F_{\alpha}^{\lambda}\right)_{\alpha\in I,\lambda\in J},\left(g_{\alpha\beta}^{\lambda\mu}\right)_{\alpha,\lambda\in I,\beta,\mu\in J}\right)$是集合的正向系统,
+	\begin{align*}
+		\forall\alpha\in I\forall\lambda\in J\left(u_{\alpha}^{\lambda}\in\Hom_{\mathsf{Set}}\left(E_{\alpha}^{\lambda},F_{\alpha}^{\lambda}\right)\right).
+	\end{align*}
+	若$\left(u_{\alpha}^{\lambda}\right)_{\alpha\in I,\lambda\in J}$是映射的正向系统,则$\varinjlim\limits_{I\times J}u_{\alpha}^{\lambda}=\varinjlim\limits_{J}\varinjlim\limits_{I}u_{\alpha}^{\lambda}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$I$是定向集,$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right),\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向系统,$\left(f_{\alpha}\right)_{\alpha\in I}$和$\left(g_{\alpha}\right)_{\alpha\in I}$为二者各自的典范映射族.
+	\begin{enumerate}
+		\item $\left(\left(E_{\alpha}\times F_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\times g_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向系统.
+		\item $\left(f_{\alpha}\times g_{\alpha}\right)_{\alpha\in I}$是映射的正向系统.
+		\item $\left(f_{\alpha}\times g_{\alpha}\right)_{\alpha\in I}$诱导了典范双射$\varinjlim\left(f_{\alpha}\times g_{\alpha}\right):\varinjlim\left(E_{\alpha}\times F_{\alpha}\right)\to\left(\varinjlim E_{\alpha}\right)\times\left(\varinjlim F_{\alpha}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$I$是定向集,$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right),\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right),\left(\left(G_{\alpha}\right)_{\alpha\in I},\left(h_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向系统,
+	\begin{align*}
+		\forall\alpha\in I\left(u_{\alpha}\in\Hom_{\mathsf{Set}}\left(E_{\alpha},F_{\alpha}\right)\wedge v_{\alpha}\in\Hom_{\mathsf{Set}}\left(F_{\alpha},G_{\alpha}\right)\right).
+	\end{align*}
+	若$\left(u_{\alpha}\right)_{\alpha\in I},\left(v_{\alpha}\right)_{\alpha\in I}$都是映射的正向系统,则
+	\begin{enumerate}
+		\item $\left(u_{\alpha}\times v_{\alpha}\right)_{\alpha\in I}$构成映射的逆向系统.
+		\item 在典范双射意义下$\varinjlim\left(u_{\alpha}\times v_{\alpha}\right)=\left(\varinjlim u_{\alpha}\right)\times\left(\varinjlim v_{\alpha}\right)$.
+	\end{enumerate}
+\end{corollary}
+

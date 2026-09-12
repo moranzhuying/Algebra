@@ -1,0 +1,40 @@
+\section{两个集合的乘积}
+
+定理 1（笛卡尔积的存在性 / 具集性）
+\begin{theorem}{笛卡尔积的存在性}{}
+	$\forall X\forall Y\Coll_{z}\left(\exists x\exists y\left(z=\left(x,y\right)\right)\wedge x\in X\wedge y\in Y\right)$是定理.
+\end{theorem}
+
+\begin{definition}{笛卡尔积}{}
+	设$X,Y$是集合.把$\tau_{z}\left(\exists x\exists y\left(z=\left(x,y\right)\right)\wedge x\in X\wedge y\in Y\right)$记作$X\times Y$,并称之为$X$和$Y$的集合,$X$和$Y$依次称为$X\times Y$的第一因子和第二因子.
+\end{definition}
+
+\begin{proposition}{笛卡尔积的性质}{}
+	设$X,Y$是集合,则$\forall z\left(z\in X\times Y\iff\left(z\text{是有序对}\wedge \pr_{1}\left(z\right)\in X\wedge \pr_{2}\left(z\right)\in Y\right)\right)$.
+\end{proposition}
+
+\begin{proposition}{笛卡尔积的子集}{}
+	设$A,B,A^{\prime},B^{\prime}$是集合.
+	\begin{enumerate}
+		\item 若$A^{\prime}\subseteq A$且$B^{\prime}\subseteq B$,则$A^{\prime}\times B^{\prime}\subseteq A\times B$.
+		\item 若$B^{\prime}\neq\emptyset$,则$A^{\prime}\times B^{\prime}\subseteq A\times B\implies A^{\prime}\subseteq A$.
+		\item 若$A^{\prime}\neq\emptyset$,则$A^{\prime}\times B^{\prime}\subseteq A\times B\implies B^{\prime}\subseteq B$.
+		\item 若$A^{\prime}$和$B^{\prime}$都不是空集,则$A^{\prime}\times B^{\prime}\subseteq A\times B\iff \left(A^{\prime}\subseteq A\right)\wedge\left(B^{\prime}\subseteq B\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{笛卡尔积为空的判定}{}
+	设$A$和$B$是集合,则$A\times B=\emptyset\iff \left(A=\emptyset\vee B=\emptyset\right),A\times B\neq\emptyset\iff\left(A\neq\emptyset\wedge B\neq\emptyset\right)$.
+\end{proposition}
+
+\begin{definition}{高阶笛卡尔积}{}
+	设$A,B,C,D$是集合.
+	\begin{enumerate}
+		\item 定义$A\times B\times C$是$\left(A\times B\right)\times C$的简写,并且把$A\times B\times C$的元素$\left(\left(x,y\right),z\right)$简写为$\left(x,y,z\right)$,称之为三元组.
+		\item 定义$A\times B\times C\times D$是$\left(A\times B\times C\right)\times D$的简写,并且把$A\times B\times C\times D$的元素$\left(\left(w,x,y\right),z\right)$简写为$\left(w,x,y,z\right)$,称之为四元组.
+	\end{enumerate}
+\end{definition}
+
+
+
+

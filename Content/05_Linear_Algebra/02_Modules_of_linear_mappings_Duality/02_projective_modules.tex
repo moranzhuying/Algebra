@@ -1,0 +1,50 @@
+\section{投射模}
+
+记号约定:$A$是环,$E$是$A$-模.
+
+\begin{definition}{投射模}{}
+	设$E$是$A$-模.若对任一$A$-模的正合列$F_{1}\xlongrightarrow{f}F_{2}\xlongrightarrow{g}F_{3}$,序列
+	\begin{align*}
+		\Hom_{A}\left(P,F_{1}\right)\xlongrightarrow{\Hom_{A}\left(\id_{E},f\right)}\Hom_{A}\left(P,F_{2}\right)\xlongrightarrow{\Hom_{A}\left(\id_{E},g\right)}\Hom_{A}\left(P,F_{3}\right),
+	\end{align*}
+	正合,则称$E$是投射$A$-模.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族$A$-模,则$\bigboxplus\limits_{i\in I}E_{i}$是投射$A$-模$\iff$ $\left(E_{i}\right)_{i\in I}$是一族投射$A$-模.
+\end{proposition}
+
+\begin{corollary}{}{}
+	每个自由$A$-模都是投射$A$-模.
+\end{corollary}
+
+\begin{proposition}{}{}
+	下列命题等价:
+	\begin{enumerate}
+		\item $E$是投射$A$-模.
+		\item 对任一$A$-模的短正合列$0\xlongrightarrow{}F_{1}\xlongrightarrow{f}F_{2}\xlongrightarrow{g}F_{3}\xlongrightarrow{}0$,如下序列是短正合列:
+		\begin{align*}
+			0\xlongrightarrow{}\Hom_{A}\left(P,F_{1}\right)\xlongrightarrow{\Hom_{A}\left(\id_{E},f\right)}\Hom_{A}\left(P,F_{2}\right)\xlongrightarrow{\Hom_{A}\left(\id_{E},g\right)}\Hom_{A}\left(P,F_{3}\right)\xlongrightarrow{}0.
+		\end{align*}
+		\item 任何$A$-模的正合列$0\xlongrightarrow{}F_{1}\xlongrightarrow{f}F_{2}\xlongrightarrow{g}F_{3}\xlongrightarrow{}0$分裂.
+		\item 对任意$A$-模$F_{1},F_{2},f\in\Hom_{A}\left(F_{1},F_{2}\right),g\in\Hom_{A}\left(P,F_{2}\right)$,当$f$是满射时下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				E && {F_{2}} \\
+				& {F_{1}}
+				\arrow["g", from=1-1, to=1-3]
+				\arrow["{\exists\varphi}"', dashed, from=1-1, to=2-2]
+				\arrow["f", from=2-2, to=1-3]
+			\end{tikzcd}
+		\end{center}
+		\item 存在自由$A$-模$F$和$A$-模$G$,使得$F\simeq E\oplus G$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	$E$是有限生成的投射$A$-模$\iff$ $E$是一个具有有限基集的自由$A$-模的直因子.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$A$是交换环,$E,F$是有限生成的投射$A$-模,则$\Hom_{A}\left(M,N\right)$是有限生成的投射$A$-模.
+\end{corollary}

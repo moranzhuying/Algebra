@@ -1,0 +1,121 @@
+\section{自由群的并接和}
+
+记号约定:
+\begin{itemize}
+	\item $\left(M_{i}\right)_{i\in I}$是一族幺半群(乘法记号),每个$M_{i}$的幺元为$e_{i}$,$S=\coprod\limits_{i\in I}M_{i}$.
+	\item $A,N$是幺半群,对每个$i\in I$有$h_{i}\in\Hom_{\mathsf{Mon}}\left(A,M_{i}\right)$.
+\end{itemize}
+
+\begin{definition}{幺半群的并接和}{}
+	定义$\sim$是$\Mo\left(S\right)$上满足下列条件的相容等价关系:
+	\begin{itemize}
+		\item 对诸$i\in I,x,x^{\prime}\in M_{i}$有$\left(i,xx^{\prime}\right)\sim\left(i,x\right)\left(i,x^{\prime}\right)$.
+		\item 对诸$i\in I$有$\left(i,e_{i}\right)\sim\epsilon$.
+		\item 对诸$a\in I,i,j\in I$有$\left(i,h_{i}\left(a\right)\right)\sim\left(j,h_{j}\left(a\right)\right)$.
+	\end{itemize}
+	我们称$\bigast\limits_{i\in I}{}_{A}M_{i}\coloneq\Mo\left(S\right)/\sim$是$\left(M_{i}\right)_{i\in I}$沿$A$的并接和.
+\end{definition}
+
+本节接下来的内容中,继续采用如下记号约定:
+\begin{itemize}
+	\item $M$是$\left(M_{i}\right)_{i\in I}$沿$A$的并接和,$\phi:\Mo\left(S\right)\twoheadrightarrow M$是典范映射.
+	\item 对任一$i\in I$,定义$\phi_{i}:M_{i}\to M,x\mapsto\left(i,x\right)$.
+\end{itemize}
+
+\begin{proposition}{并接和的泛性质}{}
+	\begin{enumerate}
+		\item 存在$h\in\Hom_{\mathsf{Mon}}\left(A,M\right)$,对任一$i\in I$,如下图表交换.
+		\begin{center}
+			\begin{tikzcd}
+				A && {M_{i}} \\
+				& M
+				\arrow["{h_{i}}", from=1-1, to=1-3]
+				\arrow["{\exists h}"', dashed, from=1-1, to=2-2]
+				\arrow["{\phi_{i}}", from=1-3, to=2-2]
+			\end{tikzcd}
+		\end{center}
+		\item $M$由$\bigcup\limits_{i\in I}\im\left(\phi_{i}\right)$生成.
+		\item 设$\forall i\in I\left(f_{i}\in\Hom_{\mathsf{Mon}}\left(M_{i},N\right)\wedge\forall j\in I\left(f_{i}\circ h_{i}=f_{j}\circ h_{j}\right)\right)$,则仅有一$f\in\Hom_{\mathsf{Mon}}\left(M,N\right)$,对诸$i\in I$下图交换.
+		\begin{center}
+		\begin{tikzcd}
+			N && {M_{i}} \\
+			& M
+			\arrow["{f_{i}}"', from=1-3, to=1-1]
+			\arrow["{\phi_{i}}", from=1-3, to=2-2]
+			\arrow["{\exists!f}", dashed, from=2-2, to=1-1]
+		\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{hypothesis}{右陪集代表系}{existence-of-right-coset-representative-system}
+	对任意$i\in I$,$M_{i}$有一个子集$P_{i}$满足$e_{i}\in P_{i}$且$A\times P_{i}\to M_{i},\left(a,p\right)\mapsto h_{i}\left(a\right)p$是双射.
+\end{hypothesis}
+
+接下来的内容里,我们约定假设(\ref{hypo:existence-of-right-coset-representative-system})成立.
+
+\begin{definition}{分解,既越分解,分解的长度}{}
+	设$x\in M,n\in\N$,$\sigma\coloneq\left(x_{i}\right)_{i=1}^{2n+1}$是$X$中的序列.若存在$a\in A,i_{1},\ldots,i_{n}\in I,p_{1}\in P_{i_{1}},\ldots,p_{n}\in P_{i_{n}}$使
+	\begin{align}
+		x_{k}=
+		\begin{cases}
+			a,&k=1,\\
+			i_{k},&2\leq k\leq n+1,\\
+			p_{k},&n+2\leq k\leq 2n+1,
+		\end{cases}
+	\end{align}
+	则称$\sigma$是$x$的分解,$\ell\left(\sigma\right)\coloneq$称为该分解的长度.进一步,若
+	\begin{align*}
+		\forall 1\leq\alpha\leq n-1\left(i_{\alpha}\neq i_{\alpha+1}\right)\wedge\forall 1\leq\beta\leq n\left(p_{\beta}\neq e_{\beta}\right),
+	\end{align*}
+	则称该分解是既越的.
+\end{definition}
+
+\begin{lemma}{}{}
+	设$n\in\N,a\in A,i_{1},\ldots,i_{n}\in I,p_{1}\in P_{i_{1}},\ldots,p_{n}\in P_{i_{n}}$,则$\left(\prod\limits_{\alpha=1}^{n}\phi_{i_{\alpha}}\left(p_{\alpha}\right)\right)h\left(a\right)=h\left(a^{\prime}\right)\prod\limits_{\alpha=1}^{n}\phi_{i_{\alpha}}\left(p_{\alpha}^{\prime}\right)$.
+\end{lemma}
+
+\begin{theorem}{幺半群并接和中分解的标准型}{}
+	\begin{enumerate}
+		\item 每个$x\in M$都有唯一的既约分解.
+		\item 对每个$x\in M$,它的长度最短的分解一定既越.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $h$是单射,$\left(\phi_{i}\right)_{i\in I}$是一族单射.
+		\item $\forall i,j\in I\left(i\neq j\implies\phi_{i}\left(M_{i}\right)\cap\phi_{j}\left(M_{j}\right)=\im\left(h\right)\right)$.
+		\item $M$由$\bigcup\limits_{i\in I}\phi_{i}\left(M_{i}\right)$生成.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{标准型表示}{}
+	对诸$x\in M$,存在唯一的$a\in A,n\in\N,i_{1},\ldots,i_{n}\in I,p_{1}\in P_{i_{1}}\setminus\left\{e_{i_{1}}\right\},\ldots,p_{1}\in P_{i_{n}}\setminus\left\{e_{i_{n}}\right\}$,使得
+	\begin{align*}
+		x=h\left(a\right)\prod\limits_{\alpha=1}^{n}\phi_{i_{\alpha}}\left(p_{\alpha}\right),
+	\end{align*}
+	并且对诸$1\leq\alpha\leq n-1$有$i_{\alpha}\neq i_{\alpha+1}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\forall i\in I\left(f_{i}\in\Hom_{\mathsf{Mon}}\left(M_{i},N\right)\wedge\forall j\in I\left(f_{i}\circ h_{i}=f_{j}\circ h_{j}\right)\right)$,则仅有一$f\in\Hom_{\mathsf{Mon}}\left(M,N\right)$,对诸$i\in I$下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			N && {M_{i}} \\
+			& M
+			\arrow["{f_{i}}"', from=1-3, to=1-1]
+			\arrow["{\phi_{i}}", from=1-3, to=2-2]
+			\arrow["{\exists!f}", dashed, from=2-2, to=1-1]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{幺半群的自由积,群的并接自由积}{}
+	\begin{enumerate}
+		\item 当$A=\left\{e\right\}$时,称$M$是$\left(M_{i}\right)_{i\in I}$的自由积.
+		\item 当$\left(M_{i}\right)_{i\in I}$是一族群,$\left(h_{i}\right)_{i\in I}$是一族典范嵌入时,$\bigast\limits_{i\in I}{}_{A}M_{i}\coloneq M$是群,称为$\left(M_{i}\right)_{i\in I}$的并接自由积.
+		
+		特别地,若$A=\left\{e\right\}$,称$M$是群的自由积.
+	\end{enumerate}
+\end{definition}

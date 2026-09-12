@@ -1,0 +1,95 @@
+\chapter{全迷向子空间·Witt定理}
+
+记号约定:
+\begin{itemize}
+	\item $A$是除环,$\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item $E$是$A$-向量空间,$\varepsilon\in Z\left(A\right),\varphi\in\Herm_{A,\rho}^{\varepsilon}\left(E\right)$.
+	\item 当$A$是域时,$Q\in\Quad_{A}\left(E\right)$且$\varphi=\varphi_{Q}$.
+\end{itemize}
+
+\section{迷向子空间}
+
+\begin{definition}{相对$\varepsilon$-Hermite型的迷向向量和(全/非)迷向子空间}{}
+	\begin{enumerate}
+		\item 设$x\in E$.若$\varphi\left(x,x\right)=0$,则称$x$是$\varphi$-迷向向量.
+		\item 设$F$是$E$的子空间.
+		\begin{enumerate}
+			\item 若$\exists x\in F\setminus\left\{0\right\}\forall y\in F\left(\varphi\left(x,y\right)=0\right)$,则称$F$是$E$的$\varphi$-迷向子空间,否则称$F$是$E$的$\varphi$-非迷向子空间.
+			\item 若$\forall\left(x,y\right)\in F\times F\left(\varphi\left(x,y\right)=0\right)$,则称$F$是$E$的$\varphi$-全迷向子空间.
+		\end{enumerate}
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{相对二次型的迷向向量和(全/非)迷向子空间}{}
+	设$K$是域.
+	\begin{enumerate}
+		\item 设$x\in E$.若$x$是$\varphi$-迷向向量,则称$x$是$Q$-迷向向量.
+		\item 设$F$是$E$的子空间.
+		\begin{enumerate}
+			\item 若$F$是$E$的$\varphi$-迷向子空间,则称$F$是$E$的$Q$-迷向子空间,否则称$F$是$E$的$Q$-非迷向子空间.
+			\item 若$F$是$E$的$\varphi$-全迷向子空间,则称$F$是$E$的$Q$-全迷向子空间.
+		\end{enumerate}
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	在这里,我们把isotropic翻译成了``迷向''.在一些物理文献中,它通常被翻译成``各向同性''.isotropic的字面意思是``在所有方向上都相同''.这个词的意思非常直观:一个发光体向四面八方发出同样强度的光,称为``isotropic radiation'';一种材料在各个方向上的受力性质一样,称为``isotropic material''.因此,物理学家通常把它翻译为``各向同性''.
+	
+	在仿射空间中,一个非零向量$v$有明确的``方向'',我们可以把它单位化,从而得到一个长度为$1$的单位向量.但是,如果$v$是迷向的,那么我们无法对它进行单位化,并且$v$与自身正交.在度量意义上,我们认为$v$``迷失了方向'',因此把isotropic vector译为``迷向向量'',将isotropic subspace翻译为``迷向子空间'',这很好地刻画了``度量退化,长度为零''的几何特征.
+\end{remark}
+
+\begin{remark}{}{}
+	由于关于二次型的``迷向''性质总是通过其极化给出,因此我们将把主要精力放在关于$\varepsilon$-Hermite型的``迷向''性质上.
+	\begin{itemize}
+		\item $F$是$E$的迷向子空间$\iff$ $F\cap F^{\circ}=\left\{0\right\}$ $\iff$ $\varphi|_{F\times F}$退化.
+		\item $F$是$E$的全迷向子空间$\iff$ $F\subseteq F^{\perp}$.
+		\item 如果$F$是$E$的$\varphi$-迷向子空间,那么$F$的每个子空间都是$E$的$\varphi$-迷向子空间.
+		\item 如果$\left(F_{i}\right)_{i\in I}$是$E$的一族关于$\varphi$正交的$\varphi$-全迷向子空间,那么$\sum\limits_{i\in I}F_{i}$是$E$的$\varphi$-全迷向子空间.
+		\item $E$的每个$\varphi$-全迷向子空间都被$E$的一个极大$\varphi$-全迷向子空间包含.
+	\end{itemize}
+\end{remark}
+
+\begin{proposition}{正交分解定理}{}
+	设$F$是$E$的有限维$\varphi$-非迷向子空间,则$E=F\oplus F^{\circ}$.
+\end{proposition}
+
+\begin{corollary}{有限维子空间的迷向性判定}{}
+	设$\varphi$非退化,$F$是$E$的有限维子空间,则$F$是$\varphi$-非迷向的$\iff$ $F^{\circ}$是$\varphi$-非迷向的$\iff$ $E=F\oplus F^{\circ}$.
+\end{corollary}
+
+本节接下来的内容中,默认$K$是域.
+
+\begin{definition}{相对二次型的奇异向量,(全)奇异子空间}{}
+	\begin{enumerate}
+		\item 设$x\in E$.若$Q\left(x\right)=0$,则称$x$是$E$的$Q$-迷向向量.
+		\item 设$F$是$E$的子空间.
+		\begin{enumerate}
+			\item 若$\exists x\in F\setminus\left\{0\right\}\left(Q\left(x\right)=0\wedge\forall y\in F\left(\varphi\left(x,y\right)=0\right)\right)$,则称$F$是$E$的$Q$-奇异子空间.
+			\item 若$\forall x\in F\left(Q\left(x\right)=0\right)$,则称$F$是$E$的$Q$-全奇异子空间.
+		\end{enumerate}
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\rad\left(E,Q\right)$由$E$中和$E$正交的$Q$-奇异向量组成.
+		\item $F$是$E$的奇异子空间$\iff$ $\rad\left(F,Q|_{F\times F}\right)\neq\left\{0\right\}$.
+		\item $E$的每个非零$Q$-全奇异子空间都是$E$的$Q$-奇异子空间.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{迷向和奇异的关系}{}
+	\begin{enumerate}
+		\item $E$的每个$Q$-奇异向量都是$\varphi$-迷向的,$E$的每个$Q$-(全)奇异子空间都是$\varphi$-(全)迷向的.
+		\item 当$\Char\left(A\right)\neq 2$时,$E$的每个$\varphi$-迷向向量都是$Q$-奇异的,$E$的每个$\varphi$-(全)迷向子空间子空间都是$Q$-(全)奇异的.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	关于奇异子空间有如下类似于迷向向量和迷向子空间的概念.注意,这里对$A$的特征没有要求.
+	\begin{itemize}
+		\item 如果$F$是$E$的$Q$-迷向子空间,那么$F$的每个子空间都是$E$的$Q$-迷向子空间.
+		\item 如果$\left(F_{i}\right)_{i\in I}$是$E$的一族关于$Q$正交的$Q$-全迷向子空间,那么$\sum\limits_{i\in I}F_{i}$是$E$的$Q$-全迷向子空间.
+		\item $E$的每个$Q$-全迷向子空间都被$E$的一个极大$Q$-全迷向子空间包含.
+	\end{itemize}
+\end{remark}

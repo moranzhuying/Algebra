@@ -1,0 +1,84 @@
+\section{代数的左缩并和右缩并}
+
+记号约定:
+\begin{itemize}
+	\item $E$是$\N$型分次$A$-代数,分次为$\left(E_{n}\right)_{n\in\N}$,$P$是$\Z$型分次$A$-模,分次为$\left(P_{n}\right)_{n\in\Z}$.
+	\item 对每个$x\in E$,它诱导的左乘是$\mathcal{L}_{x}:E\to E,y\mapsto xy$,诱导的右乘是$\mathcal{R}_{x}:E\to E,y\mapsto yx$.
+\end{itemize}
+
+\begin{definition}{代数的右缩并}{}
+	对每个$p\in\N,x\in E_{p}$和$u\in\underline{\Hom}_{A}\left(E,P\right)$,称$u\llcorner x\coloneq u\circ\mathcal{L}_{x}$是$u$和$x$的右缩并.对每个$x\in E$,定义
+	\begin{align*}
+		\iota_{x}:\underline{\Hom}_{A}\left(E,P\right)\to\underline{\Hom}_{A}\left(E,P\right),u\mapsto u\llcorner x.
+	\end{align*}
+\end{definition}
+
+\begin{remark}{}{}
+	对每个$x,y\in E$和$u\in\underline{\Hom}_{A}\left(E,P\right)$有$\iota_{xy}=\iota_{y}\circ\iota_{x}$,于是$E$在$\underline{\Hom}_{A}\left(E,P\right)$上的右作用
+	\begin{align*}
+		\underline{\Hom}_{A}\left(E,P\right)\times E\to\underline{\Hom}_{A}\left(E,P\right),\left(u,x\right)\mapsto u\llcorner x
+	\end{align*}
+	使得$\underline{\Hom}_{A}\left(E,P\right)$是右$E$-模.当$P=A$时,对每个$x\in E$有$\iota_{x}=\mathcal{L}_{x}^{\top}$.进一步,若$p\in\N,x\in E_{p}$,则$i_{x}$是$\underline{E}^{\vee}$上的$-p$次自同态.
+\end{remark}
+
+\begin{definition}{代数的左缩并}{}
+	对每个$p\in\N,x\in E_{p}$和$u\in\underline{\Hom}_{A}\left(E,P\right)$,称$x\lrcorner u\coloneq u\circ\mathcal{R}_{x}$是$u$和$x$的左缩并.对每个$x\in E$,定义
+	\begin{align*}
+		\iota_{x}^{\prime}:\underline{\Hom}_{A}\left(E,P\right)\to\underline{\Hom}_{A}\left(E,P\right),u\mapsto x\lrcorner u.
+	\end{align*}
+\end{definition}
+
+\begin{remark}{}{}
+	对每个$x,y\in E$和$u\in\underline{\Hom}_{A}\left(E,P\right)$有$\iota_{xy}^{\prime}=\iota_{x}^{\prime}\circ\iota_{y}^{\prime}$,于是$E$在$\underline{\Hom}_{A}\left(E,P\right)$上的左作用
+	\begin{align*}
+		E\times\underline{\Hom}_{A}\left(E,P\right)\to\underline{\Hom}_{A}\left(E,P\right),\left(x,u\right)\mapsto x\llcorner u
+	\end{align*}
+	使得$\underline{\Hom}_{A}\left(E,P\right)$是左$E$-模,从而$\underline{\Hom}_{A}\left(E,P\right)$是$\left(E,E\right)$-双模.当$P=A$时,
+	\begin{itemize}
+		\item 若$E$是交换代数,则对每个$\left(p,x,u\right)\in \N\times E_{p}\times E^{\vee}$有$u\llcorner x=x\lrcorner u$.
+		\item 若$E$是交换代数,则对每个$\left(p,q,x,u\right)\in \N\times\N\times E_{p}\times E_{q}^{\vee}$有$x\lrcorner u=\left(-1\right)^{p\left(q-p\right)}u\llcorner x$.
+	\end{itemize}
+\end{remark}
+
+\begin{definition}{缩并映射的拉回}{}
+	设$F$是$\N$型分次$A$-代数.对每个分次代数同态$\phi:E\to F$,定义$\tilde{\phi}:\underline{\Hom}_{A}\left(F,P\right)\to\underline{\Hom}_{A}\left(E,P\right),f\mapsto f\circ\phi$.
+\end{definition}
+
+\begin{remark}{}{}
+	对每个分次代数同态$\phi:E\to F$,映射$\tilde{\phi}$是$\left(E,E\right)$-双模同态.
+\end{remark}
+
+\begin{example}{张量代数,对称代数,外代数上的左右缩并的显式表达}{}
+	设$M$是$A$-模,$P$的分次平凡,$\left(x_{i}\right)_{i=1}^{p}$是$M$中的序列,$f$是$\underline{\Hom}_{A}\left(E,P\right)$的$-n$次元素.把$f$等同于$n$重线性映射$\bar{f}:M^{n}\to P$.
+	\begin{enumerate}
+		\item 当$p>n$时,$\bar{f}\llcorner\left(x_{1}\otimes\ldots\otimes x_{p}\right)=\left(x_{1}\otimes\ldots\otimes x_{p}\right)\lrcorner\bar{f}=0$.
+		\item 当$p\leq n$时,$\bar{f}\llcorner\left(x_{1}\otimes\ldots\otimes x_{p}\right)$和$\left(x_{1}\otimes\ldots\otimes x_{p}\right)\lrcorner\bar{f}$都是$\left(n-p\right)$重线性映射.对于$M$中的每个序列$\left(y_{j}\right)_{j=1}^{n-p}$,
+		\begin{gather*}
+			\left(\bar{f}\llcorner\left(x_{1}\otimes\ldots\otimes x_{p}\right)\right)\left(y_{1},\ldots,y_{n-p}\right)=f\left(x_{1},\ldots,x_{p},y_{1},\ldots,y_{n-p}\right),\\
+			\left(\left(x_{1}\otimes\ldots\otimes x_{p}\right)\lrcorner\bar{f}\right)\left(y_{1},\ldots,y_{n-p}\right)=f\left(y_{1},\ldots,y_{n-p},x_{1},\ldots,x_{p}\right).
+		\end{gather*}
+		\item 当$p=n$时,$\bar{f}\llcorner\left(x_{1}\otimes\ldots\otimes x_{p}\right)=\left(x_{1}\otimes\ldots\otimes x_{p}\right)\lrcorner\bar{f}=f\left(x_{1},\ldots,x_{p}\right)$.
+	\end{enumerate}
+	当$E=\mathsf{S}\left(M\right)$(相对的,$\bigwedge\left(M\right)$)时,只需要对上述结论作下列修改:
+	\begin{itemize}
+		\item $n$重线性映射$\mapsto$ $n$重对称(相对的,交错)线性映射.
+		\item $\left(n-p\right)$重线性映射$\mapsto$ $\left(n-p\right)$重对称(相对的,交错)线性映射.
+		\item $x_{1}\otimes\ldots\otimes x_{p}$ $\mapsto$ $x_{1}\ldots x_{p}$(相对的,$x_{1}\wedge\ldots\wedge x_{p}$).
+	\end{itemize}
+\end{example}
+
+\begin{corollary}{}{}
+	设$M,N$是$A$-模,$u\in\Hom_{A}\left(M,N\right)$.
+	\begin{enumerate}
+		\item $\mathsf{T}\left(u\right)$是分次$A$-代数同态,$\widetilde{\mathsf{T}\left(u\right)}$是$\mathsf{T}\left(M\right)$-双模同态.
+		\item $\mathsf{S}\left(u\right)$是分次$A$-代数同态,$\widetilde{\mathsf{S}\left(u\right)}$是$\mathsf{S}\left(M\right)$-双模同态.
+		\item $\bigwedge\left(u\right)$是分次$A$-代数同态,$\widetilde{\bigwedge\left(u\right)}$是$\bigwedge\left(M\right)$-双模同态.
+	\end{enumerate}
+\end{corollary}
+
+
+
+
+
+
+

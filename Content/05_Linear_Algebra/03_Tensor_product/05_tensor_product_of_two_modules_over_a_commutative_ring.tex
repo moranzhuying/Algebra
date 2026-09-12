@@ -1,0 +1,149 @@
+\section{交换环上的模的张量积}
+
+记号约定:未加声明时,$C$是交换环,$E,F,G$是$C$-模.
+
+\begin{definition}{交换环上的张量积}{}
+	分别定义$E\otimes_{C}F$上的左作用和右作用为$\left(c,x\otimes y\right)\mapsto\left(cx\right)\otimes y$和$\left(x\otimes y,c\right)\mapsto x\otimes\left(yc\right)$,则$E\otimes_{C}F$是$\left(C,C\right)$-双模.
+\end{definition}
+
+\begin{remark}{}{}
+	在上述记号下,典范映射$F\otimes_{C}E\to E\otimes_{C}F,y\otimes_{C}x\mapsto x\otimes_{C}y$是$\left(C,C\right)$-双模同构.
+\end{remark}
+
+\begin{remark}{术语说明}{}
+	今后,在没有另加说明时,我们总是采用这种办法把$E\otimes_{C}F$视为$\left(C,C\right)$-双模.
+\end{remark}
+
+\begin{proposition}{张量积的生成系}{}
+	设$\left(a_{i}\right)_{i\in I},\left(b_{j}\right)_{j\in J}$分别是$E,F$的生成系,则$\left(a_{i}\otimes_{C}b_{j}\right)_{i\in I,j\in J}$是$E\otimes_{C}F$的生成系.
+\end{proposition}
+
+\begin{corollary}{有限生成模的张量积也有限生成}{}
+	若$E,F$都是有限生成的,则$E\otimes_{C}F$是有限生成$C$-模.
+\end{corollary}
+
+\begin{definition}{$C$-双线性映射}{}
+	设$f:E\times F\to G$是$\Z$-双线性映射.若对诸$\gamma\in C,x\in E,y\in F$有
+	\begin{align*}
+		f\left(\gamma x,y\right)=f\left(x,\gamma y\right)=\gamma f\left(x,y\right),
+	\end{align*}
+	则称$f$是$C$-双线性映射.记$\Bil_{C}\left(E,F;G\right)\coloneq\left\{\varphi\in\Hom_{\mathsf{Set}}\left(E\times F,G\right)\middle|\varphi\text{是}C\text{-双线性映射}\right\}$.
+\end{definition}
+
+\begin{proposition}{}{}
+	$\Bil_{C}\left(E,F;G\right)$是典范的$C$-模.
+\end{proposition}
+
+\begin{corollary}{交换环上张量积的泛性质}{}
+	作为$C$-模,$\Bil_{C}\left(E,F;G\right)$典范同构于$\Hom_{C}\left(E\otimes_{C}F,G\right)$.
+\end{corollary}
+
+\begin{proposition}{线性映射的张量积和$\Hom$函子的典范映射}{}
+	设$E^{\prime},F^{\prime}$是$C$-模.
+	\begin{enumerate}
+		\item 若$f\in\Hom_{C}\left(E,E^{\prime}\right),g\in\Hom_{C}\left(F,F^{\prime}\right)$,则$f\otimes g\in\Hom_{C}\left(E\otimes_{C}F,E^{\prime}\otimes_{C}F^{\prime}\right)$.
+		\item $\Hom_{C}\left(E,E^{\prime}\right)\times\Hom_{C}\left(F,F^{\prime}\right)\to\Hom_{C}\left(E\otimes_{C}E^{\prime},F\otimes_{C}F^{\prime}\right),\left(f,g\right)\mapsto f\otimes g$是$C$-双线性映射.
+		\item (2)中的$C$-双线性映射诱导了如下的典范$C$-线性映射
+		\begin{gather*}
+			\Hom_{C}\left(E,E^{\prime}\right)\otimes_{C}\Hom_{C}\left(F,F^{\prime}\right)\to\Hom_{C}\left(E\otimes_{C}E^{\prime},F\otimes_{C}F^{\prime}\right),\\
+			u\otimes_{C}v\mapsto u\otimes_{\Z}v.
+		\end{gather*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	一般来说,(2)中的典范映射既不是单射,也不是满射.
+\end{remark}
+
+\begin{remark}{标量限制下的典范映射}{}
+	设$A,B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(B,A\right)$,而$E,F$是$A$-模,则典范映射$\rho_{\ast}\left(E\right)\otimes_{B}\rho_{\ast}\left(F\right)\to\rho_{\ast}\left(E\otimes_{A}F\right)$是$B$-线性映射.
+\end{remark}
+
+\begin{remark}{经由环中心的标量限制与张量积结构}{}
+	设$A$是交换环,$E,E^{\prime}$是右$A$-模,$F,F^{\prime}$是左$A$-模,$\rho\in\Hom_{\mathsf{Ring}}\left(C,A\right)$且$\im\left(\rho\right)\subseteq Z\left(A\right)$.
+	\begin{enumerate}
+		\item 分别定义$C$在$E\otimes_{A}F$上的左作用和右作用为
+		\begin{gather*}
+			\left(\gamma,x\otimes_{A}y\right)\mapsto\left(x\rho\left(\gamma\right)\right)\otimes y,\\
+			\left(x\otimes_{A}y,\gamma\right)\mapsto x\otimes_{A}\left(y\rho\left(\gamma\right)\right),
+		\end{gather*}
+		则$E\otimes_{A}F$是典范的$\left(C,C\right)$-左双模,并且与我们一开始定义的$\left(C,C\right)$-左双模结构完全相同.
+		\item 若$f\in\Hom_{\mathsf{Mod}-A}\left(E,E^{\prime}\right),g\in\Hom_{A-\mathsf{Mod}}\left(F,F^{\prime}\right)$,则$f\otimes g\in\Hom_{C}\left(E\otimes_{A}F,E^{\prime}\otimes_{A}F^{\prime}\right)$.进一步,
+		\begin{align*}
+			\Hom_{A}\left(E,E^{\prime}\right)\times\Hom_{A}\left(F,F^{\prime}\right)\to\Hom_{C}\left(E\otimes_{A}E^{\prime},F\otimes_{A}F^{\prime}\right),\left(f,g\right)\mapsto f\otimes g
+		\end{align*}
+		是$C$-双线性映射,它进一步诱导了典范的$C$-线性映射
+		\begin{align*}
+			\Hom_{A}\left(E,E^{\prime}\right)\otimes_{C}\Hom_{A}\left(F,F^{\prime}\right)\to\Hom_{C}\left(E\otimes_{A}E^{\prime},F\otimes_{A}F^{\prime}\right),u\otimes_{C}v\mapsto u\otimes_{\Z}v.
+		\end{align*}
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{分式域情形下的同构}{}
+	设$A$是整环,$K$是其分式域,$E,F,G$是$K$-向量空间.
+	\begin{enumerate}
+		\item 记$\tau:A\hookrightarrow K$是典范嵌入,则$K$-模$\tau_{\ast}\left(E\right)\otimes_{A}\tau_{\ast}\left(F\right)$典范同构于$E\otimes_{K}F$.
+		\item 每个$A$-双线性映射$f:E\times F\to G$都是$K$-双线性映射.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

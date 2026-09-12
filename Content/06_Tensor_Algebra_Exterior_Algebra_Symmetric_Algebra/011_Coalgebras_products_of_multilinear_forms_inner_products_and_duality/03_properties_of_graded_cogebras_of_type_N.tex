@@ -1,0 +1,39 @@
+\section{\texorpdfstring{$\N$}{N}型分次余代数}
+
+记号约定:$\left(E,c\right)$是分次$A$-余代数,分次为$\left(E_{n}\right)_{n\in\N}$.
+
+\begin{proposition}{}{}
+	设$\varepsilon$是$E$的余单位元.
+	\begin{enumerate}
+		\item $\varepsilon$是$0$次齐次线性泛函.
+		\item 设$e\in E$满足$E_{0}=Ae$和$\varepsilon\left(e\right)=1_{A}$,记$E_{+}=\sum\limits_{n=1}^{\infty}E_{n}$,则
+		\begin{align*}
+			\ker\left(\varepsilon\right)=E_{+},c\left(e\right)=e\otimes e,\forall x\in E_{+}\left(c\left(x\right)=x\otimes e+e\otimes x+\left(E_{+}\otimes_{A}E_{+}\right)\right).
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{分次反余交换性的等价条件}{equivalent-condition-of-anticocommutativity}
+	下列陈述等价:
+	\begin{enumerate}
+		\item 对每个配备平凡分次的$A$-交换代数$B$,分次$A$-代数$\underline{\Hom}_{A}\left(E,B\right)$是反交换的.
+		\item 如下图表交换(其中$\sigma_{g}$满足$\forall p,q\in\N\forall x_{p}\in E_{p}\forall x_{q}\in E_{q}\left(\sigma_{g}\left(x_{p}\otimes x_{q}\right)=\left(-1\right)^{pq}x_{q}\otimes x_{p}\right)$).
+		\begin{center}
+			\begin{tikzcd}
+				& E & \\
+				{E\otimes_{A}E} && {E\otimes_{A}E}
+				\arrow["c"', from=1-2, to=2-1]
+				\arrow["c", from=1-2, to=2-3]
+				\arrow["{\sigma_{g}}"', from=2-1, to=2-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{分次反余交换余代数}{}
+	如果$\left(E,c\right)$满足命题(\ref{prop:equivalent-condition-of-anticocommutativity})的条件之一,则称之为分次反余交换余代数.
+\end{definition}
+
+\begin{example}{分次反余交换余代数的例子}{}
+	设$M$是$A$-模,则$\bigwedge\left(M\right)$是分次反余交换余代数.
+\end{example}

@@ -1,0 +1,120 @@
+\section{收缩和截面}
+
+\begin{proposition}{单射和满射的左右可逆判定法}{}
+	设$f:A\to B$是映射.
+	\begin{enumerate}
+		\item 若存在映射$r:B\to A$使得$r\circ f=\id_{A}$,则$f$是单射.
+		\item 若存在映射$s:B\to A$使得$f\circ s=\id_{B}$,则$f$是满射.
+		\item 若$f$是满射,则存在映射$s:B\to A$使得$f\circ s=\id_{B}$.
+		\item 若$f$是单射且$A\neq\emptyset$,则存在映射$r:B\to A$使得$r\circ f=\id_{A}$,
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{双射的左右逆判定法}{}
+	设$f:A\to B$和$g:B\to A$是映射.若$g\circ f=\id_{A}$且$f\circ g=\id_{B}$,则$f$和$g$都是双射,并且$g=f^{-1},f=g^{-1}$.
+\end{corollary}
+
+\begin{definition}{映射的收缩和截面}{}
+	设$f:A\to B$是映射.
+	\begin{enumerate}
+		\item 当$f$是单射时,每个满足$r\circ f=\id_{A}$的映射$r:B\to A$称为$f$的一个收缩(或左逆).
+		\item 当$f$是满射时,每个满足$r\circ f=\id_{A}$的映射$r:B\to A$称为$f$的一个截面(或右逆).
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{左逆和右逆的互换}{}
+	设$f:A\to B$和$g:B\to A$是映射.
+	\begin{enumerate}
+		\item 若$f$是单射,$g$是$f$的左逆,则$f$是$g$的右逆.
+		\item 若$f$是满射,$g$是$f$的右逆,则$f$是$g$的左逆.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{左逆和右逆传递单性和满性}{}
+	设$f:A\to B$和$g:B\to A$是映射.
+	\begin{enumerate}
+		\item 若$g$是$f$的左逆,则$g$是单射.
+		\item 若$g$是$f$的右逆,则$g$是满射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{右逆唯一性的判别}{}
+	设$f:A\to B$是满射.若$s$和$s^{\prime}$是$f$的截面,并且$\im\left(s\right)=\im\left(s^{\prime}\right)$,则$s=s^{\prime}$.
+\end{proposition}
+
+\begin{theorem}{复合映射的单性,满性和逆的复合}{}
+	设$f:A\to B$和$g:B\to C$是映射,$h=g\circ f$.
+	\begin{enumerate}
+		\item 若$f$和$g$都是单射,则$h$是单射;若$r$和$r^{\prime}$分别是$f$和$g$的左逆,则$r\circ r^{\prime}$是$h$的左逆.
+		\item 若$f$和$g$都是满射,则$h$是满射;若$s$和$s^{\prime}$分别是$f$和$g$的右逆,则$s\circ s^{\prime}$是$h$的右逆.
+		\item 若$h$是单射,则$f$是单射;若$r^{\prime\prime}$是$h$的左逆,则$r\circ h$是$f$的左逆.
+		\item 若$h$是满射且$g$是单射,则$f$是满射;若$s^{\prime\prime}$是$h$的右逆,则$s\circ g$是$f$的右逆.
+		\item 若$h$是单射且$f$是满射,则$g$是单射;若$r^{\prime\prime}$是$h$的右逆,则$f\circ r^{\prime\prime}$是$g$的左逆.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proposition}{商映射的泛性质}{}
+	设$E,F,G$是集合,$g:E\to F$是满射,$f:E\to G$是映射.
+	\begin{center}
+		\begin{tikzcd}
+			& E & \\
+			F && G
+			\arrow["g"', shift right=3, two heads, from=1-2, to=2-1]
+			\arrow["f"', from=1-2, to=2-3]
+			\arrow["s"', two heads, from=2-1, to=1-2]
+			\arrow["{\exists!h}"', dashed, from=2-1, to=2-3]
+		\end{tikzcd}
+	\end{center}
+	\begin{enumerate}
+		\item 存在$h:F\to G$使得$f=h\circ g$当且仅当$\forall x,y\in E\left(g\left(x\right)=g\left(y\right)\implies f\left(x\right)=f\left(y\right)\right)$.
+		\item 若存在映射$h:F\to G$满足$f=h\circ g$,则$h$是唯一的,并且对$g$的每个右逆$s$都有$h=f\circ s$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{嵌入映射的泛性质}{}
+	设$E,F,G$是集合,$g:F\to E$是单射,$f:G\to E$是映射.
+	\begin{center}
+		\begin{tikzcd}
+			& E & \\
+			G && F
+			\arrow["r"', shift right=3, hook, from=1-2, to=2-3]
+			\arrow["f", from=2-1, to=1-2]
+			\arrow["{\exists!h}"', dashed, from=2-1, to=2-3]
+			\arrow["g"', hook, from=2-3, to=1-2]
+		\end{tikzcd}
+	\end{center}
+	\begin{enumerate}
+		\item 存在$h:G\to F$使得$f=g\circ h$当且仅当$\im\left(f\right)\subseteq \im\left(g\right)$.
+		\item 若映射$h:G\to F$满足$f=g\circ h$,则对$g$的每个左逆$r$都有$h=r\circ f$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+\section{行列式的计算}
+
+记号约定:
+\begin{itemize}
+	\item $A$是交换环,$M$是自由$A$-模,它的基是$\left(e_{j}\right)_{j\in J}$,$J$是全序集,$n\in\N$.
+	\item 对每个集合$I$和每个$p\in\N$,记$\fin_{p}\left(I\right)$是$I$的所有$p$元子集构成的集合.
+\end{itemize}
+
+\begin{lemma}{}{}
+	设$p\in\N$且$p\leq\left|J\right|$,$N$是$A$-模,$f:M^{p}\to N$是交错$p$重线性映射.如果
+	\begin{itemize}
+		\item $\left(x_{i}\right)_{i=1}^{p}$是$M$中的序列,$\left(\xi_{j,i}\right)_{j\in J,i\in\left[1,p\right]}$是$A$上的矩阵,
+		\item 对每个$1\leq i\leq p$有$x_{i}=\sum\limits_{j\in J}\xi_{j,i}e_{j}$,
+	\end{itemize}
+	则$f\left(x_{1},\ldots,x_{p}\right)=\sum\limits_{\substack{\left(j_{1},\ldots,j_{p}\right)\in M^{p}\\ j_{1}<\ldots<j_{p}}}\left(\sum\limits_{\sigma\in\mathfrak{S}_{p}}\sign\left(\sigma\right)\prod\limits_{i=1}^{p}\xi_{j_{\sigma\left(i\right)},i}\right)f\left(e_{j_{1}},\ldots,e_{j_{p}}\right)$.
+\end{lemma}
+
+\begin{proposition}{行列式的按行展开公式}{}
+	设$\left|J\right|=n$,$\left(x_{i}\right)_{i=1}^{n}$是$M$中的序列,$\left(\xi_{j,i}\right)_{\substack{1\leq j\leq n\\1\leq i\leq n}}$是$A$中的矩阵.如果对每个$1\leq i\leq n$有$x_{i}=\sum\limits_{j\in J}\xi_{j,i}e_{j}$,则
+	\begin{align*}
+		x_{1}\wedge\ldots\wedge x_{n}=\left(\sum\limits_{\sigma\in\mathfrak{S}_{n}}\sign\left(\sigma\right)\prod\limits_{i=1}^{n}\xi_{\sigma\left(i\right),i}\right)e_{1}\wedge\ldots\wedge e_{n}.
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$p\in\N$且$p\leq\left|J\right|$.如果
+	\begin{itemize}
+		\item $\left(x_{i}\right)_{i=1}^{p}$是$M$中的序列,$\left(\xi_{j,i}\right)_{j\in J,i\in\left[1,p\right]}$是$A$上的矩阵,
+		\item 对每个$H\in\fin_{p}\left(J\right)$和$1\leq i\leq p$,记$x_{H,i}=\sum\limits_{j\in J}\xi_{j,i}e_{j}$,
+	\end{itemize}
+	则$x_{1}\wedge\ldots\wedge x_{p}=\sum\limits_{H\in\fin_{p}\left(J\right)}\det\left(x_{H,1},\ldots,x_{H,p}\right)e_{H}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$I$是有限集,$\boldsymbol{X}\coloneq\left(\xi_{j,i}\right)_{j\in I,i\in I}$是$A$上的方阵,则$\det\left(\boldsymbol{X}\right)=\sum\limits_{\sigma\in\mathfrak{S}_{I}}\sign\left(\sigma\right)\left(\prod\limits_{i\in I}\xi_{\sigma\left(i\right),i}\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$I$是有限集,$\boldsymbol{X}$是$A$上的$I$型方阵,则$\det\left(\boldsymbol{X}^{\top}\right)=\det\left(\boldsymbol{X}\right)$.
+\end{proposition}
+
+\begin{definition}{}{}
+	设$\left(x_{i}\right)_{i=1}^{n}$是$A^{n}$的序列.定义矩阵$\boldsymbol{Y}\left(x_{1},\ldots,x_{n}\right)$如下:对每个$1\leq i\leq n$,该矩阵的第$i$行是$x_{i}$.
+\end{definition}
+
+\begin{corollary}{}{}
+	$f:\left(A^{n}\right)^{n}\to A,\left(x_{i}\right)_{i=1}^{n}\mapsto\det\left(\boldsymbol{Y}\left(x_{1},\ldots,x_{n}\right)\right)$是交错$n$重线性映射.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$I$是有限集,$\boldsymbol{X}$是$A$上的$I$型方阵,则$\left(\col_{i}\left(\boldsymbol{X}\right)\right)_{i\in I}$线性无关$\iff$ $\left(\row_{i}\left(\boldsymbol{X}\right)\right)_{i\in I}$线性无关$\iff$ $\det\left(\boldsymbol{X}\right)$非$A$的零因子.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$M$是有限维自由模,$u\in\End_{A}\left(M\right)$,则$\det\left(u^{\top}\right)=\det\left(u\right)$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,323 @@
+\chapter{良序集}
+
+\section{良序集的始段}
+
+\begin{definition}{良序关系}{}
+	设$R\left\{x,y\right\}$是偏序关系.如果每个非空集合$E$配备$R\left\{x,y\right\}$在$E$上诱导的偏序后有一个最小元,则称$R\left\{x,y\right\}$是良序关系.
+\end{definition}
+
+\begin{definition}{良序}{}
+	设$\leq$是集合$E$上的偏序.如果$E$的每个非空子集都有最小元,则称$\Gamma$是$E$上的良序,$E$按$\leq$为良序集.
+\end{definition}
+
+\begin{proposition}{良序蕴含全序和有上界子集必有上确界}{}
+	设$\leq$是集合$E$上的良序.
+	\begin{enumerate}
+		\item $\leq$是$E$上的全序.
+		\item $E$的每个有上界的子集都有上确界.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设集合$E\coloneq\left\{\alpha,\beta\right\}$的元素互异,则$\left\{\left(\alpha,\alpha\right),\left(\alpha,\beta\right),\left(\beta,\beta\right)\right\}$是相对$E$上良序的二元关系.
+		\item 一个良序集的每个子集在诱导序下是良序集.
+		\item 不是良序集的全序集的存在性和无穷公理等价.
+		\item 如果$\leq$是集合$E$上的良序,那么$\leq$的对偶是良序$\iff$ $E$是有限集.
+		\item 设集合$E$配备良序$\leq$,给$E$加入最大元$b$得到集合$E_{1}$.若对$E$的每个子集$H$有
+		\begin{align*}
+			H\neq\left\{b\right\}\vee H\neq E\implies\max\left(H\cap E\right)=\max H
+		\end{align*}
+		那么$E_{1}$是良序集.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{}{}
+	作为无穷公理的推论,存在没有最大元的良序集,例如自然数集$\N$.
+\end{remark}
+
+\begin{definition}{始段}{}
+	设集合$E$配备偏序$\leq$,$S\subseteq E$.若$\forall x\in S\forall y\in E\left(y\leq x\implies y\in S\right)$,则称$S$是$E$的一个始段.
+\end{definition}
+
+\begin{proposition}{}{}
+	设集合$E$配备偏序$\leq$.
+	\begin{enumerate}
+		\item $E$的任意两个始段的并和交还是$E$的始段.
+		\item 如果$S$是$E$的始段,那么$S$的每个始段都是$E$的始段.
+		\item $\emptyset$和$E$都是$E$的始段.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设集合$E$配备良序$\leq$,则对$E$的每个不等于$E$的始段$S$都存在$a\in E\setminus S$使得$S=\left(-\infty,a\right)$.
+\end{proposition}
+
+\begin{definition}{全序集中的始段}{}
+	设$E$是全序集.对每个$x\in E$,我们把$\left(-\infty,x\right)$记作$S_{x}$,称之为以$x$为端点的始段.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$E$是全序集,则$\bigcup\limits_{x\in E}S_{x}=
+	\begin{cases}
+		E,&E\text{无最大元},\\
+		E\setminus\left\{b\right\},&E\text{有最大元}b.
+	\end{cases}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E^{\ast}$是良序集$E$的所有始段组成的集合,配备包含偏序.
+	\begin{enumerate}
+		\item $E^{\ast}$是良序集.
+		\item $E\to E^{\ast}\setminus\left\{E\right\},x\mapsto S_{x}$是序同构.
+		\item $E^{\ast}$同构于向$E$中添加最大元得到的良序集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{lemma}{}{}
+	设$\left(X_{i}\right)_{i\in I}$是一族偏序集,在包含偏序下向上定向.若对任意满足$X_{i}\subseteq X_{j}$的$i,j\in I$,$X_{j}$在$X_{i}$上诱导的偏序和$X_{i}$的偏序相同,则$\bigcup\limits_{i\in I}X_{i}$上存在唯一的偏序,对每个$i\in I$,$\bigcup\limits_{i\in I}X_{i}$在$X_{i}$上诱导的偏序和$X_{i}$的偏序相同.
+\end{lemma}
+
+\begin{proposition}{}{}
+	设$\left(X_{i}\right)_{i\in I}$是一族良序集,$E=\bigcup\limits_{i\in I}X_{i}$,对任意$i,j\in I$,要么$X_{i}$是$X_{j}$的始段,要么$X_{j}$是$X_{i}$的始段.
+	\begin{enumerate}
+		\item $E$上存在唯一的良序,对任意$i\in I$,$E$在$X_{i}$上诱导的良序和$X_{i}$的偏序相同.
+		\item 对任意$i\in I$,$X_{i}$的每个始段都是$E$的始段.
+		\item 对任意$i\in I$和$x\in X_{i}$,有$\left\{y\in X_{i}\middle|y<x\right\}=\left\{y\in E\middle|y<x\right\}$.
+		\item 对$E$的每个不等于$E$的始段$S$,存在$i\in I$使得$S$是$E_{i}$的始段.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

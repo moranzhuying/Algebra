@@ -1,0 +1,62 @@
+\section{集合的特征函数}
+
+\begin{definition}{集合的特征函数}{}
+	设$E$是非空集合,$A\subseteq E$.定义$A$在$E$上的特征函数为$\chi_{A}:E\to\left\{0,1\right\},x\mapsto
+	\begin{cases}
+		0,&x\in A,\\
+		1,&x\in E\setminus A.
+	\end{cases}$
+\end{definition}
+
+\begin{proposition}{}{}
+	设$E$是非空集合.
+	\begin{enumerate}
+		\item 对$E$的任意子集$A,B$,$\chi_{A}=\chi_{B}\iff A=B$.
+		\item 对任意$x\in E$有$\chi_{E}\left(x\right)=1$.
+		\item 对任意$x\in E$有$\chi_{\emptyset}\left(x\right)=0$.
+		\item 对$E$的任意子集$A$,映射$\chi_{A}$是常值的$\iff$ $A=\emptyset\vee A=E$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{特征函数的运算性质}{}
+	设$E$是非空集合.
+	\begin{enumerate}
+		\item 对$E$的每个子集$A$和每个$x\in E$,有$\chi_{E\setminus A}\left(x\right)=1-\chi_{A}\left(x\right)$.
+		\item 对$E$的每个子集$A,B$和每个$x\in E$,有$\chi_{A\cap B}\left(x\right)=\chi_{A}\left(x\right)\chi_{B}\left(x\right)$.
+		\item 对$E$的每个子集$A,B$和每个$x\in E$,有$\chi_{A\cup B}\left(x\right)+\chi_{A\cap B}\left(x\right)=\chi_{A}\left(x\right)+\chi_{B}\left(x\right)$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

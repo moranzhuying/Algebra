@@ -1,0 +1,46 @@
+\section{二次扩张上的模}
+
+记号约定:
+\begin{itemize}
+	\item $K$是交换环,$A=K(\mathrm{i})$,其中$\mathrm{i}$是$K$上的多项式$X^{2}+1$在$K$中的平方根,$\tau:K\to K(\mathrm{i})$是典范嵌入.
+	\item 对每个$\left(\lambda,\mu\right)\in K\times K$有$\rho\left(\lambda+\mathrm{i}\mu\right)=\lambda-\mathrm{i}\mu$.
+	\item 定义$\Re:K(i)\to K,\lambda+\mu\mathrm{i}\mapsto\lambda,\Im:K(i)\to K,\lambda+\mathrm{i}\mu\mapsto\mu$.
+\end{itemize}
+
+\begin{definition}{$K$-复线性结构}{}
+	设$V$是$K$-模,$j\in\End_{K}\left(V\right)$.若$j^{2}=-\id_{V}$,则称$\left(V,j\right)$是$K$-复线性结构.
+\end{definition}
+
+\begin{proposition}{$A$-模和$K$-复线性结构一一对应}{}
+	\begin{enumerate}
+		\item 设$E$是$A$-模.令$E_{0}=\tau_{\ast}\left(E\right),j:E_{0}\to E_{0},x\mapsto\mathrm{i}x$,则$\left(E_{0},j\right)$是$K$-复线性结构.
+		\item 设$\left(E_{0},j\right)$是复线性结构.定义$A$在$E$上的左作用为$\left(\lambda+\mathrm{i}\mu,x\right)\mapsto\lambda x+\mu j\left(x\right)$,则$E_{0}$在此作用下成为$A$-模.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$A$-模的复结构}{}
+	设$E$是$A$-模,$E_{0}=\tau_{\ast}\left(E\right),j_{E}:E_{0}\to E_{0},x\mapsto\mathrm{i}x$.我们称$\left(E_{0},j_{E}\right)$是$E$的$K$-复线性结构.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$E,F$是$A$-模,各自的复结构是$\left(E_{0},j_{E}\right)$和$\left(F_{0},j_{F}\right)$,$f\in\Hom_{\mathsf{Set}}\left(E,F\right)$,则
+	\begin{align*}
+		f\in\Hom_{A}\left(E,F\right)\iff\left(\tau_{\ast}\left(f\right)\in\Hom_{K}\left(E_{0},F_{0}\right)\wedge\tau_{\ast}\left(f\right)\circ j_{E}=j_{F}\circ\tau_{\ast}\left(f\right)\right).
+	\end{align*}
+\end{proposition}
+
+本节接下来的内容中,默认$E$是$A$-模,$E_{0}=\tau_{\ast}\left(E\right)$.定义
+\begin{gather*}
+	\Psi:E^{\vee}\to E_{0}^{\vee},f\mapsto\Re\circ f,\\
+	\Phi:E^{\vee}\to E_{0}^{\vee},f\mapsto\Im\circ f.
+\end{gather*}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $\Psi$是$K$-线性同构,其逆为$\Psi^{-1}:E_{0}^{\vee}\to E^{\vee},f\mapsto f-\mathrm{i}f\circ j_{E}$.
+		\item $\Phi$是$K$-线性同构,其逆为$\Phi^{-1}:E_{0}^{\vee}\to E^{\vee},f\mapsto h\circ j_{E}+\mathrm{i}f$.
+		\item 对每个$f\in E^{\vee}$有$\Re\left(f\right)=\Im\left(f\right)\circ j_{E}$和$\Im\left(f\right)=-\Re\left(f\right)\circ j_{E}$.
+	\end{enumerate}
+\end{proposition}
+
+

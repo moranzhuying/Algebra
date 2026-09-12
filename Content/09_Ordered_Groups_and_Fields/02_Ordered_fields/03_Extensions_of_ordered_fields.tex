@@ -1,0 +1,51 @@
+\section{有序域的扩张}
+
+记号约定:$\left(K,+,\cdot,\leq\right)$是有序域.
+
+\begin{definition}{有序域}{}
+	设$F$是有序域,$u:F\to K$是有序域同态.我们称$\left(F,u\right)$是$F$的有序扩张.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$E$是域,$v:E\to F$是域同态,则$u$在$E$上诱导的全序使$E$称为有序域.
+		\item 如果$E$是有序域,$u:E\to F$是域同态,则$u$是有序域同态$\iff$ $K$上的全序由$u$诱导.
+		\item 没有特别强调的情况下,我们把$K$和$\im\left(u\right)$等同起来.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{有序扩张的例子}{}
+	\begin{enumerate}
+		\item 每个有序域都是$\Q$的有序扩张.
+		\item 设$\iota:K[X]\to K(X)$是典范映射.定义$K\left[X\right]$上的全序$\leqslant$如下:
+		\begin{itemize}
+			\item $\forall n\in\Z_{\geqslant 0}\forall a_{0},\ldots,a_{n}\in K\left(\sum\limits_{k=0}^{n}a_{k}X^{k}\geqslant 0\iff a_{n}\in K_{\geqslant 0}\right)$.
+			\item $0X\geqslant 0$.
+		\end{itemize}
+		那么$K\left[X\right]$是全序环,在等同$K(X)$和$K$的意义下,$\left(K(X),u\right)$是$K$的有序扩张.当$K=\R$时,我们可以理解为多项式在$+\infty$附近的渐进行为比较.
+	\end{enumerate}
+\end{example}
+
+\begin{theorem}{有序扩张结构的等价条件}{}
+	设$E$是$K$的扩域,$u:E\to K$是域同态.下列陈述等价:
+	\begin{enumerate}
+		\item $E$上存在全序$\leq$使得$\left(E,u\right)$是$K$的有序扩张.
+		\item $\forall n\in\N\forall\left(p_{1},x_{1}\right),\ldots,\left(p_{n},x_{n}\right)\in E\times K_{\geq 0}\left(\sum\limits_{i=1}^{n}p_{i}x_{i}^{2}=0\implies\forall 1\leq i\leq n\left(p_{i}x_{i}=0\right)\right)$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{Artin-Schreier定理}{}
+	设$E$是域.下列命题等价:
+	\begin{enumerate}
+		\item $E$上存在全序$\preccurlyeq$,使得$\left(E,+,\cdot,\preccurlyeq\right)$是有序域.
+		\item $\forall n\in\N\forall x_{1},\ldots,x_{n}\in E\left(\sum\limits_{i=1}^{n}x_{i}^{2}=0\implies\forall 1\leq i\leq n\left(x_{i}=0\right)\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{全正元素的代数刻画}{}
+	设$\left(E,u\right)$是$K$的有序扩张,$x\in E$.下列命题等价:
+	\begin{enumerate}
+		\item 对$E$上的每个全序$\preccurlyeq$都有$x\succcurlyeq 0$.
+		\item $\exists n\in\N\exists\left(p_{1},x_{1}\right),\ldots,\left(p_{n},x_{n}\right)\in K_{\geq 0}\times E\left(x=\sum\limits_{i=1}^{n}p_{i}x_{i}^{2}\right)$.
+	\end{enumerate}
+\end{corollary}

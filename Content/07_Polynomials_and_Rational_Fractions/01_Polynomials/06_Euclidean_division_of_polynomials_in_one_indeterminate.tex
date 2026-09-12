@@ -1,0 +1,60 @@
+\section{一元多项式环中的Euclid除法}
+
+\begin{proposition}{多项式环上的伪带余除法}{}
+	设$f,g$是$A\left[X\right]$的非零元,$\deg\left(f\right)=m,\deg\left(g\right)=n,\mu=\sup\left(n-m+1,0\right)$,$f$的首项系数为$\alpha_{0}$.
+	\begin{enumerate}
+		\item 存在$u,v\in A\left[X\right]$使得$\alpha_{0}^{\mu}g=uf+v$且$\deg\left(v\right)<m$.
+		\item 若$\alpha_{0}$可消去,则满足(1)的$u,v$唯一.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{多项式环的带余除法}{}
+	设$f$是$A\left[X\right]$的非零元,其首项系数可逆,$m=\deg\left(f\right)$.
+	\begin{enumerate}
+		\item 对每个$g\in A\left[X\right]$,存在唯一的$u,v\in A\left[X\right]$使得$g=vf+v$且$\deg\left(v\right)<m$.
+		\item $A\left[X\right]=\left(\bigoplus\limits_{i=0}^{m-1}AX^{m}\right)\oplus fA\left[X\right]$.
+		\item 设$m\geq 1$,$T$是新的不定元,$\sigma:A\left[T\right]\to A\left[X\right],p\mapsto p\left(f\left(X\right)\right)$,则$\left(A\left[X\right]\right)_{\sigma}$的基是$\left(X_{i}^{k}\right)_{k=0}^{m-1}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}{多项式环上带余除法的商和余式}{}
+	设$f,g,u,v\in A\left[X\right]$,$f\neq 0$且首项系数可逆,$g=vf+u$且$\deg\left(v\right)<\deg\left(f\right)$.
+	\begin{enumerate}
+		\item 我们称$u$是$g$被$f$除所得的商.
+		\item 我们称$v$是$g$被$f$除所得的余式.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	显然,$u=0$ $\iff$ $f$整除$g$.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

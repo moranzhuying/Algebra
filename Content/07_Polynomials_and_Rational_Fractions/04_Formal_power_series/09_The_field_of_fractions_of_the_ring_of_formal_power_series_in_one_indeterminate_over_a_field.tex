@@ -1,0 +1,56 @@
+\section{域上的一元形式幂级数环的分式域}
+
+记号约定:$\rho:K[X]\to K[[X]]$和$\iota:K[[X]]\to K((X))$为典范映射.
+
+\begin{definition}{形式洛朗级数域,形式洛朗级数}{}
+	我们称$K((X))\coloneq\Frac(K[[X]])$是$K$上关于$X$的形式洛朗级数域,其元素称为$K$上关于$X$的形式洛朗级数.
+\end{definition}
+
+\begin{proposition}{形式洛朗级数的典范分解}{}
+	对每个$u\in K((X))\setminus\left\{0\right\}$,存在唯一的$k\in\Z$和$v\in K[[X]]$使得$u=X^{k}\iota\left(v\right)$且$\omega\left(v\right)=0$.
+\end{proposition}
+
+\begin{definition}{形式洛朗级数的阶}{}
+	设$u\in K((X))\setminus\left\{0\right\}$且$u=X^{k}\iota\left(v\right)$,其中$k\in\Z,v\in K[[X]]$.我们称$\omega\left(u\right)\coloneq k$是$u$的阶.规定$\omega\left(0\right)=\infty$.
+\end{definition}
+
+\begin{proposition}{形式洛朗级数域上的阶的性质}{}
+	设$u,v\in K((X))$.
+	\begin{enumerate}
+		\item $\omega\left(u+v\right)\geq\inf\left(\omega\left(u\right),\omega\left(v\right)\right)$;若$\omega\left(u\right)\neq\omega\left(v\right)$,则$\omega\left(u+v\right)=\inf\left(\omega\left(u\right),\omega\left(v\right)\right)$.
+		\item $\omega\left(uv\right)=\omega\left(u\right)+\omega\left(v\right)$.特别地,$u\neq 0$时$\omega\left(u^{-1}\right)=-\omega\left(u\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{$K((X))$上的拓扑结构}{}
+	对每个$n\in\Z$,记$\mathfrak{p}_{n}=\left\{f\in K((X))\middle|\omega\left(f\right)\geq n\right\}$,则$\left(\mathfrak{p}_{n}\right)_{n\in\Z}$是$K((X))$的加法群的一列递减子群,$\bigcap\limits_{n\in\Z}\mathfrak{p}_{n}=\left\{0\right\}$.现在我们以$\left(\mathfrak{p}_{n}\right)_{n\in\Z}$为$0$的邻域基,这样在$K((X))$上诱导的拓扑使$K((X))$是拓扑域,$\im\left(\iota\right)$是$K((X))$的既开又闭的向量子空间.
+\end{remark}
+
+\begin{proposition}{形式洛朗级数的展开式}{}
+	设$\left(\alpha_{n}\right)_{n\in\Z}$是$K$中的元素族,并且$\exists N\in\Z\forall n<N\left(\alpha_{n}=0\right)$.
+	\begin{enumerate}
+		\item $\left(\alpha_{n}X^{n}\right)_{n\in\Z}$在$K((X))$中可和.
+		\item 令$u=\sum\limits_{n\in\Z}\alpha_{n}X^{n}$,则$\left(u=0\iff\forall n\in\Z\left(\alpha_{n}=0\right)\right)\wedge\left(u\neq 0\implies\omega\left(u\right)=\inf\left\{k\in\Z\middle|\alpha_{k}\neq 0\right\}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{形式洛朗级数的展开式的存在性和唯一性}{}
+	对每个$u\in K((X))$,在$K$中存在唯一的元素族$(\alpha_{n})_{n\in\Z}$使得$u=\sum\limits_{n\in\Z}\alpha_{n}X^{n}$且当$n$充分大时$\alpha_{-n}=0$.
+\end{theorem}
+
+\begin{definition}{有理分式在原点的展开}{}
+	设$r=\frac{u}{v}\in K(X)$.把$u,v$等同于$K[[X]]$的元素,称$uv^{-1}$是$r$在原点处的展开式.
+\end{definition}
+
+\begin{remark}{}{}
+	我们可以把$K(X)$等同于$K((X))$的子域.
+\end{remark}
+
+
+
+
+
+
+
+
+

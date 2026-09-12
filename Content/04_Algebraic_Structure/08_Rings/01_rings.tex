@@ -1,0 +1,151 @@
+\chapter{幺环}
+
+\section{环}
+
+记号约定:$A$是集合,配备两个合成律$+$和$\cdot$(分别称为加法和乘法).
+
+\begin{definition}{环,伪环}{}
+	考虑如下条件:
+	\begin{enumerate}
+		\item $A$对$+$构成交换群.
+		\item $A$对$\cdot$构成幺半群.
+		\item $\cdot$对$+$满足分配律.
+	\end{enumerate}
+	若(1)(2)成立,则称$A$是伪环(或无幺环);若(3)也成立,则称$A$是(幺)环;如果$A$对$\cdot$构成交换群,则称$A$是交换(幺)环.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	今后,在没有特殊说明的时候我们总是用$+$和$\cdot$表示环上的加法和乘法,用$0$和$1$标记二者各自的恒等元,有歧义的时候记作$0_{A}$和$1_{A}$.
+\end{remark}
+
+本节接下来的内容中,默认$A$是环.
+
+\begin{definition}{环的加法群}{}
+	$A$对加法构成的群称为环$A$的加法群.
+\end{definition}
+
+\begin{definition}{左位似,右位似}{}
+	设$x\in A$.我们称$\mathcal{L}_{x}:A\to A,y\mapsto xy$和$\mathcal{R}_{x}:A\to A,y\mapsto yx$分别是$x$定义的左位似和右位似.
+\end{definition}
+
+\begin{proposition}{环的基本性质}{}
+	设$x,y\in A,n\in\N$.
+	\begin{enumerate}
+		\item $x\cdot 0_{A}=0_{A}\cdot x=0_{A}$.
+		\item $x\cdot\left(-y\right)=\left(-x\right)\cdot y=-xy$.
+		\item $\left(-x\right)\cdot\left(-y\right)=xy$.
+		\item 若$A$是环,则$-x=\left(-1_{A}\right)\cdot x=x\cdot\left(-1_{A}\right),\left(-1_{A}\right)\cdot\left(-1_{A}\right)=1_{A}$.
+		\item $\left(-x\right)^{n}=
+		\begin{cases}
+			x^{n},&n\mid 2,\\
+			-x^{n},&n\nmid 2.
+		\end{cases}
+		$
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{环的乘法群}{}
+	$A$中的可逆元组成的集合按乘法构成群,称为$A$的交换群,记作$A^{\times}$.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	\begin{enumerate}
+		\item 当$A$是交换环时,对$x\in A,y\in A^{\times}$,记$\dfrac{x}{y}\coloneq xy^{-1}$.
+		\item 对环讨论(左/右)可消去元,(左/右)可逆元,可交换元,中心元,中心化子,中心和有限支撑族时,总是相对环的乘法群而言的.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{左倍数,右倍数,左因数,右因数}{}
+	设$x,y\in A$.
+	\begin{enumerate}
+		\item 若$\exists y^{\prime}\in A\left(x=y^{\prime}y\right)$,则称$x$是$y$的左倍数,$y$是$x$右因数.
+		\item 若$\exists y^{\prime}\in A\left(x=yy^{\prime}\right)$,则称$x$是$y$的右倍数,$y$是$x$左因数.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{左零因子,右零因子,零因子}{}
+	设$x\in A$.
+	\begin{enumerate}
+		\item 若$x$不是左可消去的,则称$x$是左零因子.
+		\item 若$x$不是右可消去的,则称$x$是右零因子.
+		\item 若$x$不是可消去的,则称$x$是零因子.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{术语说明}{}
+	当$R$是交换环时,我们不用(也不)对因数,倍数和零因子区分左右.
+\end{remark}
+
+\begin{definition}{幂零元,幂零指数}{}
+	设$x\in A$.
+	\begin{enumerate}
+		\item 若$\exists n\in\N\left(x^{n}=0\right)$,则称$x$是幂零元.
+		\item 若$x$是幂零元,称$\min\left\{n\in\N\middle|x^{n}=0\right\}$为$x$的幂零指数.当$x$的幂零指数为$\ell$时,称$x$是$\ell$-幂零的.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{幂零元与逆}{}
+	设$n\in\N$,$x\in A$是$n$-幂零的,则$1-x\in A^{\times}$且$\left(1-x\right)^{-1}=\sum\limits_{k=0}^{n-1}x^{k}$.
+\end{proposition}
+
+\begin{proposition}{$A$是$\left(A,A\right)$-双模}{}
+	定义$\Z$在$A$上的左作用为$A$上的广义幂运算诱导的左作用.
+	\begin{enumerate}
+		\item $\forall x,y\in A\forall n\in\Z\left(x\left(ny\right)=\left(nx\right)y=n\left(xy\right)\right)$.
+		\item $\forall x\in A\forall n\in\Z\left(nx=\left(n1_{A}\right)x\right)$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+\section{映射的正向极限系统}
+
+\begin{proposition}{映射的正向极限的存在性}{}
+	设$I$是上定向集,$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统,$\left(f_{\alpha}\right)_{\alpha\in I}$是典范映射族,$F$是集合,对任意$\alpha\in I$有
+	\begin{align*}
+		u_{\alpha}\in\Hom_{\mathsf{Set}}\left(E_{\alpha},F\right).
+	\end{align*}
+	如果$\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies u_{\beta}\circ f_{\alpha,\beta}=u_{\alpha}\right)$,则
+	\begin{enumerate}
+		\item 存在唯一的$u\in\Hom_{\mathsf{Set}}\left(\varinjlim E_{\alpha},F\right)$使得$\forall\alpha\in I\left(u_{\alpha}=u\circ f_{\alpha}\right)$.
+		\item $u$是单射$\iff$ $F=\bigcup\limits_{\alpha\in I}\im\left(u_{\alpha}\right)$.
+		\item $u$是满射$\iff$ $\forall\alpha\in I\forall x,y\in E_{\alpha}\left(u_{\alpha}\left(x\right)=u_{\alpha}\left(y\right)\implies\exists\beta\in I\left(\alpha\leq\beta\wedge f_{\beta,\alpha}\left(x\right)=f_{\beta,\alpha}\left(y\right)\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+上述命题用交换图描述如下:
+\begin{center}
+	\begin{tikzcd}
+		&& F && \\
+		\\
+		&& {\varinjlim E_{\alpha}} \\
+		{E_{\beta}} &&&& {E_{\alpha}}
+		\arrow["{\exists!u}", dashed, from=3-3, to=1-3]
+		\arrow["{u_{\beta}}"', from=4-1, to=1-3]
+		\arrow["{u_{\alpha}}", from=4-5, to=1-3]
+		\arrow["{f_{\beta}}"', from=4-1, to=3-3]
+		\arrow["{f_{\alpha}}", from=4-5, to=3-3]
+		\arrow["{f_{\beta,\alpha}}", from=4-5, to=4-1]
+	\end{tikzcd}
+\end{center}
+
+\begin{corollary}{映射的正向极限的泛性质}{universal-property-of-direct-limits-of-a-family-of-mappings}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right),\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向系统,$\left(f_{\alpha}\right)_{\alpha\in I},\left(g_{\alpha}\right)_{\alpha\in I}$分别是二者的典范映射族.若对每个$\alpha\in I$,存在$u_{\alpha}\in\Hom_{\mathsf{Set}}\left(E_{\alpha},F_{\alpha}\right)$,对任意$\beta\in I$,当$\alpha\leq\beta$时下图交换:
+	\begin{center}
+		\begin{tikzcd}
+			{E_{\beta}} & {F_{\beta}} \\
+			{E_{\alpha}} & {F_{\alpha}}
+			\arrow["{f_{\beta,\alpha}}"', from=1-1, to=2-1]
+			\arrow["{u_{\beta}}"', from=1-2, to=1-1]
+			\arrow["{g_{\beta,\alpha}}", from=1-2, to=2-2]
+			\arrow["{u_{\alpha}}", from=2-2, to=2-1]
+		\end{tikzcd}
+	\end{center}
+	则存在唯一的$u\in\Hom_{\mathsf{Set}}\left(\varprojlim E_{\alpha},\varprojlim F_{\alpha}\right)$,对任意$\alpha\in I$下图交换:
+	\begin{center}
+		\begin{tikzcd}
+			{\varinjlim E_{\alpha}} & {\varinjlim F_{\alpha}} \\
+			{E_{\alpha}} & {F_{\alpha}}
+			\arrow["{\exists!u}"', dashed, from=1-2, to=1-1]
+			\arrow["{f_{\alpha}}", from=2-1, to=1-1]
+			\arrow["{g_{\alpha}}"', from=2-2, to=1-2]
+			\arrow["{u_{\alpha}}", from=2-2, to=2-1]
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{definition}{映射的正向系统和正向极限}{}
+	记号同推论(\ref{cor:universal-property-of-direct-limits-of-a-family-of-mappings}).
+	\begin{enumerate}
+		\item 我们称$\left(u_{\alpha}\right)_{\alpha\in I}$是$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$到$\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$的映射正向系统.
+		\item 我们把$u$记作$\varinjlim\limits_{I}u_{\alpha}$(或$\varinjlim u_{\alpha}$),称之为$\left(u_{\alpha}\right)_{\alpha\in I}$的正向极限.
+	\end{enumerate}
+\end{definition}
+
+\begin{corollary}{映射的逆向极限的函子性}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right),\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right),\left(\left(G_{\alpha}\right)_{\alpha\in I},\left(h_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的逆向系统.若
+	\begin{itemize}
+		\item 三者各自的典范映射族分别是$\left(f_{\alpha}\right)_{\alpha\in I},\left(g_{\alpha}\right)_{\alpha\in I},\left(h_{\alpha}\right)_{\alpha\in I}$,
+		\item $\left(u_{\alpha}\right)_{\alpha\in I}$和$\left(v_{\alpha}\right)_{\alpha\in I}$分别是$\left(E_{\alpha}\right)_{\alpha\in I}$到$\left(F_{\alpha}\right)_{\alpha\in I}$和$\left(F_{\alpha}\right)_{\alpha\in I}$到$\left(G_{\alpha}\right)_{\alpha\in I}$的映射逆向系统,
+	\end{itemize}
+	则$\left(v_{\alpha}\circ u_{\alpha}\right)_{\alpha\in I}$是$\left(E_{\alpha}\right)_{\alpha\in I}$到$\left(G_{\alpha}\right)_{\alpha\in I}$的逆向系统,并且下列图表交换:
+	\begin{center}
+		\begin{tikzcd}
+			{\varinjlim E_{\alpha}} && {\varinjlim F_{\alpha}} \\
+			& {\varinjlim G_{\alpha}}
+			\arrow["{\varinjlim u_{\alpha}}", from=1-1, to=1-3]
+			\arrow["{\varinjlim \left(v_{\alpha}\circ u_{\alpha}\right)}"', from=1-1, to=2-2]
+			\arrow["{\varinjlim v_{\alpha}}", from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{corollary}{}{}
+	记号同推论(\ref{cor:universal-property-of-direct-limits-of-a-family-of-mappings}).若$\left(u_{\alpha}\right)_{\alpha\in I}$是一族单射(相应的,满射,双射),则$u$也是单射(相应的,满射,双射).
+\end{corollary}
+
+\begin{proposition}{子集的正向系统的性质}{properties-of-subsets-of-direct-ststem}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta，\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向系统,对任意$\alpha\in I$,$M_{\alpha}\subseteq E_{\alpha}$且$\forall\beta\in I\left(\alpha\leq\beta\implies f_{\beta,\alpha}\left(M_{\alpha}\right)\subseteq M_{\beta}\right)$.
+	
+	若对诸$\alpha,\beta\in I$且$\alpha\leq\beta$,$g_{\alpha,\beta}\in\Hom_{\mathsf{Set}}\left(M_{\beta},M_{\alpha}\right)\wedge\Gr\left(g_{\alpha,\beta}\right)=\Gr\left(f_{\alpha,\beta}|_{M_{\beta}}\right)$,对诸$\alpha\in I$,$j_{\alpha}:M_{\alpha}\hookrightarrow E_{\alpha}$是典范单射,则
+	\begin{enumerate}
+		\item $\left(\left(M_{\alpha}\right)_{\alpha\in I},\left(g_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向极限.
+		\item $\varinjlim j_{\alpha}$是单射,从而可以将$\varinjlim M_{\alpha}$等同为$\varinjlim E_{\alpha}$的子集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{子集的正向系统}{}
+	记号和假设同命题(\ref{prop:properties-of-subsets-of-direct-ststem}).我们称$\left(M_{\alpha}\right)_{\alpha\in I}$是$\left(E_{\alpha}\right)_{\alpha\in I}$的正向系统的子集.
+\end{definition}
+
+\begin{corollary}{纤维的逆向极限}{direct-limit-of-fibre}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right),\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向系统,而$\left(u_{\alpha}\right)_{\alpha\in I}$是$\left(E_{\alpha}\right)_{\alpha\in I}$到$\left(F_{\alpha}\right)_{\alpha\in I}$的映射正向系统,并记$u=\varinjlim u_{\alpha}$.
+	\begin{enumerate}
+		\item 若$\left(M_{\alpha}\right)_{\alpha\in I}$是$\left(E_{\alpha}\right)_{\alpha\in I}$的子集正向系统,则$\left(u_{\alpha}\left(M_{\alpha}\right)\right)_{\alpha\in I}$是$\left(F_{\alpha}\right)_{\alpha\in I}$的子集正向系统,$\varinjlim u_{\alpha}\left(M_{\alpha}\right)=u\left(\varinjlim M_{\alpha}\right)$.
+		\item 设$\left(a_{\alpha}\right)_{\alpha\in I}\in\prod\limits_{\alpha\in I}$,并且$\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies g_{\beta,\alpha}\left(a_{\alpha}\right)=a_{\beta}\right)$.则
+		\begin{itemize}
+			\item $\left(u_{\alpha}^{-1}\left(\left\{a_{\alpha}\right\}\right)\right)_{\alpha\in I}$是$\left(E_{\alpha}\right)_{\alpha\in I}$的子集正向系统.
+			\item $\varinjlim u_{\alpha}^{-1}\left(\left\{a_{\alpha}\right\}\right)=u^{-1}\left(\left\{a\right\}\right)$,其中$a$是$\left(a_{\alpha}\right)_{\alpha\in I}$在典范映射$\varinjlim E_{\alpha}\to\varinjlim F_{\alpha}$下的像.
+		\end{itemize}
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	设$F$是集合,对任意$\alpha\in I$,$u_{\alpha}\in\Hom_{\mathsf{Set}}\left(F,E_{\alpha}\right)$满足$\forall\beta\in I\left(\alpha\leq\beta\implies f_{\alpha,\beta}\circ u_{\beta}=u_{\alpha}\right)$.
+	
+	考虑集合的逆向系统$\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(i_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$,其中对任意$\alpha\in I$有$F_{\alpha}=F$,对任意$\alpha,\beta\in I$且$\alpha\leq\beta$有$i_{\alpha,\beta}=\id_{F}$.
+	\begin{itemize}
+		\item $\varprojlim F_{\alpha}$典范等同于$F$.
+		\item 对任意$\alpha\in I$,把$u_{\alpha}$视为$F_{\alpha}$到$E_{\alpha}$的映射,则$\left(u_{\alpha}\right)_{\alpha\in I}$是映射的逆向系统,其逆向极限典范等同于$\varprojlim u_{\alpha}$.
+	\end{itemize}
+\end{remark}
+
+\begin{definition}{正向系统的限制}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向系统,$J\subseteq I$,则$\left(\left(E_{\alpha}\right)_{\alpha\in J},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in J}\right)$是集合的正向系统,称为原正向系统在$J$上的限制.
+\end{definition}
+
+\begin{definition}{限制正向系统诱导的典范映射}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的正向系统,$J\subseteq I$.我们称$g:\varinjlim \limits_{I}E_{\alpha}\to\varinjlim\limits_{J}E_{\alpha},x\mapsto\left(f_{\alpha}\left(x\right)\right)_{\alpha\in J}$为典范映射.
+\end{definition}
+
+\begin{proposition}{限制正向极限的函子性}{}
+	设上定向集$I,J,K$满足$K\subseteq J\subseteq I$,$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$是集合的正向系统,则下图交换(其中$f,g,h$都是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			{\varinjlim\limits_{K}E_{\alpha}} && {\varinjlim\limits_{I}E_{\alpha}} \\
+			& {\varinjlim\limits_{J}E_{\alpha}}
+			\arrow["h", from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["g"', from=2-2, to=1-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{共尾限制}{}
+	设$I$是上定向集,$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向系统,$J$是$I$的共尾子集,则有典范双射$\varinjlim\limits_{J}E_{\alpha}\to\varinjlim\limits_{I}E_{\alpha}$.
+\end{proposition}

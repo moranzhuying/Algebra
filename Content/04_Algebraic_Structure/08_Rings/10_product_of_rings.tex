@@ -1,0 +1,87 @@
+\section{环的乘积}
+
+记号约定:
+
+\begin{itemize}
+	\item $\left(A_{i}\right)_{i\in I}$是一族环,$A=\prod\limits_{i\in I}A_{i}$,$B$是环.
+	\item 对诸$i\in I$,$\mathfrak{a}_{i}$是$A_{i}$的左(相对地,右,双边)理想,$\mathfrak{a}=\prod\limits_{i\in I}\mathfrak{a}_{i}$.
+\end{itemize}
+
+\begin{definition}{环的乘积}{}
+	给$A$配备逐点的加法和乘法.称$A$为$\left(A_{i}\right)_{i\in I}$的乘积(或积环).
+\end{definition}
+
+\begin{proposition}{积环的中心}{}
+	$Z\left(A\right)=\prod\limits_{i\in I}A_{i}$.特别地,若$\left(A_{i}\right)_{i\in I}$是一族交换环,则$A$是交换环.
+\end{proposition}
+
+\begin{proposition}{典范投影是环同态}{}
+	对任一$i\in I$,$\pr_{i}:A\twoheadrightarrow A_{i}$是环同态.
+\end{proposition}
+
+\begin{proposition}{积环的泛性质}{}
+	设$\forall i\in I\left(f_{i}\in\Hom_{\mathsf{Ring}}\left(B,A_{i}\right)\right)$,则存在唯一的$f\in\Hom_{\mathsf{Ring}}\left(B,A\right)$,对每个$i\in I$下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			B && A \\
+			& {A_{i}}
+			\arrow["{\exists!f}", dashed, from=1-1, to=1-3]
+			\arrow["{f_{i}}"', from=1-1, to=2-2]
+			\arrow["{\pr_{i}}", two heads, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{积环的子结构}{}
+	若对诸$i\in I$,$\mathfrak{a}_{i}$是$A_{i}$的左理想(相对地,右理想,双边理想,子环),则$\mathfrak{a}$是$A$的左理想(相对地,右理想,双边理想,子环).
+\end{proposition}
+
+\begin{proposition}{积环的商}{}
+	若对诸$i\in I$,$\mathfrak{a}_{i}$是$A_{i}$的双边理想,则有典范的环同构$A/\mathfrak{a}\simeq\prod\limits_{i\in I}\left(A/\mathfrak{a}_{i}\right)$.
+\end{proposition}
+
+\begin{proposition}{积环的结合律}{}
+	设$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,则有典范的环同构$A\simeq\prod\limits_{\lambda\in\Lambda}\prod\limits_{i\in I_{\lambda}}A_{\lambda}$.
+\end{proposition}
+
+\begin{definition}{积环的中心幂等元}{}
+	设$J\subseteq I$.定义$e_{J}\coloneq\left(x_{i}\right)_{i\in I}\in A^{I}$,$x_{i}=
+	\begin{cases}
+		1,&i\in J,\\
+		0,&i\notin J.
+	\end{cases}$
+\end{definition}
+
+\begin{proposition}{积环的中心幂等元的性质}{}
+	设$J,K\subseteq I$.
+	\begin{enumerate}
+		\item $e_{J}$是$A$的中心幂等元.
+		\item $e_{I}=1_{A},e_{\emptyset}=0_{A}$.
+		\item $e_{J}e_{K}=e_{J\cap K}$.
+		\item 当$J\cap K=\emptyset$时$e_{J}+e_{K}=e_{J\cup K}$.
+		\item 若$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的有限划分,则$\sum\limits_{\lambda\in\Lambda}e_{I_{\lambda}}=1_{A}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{积环的有限直和分解}{}
+	设$J\subseteq I$,$p_{J}:A\twoheadrightarrow A_{J}$是典范投影,$\iota_{J}:A_{J}\hookrightarrow A$是典范嵌入.对诸$i\in I$,令$e_{i}\coloneq e_{\left\{i\right\}}$.
+	\begin{enumerate}
+		\item $p_{J}$是环同态.
+		\item $\ker\left(p_{I\setminus J}\right)=\iota\left(1_{A_{J}}\right)A=A\iota\left(1_{A_{J}}\right)$.
+		\item $\left(e_{i}\right)_{i\in I}$是$A$的一族中心幂等元,并且$\forall i,j\in I\left(i\neq j\implies e_{i}e_{j}=0_{A}\right)$.
+		\item 对任一$i\in I$,记$\mathfrak{a}_{i}=e_{i}A$.若$I$有限,则$\sum\limits_{i\in I}e_{i}=1_{A}$,加法群$A$是$\left(\mathfrak{a}_{i}\right)_{i\in I}$的直和.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{理想的直和分解}{}
+	设对诸$i\in I$,$\mathfrak{a}_{i}$是$A_{i}$的左(相对地,右)理想,$\mathfrak{b}$是$A$的左(相对地,右)理想,则$\mathfrak{b}=\bigoplus\limits_{i\in I}\left(\mathfrak{b}\cap\mathfrak{a}_{i}\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+
+

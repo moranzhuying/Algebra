@@ -1,0 +1,85 @@
+\section{Clifford群}
+
+记号约定:
+\begin{itemize}
+	\item $A$是域,$\dim E=m\in\N$,$Q$非退化.
+	\item 把$E$典范等同为$\Cl\left(E,Q\right)$的子空间.
+\end{itemize}
+
+\begin{definition}{Clifford群,特殊Clifford群}{}
+	\begin{enumerate}
+		\item 称$\Gamma\left(Q\right)\coloneq\left\{s\in\Cl\left(E,Q\right)^{\times}\middle|sEs^{-1}=E\right\}$是$E$关于$Q$的Clifford群.
+		\item 称$\Gamma^{+}\left(Q\right)\coloneq\Gamma\left(Q\right)\cap\Cl^{+}\left(E,Q\right)$是$E$关于$Q$的特殊Clifford群.
+	\end{enumerate}
+\end{definition}
+
+\begin{lemma}{}{}
+	\begin{enumerate}
+		\item 对每个$s\in\Gamma\left(Q\right)$,存在$z\in Z\left(\Cl\left(E,Q\right)\right)^{\times}$和$s^{\prime}\in\Gamma^{+}\left(Q\right)\cup\left(\Gamma\left(Q\right)\cap\Cl^{-}\left(E,Q\right)\right)$使得$s=zs^{\prime}$.
+		\item 当$E\neq\left\{0\right\}$时,$\left[\Gamma\left(Q\right):\Gamma^{+}\left(Q\right)\right]=2$.
+	\end{enumerate}
+\end{lemma}
+
+本节接下来的内容做如下约定:
+\begin{itemize}
+	\item 对每个$s\in G$,记$\ad_{s}:E\to E,x\mapsto sxs^{-1}$.
+	\item $\phi:G\to\mathrm{O}\left(Q\right),s\mapsto\ad_{s}$.
+	\item $\beta$是$\Cl\left(E,Q\right)$上的主反自同构.
+\end{itemize}
+
+\begin{theorem}{}{}
+	\begin{enumerate}
+		\item $\phi$是群同态,$\ker\left(\phi\right)=Z\left(\Cl\left(E,Q\right)\right)^{\times}$.
+		\item $E\cap G$是$E$中所有$Q$-非奇异向量组成的集合.对每个$x\in E\cap G$,$-\ad_{s}$是关于正交于$x$的超平面的正交反射.
+		\item 设$m$是偶数.那么:
+		\begin{itemize}
+			\item $\phi$是满射.
+			\item 当$E\neq\left\{0\right\}$时$\left[\mathrm{O}\left(Q\right):\phi\left(\Gamma^{+}\left(Q\right)\right)\right]=2$.
+			\item 当$\Char\left(A\right)\neq 2$时,$\phi\left(\Gamma^{+}\left(Q\right)\right)=\SO\left(Q\right)$.
+		\end{itemize}
+		\item 设$m$是奇数,那么$\im\left(\phi\right)=\phi\left(\Gamma^{+}\left(Q\right)\right)=\SO\left(Q\right)$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{旋转群}{}
+	我们称$\mathrm{O}^{+}\left(Q\right)\coloneq\phi\left(\Gamma^{+}\left(Q\right)\right)$是$E$关于$Q$的旋转群,其元素称为$E$上关于$Q$的旋转.
+\end{definition}
+
+\begin{remark}{}{}
+	当$E\neq\left\{0\right\}$时$\left[\mathrm{O}\left(Q\right):\mathrm{O}^{+}\left(Q\right)\right]=2$;当$\Char\left(A\right)\neq 2$时$\mathrm{O}^{+}\left(Q\right)=\SO\left(Q\right)$.
+\end{remark}
+
+\begin{proposition}{旋子范数的良定义型}{well-definedness-of-spin-norm}
+	\begin{enumerate}
+		\item 对每个$s\in\Gamma^{+}\left(Q\right)$有$\beta\left(s\right)s\in A^{\times}$.
+		\item $\Norm:\Gamma^{+}\left(Q\right)\to A^{\times},x\mapsto\beta\left(x\right)x$是群同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{旋量范数,旋量群,约化正交群}{}
+	沿用命题\ref{prop:well-definedness-of-spin-norm}的记号.
+	\begin{enumerate}
+		\item 我们称$\Norm$是旋量范数.对每个$s\in\Gamma^{+}\left(Q\right)$,称$\Norm\left(s\right)$是$s$的旋量范数.
+		\item 我们称$\Spin\left(Q\right)\coloneq\ker\left(N\right)$是$Q$的旋量群.
+		\item 我们称$\Omega\left(Q\right)\coloneq\phi\left(\Spin\left(Q\right)\right)$是$Q$的约化正交群.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 我们有典范的群同构$\mathrm{O}^{+}\left(Q\right)/\Omega\left(Q\right)\simeq\Gamma^{+}\left(Q\right)/\left(A^{\times}\Gamma^{+}\left(Q\right)\right)\simeq\Norm\left(\Gamma^{+}\left(Q\right)\right)/\Norm\left(A^{\times}\right)$,其中$\Norm\left(A^{\times}\right)=\left(A^{\times}\right)^{2}$,它表示$A^{\times}$中元素的平方组成的集合.特别地,$\mathrm{O}^{+}\left(Q\right)/\Omega\left(Q\right)$是交换群.
+		\item 若$Q$的Witt指数$>0$,则$\Norm$是满射,并且$\mathrm{O}^{+}\left(Q\right)/\Omega\left(Q\right)\simeq A^{\times}/\left(A^{\times}\right)^{2}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+

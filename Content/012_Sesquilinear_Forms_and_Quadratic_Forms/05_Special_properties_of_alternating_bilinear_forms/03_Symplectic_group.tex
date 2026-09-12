@@ -1,0 +1,48 @@
+\section{辛群}
+
+记号约定:$A$是交换环,$E$是$A$-模,$\varphi\in\Bil_{A}\left(E\right)$交错,$m\geq 1$.
+
+\begin{definition}{辛变换}{}
+	设$f\in\Aut_{A-\mathsf{Mod}}\left(E\right)$.若$\varphi\circ\left(u\times u\right)=\varphi$,则称$f$是关于$\varphi$的辛变换(或辛自同构).
+\end{definition}
+
+\begin{lemma}{辛群的良定义性}{well-definedness-of-symplectic-group}
+	记$\Sp\left(\varphi\right)$是$E$上关于$\varphi$的辛变换组成的集合,则$\Sp\left(\varphi\right)$按照映射复合构成群.
+\end{lemma}
+
+\begin{definition}{辛群}{}
+	沿用引理\ref{lem:well-definedness-of-symplectic-group}的记号.我们称$\Sp\left(\varphi\right)$是$\varphi$的辛群.
+\end{definition}
+
+\begin{definition}{标准辛矩阵}{}
+	定义$A$上的$2m$阶反对称方阵$\boldsymbol{J}_{m}\coloneq\left(\alpha_{i,j}\right)_{\substack{1\leq i\leq 2m\\ 1\leq j\leq 2m}}$如下:
+	\begin{align*}
+		\forall m+1\leq i,j\leq 2m\left(\alpha_{i,j}=1\right).
+	\end{align*}
+	我们称$\boldsymbol{J}_{m}$是$\boldsymbol{A}$上的$m$阶辛矩阵.
+\end{definition}
+
+\begin{definition}{标准辛变换,标准辛群}{}
+	设$E=A^{2m}$,$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{2m}$是$E$的典范基,$\varphi_{0}$是$E$上的$A$-交错双线性型,满足$\Gram_{\mathcal{B}}^{\mathcal{B}}\left(\varphi_{0}\right)=\boldsymbol{J}_{m}$.
+	\begin{enumerate}
+		\item 我们称$\varphi_{0}$是$E$上的标准辛变换.
+		\item 我们称$\Sp_{2m}\left(\varphi\right)\coloneq\Sp\left(\varphi_{0}\right)$是$m$次辛群.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{辛方程}{}
+	设$\boldsymbol{M}\in\mathbf{M}_{2m}\left(A\right)$.如果$\boldsymbol{M}^{\top}\boldsymbol{J}_{m}\boldsymbol{M}=\boldsymbol{J}_{m}$,则称$\boldsymbol{M}$满足$m$阶辛方程,公式$\boldsymbol{M}^{\top}\boldsymbol{J}_{m}\boldsymbol{M}=\boldsymbol{J}_{m}$称为$m$阶辛方程.
+\end{definition}
+
+\begin{proposition}{$m$阶辛矩阵的性质}{}
+	设$\boldsymbol{M}\in\mathbf{M}_{2m}\left(A\right)$.
+	\begin{enumerate}
+		\item 若$\boldsymbol{M}=\boldsymbol{J}_{m}$,则$\boldsymbol{M}\in\GL_{2m}\left(A\right)$且$\boldsymbol{M}$满足$m$阶辛方程.
+		\item 若$\boldsymbol{M}$满足$m$阶辛方程,则$\boldsymbol{M}\in\GL_{2m}\left(A\right)$.
+		\item 若$\boldsymbol{M}=\boldsymbol{J}_{m}$,则$\det\left(\boldsymbol{M}\right)=1$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{辛群同构定理}{}
+	设$A$是域.若$\dim E=2m$且$\varphi$非退化,则$\Sp\left(\varphi\right)$典范同构于$\Sp_{2m}\left(A\right)$.
+\end{corollary}

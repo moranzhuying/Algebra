@@ -1,0 +1,70 @@
+\section{代数的张量积的泛性质刻画}
+
+记号约定:$A$是交换环,$I$是有限集.
+
+\begin{proposition}{代数的张量积的泛性质}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族$A$-代数,$E=\bigotimes\limits_{i\in I}E_{i}$,对每个$i\in I$,$e_{i}$是$E_{i}$的单位元,并定义
+	\begin{align*}
+		u_{i}:E_{i}\to E,x_{i}\mapsto\bigotimes\limits_{j\in I}x_{j}^{\prime},x_{j}^{\prime}=
+		\begin{cases}
+			x_{i},&j=i,\\
+			e_{i},&j\neq i.
+		\end{cases}
+	\end{align*}
+	\begin{enumerate}
+		\item $\left(u_{i}\right)_{i\in I}$是一族$A$-代数同构,并且
+		\begin{align*}
+			\forall i,j\in I\forall x_{i}\in E_{i}\forall x_{j}\in E_{j}\left(i\neq j\implies u_{i}\left(x_{i}\right)u_{j}\left(x_{j}\right)=u_{j}\left(x_{j}\right)u_{i}\left(x_{i}\right)\right),
+		\end{align*}
+		同时$A$-代数$E$由$\bigcup\limits_{i\in I}\im\left(u_{i}\right)$生成.
+		\item 设$F$是$A$-代数,对每个$i\in I$有$v_{i}\in\Hom_{A-\mathsf{Alg}}\left(E_{i},F\right)$.如果
+		\begin{align*}
+			\forall i,j\in I\forall x_{i}\in E_{i}\forall x_{j}\in E_{j}\left(i\neq j\implies v_{i}\left(x_{i}\right)v_{j}\left(x_{j}\right)=v_{j}\left(x_{j}\right)v_{i}\left(x_{i}\right)\right)
+		\end{align*}
+		则$\exists!w\in\Hom_{A-\mathsf{Alg}}\left(E,F\right)\forall i\in I\left(v_{i}=w\circ u_{i}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	如果$F$是交换代数,则$\forall i,j\in I\forall x_{i}\in E_{i}\forall x_{j}\in E_{j}\left(i\neq j\implies v_{i}\left(x_{i}\right)v_{j}\left(x_{j}\right)=v_{j}\left(x_{j}\right)v_{i}\left(x_{i}\right)\right)$自动成立.因此,$F$是交换代数时,$\Hom_{A-\mathsf{Alg}}\left(\bigotimes\limits_{i\in I}E_{i},F\right)\to\prod\limits_{i\in I}\Hom_{A-\mathsf{Alg}}\left(E_{i},F\right),\omega\mapsto\left(\omega\circ u_{i}\right)_{i\in I}$是典范双射.
+\end{remark}
+
+\begin{corollary}{张量积同态的泛性质}{}
+	设$\left(E_{i}\right)_{i\in I},\left(F_{i}\right)_{i\in I}$是$A$-代数族,对每个$i\in I$有$f_{i}\in\Hom_{A-\mathsf{Alg}}\left(E_{i},F_{i}\right)$,$e_{i},e_{i}^{\prime}$分别是$E_{i},F_{i}$的单位元
+	\begin{gather*}
+		u_{i}:E_{i}\to\bigotimes\limits_{j\in I}E_{j},x_{i}\mapsto\bigotimes\limits_{j\in I}x_{j}^{\prime},x_{j}^{\prime}=
+		\begin{cases}
+			x_{i},&j=i,\\
+			e_{i},&j\neq i,
+		\end{cases}\\
+		v_{i}:F_{i}\to\bigotimes\limits_{j\in I}F_{j},y_{i}\mapsto\bigotimes\limits_{j\in I}y_{j}^{\prime},x_{j}^{\prime}=
+		\begin{cases}
+			y_{i},&j=i,\\
+			e_{i}^{\prime},&j\neq i.
+		\end{cases}
+	\end{gather*}
+	则$\forall f\in\Hom_{A-\mathsf{Alg}}\left(\bigotimes\limits_{i\in I}E_{i},\bigotimes\limits_{i\in I}F_{i}\right)\left(\forall i\in I\left(f\circ u_{i}=v_{i}\circ f\right)\implies f=\bigotimes\limits_{i\in I}f_{i}\right)$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

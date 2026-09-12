@@ -1,0 +1,91 @@
+\section{自同态的相似不变量}
+
+\begin{definition}{广义特征子空间}{}
+	设$\dim_{K}V=n$.对$K[X]$中的每个首一不可约多项式$p$,记$V[p^{\infty}]=\bigcup\limits_{k=1}^{\infty}\ker\left(p\left(\mathcal{T}\right)^{k}\right)$.
+\end{definition}
+
+\begin{remark}{}{}
+	记$P$是$K[X]$中的首一多项式组成的集合.
+	\begin{enumerate}
+		\item 对每个$p\in P$,$V[p^{\infty}]$是$V$的$\mathcal{T}$-不变子空间,并且$V=\bigoplus\limits_{p\in\mathcal{P}}V[p^{\infty}]$.
+		\item 存在$K[X]$的元素族$\left(s_{p}\right)_{p\in\mathcal{P}}$,对每个$x\in V$都有$x=\sum\limits_{p\in\mathcal{P}}s_{p}\left(\mathcal{A}\right)x$.
+		\item 对每个$p\in P$,记$\mathcal{T}_{p}:M_{p}\to M_{p},x\mapsto\mathcal{T}\left(x\right)$.那么对每个$p\in P$,$\Min_{\mathcal{T},V[p^{\infty}]}$是$p$的整除$\mathcal{T}$的$\Min_{\mathcal{T},V}$的最高次幂.
+		\item 对每个$p\in P$和$x\in V[p^{\infty}]$,只要$V[p^{\infty}]\neq\left\{0\right\}$,就有$x\in\ker\left(s_{p}\left(\mathcal{T}\right)-\id_{V}\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{向量空间的循环$K[X]$-子模分解}{cycle-decomposition-of-vector-space}
+	设$\dim_{K}V=n\geq 1$,则存在$K[X]$的首一多项式族$\left(q_{i}\right)_{i=1}^{n}$和$V$的子空间族$\left(V_{i}\right)_{i=1}^{n}$满足如下条件:
+	\begin{enumerate}
+		\item 对每个$1\leq i\leq n-1$有$q_{i}\mid q_{i+1}$.
+		\item $V=\bigoplus\limits_{i=1}^{n}V_{i}$,并且对每个$1\leq i\leq n$,$V_{i}$既是$V$的$\mathcal{T}$-不变子空间,又是$V$的$\mathcal{T}$-循环子空间.
+		\item 对每个$1\leq i\leq n$,记$\mathcal{T}_{i}:V_{i}\to V_{i},x\mapsto\mathcal{T}\left(x\right)$.那么,对每个$1\leq i\leq n$有$\Min_{\mathcal{T}_{i},V_{i}}=q_{i}$.
+		\item 序列$\left(q_{i}\right)_{i=1}^{n}$被条件(1)(2)(3)唯一确定,并且$q_{n}=\Min_{\mathcal{T},V}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	$V$中存在一个基$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$,使得$\left[\mathcal{T}\right]_{\mathcal{B}}^{\mathcal{B}}=\diag\left(\Com\left(q_{n-r+1}\right),\Com\left(q_{n-r+2}\right),\ldots,\Com\left(q_{n}\right)\right)$,其中$1\leq r\leq n$.
+\end{remark}
+
+\begin{definition}{线性自同态的相似不变量}{}
+	沿用命题(\ref{prop:cycle-decomposition-of-vector-space})的记号.我们称$\left(q_{i}\right)_{i=1}^{n}$是$\mathcal{T}$的相似不变量.
+\end{definition}
+
+\begin{corollary}{}{}
+	设$V,V^{\prime}$是有限维$K$-向量空间,$\mathcal{T}^{\prime}\in\End_{K}\left(V^{\prime}\right)$,则$\mathcal{T}$和$\mathcal{T}^{\prime}$相似$\iff$ $\mathcal{T}$和$\mathcal{T}^{\prime}$的相似不变量相同.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$V$是有限维$K$-向量空间,$L$是$K$的扩域,$\sigma:K\to L$是环同态,$\bar{q}:K[X]\to L[X]$是$q$诱导的典范映射.若$\left(q_{i}\right)_{i=1}^{n}$是$\mathcal{T}$的相似不变量,则$\left(\bar{\sigma}\left(q_{i}\right)\right)_{i=1}^{n}$是$\rho^{\ast}\left(\mathcal{T}\right)$的相似不变量.
+\end{corollary}
+
+\begin{definition}{矩阵的相似不变量}{}
+	设$\boldsymbol{A}\in\mathbf{M}_{n}\left(K\right)$,它诱导的左乘是$\mathcal{L}_{\boldsymbol{A}}:\mathbf{M}_{n,1}\left(K\right)\to\mathbf{M}_{n,1}\left(K\right)$.我们称$\mathcal{L}_{\boldsymbol{A}}$的相似不变量为$\boldsymbol{A}$的相似不变量.
+\end{definition}
+
+\begin{corollary}{}{}
+	设$\boldsymbol{A},\boldsymbol{B}\in\mathbf{M}_{n}\left(K\right)$.若存在$K$的扩域$L$和环同态$\rho:K\to L$使得$\boldsymbol{A}_{\rho}$和$\boldsymbol{B}_{\rho}$相似,那么$\boldsymbol{A}$和$\boldsymbol{B}$相似.
+\end{corollary}
+
+\begin{definition}{线性映射的行列式因子}{}
+	设$\dim_{K}V=n$,$\mathcal{T}$的相似不变量是$\left(q_{i}\right)_{i=1}^{n}$.对每个$1\leq i\leq n$,称$d_{m}\coloneq\prod\limits_{i=1}^{m}q_{i}$是$\mathcal{T}$的第$m$个行列式因子.
+\end{definition}
+
+\begin{corollary}{有限维向量空间上行列式因子的计算}{}
+	设$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$是$V$的基,$\boldsymbol{A}=\left[\mathcal{T}\right]_{\mathcal{B}}^{\mathcal{B}}$.
+	\begin{enumerate}
+		\item 对每个$1\leq m\leq n$,$\mathcal{T}$的第$m$个行列式因子是$\boldsymbol{X}\boldsymbol{I}_{n\times n}-\boldsymbol{A}$的所有$m$阶子式的最大公因子.
+		\item 记$q=\Min_{\mathcal{T},V}$,则$q\mid\Char_{\mathcal{T},V},\Char_{\mathcal{T},V}\mid q^{n}$.
+		\item $\Min_{\mathcal{T},V}$和$\Char_{\mathcal{T},V}$有相同的根,这些根是$\mathcal{T}$在$K$上的特征值.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{有限维向量空间上线性映射幂零的特征多项式刻画}{}
+	设$\dim_{K}V=n$,则$\mathcal{T}$是$n$-幂零的$\iff$ $\Char_{\mathcal{T},V}=X^{n}$.
+\end{corollary}
+
+本节接下来的内容中,默认$P$是$K[X]$中的首一不可约多项式组成的集合.
+
+\begin{proposition}{}{}
+	设$\dim_{K}V=n$.
+	\begin{enumerate}
+		\item $V$有一族子空间$\left(V_{i}\right)_{i=1}^{r}$满足如下条件:
+		\begin{itemize}
+			\item 对每个$1\leq i\leq r$,$V_{i}$是$\mathcal{T}$-不变的和$\mathcal{T}$-循环的,并且$V$中不存在$\mathcal{T}$-不变子空间$W_{1},W_{2}$使$V_{i}=W_{1}\oplus W_{2}$.
+			\item 对每个$1\leq i\leq r$记$\mathcal{T}_{i}:V_{i}\to V_{i},x\mapsto\mathcal{T}\left(x\right)$,则对每个$1\leq i\leq r$,存在$p_{i}\in P,n_{i}\in\N_{\geq 1}$使得$\Min_{\mathcal{T}_{i},V_{i}}=p_{i}^{n_{i}}$.
+		\end{itemize}
+		\item 对每个$\left(p,n\right)\in P\times\N_{\geq 1}$,定义$\N$中的元素$m\left(p^{n}\right)$如下:对$V$的每个满足(1)中条件的子空间族$\left(W_{i}\right)_{i=1}^{s}$,
+		\begin{align*}
+			m\left(p^{n}\right)=\left|\left\{j\in\left[1,s\right]\middle|\Min_{\mathcal{T}_{j},W_{j}}=p^{n}\right\}\right|.
+		\end{align*}
+		那么,元素族$\left(m\left(p^{n}\right)\right)_{p\in P,n\in\N}$被$\mathcal{T}$唯一确定.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	注意到集合$\left\{p\in P\middle|\exists n\geq 1\left(m\left(p^{n}\right)\right)\right\}$的元素恰好就是$\Min_{\mathcal{T},V}$的首一不可约因子.因此,与$\mathcal{T}$的相似不变量相反,这个集合中的元素一般依赖于域$K$.
+\end{remark}
+
+
+

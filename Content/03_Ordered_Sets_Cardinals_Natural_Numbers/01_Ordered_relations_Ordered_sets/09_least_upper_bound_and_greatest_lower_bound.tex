@@ -1,0 +1,234 @@
+\section{上确界和下确界}
+
+\begin{definition}{上确界,下确界}{}
+	设集合$E$配备偏序$\leq$,$X\subseteq E$.
+	\begin{enumerate}
+		\item 若$\uparrow_{E}^{\leq}\left(X\right)$有最大元,则把$\max\downarrow_{E}^{\leq}\left(X\right)$记作$\sup\limits_{E}X$(或$\bigvee\limits_{E}X$,无歧义时记作$\sup X$或$\bigvee X$),称为$X$在$E$中的上确界.
+		\item 若$\downarrow_{E}^{\leq}\left(X\right)$有最小元,则把$\min\downarrow_{E}^{\leq}\left(X\right)$记作$\inf\limits_{E}X$(或$\bigwedge\limits_{E}X$,无歧义时记作$\inf X$或$\bigwedge X$),称为$X$在$E$中的下确界.
+		\item 当$X=\left\{x_{1},\ldots,x_{n}\right\}$时,如果$X$有最大元(或最小元),则把$\sup\limits_{E}X$(或$\inf\limits_{E}X$)记作
+		\begin{gather*}
+			\sup_{E}\left(x_{1},\ldots,x_{n}\right)\text{或}\sup\left(x_{1},\ldots,x_{n}\right)\text{或}\bigvee\limits_{i=1}^{n}x_{i}\text{或}x_{1}\vee\ldots\vee x_{n}\\
+			(\text{相对的},\inf_{E}\left(x_{1},\ldots,x_{n}\right)\text{或}\inf\left(x_{1},\ldots,x_{n}\right)\text{或}\bigwedge\limits_{i=1}^{n}x_{i}\text{或}x_{1}\wedge\ldots\wedge x_{n})
+		\end{gather*}
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	设集合$E$配备偏序$\leq$,$X\subseteq E$.
+	\begin{enumerate}
+		\item 如果$a=\max X$,那么$a=\sup X$.
+		\item 如果$\leq^{\prime}$是$\leq$的对偶,$a$是$X$相对$\leq$在$E$中的下确界,则$a$是$X$相对$\leq^{\prime}$在$E$中的上确界.
+	\end{enumerate}
+\end{proposition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设集合$E$配备偏序$\leq$,则$\uparrow_{E}^{\leq}\left(\emptyset\right)=X$.因此$\emptyset$有上确界$\iff$ $E$有最小元,两条件之一成立时$\sup\emptyset=\min E$.
+		\item 设$E$是集合,给$\mathcal{P}\left(E\right)$配备包含偏序,则每个$\mathfrak{S}\in\mathcal{P}\left(E\right)$都有上确界和下确界,并且$\sup\mathfrak{S}=\bigcup\limits_{S\in\mathfrak{S}}S,\inf\mathfrak{S}=\bigcap\limits_{S\in\mathfrak{S}}S$.
+		\item 设$E,F$是集合,$\Theta\in\PFunc\left(E,F\right)$,给$\PFunc\left(E,F\right)$配备函数延拓偏序,则$\mathfrak{S}$有上确界当且仅当
+		\begin{align*}
+			\forall u,v\in\Theta\forall x\in\dom\left(u\right)\cap\dom\left(g\right)\left(u\left(x\right)=v\left(x\right)\right).
+		\end{align*}
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{映射的上确界}{}
+	设$I,E$是集合,$E$配备偏序$\leq$,$f\in\Hom_{\mathsf{Set}}\left(I,E\right)$.
+	\begin{enumerate}
+		\item 若$\im\left(f\right)$有上确界,则把$\im\left(f\right)$的上确界记作$\sup\limits_{x\in A}f\left(x\right)$(或$\bigvee\limits_{x\in A}f\left(x\right)$),称之为$f$的上确界.
+		\item 若$\im\left(f\right)$有下确界,则把$\im\left(f\right)$的下确界记作$\inf\limits_{x\in A}f\left(x\right)$(或$\bigwedge\limits_{x\in A}f\left(x\right)$),称之为$f$的下确界.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	如果$A$是$E$的子集,当$A$有上确界(或下确界)时$\sup A=\sup\limits_{x\in A}x$(相对的,$\inf A=\inf\limits_{x\in A}x$).
+\end{remark}
+
+\begin{proposition}{}{}
+	设集合$E$配备偏序$\leq$,$X\subseteq E$且在$E$中有上确界和下确界.
+	\begin{enumerate}
+		\item 若$A\neq\emptyset$,则$\inf A\leq\sup A$.
+		\item 若$A=\emptyset$,则$\sup A=\min E,\inf A=\max E$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设集合$E$配备偏序$\leq$,$A,B$是$E$的子集且都在$E$中有上确界和下确界.若$A\subseteq B$,则$\sup A\leq\sup B,\inf A\geq \inf B$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设集合$E$配备偏序$\leq$,$\left(x_{i}\right)_{i\in I}$是$E$的元素族,$J\subseteq I$,则$\sup\limits_{i\in J}x_{i}\leq\sup\limits_{i\in I}x_{i}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设集合$E$配备偏序$\leq$,$\left(x_{i}\right)_{i\in I},\left(y_{i}\right)_{i\in I}$是$E$的元素族且在$E$中有上确界.若$\forall i\in I\left(x_{i}\leq y_{i}\right)$,则$\sup\limits_{i\in I}x_{i}\leq\sup\limits_{i\in I}y_{i}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设集合$E$配备偏序$\leq$,$\left(x_{i}\right)_{i\in I}$是$E$的元素族,$\left(J_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的覆盖,则下列陈述等价:
+	\begin{enumerate}
+		\item $\left(x_{i}\right)_{i\in I}$在$E$中有上确界.
+		\item 对任意$\lambda\in\Lambda$,$\left(x_{i}\right)_{i\in J_{\lambda}}$有上确界$b_{\lambda}$,并且$\left(b_{\lambda}\right)_{\lambda\in\Lambda}$有上确界.
+	\end{enumerate}
+	两条件之一成立时,我们有$\sup\limits_{i\in I}x_{i}=\sup\limits_{\lambda\in\Lambda}\sup\limits_{i\in J_{\lambda}}x_{i}$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设集合$E$配备偏序$\leq$,$\left(x_{i,j}\right)_{i\in I,j\in J}$是$E$的元素族,对任意$j\in J$,$\left(x_{i,j}\right)_{i\in I}$在$E$中有上确界,则下列陈述等价:
+	\begin{enumerate}
+		\item $\left(x_{i,j}\right)_{i\in I,j\in J}$在$E$中有上确界.
+		\item $\left(\sup\limits_{i\in I}x_{i,j}\right)_{j\in J}$在$E$中有上确界.
+	\end{enumerate}
+	两条件之一成立时,我们有$\sup\limits_{\left(i,j\right)\in I\times J}x_{i,j}=\sup\limits_{j\in J}\sup\limits_{i\in I}x_{i,j}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族偏序集,$A\subseteq\prod\limits_{i\in I}E_{i}$,给$\prod\limits_{i\in I}E_{i}$配备逐点序,则下列陈述等价:
+	\begin{enumerate}
+		\item $A$在$E$中有上确界.
+		\item 对任意$i\in I$,$\pr_{i}\left(A\right)$在$E_{i}$中有上确界.
+	\end{enumerate}
+	两条件之一成立时,我们有$\sup A=\left(\sup\pr_{i}\left(A\right)\right)_{i\in I}=\left(\sup\limits_{x\in A}\pr_{i}\left(x\right)\right)_{i\in I}$.
+\end{proposition}
+
+\begin{remark}{}{}
+	设集合$E$配备偏序$\leq$,$A\subseteq F\subseteq E$,则$\sup_{F}A$和$\sup_{E}A$不一定相等,甚至可能有一个存在而另一者不存在.
+	
+	例如,取$E=\R,F=\Q,A=\left(-\infty,\sqrt{2}\right)\cap\Q,G=\left(\left(-\infty,\sqrt{2}\right)\cup\left\{2\right\}\right)\cap\Q$,则
+	\begin{align*}
+		A\subseteq F,G\subseteq F,\sup_{E}A=\sqrt{2},\sup_{G}A=2,
+	\end{align*}
+	但$\sup\limits_{F}A$不存在(注意,这里我们通过典范嵌入$\Q\hookrightarrow\R$把$\Q$视为$\R$的子集).
+\end{remark}
+
+\begin{proposition}{}{}
+	设集合$E$配备偏序$\leq$,$A\subseteq F\subseteq E$.
+	\begin{enumerate}
+		\item 若$\sup\limits_{E}A$和$\sup\limits_{F}A$都存在,则$\sup\limits_{E}A\leq\sup\limits_{A}F$.
+		\item 若$\sup\limits_{E}A$存在且属于$F$,则$\sup\limits_{F}A$存在且等于$\sup\limits_{E}A$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

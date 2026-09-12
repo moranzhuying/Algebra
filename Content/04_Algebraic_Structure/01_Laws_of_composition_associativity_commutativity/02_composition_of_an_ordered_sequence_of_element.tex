@@ -1,0 +1,47 @@
+\section{序列的合成}
+
+记号约定:
+\begin{itemize}
+	\item $E,F$是原群,配备运算律$\odot$.
+	\item $I$,$J$是非空的有限全序集.
+	\item $\left(x_{i}\right)_{i\in I},\left(y_{j}\right)_{j\in J}$是$E$的序列.
+\end{itemize}
+
+\begin{definition}{相似序列}{}
+	若存在序同构$\phi:I\to J$使得$\forall i\in I\left(y_{\phi\left(i\right)}=x_{i}\right)$,则称$\left(x_{i}\right)_{i\in I}$和$\left(y_{j}\right)_{j\in J}$相似.
+\end{definition}
+
+\begin{lemma}{有限序列都和一个指标集为$\N$中的有限区间的序列相似}{}
+	存在$n\in\N$和$E$中的序列$\left(\tilde{x}_{i}\right)_{i=0}^{n}$使得$\left(x_{i}\right)_{i\in I}$和$\left(\tilde{x}_{i}\right)_{i=0}^{n}$相似.
+\end{lemma}
+
+\begin{definition}{原群中的有限序列的合成}{}
+	递归地定义$\left(x_{i}\right)_{i\in I}$的合成为$\bigodot\limits_{i\in I}x_{i}\coloneq
+	\begin{cases}
+		x_{\beta},&I=\left\{\beta\right\},\\
+		x_{\beta}\odot\left(\bigodot\limits_{i\in I\setminus\left\{\beta\right\}}\right),&\left|I\right|\geq 2,\beta=\min I.
+	\end{cases}$
+\end{definition}
+
+\begin{proposition}{相似的序列有相同的合成}{}
+	若$\left(x_{i}\right)_{i\in I}$和$\left(y_{j}\right)_{j\in J}$相似,则二者的合成相等.
+\end{proposition}
+
+\begin{corollary}{每个序列的合成都是一个有限序列的合成}{}
+	存在$n\in\N$和$E$中的序列$\left(\tilde{x}_{i}\right)_{i=0}^{n}$,使得$\left(x_{i}\right)_{i\in I}$和$\left(\tilde{x}_{i}\right)_{i=0}^{n}$各自的合成相等.
+\end{corollary}
+
+\begin{remark}{序列的合成与结合的顺序有关}{}	
+	若$I=\left\{\lambda,\mu,\nu\right\}$且$\lambda<\mu<\nu$,则$\bigodot\limits_{i\in I}x_{i}=x_{\lambda}\odot\left(x_{\mu}\odot x_{\nu}\right)$.值得注意的是,我们给出的有序序列复合的定义具有一定的任意性.这里引入的归纳过程是``自右向左''进行的,如果采用``自左向右''的归纳方式,该序列的合成是$\left(x_{\lambda}\odot x_{\mu}\right)\odot x_{\nu}$.
+\end{remark}
+
+\begin{remark}{序列合成的记号说明}{}
+	\begin{enumerate}
+		\item 对于加法记法,通常记作$\sum\limits_{i\in I}x_{i}$,并称为序列$\left(x_{i}\right)_{i\in I}$的和,其中的$x_{i}$称为求和项;对于乘法记法,通常记作$\prod\limits_{i\in I}x_{i}$,并称为序列$\left(x_{i}\right)_{i\in I}$的积,其中的$x_{i}$称为因子.对于由自然数集$\N$中的非空闭区间$\llbracket p,q\rrbracket$索引的序列$\left(x_{i}\right)_{i=p}^{q}$,其复合结果记为$\bigodot\limits_{p\leq i\leq q}x_{i}$或$\bigodot\limits_{i=p}^{q}$,其他记号的表示方式与之类似.
+		\item 当索引集及其排序在上下文中清晰无歧义时,通常可以省略记号中的索引范围.例如,在加法记法下可以简写为$\sum\limits_{i}x_{i}$,其他记法同理.我们应避免在可能与集合论中的直积产生混淆的场合使用$\prod\limits_{i\in I}x_{i}$这一记法.然而,若$x_{i}$均为基数,且运算分别为基数和或基数积,则上述记法$\sum\limits_{i\in I}x_{i}$和$\prod\limits_{i\in I}x_{i}$正好对应于该基数族的基数和与基数积。
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{原群同态``穿过''序列的合成}{}
+	设$f:E\to F$是原群同态,则$f\left(\bigodot\limits_{i\in I}x_{i}\right)=\bigodot\limits_{i\in I}f\left(x_{i}\right)$.
+\end{proposition}

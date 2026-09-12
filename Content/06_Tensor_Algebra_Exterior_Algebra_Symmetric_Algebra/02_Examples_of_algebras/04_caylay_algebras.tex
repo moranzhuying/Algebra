@@ -1,0 +1,87 @@
+\section{Caylay代数}
+
+记号约定:$A$是交换环,$E$是$A$-含幺代数,单位元是$1_{E}$.
+
+\begin{definition}{Caylay代数}{}
+	设$s\in\Isom_{A-\mathsf{Alg}}\left(E,E^{\op}\right)$,满足$\forall u\in E\left(u+s\left(u\right)\in A1_{E}\wedge u\cdot s\left(u\right)\in A\cdot 1_{E}\right)$.
+	\begin{enumerate}
+		\item 我们称$\left(E,s\right)$是Caylay代数,称$s$是该Caylay代数的共轭映射.
+		\item 对任一$u\in E$,记$\bar{u}\coloneq s\left(u\right)$,并称之为$u$的共轭元.
+		\item 我们称$T:E\to E,u\mapsto u+s\left(u\right)$是$\left(E,s\right)$的Caylay迹.
+		\item 我们称$N:E\to E,u\mapsto u\cdot s\left(u\right)$是$\left(E,s\right)$的Caylay范数.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{记号和术语说明}{}
+	在典范等同$A1_{E}$和$A$的意义下,对每个$u\in E$,$T\left(u\right)$和$N\left(u\right)$是$A$的元素.
+\end{remark}
+
+\begin{proposition}{二次代数是Caylay代数}{}
+	设$E$是二次代数,其共轭是$s$,则$\left(E,s\right)$是Caylay代数.
+\end{proposition}
+
+\begin{proposition}{Caylay代数中共轭,迹和范数的基本性质}{}
+	设$\left(E,s\right)$是Caylay代数.
+	\begin{enumerate}
+		\item $s$是对合.
+		\item $T\circ s=T,N\circ s=N$,其中$T$和$N$分别是Caylay范数和Caylay迹.
+		\item 对任一$u\in E$,有$u^{2}-T\left(u\right)u+N\left(u\right)1_{E}=0$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{共轭映射的唯一性}{}
+	设$s,s^{\prime}\in\Isom_{A-\mathsf{Alg}}\left(E,E^{\op}\right)$且$\left(E,s\right),\left(E,s^{\prime}\right)$都是Caylay代数.若$E$有一个基包含$1_{E}$,则$s=s^{\prime}$.
+\end{proposition}
+
+\begin{proposition}{Caylay代数中的恒等式}{}
+	设$\left(E,s\right)$是Caylay代数,$u,v\in E,\alpha\in A$.
+	\begin{enumerate}
+		\item $u+\bar{u}=T\left(u\right)1_{E},u\bar{u}=\bar{u}u=N\left(u\right)1_{E},\bar{\bar{u}}=u,\overline{u+v}=\bar{u}+\bar{v},\overline{\alpha u}=\alpha\bar{u},\overline{uv}=\bar{u}\bar{v}$.
+		\item $T\left(1_{E}\right)=2\cdot 1_{E},N\left(1_{E}\right)=1_{E}$.
+		\item $uv+vu=T\left(u\right)v+T\left(v\right)u+\left(T\left(uv\right)-T\left(u\right)T\left(v\right)\right)1_{E}$.
+		\item $T\left(uv\right)=T\left(vu\right)$.
+		\item $T\left(v\bar{u}\right)=T\left(u\bar{v}\right)=N\left(u+v\right)-N\left(u\right)-N\left(v\right)=T\left(u\right)T\left(v\right)-T\left(uv\right)$.
+		\item $N\left(\alpha u\right)=\alpha^{2}N\left(u\right)$.
+		\item $\left(T\left(u\right)\right)^{2}-T\left(u^{2}\right)=2N\left(u\right)$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

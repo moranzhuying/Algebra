@@ -1,0 +1,169 @@
+\section{线性映射}
+
+记号约定:$A$是环,$E,E^{\prime},E^{\prime\prime},F,F^{\prime},F^{\prime\prime},G$在没有特意强调的时候都是左(相对地,右)$A$-模.
+
+\begin{definition}{线性映射,模同态}{}
+	设$f\in\Hom_{\mathsf{Grp}}\left(E,F\right)$.
+	\begin{enumerate}
+		\item 当$E,F$都是左$A$-模时,若$f$是等变映射,则称$f$是左$A$-线性映射(或左$A$-模同态).记
+		\begin{align*}
+			\Hom_{A-\mathsf{Mod}}\left(E,F\right)=\left\{\varphi\in\Hom_{\mathsf{Grp}}\left(E,F\right)\middle|\varphi\text{是等变映射}\right\},\End_{{A}-\mathsf{Mod}}\left(E\right)=\Hom_{A-\mathsf{Mod}}\left(E,E\right).
+		\end{align*}
+		\item 当$E,F$都是右$A$-模时,若$f$是等变映射,则称$f$是右$A$-线性映射(或右$A$-模同态).记
+		\begin{align*}
+			\Hom_{\mathsf{Mod}-A}\left(E,F\right)=\left\{\varphi\in\Hom_{\mathsf{Grp}}\left(E,F\right)\middle|\varphi\text{是等变映射}\right\},\End_{\mathsf{Mod}-A}\left(E\right)=\Hom_{\mathsf{Mod}-A}\left(E,E\right).
+		\end{align*}
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	明确讨论左$A$-模或右$A$-模时,把$\Hom_{A-\mathsf{Mod}}\left(-,-\right)$和$\End_{{A}-\mathsf{Mod}}\left(-\right)$记作$\Hom_{A}\left(-,-\right)$和$\End_{{A}}\left(-\right)$.
+\end{remark}
+
+\begin{remark}{Abel群之间的同态$\leftrightsquigarrow$ $\Z$-模同态}{}
+	不考虑$E,F$上的左(相对地,右)$A$-模结构,那么$E,F$都是左(相对地,右)$\Z$-模,$\Hom_{\mathsf{Grp}}\left(E,F\right)$的元素都是左(相对地,右)$\Z$-模同态.
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$E$是左$A$-模,$a\in E$,则$\theta_{a}:A_{s}\to E,\lambda\mapsto\lambda x$是左$A$-线性映射.
+		\item 设$I$是$\R$的开区间,则$\mathcal{D}:\mathcal{D}\left(I,\R\right)\to\mathcal{C}\left(I,\R\right),f\mapsto f^{\prime}$是$\R$-线性映射.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{位似和线性映射}{}
+	设$\alpha\in A$.当$E$是左$A$-模时,$h_{\alpha}$不一定是线性映射.当$\alpha\in Z\left(E\right)$时$h_{\alpha}$是线性映射.
+\end{remark}
+
+\begin{proposition}{线性映射保持线性组合}{}
+	设$u\in\Hom_{A}\left(E,F\right)$,$\left(x_{i}\right)_{i\in I}$和$\left(\lambda_{i}\right)_{i\in I}$分别是$E$和$A$的有限支撑族,则$u\left(\sum\limits_{i\in I}\lambda_{i}x_{i}\right)=\sum\limits_{i\in I}\lambda_{i}u\left(x_{i}\right)$.
+\end{proposition}
+
+\begin{proposition}{线性映射对复合是线性的}{}
+	设$u\in\Hom_{A}\left(E,F\right),v\in\Hom_{A}\left(F,G\right)$,则$v\circ u\in\Hom_{A}\left(E,G\right)$.
+\end{proposition}
+
+\begin{definition}{线性同构,模同构}{}
+	\begin{enumerate}
+		\item 设$E,F$都是左$A$-模,$f\in\Hom_{A-\mathsf{Mod}}\left(E,F\right)$.若存在$g\in\Hom_{A-\mathsf{Mod}}\left(F,E\right)$使得$g\circ f=\id_{E}$且$f\circ g=\id_{F}$,则称$f$为左$A$-线性同构(或左$A$-模同构).记
+		\begin{align*}
+			\Isom_{A-\mathsf{Mod}}\left(E,F\right)=\left\{\varphi\in\Hom_{A-\mathsf{Mod}}\left(E,F\right)\middle|\varphi\text{是模同构}\right\},\Aut_{{A}-\mathsf{Mod}}\left(E\right)=\Isom_{A-\mathsf{Mod}}\left(E,E\right).
+		\end{align*}
+		\item 设$E,F$都是右$A$-模,$f\in\Hom_{\mathsf{Mod}-A}\left(E,F\right)$.若存在$g\in\Hom_{\mathsf{Mod}-A}\left(F,E\right)$使得$g\circ f=\id_{E}$且$f\circ g=\id_{F}$,则称$f$为右$A$-线性同构(或右$A$-模同构).记
+		\begin{align*}
+			\Isom_{\mathsf{Mod}-A}\left(E,F\right)=\left\{\varphi\in\Hom_{\mathsf{Mod}-A}\left(E,F\right)\middle|\varphi\text{是模同构}\right\},\Aut_{\mathsf{Mod}-A}\left(E\right)=\Isom_{\mathsf{Mod}-A}\left(E,E\right).
+		\end{align*}
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	明确讨论左$A$-模或右$A$-模时,把$\Isom_{A-\mathsf{Mod}}\left(-,-\right)$和$\Aut_{\mathsf{Mod}-A}\left(-\right)$记作$\Hom_{A}\left(-,-\right)$和$\End_{{A}}\left(-\right)$.
+\end{remark}
+
+\begin{proposition}{模同态和模同构的性质}{}
+	设$u\in\Hom_{A}\left(E,F\right)$,则$u\in\Isom_{A}\left(E,F\right)$ $\iff$ $u$是双射.两条件之一成立时$u^{-1}\in\Isom_{A}\left(F,W\right)$.
+\end{proposition}
+
+\begin{proposition}{自同态环的性质}{}
+	\begin{enumerate}
+		\item $\Hom_{A}\left(E,F\right)$是环.
+		\item 设$f,f_{1},f_{2}\in\Hom_{A}\left(E,F\right),g,g_{1},g_{2}\in\Hom_{A}\left(F,G\right)$,则
+		\begin{align*}
+			g\circ\left(f_{1}+f_{2}\right)=g\circ f_{1}+g\circ f_{2},\left(g_{1}+g_{2}\right)\circ f=g_{1}\circ f+g_{2}\circ f,g\circ\left(-f\right)=\left(-g\right)\circ f=-\left(g\circ f\right).
+		\end{align*}
+		换言之,以映射复合分别作为左作用和右作用,则$\Hom_{A}\left(E,F\right)$是典范的左$\End_{{A}}\left(F\right)$-模和右$\End_{{A}}\left(E\right)$-模.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{自同态环,一般线性群}{}
+	我们称$\End_{{A}}\left(E\right)$是$E$的自同态环,$\GL_{n}\left(E\right)\coloneq\left(\End_{{A}}\left(E\right)\right)^{\times}$称为相对$E$的一般线性群.
+\end{definition}
+
+\begin{definition}{诱导映射}{}
+	设$u\in\Hom_{A}\left(E^{\prime},E\right),v\in\Hom_{A}\left(F,F^{\prime}\right)$.定义$u$和$v$的诱导映射为
+	\begin{align*}
+		\Hom_{A}\left(u,v\right):\Hom_{A}\left(E,F\right)\to\Hom_{A}\left(E^{\prime},F^{\prime}\right),f\mapsto v\circ f\circ u.
+	\end{align*}
+\end{definition}
+
+\begin{proposition}{诱导映射是$\Z$-双线性映射}{}
+	设$u\in\Hom_{A}\left(E^{\prime},E\right),v\in\Hom_{A}\left(F,F^{\prime}\right)$.
+	\begin{enumerate}
+		\item $\in\Hom_{A}\left(u,-\right)$和$\Hom_{A}\left(-,v\right)$都是$\Z$-线性映射.
+		\item 若$u\in\Isom_{A}\left(E^{\prime},E\right),v\in\Isom_{A}\left(F^{\prime},F\right)$,则$\Hom_{A}\left(u,v\right)$是$A$-线性同构,其逆映射为$\Hom_{A}\left(u^{-1},v^{-1}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{诱导映射的函子性}{}
+	设$u\in\Hom_{A}\left(E^{\prime},E\right),v\in\Hom_{A}\left(F,F^{\prime}\right),u^{\prime}\in\Hom_{A}\left(E^{\prime\prime},E^{\prime}\right),v^{\prime}\in\Hom_{A}\left(F^{\prime},F^{\prime\prime}\right)$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			{\Hom_{A}\left(E,F\right)} && {\Hom_{A}\left(E^{\prime},F^{\prime}\right)} \\
+			\\
+			& {\Hom_{A}\left(E^{\prime\prime},F^{\prime}\right)}
+			\arrow["{\Hom_{A}\left(u,v\right)}", from=1-1, to=1-3]
+			\arrow["{\Hom_{A}\left(u\circ u^{\prime},v\circ v^{\prime}\right)}"', from=1-1, to=3-2]
+			\arrow["{\Hom_{A}\left(u^{\prime},v^{\prime}\right)}", from=1-3, to=3-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$u\in\End_{{A}}\left(E\right),v\in\End_{{A}}\left(F\right)$,则
+	\begin{align*}
+		\Hom_{A}\left(u,\id_{F}\right):\Hom_{A}\left(E,F\right)\to\Hom\left(E,F\right),f\mapsto u\circ f,\\
+		\Hom_{A}\left(\id_{E},v\right):\Hom_{A}\left(E,F\right)\to\Hom\left(E,F\right),f\mapsto f\circ v.
+	\end{align*}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

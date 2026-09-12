@@ -1,0 +1,90 @@
+\chapter{除环}
+
+\section{除环}
+
+记号约定:$A,K$是环.
+
+\begin{definition}{除环的定义}{}
+	若$K$不是零环且$K\setminus\left\{0\right\}=K^{\times}$,则称$K$是除环.
+\end{definition}
+
+\begin{proposition}{除环的反环也是除环}{}
+	若$K$是除环,则$K^{\op}$亦然.
+\end{proposition}
+
+\begin{definition}{域}{}
+	设$K$是除环.若$K$的乘法交换,则称$K$为域.
+\end{definition}
+
+\begin{example}{常见的除环和域}{}
+	\begin{enumerate}
+		\item $\Q,\R,\C$都是域,$\mathbb{H}$是除环.
+		\item $\Z/2\Z$是域.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{子除环}{}
+	设$K$是除环,$L$是其子环.若$L$也是除环,则称$L$是$K$的子除环,$K$是$L$的扩张除环.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	当$L$是域时,相应地改称子除环,扩张除环为子域,扩张域.
+\end{remark}
+
+\begin{proposition}{子域对交封闭}{}
+	设$K$是除环,$\left(L_{i}\right)_{i\in I}$是$K$的一族子除环,则$\bigcap\limits_{i\in I}L_{i}$是$K$的子除环.
+\end{proposition}
+
+\begin{definition}{集合生成的子除环}{}
+	设$K$是除环,$X\subseteq K$.定义$\langle X\rangle\coloneq\bigcap\limits_{\substack{X\subseteq L\\L\text{是}A\text{的子除环}}}L$为$X$生成的$A$的子除环.
+\end{definition}
+
+\begin{proposition}{除环的中心化子是子域}{}
+	设$K$是除环,$X\subseteq K$,则$C_{K}\left(X\right)$是$K$的子域.特别地,$Z\left(K\right)$是$K$的子域.
+\end{proposition}
+
+\begin{theorem}{除环的理想描述}{}
+	$A$是除环$\iff$ $A$不是零环且$A$的左(相对地,右)理想只有$\left\{0\right\}$和$A$.
+\end{theorem}
+
+\begin{remark}{拟单环}{}
+	没有非平凡左(相对地,右)理想的环称为拟单环.拟单环不一定是除环,例如$\mathbf{M}_{2}\left(\Q\right)$.
+\end{remark}
+
+\begin{corollary}{除环的理想描述}{}
+	设$\mathfrak{a}$是$A$的双边理想,则$A/\mathfrak{a}$是除环$\iff$ $\mathfrak{a}$是$A$的极大左理想.
+\end{corollary}
+
+\begin{corollary}{非零交换环同构于域}{}
+	设$A$是非零交换环,则存在域$F$和$f\in\Hom_{\mathsf{Ring}}\left(A,F\right)$使得$f$是满射.
+\end{corollary}
+
+\begin{corollary}{$\Z/p\Z$是除环$\iff$ $p$是素数}{}
+	设$p\geq 0$,则$\Z/p\Z$是除环$\iff$ $p\in\mathbb{P}$.两条件之一成立时,记$\mathbb{F}_{p}\coloneq\Z/p\Z$.
+\end{corollary}
+
+\begin{theorem}{除环到非零换的环同态是单射}{}
+	设$K$是除环,$A$是非零环,$f\in\Hom_{\mathsf{Ring}}\left(K,A\right)$,则$\im\left(f\right)$是$A$的子除环,$f$的余限制是环同构.
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

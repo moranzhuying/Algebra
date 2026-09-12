@@ -1,0 +1,30 @@
+\chapter{主理想整环上的挠模}
+
+\section{乘积环上的模}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$\left(\mathfrak{b}_{i}\right)_{i\in I}$是$A$中有限个双边理想构成的族,典范映射$A\to\prod\limits_{i\in I}\left(A_{i}/\mathfrak{b}_{i}\right)$是环同构.
+	\item $\left(e_{i}\right)_{i\in I}$是$A$的一族幂等元,满足如下条件:$\sum\limits_{i\in I}e_{i}=1$;$\forall i,j\in I\left(i\neq j\implies e_{i}e_{j}=0\right)$;$\forall i\in I\left(\mathfrak{b}_{i}=A\left(1-e_{i}\right)\right)$.
+	\item 对每个$i\in I$,记$A_{i}\coloneq A/\mathfrak{b}_{i}$.
+\end{itemize}
+
+\begin{proposition}{模的局部化}{}
+	设$M$是左$A$-模.每个$i\in I$,定义$M$的左$A$-子模$M_{i}=\left\{m\in M\middle|\mathfrak{b}_{i}m=0\right\}$,这是典范的左$A_{i}$-模,则$M$是$\left(M_{i}\right)_{i\in I}$的内直和.
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设对每个$i\in I$,$M_{i}^{\prime}$是左$A_{i}$-模.若左$A$-模$M$是左$A$-模族$\left(M_{i}^{\prime}\right)_{i\in I}$的直和,对每个$i\in I$,把$M_{i}^{\prime}$典范地视为$M$的子模,那么$\forall i\in I\left(M_{i}=M_{i}^{\prime}\right)$.因此,要研究$A$-模$M$,等价于研究模族$\left(M_{i}\right)_{i\in I}$,其中对每个$i\in I$,$M_{i}$是$A_{i}$-模.
+		\item 对每个$i\in I$,记$p_{i}:M\to M_{i}$是典范映射.那么,对每个$i\in I$和$x\in M$有$p_{i}\left(x\right)=e_{i}x$.
+		\item 左$A$-模$M$是循环模$\iff$对每个$i\in I$,左$A_{i}$-模$M_{i}$是循环模.
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{}{}
+	设$M,N$是左$A$-模,分别是各自的一族左$A$-子模$\left(M_{i}\right)_{i\in I},\left(N_{i}\right)_{i\in I}$的内直和.对每个$u\in\Hom_{{A}-\mathsf{Mod}}\left(M,N\right)$和$i\in I$,记
+	\begin{align*}
+		u_{i}:M_{i}\to N_{i},x\mapsto u\left(x\right),
+	\end{align*}
+	则$\varphi:\Hom_{{A}-\mathsf{Mod}}\left(M,N\right)\to\prod\limits_{i\in I}\Hom_{{A}_{i}-\mathsf{Mod}}\left(M_{i},N_{i}\right),u\mapsto\left(u_{i}\right)_{i\in I}$是$\Z$-模同构.进一步,$A$交换时$\varphi$是左$A$-模同构.
+\end{remark}

@@ -1,0 +1,115 @@
+\section{Jordan分解}
+
+记号约定:$V$是有限维$K$-向量空间.
+
+\begin{definition}{线性自同态的加性Jordan分解}{}
+	设$\mathcal{T}_{s},\mathcal{T}_{n}\in\End_{K}\left(V\right)$.如果
+	\begin{enumerate}
+		\item $\mathcal{T}_{s}$是半单的,$\mathcal{T}_{n}$是幂零的,
+		\item $\mathcal{T}_{s}$和$\mathcal{T}_{n}$可交换,$\mathcal{T}=\mathcal{T}_{s}+\mathcal{T}_{n}$,
+	\end{enumerate}
+	则称$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$是$\mathcal{T}$的加性Jordan分解,分别称$\mathcal{T}_{s}$和$\mathcal{T}_{n}$为$\mathcal{T}$的半单分量和幂零分量.
+\end{definition}
+
+\begin{lemma}{}{}
+	设$\mathcal{T}$可三角化.
+	\begin{enumerate}
+		\item 存在唯一的$\mathcal{U}\in\End_{K}\left(V\right)$,使得$\mathcal{U}$和$\mathcal{T}$可交换且$\mathcal{T}-\mathcal{U}$幂零.
+		\item $\Char_{\mathcal{T}}=\Char_{\mathcal{U}}$,并且存在$P\in K[X]$使得$\mathcal{U}=P\left(\mathcal{T}\right)$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{theorem}{加性Jordan分解的存在性和唯一性}{}
+	\begin{enumerate}
+		\item $\mathcal{T}$的加性Jordan分解存在$\iff$ $\mathcal{T}$的每个特征值在$K$上都可分.
+		\item 如果$\mathcal{T}$的加性Jordan分解存在且为$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$,那么
+		\begin{enumerate}
+			\item $\mathcal{T}$的加性Jordan分解是唯一的.
+			\item $\Char_{\mathcal{T}}=\Char_{\mathcal{T}_{s}}$.
+			\item $K[X]$中存在无常数项的多项式$P,Q$使得$\mathcal{T}_{s}=\mathcal{P}\left(\mathcal{T}\right),\mathcal{T}_{n}=Q\left(\mathcal{T}\right)$.
+		\end{enumerate}
+	\end{enumerate}
+\end{theorem}
+
+\begin{proposition}{}{}
+	若$\mathcal{T}$可上三角化,则它有加性Jordan分解$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$,存在$V$的带标基$\mathcal{U}$使得
+	\begin{align*}
+		\left(\left[\mathcal{T}\right]_{\mathcal{U}\leftarrow\mathcal{U}},\left[\mathcal{T}_{s}\right]_{\mathcal{U}\leftarrow\mathcal{U}}\right)\in L_{n}\left(K\right)\times D_{n}\left(K\right).
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$L$是$K$的扩域,$\rho:K\to L$是环同态,$\mathcal{T}^{\prime}=\rho^{\ast}\left(\mathcal{T}\right)$.若$\mathcal{T}$的加性Jordan分解存在且为$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$,则$\mathcal{T}^{\prime}$的加性Jordan分解存在且为$\left(\rho^{\ast}\left(\mathcal{T}_{s}\right),\rho^{\ast}\left(\mathcal{T}_{n}\right)\right)$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\mathcal{T}$的加性Jordan分解存在且为$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$,则$\End_{K}\left(V\right)$中每个和$\mathcal{T}$可交换的元素$\mathcal{U}$一定和$\mathcal{T}_{s}$与$\mathcal{T}_{n}$可交换.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\mathcal{U}\in\End_{K}\left(V\right)$,并且和$\mathcal{T}$可交换,$\mathcal{T}$和$\mathcal{U}$各自的加性Jordan分解存在,分别为$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$和$\left(\mathcal{U}_{s},\mathcal{U}_{n}\right)$.
+	\begin{enumerate}
+		\item $\left\{\mathcal{T},\mathcal{U},\mathcal{T}_{s},\mathcal{T}_{n},\mathcal{U}_{s},\mathcal{U}_{n}\right\}$的任意两个元素都可交换.
+		\item $\mathcal{T}+\mathcal{U}$的加性Jordan分解存在,并且是$\left(\mathcal{T}_{s}+\mathcal{U}_{s},\mathcal{T}_{n}+\mathcal{U}_{n}\right)$.
+		\item $\mathcal{T}\circ\mathcal{U}$的加性Jordan分解存在,并且是$\left(\mathcal{T}_{s}\circ\mathcal{U}_{s},\mathcal{T}_{s}\circ\mathcal{U}_{n}+\mathcal{T}_{n}\circ\mathcal{U}_{s}+\mathcal{T}_{n}\circ\mathcal{U}_{n}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$\mathcal{T}$的加性Jordan分解存在且为$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$,$R\in K\left[X\right]$,则$R\left(\mathcal{T}\right)$的加性Jordan分解存在,$R\left(\mathcal{T}\right)$的半单分量是$R\left(\mathcal{T}_{s}\right)$.
+\end{corollary}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 若$\mathcal{T}$的加性Jordan分解$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$,则$\det\left(\mathcal{T}_{s}\right)=\det\left(\mathcal{T}\right),\tr\left(\mathcal{T}_{s}\right)=\tr\left(\mathcal{T}\right)$.
+		\item 设$\dim_{K}V=n$,则$\mathcal{T}$可三角化$\iff$ $\mathcal{T}$有加性Jordan分解$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$且$\mathcal{T}_{s}$可对角化.这两个条件之一成立时,存在$E$中的基$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$使得$\left[\mathcal{T}\right]_{\mathcal{B}}^{\mathcal{B}}\in L_{n}^{-}\left(K\right)$,$\left[\mathcal{T}\right]_{\mathcal{B}}^{\mathcal{B}}\in D_{n}\left(K\right)$且$\left[\mathcal{T}\right]_{\mathcal{B}}^{\mathcal{B}}$的对角线和$\left[\mathcal{T}\right]_{\mathcal{B}}^{\mathcal{B}}$相同的对角矩阵.
+		\item 如果$\mathcal{T}$是半单的,但并不是绝对半单的,那么$\mathcal{T}$没有加性Jordan分解.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{幂幺线性自同态}{}
+	设$W$是$K$-向量空间,$u\in\End_{K}\left(W\right)$.若$u-\id_{W}$幂零,则称$u$是幂幺的.
+\end{definition}
+
+\begin{remark}{}{}
+	如果$u$幂幺,那么$u$是自同构.进一步,若$W$是有限维$K$-向量空间,则$u$幂幺$\iff$存在$m\geq 1$使得$\Char_{u}=\left(X-1\right)^{m}$.
+\end{remark}
+
+\begin{proposition}{线性自同态的乘性Jordan分解的存在性}{multiplicative-jordan-decomposition-of-linear-endomorphism}
+	下列陈述等价:
+	\begin{enumerate}
+		\item $\mathcal{T}$有加性Jordan分解$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$,并且$\mathcal{T}\in\Aut_{K}\left(V\right)$.
+		\item $\mathcal{T}$有加性Jordan分解$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$,并且$\mathcal{T}_{s}\in\Aut_{K}\left(V\right)$.
+		\item 存在$\mathcal{A}\in\Aut_{K}\left(V\right)$和$\mathcal{U}\in\End_{K}\left(V\right)$,使得$\mathcal{A}$绝对半单,$\mathcal{U}$幂幺,$\mathcal{A}$和$\mathcal{U}$可交换,$\mathcal{T}=\mathcal{A}\circ\mathcal{U}$.
+	\end{enumerate}
+	这三个陈述之一为真时,$\mathcal{A}=\mathcal{T}_{s},\mathcal{U}=\id_{V}+\mathcal{T}_{s}^{-1}\mathcal{T}_{n}$.
+\end{proposition}
+
+\begin{definition}{乘性Jordan分解}{}
+	沿用命题(\ref{prop:multiplicative-jordan-decomposition-of-linear-endomorphism})的设定,并假设其中的陈述之一为真.记$\mathcal{T}_{u}=\id_{V}+\mathcal{T}_{s}^{-1}\mathcal{T}_{n}$.
+	\begin{enumerate}
+		\item 我们称$\left(\mathcal{T}_{s},\mathcal{T}_{u}\right)$为$\mathcal{T}$的乘性Jordan分解.
+		\item $\mathcal{T}_{s}$和$\mathcal{T}_{n}$分别称为$\mathcal{T}$的绝对半单分量和幂分量.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{不变子空间和商空间上的乘性Jordan分解}{}
+	设$W$是$V$的$\mathcal{T}$-不变子空间.记$\mathcal{T}^{\prime}:W\to W,x\mapsto x$,$\mathcal{T}^{\prime\prime}:V/W\to V/W$是$\mathcal{T}^{\prime}$诱导的自同态.
+	\begin{enumerate}
+		\item $\Char_{\mathcal{T},V}=\Char_{\mathcal{T}^{\prime},W}\Char_{\mathcal{T}^{\prime},V/W}$.
+		\item $\mathcal{T}$的加性Jordan分解存在$\iff$ $\mathcal{T}^{\prime}$和$\mathcal{T}^{\prime\prime}$的加性Jordan分解都存在.这两个条件之一成立时,
+		\begin{itemize}
+			\item $\mathcal{T}_{s}^{\prime}:W\to W,x\mapsto\mathcal{T}_{s}\left(x\right)$和$\mathcal{T}_{s}^{\prime\prime}:V/W\to V/W,x\mapsto\mathcal{T}_{s}\left(x\right)+W$分别是$\mathcal{T}^{\prime}$和$\mathcal{T}^{\prime\prime}$的绝对半单分量,
+			\item $\mathcal{T}_{n}^{\prime}:W\to W,x\mapsto\mathcal{T}_{n}\left(x\right)$和$\mathcal{T}_{n}^{\prime\prime}:V/W\to V/W,x\mapsto\mathcal{T}_{n}\left(x\right)+W$分别是$\mathcal{T}^{\prime}$和$\mathcal{T}^{\prime\prime}$的幂零分量,
+		\end{itemize}
+		其中$\left(\mathcal{T}_{s},\mathcal{T}_{n}\right)$是$\mathcal{T}$的加性Jordan分解.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\dim_{K}V=n\geq 1$,$\mathfrak{F}\subseteq\End_{}\left(V\right)$.若$\mathfrak{F}$的元素两两交换且可三角化,则存在$V$的基$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$,对任意$ f\in\mathcal{F}$:
+	\begin{itemize}
+		\item $\left[f\right]_{\mathcal{B}}^{\mathcal{B}}\in L_{n}^{-}\left(K\right)$,
+		\item $f$的半单分量在$\mathcal{B}$下的表示矩阵是,该矩阵的对角线和$\left[f\right]_{\mathcal{B}}^\mathcal{B}$的对角线相同.
+	\end{itemize}
+\end{proposition}

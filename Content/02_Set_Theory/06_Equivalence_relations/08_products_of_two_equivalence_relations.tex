@@ -1,0 +1,63 @@
+\section{等价关系的乘积}
+
+\begin{definition}{等价关系的乘积}{}
+	设$R\left\{x,y\right\}$和$R^{\prime}\left\{x^{\prime},y^{\prime}\right\}$是等价关系.记$S\left\{u,v\right\}$为公式
+	\begin{align*}
+		\exists x\exists y\exists x^{\prime}\exists y^{\prime}\left(u=\left(x,x^{\prime}\right)\wedge v=\left(y,y^{\prime}\right)\wedge R\left\{x,y\right\}\wedge R^{\prime}\left\{x^{\prime},y^{\prime}\right\}\right),
+	\end{align*}
+	那么$S$是等价关系,称为$R$和$R^{\prime}$的乘积,记作$R\times R^{\prime}$.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$R,R^{\prime}$分别是集合$E,E^{\prime}$上的等价关系,$p:E\to E/R$和$p^{\prime}:E^{\prime}\to E^{\prime}/R^{\prime}$是典范投影.
+	\begin{enumerate}
+		\item $R\times R^{\prime}$是集合$E\times E^{\prime}$上的等价关系,对任意$x\in E$和$x^{\prime}\in E^{\prime}$有$\left[\left(x,x^{\prime}\right)\right]_{R\times R^{\prime}}=\left[x\right]_{R}\times\left[x^{\prime}\right]_{R^{\prime}}$.
+		\item $p\times p^{\prime}$确定的等价关系是$R\times R^{\prime}$.
+		\item 设$q:E\times E^{\prime}\to\left(E\times E^{\prime}\right)/\left(R\times R^{\prime}\right)$是典范投影,则存在唯一的典范双射
+		\begin{align*}
+			h:\left(E\times E^{\prime}\right)/\left(R\times R^{\prime}\right)\to\left(E/R\right)\times\left(E^{\prime}/R^{\prime}\right)
+		\end{align*}
+		使得下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				{E\times E^{\prime}} && \\
+				&& {\left(E\times E^{\prime}\right)/\left(R\times R^{\prime}\right)} \\
+				{\left(E/R\right)\times\left(E^{\prime}/R^{\prime}\right)}
+				\arrow["q", from=1-1, to=2-3]
+				\arrow["{p\times p^{\prime}}"', from=1-1, to=3-1]
+				\arrow["{\exists!h}"', dashed, from=3-1, to=2-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	设$P\left\{x,x^{\prime}\right\}$是公式,若$P\left\{x,x^{\prime}\right\}\wedge xRy\wedge x^{\prime}Ry^{\prime}\implies P\left\{y,y^{\prime}\right\}$,则称$P$和$R,R^{\prime}$关于$x,x^{\prime}$相容.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

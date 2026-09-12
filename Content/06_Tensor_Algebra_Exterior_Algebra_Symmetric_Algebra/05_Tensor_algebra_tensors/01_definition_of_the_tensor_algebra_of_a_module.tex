@@ -1,0 +1,69 @@
+\chapter{张量代数,张量}
+
+\section{模的张量代数的定义}
+
+记号约定:$A$是交换环,$M$是$A$-模.
+
+\begin{definition}{模的张量代数}{}
+	定义$\mathsf{T}\left(M\right)$和序列$\left(\mathsf{T}^{n}\left(M\right)\right)_{n=0}^{\infty}$如下:
+	\begin{align*}
+		\mathsf{T}\left(M\right)=\bigboxplus\limits_{n\in\N}\mathsf{T}^{n}\left(M\right),\mathsf{T}^{n}\left(M\right)=
+		\begin{cases}
+			A,&n=0,\\
+			M,&n=1,\\
+			M^{\otimes n},&n\geq 2.
+		\end{cases}
+	\end{align*}
+	对每个$\left(p,q\right)\in\N\times\N$,定义$A$-线性映射$m_{p,q}:\mathsf{T}^{p}\left(M\right)\times\mathsf{T}^{q}\left(M\right)\to\mathsf{T}^{p+q}\left(M\right)$如下:
+	\begin{itemize}
+		\item 当$p=0$或$q=0$时,$m_{p,0}$和$m_{0,q}$是典范映射.
+		\item 当$p>0$且$q>0$时,$m_{p,q}$是结合约束.
+	\end{itemize}
+	那么$\mathsf{T}\left(M\right)$满足如下条件,从而是$A$-代数:
+	\begin{itemize}
+		\item 对每个$p,q\in\N$和$\left(x_{i}\right)_{i=1}^{p+q}\in M^{p+q}$,有$\left(x_{1}\otimes\ldots\otimes x_{p}\right)\cdot\left(x_{p+1}\otimes\ldots\otimes x_{p+q}\right)=x_{1}\otimes\ldots\otimes x_{p}\otimes x_{p+1}\otimes\ldots\otimes x_{p+q}$.
+		\item 对每个$p\in\N$,$\alpha\in A$和$\left(x_{i}\right)_{i=1}^{p}\in M^{p}$,有$\alpha\cdot\left(x_{1}\otimes\ldots x_{p}\right)=\alpha\left(x_{1}\otimes\ldots\otimes x_{p}\right)$.
+	\end{itemize}
+	我们称$\mathsf{T}\left(M\right)$是$M$的张量代数,把典范单射$\mathsf{T}^{1}\to\mathsf{T}\left(M\right)$记作$\phi_{M}$.
+\end{definition}
+
+\begin{proposition}{张量代数的泛性质}{}
+	设$E$是$A$-代数,$f\in\Hom_{A}\left(M,E\right)$,则存在唯一的$g\in\Hom_{A-\mathsf{Alg}}\left(\mathsf{T}\left(A\right),E\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			M && E \\
+			& {\mathsf{T}\left(M\right)}
+			\arrow["f", from=1-1, to=1-3]
+			\arrow["{\phi_{M}}"', from=1-1, to=2-2]
+			\arrow["{\exists!g}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 上述泛性质中,$E$和$g$不需要具备分次结构.
+		\item 进一步假设$E$具备分次$\left(E_{n}\right)_{n\in\Z}$.若$\im\left(f\right)\subseteq E_{1}$,则$\forall p\in\N\left(g\left(T^{p}\left(M\right)\right)\subseteq E_{p}\right)$,因此$g$也是$\Z$型分次代数同态.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

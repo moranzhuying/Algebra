@@ -1,0 +1,65 @@
+\section{改变标量环}
+
+记号约定:
+
+\begin{itemize}
+	\item $A,B,C$是环,$\sigma\in\Hom_{\mathsf{Ring}}\left(C,B\right),\rho\in\Hom_{\mathsf{Ring}}\left(B,A\right)$.
+	\item $E_{1}$是右$A$-模,$E_{2}$是右$B$-模,$E_{3}$是右$C$-模,$F_{1}$是左$A$-模,$F_{2}$是左$B$-模,$E_{3}$是左$C$-模.
+	\item $f\in\Hom_{A}\left(E_{1},E_{2}\right),f^{\prime}\in\Hom_{A}\left(E_{2},E_{3}\right),g\in\Hom_{A}\left(F_{1},F_{2}\right),g^{\prime}\in\Hom_{A}\left(F_{2},F_{3}\right)$
+\end{itemize}
+
+\begin{proposition}{标量限制诱导的典范满射}{}
+	下列图表交换.我们称$\phi$为典范映射.
+	\begin{center}
+		\begin{tikzcd}
+			{\rho_{\ast}\left(E\right)\times\rho_{\ast}\left(F\right)} && {\rho_{\ast}\left(E\right)\otimes_{B}\rho_{\ast}\left(F\right)} \\
+			\\
+			{E\times F} && {E\otimes_{A}F}
+			\arrow["{\otimes_{B}}", from=1-1, to=1-3]
+			\arrow["{\id_{E\times F}}"', equals, from=1-1, to=3-1]
+			\arrow["{\exists!\phi}", dashed, two heads, from=1-3, to=3-3]
+			\arrow["{\otimes_{A}}", from=3-1, to=3-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{corollary}{零化子理想下的张量积同构}{}
+	设$\mathfrak{J}$是$A$的双边理想,$E\mathfrak{J}=F\mathfrak{J}=0$,把$E,F$分别视为右$A/\mathfrak{J}$-模和左$A/\mathfrak{J}$-模.记$\pi:A\twoheadrightarrow A/\mathfrak{J}$为典范满射,则典范映射
+	\begin{align*}
+		\phi:E\otimes_{A}F\to E\otimes_{A/\mathfrak{J}}F
+	\end{align*}
+	是恒等映射.
+\end{corollary}
+
+\begin{definition}{半线性映射的张量积}{}
+	称$f\otimes_{\rho}g:E_{2}\otimes_{B}F_{2}\to E_{1}\otimes_{A}F_{1},x\otimes_{B}y\mapsto f\left(x\right)\otimes_{A}g\left(y\right)$为$f$和$g$关于$\rho$的张量积.
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $\Hom_{B}\left(E_{2},\rho_{\ast}\left(E_{1}\right)\right)\times\Hom_{B}\left(F_{2},\rho_{\ast}\left(F_{1}\right)\right)\to\Hom_{\Z}\left(E_{2}\otimes_{B}F_{2},E_{1}\otimes_{A}F_{1}\right),\left(u,v\right)\mapsto u\otimes_{\rho}v$是$\Z$-双线性映射.
+		
+		称该$\Z$-双线性映射是典范的.
+		\item (1)中的映射诱导如下的典范$\Z$-线性映射
+		\begin{gather*}
+			\Hom_{B}\left(E_{2},\rho_{\ast}\left(E_{1}\right)\right)\otimes_{\Z}\Hom_{B}\left(F_{2},\rho_{\ast}\left(F_{1}\right)\right)\to\Hom_{\Z}\left(E_{2}\otimes_{B}F_{2},E_{1}\otimes_{A}F_{1}\right),\\
+			u\otimes_{\Z}v\mapsto u\otimes_{\rho}v.
+		\end{gather*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{张量积的函子性}{}
+	如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			{E_{3}\otimes_{C}F_{3}} &&& {E_{3}\otimes_{C}F_{3}} \\
+			\\
+			\\
+			{E_{2}\otimes_{B}F_{2}} &&& {E_{1}\otimes_{A}F_{1}}
+			\arrow["{\id_{E_{3}\otimes_{C}F_{3}}}", equals, from=1-1, to=1-4]
+			\arrow["{f^{\prime}\circ_{\sigma}g^{\prime}}"', from=1-1, to=4-1]
+			\arrow["{\left(f\circ f^{\prime}\right)\circ_{\rho\circ\sigma}\left(g\circ g^{\prime}\right)}", from=1-4, to=4-4]
+			\arrow["{f\otimes_{\rho}g}"', from=4-1, to=4-4]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}

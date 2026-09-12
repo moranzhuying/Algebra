@@ -1,0 +1,203 @@
+\section{多重模}
+
+记号约定:
+\begin{itemize}
+	\item $\mathsf{A}\coloneq\left(A_{\lambda}\right)_{\lambda\in L},,\mathsf{A}^{\prime}\coloneq\left(A_{\lambda^{\prime}}^{\prime}\right)_{\lambda^{\prime}\in L^{\prime}},\mathsf{A}^{\prime\prime}\coloneq\left(A_{\lambda^{\prime\prime}}^{\prime\prime}\right)_{\lambda^{\prime\prime}\in L^{\prime\prime}}$是三族环.
+	\item $\mathsf{B}\coloneq\left(B_{\mu}\right)_{\mu\in M},\mathsf{B}^{\prime}\coloneq\left(B_{\mu^{\prime}}^{\prime}\right)_{\mu^{\prime}\in M^{\prime}},\mathsf{B}^{\prime\prime}\coloneq\left(B_{\mu^{\prime\prime}}^{\prime\prime}\right)_{\mu^{\prime\prime}\in M^{\prime\prime}}$是三族环.
+	\item $A,B$是环.
+\end{itemize}
+
+\begin{definition}{}{}
+	设$E$是左$A$-模和左$B$-模.对任一$\alpha\in A,h_{\alpha}:E\to E,x\mapsto\alpha x$,对任一$\beta\in B,h_{\beta}^{\prime}:E\to E,x\mapsto\beta x$.下列陈述等价:
+	\begin{enumerate}
+		\item 对任一$\alpha\in A,\beta\in B$,映射$h_{\alpha}$和$h_{\beta}$可交换.
+		\item 环同态$A\to\End_{\Z}\left(E\right),\alpha\mapsto h_{\alpha}$的像包含于$\End_{B}\left(E\right)$.
+		\item 环同态$B\to\End_{\Z}\left(E\right),\beta\mapsto h_{\beta}^{\prime}$的像包含于$\End_{A}\left(E\right)$.
+	\end{enumerate}
+	上述陈述之一为真时,称$A$上的左$A$-模结构和左$B$-模结构相容.
+\end{definition}
+
+\begin{remark}{}{}
+	当$E$是右$A$-模(相对的,右$B$-模)时,把(2)中的$A$换成$A^{\op}$(相对的,(3)中的$B$换成$B^{\op}$)即可.
+\end{remark}
+
+\begin{definition}{$\left(\mathsf{A},\mathsf{B}\right)$-多模}{}
+	设$E$是加法群,满足下列条件:
+	\begin{itemize}
+		\item 对任一$\lambda\in L,E$是左$A_{\lambda}$-模;
+		\item 对任一$\mu\in M,E$是右$B_{\mu}$-模.
+	\end{itemize}
+	若对任一$\lambda\in L,\mu\in M,E$上的左$A_{\lambda}$-模结构和右$B_{\mu}$-模结构相容,则称$E$是$\left(\mathsf{A},\mathsf{B}\right)$-多模.特别地,
+	\begin{enumerate}
+		\item 若$L=\emptyset$,则称$E$是右$\mathsf{B}$-多模.
+		\item 若$M=\emptyset$,则称$E$是左$\mathsf{A}$-多模.
+		\item 若$\left|L\right|+\left|M\right|=2$,则称$E$是双模.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{$\left(A,B\right)$-双模}{}
+	设$E$是左$A$-模和右$B$-模.若$E$上的左$A$-模结构和右$B$-模结构相容,则称$E$是$\left(A,B\right)$-双模.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item $A$上的典范左$A$-模结构和典范右$A$-模结构相容,因此$A$是典范的$\left(A,A\right)$-双模.记该双模为${}_{d}A_{s}$.
+		\item 设$E$是左$A$-模,则$E$是典范的$\left(\End_{{A}}\left(E\right),A^{\op}\right)$-双模,其中左作用由典范配对$\left(f,x\right)\mapsto f\left(x\right)$给出.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$\mathsf{A}_{0},\mathsf{B}_{0}$分别是$\mathsf{A},\mathsf{B}$的子族.若$E$是$\left(\mathsf{A},\mathsf{B}\right)$-多模,则它也是$\left(\mathsf{A}_{0},\mathsf{B}_{0}\right)$-多模.
+		\item 模和多模都是带算子群的特殊例子,因此关于带算子群的结论都可以应用在多模上.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{$\left(\mathsf{A},\mathsf{B}\right)$-多模同态}{}
+	设$E,F$是$\left(\mathsf{A},\mathsf{B}\right)$-多模.定义
+	\begin{gather*}
+		\Hom_{\left(\mathsf{A},\mathsf{B}\right)-\mathsf{Mod}}\left(E,F\right)\coloneq\bigcap\limits_{\lambda\in L}\Hom_{A_{\lambda}-\mathsf{Mod}}\left(E,F\right)\cap\bigcap\limits_{\mu\in M}\Hom_{\mathsf{Mod}-B_{\mu}}\left(E,F\right),\\
+		\End_{\left(\mathsf{A},\mathsf{B}\right)-\mathsf{Mod}}\left(E\right)\coloneq\Hom_{\left(\mathsf{A},\mathsf{B}\right)-\mathsf{Mod}}\left(E,E\right).
+	\end{gather*}
+	若$f\in\Hom_{\left(\mathsf{A},\mathsf{B}\right)-\mathsf{Mod}}\left(E,F\right)$,则称$f$为$\left(\mathsf{A},\mathsf{B}\right)$-多模同态.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	在没有歧义的时候,$\Hom_{\left(\mathsf{A},\mathsf{B}\right)-\mathsf{Mod}}\left(-,-\right)$和$\End_{\left(\mathsf{A},\mathsf{B}\right)-\mathsf{Mod}}\left(-\right)$中的``$-\mathsf{Mod}$''可以省略不写.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$E$是$\left(\mathsf{A},\mathsf{B}\right)$-多模,则$\End_{\left(\mathsf{A},\mathsf{B}\right)-\mathsf{Mod}}\left(E\right)$按逐点的加法构成Abel群,进一步按映射复合构成环.
+\end{proposition}
+
+\begin{definition}{$\left(A,B\right)$-子多模}{}
+	设$E$是$\left(\mathsf{A},\mathsf{B}\right)$-多模,$F$是$E$的子群.若$M$满足下列条件,则称$F$是$E$的$\left(\mathsf{A},\mathsf{B}\right)$-子多模.
+	\begin{itemize}
+		\item 对任一$\lambda\in L,M$是$A_{\lambda}$的不变子集.
+		\item 对任一$\mu\in M,F$是$B_{\mu}$的不变子集.
+	\end{itemize}
+\end{definition}
+
+\begin{definition}{$\left(\mathsf{A},\mathsf{B}\right)$-商多模}{}
+	设$E$是$\left(\mathsf{A},\mathsf{B}\right)$-多模,$F$是其子多群,则$E/F$是$\left(\mathsf{A},\mathsf{B}\right)$-多模,称为$E$模$F$的$\left(\mathsf{A},\mathsf{B}\right)$-商多模.
+\end{definition}
+
+\begin{definition}{多模的标量限制}{}
+	设$E$是$\left(\mathsf{A},\mathsf{B}\right)$-多模,对诸$\lambda\in L,\phi_{\lambda}\in\Hom_{\mathsf{Ring}}\left(A_{\lambda}^{\prime},A_{\lambda}\right)$,对诸$\mu\in M,\psi_{\mu}\in\Hom_{\mathsf{Ring}}\left(B_{\mu}^{\prime},B_{\mu}\right)$.定义$E$上的$\left(\mathsf{A}^{\prime},\mathsf{B}^{\prime}\right)$-多模结构如下:
+	\begin{enumerate}
+		\item 对任一$\lambda\in L,A_{\lambda}^{\prime}$在$E$上的左作用为$\left(a^{\prime},x\right)\mapsto\phi_{\lambda}\left(a^{\prime}\right)x$;
+		\item 对任一$\mu\in M,B_{\mu}^{\prime}$在$E$上的右作用为$\left(x,b^{\prime}\right)\mapsto x\psi_{\mu}\left(b^{\prime}\right)$.
+	\end{enumerate}
+	我们称典范的$\left(\mathsf{A}^{\prime},\mathsf{B}^{\prime}\right)$-多模$E$为$E$通过$\mathsf{A}$到$\mathsf{A}^{\prime}$和$\mathsf{B}$到$\mathsf{B}^{\prime}$的标量限制.
+\end{definition}
+
+\begin{proposition}{多模的$\Hom$集是典范的多模}{}
+	设$E,F$是$\left(\mathsf{A},\mathsf{B}\right)$-多模,则$\Hom_{\left(\mathsf{A},\mathsf{B}\right)}\left(E,F\right)$是典范的$\left(\End_{\left(\mathsf{A},\mathsf{B}\right)}\left(E\right),\End_{\left(\mathsf{A},\mathsf{B}\right)}\left(F\right)\right)$双模,其中:
+	\begin{itemize}
+		\item 左作用由$\left(g,u\right)\mapsto g\circ u$给出;
+		\item 右作用由$\left(u,h\right)\mapsto u\circ h$给出.
+	\end{itemize}
+\end{proposition}
+
+\begin{proposition}{多模的遗传结构}{}
+	设$E$是$\left(\mathsf{A},\mathsf{A}^{\prime};\mathsf{B},\mathsf{B}^{\prime}\right)$-多模,$F$是$\left(\mathsf{A},\mathsf{A}^{\prime\prime};\mathsf{B},\mathsf{B}^{\prime\prime}\right)$-多模,则$\Hom_{\left(\mathsf{A},\mathsf{B}\right)}\left(E,F\right)$是典范的$\left(\mathsf{A}^{\prime\prime},\mathsf{B}^{\prime};\mathsf{A}^{\prime},\mathsf{B}^{\prime\prime}\right)$-多模.具体的:
+	\begin{itemize}
+		\item 对任意$\lambda^{\prime\prime}\in L^{\prime\prime},A_{\lambda^{\prime\prime}}$在$E$上的左作用为$\left(a^{\prime\prime},f\right)\mapsto\left[x\mapsto a^{\prime\prime}f\left(x\right)\right]$.
+		\item 对任意$\mu^{\prime}\in M^{\prime},B_{\mu^{\prime}}$在$E$上的左作用为$\left(b^{\prime\prime},f\right)\mapsto\left[x\mapsto a^{\prime\prime}f\left(xb^{\prime}\right)\right]$.
+		\item 对任意$\lambda^{\prime}\in L^{\prime},A_{\lambda^{\prime}}$在$E$上的右作用为$\left(f,a^{\prime}\right)\mapsto\left[x\mapsto a^{\prime\prime}f\left(a^{\prime}x\right)\right]$.
+		\item 对任意$\mu^{\prime\prime}\in M^{\prime\prime},B_{\mu^{\prime\prime}}$在$E$上的右作用为$\left(f,b^{\prime\prime}\right)\mapsto\left[x\mapsto a^{\prime\prime}f\left(x\right)b^{\prime\prime}\right]$.
+	\end{itemize}
+\end{proposition}
+
+\begin{definition}{多模同态诱导的模同态}{}
+	设$E,E^{\prime}$是$\left(\mathsf{A},\mathsf{A}^{\prime};\mathsf{B},\mathsf{B}^{\prime}\right)$-多模,$F,F^{\prime}$是$\left(\mathsf{A},\mathsf{A}^{\prime\prime};\mathsf{B},\mathsf{B}^{\prime\prime}\right)$-多模,$u\in\Hom_{\left(\mathsf{A},\mathsf{A}^{\prime};\mathsf{B},\mathsf{B}^{\prime}\right)}\left(E^{\prime},E\right),v\in\Hom_{\left(\mathsf{A},\mathsf{A}^{\prime\prime};\mathsf{B},\mathsf{B}^{\prime\prime}\right)}\left(F,F^{\prime}\right)$.称
+	\begin{align*}
+		\Hom_{\left(\mathsf{A}^{\prime\prime},\mathsf{B}^{\prime};\mathsf{A}^{\prime},\mathsf{B}^{\prime\prime}\right)}\left(u,v\right):\Hom_{\left(\mathsf{A},\mathsf{B}\right)}\left(E,F\right)\to\Hom_{\left(\mathsf{A}^{\prime},\mathsf{B}^{\prime}\right)}\left(E^{\prime},F^{\prime}\right),f\mapsto u\circ f\circ v
+	\end{align*}
+	是$u,v$诱导的映射.这是一个$\left(\mathsf{A}^{\prime\prime},\mathsf{B}^{\prime};\mathsf{A}^{\prime},\mathsf{B}^{\prime\prime}\right)$-多模同态.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$E,E^{\prime},F,F^{\prime}$是左$A$-模,则$E$是典范的$\left(A,Z\left(A\right)\right)$-双模,$\Hom_{A}\left(E,F\right)$是典范左$Z\left(A\right)$-模.若
+		\begin{align*}
+			u\in\Hom_{A}\left(E^{\prime},E\right),v\in\Hom_{A}\left(F,F^{\prime}\right),
+		\end{align*}
+		则$\Hom_{A}\left(u,v\right)$是左$\Z\left(A\right)$-线性映射.
+		\item 设$E$是左$A$-模,$T$是集合,则$\Hom_{A}\left(A_{s}^{\left(T\right)},E\right)$是典范左$A$-模,其中$A$在$\Hom_{A}\left(A_{s}^{\left(T\right)},E\right)$上的左作用定义为
+		\begin{align*}
+			\left(\alpha,f\right)\mapsto\left[x\mapsto f\left(x\alpha\right)\right].
+		\end{align*}
+		于是,存在典范左$A$-模同构$j_{E,T}:E^{T}\to\Hom_{A}\left(A_{s}^{\left(T\right)},E\right)$.
+		
+		进一步,若$F$是左$A$-模,$J$是集合,$u\in\Hom_{A}\left(E,F\right)$,则下图交换,其中$u^{T}:E^{T}\to F^{T},\left(x_{t}\right)_{t\in T}\mapsto\left(u\left(x_{t}\right)\right)_{t\in T}$.
+		\begin{center}
+			\begin{tikzcd}
+				{E^{T}} && {\Hom_{A}\left(A_{s}^{\left(T\right)},E\right)} \\
+				\\
+				{F^{T}} && {\Hom_{A}\left(A_{s}^{\left(T\right)},F\right)}
+				\arrow["{j_{E,T}}", from=1-1, to=1-3]
+				\arrow["{u^{T}}"', from=1-1, to=3-1]
+				\arrow["{\Hom_{A}\left(\id_{A},u\right)}", from=1-3, to=3-3]
+				\arrow["{j_{F,T}}"', from=3-1, to=3-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}{多模的直和与直积}{}
+	仿照本章前面小节的内容,可以类似地定义多模的直和与直积.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

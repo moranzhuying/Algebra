@@ -1,0 +1,52 @@
+\section{正向极限}
+
+\begin{definition}{正向系统}{}
+	设$I$为上定向集,$\left(E_{i}\right)_{i\in I}$是集合族,对任意$\alpha,\beta\in I$且$\alpha\leq\beta$有$f_{\beta,\alpha}\in\Hom_{\mathsf{Set}}\left(E_{\alpha},E_{\beta}\right)$.若
+	\begin{itemize}
+		\item $\forall\alpha,\beta,\gamma\in I\left(\alpha\leq\beta\leq\gamma\implies f_{\gamma,\alpha}=f_{\gamma,\beta}\circ f_{\beta,\alpha}\right)$;
+		\item $\forall\alpha\in I\left(f_{\alpha,\alpha}=\id_{E_{\alpha}}\right)$,
+	\end{itemize}
+	则称$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正向系统.
+\end{definition}
+
+\begin{definition}{集合族的正向极限}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合正向系统,$\left(\iota_{i}\right)_{i\in I}$是$E\coloneq\coprod\limits_{\alpha\in I}E_{\alpha}$的嵌入映射族,$\forall x\in E\left(\lambda\left(x\right)\in I\wedge x\in\im\left(\iota_{\lambda\left(x\right)}\right)\right)$.
+	
+	考虑$E$上的等价关系$R\left\{x,y\right\}$:
+	\begin{align*}
+		\exists\gamma\in I\left(\lambda\left(x\right)\leq\gamma\wedge\lambda\left(y\right)\leq\gamma\wedge f_{\gamma,\lambda\left(x\right)}\left(x\right)=f_{\gamma,\lambda\left(y\right)}\left(x\right)\right),
+	\end{align*}
+	我们把$E/R$记作$\varinjlim\limits_{I}E_{\alpha}$(或$\varinjlim E_{\alpha}$),称之为$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}\right)$的正向极限.
+
+	对任意$\alpha\in I$,典范映射$f:E\to\varinjlim E_{\alpha}$在$E_{\alpha}$上的限制记作$f_{\alpha}$,称为典范映射.
+\end{definition}
+
+\begin{remark}{}{}
+	即便$\left(E_{\alpha}\right)_{\alpha\in I}$是一族非空集合,$\left(f_{\alpha,\beta}\right)_{\alpha,\beta\in I}$是一族满射,$\varprojlim E_{\alpha}$也有可能是空集.
+\end{remark}
+
+\begin{example}{}{}
+	设$A,B$是集合,$\left(V_{\alpha}\right)_{\alpha\in I}$是$A$的子集族,$I$是上定向集,并且$\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies V_{\alpha}\supseteq V_{\beta}\right)$.对诸$\alpha,\beta\in I$且$\alpha\leq\beta$,记
+	\begin{align*}
+		f_{\beta,\alpha}:\Hom_{\mathsf{Set}}\left(V_{\beta},B\right)\to\Hom_{\mathsf{Set}}\left(V_{\alpha},B\right),u\mapsto u|_{V_{\beta}}.
+	\end{align*}
+	我们称$\left(\left(\Hom_{\mathsf{Set}}\left(V_{\alpha},B\right)\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$的正向极限为$V_{\alpha}$到$B$的映射芽空间.最常见的一种情形就是$\left(V_{\alpha}\right)_{\alpha\in I}$是拓扑空间$A$的某个子集的邻域系.
+\end{example}
+
+\begin{example}{}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合正向系统,$F$是集合,对任意$\alpha\in I$有$E_{\alpha}=F$,对任意$\alpha,\beta\in I$且$\alpha\leq\beta$有$f_{\beta,\alpha}=\id_{F}$.对每个$\alpha\in I$,把$f_{\beta,\alpha}$视为$E_{\alpha}$到$F$的映射,则存在$\varinjlim E_{\alpha}$到$F$的典范双射,通常把二者典范等同起来.
+\end{example}
+
+\begin{lemma}{}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta,\alpha}\right)_{\beta,\alpha\in I}\right)$是集合正向系统,$\left(f_{\alpha}\right)_{\alpha\in I}$是典范映射族.
+	\begin{enumerate}
+		\item 设$\left(x^{\left(i\right)}\right)_{i=1}^{n}$是$E$中的有限元素族,则存在$\alpha\in I$和$E_{\alpha}$中的有限元素族$\left(x_{\alpha}^{\left(i\right)}\right)_{i=1}^{n}$使$\forall 1\leq i\leq n \left(x^{\left(i\right)}=f_{\alpha}\left(x_{\alpha}^{\left(i\right)}\right)\right)$.
+		\item 设$\alpha\in I$且$\left(y_{i}^{\left(\alpha\right)}\right)_{i=1}^{n}$是$E_{\alpha}$的有限元素族.若$\forall 1\leq i,j\leq n\left(f_{\alpha}\left(y_{\alpha}^{\left(i\right)}\right)=f_{\alpha}\left(y_{\alpha}^{\left(j\right)}\right)\right)$,则
+		\begin{align*}
+			\exists\beta\in I\left(\alpha\leq\beta\wedge\forall 1\leq i,j\leq n\left(f_{\beta,\alpha}\left(y_{\alpha}^{\left(i\right)}\right)=f_{\beta,\alpha}\left(y_{\alpha}^{\left(j\right)}\right)\right)\right).
+		\end{align*}
+	\end{enumerate}
+\end{lemma}
+
+
+

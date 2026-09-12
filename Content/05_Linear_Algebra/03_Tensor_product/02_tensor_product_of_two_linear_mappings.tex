@@ -1,0 +1,36 @@
+\section{两个线性映射的张量积}
+
+记号约定:
+
+\begin{itemize}
+	\item $A$是环,$E_{1},E_{2},E_{3}$是右$A$-模,$F_{1},F_{2},F_{3}$是左$A$-模.
+	\item $f\in\Hom_{A}\left(E_{1},E_{2}\right),f^{\prime}\in\Hom_{A}\left(E_{2},E_{3}\right),g\in\Hom_{A}\left(F_{1},F_{2}\right),g^{\prime}\in\Hom_{A}\left(F_{2},F_{3}\right)$.
+\end{itemize}
+
+本小节中,$E_{1}$,$E_{2}$是右$A$-模,$F_{1}$,$F_{2}$是左$A$-模,$f:E_{1}\to E_{2}$,$g:F_{1}\to F_{2}$是模同态.
+
+\begin{definition}{线性映射的张量积}{}
+	我们称$f\otimes_{\Z}g:E_{1}\otimes_{A}F_{1}\to E_{2}\otimes_{A}F_{2},x\otimes y\mapsto f\left(x\right)\otimes g\left(y\right)$为$f$和$g$的张量积.
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item $\Hom_{A}\left(E_{1},E_{2}\right)\times\Hom_{A}\left(F_{1},F_{2}\right)\to\Hom_{\Z}\left(E_{1}\otimes_{A}F_{1},E_{2}\otimes_{A}F_{2}\right),\left(u,v\right)\mapsto u\otimes_{Z}v$是$\Z$-双线性映射.
+		\item (1)中的映射诱导如下的典范$\Z$-线性映射
+		\begin{gather*}
+			\Hom_{A}\left(E_{1},E_{2}\right)\otimes_{\Z}\Hom_{A}\left(F_{1},F_{2}\right)\to\Hom_{\Z}\left(E_{1}\otimes_{A}F_{1},E_{2}\otimes_{A}F_{2}\right),\\
+			u\otimes_{\Z}v\mapsto u\otimes_{A}v.
+		\end{gather*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{张量积的函子性}{}
+	如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			E_{1}\otimes_{A}F_{1} \arrow[dd, "\left(f^{\prime}\circ f\right)\otimes\left(g^{\prime}\circ g\right)"'] \arrow[rr, "f\otimes g"] &  & E_{2}\otimes_{A}F_{2} \arrow[dd, "f^{\prime}\otimes g^{\prime}"] \\
+			&  &                                                                \\
+			E_{3}\otimes_{A}F_{3} \arrow[rr, "\id_{E_{3}\otimes_{A}F_{3}}", equals]                                                                           &  & E_{3}\otimes_{A}F_{3}                                         
+		\end{tikzcd}
+	\end{center}
+\end{proposition}

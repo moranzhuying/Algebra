@@ -1,0 +1,99 @@
+\chapter{对应和二元关系}
+
+\section{二元关系和对应}
+
+\begin{definition}{二元关系}{}
+	设$G$是集合.若$\left(\forall z\right)\left(z\in G\implies z\text{是有序对}\right)$为真,则称$G$是二元关系,并把$\left(x,y\right)\in G$读作``在关系$G$下$y$对应于$x$''.
+\end{definition}
+
+\begin{definition}{公式的关系}{}
+	设$R\left\{x,y\right\}$是公式,其中$x,y$是不同的字母,$G$是不同于$x,y$且未在$R$中出现的字母.若公式
+	\begin{align*}
+		\left(\exists G\right)\left(G\text{是二元关系}\wedge\left(\forall x\right)\left(\forall y\right)\left(R\iff\left(\left(x,y\right)\in G\right)\right)\right)
+	\end{align*}
+	为真,则称$R$有一个(相对$x,y$)的二元关系,称$G$是$R$相对$x,y$的二元关系.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$R\left\{x,y\right\}$是公式,其中$x,y$是不同的字母,$Z$是不同于$x,y$且未在$R$中出现的字母.若公式
+	\begin{align*}
+		\left(\exists Z\right)\left(\forall x\right)\left(\forall y\right)\left(R\implies\left(\left(x,y\right)\in Z\right)\right),
+	\end{align*}
+	则$R$有一个二元关系.
+\end{proposition}
+
+\begin{proposition}{二元关系的定义域和像的存在性}{}
+	设$G$是二元关系,则存在唯一的集合$A$和$B$满足下列条件:
+	\begin{enumerate}
+		\item $\left(\exists y\right)\left(\left(x,y\right)\in G\right)$和$x\in A$等价.
+		\item $\left(\exists x\right)\left(\left(x,y\right)\in G\right)$和$y\in A$等价.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{二元关系的定义域,像}{}
+	设$G$是二元关系.把$\left\{x\middle|\left(\exists y\right)\left(\left(x,y\right)\in G\right)\right\}$和$\left\{y\middle|\exists x\left(\left(x,y\right)\in G\right)\right\}$分别记作$\pr_{1}\left(G\right)$和$\pr_{2}\left(G\right)$,依次称为$G$的第一投影(或定义域)和$G$的第二投影(或值域).
+\end{definition}
+
+\begin{proposition}{二元关系的笛卡尔积包含性}{}
+	设$G$是二元关系.
+	\begin{enumerate}
+		\item $G\subseteq\pr_{1}\left(G\right)\times\pr_{2}\left(G\right)$.
+		\item 若$\pr_{1}\left(G\right)=\emptyset$或$\pr_{2}\left(G\right)=\emptyset$,则$G=\emptyset$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{对应}{}
+	对应$\Gamma$是一个三元组$\left(G,A,B\right)$,其中$G$是二元关系,$\pr_{1}\left(G\right)\subseteq A,\pr_{2}\left(G\right)\subseteq B$.我们把$A$称为源,$B$称为靶(或陪域).
+	\begin{itemize}
+		\item 如果有$\left(x,y\right)\in G$,我们说``$y$在$\Gamma$下对应于$x$''.
+		\item 对每个$x\in\pr_{1}\left(G\right)$,我们说对应$\Gamma$在$x$处有定义.
+		\item 对每个$y\in\pr_{2}\left(G\right)$,我们说$y$是$\Gamma$的一个取值.
+	\end{itemize}
+\end{definition}
+
+\begin{definition}{公式的图像}{}
+	如果公式$R\left\{x,y\right\}$有一个相对$x,y$的图像$G$,并且集合$A,B$满足$\pr_{1}\left(G\right)\subseteq A\wedge\pr_{2}\left(G\right)\subseteq B$,则称$R$是一个在$A$的元素和$B$的元素之间的公式,三元组$\Gamma\coloneq\left(G,A,B\right)$称为由公式$R$定义的$A$与$B$之间的对应.
+\end{definition}
+
+\begin{definition}{集合在二元关系下的像}{}
+	设$G$是二元关系,$X$是集合.把$\left\{y\middle|\exists x\left(x\in X\wedge\left(x,y\right)\in G\right)\right\}$记作$G\left(X\right)$,称为$X$在$G$下的像.
+\end{definition}
+
+\begin{definition}{集合在对应下的像}{}
+	设$\Gamma\coloneq\left(G,A,B\right)$是对应,$X\subseteq A$.我们把$G\left(X\right)$记作$\Gamma\left(X\right)$,并称之为$X$在$\Gamma$下的像.
+\end{definition}
+
+\begin{proposition}{像的性质}{}
+	设$G$是二元关系,$X$是集合.
+	\begin{enumerate}
+		\item $G\left(X\right)\subseteq\pr_{2}\left(G\right)$.
+		\item $G\left(\pr_{1}\left(G\right)\right)=\pr_{2}\left(G\right)$.
+		\item $G\left(\emptyset\right)=\emptyset$.
+		\item 若$X\subseteq\pr_{1}\left(G\right)\wedge X\neq\emptyset$,则$G\left(X\right)\neq\emptyset$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{像的包含是单调递增的}{}
+	设$G$是二元关系,$X,Y$是集合,则$X\subseteq Y\implies G\left(X\right)\subseteq G\left(Y\right)$为真.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$G$是二元关系,$A$是集合.若$\pr_{1}\left(G\right)\subseteq A$,则$G\left(A\right)=\pr_{2}\left(G\right)$.
+\end{corollary}
+
+\begin{definition}{截面(纤维)}{}
+	设$G$是二元关系,$x$是字母.我们称$G\left(\left\{x\right\}\right)$为$G$在$x$处的截面(或纤维).
+\end{definition}
+
+\begin{proposition}{}{}
+	设$G$是二元关系,$x,y$是不同的字母,则$y\in G\left(\left\{x\right\}\right)\iff\left(x,y\right)\in G$为真.
+\end{proposition}
+
+\begin{proposition}{利用纤维来判定二元关系的包含关系}{}
+	设$G,G^{\prime}$是两个二元关系,则$G\subseteq G^{\prime}\iff\left(\forall x\right)\left(G\left(\left\{x\right\}\right)\subseteq G^{\prime}\left(\left\{x\right\}\right)\right)$为真.
+\end{proposition}
+
+\begin{definition}{对应的截面}{}
+	设$\Gamma\coloneq\left(G,A,B\right)$是对应.对任一$x\in A$,$G$在$x$处的截面记作$\Gamma\left(\left\{x\right\}\right)$,称为$\Gamma$在$x$处的截面.
+\end{definition}
+

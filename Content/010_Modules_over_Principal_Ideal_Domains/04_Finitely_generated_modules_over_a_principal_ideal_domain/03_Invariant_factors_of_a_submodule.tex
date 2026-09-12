@@ -1,0 +1,30 @@
+\section{子模的不变因子}
+
+记号约定:$A$是PID,$M$是自由$A$-模,$N$是$M$的子模.
+
+\begin{theorem}{PID上自由模的子模结构定理}{structure-theorem-of-submodule-of-free-module-over-pid}
+	设$\dim N=n$,则存在$M$的基$\left(e_{i}\right)_{i=1}^{n}$和$A\setminus\left\{0\right\}$的元素族$\left(\alpha_{i}\right)_{i=1}^{n}$满足下列条件:
+	\begin{enumerate}
+		\item $\left(\alpha_{i}e_{i}\right)_{i=1}^{n}$是$N$的基,对每个$1\leq i\leq n-1$有$\alpha_{i}\mid\alpha_{i+1}$.
+		\item 由$\left(e_{i}\right)_{i=1}^{n}$生成的子模$N^{\prime}$和理想序列$\left(\langle\alpha_{i}\rangle\right)_{i=1}^{n}$由(1)中的两个条件唯一确定.
+		\item $N^{\prime}/N=\tor\left(M/N\right)$,并且$N^{\prime}/N\simeq\bigboxplus\limits_{i=1}^{n}A/\langle\alpha_{i}\rangle$.
+		\item 存在自由$A$-模$N_{0}$使得$M/N=\left(N^{\prime}/N\right)\oplus N_{0}$且$N_{0}\simeq M/N^{\prime}$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}{}{}
+	设$N$是$M$的有限维子模,则$N$是$M$的直因子$\iff$ $M/N$无挠.
+\end{corollary}
+
+\begin{remark}{}{}
+	如果$N$是$M$的无限维子模,那么即便$M/N$无挠,$N$在$M$中也不一定有直和补.
+\end{remark}
+
+\begin{definition}{子模的不变因子}{}
+	沿用定理(\ref{thm:structure-theorem-of-submodule-of-free-module-over-pid})的设定.我们称理想序列$\left(\langle\alpha_{i}\rangle\right)_{i=1}^{n}$是$N$相对$M$的不变因子.
+\end{definition}
+
+\begin{remark}{}{}
+	设$K$是域.当$A$是$\Z$或$K[X]$时,$A$的每个理想都有典范的生成元选取方式(分别取正整数和首一多项式).按照习惯,我们通常把$\left(\alpha_{i}\right)_{i=1}^{n}$称为$N$相对$M$的不变因子.
+\end{remark}
+

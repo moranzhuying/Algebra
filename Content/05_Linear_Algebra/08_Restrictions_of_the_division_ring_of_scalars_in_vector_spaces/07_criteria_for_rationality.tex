@@ -1,0 +1,32 @@
+\section{有理性判别准则}
+
+记号约定:
+
+\begin{itemize}
+	\item $K$是除环,$K^{\prime}$是其子除环,$\mathcal{M}\subseteq\End_{K^{\prime}}\left(K_{s}\right)$.
+	\item $V$是右$K$-向量空间,其$K^{\prime}$-结构是$V^{\prime}$,$V_{1},V_{2}$是$V$的子空间,各自的$K^{\prime}$-结构是$V_{1}^{\prime},V_{2}^{\prime}$.
+\end{itemize}
+
+\begin{definition}{}{}
+	定义$\chi\left(\mathcal{M}\right)=\left\{\xi\in K\middle|\forall\phi\in\mathcal{M}\forall\eta\in K\left(\phi\left(\xi\eta\right)=\xi\phi\left(\eta\right)\right)\right\}$.
+\end{definition}
+
+\begin{remark}{}{}
+	$\chi\left(M\right)$是$K$的包含$K^{\prime}$且使$\mathcal{M}\subseteq\End_{L}\left(K_{d}\right)$的最大子除环.
+\end{remark}
+
+\begin{definition}{}{}
+	对任一$\phi\in\End_{K^{\prime}}\left(K_{d}\right)$,定义$\phi_{V}:V\to V$如下:对任一$x\in V^{\prime},\xi\in K,\phi_{V}\left(x^{\prime}\xi\right)=x^{\prime}\phi_{V}\left(\xi\right)$.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$x\in V$,则$x$在$\chi\left(\mathcal{M}\right)$上有理$\iff$ $\forall\phi\in\mathcal{M}\forall\eta\in K\left(\phi_{V}\left(x\eta\right)=x\phi\left(\eta\right)\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$W$是$V$的子空间,则$W$在$\chi\left(\mathcal{M}\right)$上有理$\iff$ $\forall\phi\in\mathcal{M}\left(\phi_{V}\left(W\right)\subseteq W\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{K}\left(V_{1},V_{2}\right)$,则$f$在$\chi\left(\mathcal{M}\right)$上有理$\iff$ $\forall\phi\in\mathcal{M}\left(f\circ\phi_{V_{1}}=\phi_{V_{2}}\circ f\right)$.
+\end{proposition}

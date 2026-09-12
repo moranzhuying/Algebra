@@ -1,0 +1,31 @@
+\chapter{张量积和线性映射模之间的关系}
+
+\section{张量积的伴随性质}
+
+记号约定:$A,B,C$是环.
+
+\begin{definition}{平衡$A$-线性映射组成的模}{}
+	设$E$是右$A$-模,$F$是左$A$-模,$G$是$\Z$-模.记$\mathcal{L}_{A}\left(E,F;G\right)$是$E\times F$到$G$的$A$-平衡映射组成的集合.这是一个$\Z$-模.
+\end{definition}
+
+\begin{proposition}{张量-$\Hom$伴随同构($\Z$-模情形)}{}
+	设$E$是右$A$-模,$F$是左$A$-模,$G$是$\Z$-模,则有典范的$\Z$-模同构
+	\begin{align*}
+		\Hom_{\Z}\left(E\otimes_{A}F,G\right)\simeq\Hom_{A}\left(E,\Hom_{\Z}\left(F,G\right)\right)\simeq\Hom_{\Z}\left(F,\Hom_{\Z}\left(E,G\right)\right)\simeq\mathcal{L}_{A}\left(E,F;G\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E$是$\left(B,A\right)$-双模,$F$是左$A$-模,$G$是左$B$-模,则有典范的$\Z$-模同构$\Hom_{B}\left(E\otimes_{A}F,G\right)\simeq\Hom_{A}\left(E,\Hom_{B}\left(F,G\right)\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E$是右$A$-模,$F$是$\left(A,C\right)$-双模,$G$是右$C$-模,则有典范的$\Z$-模同构$\Hom_{C}\left(E\otimes_{A}F,G\right)\simeq\Hom_{A}\left(E,\Hom_{C}\left(F,G\right)\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$C$是交换环,$E,F,G$是$C$-模,则有典范的$C$-模同构
+	\begin{align*}
+		\Hom_{C}\left(E\otimes_{C}F,G\right)\simeq\Hom_{C}\left(E,\Hom_{C}\left(F,G\right)\right)\simeq\Hom_{C}\left(F,\Hom_{C}\left(E,G\right)\right)\simeq\Bil_{C}\left(E,F;G\right).
+	\end{align*}
+\end{proposition}

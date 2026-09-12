@@ -1,0 +1,96 @@
+\section{全序集}
+
+\begin{definition}{可比较,全序,全序集}{}
+	设集合$E$配备预序$\leq$.
+	\begin{enumerate}
+		\item 设$x,y\in E$.若公式$x\leq y$和$x\geq y$中至少有一个成立,则称$x$和$y$可比较,否则称$x$和$y$不可比较.
+		\item 设$\leq$是偏序.若每个$x,y\in E$都可比较,则称$\leq$是全序,称$E$是全序集.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	设集合$E$配备全序$\leq$.
+	\begin{enumerate}
+		\item 对任意$x,y\in E$,公式$x<y$,$x=y$和$x>y$中有且仅有一个成立.
+		\item 对任意$x,y\in E$,$\neg\left(x\leq y\right)$和$x>y$等价.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\leq$是集合$E$上的偏序,$G$是其图像,则$\leq$是全序$\iff$ $G\cup G^{-1}=E\times E\wedge G\circ G=G\wedge G\cap G^{-1}=\Delta_{E}$.
+\end{proposition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 全序集的每个子集在诱导偏序下都是全序集.
+		\item 全序集的单点子集和空子集都是全序集.
+		\item $\R$在标准偏序下是全序集.
+		\item 如果$A$至少有两个不同的元素,则$\mathcal{P}\left(A\right)$不是全序集.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设集合$E$配备全序$\leq$.
+	\begin{enumerate}
+		\item 如果$\leq^{\prime}$是$\leq$的对偶,那么$E$按$\leq^{\prime}$是全序集.
+		\item $E$一定是格.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E,F$是全序集,$f\in\Hom_{\mathsf{Set}}\left(E,F\right)$.
+	\begin{enumerate}
+		\item 如果$f$严格单调,则$f$是单射.
+		\item 如果$f$严格递增,则$f^{\circ}:E\to\im\left(f\right),x\mapsto f\left(x\right)$是序同构.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E$是全序集,$X\subseteq E$,$b\in E$,则$b=\sup\limits_{E}X\iff b\in\uparrow_{E}^{\leq}\left(X\right)\wedge\forall c\in E\left(c<b\implies\exists x\in X\left(c<x\leq b\right)\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

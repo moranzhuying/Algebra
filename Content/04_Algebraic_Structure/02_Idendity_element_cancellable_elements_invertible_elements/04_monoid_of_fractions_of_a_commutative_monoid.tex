@@ -1,0 +1,99 @@
+\section{交换幺半群的分式幺半群}
+
+记号约定:
+\begin{itemize}
+	\item $E$按$\odot$是交换幺半群,$S\subseteq E$,$S^{\prime}$是$S$生成的$E$的子幺半群.
+	\item 幺半群的恒等元记作$e$(视情况添加下标),$E$中每个可逆元$x$的逆记作$x^{\ast}$.
+\end{itemize}
+
+\begin{lemma}{分式交换幺半群上的等价关系是相容的}{compatible-equivalent-relation-over-commucative-monoid}
+	定义$E\times S^{\prime}$上的关系$\mathcal{R}$如下:
+	\begin{align*}
+		\forall x\in E\forall y\in S^{\prime}\left(x\mathcal{R}y\iff\exists a,b\in E\exists p,q,s\in S^{\prime}\left(x=\left(a,p\right)\wedge y=\left(b,q\right)\wedge aqs=bps\right)\right),
+	\end{align*}
+	那么$\mathcal{R}$是$E\times\mathcal{S}^{\prime}$上的相容等价关系,并且$\left(E\times S^{\prime}\right)/\mathcal{R}$是交换幺半群
+\end{lemma}
+
+\begin{definition}{分式幺半群}{}
+	设$\mathcal{R}$如引理(\ref{lem:compatible-equivalent-relation-over-commucative-monoid})定义.我们称$E_{S}\coloneq\left(E\times S^{\prime}\right)/\mathcal{R}$为$E$相伴于$S$的分式幺半群.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	对诸$\left(a,p\right)\in E\times S^{\prime}$,记$\dfrac{a}{p}=\left[\left(a,p\right)\right]_{\mathcal{R}}$,称$a$为分子,$p$为分母.
+\end{remark}
+
+\begin{proposition}{典范同态的性质}{}
+	$\ev_{S}:E\to E_{S},a\mapsto\dfrac{a}{e}$是典范的幺半群同态.进一步:
+	\begin{enumerate}
+		\item$\forall a,b\in E\left(\ev_{S}\left(a\right)=\ev_{S}\left(b\right)\iff\exists s\in S^{\prime}\left(s\odot a=s\odot b\right)\right)$.
+		\item 对任一$p\in S$,$\ev_{S}\left(p\right)$在$E_{S}$中的可逆元为$\dfrac{e}{p}$.
+		\item $\forall a\in E\forall p\in S^{\prime}\left(\dfrac{a}{p}=\ev_{S}\left(a\right)\odot\ev_{S}\left(p\right)^{\ast}\right)$.
+		\item $\ev_{S}$是单射$\iff$ $S$的每个元素都可消去.
+		\item $\ev_{S}$是双射$\iff$ $S$的每个元素都可逆.
+	\end{enumerate}
+\end{proposition}
+
+\begin{theorem}{分式幺半群的泛性质}{}
+	对诸幺半群$E$和$f\in\Hom_{\mathsf{Mon}}\left(E,F\right)$,若对诸$s\in S$,$f\left(s\right)$在$F$中可逆,则下列图表交换:
+	\begin{center}
+		\begin{tikzcd}
+			E \arrow[r, "\ev_{S}"] \arrow[rd, "f"'] & E_{S} \arrow[d, "\exists!\bar{f}", dashed] \\
+			& F                                        
+		\end{tikzcd}
+	\end{center}
+\end{theorem}
+
+\begin{corollary}{分式幺半群的函子性}{}
+	设$F$是交换幺半群,$T\subseteq F$,$f\in\Hom_{\mathsf{Mon}}\left(E,F\right)$且$f\left(S\right)\subseteq T$,则下列图标交换:
+	\begin{center}
+	\begin{tikzcd}
+		E \arrow[r, "f"] \arrow[d, "\ev_{S}"']  & Y \arrow[d, "\ev_{T}"] \\
+		E_{S} \arrow[r, "\exists!\bar{f}"', dashed] & F_{T}                     
+	\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{definition}{分式群}{}
+	设$S=E$,则$E_{E}$是交换群,我们称之为$E$的分式群.采用加法记号时,称$E_{E}$为差群.
+\end{definition}
+
+\begin{definition}{完全局部化}{}
+	设$\Sigma$是$E$中所有可消去元组成的集合,我们称$E_{\Sigma}$是$E$的完全局部化.
+\end{definition}
+
+\begin{remark}{交换幺半群能嵌入到群中$\iff$它的每个元素都可消去}{}
+	$\ev_{\Sigma}:E\twoheadrightarrow E_{\Sigma}$是幺半群同构,在嵌入意义下$E$是$E_{\Sigma}$的子幺半群.因此,$E$能嵌入到群中$\iff$ $E$的每个元素都可消去.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

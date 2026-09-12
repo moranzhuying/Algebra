@@ -1,0 +1,56 @@
+\section{集合族的乘积}
+
+\begin{definition}{集合族的乘积}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合族.
+	\begin{enumerate}
+		\item 所有定义域为$I$,并且满足$\forall i\in I\left(F\left(i\right)\in X_{i}\right)$的偏函数关系$F$组成的集合记作$\prod\limits_{i\in I}X_{i}$,称为$\left(X_{i}\right)_{i\in I}$的乘积.
+		\item 对任一$i\in I$,集合$X_{i}$称为$\prod\limits_{i\in I}X_{i}$的指标为$i$的因子.
+		\item 对任一$i\in I$,映射$\pr_{i}:\prod\limits_{i\in I}X_{i}\to X_{i},F\mapsto F\left(i\right)$称为指标是$i$的坐标映射(或投影).
+		\item 对$\prod\limits_{i\in I}X_{i}$的子集$A$和每个$i\in I$,集合$\pr_{i}\left(A\right)$称为$A$的指标为$i$的投影.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$I=\emptyset$时,$\prod\limits_{i\in I}X_{i}=\left\{\emptyset\right\}$.
+		\item 显然,对$\prod\limits_{i\in I}X_{i}$的每个子集$A$都有$A\subseteq\prod\limits_{i\in I}\pr_{i}\left(A\right)$.
+		\item 我们通常把$\prod\limits_{i\in I}X_{i}$的元素记作$\left(x_{i}\right)_{i\in I}$.
+		\item 如果对每个$i\in I$,$X_{i}$等于一个集合$E$,则$\prod\limits_{i\in I}X_{i}=\FuncRel\left(I,E\right)$.
+		\item 如果$I=\left\{\alpha\right\}$,则存在典范双射$\prod\limits_{i\in I}X_{i}\to X_{\alpha}$.
+		\item 如果$A,B$是集合,$\alpha,\beta$是两个不同的对象,则存在典范双射$\prod\limits_{i\in\left\{\alpha,\beta\right\}}X_{i}\to A\times B$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{对角线,对角映射}{}
+	设$I,E$是集合.对任一$x\in E$,记$\iota_{x}:I\to E,i\mapsto x$.我们称$\Delta\coloneq\left\{\iota_{x}\in\Hom_{\mathsf{Set}}\left(I,E\right)\middle|x\in E\right\}$为对角线,称
+	\begin{align*}
+		E\to\Hom_{\mathsf{Set}}\left(I,E\right),x\mapsto\iota_{x}
+	\end{align*}
+	为对角映射.
+\end{definition}
+
+\begin{proposition}{索引集的变换}{}
+	设$\left(X_{i}\right)_{i\in I}$是集合族,$u:K\to I$是双射,则$\prod\limits_{i\in I}X_{i}\to\prod\limits_{k\in K}X_{u\left(k\right)},f\mapsto f\circ u$是双射.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

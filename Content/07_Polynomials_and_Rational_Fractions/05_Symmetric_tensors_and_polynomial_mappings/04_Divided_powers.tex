@@ -1,0 +1,89 @@
+\section{分划幂}
+
+\begin{definition}{$k$阶分划幂}{}
+	对$k\in\N$,定义$\gamma_{k}:M\to\mathsf{TS}^{k}\left(M\right),x\mapsto\underbracket{x\otimes\ldots\otimes x}_{k\text{个}x}$,称$\gamma_{k}\left(z\right)$为$z\in M$的$k$阶分划幂.
+\end{definition}
+
+\begin{proposition}{分划幂的性质}{}
+	\begin{enumerate}
+		\item 对每个$x\in M$和$k\in\N$有$\underbracket{x\cdot x\ldots\cdot x}_{k\text{个}x}=k!\gamma_{k}\left(x\right)$.
+		\item 设$x_{1},\ldots,x_{n}\in M$,则$\gamma_{k}\left(x_{1}+\ldots+x_{n}\right)=\sum\limits_{\substack{\left(p_{1},\ldots,p_{n}\right)\in M^{n}\\p_{1}+\ldots+p_{n}=p}}\gamma_{p_{1}}\left(x_{1}\right)\ldots\gamma_{p_{n}}\left(x_{n}\right)$.
+		\item 设$x_{1},\ldots,x_{n}\in M,p_{1},\ldots,p_{n},p\in\N$且$p=\sum\limits_{i=1}^{n}p_{i}$.定义
+		\begin{align*}
+			E=\left\{f\in\End_{\mathsf{Set}}\left(\left[1,n\right]\right)\middle|\forall 1\leq i\leq n\left(\left|f^{-1}\left(\left\{i\right\}\right)\right|=p_{i}\right)\right\},
+		\end{align*}
+		则$\gamma_{p_{1}}\left(x_{1}\right)\ldots\gamma_{p_{n}}\left(x_{n}\right)=\sum\limits_{\varphi\in E}x_{\varphi\left(1\right)}\otimes\ldots\otimes x_{\varphi\left(p\right)}$.
+		\item 设$x\in M,q,r\in\N$,则$\gamma_{q}\left(x\right)\gamma_{r}\left(x\right)=\binom{q+r}{q}\gamma_{q+r}\left(x\right)$.
+		\item 设$x_{1},\ldots,x_{n}\in M$,对每个$H\subseteq\left[1,n\right]$,记$x_{H}=\sum\limits_{i\in I}x_{i}$,则$\left(-1\right)^{n}x_{1}\ldots x_{n}=\sum\limits_{H\subseteq\left[1,n\right]}\left(-1\right)^{\left|H\right|}\gamma_{n}\left(x_{H}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$\left(x_{i}\right)_{i\in I}\in M^{I}$.对每个$\nu\coloneq\left(\nu_{i}\right)_{i\in I}\in\N^{\left(I\right)}$,定义$x_{\nu}=\prod\limits_{i\in I}x_{i}^{\nu_{i}}$.若$\left(\lambda_{i}\right)_{i\in I}\in A^{\left(I\right)},p\in\N$,则
+		\begin{align*}
+			\gamma_{p}\left(\sum\limits_{i\in I}\lambda_{i}x_{i}\right)=\sum\limits_{\substack{\nu\in\N^{\left(I\right)}\\ \left|\nu\right|=p}}\lambda^{\nu}x_{\nu},\text{其中}\lambda_{\nu}\coloneq\prod\limits_{i\in I}\lambda_{i}^{\nu_{i}}.
+		\end{align*}
+		\item 对每个$f\in\Hom_{\mathsf{Set}}\left(\left[1,p\right],I\right)$,定义$w_{f}:\left[1,p\right]\to\left[1,p\right],i\mapsto\left|f^{-1}\left(\left\{i\right\}\right)\right|$,则
+		\begin{align*}
+			\forall f_{1},f_{2}\in\Hom_{\mathsf{Set}}\left(\left[1,p\right],I\right)\left(w_{f_{1}}=w_{f_{2}}\iff\exists\sigma\in\mathfrak{S}_{p}\left(f_{2}=f_{1}\circ\sigma\right)\right).
+		\end{align*}
+		记$\mathcal{E}=\Hom_{\mathsf{Set}}\left(\left[1,p\right],I\right)$.若$\left(x_{i}\right)_{i\in I}\in M^{I},\nu\coloneq\left(\nu_{i}\right)_{i\in I}\in\N^{\left(I\right)}$,则$x_{\nu}=\sum\limits_{f\in\mathcal{E},w_{f}=\nu}x_{f\left(1\right)}\otimes\ldots\otimes x_{f\left(p\right)}$.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

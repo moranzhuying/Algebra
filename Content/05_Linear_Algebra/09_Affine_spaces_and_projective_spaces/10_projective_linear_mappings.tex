@@ -1,0 +1,93 @@
+\section{有理射影映射}
+
+记号约定:$K$是除环,$V,V^{\prime}$是左$K$-向量空间,$f\in\Hom_{K}\left(V,V^{\prime}\right),N=\ker\left(f\right)$,$\pi:V\setminus\left\{0\right\}\twoheadrightarrow\mathbb{P}\left(V\right)$是典范满射.
+
+\begin{definition}{有理射影映射}{}
+	我们称$f$诱导的映射$g:\mathbb{P}\left(V\right)\setminus\mathbb{P}\left(N\right)\to\mathbb{P}\left(V^{\prime}\right)$是$f$诱导的有理射影映射.$\mathbb{P}\left(N\right)$称为$g$的中心.
+\end{definition}
+
+\begin{remark}{术语和记号说明说明}{}
+	虽然$N\neq 0$时$g$的定义域只是$\mathbb{P}\left(V\right)$的子集,我们依然\textbf{滥用记号},将其记作$g:\mathbb{P}\left(V\right)\to\mathbb{P}\left(V^{\prime}\right)$.
+\end{remark}
+
+\begin{proposition}{}{}
+	$f$是单射$\iff$ $f$诱导的有理射影映射$g$是单射.两条件之一成立时$g$的定义域为$\mathbb{P}\left(V\right)$.
+\end{proposition}
+
+\begin{proposition}{齐次坐标下的映射方程}{}
+	设$V,V^{\prime}$各自的基是$\left(a_{i}\right)_{i\in I},\left(b_{j}\right)_{j\in J}$,$g:\mathbb{P}\left(V\right)\to\mathbb{P}\left(V^{\prime}\right)$是有理射影映射.
+	\begin{enumerate}
+		\item 若$p\in\mathbb{P}\left(V\right)$的齐次坐标为$\left(\xi_{i}\right)_{i\in I}$,则存在$K$中的有限支撑族$\left(a_{i,j}\right)_{i\in I,j\in J}$使得$\left(\sum\limits_{i\in I}\xi_{i}a_{i,j}\right)_{j\in J}$是$g\left(p\right)$的齐次坐标.
+		\item 在(1)的条件下,$\mathbb{P}\left(N\right)$是由线性方程组$\sum\limits_{i\in I}\xi_{i}a_{i,j}=0\left(j\in J\right)$确定的射影线性簇.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$g:\mathbb{P}\left(V\right)\to\mathbb{P}\left(V^{\prime}\right)$是中心为$C$的有理射影映射.
+	\begin{enumerate}
+		\item 若$M$是$\mathbb{P}\left(V\right)$的射影线性簇,则$g\left(M\setminus\left(M\cap C\right)\right)$是$\mathbb{P}\left(V^{\prime}\right)$的射影子空间.
+		\item 若$M$是$\mathbb{P}\left(V\right)$的射影线性簇,则$\dim g\left(M\setminus\left(M\cap C\right)\right)+\dim\left(M\cap C\right)+1=\dim M$.
+		\item 若$M^{\prime}$是$V^{\prime}$的射影子空间,则$g^{-1}\left(M^{\prime}\right)\cup C$是$\mathbb{P}\left(V\right)$的射影子空间.
+		\item 若$M^{\prime}$是$V^{\prime}$的射影子空间,则$\dim\left(g^{-1}\left(M^{\prime}\right)\cup C\right)=\dim C+\dim\left(M^{\prime}\cap g\left(\mathbb{P}\left(V\right)\right)\right)+1$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$V^{\prime\prime}$是$K$-向量空间,$\bar{f}\in\Hom_{K}\left(V^{\prime},V^{\prime\prime}\right)$诱导的有理射影映射是$h$,则$h\circ g$是射影线性映射.
+\end{proposition}
+
+\begin{definition}{有理射影同构}{}
+	设$u:\mathbb{P}\left(V\right)\to\mathbb{P}\left(V^{\prime}\right)$是双射.若存在$h\in\Isom_{K}\left(V,V^{\prime}\right)$使得$u\circ\pi=\pi\circ h$,则称$u$是有理射影同构.
+\end{definition}
+
+\begin{proposition}{}{}
+	若$u:\mathbb{P}\left(V\right)\to\mathbb{P}\left(V^{\prime}\right)$是有理射影同构,则$u^{-1}$也是有理射影同构.
+\end{proposition}
+
+\begin{definition}{射影群}{}
+	记$\PGL\left(V\right)\coloneq\left\{u\in\End_{\mathsf{Set}}\left(\mathbb{P}\left(V\right)\right)\middle|u\text{是有理射影同构}\right\}$,它按映射复合构成群,称为射影群.记$\PGL_{n}\left(K\right)\coloneq\PGL\left(K_{s}^{n}\right)$.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

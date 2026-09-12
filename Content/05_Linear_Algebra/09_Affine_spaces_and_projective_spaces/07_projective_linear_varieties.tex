@@ -1,0 +1,83 @@
+\section{射影线性簇}
+
+记号约定:$K$是除环,$V$是$K$-向量空间,$\pi:V\setminus\left\{0\right\}\twoheadrightarrow\mathbb{P}\left(V\right)$是典范投影,$n\in\N$.
+
+\begin{remark}{}{}
+	当$W$是$V$的向量子空间时,$\mathbb{P}\left(W\right)$典范同构于$\pi\left(W\right)$,因此可以谈论射影线性簇的维数.
+\end{remark}
+
+\begin{definition}{射影线性簇及其维数,射影超平面}{}
+	设$W$是$V$的向量子空间.
+	\begin{enumerate}
+		\item 称$\pi\left(W\setminus\left\{0\right\}\right)$是$\mathbb{P}\left(V\right)$的射影线性簇,称$\dim\mathbb{P}\left(W\right)$为$\pi\left(W\right)$的维数.
+		\item 若$\codim_{V}W=1$,则称$\pi\left(W\right)$是$\mathbb{P}\left(V\right)$的射影超平面.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{射影线性簇的线性泛函表征}{}
+	设$\dim\mathbb{P}\left(V\right)=n,L\subseteq\mathbb{P}\left(V\right),r\in\N$,则下列陈述等价:
+	\begin{enumerate}
+		\item $L$是$\mathbb{P}\left(V\right)$的$r$维射影线性簇.
+		\item 存在$V^{\vee}$的线性无关族$\left(f_{i}\right)_{i=1}^{n-r}$使得$L=\pi\left(\bigcap\limits_{i=1}^{n-r}\ker\left(f_{i}\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{超平面的线性泛函表征}{}
+	设$\dim\mathbb{P}\left(V\right)=n,H\subseteq\mathbb{P}\left(V\right)$,则$H$是$\mathbb{P}\left(V\right)$中的射影超平面$\iff$存在$f\in V^{\vee}\setminus\left\{0\right\}$使得$H=\pi\left(\ker\left(f\right)\right)$.
+\end{corollary}
+
+\begin{proposition}{线性泛函导出的方程组的解空间的维数估计}{}
+	设$\left(f_{i}\right)_{i=1}^{k}$是$V^{\vee}$的元素族,$k\leq n+1$.记$L=\pi\left(\bigcap\limits_{i=1}^{n}\ker\left(f_{i}\right)\right)$.
+	\begin{enumerate}
+		\item $L$是$\mathbb{P}\left(V\right)$的射影线性簇.
+		\item $\dim L\geq n-k$,并且$\dim L=n-k$ $\iff$ $\left(f_{i}\right)_{i=1}^{k}$线性无关.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{射影线性簇对交集的封闭性}{}
+	设$\left(L_{i}\right)_{i\in I}$是$\mathbb{P}\left(V\right)$的一族射影线性簇,则$\bigcap\limits_{i\in I}L_{i}$是$\mathbb{P}\left(V\right)$的射影线性簇.
+\end{proposition}
+
+\begin{definition}{生成的射影线性簇}{}
+	设$A\subseteq\mathbb{P}\left(V\right)$.称$\langle A\rangle\coloneq\bigcap\limits_{\substack{A\subseteq L\subseteq\mathbb{P}\left(V\right)\\ L\text{是射影线性簇}}}L$是$A$生成的射影线性簇,称$A$为生成系.
+\end{definition}
+
+\begin{proposition}{生成的射影线性簇的向量子空间表示}{}
+	设$A\subseteq\mathbb{P}\left(V\right)$.若$W$是$\pi^{-1}\left(A\right)$在$V$中生成的向量子空间,则$A$生成的射影线性簇是$\mathbb{P}\left(W\right)$.
+\end{proposition}
+
+\begin{theorem}{射影空间中的Grassmann维数公式}{}
+	设$L,M$是$\mathbb{P}\left(V\right)$的射影线性簇,则$\dim L+\dim M=\dim\left(L\cap M\right)+\dim\langle L\cup M\rangle$.
+\end{theorem}
+
+\begin{corollary}{射影线性簇的必然相交条件}{}
+	设$\mathbb{P}\left(V\right)$是有限维的,$L,M$是$\mathbb{P}\left(V\right)$的射影线性簇.若$\dim L+\dim M\geq\dim\mathbb{P}\left(V\right)$,则$L\cap M=\emptyset$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\left(x_{i}\right)_{i\in I},\left(y_{i}\right)_{i\in I}$是$V$的元素族,$\left(\lambda_{i}\right)_{i\in I}$是$K^{\times}$的元素族且$\forall i\in I\left(x_{i}=\lambda_{i}y_{i}\right)$,则$\left(x_{i}\right)_{i\in I}$线性无关$\iff$ $\left(y_{i}\right)_{i\in I}$线性无关.
+\end{proposition}
+
+\begin{proposition}{射影无关的等价条件}{equivalent-condition-of-projective-independent}
+	设$\left(x_{i}\right)_{i\in I}$是$V\setminus\left\{0\right\}$的元素族,则$\left(x_{i}\right)_{i\in I}$线性无关$\iff$对任一$\kappa\in I$,$\pi\left(\kappa\right)$不属于$\left(\pi\left(x_{i}\right)\right)_{i\in I,i\neq\kappa}$生成的射影线性簇.
+\end{proposition}
+
+\begin{definition}{射影无关,射影相关}{}
+	设$\left(x_{i}\right)_{i\in I}$是$V\setminus\left\{0\right\}$的元素族.
+	\begin{enumerate}
+		\item 若命题(\ref{prop:equivalent-condition-of-projective-independent})中的等价条件之一成立,则称$\left(\pi\left(x_{i}\right)\right)_{i\in I}$射影无关.
+		\item 若$\left(\pi\left(x_{i}\right)\right)_{i\in I}$不是射影无关的,则称$\left(\pi\left(x_{i}\right)\right)_{i\in I}$射影相关.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{射影空间的基和向量空间的基意义对应}{}
+	设$\left(x_{i}\right)_{i\in I}$是$V\setminus\left\{0\right\}$的元素族,则$\left(\pi\left(x_{i}\right)\right)_{i\in I}$射影无关且生成$\mathbb{P}\left(V\right)$ $\iff$ $\left(x_{i}\right)_{i\in I}$是基.
+\end{proposition}
+
+\begin{corollary}{有限维射影基的元素个数}{}
+	若$\dim\mathbb{P}\left(V\right)=n$,则对$\mathbb{P}\left(V\right)$的每个射影无关的生成系$\left(x_{i}\right)_{i\in I}$都有$\left|I\right|=n+1$.
+\end{corollary}
+
+\begin{remark}{坐标确定的非唯一性}{}
+	在射影空间$\mathbb{P}\left(V\right)$中,仅给定$\mathbb{P}\left(V\right)$生成$\mathbb{P}\left(V\right)$且射影无关的元素族$\left(p_{i}\right)_{i\in I}$并不能唯一确定$V$中的一组基,即使在相差一个整体左标量因子的意义下也无法确定.
+\end{remark}

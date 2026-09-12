@@ -1,0 +1,159 @@
+\chapter{标量环的延拓}
+
+\section{模的标量环延拓}
+
+记号约定:
+
+\begin{itemize}
+	\item $A,B,C$是环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right),\sigma\in\Hom_{\mathsf{Ring}}\left(B,C\right)$.
+	\item $E$是左$A$-模.
+\end{itemize}
+
+\begin{definition}{标量延拓}{}
+	称左$B$-模$\rho^{\ast}\left(E\right)\coloneq B_{d}\otimes_{A}E$为$E$在$B$上的标量延拓,称$\phi:E\to\rho_{\ast}\left(\rho^{\ast}\left(E\right)\right),x\mapsto 1\otimes x$是典范映射.
+\end{definition}
+
+\begin{proposition}{}{}
+	典范映射$\phi_{E}$是$A$-线性映射,$\phi\left(E\right)$生成$\rho^{\ast}\left(E\right)$.
+\end{proposition}
+
+\begin{proposition}{标量延拓的泛性质}{}
+	设$F$是左$B$-模,$f\in\Hom_{A}\left(E,\rho^{\ast}\left(F\right)\right)$,则下图交换(其中$\phi_{E}$是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			E && {\rho^{\ast}\left(E\right)} \\
+			& F
+			\arrow["\phi", two heads, from=1-1, to=1-3]
+			\arrow["f"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{}{}
+	存在典范的$\Z$-模同构$\Hom_{B}\left(\rho^{\ast}\left(B_{d}\right),F\right)\simeq\Hom_{A}\left(E,\rho_{\ast}\left(F\right)\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$F$是左$A$-模,$f\in\Hom_{A}\left(E,F\right)$,则存在唯一的$B$-线性映射$u_{B}$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			E & {\rho^{\ast}\left(E\right)} \\
+			F & {\rho^{\ast}\left(F\right)}
+			\arrow["{\phi_{E}}", from=1-1, to=1-2]
+			\arrow["u"', from=1-1, to=2-1]
+			\arrow["{u_{B}}", from=1-2, to=2-2]
+			\arrow["{\phi_{F}}"', from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{definition}{}{}
+	$F$是左$A$-模,$f\in\Hom_{A}\left(E,F\right)$.称$\rho^{\ast}\left(f\right)\coloneq\id_{B}\otimes f$为$f$在$B$上的标量限制.
+\end{definition}
+
+\begin{remark}{}{}
+	当$\mathfrak{a}$是$A$的双边理想,$\rho:E\twoheadrightarrow E/\mathfrak{a}E$是典范投影时,存在唯一的$\bar{f}\in\Isom_{B}\left(\rho^{\ast}\left(E\right),E/\mathfrak{a}E\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			E && {E/\mathfrak{a}E} \\
+			& {\rho^{\ast}\left(E\right)}
+			\arrow["\pi", two heads, from=1-1, to=1-3]
+			\arrow["{\phi_{E}}"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}"', dashed, from=2-2, to=1-3]
+		\end{tikzcd}
+	\end{center}
+	称$\bar{f}$是典范同构.
+\end{remark}
+
+\begin{corollary}{}{}
+	设$F,G$是左$A$-模,$f\in\Hom_{A}\left(E,F\right),g\in\Hom_{A}\left(F,G\right)$,则下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			E & {\rho^{\ast}\left(E\right)} \\
+			F & {\rho^{\ast}\left(F\right)} \\
+			G & {\rho^{\ast}\left(G\right)}
+			\arrow["{\phi_{E}}", from=1-1, to=1-2]
+			\arrow["f", from=1-1, to=2-1]
+			\arrow["{g\circ f}"', curve={height=30pt}, from=1-1, to=3-1]
+			\arrow["{\rho_{\ast}\left(f\right)}"', from=1-2, to=2-2]
+			\arrow["{\rho^{\ast}\left(g\circ f\right)}", curve={height=-30pt}, from=1-2, to=3-2]
+			\arrow["{\phi_{F}}"', from=2-1, to=2-2]
+			\arrow["g", from=2-1, to=3-1]
+			\arrow["{\rho_{\ast}\left(g\right)}"', from=2-2, to=3-2]
+			\arrow["{\phi_{G}}"', from=3-1, to=3-2]
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{proposition}{标量环延拓的传递性}{}
+	存在唯一的$q\in\Isom_{C}\left(\phi_{\rho\left(E\right)},\sigma^{\ast}\left(E\right)\right)$使下图交换(其中,$\tilde{\phi}_{E}$是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			E & {\rho^{\ast}\left(E\right)} \\
+			{\sigma^{\ast}\left(E\right)} & {\sigma^{\ast}\left(\rho^{\ast}\left(E\right)\right)}
+			\arrow["{\phi_{E}}", from=1-1, to=1-2]
+			\arrow["{\tilde{\phi}_{E}}"', from=1-1, to=2-1]
+			\arrow["{\phi_{\rho\left(E\right)}}", from=1-2, to=2-2]
+			\arrow["{\exists!q}", dashed, from=2-2, to=2-1]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$A,B$是交换环,$F$是$A$-模,则存在唯一的$\theta\in\Isom_{B}\left(\rho^{\ast}\left(E\otimes_{A}F\right),\rho^{\ast}\left(E\right)\otimes_{B}\rho^{\ast}\left(F\right)\right)$下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			{E\otimes_{A}F} && \\
+			&& {\rho^{\ast}\left(E\otimes_{A}F\right)} \\
+			{\rho^{\ast}\left(E\right)\otimes_{B}\rho^{\ast}\left(F\right)}
+			\arrow["{\phi_{E\otimes_{A}F}}", from=1-1, to=2-3]
+			\arrow["{\phi_{E}\otimes\phi_{F}}"', from=1-1, to=3-1]
+			\arrow["{\exists!\theta}"', dashed, from=3-1, to=2-3]
+			\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(a_{i}\right)_{i\in I}$是$E$的元素族.
+	\begin{enumerate}
+		\item 若$\left(a_{i}\right)_{i\in I}$是$E$的生成系,则$\left(\phi_{E}\left(a_{i}\right)\right)_{i\in I}$是$\rho^{\ast}\left(E\right)$的生成系.特别地,若$E$是有限生成的,则$\rho^{\ast}\left(E\right)$亦然.
+		\item 若$\left(a_{i}\right)_{i\in I}$是$E$的基,则$\left(\phi_{E}\left(a_{i}\right)\right)_{i\in I}$是$\rho^{\ast}\left(E\right)$的基.进一步,若$\rho$是单射,则$\phi_{E}$亦然.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	若$E$是投射模,则$\rho^{\ast}\left(E\right)$是投射模.进一步,若$\rho$是单射,则$\phi_{E}$亦然.
+\end{corollary}
+
+\begin{remark}{右模的标量延拓}{}
+	当$E$是右$A$-模时,称$\rho^{\ast}\left(B\right)\coloneq E\otimes_{A}B_{s}$为$E$在$B$上的标量延拓.
+	
+	先前关于左$A$-模的结论都可以搬运到右$A$-模上,只需要把左模的记号换成右模的记号.
+\end{remark}
+
+\begin{definition}{余延拓}{}
+	称左$B$-模$\tilde{\rho}\left(E\right)\coloneq\Hom_{A}\left(\rho_{\ast}\left(B_{s}\right),E\right)$是$E$的余延拓,称$\eta_{E}:\tilde{\rho}\left(\rho_{\ast}\left(E\right)\right)\to E,u\mapsto u\left(1\right)$为典范映射.
+\end{definition}
+
+\begin{proposition}{标量限制和余延拓的伴随性}{}
+	设$F$是左$B$-模,则存在典范的$\Z$-模同构$\Hom_{B}\left(F,\Hom_{A}\left(B_{s},E\right)\right)\simeq\Hom_{A}\left(\rho_{\ast}\left(F\right),E\right)$.
+\end{proposition}
+
+\begin{proposition}{余延拓的可传递性}{}
+	存在典范的左$C$-模同构$\Hom_{B}\left(C,\Hom_{A}\left(B_{s},E\right)\right)\simeq\Hom_{A}\left(C_{s},E\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

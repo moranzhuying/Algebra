@@ -1,0 +1,32 @@
+\section{选择模式和并集模式}
+
+\begin{axiom}{选择和并集公理模式}{}
+	设$R$是公式,$x$和$y$是不同的字母,$X$和$Y$是不同于$x,y$且未在$R$中出现的字母,则如下公式是公理:
+	\begin{align*}
+		\left(\forall y\right)\left(\exists X\right)\left(\forall x\right)\left(R\implies\left(x\in X\right)\right)\implies\left(\forall Y\right)\Coll_{X}\left(\left(\exists y\right)\left(y\in Y\right)\wedge R\right).
+	\end{align*}
+\end{axiom}
+
+\begin{metatheorem}{子集存在性}{}
+	设$P$是公式,$A$是集合,$x$是未在$A$中出现的字母,则公式$P\wedge\left(x\in A\right)$关于$x$是集化的.
+\end{metatheorem}
+
+\begin{definition}{子集的分离}{}
+	设$P$是公式,$A$是集合,$x$是未在$A$中出现的字母.把$\left\{x\middle|P\wedge\left(x\in A\right)\right\}$记作$\left\{x\in A\middle|P\right\}$,称为``合$A$中满足性质$P$的所有$x$组成的集合''.
+\end{definition}
+
+\begin{metatheorem}{受限理解原则}{}
+	设$R$是公式,$A$是集合,$x$是未在$A$中出现的字母.若$R\implies\left(x\in A\right)$是定理,则公式$R$关于$x$是集化的. 
+\end{metatheorem}
+
+\begin{corollary}{子集的判定和性质}{}
+	设$R,S$是公式,$A$是集合,$x$是未在$A$中出现的字母.若$R$关于$x$是集化的,且$\left(\forall x\right)\left(S\implies R\right)$是定理,则$S$关于$x$是集化的.
+\end{corollary}
+
+\begin{metatheorem}{替换公理}{replacement-axiom}
+	设$T$是项,$A$是集合,$x$和$y$是两个不同的字母.若$x$未在$A$中出现,$y$未在$A$和$T$中出现,则$\left(\exists x\right)\left(\left(y=T\right)\wedge\left(x\in A\right)\right)$关于$y$是集化的.
+\end{metatheorem}
+
+\begin{definition}{}{}
+	记号和假设同元定理(\ref{metathm:replacement-axiom}).$\left(\exists x\right)\left(\left(y=T\right)\wedge\left(x\in A\right)\right)$读作``对某个属于$A$的$x$,$y$可以表示为$T$的形式'',该公式构造的集合记作记作$\left\{T\left(x\right)\middle|x\in A\right\}$.
+\end{definition}

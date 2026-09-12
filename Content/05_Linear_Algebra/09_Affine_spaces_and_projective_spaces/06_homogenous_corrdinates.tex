@@ -1,0 +1,27 @@
+\section{齐次坐标}
+
+记号约定:$n\in\N$,$K$是除环,$V$是左$K$-向量空间,$\pi:\left(V\setminus\left\{0\right\}\right)\twoheadrightarrow\mathbb{P}\left(V\right)$是典范投影.
+
+\begin{definition}{齐次坐标(一般情形)}{}
+	设$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}$是$V$的基,$p\in\mathbb{P}\left(V\right),x\in V,\pi\left(x\right)=p$.若$K$中的有限支撑族$\left(\xi_{i}\right)_{i\in I}$满足$x=\sum\limits_{i\in I}\xi_{i}e_{i}$,则称$\left(\xi_{i}\right)_{i\in I}$是$p$在$\mathcal{B}$下的齐次坐标.
+\end{definition}
+
+\begin{remark}{$V$有限维时的齐次坐标}{}
+	当$\dim_{K}V=n$时,设$I=\left\{0,\ldots,n\right\}$.若$\left(\xi_{i}\right)_{i=1}^{n}$是$x$的齐次坐标,则记$p=\left[\xi_{0}:\ldots:\xi_{n}\right]_{\mathcal{B}}$.
+\end{remark}
+
+本节接下来的内容中,默认$\dim_{K}V=n+1,\mathcal{B}\coloneq\left(e_{i}\right)_{i=0}^{n},\bar{\mathcal{B}}\coloneq\left(\bar{e}_{i}\right)_{i=0}^{n}$是$V$的基,$p\in\mathbb{P}\left(V\right),x\in V$.
+
+\begin{proposition}{齐次坐标的存在性和等价性}{}
+	\begin{enumerate}
+		\item $\phi_{\mathcal{B}}:\mathbb{P}^{n}\left(K\right)\to\mathbb{P}\left(V\right),\left(\xi_{i}\right)_{i=0}^{n}\mapsto\pi\left(\sum\limits_{i=0}^{n}e_{i}\xi_{i}\right)$是双射.
+		\item 设$p\in\mathbb{P}\left(V\right),\left(\xi_{i}\right)_{i=0}^{n},\left(\xi_{i}^{\prime}\right)_{i=0}^{n}$是$p$在$\mathcal{B}$下的齐次坐标,则$\left(\xi_{i}\right)_{i=0}^{n},\left(\xi_{i}^{\prime}\right)_{i=0}^{n}$相等$\iff$ $\exists\lambda\in K^{\times}\forall 0\leq i\leq n\left(\xi_{i}^{\prime}=\lambda\xi_{i}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{基缩放下的坐标变换}{}
+	设$\left(\gamma_{i}\right)_{i=0}^{n}$是$\left(K^{\times}\right)^{n}$的元素族,$\forall 0\leq i\leq n\left(e_{i}=\gamma_{i}\bar{e}_{i}\right)$.若$x$在$\mathcal{B},\mathcal{B}^{\prime}$下的其次坐标分别是$\left(\xi_{i}\right)_{i=0}^{n},\left(\xi_{i}^{\prime}\right)_{i=0}^{n}$,则
+	\begin{align*}
+		\exists\mu\in K^{\times}\forall 0\leq i\leq n\left(\bar{\xi}_{i}=\mu\xi_{i}\gamma_{i}\right).
+	\end{align*}
+\end{corollary}

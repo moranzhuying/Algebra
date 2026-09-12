@@ -1,0 +1,215 @@
+\chapter{Clifford代数}
+
+记号约定:$A$是交换环,$E$是$A$-模,$Q\in\Quad_{A}\left(E\right),\varphi=\varphi_{Q}$.
+
+\section{Clifford代数的定义与泛性质}
+
+\begin{definition}{Clifford代数}{}
+	设$\mathrm{I}\left(Q\right)$是$\left\{x\otimes x-Q\left(x\right)1_{A}\middle|x\in A\right\}$在$\mathsf{T}\left(E\right)$中生成的双边理想.我们称商代数
+	\begin{align*}
+		\Cl\left(E,Q\right)\coloneq\mathsf{T}\left(E\right)/\mathrm{I}\left(Q\right)
+	\end{align*}
+	是$Q$在$E$上的Clifford代数.
+\end{definition}
+
+\begin{definition}{Clifford代数的典范映射}{}
+	设$\tau:E\to\mathsf{T}\left(E\right)$和$\sigma:\mathsf{T}\left(E\right)\to\Cl\left(E,Q\right)$是典范映射.我们称$\rho_{Q}\coloneq\sigma\circ\tau$是典范映射.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 作为$A$-代数,$\Cl\left(E,Q\right)$由$\im\left(\rho_{Q}\right)$生成.
+		\item 对每个$x,y\in E$,有$\rho\left(x\right)^{2}=Q\left(x\right)\cdot 1,\rho_{Q}\left(x\right)\rho_{Q}\left(y\right)+\rho_{Q}\left(y\right)\rho_{Q}\left(x\right)=\varphi\left(x,y\right)\cdot 1$.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{一维自由$A$-模的Clifford代数}{}
+	设$E$的基集是$\left\{e\right\}$.由于$\mathsf{T}\left(E\right)\simeq A[X]$,Clifford代数$\Cl\left(E,Q\right)$是$A$上的二次代数,$\left(1,u\right)$是它的一个基,其中
+	\begin{align*}
+		u=\rho_{Q}\left(e\right),u^{2}=Q\left(e\right)\cdot 1.
+	\end{align*}
+\end{example}
+
+\begin{proposition}{Clifford代数的$\Z/2\Z$型分次}{graduation-of-clifford-algebra}
+	设$\sigma:\mathsf{T}\left(E\right)\to\Cl\left(E,Q\right)$是典范映射.定义
+	\begin{gather*}
+		\mathsf{T}^{+}\left(E\right)=\bigboxplus\limits_{n\in\N}\mathsf{T}^{2n}\left(E\right),\mathsf{T}^{-}\left(E\right)=\bigboxplus\limits_{n\in\N}\mathsf{T}^{2n+1}\left(E\right),\\
+		\Cl^{+}\left(E,Q\right)=\sigma\left(\mathsf{T}^{+}\left(E\right)\right),\Cl^{-}\left(E,Q\right)=\sigma\left(\mathsf{T}^{-}\left(E\right)\right).
+	\end{gather*}
+	\begin{enumerate}
+		\item $\mathsf{T}\left(E\right)=\mathsf{T}^{+}\left(E\right)\boxplus\mathsf{T}^{-}\left(E\right),\Cl\left(E,Q\right)=\Cl^{+}\left(E,Q\right)\boxplus\Cl^{-}\left(E,Q\right)$.
+		\item 把$\Cl^{+}\left(E,Q\right)$和$\Cl^{-}\left(E,Q\right)$等同为$\Cl\left(E,Q\right)$的子模,则
+		\begin{gather*}
+			\Cl^{+}\left(E,Q\right)\Cl^{+}\left(E,Q\right)\subseteq\Cl^{+}\left(E,Q\right),\Cl^{+}\left(E,Q\right)\Cl^{-}\left(E,Q\right)\subseteq\Cl^{-}\left(E,Q\right)\\
+			\Cl^{-}\left(E,Q\right)\Cl^{+}\left(E,Q\right)\subseteq\Cl^{-}\left(E,Q\right),\Cl^{-}\left(E,Q\right)\Cl^{-}\left(E,Q\right)\subseteq\Cl^{+}\left(E,Q\right)
+		\end{gather*}
+		\item 把$\Cl^{+}\left(E,Q\right)$等同为$\Cl\left(E,Q\right)$的子模,那么$\Cl^{+}\left(E,Q\right)$是$\Cl\left(E,Q\right)$的子代数.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	记$\pi$是典范映射$\N\hookrightarrow\Z\twoheadrightarrow\Z/2\Z$的复合,它在代数$\mathsf{T}\left(E\right)$上诱导了$\Z/2\Z$型分次.进一步,$\Cl\left(E,Q\right)$装备了$\Z/2\Z$型分次.
+\end{remark}
+
+\begin{definition}{偶Clifford代数}{}
+	沿用命题\ref{prop:graduation-of-clifford-algebra}的记号.
+	\begin{enumerate}
+		\item 我们称$\Cl^{+}\left(E,Q\right)$的元素为偶元,称$\Cl^{-}\left(E,Q\right)$的元素为奇元.
+		\item $\Cl^{-}\left(E,Q\right)$称为$Q$的偶Clifford代数.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{Clifford代数的泛性质}{}
+	设$Q\in\Quad_{A}\left(E\right)$,$D$是含幺$A$-代数,$f\in\Hom_{A}\left(E,D\right)$.如果
+	\begin{align*}
+		\forall x\in E\left(f\left(x\right)^{2}=Q\left(x\right)\cdot 1\right),
+	\end{align*}
+	那么存在唯一的$A$-代数同态$\bar{f}:\Cl\left(E,Q\right)\to D$使得下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			E && D \\
+			& {\Cl\left(E,Q\right)}
+			\arrow["f", from=1-1, to=1-3]
+			\arrow["{\rho_{Q}}"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{f}}"', dashed, from=2-2, to=1-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{Clifford代数的主反自同构}{}
+	我们称满足如下条件的$A$-代数同构$\beta:\Cl\left(E,Q\right)\to\Cl\left(E,Q\right)^{\op}$是$\Cl\left(E,Q\right)$的主反自同构.
+	\begin{enumerate}
+		\item 如下图表是交换的.其中,$\beta_{0}$是典范映射$E\to\Cl\left(E,Q\right)\to\Cl\left(E,Q\right)^{\op}$的复合.
+		\begin{center}
+			\begin{tikzcd}
+				E && {\Cl\left(E,Q\right)^{\op}} \\
+				& {\Cl\left(E,Q\right)}
+				\arrow["{\beta_{0}}", from=1-1, to=1-3]
+				\arrow["{\rho_{Q}}"', from=1-1, to=2-2]
+				\arrow["\beta"', from=2-2, to=1-3]
+			\end{tikzcd}
+		\end{center}
+		\item $\beta$是对合.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{Clifford代数诱导的代数同态}{algebra-homomorphism-induced-by-clifford-algebra}
+	设$E^{\prime}$是$A$-模,$Q\in\Quad_{A}\left(E\right),Q^{\prime}\in\Quad_{A^{\prime}}\left(E^{\prime}\right),f\in\Hom_{A}\left(E,E^{\prime}\right)$.若$Q^{\prime}\circ f=Q$,则存在唯一的$A$-代数同态
+	\begin{align*}
+		\tilde{f}:\Cl\left(E,Q\right)\to\Cl\left(E^{\prime},Q^{\prime}\right)
+	\end{align*}
+	使得下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			E && {E^{\prime}} \\
+			{\Cl\left(E,Q\right)} && {\Cl\left(E^{\prime},Q^{\prime}\right)}
+			\arrow["f", from=1-1, to=1-3]
+			\arrow["{\rho_{Q}}"', from=1-1, to=2-1]
+			\arrow["{\rho_{Q^{\prime}}}", from=1-3, to=2-3]
+			\arrow["{\exists!\tilde{f}}"', dashed, from=2-1, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{definition}{}{}
+	沿用命题\ref{prop:algebra-homomorphism-induced-by-clifford-algebra}的设定.我们把$\tilde{f}$记作$\Cl\left(f\right)$.
+\end{definition}
+
+\begin{proposition}{$\Cl\left(-\right)$的函子性}{}
+	设$E^{\prime},E^{\prime\prime}$是$A$-模,$Q\in\Quad_{A}\left(E\right),Q^{\prime}\in\Quad_{A}\left(E^{\prime}\right),Q^{\prime\prime}\in\Quad_{A}\left(E^{\prime\prime}\right)$.
+	\begin{enumerate}
+		\item 如下图表交换.
+		\begin{center}
+			\begin{tikzcd}
+				E && E \\
+				{\Cl\left(E,Q\right)} && {\Cl\left(E,Q\right)}
+				\arrow["f", from=1-1, to=1-3]
+				\arrow["{\rho_{Q}}"', from=1-1, to=2-1]
+				\arrow["{\rho_{Q}}", from=1-3, to=2-3]
+				\arrow["{\Cl\left(\id_{E}\right)}"', dashed, from=2-1, to=2-3]
+			\end{tikzcd}
+		\end{center}
+		\item 设$f\in\Hom_{A}\left(E,E^{\prime}\right),g\in\Hom_{A}\left(E^{\prime},E^{\prime\prime}\right)$.若$Q^{\prime}\circ f=Q,Q^{\prime\prime}\circ g=Q^{\prime}$,则下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				E && {E^{\prime}} && {E^{\prime\prime}} \\
+				{\Cl\left(E,Q\right)} && {\Cl\left(E,Q\right)} && {\Cl\left(E^{\prime\prime},Q^{\prime\prime}\right)}
+				\arrow["f", from=1-1, to=1-3]
+				\arrow["{g\circ f}"', curve={height=-30pt}, from=1-1, to=1-5]
+				\arrow["{\rho_{Q}}"', from=1-1, to=2-1]
+				\arrow["g", from=1-3, to=1-5]
+				\arrow["{\rho_{Q^{\prime}}}", from=1-3, to=2-3]
+				\arrow["{\rho_{Q^{\prime\prime}}}", from=1-5, to=2-5]
+				\arrow["{\Cl\left(f\right)}", from=2-1, to=2-3]
+				\arrow["{\Cl\left(g\circ f\right)}", curve={height=30pt}, from=2-1, to=2-5]
+				\arrow["{\Cl\left(g\right)}", from=2-3, to=2-5]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{}{}
+	设$E^{\prime}$是$E$的子模,$Q\in\Quad_{A}\left(E\right),Q^{\prime}=Q|_{E\times E}$,$f:E^{\prime}\to E$是典范映射.我们称$\Cl\left(f\right)$是典范同态.
+\end{definition}
+
+\begin{definition}{Clifford代数的主自同构}{}
+	设$Q\in\Quad_{A}\left(E\right)$.我们称使得下图交换的$A$-代数同构$\alpha:\Cl\left(E,Q\right)\to\Cl\left(E,Q\right)$是主自同构.
+	\begin{center}
+		\begin{tikzcd}
+			E && E \\
+			{\Cl\left(E,Q\right)} && {\Cl\left(E,Q\right)}
+			\arrow["{-\id_{E}}", from=1-1, to=1-3]
+			\arrow["{\rho_{Q}}"', from=1-1, to=2-1]
+			\arrow["{\rho_{Q}}", from=1-3, to=2-3]
+			\arrow["\alpha"', from=2-1, to=2-3]
+		\end{tikzcd}
+	\end{center}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\alpha$是对合.
+		\item 把$\Cl^{+}\left(E,Q\right)$和$\Cl^{-}\left(E,Q\right)$等同为$\Cl\left(E,Q\right)$的子模.那么,
+		\begin{itemize}
+			\item 对每个$x\in\Cl^{+}\left(E,Q\right)$有$\alpha\left(x\right)=x$,
+			\item 对每个$y\in\Cl^{-}\left(E,Q\right)$有$\alpha\left(y\right)=-y$.
+		\end{itemize}
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{Clifford代数在标量扩张下的泛性质}{}
+	设$A^{\prime}$是交换环,$\phi\in\Hom_{\mathsf{Ring}}\left(A,A^{\prime}\right),Q\in\Quad_{A}\left(E\right),E^{\prime}=\phi^{\ast}\left(E\right),Q^{\prime}=\phi^{\ast}Q$,则存在唯一的$A^{\prime}$-代数同构
+	\begin{align*}
+		j:\phi^{\ast}\left(\Cl\left(E,Q\right)\right)\to\Cl\left(E^{\prime},Q^{\prime}\right)
+	\end{align*}
+	使得$\forall x\in E\left(j\left(1\otimes\rho_{Q}\left(x\right)\right)=\rho_{Q^{\prime}}\left(1\otimes x\right)\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

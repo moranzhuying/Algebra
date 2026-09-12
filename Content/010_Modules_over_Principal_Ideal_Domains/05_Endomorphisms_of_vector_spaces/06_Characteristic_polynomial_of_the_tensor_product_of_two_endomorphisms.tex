@@ -1,0 +1,16 @@
+\section{特征多项式的性质:线性自同态的张量积}
+
+\begin{lemma}{下三角矩阵的张量积}{}
+	设$\left(\boldsymbol{B},\boldsymbol{C}\right)\in\mathfrak{b}_{m}^{-}\left(K\right)\times\mathfrak{b}_{n}^{-}\left(K\right)$,二者的对角元分别是$\left(\beta_{i}\right)_{i=1}^{n}$和$\left(\gamma_{j}\right)_{j=1}^{m}$.把$\left[1,m\right]\times\left[1,n\right]$的字典序积等同于配备了通常全序的$\left[1,mn\right]$,那么$\boldsymbol{B}\otimes\boldsymbol{C}$的对角元是$\left(d_{k}\right)_{k=1}^{mn}$,其中
+	\begin{align*}
+		\forall 1\leq k\leq mn\forall 1\leq i\leq m\forall 1\leq j\leq n\left(k=\left(i-1\right)n+j\implies d_{k}=\beta_{i}\gamma_{j}\right).
+	\end{align*}
+\end{lemma}
+
+\begin{proposition}{线性自同态的张量积的特征多项式}{}
+	设$V,W$是有限维$K$-向量空间,$\mathcal{U}\in\End_{K}\left(W\right)$,$L$是$K$的扩域,在$L$中有
+	\begin{align*}
+		\Char_{\mathcal{T}}=\prod\limits_{i=1}^{m}\left(X-\lambda_{i}\right),\Char_{\mathcal{U}}=\prod\limits_{j=1}^{n}\left(X-\mu_{j}\right),
+	\end{align*}
+	则$\Char_{\mathcal{T}\otimes\mathcal{U}}=\prod\limits_{\substack{1\leq i\leq m\\ 1\leq j\leq n}}\left(X-\lambda_{i}\mu_{j}\right)$.
+\end{proposition}

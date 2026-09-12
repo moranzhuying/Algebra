@@ -1,0 +1,75 @@
+\section{二次型的类型的群}
+
+记号约定:
+\begin{itemize}
+	\item $E$是有限维$A$-向量空间,$\mathcal{Q}$是$E$上所有非退化$A$-二次型组成的集合.
+	\item $\mathcal{W}\left(A\right)$是$E$上所有非退化$A$-二次型的Witt类组成的集合.
+\end{itemize}
+
+
+\begin{lemma}{}{}
+	设$Q\in\Quad_{A}\left(E\right)$非退化,则$Q\boxplus\left(-Q\right)$是双曲二次型.
+\end{lemma}
+
+\begin{proposition}{Witt环的加法群结构}{additional-group-of-witt-ring}
+	定义$\mathcal{W}\left(A\right)$上的加法如下:对每个$Q_{1},Q_{2}\in\mathcal{Q}$有$\mathcal{W}\left(Q_{1}\right)+\mathcal{W}\left(Q_{2}\right)\coloneq\mathcal{W}\left(Q_{1}\boxplus Q_{2}\right)$,则$\mathcal{W}\left(A\right)$按此运算是交换群.
+\end{proposition}
+
+\begin{definition}{Witt环的加法群}{}
+	沿用命题\ref{prop:additional-group-of-witt-ring}的记号.我们称$\mathcal{W}\left(A\right)$构成的加法群是$A$上的Witt群.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 对每个$Q\in\mathcal{Q}$都有$\mathcal{W}\left(Q\right)=0$ $\iff$ $Q\in\mathcal{Q}$且是双曲型的.进一步的,$E$上每一个双曲$A$-二次型都是偶数维的.
+		\item 对每个$Q\in\mathcal{Q}$,记$\delta_{Q}\coloneq\dim E+2\Z\in\Z/2\Z$.那么,
+		\begin{itemize}
+			\item 对每个$Q_{1},Q_{2}\in\mathcal{Q}$有$\delta\left(Q_{1}\boxplus Q_{2}\right)=\delta\left(Q_{1}\right)+\delta\left(Q_{2}\right)$.
+			\item $\pi:\mathcal{W}\left(A\right)\to\Z/2\Z,Q\mapsto\delta\left(Q\right)$是群同态.$\Char\left(A\right)\neq 2$时它是满射,$\Char\left(A\right)=2$时它不是满射.
+		\end{itemize}
+		\item 定义$A^{\ast}$在$\mathcal{W}\left(A\right)$上的左作用为$\left(a,\mathcal{W}\left(Q\right)\right)\mapsto\mathcal{W}\left(aQ\right)$,则
+		\begin{itemize}
+			\item 对每个$a\in A^{\ast},Q_{1},Q_{2}\in\mathcal{Q}$有$a\left(\mathcal{W}\left(Q_{1}\right)+\mathcal{W}\left(Q_{2}\right)\right)=a\mathcal{W}\left(Q_{1}\right)+a\mathcal{W}\left(Q_{2}\right)$.
+			\item 对每个$a,b\in A^{\ast},Q\in\mathcal{Q}$有$\left(ab\right)\mathcal{W}\left(Q\right)=a\left(b\mathcal{W}\left(Q\right)\right)$.
+		\end{itemize}
+	\end{enumerate}
+\end{remark}
+
+从本节开始,当$\Char\left(A\right)\neq 2$时,我们默认$Q_{1}\in\Quad_{A}\left(A\right)$且$Q_{1}\left(1\right)=1$,$T_{1}=\mathcal{W}\left(Q_{1}\right)$.
+
+\begin{proposition}{二次型的Witt类与正交基分解}{}
+	设$\Char\left(A\right)\neq 2$,$Q\in\mathcal{Q}$,$\left(e_{i}\right)_{i=1}^{n}$是$E$的$Q$-正交基(其中$n\geq 1$),则$\mathcal{W}\left(Q\right)=\sum\limits_{i=1}^{n}Q\left(x_{i}\right)T_{1}$.
+\end{proposition}
+
+\begin{corollary}{Witt群的生成系}{}
+	设$\Char\left(A\right)\neq 2$,则$\left\{aT_{1}\middle|a\in A^{\ast}\right\}$是$\mathcal{W}\left(A\right)$的一个生成集.
+\end{corollary}
+
+\begin{remark}{}{}
+	研究$\mathcal{W}\left(A\right)$的结构等价于确定$\left\{aT_{1}\middle|a\in A^{\ast}\right\}$之间的$\Z$-线性关系.给定$a\in A^{\ast}$.
+	\begin{itemize}
+		\item 对每个$b\in A^{\ast}$有$aT_{1}=ab^{2}T_{1}$,所以$aT_{1}$只和$a+\left(A^{\ast}\right)^{2}\in A^{\ast}/\left(A^{\ast}\right)^{2}$有关.
+		\item 根据之前的命题,我们有$\left(-a\right)T_{1}=-\left(aT_{1}\right)$.
+	\end{itemize}
+	一般来说,除了上面列出的两个平凡关系外,还可能有其他更复杂的$\Z$-线性关系.
+\end{remark}
+
+\begin{proposition}{极大有序域上的Witt群}{}
+	设$A$是极大有序域.
+	\begin{enumerate}
+		\item 设$Q\in\mathcal{Q}$.若$Q$的签名是$\left(s,t\right)$,则$\mathcal{W}\left(Q\right)=\left(s-t\right)T_{1}$.
+		\item $\mathcal{W}\left(A\right)$是由$T_{1}$生成的无限循环群.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+

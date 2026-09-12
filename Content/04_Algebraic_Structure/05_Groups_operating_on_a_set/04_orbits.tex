@@ -1,0 +1,161 @@
+\section{轨道}
+
+记号说明:$G,H,K$是群,$E$是集合.
+
+\begin{definition}{$G$-等价}{}
+	设$x,y\in E$.
+	\begin{enumerate}
+		\item 设$E$是左$G$-集.若$\exists\alpha\in G\left(y=\alpha x\right)$,则称$y$和$x$在$G$的作用下(左)共轭(或左$G$-等价),称
+		\begin{align*}
+			\orbit_{l,G}\left(x\right)\coloneq\mathcal{O}_{x}\coloneq\left\{z\in G\middle|\exists\alpha\in G\left(z=\alpha x\right)\right\}
+		\end{align*}
+		为$x$的(左)$G$-轨道.
+		\item 设$E$是右$G$-集.若$\exists\alpha\in G\left(y=x \alpha\right)$,则称$y$和$x$在$G$的作用下(右)共轭(或右$G$-等价).定义
+		\begin{align*}
+			\orbit_{G,r}\left(x\right)\coloneq\mathcal{O}_{x}\coloneq\left\{z\in G\middle|\exists\alpha\in G\left(z=x \alpha\right)\right\}
+		\end{align*}
+		为$x$的(右)$G$-轨道.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{轨道诱导的等价关系}{}
+	设$E$是左$G$-集(相对地,右$G$-集).定义$E$上的关系$\sim$为$\forall x,y\in G\left(x\sim y\iff y\in\mathcal{O}_{x}\right)$.
+	\begin{enumerate}
+		\item $\sim$是等价关系.
+		\item 对$E$的每个子集$A$,它是不变子集$\iff$ $A$是关于$\sim$的饱和子集.
+	\end{enumerate}
+	我们称$\sim$为左$G$-轨道(相对地,右$G$-轨道)诱导的等价关系.
+\end{proposition}
+
+\begin{definition}{轨道映射}{}
+	设$E$是$G$-集.对任一$x\in E$,定义$\rho_{x}:G\to E,\alpha\mapsto\alpha x$为$x$定义的轨道映射.
+\end{definition}
+
+\begin{proposition}{轨道映射的性质}{}
+	设$E$是$G$-集,则对任一$x\in E$,$\rho_{x}$是$G$-等变映射,$\im\left(\rho_{x}\right)=\mathcal{O}_{x}$.
+\end{proposition}
+
+\begin{proposition}{自由作用的等价关系}{}
+	设$E$是$G$-集.下列陈述等价:
+	\begin{enumerate}
+		\item 对任一$x\in E$,$\rho_{x}$是单射.
+		\item $G\times E\to E\times E,\left(g,x\right)\mapsto\left(gx,x\right)$是单射.
+	\end{enumerate}
+	这两个陈述有一个成立时,称$G$在$E$上的作用是自由的.
+\end{proposition}
+
+\begin{proposition}{稳定子是共轭子群}{}
+	设$E$是$G$-集.若$x,y\in E,g\in G$且$y=gx$,$\Stab\left(y\right)=g\Stab\left(x\right)g^{-1}$.
+\end{proposition}
+
+\begin{definition}{轨道空间}{}
+	\begin{enumerate}
+		\item 设$E$是左$G$-集,$\sim$是$E$上的左$G$-轨道诱导的等价关系.称$G\backslash E\coloneq E/\sim$为(左)轨道空间.
+		\item 设$E$是右$G$-集,$\sim$是$E$上的右$G$-轨道诱导的等价关系.称$E/G\coloneq E/\sim$为(右)轨道空间.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{正规子群在商集上的右作用}{}
+	设$E$是右$G$-集,$H$是$G$的正规子群,则$G$在$E/H$上有典范的平凡右作用
+	\begin{align*}
+		\left(xH,g\right)\mapsto\left(xg\right)H.
+	\end{align*}
+	因此该作用诱导出$G/H$在$E/H$上的右作用$\left(xH,yH\right)\mapsto\left(xy\right)H$.
+\end{proposition}
+
+\begin{theorem}{嵌套轨道空间的典范同构}{}
+	设$H$是$G$的正规子群,$\phi:E/H\to E/G$是典范映射,则$\phi$诱导出如下的典范群同构
+	\begin{align*}
+		\left(E/H\right)/\left(G/H\right)\simeq E/G\simeq\left(E/H\right)/G.
+	\end{align*}
+\end{theorem}
+
+\begin{definition}{$\left(G,H\right)$-双集}{}
+	设$E$是左$G$-集,也是右$H$-集.若
+	\begin{align*}
+		\forall g\in G\forall h\in H\forall x\in E\left(\left(gx\right)h=g\left(xh\right)\right),
+	\end{align*}
+	则称这两个作用相容,称$E$是$\left(G,H\right)$-双集.
+\end{definition}
+
+\begin{proposition}{$\left(G,H\right)$-双集$\leftrightsquigarrow$ 左$G\times H^{\op}$-集}{}
+	$E$是$\left(G,H\right)$-双集$\iff$ $\left(\left(g,x\right),h\right)\mapsto gxh$是$G\times H^{\op}$在$E$上的左作用.
+\end{proposition}
+
+\begin{proposition}{双重轨道}{}
+	设$\left(\left(g,x\right),h\right)\mapsto gxh$是$G\times H^{\op}$在$E$上的左作用.对任一$x\in G$,记$\orbit_{l,G-H,r}\left(x\right)$是$x$在该左作用下的轨道,则
+	\begin{align*}
+		\orbit_{l,G-H,r}\left(x\right)=GxH.
+	\end{align*}
+	记$G$中所有元素在该左作用下的轨道组成的集合是$G\backslash E/H$.
+\end{proposition}
+
+\begin{proposition}{商空间的相容性}{}
+	如下图表是交换的,其中的映射都是典范投射.此外,我们有典范同构$G\backslash\left(E/H\right)\simeq\left(G\backslash E\right)/H\simeq G\backslash E/H$.
+	\begin{center}
+		\begin{tikzcd}
+			& E \arrow[ld, "\pi_{1}"', two heads] \arrow[rd, "p_{1}", two heads] \arrow[dd, "q", two heads] &                                              \\
+			G\backslash E \arrow[rd, "\pi_{2}"', two heads] &                                                                                               & E\backslash H \arrow[ld, "p_{2}", two heads] \\
+			& G\backslash E/H                                                                               &                                             
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{左右陪集和左右平移作用}{}
+	设$H$是$G$的子群.
+	\begin{enumerate}
+		\item $H$在$G/H$上的右平移作用的轨道空间是$G/H$,并且$G/H=\left\{xH\subseteq G\middle|x\in G\right\}$,$G$在$G/H$上有自然的左平移作用
+		\begin{align*}
+			\left(g,xH\right)\mapsto gxH.
+		\end{align*}
+		\item $H$在$H\backslash G$上的右平移作用的轨道空间是$H\backslash G$,并且$H\backslash G=\left\{xH\subseteq G\middle|x\in G\right\}$,$G$在$G/H$上有自然的右平移作用
+		\begin{align*}
+			\left(Hx,g\right)\mapsto Hxg.
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{嵌套子集和陪集的典范满射}{}
+	设$H,K$是$G$的子群,$H\subseteq K\subseteq G$.
+	\begin{enumerate}
+		\item 若$\Gamma\in G/H$,则$\Gamma K$是关于$K$的左陪集.进一步,$G/H\to G/K,W\mapsto WK$是典范满射.
+		\item 若$\Gamma\in H\backslash G$,则$K\Gamma$是关于$K$的右陪集.进一步,$H\backslash G\to K\backslash G,W\mapsto KW$是典范满射是典范满射.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{双陪集空间}{}
+	设$H,K$是$G$的子集,$G$是$\left(H,K\right)$-双集.称$H\backslash G/K$为双陪集空间,其元素称为$G$关于$H$和$K$的双陪集.当$K=H$时,称其元素为关于$H$的双陪集.
+\end{definition}
+
+\begin{proposition}{双陪集和正规子群}{}
+	典范映射$G/H\to H\backslash G/K,xH\mapsto HxH$是双射$\iff$ $H$是$G$的正规子群.两条件之一成立时,对诸$x\in G$有$xH=HxH$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

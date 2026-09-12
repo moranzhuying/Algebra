@@ -1,0 +1,63 @@
+\section{合取}
+
+\begin{definition}{合取}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$中的表达式.定义$\boldsymbol{A}$和$\boldsymbol{B}$的合取式$\boldsymbol{A}\wedge\boldsymbol{B}$(读作``$\boldsymbol{A}$且$\boldsymbol{B}$'')为$\neg\left(\neg\boldsymbol{A}\vee\neg\boldsymbol{B}\right)$的缩写.
+\end{definition}
+
+\begin{metatheorem}{代入对合取的分配律}{}
+	设$\boldsymbol{A},\boldsymbol{B},\boldsymbol{T}$是表达式,$\boldsymbol{x}$是一个字母,则表达式$\left(\boldsymbol{T}|\boldsymbol{x}\right)\left(\boldsymbol{A}\wedge\boldsymbol{B}\right)$和$\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{A}\wedge\left(\boldsymbol{T}|\boldsymbol{x}\right)\boldsymbol{B}$相同.
+\end{metatheorem}
+
+\begin{metatheorem}{合取的封闭性}{}
+	若$\boldsymbol{A}$和$\boldsymbol{B}$是理论$\mathcal{T}$中的公式,则$\boldsymbol{A}\wedge\boldsymbol{B}$是$\mathcal{T}$中的一个公式.
+\end{metatheorem}
+
+\begin{metatheorem}{合取引入律}{}
+	若$\boldsymbol{A}$和$\boldsymbol{B}$均是理论$\mathcal{T}$中的定理,则$\boldsymbol{A}\wedge\boldsymbol{B}$是$\mathcal{T}$中的定理.
+\end{metatheorem}
+
+\begin{metatheorem}{合取消去律}{}
+	设$\boldsymbol{A}$和$\boldsymbol{B}$均是理论$\mathcal{T}$中的定理,则$\left(\boldsymbol{A}\wedge\boldsymbol{B}\right)\implies\boldsymbol{A}$和$\left(\boldsymbol{A}\wedge\boldsymbol{B}\right)\implies\boldsymbol{B}$均是$\mathcal{T}$中的定理.
+\end{metatheorem}
+
+\begin{definition}{多重合取和多重析取的定义}{}
+	\begin{enumerate}
+		\item 对理论$\mathcal{T}$中的公式$\boldsymbol{A},\boldsymbol{B},\boldsymbol{C}$,分别定义它们的合取$\boldsymbol{A}\wedge\boldsymbol{B}\wedge\boldsymbol{C}$和析取$\boldsymbol{A}\vee\boldsymbol{B}\vee\boldsymbol{C}$为$\boldsymbol{A}\left(\boldsymbol{B}\wedge\boldsymbol{C}\right)$和$\boldsymbol{A}\vee\left(\boldsymbol{B}\vee\boldsymbol{C}\right)$.
+		\item 对理论$\mathcal{T}$中的$n$个公式$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$,分别定义他们的合取$\boldsymbol{A}_{1}\wedge\ldots\wedge\boldsymbol{A}_{n}$和析取$\boldsymbol{A}_{1}\vee\ldots\vee\boldsymbol{A}_{n}$为
+		\begin{align*}
+			\boldsymbol{A}_{1}\wedge\left(\boldsymbol{A}_{2}\wedge\ldots\wedge\boldsymbol{A}_{n}\right)\text{和}\boldsymbol{A}_{1}\vee\left(\boldsymbol{A}_{2}\vee\ldots\vee\boldsymbol{A}_{n}\right).
+		\end{align*}
+	\end{enumerate}
+\end{definition}
+
+\begin{metatheorem}{多重合取定理}{}
+	对理论$\mathcal{T}$中的$n$个公式$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$,下列陈述完全相同:
+	\begin{enumerate}
+		\item $\boldsymbol{A}_{1}\wedge\left(\boldsymbol{A}_{2}\wedge\ldots\wedge\boldsymbol{A}_{n}\right)$是$\mathcal{T}$的定理.
+		\item $\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$中的每个公式都是$\mathcal{T}$的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{公理系统简化定理}{}
+	每个逻辑理论$\mathcal{T}$都等价于一个至多只有一个显式公理的逻辑理论$\mathcal{T}^{\prime}$.进一步:
+	\begin{enumerate}
+		\item 若$\mathcal{T}$没有显式公理,则$\mathcal{T}$和$\mathcal{T}^{\prime}$相同.
+		\item 若$\mathcal{T}$有显式公理$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$,则$\mathcal{T}^{\prime}$的显式公理为$\boldsymbol{A}_{1}\wedge\left(\boldsymbol{A}_{2}\wedge\ldots\wedge\boldsymbol{A}_{n}\right)$.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{向无公理纯逻辑理论的归约定理}{}
+	设$\mathcal{T}_{0}$是没有任何显式公理的逻辑理论.对任何包含显式公理$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$的逻辑理论$\mathcal{T}$,下列说法相同:
+	\begin{enumerate}
+		\item $\mathcal{T}$的公式$\boldsymbol{A}$是$\mathcal{T}$的定理.
+		\item $\boldsymbol{A}_{1}\wedge\left(\boldsymbol{A}_{2}\wedge\ldots\wedge\boldsymbol{A}_{n}\right)\implies\boldsymbol{A}$是$\mathcal{T}_{0}$的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{一致性判别准则}{}
+	设$\mathcal{T}_{0}$是没有任何显式公理的逻辑理论.对任何包含显式公理$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$的逻辑理论$\mathcal{T}$,下列说法相同:
+	\begin{enumerate}
+		\item $\mathcal{T}$是不一致的.
+		\item $\neg\left(\boldsymbol{A}_{1}\wedge\boldsymbol{A}_{2}\wedge\ldots\wedge\boldsymbol{A}_{n}\right)$是$\mathcal{T}_{0}$中的定理.
+	\end{enumerate}
+\end{metatheorem}

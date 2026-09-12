@@ -1,0 +1,52 @@
+\section{对称张量的乘积}
+
+\begin{definition}{}{}
+	\begin{enumerate}
+		\item 设$p,q\in\N$.定义$\mathfrak{S}_{p|q}=\left\{\sigma\in\mathfrak{S}_{p+q}\middle|\sigma\left(\left[1,p\right]\right)\subseteq\left[1,p\right],\sigma\left(\left[p+1,p+q\right]\right)\subseteq\left[p+1,p+q\right]\right\}$.
+		\item 设$p_{1},\ldots,p_{n}>0$,对每个$1\leq i\leq n$,记$I_{n}=\left[1+\sum\limits_{i=1}^{n-1}p_{i},\sum\limits_{i=1}^{n}p_{i}\right]$.记$\mathfrak{S}_{p_{1}|\ldots|p_{n}}=\left\{\sigma\in\mathfrak{S}_{n}\middle|\forall 1\leq i\leq n\left(\sigma\left(I_{n}\right)\subseteq I_{n}\right)\right\}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\mathfrak{S}_{p}\times\mathfrak{S}_{q}\to\mathfrak{S}_{p+q},\left(\sigma_{1},\sigma_{2}\right)\to\sigma_{1}\times\sigma_{2}$和$\prod\limits_{i=1}^{n}\mathfrak{S}_{p_{i}}\to\mathfrak{S}_{p_{1}|\ldots|p_{n}},\left(\sigma_{i}\right)_{i=1}^{n}\mapsto\prod\limits_{i=1}^{n}\sigma_{i}$是典范的群同构.
+		\item 若$\left(z,z^{\prime}\right)\in\mathsf{TS}^{p}\left(M\right)\times\mathsf{TS}^{q}\left(M\right)$,则$z\otimes z^{\prime}\in\mathsf{T}^{p+q}\left(M\right)$在$\mathfrak{S}_{p|q}$的典范作用下不变.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{}{}
+	定义$\mathsf{TS}\left(M\right)$上的乘法如下:对每个$p,q\in\N,z\in\mathsf{TS}^{p}\left(M\right),z^{\prime}\in\mathsf{TS}^{q}\left(M\right)$有$zz^{\prime}=\Tr_{\mathfrak{S}_{p+q}/\mathfrak{S}_{p|q}}\left(z\otimes z^{\prime}\right)$.
+\end{definition}
+
+\begin{definition}{对称积}{}
+	设$y,y^{\prime}\in\mathsf{TS}\left(M\right)$.我们称$yy^{\prime}$是$y$和$y^{\prime}$的对称积.
+\end{definition}
+
+\begin{remark}{}{}
+	由于$\Shuffle_{p,q}\times\mathfrak{S}_{p|q}\to\mathfrak{S}_{p+q},\left(\sigma,\tau\right)\mapsto\sigma\circ\tau$是双射,因此对每个$z,z^{\prime}\in\mathsf{TS}\left(M\right)$有$zz^{\prime}=\sum\limits_{\sigma\in\Shuffle_{p,q}}\sigma\left(z\otimes z^{\prime}\right)$.
+\end{remark}
+
+\begin{proposition}{对称张量代数}{}
+	\begin{enumerate}
+		\item $\mathsf{TS}\left(M\right)$是分次$A$-含幺交换结合代数,其单位元就是$\mathsf{TS}\left(M\right)$的单位元.
+		\item 设$p_{1},\ldots,p_{n}>0$,对每个$1\leq i\leq n$有$z_{i}\in\mathsf{TS}^{p_{i}}\left(M\right)$,则$z_{1}\ldots z_{n}=\Tr_{\mathfrak{S}_{p_{1}+\ldots+p_{n}}/\mathfrak{S}_{p_{1}|\ldots|p_{n}}}\left(z_{1}\otimes\ldots\otimes z_{n}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 特别地,如果$x_{1},\ldots,x_{n}\in M$,则$x_{1}\ldots x_{n}$在$\mathsf{TS}\left(M\right)$中的对称积是$x_{1}\otimes\ldots\otimes x_{n}$的对称化.
+		\item 典范单射$\mathsf{TS}\left(M\right)\to\mathsf{T}\left(M\right)$通常不是$A$-代数同态,因为$\mathsf{TS}\left(M\right)$通常不是$\mathsf{TS}\left(M\right)$的子代数.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+

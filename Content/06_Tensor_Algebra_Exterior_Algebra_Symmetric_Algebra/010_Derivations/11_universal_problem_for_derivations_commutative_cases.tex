@@ -1,0 +1,74 @@
+\section{导子的泛性质:交换情形}
+
+记号约定:
+\begin{itemize}
+	\item $A$是交换$K$-代数,$E$是$A$-模,把$E$视为典范的$\left(A,A\right)$-双模,其中左作用和右作用与原$A$-模结构相同.
+	\item $A\otimes_{K}A$作为$\left(A,A\right)$-双模与它作为交换环的$A\otimes_{K}A$-模结构一致.
+	\item $m:A\otimes_{K}A\to A$是定义了$A$上的乘法的映射,$\mathfrak{J}=\ker\left(m\right)$.
+	\item 考虑典范的$K$-模同构连$\Hom_{\left(A,A\right)}\left(\mathfrak{J},E\right)\to\Hom_{A\otimes_{K}A}\left(\mathfrak{J},E\right)\to\Hom_{A}\left(\mathfrak{J}/\mathfrak{J}^{2},E\right)$.
+\end{itemize}
+
+\begin{proposition}{交换代数导子的泛性质}{}
+	定义$K$-线性映射$d_{A/K}:A\to\mathfrak{J}/\mathfrak{J}^{2},x\mapsto\left(x\otimes 1_{A}-1_{A}\otimes x\right)+\mathfrak{J}^{2}$.
+	\begin{enumerate}
+		\item $d_{A/K}$是$K$-导子.
+		\item 对每个$A$-模$E$和$K$-导子$D:A\to E$,存在唯一的$A$-线性映射$g:\mathfrak{J}/\mathfrak{J}^{2}\to E$使下图交换.
+		\begin{center}
+			\begin{tikzcd}
+				A && E \\
+				& {\mathfrak{J}/\mathfrak{J}^{2}}
+				\arrow["D", from=1-1, to=1-3]
+				\arrow["{d_{A/K}}"', from=1-1, to=2-2]
+				\arrow["{\exists!g}"', dashed, from=2-2, to=1-3]
+			\end{tikzcd}
+		\end{center}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{K-微分模}{}
+	\begin{enumerate}
+		\item 我们称$A$-模$\Omega_{A/K}^{1}\coloneq\Omega_{K}\left(A\right)\coloneq\mathfrak{J}/\mathfrak{J}^{2}$是$A$上的$K$-微分模.
+		\item 我们称$d_{A/K}:A\to\mathfrak{J}/\mathfrak{J}^{2},x\mapsto\left(x\otimes 1_{A}-1_{A}\otimes x\right)+\mathfrak{J}^{2}$是外微分算子.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 对每个$x\in A$,称$\mathrm{d}x\coloneq d_{A/K}\left(x\right)$为$x$的微分.
+		\item $\left(\mathrm{d}x\right)_{x\in A}$是$A$-模$\Omega_{K}\left(A\right)$的生成系.
+		\item 根据导子的泛性质,我们有典范$A$-模同构$\phi_{A}:\Hom_{A}\left(\Omega_{K}\left(A\right),E\right)\to\Der_{K}\left(A,E\right),g\mapsto g\circ d_{A/K}$.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{对称代数上的$K$-微分模结构}{}
+	设$M$是$K$-模,则存在唯一的$\mathsf{S}\left(M\right)$-模同构$\omega:M\otimes_{K}\mathsf{S}\left(M\right)\to\Omega_{K}\left(\mathsf{S}\left(M\right)\right)$满足
+	\begin{align*}
+		\forall x\in M\left(\omega\left(x\otimes 1_{A}\right)=\mathrm{d}x\right).
+	\end{align*}
+	进一步,若$M$的基是$\left(e_{i}\right)_{i\in I}$,则$\Omega_{K}\left(\mathsf{S}\left(M\right)\right)$的基是$\left(\mathrm{d}e_{i}\right)_{i\in I}$.特别地,取$I=\left[1,n\right]$,考虑$\mathsf{S}\left(M\right)\simeq K\left[X_{1},\ldots,X_{n}\right]$,则
+	\begin{itemize}
+		\item 对每个$P\in K\left[X_{1},\ldots,X_{n}\right]$,在$K\left[X_{1},\ldots,X_{n}\right]$中存在唯一的序列$\left(\mathrm{D}_{i}P\right)_{i=1}^{n}$使得$\mathrm{d}P=\sum\limits_{i=1}^{n}\mathrm{D}_{i}P\cdot\mathrm{d}X_{i}$.
+		\item 对每个$1\leq i\leq n$,映射$K\left[X_{1},\ldots,X_{n}\right]\to K\left[X_{1},\ldots,X_{n}\right],P\mapsto\mathrm{D}_{i}P$是相应于$\left(\mathrm{d}X_{i}\right)_{i=1}^{n}$的$K$-微分.
+	\end{itemize}
+	固定$P\in K\left[X_{1},\ldots,X_{n}\right]$和$1\leq i\leq n$.我们称$\frac{\partial P}{\partial X_{i}}\coloneq\mathrm{D}_{i}P$是$P$关于不定元$X_{i}$的偏导数.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

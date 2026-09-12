@@ -1,0 +1,102 @@
+\section{线性映射的转置}
+
+记号约定:$A,B$是环,$E,F,G$是左$A$-模,$\langle -,-\rangle_{E}$和$\langle -,-\rangle_{F}$分别是$E$和$F$的典范配对,$\rho\in\Isom_{\mathsf{Ring}}\left(A,B\right)$.
+
+\begin{definition}{线性映射的转置}{}
+	设$f\in\Hom_{A}\left(E,F\right)$.称$f^{\top}\coloneq\Hom_{A}\left(\id_{E},f\right)$是$f$的转置(或对偶).
+\end{definition}
+
+\begin{remark}{典范配对和对偶}{}
+	当$E,F$都是左$A$-模时,$f^{\top}$满足如下条件:对任一$u\in F^{\vee},x\in M$,有
+	\begin{align*}
+		\langle u\left(x\right),f\rangle_{F}=\langle x,f^{\top}\left(u\right)\rangle_{E}.
+	\end{align*}
+	当$E,F$都是右$A$-模时,$f^{\top}$满足如下条件:对任一$u\in F^{\vee},x\in M$,有
+	\begin{align*}
+		\langle f,u\left(x\right)\rangle_{F}=\langle f^{\top}\left(u\right),x\rangle_{E}.
+	\end{align*}
+\end{remark}
+
+\begin{proposition}{取对偶是反变函子}{}
+	\begin{enumerate}
+		\item 设$f_{1},f_{2}\in\Hom_{A}\left(E,F\right)$,则$\left(f_{1}+f_{2}\right)^{\top}=f_{1}^{\top}+f_{2}^{\top}$.
+		\item 设$f\in\Hom_{A}\left(E,F\right),g\in\Hom_{A}\left(F,G\right)$,则$\left(g\circ f\right)^{\top}=f^{\top}\circ g^{\top}$.
+		\item $\id_{E}^{\top}=\id_{E^{\vee}}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{单边可逆性}{}
+	设$u\in\Hom_{A}\left(E,F\right)$.若$u$左(相对的,右)可逆,则$u^{\top}$右(相对的,左)可逆.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{A}\left(E,F\right),M\subseteq E$,则$\left(f\left(M\right)\right)^{\circ}=\left(f^{\top}\right)^{-1}\left(M^{\circ}\right)$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$f\in\Hom_{A}\left(E,F\right)$,则$\ker\left(f^{\top}\right)=\left(\im\left(f\right)\right)^{\circ}$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$f\in\Isom_{A}\left(E,F\right)$,则$f^{\top}\in\Isom_{A}\left(F^{\vee},E^{\vee}\right)$,并且$\left(f^{\top}\right)^{-1}=\left(f^{-1}\right)^{\top}$.
+\end{proposition}
+
+\begin{definition}{反步同构}{}
+	设$f\in\Isom_{A}\left(E,F\right)$.称$\check{f}\coloneq\left(f^{\top}\right)^{-1}$为$f$的反步同构.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$f\in\Isom_{A}\left(E,F\right)$,则对任一$x\in E,u\in E^{\vee}$有$\langle f\left(x\right),\check{f}\left(u\right)\rangle=\langle x,u\rangle$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\Isom_{A}\left(E,F\right),g\in\Isom_{A}\left(F,G\right)$,则$\check{g\circ f}=\check{g}\circ\check{f}$
+\end{proposition}
+
+\begin{proposition}{}{}
+	$\GL\left(E\right)\to\GL\left(E^{\vee}\right),u\mapsto\check{u}$是同构.
+\end{proposition}
+
+\begin{definition}{半线性映射的转置}{}
+	设$f\in\Hom_{A}\left(E,\rho_{\ast}\left(F\right)\right)$.我们称$f^{\top}\coloneq\rho^{-1}\circ\Hom_{A}\left(\id_{E},f\right)$是$f$的转置.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{A}\left(E,\rho_{\ast}\left(F\right)\right)$,则$f$是关于$\sigma^{-1}$的半线性映射.
+\end{proposition}
+
+\begin{remark}{}{}
+	关于线性映射的对偶的结论可以完全迁移到半线性映射的对偶上,只需要做下列替换:
+	\begin{itemize}
+		\item $A$-模$E,F\mapsto A$-模$E$,$B$-模$F$,环同构$\sigma:A\to B$.
+		\item 典范配对下的等式$\langle u\left(x\right),f\rangle_{F}=\langle x,f^{\top}\left(u\right)\rangle_{E}\mapsto \langle u\left(x\right),f\rangle_{F}=\sigma\left(\langle x,f^{\top}\left(u\right)\rangle_{E}\right)$.
+		\item 同态集$\Hom_{A}\left(E,F\right)\mapsto\Hom_{A}\left(\rho_{\ast}\left(E\right),F\right)$.
+		\item $f\in\Hom_{A}\left(E,F\right)$的对偶$u^{\top}$是线性映射$\mapsto f\in\Hom_{A}\left(\rho_{\ast}\left(E\right),F\right)$的对偶是$\rho^{-1}$-半线性映射.
+	\end{itemize}
+	注意,对$f\in\Hom_{A}\left(\rho_{\ast}\left(E\right),F\right)$,记$\phi:\rho_{\ast}\left(F\right)\to F,x\mapsto x,\bar{f}:E\to\rho_{\ast}\left(F\right),x\mapsto f\left(x\right)$,则$f=\phi\circ\bar{f}$.由于$f^{\top}=\bar{f}^{\top}\circ\phi^{\top}$,因此我们可以直接把关于$\bar{f}^{\top}$的性质应用到$f^{\top}$上.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+\section{原群的正向系统}
+
+接下来的两节里,我们默认$I$是上定向集.
+
+\begin{definition}{原群的正系统}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的正系统.若
+	\begin{enumerate}
+		\item $\left(E_{\alpha}\right)_{\alpha\in I}$是一族原群,
+		\item $\forall\beta,\alpha\in I\left(\alpha\leq\beta\implies f_{\beta\alpha}\in\Hom_{\mathsf{Mag}}\left(E_{\alpha},E_{\beta}\right)\right)$,
+	\end{enumerate}
+	则称$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是原群的正系统.
+\end{definition}
+
+\begin{proposition}{原群的正向极限具备唯一的原群结构}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是原群的正系统.
+	\begin{enumerate}
+		\item $\varinjlim E_{\alpha}$上可以定义唯一的运算,使自身是原群,并且$\left(f_{\alpha}\right)_{\alpha\in I}$是一族原群同态.
+		\item 如果$\left(E_{\alpha}\right)_{\alpha\in I}$是一族结合原群(相对的,交换原群),则$\varinjlim E_{\alpha}$是结合原群(相对的,交换原群).
+		\item 如果$\left(E_{\alpha}\right)_{\alpha\in I}$是一族幺原群,$\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies f_{\beta\alpha}\text{是幺原群同态}\right)$,则$\varinjlim E_{\alpha}$是幺原群,$\left(f_{\alpha}\right)_{\alpha\in I}$是一族幺原群同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{原群的正向极限的泛性质}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是原群的正系统,$F$是原群,对每个$\alpha\in I$有$u_{\alpha}\in\Hom_{\mathsf{Mag}}\left(E_{\alpha},F\right)$,并且
+	\begin{align*}
+		\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies u_{\alpha}=u_{\beta}\circ f_{\beta\alpha}\right).
+	\end{align*}
+	\begin{enumerate}
+		\item $\exists!\alpha\in\Hom_{\mathsf{Mag}}\left(E,F\right)\forall\alpha\in I\left(u_{\alpha}=u\circ f_{\alpha}\right)$.
+		\item 若$\left(E_{\alpha}\right)_{\alpha\in I}$是幺原群族,$F$是幺原群,$\left(u_{\alpha}\right)_{\alpha\in I}$是幺原群同态,$\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies f_{\beta\alpha}\text{是幺原群同态}\right)$,则$u$是幺原群同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	类似的可以定义幺半群(相对的,群,环)的正系统,正向极限,并且验证泛性质.幺半群(相对的,群,环)的正系统的正向极限也是幺半群(相对的,群,环).对于相关命题的陈述,只需要把原群换为相应的代数结构即可,在此按下不表.
+\end{remark}
+
+\begin{proposition}{环的正向极限保持的性质}{}
+	设$\left(\left(A_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是环的正系统.
+	\begin{enumerate}
+		\item 若$\left(A_{\alpha}\right)_{\alpha\in I}$是一族非零环,则$\varinjlim A_{\alpha}$是非零环.
+		\item 若$\left(A_{\alpha}\right)_{\alpha\in I}$是一族整环,则$\varinjlim A_{\alpha}$是整环.
+		\item 若$\left(A_{\alpha}\right)_{\alpha\in I}$是一族除环,则$\varinjlim A_{\alpha}$是除环.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{正向系统之间的同态}{}
+	设$\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\beta,\alpha\in I}\right),\left(\left(F_{\alpha}\right)_{\alpha\in I},\left(g_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是原群正系统,$\left(u_{\alpha}\right)_{\alpha\in I}$是前者到后者的同态,则$\varinjlim u_{\alpha}$是原群同态.	
+\end{proposition}
+
+\begin{remark}{}{}
+	对于幺半群,群,环我们有同样的论断,只需要把原群换成幺半群(群,环),原群同态换成幺半群(群,环)同态.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

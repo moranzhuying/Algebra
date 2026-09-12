@@ -1,0 +1,161 @@
+\section{乘积,纤维积}
+
+记号约定:
+\begin{itemize}
+	\item $\Omega$是集合,$\left(G_{i}\right)_{i\in I},\left(H_{i}\right)_{i\in I}$是两族$\Omega$-群,对每个$i\in I$,$H_{i}$是$G_{i}$的子群.
+	\item $\Omega$在每个$G_{i}$和$H_{i}$上的作用都采用指数记号,本节提到的所有$\Omega$-群的合成律都用记号符号.
+\end{itemize}
+
+\begin{definition}{$\Omega$-群的乘积}{}
+	记$G=\prod\limits_{i\in I}G_{i}$,则$G$作为原群乘积在配备$\Omega$的乘积作用后成为$\Omega$-群,称之为$\left(G_{i}\right)_{i\in I}$的乘积$\Omega$-群.对每个$i\in I$,$\pr_{i}$是$\Omega$-群同态,称为投影同态.
+\end{definition}
+
+\begin{proposition}{$\Omega$-群乘积的泛性质}{}
+	记$G=\prod\limits_{i\in I}G_{i}$,设$H$是$\Omega$-群,对诸$i\in I$,$\phi_{i}:H\to G_{i}$为$\Omega$-群同态,则
+	\begin{align*}
+		\phi:H\to G,h\mapsto\left(\phi_{i}\left(h\right)\right)_{i\in I}
+	\end{align*}
+	是使如下图表对每个$i\in I$都交换的唯一一个$\Omega$-群同态.
+	\begin{center}
+		\begin{tikzcd}
+			H \arrow[rr, "\exists!\phi", dashed] \arrow[rd, "\phi_{i}"'] &       & G \arrow[ld, "\pr_{i}", two heads] \\
+			& G_{i} &                                   
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{example}{映射群}{}
+	设$E$是集合.\textbf{逐点地定义}$\Hom_{\mathsf{Set}}\left(E,G\right)$上的乘法和$\Omega$在$\Hom_{\mathsf{Set}}\left(E,G\right)$上的作用:
+	\begin{align*}
+		\left(fg\right)\left(x\right)\coloneq f\left(x\right)g\left(x\right),f^{\alpha}\left(x\right)\coloneq\left(f\left(x\right)\right)\left(f,g\in\Hom_{\mathsf{Set}}\left(E,G\right),x\in E,\alpha\in G\right),
+	\end{align*}
+	那么$\Hom_{\mathsf{Set}}\left(E,G\right)$是$\Omega$-群.这是乘积$\Omega$-群$\prod\limits_{x\in E}G$的特例.
+\end{example}
+
+\begin{proposition}{乘积同态的核与像}{}
+	设$G=\prod\limits_{i\in I}G_{i},H=\prod\limits_{i\in I}H_{i}$,对诸$i\in I$,$\phi_{i}:H_{i}\to G_{i}$是$\Omega$-群同态,$\phi:H\to G,\left(h_{i}\right)_{i\in I}\mapsto\left(\phi_{i}\left(h_{i}\right)\right)_{i\in I}$.则
+	\begin{enumerate}
+		\item $\ker\left(\phi\right)=\prod\limits_{i\in I}\ker\left(\phi_{i}\right)$.特别地,若每个$\phi_{i}$都是单射,则$\phi$也是单射.
+		\item $\im\left(\phi\right)=\prod\limits_{i\in I}\im\left(\phi_{i}\right)$.特别地,若每个$\phi_{i}$都是满射,则$\phi$也是满射.
+	\end{enumerate}
+	$\prod\limits_{i\in I}\phi_{i}\coloneq\phi$称为$\left(\phi_{i}\right)_{i\in I}$的乘积同态.
+\end{proposition}
+
+\begin{corollary}{正规$\Omega$-子群的乘积和商}{}
+	记$G=\prod\limits_{i\in I}G_{i},H=\prod\limits_{i\in I}H_{i}$,则$H$是$G$的$\Omega$-子群.进一步,若对诸$i\in I$,$H_{i}$是$G_{i}$的正规$\Omega$-子群,则$H$是$G$的正规$\Omega$-子群,典范映射$G\twoheadrightarrow\prod\limits_{i\in I}\left(G_{i}/H_{i}\right)$诱导$\Omega$-群同构$G/H\to\prod\limits_{i\in I}\left(G_{i}/H_{i}\right)$.
+\end{corollary}
+
+\begin{definition}{部分乘积$\Omega$-群}{partial-product-omega-group}
+	记$G=\prod\limits_{i\in I}G_{i}$.对诸$J\subseteq I$,称$G_{J}\coloneq\left\{\left(x_{i}\right)_{i\in I}\in G\middle|\forall i\in I\setminus J\left(x_{i}=e_{i}\right)\right\}$为$G$的部分乘积$\Omega$-子群.
+	
+	定义$\pr_{J}:G\to\prod\limits_{j\in J}G_{j},\pr_{I\setminus J}:G\to\prod\limits_{k\in I\setminus J}G_{k},\iota_{J}:\prod\limits_{j\in J}G_{j}\to G_{J}$如下:
+	\begin{itemize}
+		\item $\pr_{J}\left(\left(x_{i}\right)_{i\in I}\right)=\left(x_{j}\right)_{j\in J}$.
+		\item $\pr_{I\setminus J}=\left(\left(x_{i}\right)_{i\in I}\right)=\left(x_{k}\right)_{k\in I\setminus J}$.
+		\item $\iota_{J}\left(\left(x_{i}\right)_{i\in I}\right)=\left(y_{i}\right)_{i\in I},y_{i}=
+		\begin{cases}
+			x_{i},i\in J,\\
+			e_{i},i\in I\setminus J.
+		\end{cases}$
+	\end{itemize}
+\end{definition}
+
+\begin{proposition}{部分乘积子群的性质}{}
+	设$J,J_{1},J_{2}\subseteq I$,其他记号同定义(\ref{def:partial-product-omega-group}).
+	\begin{enumerate}
+		\item $G_{J}$是$G$的正规$\Omega$-子群.
+		\item $\iota_{J}$是$\Omega$-群同构.
+		\item $\pr_{I\setminus J}$诱导$\Omega$-群同构$G/G_{J}\simeq\prod\limits_{k\in I\setminus J}G_{k}$.
+		\item $\pr_{J}\circ\iota_{J}$是$\prod\limits_{j\in J}$上的恒等映射.
+		\item 若$J_{1}\cap J_{2}=\emptyset$,则$G_{J_{1}}$的每个元素和$G_{J_{2}}$的每个元素都可交换.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{记号说明}{}
+	在同构意义下,$G_{J}=\prod\limits_{j\in J}G_{j},G/G_{J}=\prod\limits_{k\in I\setminus J}G_{k}$.今后的实践中我们通常会采用这种观点.
+\end{remark}
+
+\begin{definition}{$\Omega$-群的内直积}{}
+	设$G$是$\Omega$-群,对诸$i\in I$,$H_{i}$是$G$的正规$\Omega$-子群,$\pi_{i}:G\twoheadrightarrow G/H_{i}$是典范投射.若
+	\begin{align*}
+		f:G\to\prod\limits_{i\in I}\left(G/H_{i}\right),g\mapsto\left(\pi_{i}\left(g\right)\right)_{i\in I}
+	\end{align*}
+	是$\Omega$-群同构,则称$G$是$\left(G/H_{i}\right)_{i\in I}$的内直积.
+\end{definition}
+
+\begin{definition}{$\Omega$-群同态的等化子}{}
+	设$G,H$是$\Omega$-群,$\phi,\psi\in\Hom_{\mathsf{Grp}}\left(G,H\right)$是$\Omega$-群同态,则
+	\begin{align*}
+		\Equ\left(\phi,\psi\right)\coloneq\left\{x\in G\middle|\phi\left(x\right)=\psi\left(x\right)\right\}
+	\end{align*}
+	是$G$的$\Omega$-子群.我们称上式所述的集合为$\phi$和$\psi$的等化子.
+\end{definition}
+
+\begin{definition}{$\Omega$-群的纤维积}{fibre-product-of-omega-group}
+	设$G_{1},G_{2},H$是$\Omega$-群,$\phi_{1}:G_{1}\to H$和$\phi_{2}:G_{2}\to H$是$\Omega$-群同态.定义
+	\begin{align*}
+		G_{1}\times_{H}G_{2}\coloneq\left\{\left(g_{1},g_{2}\right)\in G_{1}\times G_{2}\middle|\phi_{1}\left(g_{1}\right)=\phi_{2}\left(g_{2}\right)\right\}.
+	\end{align*}
+	我们称上述集合为$G_{1}$与$G_{2}$关于$H$的纤维积.$\pr_{1}$和$\pr_{2}$各自在$G_{1}\times_{H}G_{2}$上的限制$p_{1}$和$p_{2}$也称为投影同态.
+\end{definition}
+
+\begin{proposition}{纤维积的投影同态}{}
+	沿用定义\ref{def:fibre-product-of-omega-group}的记号,那么如下图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			& G_{1}\times_{H}G_{2} \arrow[ld, "p_{1}"'] \arrow[rd, "p_{2}"] &                             \\
+			G_{1} \arrow[r, "\phi_{1}"'] & H                                                                 & G_{2} \arrow[l, "\phi_{2}"]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{纤维积的泛性质}{}
+	沿用定义\ref{def:fibre-product-of-omega-group}的记号.对诸$\Omega$-群$K$,$\Omega$-群同态$f_{i}:K\to G_{i}$($i\in\left\{1,2\right\}$),下图中,左边的图表交换$\implies$右边的图表交换.
+	\begin{center}
+		\begin{tikzcd}
+			G_{1} \arrow[rd, "\phi_{1}"'] & K \arrow[l, "f_{1}"'] \arrow[r, "f_{2}"] & G_{2} \arrow[ld, "\phi_{2}"] &  &       & G_{1}\times_{H}G_{2} \arrow[ld, "p_{1}"'] \arrow[rd, "p_{2}"]            &       \\
+			& H                                        &                              &  & G_{1} & K \arrow[l, "f_{1}"] \arrow[r, "f_{2}"'] \arrow[u, "\exists!f"', dashed] & G_{2}
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

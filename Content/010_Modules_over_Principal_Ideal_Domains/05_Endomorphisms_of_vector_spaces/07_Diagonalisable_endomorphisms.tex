@@ -1,0 +1,48 @@
+\section{可对角化自同态}
+
+\begin{definition}{可对角化自同态}{}
+	设$E$是有限维$K$-向量空间,$\mathfrak{F}\subseteq\End_{K}\left(V\right)$.
+	\begin{enumerate}
+		\item 设$\coloneq\left(e_{i}\right)_{i\in I}$是$V$的基.若对每个$f\in\mathfrak{F}$,它在基$\left(e_{i}\right)_{i\in I}$下的表示矩阵是对角矩阵,则称$\mathfrak{F}$关于基$\left(e_{i}\right)_{i\in I}$是对角的.
+		\item 若存在$V$的基$\coloneq\left(e_{i}\right)_{i\in I}$,使得$\mathfrak{F}$关于基$\left(e_{i}\right)_{i\in I}$是对角的,则称$\mathfrak{F}$可对角化.
+		\item 如果$\mathfrak{F}=\left\{u\right\}$且$\mathfrak{F}$可对角化,则称$u$可对角化.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	$\mathfrak{F}$可对角化$\iff$ $V$由$\mathfrak{F}$中所有元素的公共特征向量生成.
+\end{remark}
+
+\begin{proposition}{单个线性自同态可对角化的等价条件}{}
+	设$V$是有限维$K$-向量空间,$\mathscr{E}$是$\mathcal{T}$在$K$上的特征值组成的集合.
+	\begin{enumerate}
+		\item 下列陈述等价:
+		\begin{enumerate}
+			\item $\mathcal{T}$可对角化.
+			\item $V$是$\mathcal{T}$的所有特征子空间的直和.
+			\item $\Min_{\mathcal{T}}$的所有根都是$K$中的单根.
+		\end{enumerate}
+		\item 若$\mathcal{T}$可对角化,则对$V$的每个$\mathcal{T}$-不变子空间$W$都有$W=\bigoplus\limits_{\lambda\in\mathscr{E}}\left(W\cap\Eig_{K}\left(V,\mathcal{T},\lambda\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$V$是有限维$K$-向量空间.若$\Char_{\mathcal{T}}$的所有根都是$K$中的单根,则$\mathcal{T}$可对角化.
+\end{corollary}
+
+\begin{lemma}{}{}
+	设$\mathcal{U}\in\End_{K}\left(V\right)$.如果$\mathcal{T}$和$\mathcal{U}$可交换,那么对$\mathcal{T}$在$K$上的每个特征值$\lambda$,子空间$\Eig_{K}\left(V,\mathcal{T},\lambda\right)$都是$\mathcal{U}$-不变的.
+\end{lemma}
+
+\begin{proposition}{}{}
+	设$V$是有限维$K$-向量空间,$\mathfrak{F}\subseteq\End_{K}\left(V\right)$,$A$是$\mathfrak{F}\cup\left\{\id_{V}\right\}$在$\End_{K}\left(V\right)$中生成的子代数.下列陈述等价:
+	\begin{enumerate}
+		\item $\mathfrak{F}$可对角化.
+		\item $A$是可对角化$K$-代数.
+		\item $\mathfrak{F}$中的每个元素都可对角化,并且$\mathfrak{F}$中的任意两个元素都可交换.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$V$是有限维$K$-向量空间,$\mathcal{U}\in\End_{K}\left(V\right)$.若$\mathcal{T},\mathcal{U}$可交换且都可对角化,则$\mathcal{T}+\mathcal{U}$和$\mathcal{T}\circ\mathcal{U}$都可对角化.
+\end{corollary}

@@ -1,0 +1,115 @@
+\section{同态的伴随}
+
+记号约定:
+\begin{itemize}
+	\item $A$是环,$E,E^{\prime},E^{\prime\prime}$都是左$A$-模,$F,F^{\prime},F^{\prime\prime}$都是右$A$-模或左$A$-模.
+	\item $\rho\in\Isom_{\mathsf{Ring}}\left(A,A^{\op}\right)$,对每个$a\in A$记$\bar{a}=\rho\left(a\right)$.
+	\item 当$F,F^{\prime},F^{\prime\prime}$都是右$A$-模时,$\varphi\in\Bil_{A}\left(E,F\right),\varphi^{\prime}\in\Bil_{A}\left(E^{\prime},F^{\prime}\right),\varphi^{\prime}\in\Bil_{A}\left(E^{\prime\prime},F^{\prime\prime}\right)$.
+	\item 当$F,F^{\prime},F^{\prime\prime}$都是左$A$-模时,$\varphi\in\Sesq_{A,\rho}\left(E,F\right),\varphi^{\prime}\in\Sesq_{A,\rho}\left(E^{\prime},F^{\prime}\right),\varphi^{\prime}\in\Sesq_{A,\rho}\left(E^{\prime\prime},F^{\prime\prime}\right)$.
+	\item $\varphi$是非退化的.
+\end{itemize}
+
+\begin{proposition}{线性映射的左伴随(半双线性型和双线性型的情形)}{left-adjoint-of-linear-mappings-bilinear-and-sesquilinear-version}
+	设$u\in\Hom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right)$.令$F_{u}^{\prime}=\left\{y^{\prime}\in F^{\prime}\middle|\exists y\in F\forall x\in E\left(\varphi^{\prime}\left(u\left(x\right),y\right)=\varphi\left(x,y\right)\right)\right\}$.
+	\begin{enumerate}
+		\item $F_{u}^{\prime}$是$F^{\prime}$的子模,
+		\item 定义${}^{\ast}u:F_{u}^{\prime}\to F$如下:对每个$y^{\prime}\in F^{\prime}$,存在$y\in F$使得
+		\begin{align*}
+			u\left(y^{\prime}\right)=y\wedge\forall x\in E\left(\varphi\left(u\left(x\right),y^{\prime}\right)=\varphi\left(x,y\right)\right),
+		\end{align*}
+		那么${}^{\ast}u\in\Hom_{A-\mathsf{Mod}}\left(F_{u}^{\prime},F\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{线性映射的左伴随}{}
+	沿用命题\ref{prop:left-adjoint-of-linear-mappings-bilinear-and-sesquilinear-version}的设定.我们称${}^{\ast}u$是$u$相对$\left(\varphi,\varphi^{\prime}\right)$的左伴随.
+\end{definition}
+
+\begin{proposition}{线性映射的右伴随(双线性型的情形)}{left-adjoint-of-linear-mappings-bilinear-version}
+	设$F,F^{\prime}$都是右$A$-模,$u\in\Hom_{\mathsf{Mod}-A}\left(F,F^{\prime}\right)$.令$E_{v}^{\prime}=\left\{x^{\prime}\in E^{\prime}\middle|\exists x\in E\forall y\in F\left(\varphi^{\prime}\left(x^{\prime},v\left(y\right)\right)=\varphi\left(x,y\right)\right)\right\}$.
+	\begin{enumerate}
+		\item $E_{v}^{\prime}$是$F^{\prime}$的子模.
+		\item 定义$v^{\ast}:E_{u}^{\prime}\to E$如下:对每个$x^{\prime}\in E^{\prime}$,存在$x\in E$使得
+		\begin{align*}
+			v\left(x^{\prime}\right)=x\wedge\forall y\in F\left(\varphi\left(x^{\prime},v\left(y\right)\right)=\varphi\left(x,y\right)\right),
+		\end{align*}
+		那么$v^{\ast}\in\Hom_{\mathsf{Mod}-A}\left(E_{u}^{\prime},E\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{线性映射的右伴随(半双线性型的情形)}{left-adjoint-of-linear-mappings-sesquilinear-version}
+	设$F,F^{\prime}$都是左$A$-模,$u\in\Hom_{A-\mathsf{Mod}}\left(F,F^{\prime}\right)$.令$E_{v}^{\prime}=\left\{x^{\prime}\in E^{\prime}\middle|\exists x\in E\forall y\in F\left(\varphi^{\prime}\left(x^{\prime},v\left(y\right)\right)=\varphi\left(x,y\right)\right)\right\}$.
+	\begin{enumerate}
+		\item $E_{v}^{\prime}$是$F^{\prime}$的子模.
+		\item 定义$v^{\ast}:E_{u}^{\prime}\to E$如下:对每个$x^{\prime}\in E^{\prime}$,存在$x\in E$使得
+		\begin{align*}
+			v\left(x^{\prime}\right)=x\wedge\forall y\in F\left(\varphi\left(x^{\prime},v\left(y\right)\right)=\varphi\left(x,y\right)\right),
+		\end{align*}
+		那么$v^{\ast}\in\Hom_{A-\mathsf{Mod}}\left(E_{u}^{\prime},E\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{线性映射的右伴随}{}
+	沿用命题\ref{prop:left-adjoint-of-linear-mappings-bilinear-and-sesquilinear-version}(或\ref{prop:left-adjoint-of-linear-mappings-sesquilinear-version})的设定.我们称$v^{\ast}$是$v$相对$\left(\varphi,\varphi^{\prime}\right)$的右伴随.
+\end{definition}
+
+\begin{proposition}{伴随映射的性质}{}
+	为了简化表述,约定:对于本命题中所说的每个线性映射,其右伴随的定义域和该线性映射的定义域相同.
+	\begin{enumerate}
+		\item 设$u_{1},u_{2}\in\Hom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right)$,则${}^{\ast}\left(u_{1}+u_{2}\right)={}^{\ast}u_{1}+{}^{\ast}u_{2}$.
+		\item 设$c\in Z\left(A\right),u\in\Hom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right)$,则${}^{\ast}\left(cu\right)=\bar{c}{}^{\ast}u$.
+		\item 设$u\in\Hom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right),v\in\Hom_{A-\mathsf{Mod}}\left(E^{\prime},E^{\prime\prime}\right)$,则${}^{\ast}\left(v\circ u\right)={}^{\ast}u\circ{}^{\ast}v$.
+		\item 设$u\in\Isom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right)$,则:
+		\begin{itemize}
+			\item 当$F,F^{\prime}$都是右模时$u^{\ast}\in\Isom_{\mathsf{Mod}-A}\left(F^{\prime},F\right)$,当$F,F^{\prime}$都是左模时$u^{\ast}\in\Isom_{A-\mathsf{Mod}}\left(F^{\prime},F\right)$;
+			\item 两种情况下$\left({}^{\ast}u\right)^{-1}={}^{\ast}\left(u^{-1}\right)$.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{左伴随和右伴随处处定义和具备显式表达的条件}{}
+	\begin{enumerate}
+		\item 若$d_{\varphi}$是双射,则对每个$u\in\Hom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right)$有$F_{u}^{\prime}=F^{\prime}$和${}^{\ast}u=d_{\varphi}^{-1}\circ u^{\top}\circ d_{\varphi^{\prime}}$.
+		\item 若$s_{\varphi}$是双射,$F,F^{\prime}$是右$A$-模,则对每个$v\in\Hom_{\mathsf{Mod}-A}\left(F,F^{\prime}\right)$有$E_{v}^{\prime}=E^{\prime}$和$v^{\ast}=s_{\varphi}^{-1}\circ v^{\top}\circ s_{\varphi^{\prime}}$.
+		\item 若$s_{\varphi}$是双射,$F,F^{\prime}$是左$A$-模,则对每个$v\in\Hom_{A-\mathsf{Mod}}\left(F,F^{\prime}\right)$有$E_{v}^{\prime}=E^{\prime}$和$v^{\ast}=s_{\varphi}^{-1}\circ v^{\top}\circ s_{\varphi^{\prime}}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 设$F,F^{\prime}$都是右$A$-模,$s_{\varphi}$和$d_{\varphi}$是双射,$u\in\Isom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right),v\in\Isom_{\mathsf{Mod}-A}\left(F,F^{\prime}\right)$,则
+		\begin{align*}
+			\varphi=\varphi^{\prime}\circ\left(u\times v\right)\iff\left(u^{-1}=v^{\ast}\wedge v^{-1}={}^{\ast}u\right).
+		\end{align*}
+		\item 设$F,F^{\prime}$都是左$A$-模,$s_{\varphi}$和$d_{\varphi}$是双射,$u\in\Isom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right),v\in\Isom_{A-\mathsf{Mod}}\left(F,F^{\prime}\right)$,则
+		\begin{align*}
+			\varphi=\varphi^{\prime}\circ\left(u\times v\right)\iff\left(u^{-1}=v^{\ast}\wedge v^{-1}=u^{\ast}\right).
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$\psi\in\Sesq_{A,\rho}\left(E\right)$,$s_{\psi}$和$d_{\psi}$都是双射,$u\in\Aut_{A-\mathsf{Mod}}\left(E\right)$,则$\psi\circ\left(u\times u\right)=\psi\iff {}^{\ast}u=u^{\ast}=u^{-1}$.
+\end{corollary}
+
+\begin{remark}{}{}
+	设$A$是除环,$E$是有限维$A$-向量空间,$w\in\End_{A-\mathsf{Mod}}\left(E\right)$,则
+	\begin{align*}
+		\left(w\circ w^{\ast}=\id_{E}\vee w\circ {}^{\ast}w=\id_{E}\vee w^{\ast}\circ w=\id_{E}\vee {}^{\ast}w\circ w=\id_{E}\right)\implies \left(w\in\Aut_{A-\mathsf{Mod}}\left(E\right)\wedge {}^{\ast}w=w^{\ast}\right).
+	\end{align*}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

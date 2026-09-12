@@ -1,0 +1,66 @@
+\section{自由模之间的线性映射·主理想整环上的矩阵}
+
+记号约定:$A$是PID,$M,N$是自由$A$-模,$\dim M=n,\dim N=m,f\in\Hom_{A}\left(M,N\right)$.
+
+\begin{proposition}{PID上线性映射的Smith标准型}{smith-canonical-form-of-linear-mappings-over-pid}
+	设$\rank\left(f\right)=r$,则存在$M,N$各自的基$\left(e_{i}\right)_{i=1}^{n},\left(\check{e}_{j}\right)_{j=1}^{m}$和$A\setminus\left\{0\right\}$的序列$\left(\alpha_{i}\right)_{i=1}^{n}$满足如下条件:
+	\begin{enumerate}
+		\item $f\left(e_{i}\right)=
+		\begin{cases}
+			\alpha_{i}\check{e}_{i},&1\leq i\leq r,\\
+			0,&r+1\leq i\leq n.
+		\end{cases}$
+		\item 对每个$1\leq i\leq r-1$有$\alpha_{i}\mid\alpha_{i+1}$.
+		\item 理想序列$\left(\langle\alpha_{i}\rangle\right)_{i=1}^{r}$是$\im\left(f\right)$在$N$中的不变因子,从而被唯一确定.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{线性映射的不变因子}{}
+	沿用命题(\ref{prop:smith-canonical-form-of-linear-mappings-over-pid})的记号.我们称理想序列$\left(\langle\alpha_{i}\rangle\right)_{i=1}^{n}$是$f$的不变因子.
+\end{definition}
+
+\begin{corollary}{PID上矩阵的Smith标准型}{smith-canonical-form-of-matrices-over-pid}
+	设$\boldsymbol{X}$是$A$上的$m\times n$矩阵,$\rank\left(\boldsymbol{X}\right)=r$,则存在$A\setminus\left\{0\right\}$的序列$\left(\alpha_{i}\right)_{i=1}^{n}$和$\boldsymbol{X}_{0}\in\mathbf{M}_{m,n}\left(A\right)$满足如下条件:
+	\begin{enumerate}
+		\item $\boldsymbol{X}$和$\boldsymbol{X}_{0}$相抵,其中$X_{0}=\begin{bmatrix}
+			\diag\left(\alpha_{1},\ldots,\alpha_{r}\right)&\boldsymbol{O}_{r,n-r}\\
+			\boldsymbol{O}_{m-r,r}&\boldsymbol{O}_{m-r,n-r}
+		\end{bmatrix}$.
+		\item 对每个$1\leq i\leq r-1$有$\alpha_{i}\mid\alpha_{i+1}$.
+		\item 在条件(1)(2)下,序列$\left(\alpha_{i}\right)_{i=1}^{n}$中的每一项在精确到相抵的意义下是唯一的.
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	当$A$是域时,我们可以让$\left(\alpha_{i}\right)_{i=1}^{r}$的各项都为$1$.
+\end{remark}
+
+\begin{definition}{矩阵的不变因子和Smith标准型}{}
+	沿用命题(\ref{cor:smith-canonical-form-of-matrices-over-pid})的记号.我们称理想序列$\left(\langle\alpha_{i}\rangle\right)_{i=1}^{n}$是$\boldsymbol{X}$的不变因子,称$\boldsymbol{X}_{0}$是$\boldsymbol{X}$的Smith标准型.
+\end{definition}
+
+\begin{corollary}{PID上矩阵等价的判定条件}{}
+	设$\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{m,n}\left(A\right)$,则$\boldsymbol{X}$和$\boldsymbol{Y}$等价$\iff$ $\boldsymbol{X}$和$\boldsymbol{Y}$的不变因子相同.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\boldsymbol{X}$是$A$上的$m\times n$矩阵,$\rank\left(\boldsymbol{X}\right)=r$,$\left(\langle\alpha_{i}\rangle\right)_{i=1}^{r}$是$\boldsymbol{X}$的不变因子序列.
+	\begin{enumerate}
+		\item $\alpha_{1}$是$\boldsymbol{X}$中所有元素的最大公因子.
+		\item 对每个$1\leq q\leq r$,$\prod\limits_{i=1}^{q}\alpha_{i}$是$\boldsymbol{X}$的所有$q$阶子式的最大公因子.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

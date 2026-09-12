@@ -1,0 +1,95 @@
+\section{偏序子集,偏序集的乘积}
+
+\begin{definition}{诱导偏序}{}
+	设集合$E$配备偏序$\Gamma$,相对$\Gamma$的二元关系是$G$,$A\subseteq E$.
+	\begin{enumerate}
+		\item 我们称$G\cap\left(A\times A\right)$是$G$在$A$上诱导的偏序,称$G$是$G\cap\left(A\times A\right)$的延拓.
+		\item 我们把公式$x\leq y\wedge x\in A\wedge y\in A$记作$x\leq_{A}y$,并称$\leq_{A}$是$\leq$在$A$上诱导的偏序关系,称$\leq$是$\leq_{A}$的延拓.
+	\end{enumerate}
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 设$E,F$是集合,给$\mathcal{P}\left(E\times F\right)$赋予包含偏序,给$\Hom_{\mathsf{Set}}\left(E,F\right)$赋予函数延拓偏序.记
+		\begin{align*}
+			\varphi:\Hom_{\mathsf{Set}}\left(E,F\right)\to\mathcal{P}\left(E\times F\right),f\mapsto\Gr\left(f\right),
+		\end{align*}
+		则$\varphi^{\circ}:\Hom_{\mathsf{Set}}\left(E,F\right)\to\mathcal{P}\left(E\times F\right),f\mapsto\varphi\left(f\right)$是序同构.
+		\item 设$\mathfrak{P}$是$E$上的划分组成的集合(具体记号同前一节),为其赋予划分的粗细序,为$\mathcal{P}\left(E\times E\right)$赋予包含偏序.记
+		\begin{align*}
+			\varphi:\mathfrak{P}\to\mathcal{P}\left(E\times E\right),\omega\mapsto\tilde{\omega},
+		\end{align*}
+		则$\varphi^{\circ}:\mathfrak{P}\to\mathcal{P}\left(E\times E\right),\omega\mapsto\varphi\left(\omega\right)$是序同构.
+		\item 设$E$是集合,$\Omega$是相对$E$上的预序的二元关系组成的集合.给定$\Omega$的元素$s,t$,那么公式$s\subseteq t$在$\Omega$上诱导一个偏序,读作`预序$s$比$t$细''(或``预序$t$比$s$粗'').
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{逐点序}{}
+	设$\left(E_{i}\right)_{i\in I}$是集合族,对任意$i\in I$,$G_{i}$是相对$E_{i}$上的偏序$\Gamma_{i}$的二元关系,把$E_{i}$上的偏序关系$\left(x_{i},y_{i}\right)\in G_{i}$记作$x_{i}\leq y_{i}$.我们把$\prod\limits_{i\in I}E_{i}$上通过关于$\left(x_{i}\right)_{i\in I}$和$\left(y_{i}\right)_{i\in I}$的偏序关系$\forall i\in I\left(x_{i}\leq y_{i}\right)$定义的偏序称为$\left(\Gamma_{i}\right)_{i\in I}$的乘积(或$\prod\limits_{i\in I}E_{i}$的逐点序),写作$\leq$,把配备了偏序$\leq$的$\prod\limits_{i\in I}E_{i}$称为偏序集$\left(E_{i}\right)_{i\in I}$的乘积.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$I$是集合,$E$是有序基.给$\Hom_{\mathsf{Set}}\left(I,E\right)$赋予逐点序$\leq$,给$\FuncRel\left(I,E\right)$赋予包含偏序,则典范双射$\Hom_{\mathsf{Set}}\left(E,F\right)\to\FuncRel\left(I,E\right)$是序同构.
+\end{proposition}
+
+\begin{remark}{}{}
+	本小结中所有的定义都可以推广到预序集,只需要把``偏序''替换为``预序''.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

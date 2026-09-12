@@ -1,0 +1,142 @@
+\section{仿射映射}
+
+记号约定:
+
+\begin{itemize}
+	\item $K$是除环,$V,V_{1},V_{2},V_{3}$是$K$-向量空间.
+	\item $E,E_{1},E_{2},E_{3}$分别是向量部分为$V,V_{1},V_{2},V_{3}$的仿射空间.
+\end{itemize}
+
+\begin{definition}{仿射映射}{}
+	设$f\in\Hom_{\mathsf{Set}}\left(E_{1},E_{2}\right)$.若对$E$的任意有限元素族$\left(x_{i}\right)_{i\in I}$和$K$的任意有限支撑族$\left(\lambda_{i}\right)_{i\in I}$,
+	\begin{align*}
+		\sum\limits_{i\in I}\lambda_{i}=1\implies f\left(\sum\limits_{i\in I}\lambda_{i}x_{i}\right)=\sum\limits_{i\in I}\lambda_{i}f\left(x_{i}\right),
+	\end{align*}
+	则称$f$为仿射(线性)映射.记$\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)=\left\{\varphi\in\Hom_{\mathsf{Set}}\left(E_{1},E_{2}\right)\middle|\varphi\text{是仿射映射}\right\},\End_{\mathsf{Aff}}\left(E_{1}\right)=\Hom_{\mathsf{Aff}}\left(E_{1},E_{1}\right)$.
+\end{definition}
+
+\begin{proposition}{仿射映射的向量部分的存在性}{}
+	设$f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$,则存在唯一的$g\in\Hom_{K}\left(V_{1},V_{2}\right)$,对任一$x\in E$和$\mathbf{v}\in V_{1}$有
+	\begin{align*}
+		f\left(\mathbf{v}\aplus x\right)=g\left(\mathbf{v}\right)\aplus f\left(x\right).
+	\end{align*}
+\end{proposition}
+
+\begin{definition}{仿射映射的向量部分}{}
+	设$f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$.定义$\vec{f}\in\Hom_{K}\left(V_{1},V_{2}\right)$如下:对任一$x\in E$和$\mathbf{v}\in V_{1}$有$f\left(\mathbf{v}\aplus x\right)=\vec{f}\left(\mathbf{v}\right)\aplus f\left(x\right)$.我们称$\vec{f}$是$f$的向量部分.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$.以$a\in E$为原点,则对任一$\mathbf{v}\in V$,$\vec{f}\left(\mathbf{v}\right)=f\left(a+\mathbf{v}\right)-f\left(a\right)$,并且$\vec{f}$不依赖$a$的选取.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$f\in\Hom_{K}\left(V_{1},V_{2}\right),a_{1},a_{2}\in E_{1}$,则$g:E_{1}\to E_{2},x\mapsto g\left(x\aminus a_{1}\right)\aplus a_{2}$是唯一一个以$f$为向量部分,并且满足$g\left(a_{1}\right)=a_{2}$的仿射映射.
+\end{proposition}
+
+\begin{definition}{仿射同构}{}
+	设$f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$.若存在$g\in\Hom_{\mathsf{Aff}}\left(E_{2},E_{1}\right)$使$g\circ f=\id_{E_{1}}$且$f\circ g=\id_{E_{2}}$,则称$f$为仿射同构.记
+	\begin{align*}
+		\Isom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)=\left\{\varphi\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)\middle|\varphi\text{是仿射同构}\right\},\Aut_{\mathsf{Aff}}\left(E_{1}\right)=\Isom_{\mathsf{Aff}}\left(E_{1},E_{1}\right).
+	\end{align*}
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 若$f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right),g\in\Hom_{\mathsf{Aff}}\left(E_{2},E_{3}\right)$,则$g\circ f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{3}\right),\overrightarrow{g\circ f}=\vec{g}\circ\vec{f}$.
+		\item $f\in\Isom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$ $\iff$ $f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$且为双射.两条件之一成立时$f^{-1}$是仿射同构,$\overrightarrow{f^{-1}}=\left(\vec{f}\right)^{-1}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{仿射群,仿射变换,平移群}{}
+	\begin{enumerate}
+		\item 定义$\Aff\left(E\right)\coloneq\Aut_{\mathsf{Aff}}\left(E\right)$.它按映射复合构成群,称为$E$的仿射群,其元素称为仿射变换.
+		\item 定义$\Tran\left(E\right)=\left\{\tau_{\mathbf{v}}\in\End_{\mathsf{Aff}}\left(E\right)\middle|\mathbf{v}\in V\right\}$.它按映射复合构成群,称为$E$的平移群.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{仿射群的代数结构和半直积分解}{}
+	设$a\in E_{1},G_{a}=\left\{f\in\Aff\left(E\right)\middle|f\left(a\right)=a\right\},\psi:\Aff\left(E\right)\to\GL\left(V\right),f\mapsto\vec{f}$.
+	\begin{enumerate}
+		\item $\psi\in\Hom_{\mathsf{Grp}}\left(\Aff\left(E\right),\GL\left(V\right)\right)$且为满射,$\ker\left(\psi\right)=\Tran\left(E\right)$,它是$\Aff\left(E\right)$的正规子群.
+		\item 对任一$f\in\Aff\left(E\right)$和$\mathbf{v}\in V$,有$f\circ\tau_{\mathbf{v}}\circ f^{-1}=\vec{f}$.
+		\item 对每个$f\in\Aff\left(E\right)$,存在唯一的$\mathbf{v}\in V$和$f_{1}\in G_{a}$使得$f=\tau_{\mathbf{v}}\circ f_{1}$.
+		\item $\Aff\left(E\right)=V\rtimes G_{a}\simeq V\rtimes\GL\left(V\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{仿射线性映射双向保持仿射线性簇}{}
+	设$f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$.
+	\begin{enumerate}
+		\item 若$S_{1}$是$E_{1}$的仿射线性簇,则$f\left(S_{1}\right)$是$E_{2}$的仿射线性簇.
+		\item 若$S_{2}$是$E_{2}$的仿射线性簇,则$f^{-1}\left(S_{2}\right)$是$E_{1}$的仿射线性簇.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{仿射映射的秩}{}
+	设$f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$.称$\dim_{K}\im\left(f\right)$为$f$的秩,记作$\rank\left(f\right)$.
+\end{definition}
+
+\begin{proposition}{仿射映射的秩=仿射映射的向量部分的秩}{}
+	设$f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$,则$\rank\left(f\right)=\rank\left(\vec{f}\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$S_{1},S_{2}$分别是$E_{1},E_{2}$的仿射线性簇,二者维数相等且有限,则存在$f\in\Hom_{\mathsf{Aff}}\left(E_{1},E_{2}\right)$使$f\left(S_{1}\right)=S_{2}$.
+\end{proposition}
+
+\begin{definition}{仿射泛函}{}
+	把$K_{s}$视为仿射空间.称$\Hom_{\mathsf{Aff}}\left(E,K\right)$的元素是$E_{1}$上的仿射(线性)泛函.
+\end{definition}
+
+\begin{proposition}{}{}
+	\begin{enumerate}
+		\item 以$a\in E$为原点,则对每个$f\in\Hom_{\mathsf{Aff}}\left(E,K\right)$,存在唯一的$\alpha\in K,f^{\ast}\in V^{\vee}$,对任意$x\in E$有
+		\begin{align*}
+			f\left(x\right)=\alpha\aplus f\left(x\aminus a\right).
+		\end{align*}
+		\item $\dim_{K}\Hom_{\mathsf{Aff}}\left(E,K_{s}\right)=1+\dim_{K}E$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{超平面的代数特征}{}
+	\begin{enumerate}
+		\item 若$f\in\Hom_{\mathsf{Aff}}\left(E,K_{s}\right)$且$\im\left(f\right)$不是单点集,则对任一$\lambda\in K$,$f^{-1}\left(\left\{\lambda\right\}\right)$是$E$的仿射超平面.
+		\item 对$E$的任意仿射超平面$H$,存在$f\in\Hom_{\mathsf{Aff}}\left(E,K_{s}\right)$使得$H=f^{-1}\left(\left\{0\right\}\right)$.
+		\item 若$f\in\Hom_{\mathsf{Aff}}\left(E,K_{s}\right),\alpha,\beta\in K$,则$E$中的仿射超平面$f^{-1}\left(\left\{\alpha\right\}\right)$和$f^{-1}\left(\left\{\beta\right\}\right)$平行.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

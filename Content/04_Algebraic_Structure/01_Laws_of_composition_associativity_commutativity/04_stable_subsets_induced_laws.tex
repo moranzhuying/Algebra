@@ -1,0 +1,43 @@
+\section{稳定子群,诱导律}
+
+记号约定:$E,F$是原群,配备合成律$\odot$;$A\subseteq E,B\subseteq F$.
+
+\begin{definition}{封闭子集,子原群}{}
+	若$A\odot A\subseteq A$,则称$A$是$E$载$\odot$的封闭子集.配备合成律$A\times A\to A,\left(x,y\right)\mapsto x\odot y$的$A$称为$E$的子原群.
+\end{definition}{}{}
+
+封闭子集和子原群是一一对应的.在没有特别声明的时候,我们默认把子原群和封闭子集\textbf{等同}起来.显然,$E$的一族封闭子集的交还是$E$的封闭子集.
+
+\begin{definition}{$A$生成的封闭子集,生成系}{}
+	定义$\langle A\rangle=\bigcap\limits_{\substack{A\subseteq Y\subseteq E\\Y\text{是稳定子集}}}Y$.我们称之为$A$生成的封闭子集,$A$称为$\langle A\rangle$的生成系(或生成集).对应于$\langle A\rangle$的子原群称为$A$生成的子原群.
+\end{definition}
+
+\begin{proposition}{原群同态保持子原群,原群同态的等化子是子原群}{}
+	设$f:E\to F$是原群同态.
+	\begin{enumerate}
+		\item 若$A$是$E$的封闭子集,则$f\left(A\right)$是$Y$的封闭子集.
+		\item 若$B$是$F$的封闭子集,则$f^{-1}\left(B\right)$是$E$的封闭子集.
+		\item 若$U\subseteq E$,则$f\left(\langle U\rangle\right)=\langle f\left(U\right)\rangle$.
+		\item 若$g:E\to F$是原群同态,则$\left\{x\in E\middle|f\left(x\right)=g\left(x\right)\right\}$是$E$的稳定子集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+	只证明(3).由(1)得$\langle f\left(U\right)\rangle\subseteq f\left(\langle U\rangle\right)$,由(2)得$\langle U\rangle\subseteq f^{-1}\left(\langle f\left(U\right)\rangle\right)$(即$f\left(\langle U\rangle\right)\subseteq\langle f\left(U\right)\rangle$),得证.
+\end{proof}
+
+\begin{proposition}{封闭子集的结构}{}
+	设$\odot$满足结合律,$A^{\ast}=\left\{\bigodot\limits_{i=1}^{n}x_{i}\in E\middle|n\geq 1,\forall i\in\llbracket 1,n\rrbracket\left(x_{i}\in A\right)\right\}$,则$\langle A\rangle=A^{\ast}$.
+\end{proposition}
+
+\begin{proof}
+	任取$A^{\ast}$的元素$u=\bigodot\limits_{i=1}^{n}x_{i}$和$v=\bigodot\limits_{j=1}^{p}y_{j}$,则$u\odot v=x_{1}\odot\ldots x_{n}\odot y_{1}\odot\ldots\odot y_{p}\in A^{\ast}$,结合$A^{\ast}\subseteq\langle A\rangle$得证.
+\end{proof}
+
+\begin{example}{幂等元}{}
+	设$\top$是$E$上的合成律.对$E$的子集$\left\{h\right\}$,它是$\top$下的稳定子集$\iff$ $h\top h=h$,换言之$h$是幂等的.特别地,格中的每个元素对于取上确界和取下确界都是幂等的.
+\end{example}
+
+\begin{example}{半群的单点集生成的封闭子集}{}
+	设$\odot$满足结合律,$\left\{a\right\}$是$E$的子集,则$\langle\left\{a\right\}\rangle=\left\{\bigodot\limits^{n}a\in E\middle|n\geq 1\right\}$.特别地,$\left\{1\right\}\subseteq\N$是$\N$的乘法下的封闭子集,它生成的封闭子集是$\N$中$\geq 1$的元素.
+\end{example}

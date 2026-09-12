@@ -1,0 +1,77 @@
+\section{上界和下界}
+
+\begin{definition}{上集,下集,上界,下界,}{}
+	设$E$配备预序$\leq$,$X\subseteq E$.定义
+	\begin{gather*}
+		\uparrow_{E}^{\leq}\left(X\right)\coloneq\left\{x\in E\middle|\forall y\in X\left(x\leq y\right)\right\},\downarrow_{E}^{\leq}\left(X\right)\coloneq\left\{x\in E\middle|\forall y\in X\left(x\geq y\right)\right\},\\
+		\uparrow^{\leq}\left(E\right)\coloneq\uparrow_{E}^{\leq}\left(E\right),\downarrow^{\leq}\left(E\right)\coloneq\downarrow_{E}^{\leq}\left(E\right).
+	\end{gather*}
+	分别称$\uparrow_{E}\left(X\right),\downarrow_{E}\left(X\right)$为$X$在$E$中的上界集和下界集,其元素分别称为$X$在$E$中(相对$\leq$)的上界和下界.
+\end{definition}
+
+\begin{remark}{}{}
+	$\downarrow_{E}^{\leq}\left(X\right)$有可能是空集,例如$E$是一个没有最小元的偏序集,$X=E$.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$E$配备预序$\leq$,其对偶为$\leq^{\prime}$,$X\subseteq E$,则$\uparrow_{E}^{\leq}\left(X\right)=\downarrow_{E}^{\leq^{\prime}}\left(X\right),\downarrow_{E}^{\leq}\left(X\right)=\uparrow_{E}^{\leq^{\prime}}\left(X\right)$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E$配备预序$\leq$,$X\subseteq E$.
+	\begin{enumerate}
+		\item 如果$x\in\downarrow_{E}^{\leq}\left(X\right)$,则对任意$z\in E$有$z\leq x\implies z\in\downarrow_{E}^{\leq}\left(X\right)$.
+		\item 若$Y\subseteq X$,则$\downarrow_{E}^{\leq}\left(Y\right)\supseteq\downarrow_{E}^{\leq}\left(X\right)$.
+		\item 若$\leq$是偏序,则$X$有最小元$\iff$ $\downarrow_{E}^{\leq}\left(X\right)\cap X$是单点集.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{有下界,有上界,有界}{}
+	设$E$配备预序$\leq$,$X\subseteq E$.
+	\begin{enumerate}
+		\item 若$\downarrow_{E}^{\leq}\left(X\right)\neq\emptyset$,则称$X$(相对$\leq$在$E$中)有下界.
+		\item 若$\uparrow_{E}^{\leq}\left(X\right)\neq\emptyset$,则称$X$(相对$\leq$在$E$中)有上界.
+		\item 若$\downarrow_{E}^{\leq}\left(X\right)$和$\uparrow_{E}^{\leq}\left(X\right)$都不是空集,则称$X$(相对$\leq$在$E$中)有界.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	如果$X$有上界(相对的,有下界,有界),那么$X$的每个子集都有上界(相对的,有下界,有界).特别地,$E$的每个是单点集的子集都有界,但是$E$的每个由两个元素组成的子集不一定有上界或有下界.
+\end{remark}
+
+\begin{definition}{有上界(有下界,有界)映射}{}
+	设$E$是预序集,$I$是集合,$f\in\Hom_{\mathsf{Set}}\left(I,E\right)$.
+	\begin{enumerate}
+		\item 若$\im\left(f\right)$有上界,则称$f$在$E$中有上界.
+		\item 若$\im\left(f\right)$有下界,则称$f$在$E$中有下界.
+		\item 若$\im\left(f\right)$有界,则称$f$在$E$中有界.
+	\end{enumerate}
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+\section{覆盖}
+
+\begin{definition}{覆盖(集合族版本)}{}
+	设$E$是集合,$\left(X_{i}\right)_{i\in I}$是集合族.若$E\subseteq\bigcup\limits_{i\in I}X_{i}$,则称$\left(X_{i}\right)_{i\in I}$是$E$的覆盖.
+\end{definition}
+
+\begin{definition}{覆盖的加细}{}
+	设$E$是集合,$\left(X_{i}\right)_{i\in I},\left(Y_{j}\right)_{j\in J}$是$E$的覆盖.若$\forall j\in J\exists i\in I\left(Y_{j}\subseteq X_{i}\right)$,则称$\left(Y_{j}\right)_{j\in J}$是$\left(X_{i}\right)_{i\in I}$的加细.
+\end{definition}
+
+\begin{definition}{覆盖(集合系版本)}{}
+	设$E$是集合,$\mathfrak{R}$是集合组成的集合.若$E\subseteq\bigcup\limits_{X\in\mathfrak{R}}X$,则称$\mathfrak{R}$是$E$的覆盖.
+\end{definition}
+
+\begin{proposition}{覆盖的性质}{}
+	设$E$是集合,$\left(X_{i}\right)_{i\in I}$是$E$的覆盖.
+	\begin{enumerate}
+		\item 若$\left(Y_{j}\right)_{j\in J}$是$\left(X_{i}\right)_{i\in I}$的加细,$\left(Z_{k}\right)_{k\in K}$是$\left(Y_{j}\right)_{j\in J}$的加细,则$\left(Z_{k}\right)_{k\in K}$是$\left(X_{i}\right)_{i\in I}$的加细.
+		\item 设$J\subseteq I$.若$\left(X_{i}\right)_{i\in J}$是$E$的覆盖,则$\left(X_{i}\right)_{i\in J}$是$\left(X_{i}\right)_{i\in I}$的加细.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{覆盖的共同加细}{}
+	设$E$是集合,$\left(X_{i}\right)_{i\in I}$和$\left(Y_{j}\right)_{j\in J}$是$E$的覆盖.
+	\begin{enumerate}
+		\item $\left(X_{i}\cap Y_{j}\right)_{\left(i,j\right)\in I\times J}$是$E$的覆盖,并且是$\left(X_{i}\right)_{i\in I}$和$\left(Y_{j}\right)_{j\in J}$的加细.
+		\item 若$\left(Z_{k}\right)_{k\in K}$是$\left(X_{i}\right)_{i\in I}$和$\left(Y_{j}\right)_{j\in J}$的加细,则$\left(Z_{k}\right)_{k\in K}$是$\left(X_{i}\cap Y_{j}\right)_{\left(i,j\right)\in I\times J}$的加细.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{覆盖在映射下的像和原像}{}
+	设$f:A\to B$是映射.
+	\begin{enumerate}
+		\item 设$\left(X_{i}\right)_{i\in I}$是$A$的覆盖.若$f$是满射,则$\left(f\left(X_{i}\right)\right)_{i\in I}$是$B$的覆盖(称为$\left(X_{i}\right)_{i\in I}$在$f$下的像).
+		\item 设$\left(Y_{j}\right)_{j\in J}$是$B$的覆盖,则$\left(f^{-1}\left(Y_{j}\right)\right)_{j\in J}$是$A$的覆盖(称为$\left(Y_{j}\right)_{j\in J}$在$f$下的原像).
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{覆盖的乘积}{}
+	设$E$是集合,$\left(X_{i}\right)_{i\in I}$和$\left(Y_{j}\right)_{j\in J}$是$E$的覆盖.称$\left(X_{i}\times Y_{j}\right)_{\left(i,j\right)\in I\times J}$是$\left(X_{i}\right)_{i\in I}$和$\left(Y_{j}\right)_{j\in J}$的乘积.
+\end{definition}
+
+\begin{proposition}{粘贴引理}{}
+	设$E$是集合.
+	\begin{enumerate}
+		\item 设$\left(X_{i}\right)_{i\in I}$是$E$的覆盖,偏函数$f$和$g$的定义域是$E$,对任一$i\in I$有$f|_{E\cap X_{i}}=g|_{E\cap X_{i}}$,则$f=g$.
+		\item 设$\left(X_{i}\right)_{i\in I}$是$E$的子集族,$\left(f_{i}\right)_{i\in I}$是一族映射,其中:
+		\begin{itemize}
+			\item 对任一$i\in I$,$f_{i}$的源是$X_{i}$,靶是$F$;
+			\item 对任一$\left(i,j\right)\in I\times I$,有$f_{i}|_{X_{i}\cap X_{j}}=f_{j}|_{X_{i}\cap X_{j}}$.
+		\end{itemize}
+		那么,存在唯一的以$\bigcup\limits_{i\in X}X_{i}$为源,$F$为靶的偏函数$f$,对任一$i\in I$有$f|_{X_{i}}=f_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

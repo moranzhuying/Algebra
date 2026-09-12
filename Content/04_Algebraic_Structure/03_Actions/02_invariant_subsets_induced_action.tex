@@ -1,0 +1,52 @@
+\section{不变子集,诱导作用}
+
+记号约定:$\Omega,E$是集合,$A,X\subseteq E$,$\alpha\mapsto f_{\alpha}$是$\Omega$在$E$上的作用.
+
+\begin{definition}{不变子集}{}
+	若$\bigcap\limits_{\alpha\in\Omega}f_{\alpha}\left(A\right)\subseteq A$,则称$A$在$\Omega$的这一作用下是不变的(或称$A$是不变子集).
+\end{definition}
+
+显然,$E$的一族不变子集的交还是$E$的不变子集.
+
+\begin{definition}{生成的不变子集}{}
+	我们称$\langle A\rangle\coloneq\bigcap\limits_{W\subseteq E,A\text{是不变子集}}W$是$X$生成的不变子集.
+\end{definition}
+
+\begin{proposition}{生成不变子集的具体形式}{}
+	$A$生成的不变子集是$\left\{f_{\alpha_{1}}\circ\ldots\circ f_{\alpha_{n}}\left(x\right)\in E\middle|n\geq 0,x\in X,\forall i\in I\left(\alpha_{i}\in\Omega\right)\right\}$.
+\end{proposition}
+
+\begin{remark}{原群的幂集上的封闭子集和不变子集}{}
+	设$E$是原群(合成律为$\odot$).我们应该区分下面两种类型的不变子集:
+	\begin{itemize}
+		\item $\odot$在$\mathcal{P}\left(E\right)$诱导的运算的封闭子集.
+		\item $\odot$在$\mathcal{P}\left(E\right)$诱导的运算给出的左平移作用和右平移作用下的不变子集.
+	\end{itemize}
+	不难证明下列结论:
+	\begin{itemize}
+		\item $A$是$E$的封闭子集$\iff$ $A\odot A\subseteq A$.
+		\item $A$是左平移作用$\iff$ $E\odot A\subseteq A$.
+		\item $A$是右平移作用$\iff$ $A\odot E\subseteq A$.
+	\end{itemize}
+	由$A\odot A\subseteq E\odot A\subseteq A$可知,$A$在左(或右)平移作用下不变$\implies$ $A$是封闭子集,反之则不成立.
+\end{remark}
+
+\begin{example}{不变子集$\neq$封闭子集}{}
+	考虑配备乘法的原群$\N$,其子集$\left\{1\right\}$是封闭子集,但在左平移作用下,$\left\{1\right\}$生成的不变子集是$\N$.
+\end{example}
+
+\begin{definition}{限制作用/诱导作用}{}
+	设$\iota:A\hookrightarrow E$是典范嵌入,$A$是不变子集.我们称$\Omega\to\End_{\mathsf{Set}}\left(A\right),\alpha\mapsto \iota\circ f_{\iota}$是该作用在$A$上诱导的作用.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+

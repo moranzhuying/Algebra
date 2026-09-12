@@ -1,0 +1,63 @@
+\chapter{有序群·整除性}
+
+\section{有序幺半群与有序群的定义}
+
+记号约定:$M$是交换幺半群(加法记号),$\leqslant$是$M$上的偏序.
+
+\begin{definition}{有序幺半群,有序群}{}
+	\begin{enumerate}
+		\item 若$\forall x,y,z\in M\left(x\leqslant y\implies x+z\leqslant y+z\right)$,则称$\left(M,+,\leq\right)$是有序幺半群,$M$上的加法和该偏序相容.
+		\item 若$M$既是群又是有序幺半群,则称$\left(M,+,\leq\right)$为有序群.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 设$N$是幺半群(乘法记号),$\leq$是$N$上的偏序.若$\forall x,y,z\in N\left(x\leq y\implies xz\leq yz\right)$,则称$\leq$和$N$上的乘法相容.
+		\item 如果$\left(M,+,\leq\right)$是有序幺半群,那么$\left(M,+,\geq\right)$也是有序幺半群.
+	\end{enumerate}
+\end{remark}
+
+\begin{example}{有序幺半群的例子}{}
+	\begin{enumerate}
+		\item $\Q$和$\R$各自的加法群按照通常的偏序构成有序群.
+		\item 集合$I$上的有限实值函数组成的加法群按照逐点偏序构成有序群.直观地说,这描述的是一个函数的图像在另一个函数的图像的下方.
+	\end{enumerate}
+\end{example}
+
+
+\begin{definition}{有序幺半群同构,有序群同构}{}
+	设$\left(M,+,\leq\right),\left(N,+,\leq\right)$是有序幺半群,$f:M\to M^{\prime}$.
+	\begin{enumerate}
+		\item 若$f$既是幺半群同构又是保序同构,则称$f$是有序幺半群同构.
+		\item 若$\left(M,+,\leq\right),\left(N,+,\leq\right)$都是有序群,$f$是有序幺半群同构,则称$f$为有序群同构.
+	\end{enumerate}
+\end{definition}
+
+本节接下来的内容默认$\left(M,+,\leq\right)$是有序幺半群.
+
+\begin{proposition}{不等式的加法性质}{}
+	设$\left(\left(x_{i},y_{i}\right)\right)_{i=1}^{n}$是$M\times M$中的序列.
+	\begin{enumerate}
+		\item 若$\forall 1\leq i\leq n\left(x_{i}\leqslant y_{i}\right)$,则$\sum\limits_{i=1}^{n}x_{i}\leqslant\sum\limits_{i=1}^{n}y_{i}$.
+		\item 若对每个$1\leq i\leq n$,元素$x_{i}$和$y_{i}$都可消去,并且存在$1\leq j\leq n$使得$x_{j}<y_{j}$,则$\sum\limits_{i=1}^{n}x_{i}<\sum\limits_{i=1}^{n}y_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{有序群中偏序的平移不变性}{}
+	设$\left(M,+,\leq\right)$是有序群,则$\forall x,y,z\in M\left(x\leqslant y\iff x+z\leqslant y+z\right)$.
+\end{proposition}
+
+\begin{remark}{}{}
+	这个命题表明,有序群上的平移都是保序自同构.
+\end{remark}
+
+\begin{corollary}{有序群中与$0$比较的不等式的等价形式}{}
+	设$\left(M,+,\leq\right)$是有序群,则$\forall x,y\in M\left(x\leqslant y\iff 0\leqslant y-x\iff x-y\leqslant 0\iff -y\leqslant -x\right)$.
+\end{corollary}
+
+\begin{remark}{}{}
+	这个命题表明,$M\to M,x\mapsto -x$是反序同构.
+\end{remark}
+
+

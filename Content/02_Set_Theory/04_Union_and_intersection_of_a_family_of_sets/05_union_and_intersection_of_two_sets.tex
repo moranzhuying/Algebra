@@ -1,0 +1,48 @@
+\section{两个集合的交与并}
+
+\begin{definition}{两个集合的并和交的定义}{}
+	设$A_{1},\ldots,A_{n}$是集合.定义$A_{1}\cup\ldots\cup A_{n}$为$\bigcup\limits_{X\in\left\{A_{1},\ldots,A_{n}\right\}}X$,$A_{1}\cap\ldots\cap A_{n}$为$\bigcap\limits_{X\in\left\{A_{1},\ldots,A_{n}\right\}}X$.
+\end{definition}
+
+\begin{proposition}{集合的交和并交换律,结合律和分配律}{}
+	设$A,B,C$是集合.
+	\begin{enumerate}
+		\item (交换律)$A\cup B=B\cup A,A\cap B=B\cap A$.
+		\item (结合律)$A\cup\left(B\cup C\right)=\left(A\cup B\right)\cup C,A\cap\left(B\cap C\right)=\left(A\cap B\right)\cap C$.
+		\item (分配律)$A\cup\left(B\cap C\right)=\left(A\cup B\right)\cap\left(A\cup C\right),A\cap\left(B\cup C\right)=\left(A\cap B\right)\cup\left(A\cap C\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{集合包含的格论描述}{}
+	设$A,B$是集合,则$A\subseteq B\iff A\cup B=B\iff A\cap B=A$.
+\end{proposition}
+
+\begin{proposition}{两个集合的补集性质}{}
+	设$A,B$是集合$E$的子集.
+	\begin{enumerate}
+		\item $E\setminus\left(A\cup B\right)=\left(E\setminus A\right)\cap\left(E\setminus B\right),E\setminus\left(A\cap B\right)=\left(E\setminus A\right)\cup\left(E\setminus B\right)$.
+		\item $A\cup\left(E\setminus A\right)=A,A\cap\left(E\setminus A\right)=\emptyset$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{对应下的像}{}
+	设$\Gamma$是集合$E$到集合$F$的对应,$A,B$是$E$的子集,则$\Gamma\left(A\cup B\right)=\Gamma\left(A\right)\cup\Gamma\left(B\right),\Gamma\left(A\cap B\right)\subseteq\Gamma\left(A\right)\cap\Gamma\left(B\right)$.
+\end{proposition}
+
+\begin{proposition}{映射原像的性质}{}
+	设$f:E\to F$是映射.
+	\begin{enumerate}
+		\item 若$A,B$是$F$的子集,则$f^{-1}\left(A\cap B\right)=f^{-1}\left(A\right)\cap f^{-1}\left(B\right)$.
+		\item 对$F$的每个子集$B$,有$f^{-1}\left(F\setminus B\right)=f^{-1}\left(F\right)\setminus f^{-1}\left(B\right)$.
+		\item 若$f$是单射,则对$A$的每个子集$A$,有$f\left(E\setminus A\right)=\im\left(f\right)\setminus f\left(A\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{集合在子集上的限制}{}
+	设$X$是集合,$A$是其子集.称$X\cap A$是$X$在$A$上的限制.
+\end{definition}
+
+\begin{definition}{集合系的限制}{}
+	设$\mathfrak{F}$是集合组成的集合,$A$是$\mathfrak{F}$中每个元素的子集.我们称$\left\{X\cap A\middle|X\in\mathfrak{F}\right\}$为$\mathfrak{F}$在$A$上的限制.
+\end{definition}
+

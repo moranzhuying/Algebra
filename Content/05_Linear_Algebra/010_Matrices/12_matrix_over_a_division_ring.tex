@@ -1,0 +1,58 @@
+\section{除环上的矩阵}
+
+记号约定:$K$是除环,$m,n\in\N,\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq m\\1\leq j\leq n}}\in\mathbf{M}_{m,n}\left(K\right)$.
+
+\begin{definition}{矩阵的行空间,列空间,行秩,列秩}{}
+	\begin{enumerate}
+		\item $\left(\row_{i}\left(\boldsymbol{A}\right)\right)_{i=1}^{m}$生成的$K_{s}^{m}$的左$R$-子模称为$\boldsymbol{A}$的行空间,记作$\row\left(\boldsymbol{A}\right)$.
+		\item $\left(\col_{j}\left(\boldsymbol{A}\right)\right)_{j=1}^{n}$生成的$K_{d}^{n}$的右$R$-子模称为$\boldsymbol{A}$的列空间,记作$\col\left(\boldsymbol{A}\right)$.
+		\item $\dim_{K}\row\left(\boldsymbol{A}\right)$和$\dim_{K}\col\left(\boldsymbol{A}\right)$分别称为$A$在$K$中的行秩和列秩,依次记作$\rank_{\row}\left(\boldsymbol{A}\right)$和$\rank_{\col}\left(\boldsymbol{A}\right)$
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{矩阵的行秩和列秩分别与对应的线性映射的秩相等}{}
+	设$\mathcal{B},\mathcal{C},\mathcal{B}^{\prime},\mathcal{C}^{\prime}$分别是$K_{s}^{n},K_{s}^{m}$的典范基,$\boldsymbol{A}$通过同构对应到$f_{\boldsymbol{A}}\in\Hom_{A}\left(A_{s}^{m},A_{s}^{n}\right)$和$g_{\boldsymbol{A}}\in\Hom_{A}\left(A_{d}^{n},A_{d}^{m}\right)$,则
+	\begin{align*}
+		\dim_{K}\im\left(f_{\boldsymbol{A}}\right)=\dim_{K}\row\left(\boldsymbol{A}\right),\dim_{K}\im\left(g_{\boldsymbol{A}}\right)=\dim_{K}\col\left(\boldsymbol{A}\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{矩阵的列秩不随除环扩充而改变}{}
+	设$K_{0}$是$K$的子除环.若$\boldsymbol{A}\in\mathbf{M}_{m,n}\left(K_{0}\right)$,则$\dim_{K}\col\left(A\right)=\dim_{K_{0}}\col\left(\boldsymbol{A}\right)$.
+\end{proposition}
+
+\begin{proposition}{矩阵的行秩和列秩相等}{}
+	$\dim_{K}\col\left(\boldsymbol{A}\right)=\dim_{K^{\op}}\col\left(\boldsymbol{A}\right)$.
+\end{proposition}
+
+\begin{definition}{矩阵的秩}{}
+	我们称$\rank\left(\boldsymbol{A}\right)\coloneq\rank_{\col}\left(\boldsymbol{A}\right)$是$\boldsymbol{A}$的秩.
+\end{definition}
+
+\begin{proposition}{矩阵的秩的基本性质}{}
+	\begin{enumerate}
+		\item $\rank\left(A\right)\leq\inf\left(m,n\right)$.
+		\item 对$\boldsymbol{X}$的每个子矩阵$\boldsymbol{Y}$都有$\rank\left(\boldsymbol{Y}\right)\leq\rank\left(\boldsymbol{X}\right)$.
+		\item 若$E,F$是右$K$-向量空间,各自的基分别是$\mathcal{B},\mathcal{C}$,$f\in\Hom_{K}\left(E,F\right)$,则$\rank\left(f\right)=\rank\left(\left[f\right]_{\mathcal{B}}^{\mathcal{C}}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{方阵双边可逆$\iff$单边可逆$\iff$满秩}{}
+	若$m=n$,则$\boldsymbol{A}\in\GL_{n}\left(K\right)$ $\iff$ $\boldsymbol{A}$左可逆$\iff$ $\boldsymbol{A}$右可逆$\iff$ $\rank\left(\boldsymbol{A}\right)=n$.
+\end{proposition}
+
+\begin{proposition}{线性方程组有唯一解的增广矩阵判别法}{}
+	设$\boldsymbol{B}\coloneq\left(b_{i}\right)_{1\leq i\leq n}$是$K$上的列矩阵,$\left(\boldsymbol{A}|\boldsymbol{B}\right)\in\mathbf{M}_{m,n+1}\left(K\right)$满足$\col_{i}\left(\left(\boldsymbol{A}|\boldsymbol{B}\right)\right)=
+	\begin{cases}
+		\col_{i}\left(\boldsymbol{A}\right),&1\leq i\leq n,\\
+		\boldsymbol{B},&i=n+1.
+	\end{cases}$那么:
+	\begin{center}
+		$K$上的右线性方程组$\sum\limits_{j=1}^{n}a_{i,j}x_{j}=b_{i}\left(1\leqslant i\leqslant m\right)$有唯一解$\iff$ $\rank\left(\boldsymbol{A}\right)=\rank\left(\left(\boldsymbol{A}|\boldsymbol{B}\right)\right)$.
+	\end{center}
+\end{proposition}
+
+\begin{remark}{}{}
+	当$m=n$且$\boldsymbol{A}\in\GL_{n}\left(K\right)$时,线性方程组一定有唯一解.若记$\boldsymbol{x}\coloneq\left(x_{i}\right)_{1\leq i\leq n}$为$K$中的列矩阵,则$\boldsymbol{x}=\boldsymbol{A}^{-1}\boldsymbol{B}$.
+\end{remark}
+

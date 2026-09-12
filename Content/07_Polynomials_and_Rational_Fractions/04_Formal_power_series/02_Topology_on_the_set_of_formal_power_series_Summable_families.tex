@@ -1,0 +1,181 @@
+\section{形式幂级数环上的拓扑·可和族}
+
+记号约定:$\Lambda$是集合.
+
+\begin{definition}{形式幂级数环上的典范拓扑}{}
+	为$A$配备离散拓扑,$A[[(X_{i})_{i\in I}]]$配备乘积拓扑,称该乘积拓扑为$A[[(X_{i})_{i\in I}]]$的典范拓扑.
+\end{definition}
+
+\begin{proposition}{形式幂级数环的拓扑性质}{}
+	\begin{enumerate}
+		\item $A[[(X_{i})_{i\in I}]]$是完备Hausdorff拓扑环.
+		\item 把$A[(X_{i})_{i\in I}]]$等同于$A[[(X_{i})_{i\in I}]]$的子环,则$A[[\left(X_{i}\right)_{i\in I}]]$是$A[(X_{i})_{i\in I}]$的完备化.
+		\item 对每个$\beta\in\N^{\left(I\right)}$,记
+		\begin{align*}
+			S_{\beta}=\left\{\nu\in\N^{\left(I\right)}\middle|\nu\leq\beta\right\},\mathfrak{a}_{\beta}=\left\{\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}\middle|\forall\nu\in S_{\beta}\left(\alpha_{\nu}=0\right)\right\},
+		\end{align*}
+		则$\left(\mathfrak{a}_{\beta}\right)_{\beta\in\N^{\left(I\right)}}$是$A[[(X_{i})_{i\in I}]]$中$0$处的邻域基.
+	\end{enumerate}
+\end{proposition}
+
+\begin{lemma}{形式幂级数族可和的等价条件}{}
+	设$\Lambda$是无限集,$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$是$A[[(X_{i})_{i\in I}]]$中的元素族,对每个$\lambda\in\Lambda$有$u_{\lambda}=\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\lambda,\nu}X^{\nu}$.下列陈述等价:
+	\begin{enumerate}
+		\item $\left(u_{\lambda}\right)_{\lambda\in\Lambda}$在$A[[(X_{i})_{i\in I}]]$中可和.
+		\item 设$\mathfrak{F}$是余有限滤子,则$\limit_{\mathfrak{F}}u_{\lambda}=0$.
+		\item 对每个$\nu\in\N^{\left(I\right)}$,元素族$\left(\alpha_{\lambda,\nu}\right)_{\lambda\in\Lambda}$有限支撑.
+	\end{enumerate}
+	三个条件之一成立时,$\sum\limits_{\lambda\in\Lambda}u_{\lambda}=\sum\limits_{\nu\in\N^{\left(I\right)}}\left(\sum\limits_{\lambda\in\Lambda}\alpha_{\lambda,\nu}\right)X^{\nu}$.
+\end{lemma}
+
+\begin{example}{形式幂级数环中可和族的例子}{}
+	\begin{enumerate}
+		\item 设$u=\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}\in A[[(X_{i})_{i\in I}]]$,则$\left(\alpha_{\nu}X^{\nu}\right)_{\nu\in\N^{\left(I\right)}}$可和,它的和是$u$.
+		\item 设$u\in A[[(X_{i})_{i\in I}]]$,对每个$p\in\N$,$u$的$p$次齐次分量是$p$,则$\left(u_{p}\right)_{p\in\N}$可和,它的和是$u$.
+		\item 设$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$是$A[[(X_{i})_{i\in I}]]$中的元素族.若对每个$n\in\N$,集合$\left\{\lambda\in\Lambda\middle|\omega\left(u_{\lambda}\right)<n\right\}$有限,则$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$可和.
+	\end{enumerate}
+\end{example}
+
+\begin{remark}{有限形式幂级数环上的$\mathfrak{m}$进拓扑}{m-adic-topology-over-formal-power-series-ring}
+	设$I$是有限集.对每个$n\in\N$,记$\mathfrak{b}_{n}=\left\{u\in A[[(X_{i})_{i\in I}]]\middle|\omega\left(n\right)\geq n\right\}$,则$\left(\mathfrak{b}_{n}\right)_{n\in\N}$是$A[[(X_{i})_{i\in I}]]$中$0$处的邻域基.我们现在来考虑$A[[(X_{i})_{i\in I}]]$中的元素族$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$,则$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$可和$\iff$对每个$n\in\N$,集合$\left\{\lambda\in\Lambda\middle|\omega\left(u_{\lambda}\right)<n\right\}$有限.
+\end{remark}
+
+\begin{proposition}{形式幂级数环中可和族的乘积}{}
+	设$\left(x_{\lambda}\right)_{\lambda\in L}$和$\left(y_{\mu}\right)_{\mu\in M}$是$A[[(X_{i})_{i\in I}]]$中的可和族,则$\left(x_{\lambda}y_{\mu}\right)_{\lambda\in L,\mu\in M}$是$A[[(X_{i})_{i\in I}]]$中的可和族,并且
+	\begin{align*}
+		\sum\limits_{\left(\lambda,\mu\right)\times L\times M}=\left(\sum\limits_{\lambda\in L}x_{\lambda}\right)\left(\sum\limits_{\mu\in M}y_{\mu}\right).
+	\end{align*}
+\end{proposition}
+
+\begin{remark}{}{}
+	由于$A[[(X_{i})_{i\in I}]]$的乘法满足交换律和结合律,因此我们可以自然地考察其中的可乘族和无限乘积.
+\end{remark}
+
+\begin{proposition}{形式幂级数环中的无限乘积和可乘族}{}
+	设$\left(u_{\lambda}\right)_{\lambda\in\Lambda}$是$A[[(X_{i})_{i\in I}]]$的可乘族,对每个$M\in\fin\left(\Lambda\right)$,记$u_{M}=\prod\limits_{\lambda\in M}u_{\lambda}$.
+	\begin{enumerate}
+		\item $\left(1+u_{\lambda}\right)_{\lambda\in\Lambda}$是可乘族.
+		\item $\left(u_{M}\right)_{M\in\fin\left(\Lambda\right)}$是可乘族,并且$\sum\limits_{M\in\fin\left(\Lambda\right)}u_{M}=\prod\limits_{\lambda\in\Lambda}\left(1+u_{\lambda}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{幂零的形式幂级数}{}
+	设$u=\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}\in A[[(X_{i})_{i\in I}]],m>0$,对每个$n\in\N$,记$\left(\alpha_{\nu,n}\right)_{\nu\in\N^{\left(I\right)}}$是$u^{m}$的系数族.若$u$的常数项是$m$-幂零的,则
+	\begin{align*}
+		\forall\nu\in\N^{\left(I\right)}\forall n\geq\left|\nu\right|+m\left(\alpha_{\nu,n}=0\right).
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{形式幂级数的极限收敛到$0$的等价条件}{}
+	设$u\in A[[(X_{i})_{i\in I}]]$,则$\limit_{n\to+\infty}u^{n}=0$ $\iff$ $u$的常数项系数是幂零元.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

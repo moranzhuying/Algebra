@@ -1,0 +1,133 @@
+\section{代数的范数和迹的性质}
+
+\begin{proposition}{可逆性的范数判定}{}
+	设$A$作为$K$-模具备有限基,$a\in A$,则$a\in A^{\times}\iff\Norm_{A/K}\left(a\right)\in K^{\times}$.
+\end{proposition}
+
+\begin{proposition}{Hamilton-Caylay性质}{}
+	设$A$作为$K$-模具备有限基,则对每个$a\in A$有$\Pc_{A/K}\left(a;a\right)=0$.
+\end{proposition}
+
+\begin{proposition}{幂零理想的的商代数性质}{}
+	设$\mathfrak{m}$是$A$的双边理想.假设
+	\begin{itemize}
+		\item $A_{0}\coloneq A/\mathfrak{m}$作为$K$-模是$n$维的,
+		\item $r>0$且$\mathfrak{m}^{r}=\left\{0\right\}$,
+		\item 对每个$1\leq i\leq i$,$\mathfrak{m}^{i-1}/\mathfrak{m}^{i}$是$s_{i}$维$A_{0}$-模.
+	\end{itemize}
+	记$s=\sum\limits_{i=1}^{r}$,对每个$a\in A$,记$a_{0}=a+\mathfrak{m}$.
+	\begin{enumerate}
+		\item $A$作为$K$-模是$ns$维的.
+		\item 对每个$a\in A$,有$\Tr_{A}\left(a\right)=s\Tr_{A_{0}}\left(a_{0}\right),\Norm_{A}\left(a\right)=\left(\Norm_{A_{0}}\left(a_{0}\right)\right)^{s},\Pc_{A}\left(a;X\right)=\left(\Pc_{A_{0}}\left(a_{0};X\right)\right)^{s}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{lemma}{}{}
+	设$\boldsymbol{X}\coloneq\left(X_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$是$n^{2}$个不定元构成的矩阵,$D\left(X_{1,1},\ldots,X_{n,n}\right)=\det\left(\boldsymbol{X}\right)\in\Z\left[X_{1,1},\ldots,X_{n,n}\right]$.若$R$是交换环,并且矩阵$\boldsymbol{M}=\left(\boldsymbol{M}_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}$由$R$上的两两可交换的$m$阶矩阵构成,则$\det\left(\boldsymbol{M}\right)=\det\left(D\left(\boldsymbol{M}_{1,1},\ldots,\boldsymbol{M}_{n,n}\right)\right)$.
+\end{lemma}
+
+\begin{proposition}{模自同态的迹,范数}{}
+	设$A$作为$K$-模具备有限基,$V$是具备有限基的$A$-模.
+	\begin{enumerate}
+		\item $\rho^{\ast}\left(V\right)$是具备有限基的$K$-模.
+		\item 对每个$u\in\End_{A}\left(V\right)$,有
+		\begin{align*}
+			\Tr_{K}\left(\rho^{\ast}\right)=\Tr_{A/K}\left(\Tr_{A}\left(u\right)\right),\det\left(\rho^{\ast}\left(u\right)\right)=\Norm_{A/K}\left(\det\left(u\right)\right),\Pc\left(\rho^{\ast}\left(u\right);X\right)=\Norm_{A\left[X\right]/K\left[X\right]}\left(\Pc_{A/K}\left(u;X\right)\right).
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{代数扩张的传递性公式}{}
+	设$A$作为$K$-模具备有限基,$B$是具备有限基的$A$-代数,则$\rho^{\ast}\left(B\right)$具备有限基,并且对每个$b\in B$,有
+	\begin{gather*}
+		\Tr_{B/K}\left(b\right)=\Tr_{A/K}\left(\Tr_{B/A}\left(b\right)\right),\\
+		\Norm_{B/K}\left(b\right)=\Norm_{A/K}\left(\Norm_{B/A}\left(b\right)\right),\\
+		\Pc_{B/K}\left(b;X\right)=\Norm_{A\left[X\right]/K\left[X\right]}\left(\Pc_{B/A}\left(b;X\right)\right).
+	\end{gather*}
+\end{corollary}
+
+\begin{remark}{自同态和导子的作用}{}
+	设$\tau:K\to A$是典范环同态,$\tau^{\ast}\left(A\right)$是具备有限基的$K$-模.
+	\begin{enumerate}
+		\item 设$s\in\Aut_{\mathsf{Ring}}\left(A\right)$,并且$s\left(\im\left(\tau\right)\right)\subseteq\im\left(\tau\right)$,则对每个$a\in A$,
+		\begin{align*}
+			\Tr_{A/K}\left(s\left(a\right)\right)=s\left(\Tr_{A/K}\left(a\right)\right),\Norm_{A/K}\left(s\left(a\right)\right)=s\left(\Norm_{A/K}\left(a\right)\right).
+		\end{align*}
+		\item 设$D$是$A$的导子,$D\left(\im\left(\tau\right)\right)\subseteq\im\left(\tau\right)$,则对每个$a\in A$,有$\Tr_{A/K}\left(D\left(a\right)\right)=D\left(\Tr_{A/K}\left(a\right)\right)$.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

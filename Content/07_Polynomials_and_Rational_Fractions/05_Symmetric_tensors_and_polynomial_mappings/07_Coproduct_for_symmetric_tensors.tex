@@ -1,0 +1,36 @@
+\section{对称张量代数上的余乘}
+
+\begin{definition}{对称张量代数上的余乘}{}
+	设$\iota:M\to M\boxplus M$和$\sigma:\mathsf{TS}\left(M\boxplus M\right)\to\mathsf{TS}\left(M\right)\otimes_{A}\mathsf{TS}\left(M\right)$是典范映射.定义$c_{M}\coloneq c\coloneq\sigma\circ\mathsf{TS}\left(\iota\right)$,则$\left(\mathsf{TS}\left(M\right),c\right)$是分次$A$-余代数.
+\end{definition}
+
+\begin{proposition}{对称张量代数上的余乘的显式计算}{}
+	\begin{enumerate}
+		\item 对每个$x\in M$和$p\in\N$有$c\left(\gamma_{p}\left(x\right)\right)=\sum\limits_{\substack{r,s\in\N\\r+s=p}}\gamma_{r}\left(x\right)\otimes\gamma_{s}\left(x\right)$.
+		\item 对每个$x\in M$有$c\left(x\right)=x\otimes 1+1\otimes x$.
+		\item 设$\left(x_{i}\right)_{i\in I}\in M^{I}$,对每个$\nu\coloneq\left(\nu_{i}\right)_{i\in I}\in\N^{\left(I\right)}$记$x_{\nu}=\prod\limits_{i\in I}\gamma_{\nu_{i}}\left(x_{i}\right)$,则对每个$\nu\in\N^{\left(I\right)}$有$c\left(x_{\nu}\right)=\sum\limits_{\substack{\rho,\sigma\in\N^{\left(I\right)}\\ \rho+\sigma=\nu}}x_{\rho}\otimes x_{\sigma}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{对称张量代数的余单位}{}
+	定义$\varepsilon\in\Hom_{A}\left(\mathsf{TS}\left(M\right),\mathsf{TS}^{0}\left(A\right)\right)$如下:$\forall p>0\forall x\in\mathsf{TS}\left(M\right)\left(\varepsilon\left(x\right)=0\right)\wedge\varepsilon\left(1\right)=1$,则$\varepsilon$是$\mathsf{TS}\left(M\right)$的余单位元.
+\end{definition}
+
+\begin{proposition}{自由模的对称张量代数是双代数}{}
+	设$M$是自由模,则$\mathsf{TS}\left(M\right)$是分次交换且余交换的$A$-双代数.
+\end{proposition}
+
+\begin{proposition}{双代数同态的函子性}{}
+	设$M,N$是自由模,$u\in\Hom_{A}\left(M,N\right)$,则$\mathsf{TS}\left(u\right)$是$A$-双代数同态.
+\end{proposition}
+
+\begin{proposition}{对称张量代数的本原元的刻画}{}
+	设$M$是自由$A$-模,则$\mathsf{TS}\left(M\right)$的本原元组成的集合为$M$.
+\end{proposition}
+
+
+
+
+
+
+

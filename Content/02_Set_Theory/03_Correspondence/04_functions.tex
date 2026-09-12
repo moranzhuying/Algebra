@@ -1,0 +1,76 @@
+\section{偏函数}
+
+\begin{definition}{偏函数关系}{}
+	设$F$是二元关系.若对每个$x$最多存在一个$y$在$F$下与之对应,则称$F$是偏函数关系.
+\end{definition}
+
+\begin{definition}{偏函数}{}
+	设$f\coloneq\left(F,A,B\right)$是对应,$F$是偏函数关系.若$A=\pr_{1}\left(F\right)$,则称$f$是偏函数.
+	
+	当$f$是偏函数时,对每个$x\in A$,在$F$下与$x$对应的$y$记作$f\left(x\right)$(或$f_{x},F\left(x\right),F_{x}$),称为$f$在$x$处的值.
+\end{definition}
+
+\begin{proposition}{函数值的判定}{}
+	设$f\coloneq\left(F,A,B\right)$是偏函数,$x$是$f$的定义域的元素,则$y=f\left(x\right)\iff\left(x,y\right)\in F$.
+\end{proposition}
+
+\begin{definition}{函数(映射)}{}
+	设$f\coloneq\left(F,A,B\right)$是偏函数.若$f$的源等于$A$,靶等于$B$,则称$f$是函数(或映射,定义在$A$上的$B$值函数).
+\end{definition}
+
+\begin{remark}{记号和术语说明}{}
+	除了短语``设$f$是从$A$到$B$的映射''外,诸如``设$f:A\to B$是映射''甚至是``设$f:A\to B$''这样的短语也经常使用的.为了简化表示包括几个映射的论断,我们会使用类似下图的图表:
+	\begin{center}
+		\begin{tikzcd}
+			&& C & \\
+			A & B && E \\
+			&& D
+			\arrow["i", from=1-3, to=2-4]
+			\arrow["f", from=2-1, to=2-2]
+			\arrow["g", from=2-2, to=1-3]
+			\arrow["h"', from=2-2, to=3-3]
+			\arrow["j"', from=3-3, to=2-4]
+		\end{tikzcd}
+	\end{center}
+	这是一群使得$A\xlongrightarrow{f}B$可以被转述为$f$是从$A$到$B$的映射的记号.
+\end{remark}
+
+\begin{definition}{变换,像}{}
+	设$f:A\to B$是映射.对每个$x\in A$,我们称$f$将$x$变换为$f\left(x\right)$,称$f\left(x\right)$为$x$在$f$下的变换结果(或$x$在$f$下的像).
+\end{definition}
+
+\begin{definition}{族,双重族}{}
+	设$F$是偏函数关系.在特定的情形下,称$F$为一个族,$F$的定义域称为这个族的指标集,陪域称为这个族的元素集.此时,我们常用$F_{x}$来代替$f\left(x\right)$以表示该族在$x$处的元素,整个族通常记作$\left(F_{x}\right)_{x\in I}$.当索引集是两个集合的笛卡尔积时,通常说这个族是一个双重族.
+\end{definition}
+
+\begin{definition}{元素族,子集族}{}
+	设$E$是集合.
+	\begin{enumerate}
+		\item 靶是$E$的偏函数称为$E$的元素族.
+		\item 设$F$是集合.若$E$的每个元素都是$F$的子集,则称靶是$E$的偏函数为$F$的子集族.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{术语说明}{}
+	如果$f\coloneq\left(F,A,B\right)$是偏函数,我们一般将$F$记作$\Gr\left(f\right)$.在非正式的叙述中,我们通常用$f$来指代$\Gr\left(f\right)$.
+\end{remark}
+
+\begin{example}{空函数,恒等函数}{}
+	\begin{enumerate}
+		\item $\emptyset$是偏函数关系.如果一个偏函数的图像是$\emptyset$,那么这个函数的定义域和陪域都是$\emptyset$.我们称$\left(\emptyset,\emptyset,\emptyset\right)$为空函数.
+		\item 设$A$是集合,则$I_{A}$是偏函数,称为恒等函数(或恒等映射).因此,集合$A$通过$I_{A}$对应于一个指标集和元素集都是$A$的族.通过语言滥用,我们有时候也说一个集合是``族''.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{常值函数}{}
+	设$f$是偏函数.若对$f$的定义域中的任意元素$x,x^{\prime}$有$f\left(x\right)=f\left(x^{\prime}\right)$,则称$f$是常值函数.
+\end{definition}
+
+\begin{definition}{不动点}{}
+	设$E$是集合,$f:E\to E$是映射,$x\in E$.若$f\left(x\right)=x$,则称$x$在$f$下不变(或$x$是$f$的不动点).
+\end{definition}
+
+
+
+
+

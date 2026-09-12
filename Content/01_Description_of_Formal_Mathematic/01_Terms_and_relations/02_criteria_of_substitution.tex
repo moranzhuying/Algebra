@@ -1,0 +1,64 @@
+\section{代入准则}
+
+形式数学仅包含显式写出的表达式.尽管如此,即使使用了缩写符号,如果严格按照这一原则来推演数学,也会导致推理链条变得极其漫长.因此,我们将建立一套与不确定的表达式相关的\underline{准则},每一条准则都将一劳永逸地描述对这些组合进行一系列特定操作后的最终结果.所以,这些准则对于理论本身而言并非不可或缺,其合理性证明属于\underline{元数学}范畴.在实践中,元数学本身的发展也需要使用缩写符号,其中一些已经在此前给出.这些符号中的大多数在数学中也同样被使用.
+
+\begin{metatheorem}{自由变量重命名(变元替换)}{}
+	设$\boldsymbol{A},\boldsymbol{B}$是表达式,$\boldsymbol{x}$和$\boldsymbol{x}^{\prime}$是字母.若$\boldsymbol{x}^{\prime}$未在$\boldsymbol{A}$中出现,则$\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{A}$和$\left(\boldsymbol{B}|\boldsymbol{x}^{\prime}\right)\left(\boldsymbol{x}^{\prime}|\boldsymbol{x}\right)\boldsymbol{A}$相同.
+\end{metatheorem}
+
+\begin{metatheorem}{代入引理(代入的交换律)}{}
+	设$\boldsymbol{A},\boldsymbol{B},\boldsymbol{C}$是表达式,$\boldsymbol{x}$和$\boldsymbol{y}$是两个不同的字母.若$\boldsymbol{y}$在$\boldsymbol{B}$中没有出现,则$\left(\boldsymbol{B}|\boldsymbol{x}\right)\left(\boldsymbol{C}|\boldsymbol{y}\right)\boldsymbol{A}$和表达式
+	\begin{align*}
+		\left(\boldsymbol{C}^{\prime}|\boldsymbol{y}\right)\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{A}
+	\end{align*}
+	相同,其中$\boldsymbol{C}^{\prime}$是表达式$\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{C}$.
+\end{metatheorem}
+
+\begin{metatheorem}{绑定变量重命名($\tau$-算子的$\alpha$-等价)}{}
+	设$\boldsymbol{A}$是表达式,$\boldsymbol{x},\boldsymbol{x}^{\prime}$是字母.若$\boldsymbol{x}^{\prime}$在$\boldsymbol{A}$中没有出现,则$\tau_{\boldsymbol{x}}\left(\boldsymbol{A}\right)$和$\tau_{\boldsymbol{x}^{\prime}}\left(\left(\boldsymbol{x}^{\prime}|\boldsymbol{x}\right)\boldsymbol{A}\right)$相同.
+\end{metatheorem}
+
+\begin{metatheorem}{变量的代入和绑定变量重命名的可交换性}{}
+	设$\boldsymbol{A},\boldsymbol{B}$是表达式,$\boldsymbol{x},\boldsymbol{x}^{\prime}$是不同的字母.若$\boldsymbol{x}$在$B$中没有出现,则$\left(\boldsymbol{B}|\boldsymbol{y}\right)\tau_{\boldsymbol{x}}\left(\boldsymbol{A}\right)$和$\tau_{\boldsymbol{x}}\left(\left(\boldsymbol{B}|\boldsymbol{y}\right)\boldsymbol{A}\right)$相同.
+\end{metatheorem}
+
+\begin{metatheorem}{代入的结构同态性}{}
+	设$\boldsymbol{A},\boldsymbol{B}$是表达式,$\boldsymbol{x}$是字母,$\boldsymbol{s}$是逻辑常元.记$\boldsymbol{A}^{\prime}$为$\left(\boldsymbol{C}|\boldsymbol{x}\right)\boldsymbol{A}$,$\boldsymbol{B}^{\prime}$为$\left(\boldsymbol{C}|\boldsymbol{x}\right)\boldsymbol{B}$,则
+	\begin{enumerate}
+		\item $\left(\boldsymbol{C}|\boldsymbol{x}\right)\left(\neg\boldsymbol{A}\right)$和$\neg\boldsymbol{A}^{\prime}$相同.
+		\item $\left(\boldsymbol{C}|\boldsymbol{x}\right)\left(\vee\boldsymbol{A}\boldsymbol{B}\right)$和$\vee\boldsymbol{A}^{\prime}\boldsymbol{B}^{\prime}$相同.
+		\item $\left(\boldsymbol{C}|\boldsymbol{x}\right)\left(\implies\boldsymbol{A}\boldsymbol{B}\right)$和$\implies\boldsymbol{A}^{\prime}\boldsymbol{B}^{\prime}$相同.
+		\item $\left(\boldsymbol{C}|\boldsymbol{x}\right)\left(\boldsymbol{s}\boldsymbol{A}\boldsymbol{B}\right)$和$\boldsymbol{s}\boldsymbol{A}^{\prime}\boldsymbol{B}^{\prime}$相同.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{example}{代入引理的例子}{}
+	设$\boldsymbol{A},\boldsymbol{B},\boldsymbol{C}$是表达式,$\boldsymbol{x}$是字母.对比以下两种操作:
+	\begin{itemize}
+		\item 将$\boldsymbol{A}$替换为$\left(\boldsymbol{B}|\boldsymbol{x}\right)\left(\boldsymbol{C}|\boldsymbol{y}\right)\boldsymbol{A}$.
+		\item 将$\boldsymbol{A}$替换为$\left(\boldsymbol{C}^{\prime}|\boldsymbol{y}\right)\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{A}$.
+	\end{itemize}
+	在这两种操作中,$\boldsymbol{A}$中出现的任何不同于$\boldsymbol{x}$和$\boldsymbol{y}$的符号都不会改变.在$\boldsymbol{A}$中出现$\boldsymbol{x}$的每一处,第一种和第二种操作都必须用$\boldsymbol{B}$替换$\boldsymbol{x}$.对于第一种操作,这是显而易见的;对于第二种操作,这是因为$\boldsymbol{y}$在$\boldsymbol{B}$中没有出现导致的.
+	
+	在$\boldsymbol{A}$中出现$\boldsymbol{y}$的每一处,第一种操作是先用$\boldsymbol{C}$替换$\boldsymbol{y}$,然后在$\boldsymbol{C}$中出现$\boldsymbol{x}$的每一处再用$\boldsymbol{B}$替换$\boldsymbol{x}$.但显而易见,这和下面这种操作是相同的:在$\boldsymbol{A}$中出现$\boldsymbol{y}$的每一个位置,直接用组合$\left(\boldsymbol{B}|\boldsymbol{x}\right)\boldsymbol{C}$来进行替换.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

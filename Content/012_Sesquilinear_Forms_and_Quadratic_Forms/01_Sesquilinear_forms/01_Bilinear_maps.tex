@@ -1,0 +1,130 @@
+\chapter{半双线性映射}
+
+\section{双线性映射}
+
+记号约定:$A,B$是环,$E$是左$A$-模,$F$是右$B$-模,$G$是$\left(A,B\right)$-双模.
+
+\begin{definition}{$\left(A,B\right)$-双线性映射}{}
+	设$\varphi\in\Hom_{\mathsf{Set}}\left(E\times F,G\right)$.若
+	\begin{enumerate}
+		\item 对每个$x\in E$有$\varphi\left(x,\cdot\right)\in\Hom_{\mathsf{Mod}-B}\left(F,G\right)$,
+		\item 对每个$y\in F$有$\varphi\left(\cdot,y\right)\in\Hom_{A-\mathsf{Mod}}\left(E,G\right)$,
+	\end{enumerate}
+	则称$\varphi$是$\left(A,B\right)$-双线性映射.
+\end{definition}
+
+\begin{definition}{$\left(A,B\right)$-双线性映射的映射集}{}
+	记$\Bil_{A,B}\left(E,F;G\right)$是$E\times F$到$G$的$\left(A,B\right)$-双线性映射组成的集合,这是典范的$\left(A,B\right)$-双模.
+\end{definition}
+
+\begin{proposition}{$\left(A,B\right)$-双线性映射的泛性质}{}
+	把$E\otimes_{\Z}F$视为典范$\left(A,B\right)$-双模.对每个$\varphi\in\Bil_{A,B}\left(E,F;G\right)$,存在唯一的$\bar{\varphi}\in\Hom_{\left(A,B\right)}\left(E\otimes_{\Z}F,G\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			{E\times F} && {E\otimes_{\Z}F} \\
+			& G
+			\arrow[from=1-1, to=1-3]
+			\arrow["\varphi"', from=1-1, to=2-2]
+			\arrow["{\exists!\bar{\varphi}}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+	其中,水平方向的箭头是典范映射.
+\end{proposition}
+
+\begin{definition}{$\left(A,B\right)$-双线性映射的左伴随和右伴随}{}
+	设$\varphi\in\Bil_{A,B}\left(E,F;G\right)$.
+	\begin{enumerate}
+		\item 我们称$s_{\varphi}:E\to\Hom_{\mathsf{Mod}-B}\left(F,G\right),x\mapsto\varphi\left(x,\cdot\right)$是$\varphi$的左伴随.
+		\item 我们称$d_{\varphi}:F\to\Hom_{A-\mathsf{Mod}}\left(E,G\right),y\mapsto\varphi\left(\cdot,y\right)$是$\varphi$的右伴随.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{$\left(A,B\right)$-双线性映射的Hom伴随}{}
+	为了简化表述,我们引入下列约定:
+	\begin{itemize}
+		\item 对每个$u\in\Hom_{A-\mathsf{Mod}}\left(E,\Hom_{\mathsf{Mod}-B}\left(F,G\right)\right)$和$x\in E$,记$u_{x}=u\left(x\right)$;
+		\item 对每个$v\in\Hom_{\mathsf{Mod}-B}\left(F,\Hom_{A-\mathsf{Mod}}\left(E,G\right)\right)$和$y\in F$,记$v_{y}=v\left(y\right)$;
+		\item $\Phi:\Bil_{A,B}\left(E,F;G\right)\to\Hom_{A-\mathsf{Mod}}\left(E,\Hom_{\mathsf{Mod}-B}\left(F,G\right)\right),f\mapsto s_{f}$;
+		\item $\Psi:\Bil_{A,B}\left(E,F;G\right)\to\Hom_{\mathsf{Mod}-B}\left(F,\Hom_{A-\mathsf{Mod}}\left(E,G\right)\right),g\mapsto d_{g}$.
+	\end{itemize}
+	那么$\varphi$和$\psi$都是典范的$\Z$-模同构,并且
+	\begin{gather*}
+		\Phi^{-1}:\Hom_{A-\mathsf{Mod}}\left(E,\Hom_{\mathsf{Mod}-B}\left(F,G\right)\right)\to\Bil_{A,B}\left(E,F;G\right),f\mapsto\left[\left(x,y\right)\mapsto f_{x}\left(y\right)\right],\\
+		\Psi^{-1}:\Hom_{\mathsf{Mod}-B}\left(F,\Hom_{A-\mathsf{Mod}}\left(E,G\right)\right)\to\Bil_{A,B}\left(E,F;G\right),g\mapsto\left[\left(x,y\right)\mapsto g_{y}\left(x\right)\right].
+	\end{gather*}
+\end{proposition}
+
+\begin{definition}{$\left(A,B\right)$-双线性映射的左根和右根}{}
+	设$\varphi\in\Bil_{A,B}\left(E,F;G\right)$.定义$\rad_{L}\left(\varphi\right)\coloneq\ker\left(s_{\varphi}\right),\rad_{R}\left(\varphi\right)=\ker\left(d_{\varphi}\right)$.
+	\begin{enumerate}
+		\item 我们称$\rad_{L}\left(\varphi\right)$是$\varphi$的左根,称$\rad_{R}\left(\varphi\right)$是$\varphi$的右根.
+		\item 若$\rad_{L}\left(\varphi\right)\neq\left\{0\right\}$,则称$\varphi$是左退化的,否则称$\varphi$是左非退化的.
+		\item 若$\rad_{R}\left(\varphi\right)\neq\left\{0\right\}$,则称$\varphi$是右退化的,否则称$\varphi$是右非退化的.
+		\item 若$\varphi$既是左非退化的,又是右非退化的,则称$\varphi$是非退化的,否则成$\varphi$是退化的.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{双线性映射关于元素族的展开式}{}
+	设$\left(e_{i}\right)_{i\in I}\in E^{I},\left(f_{j}\right)_{j\in J}\in F^{J}$,$\left(a_{i}\right)_{i\in I}\in A^{\left(I\right)},\left(b_{j}\right)_{j\in J}\in B^{\left(J\right)},\varphi\in\Hom_{\left(A,B\right)}\left(E,F\right)$.
+	\begin{enumerate}
+		\item $\varphi\left(\sum\limits_{i\in I}a_{i}e_{i},\sum\limits_{j\in J}f_{j}b_{j}\right)=\sum\limits_{\left(i,j\right)\in I\times J}a_{i}\varphi\left(e_{i},f_{j}\right)b_{j}$.
+		\item 当$\left(e_{i}\right)_{i\in I}$生成$E$,$\left(f_{j}\right)_{j\in J}$生成$F$时,对每个$\psi\in\Bil_{A,B}\left(E,F;G\right)$有
+		\begin{align*}
+			\forall\left(i,j\right)\in I\times J\left(\varphi\left(e_{i},f_{j}\right)=\psi\left(e_{i},f_{j}\right)\implies\varphi=\psi\right).
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{$\left(A,B\right)$-双线性映射和矩阵一一对应}{}
+	设$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}\in E^{I}$和$\mathcal{C}\coloneq\left(f_{j}\right)_{j\in J}\in F^{J}$分别是$E$和$F$的基.定义
+	\begin{align*}
+		\Omega:\Bil_{A,B}\left(E,F;G\right)\to G^{I\times J},f\mapsto\left(f\left(e_{i},f_{j}\right)\right)_{i\in I,j\in J},
+	\end{align*}
+	则$\Omega$是$\Z$-模同构,$\Omega^{-1}:G^{I\times J}\to\Bil_{A,B}\left(E,F;G\right),\left(a_{ij}\right)_{i\in I,j\in J}\mapsto\left[\left(\sum\limits_{i\in I}x_{i}e_{i},\sum\limits_{j\in J}f_{j}y_{j}\right)\mapsto\sum\limits_{\left(i,j\right)\in I\times J}x_{i}a_{ij}y_{j}\right].$
+\end{proposition}
+
+\begin{proposition}{$\Bil_{A,B}\left(E,F;G\right)$上的双模结构}{}
+	$\Bil_{A,B}\left(E,F;G\right)$是典范的$\left(Z\left(A\right),Z\left(B\right)\right)$-双模同构.
+\end{proposition}
+
+\begin{definition}{$\left(A,B\right)$-双线性映射的Gram矩阵}{}
+	设$I$和$J$是有限集,$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}\in E^{I}$和$\mathcal{C}\coloneq\left(f_{j}\right)_{j\in J}\in F^{J}$分别是$E$和$F$的基,$\varphi\in\Bil_{A,B}\left(E,F;G\right)$.我们称
+	\begin{align*}
+		\Gram_{\mathcal{B}}^{\mathcal{C}}\left(\varphi\right)\coloneq\left(\varphi\left(e_{i},f_{j}\right)\right)_{i\in I,j\in J}
+	\end{align*}
+	是$\varphi$在基$\mathcal{B}$和$\mathcal{C}$下的Gram矩阵.
+\end{definition}
+
+本节接下来的内容中,默认$E^{\prime}$是左$A$-模,$F^{\prime}$是右$B$-模,$G^{\prime}$是$\left(A,B\right)$-双模.
+
+\begin{lemma}{双线性映射的拉回的良定义}{well-definedness-and-properties-of-pullback-of-bilinear-mappings}
+	设$u\in\Hom_{A-\mathsf{Mod}}\left(E,E^{\prime}\right),v\in\Hom_{\mathsf{Mod}-B}\left(F,F^{\prime}\right),\varphi\in\Bil_{A,B}\left(E^{\prime},F^{\prime};G^{\prime}\right),\varphi^{\prime}\in\Hom_{\mathsf{Set}}\left(E\times F,G\right)$.若
+	\begin{align*}
+		\varphi^{\prime}=\varphi\circ\left(u\times v\right),
+	\end{align*}
+	则$\varphi\in\Bil_{A,B}\left(E,F;G\right)$,对每个$x\in E$有$s_{\varphi^{\prime}}=s_{\varphi}\left(u\left(x\right)\right)\circ v$,对每个$y\in F$有$d_{\varphi^{\prime}}=d_{\varphi}\left(v\left(y\right)\right)\circ u$.
+\end{lemma}
+
+\begin{definition}{双线性映射的拉回}{}
+	沿用引理(\ref{lem:well-definedness-and-properties-of-pullback-of-bilinear-mappings})的记号.我们称$\varphi^{\prime}$是$\varphi$沿$\left(u,v\right)$的拉回,并把$\varphi^{\prime}$记作$\varphi_{\ast}$.
+\end{definition}
+
+\begin{proposition}{双线性映射的前推}{}
+	设$\varphi\in\Bil_{A,B}\left(E,F;G\right),h\in\Hom_{\left(A,B\right)}\left(G,G^{\prime}\right)$,则$h\circ\varphi\in\Bil_{A,B}\left(E,F;G^{\prime}\right)$.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

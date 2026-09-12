@@ -1,0 +1,88 @@
+\section{子模,商模}
+
+记号约定:$A$是环,$E,F$是左$A$-模,$M\subseteq E$.
+
+\begin{definition}{$A$-子模}{}
+	设$M$是$E$的子群.若$M$是$A$在$M$上的诱导作用下的不变子集,则称$M$是$E$的$A$-子模.
+\end{definition}
+
+\begin{remark}{}{}
+	当$M$是$E$的子模时,典范嵌入$M\hookrightarrow E$是$A$-线性映射.
+\end{remark}
+
+\begin{remark}{}{}
+	向量空间的子模称为(向量)子空间.
+\end{remark}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item $E$的子群$\left\{0\right\}$是$E$的子模,称为零子模,一般滥用符号记作$0$.
+		\item $A_{s}$和$A_{d}$各自的子模分别是$A$的左理想和右理想.
+		\item 设$x\in E$,$\mathfrak{a}$是$A$的左理想,则$\mathfrak{a}x$是$E$的子模.
+		\item 设$G$是Abel群(加法记号).将$G$视为$\Z$-模,则$G$的每个子群(视为$\Z$-模后)都是$G$的$\Z$-子模.
+		\item 设$I$是$\R$的开区间,则$\mathcal{C}\left(I,\R\right)$是$\Hom_{\mathsf{Set}}\left(I,\R\right)$的子空间,$\mathcal{D}\left(I,\R\right)$是$\mathcal{C}\left(I,\R\right)$的子空间.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{商$A$-模}{}
+	设$M$是$E$的子模,则$R$-群$E/M$是$R$-模,典范映射$E\twoheadrightarrow E/M$是$A$-线性映射.我们称$A$-模$E/M$是$E$模$M$的商模.
+\end{definition}
+
+\begin{remark}{术语说明}{}
+	我们称向量空间的商模为商(向量)空间.
+\end{remark}
+
+\begin{example}{}{}
+	设$\mathfrak{a}$是$A$的左理想,则$A_{s}/\mathfrak{a}$是左$A$-模.我们通常滥用记号,将该$A$-模记作$A/\mathfrak{a}$.
+\end{example}
+
+\begin{definition}{核,像,余像,余核}{}
+	设$u\in\Hom_{A}\left(E,F\right)$.
+	\begin{enumerate}
+		\item $\ker\left(u\right)\coloneq u^{-1}\left(\left\{0\right\}\right)$称为$u$的核.
+		\item $\im\left(u\right)$称为$u$的像.
+		\item 商模$\coim\left(u\right)\coloneq E/\ker\left(u\right)$称为$u$的余像.
+		\item 商模$\coker\left(u\right)\coloneq F/\im\left(f\right)$称为$u$的余核.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{线性映射保持子模}{}
+	设$M$是$E$的子模,$N$是$F$的子模,$u\in\Hom_{A}\left(E,F\right)$.
+	\begin{enumerate}
+		\item $u^{-1}\left(N\right)$是$M$的子模.特别地,$\ker\left(u\right)$是$E$的子模.
+		\item $u\left(M\right)$是$N$的子模.特别地,$\im\left(u\right)$是$F$的子模.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{$A$-线性映射的典范分解}{}
+	设$u\in\Hom_{A}\left(E,F\right)$,则存在唯一的$\bar{u}\in\Isom_{A}\left(\coim\left(u\right),\im\left(u\right)\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			E \arrow[r, "u"] \arrow[d, "q"', two heads] & M                                        \\
+			\coim\left(u\right) \arrow[r,"\exists!\bar{u}"',dashed] & \im\left(u\right) \arrow[u, "\iota"', hook]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{proposition}{$A$-线性映射是单(相对地,满)射的等价条件}{}
+	设$u\in\Hom_{A}\left(E,F\right)$.
+	\begin{enumerate}
+		\item $u$是单射$\iff$ $\ker\left(u\right)=\left\{0\right\}$.
+		\item $u$是满射$\iff$ $\coker\left(u\right)=\left\{0\right\}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{$A$-线性映射的分解}{}
+	设$M$是$E$的子模,$f\in\Hom_{A}\left(E,F\right)$,$\phi:E\twoheadrightarrow E/M$是典范映射,则下图交换$\iff$ $M\subseteq\ker\left(u\right)$.
+	\begin{center}
+		\begin{tikzcd}
+			E && {E/M} \\
+			& F
+			\arrow["\phi", two heads, from=1-1, to=1-3]
+			\arrow["u"', from=1-1, to=2-2]
+			\arrow["{\exists v}", dashed, from=1-3, to=2-2]
+		\end{tikzcd}
+	\end{center}
+	两条件之一成立时$v$是唯一的.
+\end{remark}
+

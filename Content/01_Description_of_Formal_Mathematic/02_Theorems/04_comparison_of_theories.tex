@@ -1,0 +1,37 @@
+\section{理论的比较}
+
+\begin{definition}{更强的理论(理论的扩张)}{}
+	设$\mathcal{T}$和$\mathcal{T}^{\prime}$是两个理论.如果以下三个条件都成立,则称$\mathcal{T}^{\prime}$比$\mathcal{T}$更强(或$\mathcal{T}^{\prime}$是$\mathcal{T}$的一个扩张):
+	\begin{itemize}
+		\item $\mathcal{T}$的所有符号都是$\mathcal{T}^{\prime}$的符号.
+		\item $\mathcal{T}$的所有公理模式都是$\mathcal{T}^{\prime}$的公理模式.
+		\item $\mathcal{T}$的所有显式公理在$\mathcal{T}^{\prime}$中都是定理.
+	\end{itemize}
+\end{definition}
+
+\begin{metatheorem}{定理保持性}{}
+	若理论$\mathcal{T}^{\prime}$是理论$\mathcal{T}$的扩张,则$\mathcal{T}$的所有定理都是$\mathcal{T}^{\prime}$的定理.
+\end{metatheorem}
+
+\begin{definition}{理论的等价}{}
+	若两个理论$\mathcal{T}$和$\mathcal{T}'$满足$\mathcal{T}$是$\mathcal{T}^{\prime}$的扩张,$\mathcal{T}^{\prime}$是$\mathcal{T}$的扩张,则称$\mathcal{T}$和$\mathcal{T}^{\prime}$等价.
+\end{definition}
+
+\begin{metatheorem}{理论的翻译与解释定理}{interpretation-of-theories}
+	设$\mathcal{T}$是一个理论,其显式公理为$\boldsymbol{A}_{1},\ldots,\boldsymbol{A}_{n}$,常元为$\boldsymbol{a}_{1},\ldots,\boldsymbol{a}_{h}$,$\boldsymbol{T}_{1},\ldots,\boldsymbol{T}_{h}$是另一个理论$\mathcal{T}^{\prime}$的项.若以下条件成立:
+	\begin{itemize}
+		\item $\mathcal{T}$的所有符号都是$\mathcal{T}^{\prime}$的符号,$\mathcal{T}$的公理模式都是$\mathcal{T}^{\prime}$的公理模式;
+		\item 对$i=1,\ldots,n$,$\left(\boldsymbol{T}_{1}|\boldsymbol{a}_{1}\right)\ldots\left(\boldsymbol{T}_{h}|\boldsymbol{a}_{h}\right)\boldsymbol{A}_{i}$是$\mathcal{T}^{\prime}$的定理,
+	\end{itemize}
+	则对于$\mathcal{T}$的每个定理$A$,$\left(\boldsymbol{T}_{1}|\boldsymbol{a}_{1}\right)\ldots\left(\boldsymbol{T}_{h}|\boldsymbol{a}_{h}\right)\boldsymbol{A}$是$\mathcal{T}^{\prime}$的一个定理.
+\end{metatheorem}
+
+\begin{corollary}{相对一致性定理}{}
+	记号和假设同元定理(\ref{metathm:interpretation-of-theories}).若理论$\mathcal{T}$是不一致的,则理论$\mathcal{T}^{\prime}$是不一致的.
+\end{corollary}
+
+\begin{remark}{理论的解释与模型}{}
+	当我们使用元定理(\ref{metathm:interpretation-of-theories}),根据$\mathcal{T}$的定理来推导理论$\mathcal{T}^{\prime}$的定理时,我们称之为在$\mathcal{T}^{\prime}$中应用理论$\mathcal{T}$的结果.直观地说,$\mathcal{T}$的公理表达了对象$\boldsymbol{a}_{1},\ldots,\boldsymbol{a}_{h}$的性质,而$\boldsymbol{A}$则表达了作为这些公理推论的某种性质.如果$\mathcal{T}^{\prime}$中的对象$\boldsymbol{T}_{1},\ldots,\boldsymbol{T}_{h}$具备$\mathcal{T}$的公理所表达的性质,那么它们同样也具备性质$\boldsymbol{A}$.
+	
+	例如,在群论$\mathcal{T}$中,显式公理包含两个常元$G$和$\mu$(分别代表群和合成法则).在集合论$\mathcal{T}^{\prime}$中,我们定义了两个``项'':实数线和实数加法.如果我们将$\mathcal{T}$的显式公理中的$G$和$\mu$分别替换为这两个项,就能得到$\mathcal{T}^{\prime}$中的定理.此外,由于$\mathcal{T}$和$\mathcal{T}^{\prime}$的公理模式与符号是相同的,因此我们可以``将群论的结果应用于实数加法群''.在这种情况下,我们就说在集合论中为群论构造了一个\underline{模型}.(注意,由于群论在逻辑上比集合论更强,我们同样可以将集合论的结果应用到群论中.)
+\end{remark}

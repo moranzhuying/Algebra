@@ -1,0 +1,43 @@
+\section{正部与负部}
+
+记号约定:$\left(G,+,\leq\right)$是格序群,$A$是整环,$K=\Frac\left(A\right)$.
+
+\begin{definition}{正部,负部,绝对值}{}
+	对每个$x\in G$,定义$x^{+}\coloneq\sup\left(x,0\right),x^{-}\coloneq\sup\left(-x,0\right),\left|x\right|\coloneq\sup\left(x,-x\right)$,依次称三者为$x$的正部,负部和绝对值.
+\end{definition}
+
+\begin{remark}{}{}
+	固定$x,y\in G$,则$x^{-}=\left(-x\right)^{+},\left|-x\right|=\left|x\right|,\sup\left(x,y\right)=x+\left(y-x\right)^{+},\inf\left(x,y\right)=y-\left(y-x\right)^{+}$.
+\end{remark}
+
+\begin{proposition}{格序群中元素的典范分解和元素的性质}{}
+	\begin{enumerate}
+		\item 对每个$x\in G$有$x=x^{+}-x^{-}$和$\inf\left(x^{+},x^{-}\right)=0$.
+		\item 对每个$x\in G$和$u,v\in G_{\geq 0}$,若$x=u-v$,则存在$w=\inf\left(u,v\right)$使得$u=x^{+}+w$且$v=x^{-}+w$.进一步,若$\inf\left(u,v\right)=0$,则$w$是唯一的.
+		\item 对每个$x,y\in G$有$x\leq y\iff\left(x^{+}\leq y^{+}\wedge x^{-}\geq y^{-}\right)$.
+		\item 对每个$x\in G$有$\left|x\right|=x^{+}+x^{-}$和$\left|x\right|\geq 0$.
+		\item 对每个$x\in G\setminus\left\{0\right\}$有$\left|x\right|>0$.
+		\item 对每个$x,y\in G$有$\left|x+y\right|\leq\left|x\right|+\left|y\right|$.一般地,对每个$n\in\N$和$x_{1},\ldots,x_{n}\in G$有$\left|\sum\limits_{i=1}^{n}x_{i}\right|\leq\sum\limits_{i=1}^{n}\left|x_{i}\right|$.
+		\item 对每个$x,y\in G$有$\left|\left|x\right|-\left|y\right|\right|\leq\left|x-y\right|$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{分式域中的既约分数表示}{}
+	设$\mathscr{P}^{\ast}\left(K\right)$是格序群.
+	\begin{enumerate}
+		\item 对每个$x\in K^{\times}$,存在$u\in A$和$v\in A\setminus\left\{0\right\}$使得$x=\frac{u}{v}$且$u$和$v$互素.
+		\item 对每个$x\in K^{\times},u_{1},u_{2}\in A,v_{1},v_{2}\in A\setminus\left\{0\right\}$,若$x=\frac{u_{1}}{v_{1}}=\frac{
+		u_{2}}{v_{2}}$,则存在$w\in A$使得$u_{2}=u_{1}w,v_{2}=v_{1}w$.
+		\item 对每个$x\in K^{\times},u_{1},u_{2}\in A,v_{1},v_{2}\in A\setminus\left\{0\right\}$,若$u_{1}$和$v_{1}$互素,$u_{2}$和$v_{2}$互素,$x=\frac{u_{1}}{v_{1}}=\frac{u_{2}}{v_{2}}$,则$u_{1}$和$u_{2}$相伴,$v_{1}$和$v_{2}$相伴.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{既约分数}{}
+	设$\mathscr{P}^{\ast}\left(K\right)$是格序群,$x=\frac{u}{v}\in K^{\times}$,其中$u$和$v$互素.我们称$uv^{-1}$是$x$的既约分数.
+\end{definition}
+
+
+
+
+
+

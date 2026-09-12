@@ -1,0 +1,90 @@
+\section{受限量词}
+
+\begin{definition}{受限量词}{}
+	设$\boldsymbol{A}$和$\boldsymbol{R}$是公式,$\boldsymbol{x}$是字母.
+	\begin{enumerate}
+		\item $\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$(读作``存在满足$\boldsymbol{A}$的$\boldsymbol{x}$使得$\boldsymbol{R}$成立'')定义为$\left(\exists\boldsymbol{x}\right)\left(\boldsymbol{A}\wedge\boldsymbol{R}\right)$的缩写.
+		\item $\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$(读作``对于所有满足$\boldsymbol{A}$的$\boldsymbol{x}$,$\boldsymbol{R}$成立'')定义为$\neg\left(\exists\boldsymbol{x}\right)\neg\boldsymbol{R}$的缩写.
+	\end{enumerate}
+\end{definition}
+
+\begin{metatheorem}{受限量词的约束变元重命名}{}
+	设$\boldsymbol{A}$和$\boldsymbol{R}$是公式,$\boldsymbol{x}$和$\boldsymbol{x}^{\prime}$是两个字母,若$\boldsymbol{x}^{\prime}$在$\boldsymbol{R}$和$\boldsymbol{A}$中都未出现,$\boldsymbol{R}^{\prime},\boldsymbol{A}^{\prime}$分别和$\left(\boldsymbol{x}^{\prime}|\boldsymbol{x}\right)\boldsymbol{A},\left(\boldsymbol{x}^{\prime}|\boldsymbol{x}\right)\boldsymbol{A}$相同,则
+	\begin{enumerate}
+		\item $\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\exists\boldsymbol{A}^{\prime}\boldsymbol{x}^{\prime}\right)\boldsymbol{R}^{\prime}$相同.
+		\item $\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\forall\boldsymbol{A}^{\prime}\boldsymbol{x}^{\prime}\right)\boldsymbol{R}^{\prime}$相同.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{受限量词的自由代入律}{}
+	设$\boldsymbol{A},\boldsymbol{R},\boldsymbol{U}$是公式,$\boldsymbol{x}$和$\boldsymbol{y}$是两个不同的字母.若$\boldsymbol{x}$未在$\boldsymbol{U}$中出现,$\boldsymbol{R}^{\prime},\boldsymbol{A}^{\prime}$分别和$\left(\boldsymbol{U}|\boldsymbol{y}\right)\boldsymbol{R},\left(\boldsymbol{U}|\boldsymbol{y}\right)\boldsymbol{A}$相同,则
+	\begin{enumerate}
+		\item $\left(\boldsymbol{U}|\boldsymbol{y}\right)\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\exists\boldsymbol{A}^{\prime}\boldsymbol{x}^{\prime}\right)\boldsymbol{R}^{\prime}$相同.
+		\item $\left(\boldsymbol{U}|\boldsymbol{y}\right)\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\forall\boldsymbol{A}^{\prime}\boldsymbol{x}^{\prime}\right)\boldsymbol{R}^{\prime}$相同.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{受限量化公式的封闭性}{}
+	若$\boldsymbol{A}$和$\boldsymbol{R}$是理论$\mathcal{T}$中的公式,$\boldsymbol{x}$是一个字母,则$\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$都是$\mathcal{T}$中的公式.
+\end{metatheorem}
+
+\begin{remark}{}{}
+	直观地看,我们可以将$\boldsymbol{A}$和$\boldsymbol{R}$视为表达$\boldsymbol{x}$的性质的公式.在一系列证明中,有时我们可能仅关注那些满足性质$\boldsymbol{A}$的对象.所谓存在一个满足$\boldsymbol{A}$且使得$\boldsymbol{R}$成立的对象,其含义是指存在一个对象使得``$\boldsymbol{A}$且$\boldsymbol{R}$''成立,由此便引出了$\exists\boldsymbol{A}$的定义.所谓所有满足$\boldsymbol{A}$的对象都具有性质$\boldsymbol{R}$,其含义是指不存在满足$\boldsymbol{A}$但使得``非$\boldsymbol{R}$''成立的对象,由此便引出了$\forall\boldsymbol{A}$的定义.在实践中,根据关系$\boldsymbol{A}$的性质,这些符号会被各种措辞所替代.例如,``对于所有整数$\boldsymbol{x}$,$\boldsymbol{R}$成立'',``存在集合$\boldsymbol{E}$的一个元素$\boldsymbol{x}$使得$\boldsymbol{R}$成立'',等等.
+\end{remark}
+
+\begin{metatheorem}{受限全称量词的蕴含等价形式}{}
+	设$\boldsymbol{A}$和$\boldsymbol{R}$是理论$\mathcal{T}$中的公式,$\boldsymbol{x}$是一个字母,则$\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$和$\left(\forall\boldsymbol{x}\right)\left(\boldsymbol{A}\implies\boldsymbol{R}\right)$在$\mathcal{T}$中等价.
+\end{metatheorem}
+
+\begin{metatheorem}{受限全称量词引入法}{}
+	设$\boldsymbol{A},\boldsymbol{R}$是理论$\mathcal{T}$中的公式,字母$\boldsymbol{x}$不是$\mathcal{T}$的常元,$\mathcal{T}^{\prime}$是通过将$\boldsymbol{A}$作为新公理添加到$\mathcal{T}$中得到的理论.若$\boldsymbol{R}$是理论$\mathcal{T}$中的定理,则$\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$中的一个定理.
+\end{metatheorem}
+
+\begin{remark}{}{}
+	我们经常需要证明形如$\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$的公式,通常我们会使用这两个准则之一.在实践中,我们通常用诸如``设 $\boldsymbol{x}$为满足$\boldsymbol{A}$的任一元素''之类的措辞,来表示将要使用这条规则.在由此定义的理论$\mathcal{T}^{\prime}$中,我们寻求证明$\boldsymbol{R}$.当然,我们不能直接断言$\boldsymbol{R}$本身就是原理论$\mathcal{T}$中的一个定理.
+\end{remark}
+
+\begin{metatheorem}{受限反证法}{}
+	设$\boldsymbol{A},\boldsymbol{R}$是理论$\mathcal{T}$中的公式,字母$\boldsymbol{x}$不是$\mathcal{T}$的常元,$\mathcal{T}^{\prime}$是通过将$\boldsymbol{A}$和$\neg\boldsymbol{R}$作为新公理添加到$\mathcal{T}$中得到的理论.若$\mathcal{T}^{\prime}$是不一致的,则$\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$中的一个定理.
+\end{metatheorem}
+
+\begin{remark}{}{}
+	在实践中,我们会使用``假设存在对象$\boldsymbol{x}$满足$\boldsymbol{R}$且使$\boldsymbol{R}$为假''的措辞,然后寻求建立矛盾.
+\end{remark}
+
+\begin{metatheorem}{受限量词的De Morgan律}{}
+	设$\boldsymbol{A},\boldsymbol{R}$是理论$\mathcal{T}$中的公式,$\boldsymbol{x}$是字母,则$\neg\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}\iff\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\neg\boldsymbol{R}$
+\end{metatheorem}
+
+\begin{metatheorem}{受限量词的单调性与等价分布律}{}
+	设$\boldsymbol{A},\boldsymbol{R},\boldsymbol{S}$是理论$\mathcal{T}$中的公式,字母$\boldsymbol{x}$不是$\mathcal{T}$的常元.
+	\begin{enumerate}
+		\item 若$\boldsymbol{A}\implies\left(\boldsymbol{R}\implies\boldsymbol{S}\right)$是$\mathcal{T}$中的定理,则$\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}\implies\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{S}$和$\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}\implies\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{S}$是$\mathcal{T}$中的定理.
+		\item 若$\boldsymbol{A}\implies\left(\boldsymbol{R}\iff\boldsymbol{S}\right)$是$\mathcal{T}$中的定理,则$\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}\iff\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{S}$和$\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}\iff\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{S}$是$\mathcal{T}$中的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{受限量词对合取与析取的分配律}{}
+	设$\boldsymbol{A},\boldsymbol{R},\boldsymbol{S}$是理论$\mathcal{T}$中的公式,$\boldsymbol{x}$是字母.则下列等价式是T中的定理：
+	\begin{enumerate}
+		\item $\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\left(\boldsymbol{R}\wedge\boldsymbol{S}\right)\iff\left(\forall\boldsymbol{A}\right)\boldsymbol{R}\wedge\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{S}$是$\mathcal{T}$的定理.
+		\item $\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\left(\boldsymbol{R}\wedge\boldsymbol{S}\right)\iff\left(\exists\boldsymbol{A}\right)\boldsymbol{R}\wedge\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{S}$是$\mathcal{T}$的定理.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{受限量词的辖域迁移律}{}
+	设$\boldsymbol{A},\boldsymbol{R},\boldsymbol{S}$是理论$\mathcal{T}$中的公式,字母$\boldsymbol{x}$未在$\boldsymbol{R}$中出现,则
+	\begin{enumerate}
+		\item $\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\left(\boldsymbol{R}\vee\boldsymbol{S}\right)$和$\boldsymbol{R}\vee\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{S}$在$\mathcal{T}$中等价.
+		\item $\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\left(\boldsymbol{R}\wedge\boldsymbol{S}\right)$和$\boldsymbol{R}\wedge\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{S}$在$\mathcal{T}$中等价.
+	\end{enumerate}
+\end{metatheorem}
+
+\begin{metatheorem}{受限多量词交换律}{}
+	设$\boldsymbol{A},\boldsymbol{B},\boldsymbol{R}$是理论$\mathcal{T}$中的公式,$\boldsymbol{x},\boldsymbol{y}$是字母,$\boldsymbol{x}$未在$\boldsymbol{B}$中出现,$\boldsymbol{y}$未在$\boldsymbol{A}$中出现,则
+	\begin{enumerate}
+		\item $\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\left(\forall\boldsymbol{B}\boldsymbol{y}\right)\boldsymbol{R}\iff\left(\forall\boldsymbol{B}\boldsymbol{y}\right)\left(\forall\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$的定理.
+		\item $\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\left(\exists\boldsymbol{B}\boldsymbol{y}\right)\boldsymbol{R}\iff\left(\exists\boldsymbol{B}\boldsymbol{y}\right)\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$的定理.
+		\item $\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\left(\forall\boldsymbol{B}\boldsymbol{y}\right)\boldsymbol{R}\implies\left(\forall\boldsymbol{B}\boldsymbol{y}\right)\left(\exists\boldsymbol{A}\boldsymbol{x}\right)\boldsymbol{R}$是$\mathcal{T}$的定理.
+	\end{enumerate}
+\end{metatheorem}

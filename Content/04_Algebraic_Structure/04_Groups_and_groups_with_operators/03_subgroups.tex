@@ -1,0 +1,88 @@
+\section{子群}
+
+记号约定:$G$是群(采用乘法记号,幺元为$e$),集合$\Omega$在$G$上的作用是$\alpha\mapsto f_{\alpha}$使得$G$是$\Omega$-群,$X,H\subseteq G$.
+
+\begin{definition}{$\Omega$-子群}{}
+	若$e\in H,HH\subseteq H,H^{-1}\subseteq H$,则称$H$是$G$的子群;进一步,若$H$是$G$的不变子集,则称$H$是$G$的$\Omega$-子群.
+\end{definition}
+
+\begin{proposition}{子群一定是$\Omega$-子群}{}
+	设$H$是$G$的$\Omega$-子群,则$H$在诱导运算下是$\Omega$-群,典范嵌入$H\hookrightarrow G$是$\Omega$-群同态.
+\end{proposition}
+
+\begin{proposition}{$\Omega$-子群的判定准则}{}
+	设$H$是$G$的不变子集,则下列陈述等价:
+	\begin{enumerate}
+		\item $H$是$G$的$\Omega$-子群.
+		\item $H\neq\emptyset,HH\subseteq H,H^{-1}\subseteq H$.
+		\item $H\neq\emptyset,HH^{-1}\subseteq H$.
+		\item $H\neq\emptyset,H^{-1}H\subseteq H$.
+		\item $H$是$G$的封闭子集,并且在诱导运算下构成群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{子群是幂集运算中的幂等元和对称子集}{}
+	若$H$是$G$的子群,则$HH=H$且$H$是$G$的对称子集.
+\end{proposition}
+
+\begin{definition}{生成的$\Omega$-子群}{}
+	设$X\neq\emptyset$.定义$\langle X\rangle_{\Omega}\coloneq\bigcap\limits_{X\subseteq W,W\text{是}\Omega\text{-子群}}W$,称之为$X$生成的$\Omega$-子群.
+\end{definition}
+
+\begin{proposition}{生成$\Omega$群的具体结构}{}
+	设$X\neq\emptyset,\hat{X}\coloneq\langle X\rangle$是$X$生成的不变子集,则$\langle X\rangle_{\Omega}=\hat{X}\cup\hat{X}^{-1}$.
+\end{proposition}
+
+\begin{corollary}{不变子集生成的$\Omega$-子群及其生成的封闭子集(配备运算后)无异}{}
+	若$X$是不变子集,则$\langle X\rangle_{\Omega}$等于$X$生成的子群.
+\end{corollary}
+
+\begin{corollary}{群中两两可交换的元素生成的子群保持交换性}{}
+	设$\Omega=\emptyset$.若$X$的元素两两可交换,则$X$生成的子群是Abel群.
+\end{corollary}
+
+\begin{corollary}{$\Omega$-群同态的像保持$\Omega$-子群}{}
+	设$G^{\prime}$是$\Omega$-群,$f:G\to G^{\prime}$是$\Omega$-群同态,则$\langle f\left(X\right)\rangle_{\Omega}=f\left(\langle X\rangle_{\Omega}\right)$.
+\end{corollary}
+
+\begin{theorem}{极大$\Omega$-子群的存在性}{}
+	设$H$是$G$的$\Omega$-子群且$X\cap H=\emptyset$,则$G$有包含$H$且不与$X$相交的极大$\Omega$-子群.
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

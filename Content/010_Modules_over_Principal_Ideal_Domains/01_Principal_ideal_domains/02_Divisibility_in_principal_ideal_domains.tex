@@ -1,0 +1,64 @@
+\section{主理想整环中的整除性}
+
+记号约定:$A$是PID,$K=\Frac(A)$.
+
+\begin{proposition}{PID中具有公分母的元素族有gcd}{}
+	设$\left(x_{i}\right)_{i\in I}\in K^{I}$,$b\in K^{\times}$且$\forall i\in I\left(bx_{i}\in A\right)$,则
+	\begin{enumerate}
+		\item $\left(x_{i}\right)_{i\in I}$在$K$中有最大公因子.
+		\item 对$\left(x_{i}\right)_{i\in I}$在$K$中的每个最大公因子$d$,存在$\left(a_{i}\right)_{i\in I}\in A^{\left(I\right)}$使得$d=\sum\limits_{i\in I}a_{i}x_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	上述命题对于$A$中的每个元素族$\left(y_{i}\right)_{i\in I}$都成立(只需要取$b=1$),对$K$中的每个有限族$\left(z_{i}\right)_{i\in I}$也成立.
+\end{remark}
+
+\begin{proposition}{最大公因子不随扩环而改变}{}
+	设$B$是整环,$A$是$B$的子环,$\left(x_{i}\right)_{i\in I}\in A^{I}$且$d$是该元素族在$A$中的最大公因子,则
+	\begin{enumerate}
+		\item $\left(x_{i}\right)_{i\in I}$在$B$中也有最大公因子,
+		\item $d$是$\left(x_{i}\right)_{i\in I}$在$B$中的最大公因子之一.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	设$K$是域,$E$是$K$的扩域.取$A=K[X],B=E[X]$,在典范等同的意义下这个命题也成立.
+\end{remark}
+
+\begin{theorem}{PID中的Bezout定理}{}
+	设$\left(x_{i}\right)_{i\in I}\in A^{I}$,则$\left(x_{i}\right)_{i\in I}$整体互素$\iff$存在$\left(a_{i}\right)_{i\in I}\in A^{\left(I\right)}$使得$\sum\limits_{i\in I}a_{i}x_{i}=1$.
+\end{theorem}
+
+\begin{proposition}{PID中lcm,gcd和不可约元的理想刻画}{}
+	设$a,b,d,m,p\in K$.
+	\begin{enumerate}
+		\item $d$是$a$和$b$的最大公因子$\iff$ $\left(d\right)=\left(a\right)+\left(b\right)$.
+		\item $m$是$a$和$b$的最小公倍数$\iff$ $\left(m\right)=\left(a\right)\cap\left(b\right)$.
+		\item $p$是$A$的不可约元$\iff$ $\left(p\right)$是$A$的非零极大理想$\iff$ $\left(p\right)$是$A$的非零素理想.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{PID上理想的最大公因子和最小公倍数}{}
+	设$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$A$中的有限个理想构成的族.
+	\begin{enumerate}
+		\item 我们称$\sum\limits_{\lambda\in\Lambda}I_{\lambda}$是$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$的最大公因子.
+		\item 我们称$\bigcap\limits_{\lambda\in\Lambda}I_{\lambda}$是$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$的最小公倍数.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{}{}
+	设$a,b,c\in K$,$d$是$a$和$c$的最大公因子.
+	\begin{enumerate}
+		\item $A$上的同余方程$ax\equiv b\mod c$的一个解是$x_{0}$ $\iff$ $d\mid b$.
+		\item 如果$A$上的同余方程$ax\equiv b\mod c$的一个解是$x_{0}$,则$\left\{x\in A\middle|ax\equiv b\pmod{c}\right\}=\left\{x\in A\middle|x\equiv x_{0}\pmod{cd^{-1}}\right\}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{PID上环同构版本的中国剩余定理}{}
+	设$\left(a_{i}\right)_{i=1}^{n}$是$A$中两两互素的有限族,则典范同态$A/\left(\prod\limits_{i=1}^{n}a_{i}\right)\to\prod\limits_{i=1}^{n}A/\left(a_{i}\right)$是$A$-代数同构.
+\end{proposition}
+
+\begin{remark}{}{}
+	如果去掉$\left(a_{i}\right)_{i=1}^{n}$两两互素的条件,那么典范同态$A/\left(\prod\limits_{i=1}^{n}a_{i}\right)\to\prod\limits_{i=1}^{n}A/\left(a_{i}\right)$不是$A$-代数同构.
+\end{remark}

@@ -1,0 +1,71 @@
+\section{等价对象的类}
+
+\begin{definition}{等价类项}{}
+	设$R\left\{x,y\right\}$是等价关系.对任意满足$R\left\{z,z\right\}$的对象$z$,记$\theta\left\{z\right\}\coloneq\tau_{z}\left(R\left\{x,z\right\}\right)$为关于$R$与$x$等价的对象类.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$R\left\{x,y\right\}$是等价关系,则对任何满足$R\left\{x,x\right\}$的$x$和满足$R\left\{x^{\prime},x^{\prime}\right\}$的$x^{\prime}$有$xRx^{\prime}\iff\theta\left\{x\right\}=\theta\left\{x^{\prime}\right\}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$R\left\{x,y\right\}$是等价关系.如果存在项$T$使得公式
+	\begin{align*}
+		\forall y\left(R\left\{y,y\right\}\implies\exists x\left(x\in T\wedge R\left\{x,y\right\}\right)\right)
+	\end{align*}
+	为真,那么公式$\exists x\left(R\left\{x,x\right\}\wedge z=\theta\left(x\right)\right)$对$z$是集化的.
+\end{proposition}
+
+\begin{definition}{}{}
+	设$R\left\{x,y\right\}$是等价关系,项$T$使得公式$\forall y\left(R\left\{y,y\right\}\implies\exists x\left(x\in T\wedge R\left\{x,y\right\}\right)\right)$为真.记
+	\begin{align*}
+		\Theta_{R}=\left\{\theta\left(x\right)\middle|R\left\{x,x\right\}\right\},
+	\end{align*}		
+	称$\Theta_{R}$是关于$R$的等价对象类集.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$R\left\{x,y\right\}$是等价关系,项$T$使得公式$\forall y\left(R\left\{y,y\right\}\implies\exists x\left(x\in T\wedge R\left\{x,y\right\}\right)\right)$为真,公式$A\left\{x\right\}$满足
+	\begin{align*}
+		xRy\implies A\left\{x\right\}\implies A\left\{y\right\}.
+	\end{align*}
+	\begin{enumerate}
+		\item $\left\{A\left\{t\right\}\middle|t\in\Theta_{R}\right\}$是集合,将其记作$E$.
+		\item 定义偏函数$f:\Theta_{R}\to E,t\mapsto A\left\{t\right\}$,则$R\left\{x,x\right\}\implies A\left\{x\right\}=f\left(\theta\left\{x\right\}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	特别地,如果$R$是某个集合$F$上的等价关系,对任一$x\in F$记$A\left\{x\right\}\coloneq\left[x\right]_{R}$,则存在双射$\Theta_{R}\to F/R$.
+\end{remark}
+
+\begin{example}{}{}
+	设$R\left\{x,y\right\}$为公式``$x$和$y$是维数相同的$\C$-向量空间'',取$T$为$\C^{\left(\N\right)}$的所有子空间组成的集合,$T^{\prime}\left\{C_{i}\middle|i\in\N\right\}$,其中
+	\begin{center}
+		$C_{0}$是$\left\{0\right\}$,对任意$i\geq 1$,$C_{i}$是$\C^{i}$嵌入$\C^{\N}$后的像.
+	\end{center}
+	那么,$\Theta_{R}=T^{\prime}$.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

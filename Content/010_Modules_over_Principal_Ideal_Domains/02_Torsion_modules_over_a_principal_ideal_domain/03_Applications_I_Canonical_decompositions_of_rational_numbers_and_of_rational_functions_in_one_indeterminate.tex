@@ -1,0 +1,42 @@
+\section{应用I:有理数与一元有理分式的典范分解}
+
+记号约定:
+\begin{itemize}
+	\item $A$是PID,$K=\Frac(A)$,$P$是$A$中的一个不可约元代表系构成的集合.
+	\item 对每个$p\in P$,记$R_{p}$是$A$中的完全剩余系.
+\end{itemize}
+
+\begin{theorem}{PID的分式域的部分分式分解}{}
+	\begin{enumerate}
+		\item 对每个$x\in A$,存在$a_{0}\in A,H\in\fin\left(P\right),\left(a_{p}\right)_{p\in P}\in A^{P},\left(s\left(p\right)\right)_{p\in H}\in\N_{>0}^{H}$满足如下条件:
+		\begin{itemize}
+			\item $\forall p\in H\left(p\nmid a_{p}\right)$;
+			\item $x=a_{0}+\sum\limits_{p\in H}a_{p}p^{-s\left(p\right)}$;
+			\item $H$和$\left(s\left(p\right)\right)_{p\in H}$是唯一的.
+		\end{itemize}
+		\item 对每个$x\in K$,存在唯一的$a\in A,\left(r_{p,h}\right)_{p\in P,h\in\N_{\geqslant 1}}\in\prod\limits_{\left(p,h\right)\in P\times\N_{\geq 1}}R_{p}$满足如下条件:
+		\begin{itemize}
+			\item $x=a+\sum\limits_{p\in P}\sum\limits_{h\in\N_{\geqslant 1}}\frac{r_{p,h}}{p^{h}}$;
+			\item $\left(r_{p,h}\right)_{p\in P,h\in\N_{\geqslant 1}}$是有限支撑族.
+		\end{itemize}
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	现在我们来考察两种特殊情形:
+	\begin{enumerate}
+		\item $A=\Z,K=\Q,P=\mathbb{P}$,对每个$p\in P$有$R_{p}=\left[0,p-1\right]$.于是每个$x\in\Q$都能唯一地表示成
+		\begin{align*}
+			x=a+\sum\limits_{p\in P}\sum\limits_{h\in\N_{\geq 1}}e_{p,h}p^{h},
+		\end{align*}
+		其中$a\in\Z$,对每个$\left(p,h\right)\in P\times\N_{\geq 1}$有$e_{p,h}\in\left[0,p-1\right]$,并且$\left(e_{p,h}\right)_{p\in P,h\in\N_{\geq 1}}$有限支撑.
+		\item $F$是域,$A=K[X],K=F(X)$,$P$是$F[X]$中所有的首一不可约多项式组成的集合,对每个$p\in P$,
+		\begin{align*}
+			R_{p}=\left\{f\in F[X]\middle|\deg\left(f\right)<\deg\left(p\right)\right\}.
+		\end{align*}
+		因此,每个$r\in F(X)$能唯一地表示为$r=a+\sum\limits_{p\in P}\sum\limits_{h\in\N_{\geq 1}}\frac{v_{p,h}}{p^{h}}$,其中$a\in F[X]$,对每个$\left(p,h\right)\in P\times\N_{\geq 1}$,$v_{p,h}$是$F[X]$中次数$<\deg\left(p\right)$的多项式,$\left(v_{p,h}\right)_{p\in P,h\in\N_{\geq 1}}$有限支撑.特别地,若$F$是代数闭域,则
+		\begin{align*}
+			\forall\left(p,h\right)\in P\times\N_{\geq 1}\left(\deg\left(v_{p,h}\right)=0\right).
+		\end{align*}
+	\end{enumerate}
+\end{remark}

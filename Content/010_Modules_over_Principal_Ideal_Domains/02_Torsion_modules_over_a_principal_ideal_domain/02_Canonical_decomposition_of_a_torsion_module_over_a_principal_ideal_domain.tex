@@ -1,0 +1,122 @@
+\section{主理想整环上挠模的典范分解}
+
+\begin{definition}{$\alpha$-挠模,$\alpha$-幂挠子模}{}
+	设$A$是交换环,$M$是$A$-模.
+	\begin{enumerate}
+		\item 对每个$\alpha\in A$,记$M\left[\alpha\right]$为$A$-模自同态$\mathcal{L}_{\alpha}:M\to M,m\mapsto\alpha m$的核,称之为$M$的$\alpha$-挠子模.
+		\item 对每个$\alpha\in A$,记$M[\alpha^{\infty}]\coloneq\bigcup\limits_{n=1}^{\infty}M[\alpha^{n}]$,我们称之为$M$的$\alpha$-幂挠子模.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$\alpha,\beta\in A$且$\alpha\mid b$,那么$M[\alpha]\subseteq M[\beta]$.
+		\item 如果$\alpha\in A$,则$\left(M[\alpha^{n}]\right)_{n=1}^{\infty}$递增,从而存在$m\geq 1$使得$\bigcup\limits_{n=1}^{\infty}M[\alpha^{n}]=M[\alpha^{m}]$,可见$M[\alpha^{\infty}]$确实是$M$的子模.
+		\item 如果$N$是$M$的子模,则对每个$\alpha\in A$有$N[\alpha]=N\cap M[\alpha]$.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{$p$-准素模}{}
+	设$A$是PID,$M$是$A$-模,$p$是$A$中的不可约元.若$M=M\left[p^{\infty}\right]$,则称$M$是$p$-准素模.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 对每个$n\geq 1$,循环$A$-模$A/\langle p^{n}\rangle$是$p$-准素的.
+		\item 根据定义,$A$-模$M[p]$是$p$-准素的.
+	\end{enumerate}
+\end{remark}
+
+\begin{lemma}{$\alpha$-子模的直和分解}{}
+	设$A$为PID,$\alpha\in A\setminus\left\{0\right\}$,其不可约因子分解为$\alpha=\varepsilon\prod\limits_{i=1}^{r}p_{i}^{n_{i}}$.令$N=M[\alpha]$.
+	\begin{enumerate}
+		\item $N=\bigoplus\limits_{i=1}^{r}M\left[p_{i}^{n_{i}}\right]$.
+		\item 对每个$1\leq i\leq r$,记$p_{i}:N\to\bigoplus M[p_{i}^{n_{i}}]$为典范映射.那么,对每个$1\leq i\leq n$,存在$\gamma_{i}\in A$使得
+		\begin{align*}
+			\forall x\in N\left(p_{i}\left(x\right)=\gamma_{i}x\right).
+		\end{align*}
+		\item 对每个$1\leq i\leq r$有$M[p_{i}^{n_{i}}]=N\cap M\left[p_{i}^{\infty}\right]=N[p_{i}^{\infty}]$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{lemma}{有限个挠元的公共零因子}{}
+	设$A$是整环,$M$是挠$A$-模.对$M$中每个有限序列$\left(x_{i}\right)_{i=1}^{n}$,存在$\gamma\in A\setminus\left\{0\right\}$使得$\forall 1\leq i\leq n\left(x_{i}\in M[\gamma]\right)$.
+\end{lemma}
+
+\begin{theorem}{PID上的挠模的准素分解}{}
+	设$A$是PID,$M$是挠$A$-模,$\left(p_{i}\right)_{i\in I}$是$M$的不可约元代表系,则$M=\bigoplus\limits_{i\in I}M[p_{i}^{\infty}]$.
+\end{theorem}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 如果$p$和$q$是$A$中相伴的不可约元,那么$M[p]=M[p]$.因此,$M[p]$仅依赖$A$中的理想$\langle p\rangle$.
+		\item 对$M$的每个不可约元$p$,称$M[p^{\infty}]$为$M$的$p$-准素分量.
+		\item 我们称上述定理的内直和分解为$M$的典范分解(或准素分解).
+	\end{enumerate}
+\end{remark}
+
+\begin{corollary}{挠模的子模的准素分解和直因子的局部化判定}{}
+	设$A$是PID,$M$是挠$A$-模.
+	\begin{enumerate}
+		\item 设$\left(p_{i}\right)_{i\in I}$是$A$的不可约元代表系,则对$M$的每个$A$-子模$N$都有$N=\bigoplus\limits_{i\in I}\left(N\cap M[p_{i}^{\infty}]\right)$.
+		\item 设$N$是$M$的子模,则$N$是$M$的直因子$\iff$对$A$的每个不可约元,$N[p^{\infty}]$都是$M[p^{\infty}]$的直因子.
+		\item 设$N$是$M$的子模.若对$A$的每个不可约元$p$,要么有$N[p^{\infty}]=\left\{0\right\}$,要么有$(M/N)[p^{\infty}]=\left\{0\right\}$,则$N$是$M$的直因子.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}{半单模}{}
+	设$A$是环,$M$是左$A$-模.若$M$的每个子模$N$都是$M$的直因子,则称$M$是半单左$A$-模.
+\end{definition}
+
+\begin{corollary}{PID上半单模的刻画}{}
+	设$A$是PID但不是域,$M$是$A$-模,则$M$是挠$A$-模$\iff$对$A$的每个不可约元$p$都有$M[p^{\infty}]=M[p]$
+\end{corollary}
+
+\begin{remark}{PID上半单模中非零元素的零化子的计算}{}
+	设$p$是$A$中的不可约元,$\left(p_{i}\right)_{i\in I}$是$A$的不可约元代表系.
+	\begin{enumerate}
+		\item 如果$M$是$p$-准素模,则对每个$x\in M\setminus\left\{0\right\}$,存在$k>0$使得$\Ann_{A}\left(x\right)=Ap^{k}$.
+		\item 设$x\in M$,对每个$i\in I$有$x_{i}\in M[p_{i}^{\infty}]$,元素族$\left(x_{i}\right)_{i\in I}$满足$x=\sum\limits_{i\in I}x_{i}$,则$\Ann_{A}\left(x\right)$是$\left(x_{i}\right)_{i\in I}$中所有非零项的零化子的最小公倍数,并且等于这些零化子的乘积.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{PID上有限生成挠模的准素分量的性质}{}
+	设$A$是PID,$\left(p_{i}\right)_{i\in I}$是$A$的不可约元代表系,$M$是有限生成挠$A$-模.
+	\begin{enumerate}
+		\item 存在$J\in\fin\left(I\right)$,使得$\left(M_{i}\right)_{i\in J}$是一族零模,$\left(M_{i}\right)_{i\in I\setminus J}$是一族非零模.
+		\item 对每个$i\in I$,记$p_{i}:M\to M_{i}$为典范映射.那么,对每个$i\in I$,存在$\gamma_{i}\in A$,对每个$x\in M$有$p_{i}\left(x\right)=\gamma_{i}x$.
+		\item $M$是循环$A$-模$\iff$对每个$i\in I$,$M[p_{i}^{\infty}]$是循环$A$-模.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 每个$\Z$-模都可以被视为一个Abel群,每个Abel群都是典范的$\Z$-模,因此我们可以把本章的所有结论应用于Abel群上,只需要取不可约因子系为$\mathbb{P}$的所有元素所构成的族.
+		\item 一个Abel群作为$\Z$-模是挠模$\iff$该Abel群的每个元素都是有限阶的.
+	\end{enumerate}
+\end{remark}
+
+\begin{definition}{挠群,$p$-挠群}{}
+	设$G$是Abel群.
+	\begin{enumerate}
+		\item 如果$G$作为$\Z$-模是挠模,则称$G$是挠群.
+		\item 设$p\in\mathbb{P}$.若$\forall x\in G\exists k\in\N\left(\ord\left(x\right)=p^{k}\right)$,则称$G$是$p$-挠群.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	显然,有限生成群是挠群.因此关于挠群的结论对于有限生成群也适用.
+\end{remark}
+
+\begin{theorem}{挠群的准素分解定理}{}
+	对每个挠群$G$都满足$G=\bigoplus\limits_{p\in\mathbb{P}}G[p^{\infty}]$.
+\end{theorem}
+
+\begin{proposition}{有限挠群的Sylow p-子群分解}{}
+	设$G$是$n$阶有限Abel群,$n$的素因子分解为$n=\prod\limits_{i=1}^{r}p_{i}^{k_{i}}$,则$G=\bigoplus\limits_{i=1}^{n}G[p_{i}]$,其中$\forall 1\leq i\leq r\left(\left|G[p_{i}]\right|=p_{i}^{k_{i}}\right)$.
+\end{proposition}
+
+
+
+
+

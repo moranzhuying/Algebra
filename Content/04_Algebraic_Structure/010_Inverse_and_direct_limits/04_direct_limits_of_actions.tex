@@ -1,0 +1,35 @@
+\section{作用的正向极限}
+
+\begin{definition}{作用的逆系统}{direct-system-of-actions}
+	设$\left(\left(\Omega_{\alpha}\right)_{\alpha\in I},\left(\phi_{\beta\alpha}\right)_{\beta,\alpha\in I}\right),\left(\left(E_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的逆系统.若
+	\begin{enumerate}
+		\item 对每个$\alpha\in I$,集合$\Omega_{\alpha}$在$E_{\alpha}$上定义了左作用$\cdot_{\alpha}$,
+		\item $\forall\alpha,\beta\in I\forall \omega_{\beta}\in\Omega_{\beta}\forall x_{\beta}\in E_{\beta}\left(\alpha\leq\beta\implies f_{\beta\alpha}\left(\omega_{\alpha}\cdot_{\alpha}x_{\alpha}\right)=\phi_{\beta\alpha}\left(\omega_{\alpha}\right)\cdot_{\beta}f_{\beta\alpha}\left(x_{\alpha}\right)\right)$,
+	\end{enumerate}
+	则称$\left(\cdot_{\alpha}\right)_{\alpha\in I}$是作用的逆系统.
+\end{definition}
+
+\begin{definition}{作用的逆极限}{}
+	沿用定义(\ref{def:direct-system-of-actions})的设定.记$\Omega=\varinjlim\Omega_{\alpha},E=\varinjlim E_{\alpha}$.定义$\Omega$在$E$上的左作用如下:对每个$\left(\omega_{\alpha}\right)_{\alpha\in I}\in\Omega$和$\left(x_{\alpha}\right)_{\alpha\in I}\in E$,
+	\begin{align*}
+		\left(\omega_{\alpha}\right)_{\alpha\in I}\cdot\left(x_{\alpha}\right)_{\alpha\in I}=\left(\omega_{\alpha}\cdot_{\alpha}x_{\alpha}\right)_{\alpha\in I}.
+	\end{align*}
+	我们称$\cdot$是$\left(\cdot_{\alpha}\right)_{\alpha\in I}$的正向极限($\left(\Omega_{\alpha}\right)_{\alpha\in I}$对$\left(E_{\alpha}\right)_{\alpha\in I}$的作用族的逆极限).
+\end{definition}
+
+\begin{remark}{}{}
+	如果$\left(\Omega_{\alpha}\right)_{\alpha\in I}$是一族幺半群,$\left(\cdot_{\alpha}\right)_{\alpha\in I}$是幺半群作用族,则$\cdot$是幺半群作用.
+\end{remark}
+
+\begin{definition}{带算子群的正系统}{direct-system-of-group-with-operators}
+	设$\left(\left(\Omega_{\alpha}\right)_{\alpha\in I},\left(\phi_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是集合的逆极限,$\left(\left(G_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是群的逆系统.若
+	\begin{enumerate}
+		\item 对每个$\alpha\in I$,$G_{\alpha}$是$\Omega_{\alpha}$-群,
+		\item $\forall\alpha,\beta\in I\left(\alpha\leq\beta\implies f_{\beta\alpha}\text{是带算子群同态}\right)$,
+	\end{enumerate}
+	则称$\left(\left(G_{\alpha}\right)_{\alpha\in I},\left(f_{\beta\alpha}\right)_{\beta,\alpha\in I}\right)$是带算子群的正系统.
+\end{definition}
+
+\begin{definition}{带算子群的正向极限}{}
+	沿用定义(\ref{def:direct-system-of-group-with-operators})的设定.记$G=\varinjlim G_{\alpha},\Omega=\varinjlim\Omega_{\alpha}$,则$G$是$\Omega$-群.我们称$G$是该带算子群的逆系统的正向极限.
+\end{definition}

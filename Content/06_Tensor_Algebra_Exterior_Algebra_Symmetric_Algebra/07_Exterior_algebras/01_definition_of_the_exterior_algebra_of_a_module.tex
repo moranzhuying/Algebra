@@ -1,0 +1,64 @@
+\chapter{外代数}
+
+\section{模的外代数的定义}
+
+记号约定:$A$是交换环,$M$是$A$-模,$E$是$A$-代数.
+
+\begin{definition}{模的外代数}{}
+	定义$I_{\wedge}$是$\left\{x\otimes x\in\mathsf{T}\left(M\right)\middle|x\in M\right\}$生成的双边理想.我们把商代数$\mathsf{T}\left(M\right)/I_{\wedge}$称为$M$的外代数.
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 我们通常把$\mathsf{T}\left(M\right)/I_{\wedge}$记作$\Alt\left(M\right)$,$\bigwedge\limits_{A}\left(M\right)$或$\bigwedge\left(M\right)$.
+		\item $I_{\wedge}$是$\mathsf{T}\left(M\right)$中的$2$次齐次元生成的分次理想.对每个$n\in\N$,记
+		\begin{align*}
+			I_{n}^{\prime}=I_{\wedge}\cap\mathsf{T}^{n}\left(M\right),\bigwedge\limits^{n}\left(M\right)\coloneq\Alt^{n}\left(M\right)\coloneq\mathsf{T}^{n}\left(M\right)/I_{n}^{\prime},
+		\end{align*}
+		则$\left(\bigwedge^{n}\left(M\right)\right)_{n\in\N}$是$\bigwedge\left(M\right)$的$\N$型分次(称为典范分次).此外,我们有典范同构$\bigwedge\limits^{0}\left(M\right)\simeq A$和$\bigwedge\limits^{1}\left(M\right)\simeq\mathsf{T}^{1}\left(M\right)$,常常把它们等同起来.记$\phi_{M}^{\prime\prime}:M\to\bigwedge\left(M\right)$为典范单射.
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{外代数的泛性质}{}
+	设$f\in\Hom_{A}\left(M,E\right)$,$\forall x\in M\left(\left(f\left(x\right)\right)^{2}=0\right)$,则存在唯一的$g\in\Hom_{A-\mathsf{Alg}}\left(\bigwedge\left(M\right),E\right)$使下图交换.
+	\begin{center}
+		\begin{tikzcd}
+			M && E \\
+			& {\bigwedge(M)}
+			\arrow["f", from=1-1, to=1-3]
+			\arrow["{\phi_{M}^{\prime\prime}}"', from=1-1, to=2-2]
+			\arrow["{\exists!g}"', dashed, from=2-2, to=1-3]
+		\end{tikzcd}
+	\end{center}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 进一步假设$E$带有分次$\left(E_{n}\right)_{n\in\Z}$,$f$满足$\im\left(f\right)\subseteq E_{1}$,那么$g$是$\Z$型分次代数同态.
+		\item 为了避免混淆,对每个$u,v\in\bigwedge\left(M\right)$,记$u\wedge v\coloneq\left(u+I_{\wedge}\right)\left(v+I_{\wedge}\right)$.于是对每个$n\in\N$,
+		\begin{align*}
+			\bigwedge^{n}\left(M\right)=\left\{\sum\limits_{i=1}^{n}\left(x_{1}\wedge\ldots\wedge x_{n}\right)\middle|\left(x_{i}\right)_{i=1}^{n}\in M^{n}\right\},
+		\end{align*}
+		称$\bigwedge\limits^{n}\left(M\right)$的元素为$n$-向量.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

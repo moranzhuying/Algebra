@@ -1,0 +1,71 @@
+\section{向量空间的子空间的维数和余维数}
+
+记号约定:$K$是除环,$E,F,G$是左$K$-向量空间,$n\in\N$.
+
+\begin{proposition}{}{}
+	若$F$是$E$的子空间,则$F$是$E$的直因子,并且$\dim F+\dim \left(E/F\right)=\dim E$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	若序列$0\xlongrightarrow{}E\xlongrightarrow{}F\xlongrightarrow{}G\xlongrightarrow{}0$正合,那么它一定分裂.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\left(E_{i}\right)_{i=0}^{n}$是一族$K$-向量空间.若存在正合列
+	\begin{align*}
+		0\xlongrightarrow{}E_{0}\xlongrightarrow{f_{0}}E_{1}\xlongrightarrow{f_{1}}\ldots\xlongrightarrow{f_{n-1}}E_{n}\xlongrightarrow{}0,
+	\end{align*}
+	则$\sum\limits_{\substack{0\leq k\leq n\\2k+1\leq n}}\dim E_{2k+1}=\sum\limits_{\substack{0\leq k\leq n\\2k\leq n}}\dim E_{2k}$.进一步,若$\left(E_{i}\right)_{i=0}^{n}$是一族有限维$K$-向量空间,则$\sum\limits_{k=0}^{n}\left(-1\right)^{k}\dim E_{k}=0.$
+\end{corollary}
+
+\begin{corollary}{}{}
+	若$M,N$是$E$的子空间,则$\dim\left(M+N\right)+\dim\left(M\cap N\right)=\dim M+\dim N$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$F$是$E$的子空间,则$\dim F\leq\dim E$.进一步,若$E$是有限维的,则$\dim F=\dim E\iff F=E$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$\left(F_{i}\right)_{i\in I}$是$E$的一族子空间,$E=\sum\limits_{i\in I}F_{i}$,则$\dim E\leq\sum\limits_{i\in I}\dim F_{i}$.进一步,若$E$是有限维的,则
+	\begin{align*}
+		\dim E=\sum\limits_{i\in I}\dim F_{i}\iff E=\bigoplus\limits_{i\in I}F_{i}.
+	\end{align*}
+\end{corollary}
+
+\begin{definition}{余维数}{}
+	设$F$是$E$的子空间.称$\codim_{E}F\coloneq\dim\left(E/F\right)$称为$F$在$E$中的余维数.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$M,N$是$E$的子空间,$M\subseteq N$.
+	\begin{enumerate}
+		\item $\codim_{E}N\leq\codim_{E}M\leq\dim W$.
+		\item 若$E/F$是有限维的,则$\codim_{E}N=\codim_{E}M\implies N=M$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$M,N$是$E$的子空间,则$\codim_{E}\left(M+N\right)+\codim_{E}\left(M\cap N\right)=\codim_{E}M+\codim_{E}N$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$\left(F_{i}\right)_{i=1}^{n}$是$E$的一族子空间,则$\codim_{E}\bigcap\limits_{i=1}^{n}F_{i}\leqslant\sum\limits_{i=1}^{n}\codim_{E}F_{i}$.
+\end{proposition}
+
+\begin{definition}{直线,平面,超平面}{}
+	设$F$是$E$的子空间.
+	\begin{itemize}
+		\item 若$\dim F=1$,则称$F$是(穿过$0$的)直线.
+		\item 若$\dim F=2$,则称$F$是(穿过$0$的)平面.
+		\item 若$\codim_{E}F=1$,则称$F$是(穿过$0$的)超平面.
+	\end{itemize}
+\end{definition}
+
+\begin{remark}{超平面的另外一种刻画}{}
+	记$\mathfrak{S}$为$E$中所有不等于$E$的子空间组成的集合,按$\subseteq$赋予偏序,则$F$是超平面$\iff$ $F$是$\mathfrak{S}$的极大元.进一步,若$E$是有限维的,那么$F$是超平面$\iff$ $\dim\left(E/F\right)=1$.
+\end{remark}
+
+\begin{proposition}{子空间是包含它的超平面束的交}{}
+	设$F$是$E$的子空间,$\mathcal{H}$是$E$中的超平面组成的集合,则$F=\bigcap\limits_{H\in\mathcal{H},H\subseteq F}H$.
+\end{proposition}

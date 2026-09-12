@@ -1,0 +1,48 @@
+\section{格序群}
+
+记号约定:$\left(G,+,\leq\right)$是有序群,$A$是整环,$K=\Frac\left(A\right)$.
+
+\begin{definition}{格序群}{}
+	若$G$按$\leqslant$构成格,则称$G$是格序群(或$\ell$-群).
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 每个全序群都是格序群.一族格序群的乘积(配备逐点偏序后)还是格序群.
+		\item 格序群的子群不一定是格序群.
+		\begin{itemize}
+			\item 加法格序群$\Z\times\Z$的子群$\left\{\left(x,y\right)\in\Z\times\Z\middle|x+y=0\right\}$配备的诱导偏序是离散序,但这个有序子群不是格序群.
+			\item $\R[X]$的加法群是定向群,但不是格序群.
+		\end{itemize}
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$x,y\in G$,则$\left\{x,y\right\}$在$G$中有上确界$\iff$ $\left\{x,y\right\}$在$G$中有下确界.两个条件之一成立时,
+	\begin{align*}
+		x+y=\sup\left(x,y\right)+\inf\left(x,y\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{有序群的半格性质}{}
+	设$x,y\in G$.若$\left\{x,y\right\}$在$G$中有上确界(相对的,下确界),则$\left\{x,y\right\}$在$G$中有下确界(相对的,上确界),并且
+	\begin{align*}
+		x+y=\sup\left(x,y\right)+\inf\left(x,y\right).
+	\end{align*}
+\end{proposition}
+
+\begin{proposition}{最大公因子和最小公倍数的乘积}{}
+	设$a,b\in K$.若$d$是$a$和$b$的最大公因子,$m$是$a$和$b$的最小公倍数,则$dm$与$ab$相伴.
+\end{proposition}
+
+\begin{proposition}{格序群的等价定义}{}
+	$G$是格序群当且仅当下列条件都成立:
+	\begin{enumerate}
+		\item $G=G_{\geq 0}-G_{\geq 0}$.
+		\item 下列条件之一成立:
+		\begin{itemize}
+			\item $G_{\geq 0}$的每个二元子集在$G_{\geq 0}$中都有上确界.
+			\item $G_{\geq 0}$的每个二元子集在$G_{\geq 0}$中都有下确界.
+		\end{itemize}
+	\end{enumerate}
+\end{proposition}

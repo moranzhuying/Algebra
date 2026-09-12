@@ -1,0 +1,29 @@
+\section{标量延拓产生的对偶模}
+
+记号约定:$A,B$是环,$E,F$是左$A$-模,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$.
+
+\begin{proposition}{}{}
+	存在典范的左$B$-线性映射$\nu_{E}:\rho^{\ast}\left(E^{\vee}\right)\to\left(\rho^{\ast}\left(E\right)\right)^{\vee}$.
+\end{proposition}
+
+\begin{corollary}{自然性}{}
+	设$f\in\Hom_{A}\left(E,F\right)$,则下图交换(其中,$\nu_{E}$和$\nu_{F}$是典范映射).
+	\begin{center}
+		\begin{tikzcd}
+			{\rho^{\ast}\left(E^{\vee}\right)} & {\left(\rho^{\ast}\left(E\right)\right)^{\vee}} \\
+			{\rho^{\ast}\left(F^{\vee}\right)} & {\left(\rho^{\ast}\left(F\right)\right)^{\vee}}
+			\arrow["{\nu_{E}}", from=1-1, to=1-2]
+			\arrow["{\rho^{\ast}\left(f^{\top}\right)}"', from=1-1, to=2-1]
+			\arrow["{\rho^{\ast}\left(f\right)^{\top}}", from=1-2, to=2-2]
+			\arrow["{\nu_{F}}"', from=2-1, to=2-2]
+		\end{tikzcd}
+	\end{center}
+\end{corollary}
+
+\begin{proposition}{}{}
+	若$E$(相对的,$\rho_{\ast}\left(B_{s}\right)$)是有限生成投射模,则$\nu_{E}$是双射.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E$是有限生成自由模,$\left(e_{i}\right)_{i=1}^{n}$是$E$的基,其对偶基为$\left(e_{i}^{\ast}\right)_{i=1}^{n}$,则$\left(u_{E}\left(e_{i}^{\ast}\otimes 1\right)\right)_{i=1}^{n}$是$\rho^{\ast}\left(E^{\vee}\right)$的基,其对偶基为$\left(1\otimes e_{i}\right)_{i=1}^{n}$.
+\end{proposition}

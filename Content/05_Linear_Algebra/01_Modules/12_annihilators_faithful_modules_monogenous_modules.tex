@@ -1,0 +1,125 @@
+\section{零化子,忠实模,循环模}
+
+记号约定:$A$是环,$E$是$A$-模,$\left(M_{i}\right)_{i\in I}$是$E$的一族子模,$M$是$E$的子模.
+
+\begin{definition}{零化}{}
+	设$a\in A,x\in M$.若$r\cdot x=0$,则称$a$零化$x$.
+\end{definition}
+
+\begin{definition}{零化子}{}
+	设$S\subseteq E$.我们称$\Ann_{A}\left(S\right)\coloneq\left\{\alpha\in A\middle|\forall x\in S\left(\alpha x=0\right)\right\}$为$S$的(左)零化子.当$S=\left\{x\right\}$时记$\Ann_{A}\left(x\right)\coloneq\Ann_{A}\left(S\right)$.
+\end{definition}
+
+\begin{proposition}{左零化子是左理想}{}
+	若$S\subseteq E$,则$\Ann_{A}\left(S\right)$是$A$的左理想.进一步,若$S$是$E$的子模,则$\Ann_{A}\left(S\right)$是$A$的双边理想.
+\end{proposition}
+
+\begin{corollary}{}{}
+	$\Ann_{A}\left(E\right)$是$A$的双边理想.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$S,T\subseteq E,\left(S_{i}\right)_{i\in I}$是$E$的一族子集.
+	\begin{enumerate}
+		\item $\Ann_{A}\left(S\right)=A\iff S=\left\{0\right\}$.
+		\item $S\subseteq T\implies \Ann_{A}\left(S\right)\supseteq\Ann_{A}\left(T\right)$.
+		\item $\Ann_{A}\left(\bigcup\limits_{i\in I}S_{i}\right)=\bigcap\limits_{i\in I}\Ann_{A}\left(S_{i}\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	若$S\subseteq E$,则$\Ann_{A}\left(S\right)=\bigcap\limits_{x\in S}\Ann_{A}\left(x\right)$.
+\end{corollary}
+
+\begin{proposition}{}{}
+	设$\alpha\in A,x\in E$,则$\Ann_{A}\left(\alpha x\right)=\left\{\beta\in A\middle|\beta\alpha\in\Ann_{A}\left(x\right)\right\}$.
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$x\in E$,则$x$无挠$\iff$ $\Ann_{A}\left(x\right)=\left\{0\right\}$.
+\end{proposition}
+
+\begin{proposition}{位似与忠实模}{}
+	记$\rho:A\to\End_{A}\left(E\right),\alpha\mapsto h_{\alpha}$,其中$h_{\alpha}$是比率为$\alpha$的位似,则$\ker\left(\rho\right)=\Ann_{A}\left(E\right)$,进而$A/\Ann_{A}\left(E\right)\simeq\im\left(\rho\right)$.
+\end{proposition}
+
+\begin{definition}{忠实模}{}
+	若$\Ann_{A}\left(E\right)=\left\{0\right\}$,则称$E$忠实.
+\end{definition}
+
+\begin{proposition}{典范的忠实模结构}{}
+	设$\mathfrak{a}\subseteq\Ann_{A}\left(E\right)$且是双边理想.定义$A/\mathfrak{a}$在$E$上的左作用为$\left(\alpha+\mathfrak{a},x\right)\mapsto\alpha x$,则$E$是典范的$A/\mathfrak{a}$-模.
+\end{proposition}
+
+\begin{corollary}{}{}
+	$E$作为$A$-模的子模和作为典范$A/\Ann_{A}\left(E\right)$-模的子模完全相同.
+\end{corollary}
+
+\begin{definition}{单生模}{}
+	若$E$可以由单点集生成,则称$E$是单生模.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 每个循环群视为都可以视为$\Z$-模.
+		\item 设$A$是交换环,则$A_{s}$的单生子模是$A$的主理想.
+		\item 每个单模都是单生模.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{}{}
+	设$R$是交换幺环,则$_{R}R$的子模是$R$的主理想.
+\end{proposition}
+
+\begin{proposition}{单生模表现定理}{}
+	\begin{enumerate}
+		\item 设$E$是单生模,则$E/M$是循环模.
+		\item 设$E$由$c$生成,则存在典范的模同构$A_{s}/\Ann_{A}\left(c\right)\simeq E$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 当$E$由$c,c^{\prime}$生成且$c\neq c^{\prime}$时,一般来说$\Ann_{A}\left(c\right)\neq\Ann_{A}\left(c^{\prime}\right)\neq\Ann_{A}\left(E\right)$.
+		\item 当$E$由$c$生成时,若$A$是交换环,则$\Ann_{A}\left(c\right)=\Ann_{A}\left(E\right)$.
+	\end{enumerate}
+\end{remark}
+
+\begin{corollary}{循环摸的子模}{}
+	设$E$是单生模.
+	\begin{enumerate}
+		\item $E$的每个子模都同构于$\mathfrak{b}/\mathfrak{a}$,其中$\mathfrak{a},\mathfrak{b}$是$A$的左理想且$\mathfrak{b}\subseteq\mathfrak{a}$.
+		\item $E/M$是单生模.
+	\end{enumerate}
+\end{corollary}
+
+\begin{remark}{}{}
+	当$E$是单生模时,$E$的子模不一定是单生模.例如,$A$是具有不是主理想的理想的交换环,则$A_{s}$是单生模,$A$中那些不是主理想的理想就不是$A_{s}$的单生模.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$\left(a_{i}\right)_{i\in I}$是$E$的元素族.
+	\begin{enumerate}
+		\item $\left(a_{i}\right)_{i\in I}$生成的子模是$\sum\limits_{\in I}\langle a_{i}\rangle$.
+		\item $\left(a_{i}\right)_{i\in I}$是$E$的基$\iff$ $\left(a_{i}\right)_{i\in I}$是一族无挠元且$E=\bigoplus\limits_{i\in I}\langle a_{i}\rangle$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$I$无限,$\left(M_{i}\right)_{i\in I}$是$E$的一族非零子模,$E=\bigoplus\limits_{i\in I}M_{i}$.则对$E$的每个生成集$S$有$\left|S\right|\geq\left|I\right|$.
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$I$无限,$\left(M_{i}\right)_{i\in I},\left(N_{j}\right)_{j\in J}$是$E$的两族非零单生子模,$E=\bigoplus\limits_{i\in I}M_{i}=\bigoplus\limits_{j\in J}N_{j}$,则$\left|I\right|=\left|J\right|$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$E$有一个基集$B$是无限集.
+	\begin{enumerate}
+		\item $E$的每个生成集$S$都满足$\left|S\right|\geq\left|B\right|$.
+		\item $E$的每个基集$B^{\prime}$都满足$\left|B^{\prime}\right|=\left|B\right|$.
+	\end{enumerate}
+\end{corollary}
+
+
+

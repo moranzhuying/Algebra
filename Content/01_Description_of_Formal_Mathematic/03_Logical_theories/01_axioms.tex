@@ -1,0 +1,27 @@
+\chapter{逻辑理论}
+
+\section{命题公理}
+
+\begin{definition}{逻辑理论}{}
+	若一个理论$\mathcal{T}$的公理包含以下公理模式导出的所有隐式公理,则称$\mathcal{T}$为一个\textbf{逻辑理论}:
+	\begin{itemize}
+		\item (吸收律)对于任意公式$\boldsymbol{A}$,$\left(\boldsymbol{A}\vee\boldsymbol{A}\right)\implies\boldsymbol{A}$是公理.
+		\item (左析取引入律)对于任意公式$\boldsymbol{A}$和$\boldsymbol{B}$,$\boldsymbol{A}\implies\left(\boldsymbol{A}\vee\boldsymbol{B}\right)$是公理.
+		\item (析取交换律)对于任意公式$\boldsymbol{A}$和$\boldsymbol{B}$,$\left(\boldsymbol{A}\vee\boldsymbol{B}\right)\implies\left(\boldsymbol{B}\vee\boldsymbol{A}\right)$是公理.
+		\item (析取分配律)对于任意公式$\boldsymbol{A},\boldsymbol{B}$和$\boldsymbol{C}$,$\left(\boldsymbol{A}\implies\boldsymbol{B}\right)\implies\left(\left(\boldsymbol{C}\implies\boldsymbol{A}\right)\implies\left(\boldsymbol{C}\implies\boldsymbol{B}\right)\right)$是公理.
+	\end{itemize}
+\end{definition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item 直观上看,上述规则仅仅表达了在日常数学语言中赋予``或''与``蕴含''这两个词的含义.
+		\item 吸收律也可以在不使用字母$\boldsymbol{A}$或缩写符号$\implies$的情况下表达如下:对于每个给定的公式,只要依次从左到右写下$\vee,\neg,\vee$,再连续写该公式三次,即可得到一个定理.作为练习,我们能以类似的方式改写其他公理模式的表达式.
+		\item 在日常语言中,根据语境的不同,``或''字具有两种不同的含义:当我们用``或''连接两个陈述时,其含义可能是指两者中至少有一个成立(包含两者同时成立的情况),也可能是指两者中仅有一个成立而排斥另一个.
+	\end{enumerate}
+\end{remark}
+
+\begin{theorem}{爆辞原理}{}
+	设$\mathcal{T}$是一个逻辑理论.若$\mathcal{T}$是不一致的,则$\mathcal{T}$的每个公式$\boldsymbol{B}$都是$\mathcal{T}$的定理.
+\end{theorem}
+
+本章接下来的内容中,默认$\mathcal{T}$是一个逻辑理论.

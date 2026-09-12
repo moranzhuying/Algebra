@@ -1,0 +1,88 @@
+\section{映射的复合,逆映射}
+
+\begin{proposition}{映射的复合还是映射}{}
+	若$f:A\to B$和$g:B\to C$是映射,则$g\circ f$是$A$到$C$的映射.
+\end{proposition}
+
+\begin{definition}{单射,满射,双射}{}
+	设$f:A\to B$是映射.
+	\begin{enumerate}
+		\item 若$\forall x,y\in A\left(f\left(x\right)=f\left(y\right)\implies x=y\right)$,则称$f$是单射.
+		\item 若$f\left(A\right)=B$,则称$f$是满射(或$f$是通过$B$的参数表示,$A$称为参数集,$A$的元素称为参数).
+		\item 若$f$既是单射又是满射,则称$f$是双射
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{置换}{}
+	设$A$是集合.$A$到$A$的双射称为$A$上的置换.
+\end{definition}
+
+\begin{example}{典范嵌入}{}
+	设集合$A,B$满足$A\subseteq B$,则从$A$到$B$且图像为$\Delta_{A}$是单射,称为$A$到$B$的典范单射(或典范嵌入,包含映射).
+\end{example}
+
+\begin{example}{对角映射}{}
+	设$A$是集合,则$A\to\Delta_{A},x\mapsto\left(x,x\right)$是单射,称为$A$的对角映射.
+\end{example}
+
+\begin{example}{投影映射的满性和单性}{}
+	设$G$是二元关系,则$\pr_{1}:G\to\pr_{1}\left(G\right)$和$\pr_{2}:G\to\pr_{2}\left(G\right)$都是满射.进一步,
+	\begin{center}
+		$\pr_{1}$是单射$\iff$ $G$是偏函数关系,\\
+		$\pr_{2}$是单射$\iff$ $G^{-1}$是偏函数关系.
+	\end{center}
+\end{example}
+
+\begin{example}{坐标对调映射}{}
+	设$G$是二元关系,则$G\to G^{-1},z\mapsto\left(\pr_{2}\left(z\right),\pr_{1}\left(z\right)\right)$是双射,称为典范双射.
+\end{example}
+
+\begin{example}{截面双射}{}
+	设$A$是集合,$b$是对象,则$A\to A\times\left\{b\right\},x\mapsto\left(x,b\right)$是双射.
+\end{example}
+
+\begin{proposition}{逆映射的存在性}{}
+	设$f:A\to B$是映射.
+	\begin{enumerate}
+		\item $f^{-1}$是偏函数$\iff$ $f$是双射.
+		\item 若$f$是双射,则$f^{-1}\circ f=\id_{A},f\circ f^{-1}=\id_{B}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{逆映射}{}
+	当映射$f:A\to B$是双射时,称$f^{-1}$是$f$的逆(映射).
+\end{definition}
+
+\begin{definition}{对合映射}{}
+	设$f:A\to A$是映射.若$f=f^{-1}$,则称$f$是对合映射.
+\end{definition}
+
+\begin{proposition}{像和原像的包含}{}
+	设$f:A\to B$是映射.
+	\begin{enumerate}
+		\item 对$A$的每个子集$X$,都有$X\subseteq f^{-1}\left(f\left(X\right)\right)$.
+		\item 对$B$的每个子集$Y$,都有$f\left(f^{-1}\left(B\right)\right)\subseteq B$.
+		\item 若$f$是单射,则对$A$的每个子集$X$,都有$f^{-1}\left(f\left(X\right)\right)=X$.
+		\item 若$f$是满射,则对$B$的每个子集$Y$,都有$f\left(f^{-1}\left(B\right)\right)=B$.
+	\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,119 @@
+\section{带算子群}
+
+记号约定:
+\begin{itemize}
+	\item $G,G^{\prime},G^{\prime\prime}$是群(采用乘法记号).
+	\item 集合$\Omega,\Omega^{\prime}$各自在$G$和$G^{\prime}$上的作用分别是$\alpha\mapsto x^{\alpha}$和$\beta\mapsto y^{\beta}$.
+\end{itemize}
+
+\begin{definition}{$\Omega$-群}{}
+	如果$\Omega$在$G$上的作用对$G$的乘法是分配的,则称配备该作用的$G$是$\Omega$-群(或带算子群).
+\end{definition}
+
+\begin{definition}{位似}{}
+	设$G$是$\Omega$-群.对每个$\alpha\in\Omega$,映射$G\to G,x\mapsto x^{\alpha}$称为$G$的一个位似.
+\end{definition}
+
+\begin{definition}{$\Omega$-交换群($\Omega$-Abel群)}{}
+	设$G$是$\Omega$-群.若$G$是交换群,则称$G$为$\Omega$-交换群(或$\Omega$-Abel群),$\Omega=\emptyset$时称$G$为交换群(或Abel群).
+\end{definition}
+
+\begin{remark}{普通的群是算子集为空集的带算子群}{}
+	设$H$是群.赋予其以$\emptyset$在$H$上的唯一作用,则$H$是$\emptyset$-群.若$\Omega=\emptyset$,则$G$是$\emptyset$-群,因此,我们总是按照这种方式把普通的群视为带算子群.在此意义下,带算子群的定义和结果总是可以应用到普通的群.今后我们总是采用这种做法.
+\end{remark}
+
+\begin{example}{交换群的广义幂运算使群成为$\Z$-群}{}
+	设$G$是交换群,对每个$n\in\Z$定义$f_{n}:G\to G,x\mapsto x^{n}$,则$\Z$在$G$上的作用$n\mapsto f_{n}$使得$G$是$\Z$-群.
+\end{example}
+
+\begin{definition}{带算子群的同态和自同态}{}
+	设$G.G^{\prime}$是$\Omega$-群.
+	\begin{enumerate}
+		\item 若对每个$\alpha\in\Omega$,位似$G\to G^{\prime},x\mapsto x^{\alpha}$都和$f$(在映射复合下)可交换,则称$f$是$\Omega$-群同态.
+		\item 设$f$是$\Omega$-群同构.若存在$\Omega$-群同构$g:G^{\prime}\to G$使得$g\circ f=\id_{G}$且$f\circ g=\id_{G^{\prime}}$,则称$f$是$\Omega$-群同构.
+		\item 若$G=G^{\prime}$且$f$是$\Omega$-群同态,则称$f$是$\Omega$-群自同态.
+	\end{enumerate}
+\end{definition}
+
+\begin{proposition}{$\Omega$-群同态的基本性质}{}
+	设$G,G^{\prime},G^{\prime\prime}$都是$\Omega$-群.
+	\begin{enumerate}
+		\item $\id_{G}$是$\Omega$-群同态.
+		\item 若$f:G\to G^{\prime}$和$g:G^{\prime}\to G^{\prime\prime}$,则$g\circ f$是$\Omega$-群同态.
+		\item 设$f:G\to G^{\prime}$是$\Omega$-群同态,则$f$是$\Omega$-群同构$\iff$ $f$是双射.两条件之一成立时$f^{-1}$也是$\Omega$-群同态.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$\varphi$-同态}{}
+	设$G$是$\Omega$-群,$G^{\prime}$是$\Omega^{\prime}$-群,$\varphi\in\Hom_{\mathsf{Set}}\left(\Omega,\Omega^{\prime}\right),f\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$.若
+	\begin{align*}
+		\forall\alpha\in\Omega\forall x\in G\left(f\left(x^{\alpha}\right)=\left(f\left(x\right)\right)^{\varphi\left(\alpha\right)}\right),
+	\end{align*}
+	则称$f$是$\varphi$-同态.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

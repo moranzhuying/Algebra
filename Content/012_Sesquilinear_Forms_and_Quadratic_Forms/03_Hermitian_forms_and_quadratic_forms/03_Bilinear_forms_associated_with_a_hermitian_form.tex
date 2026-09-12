@@ -1,0 +1,39 @@
+\section{与Hermite型相伴的双线性型}
+
+记号约定:
+\begin{itemize}
+	\item $K$是交换环,$A=K(\mathrm{i})$,其中$\mathrm{i}$是$K$上的多项式$X^{2}+1$在$K$中的平方根,$\tau:K\to K(\mathrm{i})$是典范嵌入.
+	\item 对每个$\left(\lambda,\mu\right)\in K\times K$有$\rho\left(\lambda+\mathrm{i}\mu\right)=\lambda-\mathrm{i}\mu$.
+	\item 定义$\Re:K(i)\to K,\lambda+\mu\mathrm{i}\mapsto\lambda,\Im:K(i)\to K,\lambda+\mathrm{i}\mu\mapsto\mu$.
+	\item $E$和$F$是$A$-模,各自的$K$-复线性结构是$\left(E_{0},j_{1}\right)$和$\left(F_{0},j_{2}\right)$,$\varphi\in\Sesq_{A,\rho}\left(E_{0},F_{0}\right)$.
+\end{itemize}
+
+\begin{definition}{$\left(j_{1},j_{2}\right)$-不变的双线性映射}{}
+	设$\psi\in\Bil_{K}\left(E_{0},F_{0}\right)$.若$\psi\circ\left(j_{1}\times j_{2}\right)=\varphi$,则称$\psi$是$\left(j_{1},j_{2}\right)$-不变的.
+\end{definition}
+
+\begin{definition}{}{}
+	记$\Bil_{K}^{j_{1},j_{2}}\left(E,F\right)$是$E\times F$上$\left(j_{1},j_{2}\right)$-不变的$K$-双线性形式组成的集合,这是典范的左$K$-模.
+\end{definition}
+
+\begin{proposition}{}{}
+	定义$\Phi:\Sesq_{A,\rho}\left(E,F\right)\to\Bil_{K}\left(E_{0},F_{0}\right),\psi\mapsto\Re\circ\psi,\Psi:\Sesq_{A,\rho}\left(E,F\right)\to\Bil_{K}\left(E_{0},F_{0}\right),\psi\mapsto\Im\circ\psi$.
+	\begin{enumerate}
+		\item $\Phi$是$K$-线性同构,其逆为$\Phi^{-1}:\Bil_{K}\left(E_{0},F_{0}\right)\to\Sesq_{A,\rho}\left(E,F\right),\psi\mapsto\psi+\mathrm{i}\psi\circ\left(\id_{E_{0}}\times j_{2}\right)$.
+		\item $\Psi$是$K$-线性同构,其逆为$\Psi^{-1}:\Bil_{K}\left(E_{0},F_{0}\right)\to\Sesq_{A,\rho}\left(E,F\right),\psi\mapsto-\psi\circ\left(\id_{E_{0}}\times j_{2}\right)+\mathrm{i}\psi$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$E=F,\varphi_{1}=\Re\circ\varphi,\varphi_{2}=\Im\circ\varphi$,则$\varphi$是Hermite型$\iff$ $\varphi_{1}$是对称$K$-双线性形式$\iff$ $\varphi_{2}$是反对称$K$-双线性形式.
+\end{proposition}
+
+\begin{remark}{}{}
+	\begin{enumerate}
+		\item $\rad_{L}\left(\varphi\right)=\rad_{L}\left(\varphi_{1}\right)=\rad_{L}\left(\varphi_{2}\right),\rad_{R}\left(\varphi\right)=\rad_{R}\left(\varphi_{1}\right)=\rad_{R}\left(\varphi_{2}\right)$.
+		\item 设$u\in\End_{A}\left(E\right)$,它关于$\varphi$的右伴随是$u^{\ast}$,则$\tau_{\ast}\left(u^{\ast}\right)$是$\tau_{\ast}\left(u\right)$关于$\varphi_{1}$(或$\varphi_{2}$)的右伴随.
+	\end{enumerate}
+\end{remark}
+
+
+

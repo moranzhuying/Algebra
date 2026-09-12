@@ -1,0 +1,125 @@
+\chapter{恒等元,可消去元,可逆元}
+
+\section{恒等元}
+
+记号约定:
+	\begin{itemize}
+		\item 集合$E,F$按$\odot$构成原群,$A\subseteq E$是子原群.
+		\item $\left(x_{i}\right)_{i\in I}$是$E$的元素族.
+	\end{itemize}
+
+\begin{definition}{恒等元}{}
+	设$e\in E$.若$e\in Z\left(E\right)$,则称$e$是$\odot$的恒等元.
+\end{definition}
+
+\begin{lemma}{恒等元是唯一的}{}
+	若$e$是$\odot$的恒等元,则$\odot$的恒等元只有$e$.
+\end{lemma}
+
+\begin{definition}{幺原群}{}
+	如果$\odot$有幺元,则称$E$按$\odot$构成幺原群.
+\end{definition}
+
+\begin{definition}{幺原群同态}{}
+	设$f\in\Hom_{\mathsf{Mag}}\left(E,F\right)$,$E$和$F$各自的幺元是$e$和$e^{\prime}$.若$f\left(e\right)=e^{\prime}$,则称$f$是幺原群同态.记
+	\begin{align*}
+		&\Hom_{\mathsf{UMag}}\left(E,F\right)\coloneq\Hom_{\mathsf{Mag}}\left(E,F\right),\End_{\mathsf{UMag}}\coloneq\End_{\mathsf{Mag}}\left(E\right),\\
+		&\Isom_{\mathsf{UMag}}\left(E,F\right)\coloneq\Isom_{\mathsf{UMag}}\left(E,F\right),\Aut_{\mathsf{UMag}}\left(E\right)\coloneq\Aut_{\mathsf{Mag}}\left(E\right).
+	\end{align*}
+	称$\Isom_{\mathsf{UMag}}\left(E,F\right)$的元素为幺原群同构,分别称$\End_{\mathsf{UMag}}\left(E\right)$和$\Aut_{\mathsf{UMag}}\left(E\right)$的元素为$E$上的幺原群自同态和自同构.
+\end{definition}
+
+\begin{definition}{幺半群}{}
+	若$E$按$\odot$构成半群,$\odot$有幺元,则称$E$按$\odot$构成幺半群.
+\end{definition}
+
+\begin{definition}{幺半群同态}{}
+	设$E$和$F$是幺半群,各自的幺元是$e$和$e^{\prime}$.我们称$\Hom_{\mathsf{Mag}}\left(E,F\right)$的元素为幺半群同态.记
+	\begin{align*}
+		&\Hom_{\mathsf{Mon}}\left(E,F\right)\coloneq\Hom_{\mathsf{Mon}}\left(E,F\right),\End_{\mathsf{Mon}}\coloneq\End_{\mathsf{Mag}}\left(E\right),\\
+		&\Isom_{\mathsf{Mon}}\left(E,F\right)\coloneq\Isom_{\mathsf{Mag}}\left(E,F\right),\Aut_{\mathsf{Mon}}\left(E\right)\coloneq\Aut_{\mathsf{Mag}}\left(E\right).
+	\end{align*}
+	称$\Isom_{\mathsf{Mon}}\left(E,F\right)$的元素为幺半群同构,分别称$\End_{\mathsf{Mon}}\left(E\right)$和$\Aut_{\mathsf{Mon}}\left(E\right)$的元素为$E$上的幺半群自同态和自同构.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item 对于$\N$而言言,$0$是加法的恒等元,$1$是乘法的恒等元,于是$\N$上的加法和乘法都使其构成交换幺半群.但是,$\N$的指数运算没有恒等元.
+		\item 设$L$是格.如果$L$有最小元,那么取上确界运算的恒等元就是该最小元;如果取上确界运算有恒等元,那么该恒等元就是$L$的最小元.对于取下确界运算,把``上确界''改为``下确界'',``最小元''改为``最大元''便得到类似结论.特别地,对于$\mathcal{P}\left(E\right)$上的运算$\bigcup$和$\bigcap$,二者的恒等元分别是$E$和$\emptyset$.
+		\item $\Delta_{E}$是$\mathcal{P}\left(E\times E\right)$上的运算$\left(X,Y\right)\mapsto X\circ Y$的恒等元.特别地,$\id_{E}$是$E^{E}$上的运算$\left(f,g\right)\mapsto f\circ g$的恒等元.
+		\item 设$\sim$是$E$上的相容等价关系,$\pi:E\twoheadrightarrow E/\sim$是典范映射.若$e$是恒等元,则$\pi\left(e\right)$也是恒等元.
+	\end{enumerate}
+\end{example}
+
+\begin{theorem}{幺半群同态的基本性质}{}
+	设$E,E^{\prime}$和$E^{\prime\prime}$分别对合成律$\top,\top^{\prime}$和$E^{\prime\prime}$构成幺半群,$f\in\Hom_{\mathsf{Mon}}\left(E,E^{\prime}\right),g\in\Hom_{\mathsf{Mon}}\left(E^{\prime},E^{\prime\prime}\right)$.
+	\begin{enumerate}
+		\item $\id_{E}\in\End_{\mathsf{Mon}}\left(E\right)$.
+		\item $g\circ f\in\Hom_{\mathsf{Mon}}\left(E,E^{\prime\prime}\right)$.
+		\item $f\in\Isom\left(E,E^{\prime}\right)$ $\iff$ $f$是双射.两条件之一成立时,$f^{-1}\in\Isom_{\mathsf{Mon}}\left(E^{\prime},E\right)$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}{平凡幺半群同态}{}
+	设$E$和$F$是幺原群,各自的幺元是$e$和$e^{\prime}$,则$f:E\to F,x\mapsto e$是幺原群同态,称为平凡(幺原群)同态.
+\end{definition}
+
+\begin{proposition}{幺原群族(或幺半群族)的乘积保持幺元(和结合性)}{}
+	设$\left(E_{i}\right)_{i\in I}$是一族幺原群(或幺半群),则$\prod\limits_{i\in I}E_{i}$亦然.
+\end{proposition}
+
+\begin{proposition}{幺原群(或幺半群)的商原群保持幺元(和结合性)}{}
+	设$E$是幺原群(或幺半群),$\sim$是$E$上的相容等价关系,则$E/\sim$亦然.
+\end{proposition}
+
+\begin{definition}{子幺原群,子幺半群}{}
+	设$E$是幺元群.若$e\in A$,则称$A$为$E$的子幺元群.当$E$是幺半群时,相应地称$A$为子幺半群。
+\end{definition}
+
+\begin{definition}{$A$生成的子幺原群(和子幺半群),生成系}{}
+	定义$\langle A\rangle=\bigcap\limits_{\substack{A\subseteq Y\subseteq E\\Y\text{是子幺原群}}}Y$.我们称之为$A$生成的子幺元群,$A$称为$\langle A\rangle$的生成系(或生成集).显然,$A=\emptyset\implies\langle A\rangle=\left\{e\right\}$.
+	
+	当$E$是幺半群时,相应地称$\langle A\rangle$为$A$生成的子幺半群.
+\end{definition}
+
+\begin{example}{没有幺元的原群,其子群可以有恒等元}{}
+	\begin{enumerate}
+		\item 设$E$按$\odot$是半群,$h$是幂等元,则$\bigcup\limits_{x\in E}\left\{h\odot x\odot h\right\}$是$E$的一个以$h$为恒等元的子原群.
+		\item 设$E$按$\odot$是幺原群,恒等元为$e$,但是$e\notin A$,那么$A$仍然有可能具有一个恒等元.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{幺原群中空元素族的合成是恒等元}{}
+	设$E$按$\odot$是幺原群,恒等元为$e$,$\left(x_{i}\right)_{i\in\emptyset}$是$E$的元素族.定义$\bigodot\limits_{i\in\emptyset}x_{i}\coloneq e$.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	\begin{enumerate}
+		\item 设$p,q\in\N$且$p<q$,$\left(x_{i}\right)_{i=q}^{p}$是$E$中的序列.记$\bigodot\limits_{i=q}^{p}x_{i}\coloneq\bigodot\limits_{q\leq i\leq p}x_{i}\coloneq e$.
+		\item 对任一$x\in E$,记$\bigodot\limits^{0}\coloneq e$.
+	\end{enumerate}
+	在上述记号的意义下,定理(\ref{thm:associativity-theorem}),(\ref{thm:commutative-theorem}),(\ref{thm:fubini-theorem-of-sequence-composition-in-semi-group})及其推论在指标集为空的情形下仍然成立.
+\end{remark}
+
+\begin{definition}{有限支撑族}{}
+	设$E$按$\odot$是幺原群,恒等元是$e$.我们称$\left\{i\in I\middle|x_{i}\neq e\right\}$是$\left(x_{i}\right)_{i\in I}$的支撑.当$\left(x_{i}\right)_{i\in I}$的支撑是有限集时,称$\left(x_{i}\right)_{i\in I}$是$E$的有限支撑族.
+\end{definition}
+
+\begin{definition}{有限支撑族的合成}{}
+	设$E$按$\odot$是幺原群,恒等元是$e$,$\left(x_{i}\right)_{i\in I}$有限支撑且元素两两可交换,$I$是全序集,$S$是$\left(x_{i}\right)_{i\in I}$的支撑,$S\subseteq J\in\fin\left(I\right)$.定义
+	\begin{align*}
+		\bigodot\limits_{i\in I}x_{i}\coloneq\bigodot\limits_{i\in J}x_{i}
+	\end{align*}
+	为$\left(x_{i}\right)_{i\in I}$在$\odot$下的合成.特别地,若$p=\llbracket p,+\infty)$,记$\bigodot\limits_{i=p}^{\infty}x_{i}\coloneq\bigodot\limits_{i\in I}x_{i}$.
+\end{definition}
+
+\begin{remark}{记号说明}{}
+	在上述记号的意义下,定理(\ref{thm:associativity-theorem}),(\ref{thm:commutative-theorem}),(\ref{thm:fubini-theorem-of-sequence-composition-in-semi-group})及其推论在元素族有限支撑的情形下仍然成立.
+\end{remark}
+
+\begin{remark}{恒等元的记号说明}{}
+	\begin{itemize}
+		\item 采用加法记号时,通常把恒等元写作$0$,称之为零元(或零,原点).
+		\item 采用乘法记号时,通常将恒等元记作$1$,称之为单位元(或单位).
+	\end{itemize}
+\end{remark}

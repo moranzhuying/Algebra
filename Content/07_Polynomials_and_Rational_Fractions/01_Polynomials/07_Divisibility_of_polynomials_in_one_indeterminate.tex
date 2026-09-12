@@ -1,0 +1,84 @@
+\section{一元多项式环中的整除}
+
+记号约定:本节中,$K$是域.
+
+\begin{proposition}{域上的一元多项式环是PID}{}
+	\begin{enumerate}
+		\item 对$K\left[X\right]$的每个非零理想$\mathfrak{a}$,存在唯一的$f\in K\left[X\right]$使得$\langle f\rangle=\mathfrak{a}$且$f$是首一多项式.
+		\item 设$f_{1},f_{2}\in K\left[X\right]$,则$\langle f_{1}\rangle=\langle f_{2}\rangle\iff f_{2}\in K^{\times}f_{1}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{一元多项式环中最大公因式的等价条件}{equivalent-definition-of-gcd-in-one-determinant-polonomial-ring}
+	设$f,g,d\in K\left[X\right]$.
+	\begin{enumerate}
+		\item 下列陈述等价:
+		\begin{enumerate}
+			\item $d$整除$f$和$g$,并且对每个整除$f$和$g$的$c\in K\left[X\right]$都整除$d$.
+			\item $d$整除$f$和$g$,并且存在$u,v\in K\left[X\right]$使得$d=uf+vg$.
+			\item $\langle d\rangle=\langle f\rangle+\langle g\rangle$.
+		\end{enumerate}
+		三个条件之一成立时,$d$在精确到相差一个可逆元因子的意义下是唯一的.
+		\item 若$f,g\neq 0$,$d$满足(1)中的三个等价条件之一,则$d\neq 0$,并且对$K\left[X\right]$中每个整除$f$和$g$的$c$都有$\deg\left(c\right)\leq\deg\left(d\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{多项式环中的最大公因式}{}
+	沿用命题(\ref{prop:equivalent-definition-of-gcd-in-one-determinant-polonomial-ring})的(1)中的记号.
+	\begin{enumerate}
+		\item 若$d$满足该命题的(1)中三个等价条件之一,则称之为$f$和$g$的最大公因式,记作$\gcd\left(f,g\right)$.
+		\item 若$\gcd\left(f,g\right)=1$,则称$f$和$g$互素.
+	\end{enumerate}
+\end{definition}
+
+\begin{corollary}{最大公因式在域扩张下不变}{}
+	设$f,g,d\in K\left[X\right]$,$K^{\prime}$是$K$的扩域,$\sigma:K\left[X\right]\to K^{\prime}\left[X\right]$是典范映射.若$d=\gcd\left(f,g\right)$,则$\sigma\left(d\right)=\gcd\left(\sigma\left(f\right),\sigma\left(g\right)\right)$.
+\end{corollary}
+
+\begin{corollary}{最大公因式的同乘和同除}{}
+	设$f,g,d\in K\left[X\right],d=\gcd\left(f,g\right)$.
+	\begin{enumerate}
+		\item 对每个$u\in K\left[X\right]$,$du=\gcd\left(fu,gu\right)$.
+		\item 若$v\in K\left[X\right]$且$v=\gcd\left(f,g\right)\neq 0$,则$dv^{-1}=\gcd\left(fv^{-1},gv^{-1}\right)$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{提取最大公因式与互素的关系}{}
+	设$f,g,d\in K\left[X\right]$,$d$是$f$和$g$的公因式,则$d=\gcd\left(f,g\right)$ $\iff$ $fd^{-1}$与$gd^{-1}$互素.
+\end{corollary}
+
+\begin{corollary}{多项式环中的Euclid引理}{}
+	设$f,g,h\in K\left[X\right]$.若$f$整除$gh$,$f$和$g$互素,则$f$整除$h$.
+\end{corollary}
+
+\begin{corollary}{互素和商环中的可逆性}{}
+	设$f,g\in K\left[X\right]$,则$f$与$g$互素$\iff$ $g+\langle f\rangle\in\left(K\left[X\right]/\langle f\rangle\right)^{\times}$.
+\end{corollary}
+
+\begin{corollary}{多个多项式的互素}{}
+	设$f,g_{1},\ldots,g_{n}\in K\left[X\right]$.若对每个$1\leq i\leq n$,$f$和$g_{i}$互素,则$f$与$\prod\limits_{i=1}^{n}g_{i}$互素.
+\end{corollary}
+
+\begin{corollary}{互素的代数几何刻画}{}
+	设$f,g\in K\left[X\right]$,则$f$和$g$互素$\iff$对$K$的每个扩域$K^{\prime}$,$f$和$g$作为$K^{\prime}$上的多项式没有公共根.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

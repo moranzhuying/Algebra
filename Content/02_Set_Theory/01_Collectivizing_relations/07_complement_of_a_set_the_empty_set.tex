@@ -1,0 +1,44 @@
+\section{集合的补集,空集}
+
+\begin{lemma}{}{}
+	设$A,X$是集合,$x$是字母,则公式$\left(x\notin A\right)\wedge\left(x\in X\right)$关于$x$是集化的.
+\end{lemma}
+
+\begin{definition}{相对补集}{}
+	设$A$是集合$X$的子集.集合$\left\{x\in X\middle|x\notin A\right\}$记作$X\setminus A$,称为$A$在$X$中的相对补集.
+\end{definition}
+
+\begin{proposition}{补集的判定}{}
+	设$A\subseteq X$,则$\forall x\left(x\in X\setminus A\iff x\in X\wedge x\notin A\right)$是定理.
+\end{proposition}
+
+\begin{proposition}{取补集的对合性}{}
+	设$A$是$X$的子集,则$X\setminus\left(X\setminus A\right)=A$.
+\end{proposition}
+
+\begin{proposition}{取补集对包含的递减性}{}
+	设$A,B$是$X$的子集,则$A\subseteq B\iff X\setminus B\subseteq X\setminus A$是定理.
+\end{proposition}
+
+\begin{theorem}{空集的存在性和唯一性}{}
+	公式$\forall x\left(x\notin X\right)$关于$X$是集化的.
+\end{theorem}
+
+\begin{definition}{空集}{}
+	我们把$\tau_{x}\left(\left(\forall x\right)\left(x\notin X\right)\right)$记作$\emptyset$,读作``集合$X$是空集''.
+\end{definition}
+
+\begin{theorem}{空集的性质}{}
+	设$X$是集合.
+	\begin{enumerate}
+		\item $\forall x\in X\left(x\notin\emptyset\right)$.
+		\item $\emptyset\subseteq X$.
+		\item $X\setminus\emptyset=X$.
+		\item $X\subseteq\emptyset$和$X=\emptyset$等价.
+		\item 设$R\left\{x\right\}$是关于字母$x$的公式,则$\forall x\left(x\in\emptyset\implies R\left\{x\right\}\right)$是定理.
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}{无万有集合定理}{}
+	$\neg\exists X\forall x\left(x\in X\right)$是定理.
+\end{theorem}

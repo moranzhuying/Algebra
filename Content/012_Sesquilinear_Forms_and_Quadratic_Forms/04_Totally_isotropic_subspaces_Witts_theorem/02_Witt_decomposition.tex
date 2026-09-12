@@ -1,0 +1,220 @@
+\section{Witt分解}
+
+\begin{definition}{迹值性}{}
+	若$\forall\alpha\in K\exists x\in V\left(\varphi\left(x,x\right)=\alpha+\varepsilon\bar{\alpha}\right)$,则称$\varphi$是迹值的.
+\end{definition}
+
+
+\begin{remark}{}{}
+	显然,若$\varphi$交错,则$\varphi$迹值.若$\varepsilon=1_{K}$且$\Char\left(K\right)\neq 2$,则$\varphi$迹值.
+\end{remark}
+
+\begin{lemma}{}{}
+	\begin{enumerate}
+		\item 设$\varphi$迹值,$F$是$E$的非零$\varphi$-全迷向子空间.若$x\in E\setminus F^{\circ}$,则$\forall\alpha\in A\exists y\in F\left(\varphi\left(x+y,x+y\right)=\alpha+\varepsilon\bar{\alpha}\right)$.
+		\item 设$A$是域,$\varphi$迹值,$F$是$E$的非零$Q$-全奇异子空间.若$x\in E\setminus F^{\circ}$,则$\forall\alpha\in A\exists y\in F\left(Q\left(x+y\right)=\alpha\right)$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{definition}{半双线性型的Witt分解}{}
+	设$F,F^{\prime},G$是$E$的子空间.如果
+	\begin{enumerate}
+		\item $E=F\oplus F^{\prime}\oplus G$,
+		\item $F$和$F^{\prime}$是$\varphi$-全迷向的,$G$是$\varphi$-非迷向的,
+		\item $G$和$F+F^{\prime}$是$\varphi$-正交的,
+	\end{enumerate}
+	则称$\left(E,F^{\prime},G\right)$是$E$的$\varphi$-Witt分解.
+\end{definition}
+
+\begin{definition}{二次型的Witt分解}{}
+	设$A$是域,$F,F^{\prime},G$是$E$的子空间.如果
+	\begin{enumerate}
+		\item $E=F\oplus F^{\prime}\oplus G$,
+		\item $F$和$F^{\prime}$是$Q$-全迷向的,$G$是$Q$-非迷向的,
+		\item $G$和$F+F^{\prime}$是$Q$-正交的,
+	\end{enumerate}
+	则称$\left(E,F^{\prime},G\right)$是$E$的$Q$-Witt分解.
+\end{definition}
+
+\begin{remark}{Witt分解下的Gram矩阵}{gram-matrix-under-witt-decomposition}
+	我们统一考虑$A$是除环和$A$是域的情形.设$\dim E=n,\dim F=\dim F^{\prime}=r$,其中$n\geq 0,0\leq r\leq\lfloor\frac{n}{2}\rfloor$.分别取$E,F,G$各自的基$\mathcal{B}_{1}\coloneq\left(e_{i}\right)_{i=1}^{n_{1}},\mathcal{B}_{2}\coloneq\left(f_{j}\right)_{j=1}^{n_{2}},\mathcal{B}_{3}\coloneq\left(g_{k}\right)_{k=1}^{n_{3}}$,定义$E$的基$\mathcal{B}\coloneq\left(\check{e}_{\ell}\right)_{\ell=1}^{m}$如下:
+	\begin{align*}
+		\check{e}_{\ell}=
+		\begin{cases}
+			e_{\ell},&1\leq\ell\leq r\\
+			f_{\ell-r},&r+1\leq\ell\leq 2r\\
+			g_{\ell-2r},&2r+1\leq\ell\leq n
+		\end{cases}
+	\end{align*}
+	那么$\Gram_{\mathcal{B}}^{\mathcal{B}}\left(\varphi\right)=
+	\begin{bmatrix}
+		\boldsymbol{O}_{r\times r}&\boldsymbol{U}&\boldsymbol{O}_{\left(n-2r\right)\times\left(n-2r\right)}\\
+		\varepsilon\overline{\boldsymbol{U}}^{\top}&\boldsymbol{O}_{r\times r}&\boldsymbol{O}_{\left(n-2r\right)\times\left(n-2r\right)}\\
+		\boldsymbol{O}_{\left(n-2r\right)\times r}&\boldsymbol{O}_{\left(n-2r\right)\times r}&\boldsymbol{V}
+	\end{bmatrix}
+	$,其中
+	\begin{align*}
+		\boldsymbol{U}=\Gram_{\mathcal{B}_{1}}^{\mathcal{B}_{2}}\left(\varphi|_{F\times F^{\prime}}\right),\boldsymbol{V}=\Gram_{\mathcal{B}_{3}}^{\mathcal{B}_{3}}\left(\varphi|_{G\times G}\right),\boldsymbol{U}\in\GL_{r}\left(A\right),\boldsymbol{V}\in\GL_{n-2r}\left(\boldsymbol{A}\right).
+	\end{align*}
+\end{remark}
+
+\begin{definition}{双曲型的半双线性型(或二次型)}{}
+	设$E$是有限维$A$-向量空间.
+	\begin{enumerate}
+		\item 若$\varphi$非退化,并且$E$是两个$\varphi$-全迷向子空间的内直和,则称$\varphi$是双曲型$\varepsilon$-Hermite型.
+		\item 若$Q$非退化,并且$E$是两个$Q$-全奇异子空间的内直和,则称$Q$是双曲型$A$-二次型.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	若$\varphi_{1},\varphi_{2}$是$E$上的双曲型$\varepsilon$-Hermite型,则$\bigboxplus\limits_{i=1}^{2}\varphi_{i}$也是双曲型;若$Q_{1},Q_{2}$是$E$上的双曲型$A$-二次型,则$\bigboxplus\limits_{i=1}^{2}Q_{i}$也是双曲型.
+\end{remark}
+
+\begin{proposition}{}{}
+	设$\varphi$迹值且非退化,$F$是$E$的$r$维$\varphi$-全迷向子空间.
+	\begin{enumerate}
+		\item 若$F^{\prime}$是$E$的$r$维$\varphi$-全迷向子空间,$F^{\prime}\cap F^{\circ}=\left\{0\right\}$,那么
+		\begin{enumerate}
+			\item $F+F^{\prime}$是直和,并且是$E$的$\varphi$-非迷向子空间.
+			\item 对$F$的每个基$\left(f_{i}\right)_{i=1}^{r}$,存在$F^{\prime}$的基$\left(f_{i}^{\prime}\right)_{i=1}^{r}$使得$\forall 1\leq i,j\leq n\left(\varphi\left(f_{i},f_{j}^{\prime}\right)=\delta_{i,j}\right)$.
+		\end{enumerate}
+		\item 对$E$的每个维数$\leq r$且满足$G\cap F^{\circ}=\left\{0\right\}$的$\varphi$-全迷向子空间$G$,存在$E$的$r$维$\varphi$-全迷向子空间$F^{\prime}$使得
+		\begin{align*}
+			F^{\prime}\cap F^{\circ}=\left\{0\right\},G\subseteq F^{\prime}.
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{}{}
+	设$A$是域,$\varphi$迹值且非退化,$F$是$E$的$r$维$Q$-全奇异子空间.
+	\begin{enumerate}
+		\item 若$F^{\prime}$是$E$的$r$维$Q$-全奇异子空间,$F^{\prime}\cap F^{\circ}=\left\{0\right\}$,那么
+		\begin{enumerate}
+			\item $F+F^{\prime}$是直和,并且是$E$的$Q$-非奇异子空间.
+			\item 对$F$的每个基$\left(f_{i}\right)_{i=1}^{r}$,存在$F^{\prime}$的基$\left(f_{i}^{\prime}\right)_{i=1}^{r}$使得$\forall 1\leq i,j\leq n\left(\varphi\left(f_{i},f_{j}^{\prime}\right)=\delta_{i,j}\right)$.
+		\end{enumerate}
+		\item 对$E$的每个维数$\leq r$且满足$G\cap F^{\circ}=\left\{0\right\}$的$Q$-全奇异子空间$G$,存在$E$的$r$维$Q$-全奇异子空间$F^{\prime}$使得
+		\begin{align*}
+			F^{\prime}\cap F^{\circ}=\left\{0\right\},G\subseteq F^{\prime}.
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	设$F$是$E$的$r$维$\varphi$-全迷向子空间,则存在$E$的$r$维$\varphi$-全迷向子空间$F^{\prime}$使$F\cap F^{\prime}=\left\{0\right\}$且$F+F^{\prime}$是$\varphi$-非迷向子空间.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$A$是域,$F$是$E$的$r$维$Q$-全奇异子空间,则存在$E$的$r$维$Q$-全奇异子空间$F^{\prime}$使$F\cap F^{\prime}=\left\{0\right\}$且$F+F^{\prime}$是$Q$-非奇异子空间.
+\end{corollary}
+
+\begin{remark}{}{}
+	统一考虑$A$是除环和$A$是域的情形.留意到$E=\left(F+F^{\prime}\right)\oplus\left(F+F^{\prime}\right)^{\circ}$,记$G=\left(F+F^{\prime}\right)^{\circ}$,则$\left(F,F^{\prime},G\right)$是$E$的$\varphi$-Witt分解(或$Q$-Witt分解).在注记\ref{rmk:gram-matrix-under-witt-decomposition}的记号下,我们可以取$\boldsymbol{U}$为$\boldsymbol{I}_{r\times r}$.
+\end{remark}
+
+\begin{corollary}{}{}
+	设$E_{1},E_{2}$是有限维$A$-向量空间.
+	\begin{enumerate}
+		\item 设$\varphi_{1}$和$\varphi_{2}$分别是$E_{1}$和$E_{2}$上迹值的双曲型$\varepsilon$-Hermite型,则$\varphi_{1}$和$\varphi_{2}$等价.
+		\item 设$A$是域,$Q_{1}$和$Q_{2}$分别是$E_{1}$和$E_{2}$上迹值的双曲型$A$-二次型,则$Q_{1}$和$Q_{2}$等价.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proposition}{极大全迷向子空间的结构定理}{structural-theorem-for-maximal-totally-isotropic-subspaces}
+	设$\varphi$迹值且非退化,$F_{1},F_{2}$是$E$的$\varphi$-极大迷向子空间且至少有一个有限维,$F=F_{1}\cap F_{2}$.定义$F_{1},F_{2},S_{1},S_{2}$如下:
+	\begin{center}
+		对每个$1\leq i\leq 2$,$S_{i}$是$F_{i}$在$F$中的补空间.
+	\end{center}
+	令$S$是$S_{1}$和$S_{2}$的内直和,则存在$E$的子空间$G,H$满足如下条件:
+	\begin{enumerate}
+		\item $E=\left(G+F\right)\oplus S\oplus H$,其中$G+F$是直和,$G+F,S,H$是两两$\varphi$-正交的$\varphi$-非迷向子空间.
+		\item $G$是$\varphi$-全迷向子空间,$H$中没有非零的$\varphi$-迷向向量.
+		\item $F_{1},F_{2}$都是有限维的,并且$\dim F_{1}=\dim F_{2},\dim G=\dim F,\dim S_{1}=\dim S_{2},\codim_{E}H=2\dim F_{1}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{极大全奇异子空间的结构定理}{structural-theorem-for-maximal-totally-singular-subspaces}
+	设$A$是域,$\varphi$迹值且非退化,$F_{1},F_{2}$是$E$的极大$Q$-奇异子空间且至少有一个有限维,$F=F_{1}\cap F_{2}$.定义$F_{1},F_{2},S_{1},S_{2}$如下:
+	\begin{center}
+		对每个$1\leq i\leq 2$,$S_{i}$是$F_{i}$在$F$中的补空间.
+	\end{center}
+	令$S$是$S_{1}$和$S_{2}$的内直和,则存在$E$的子空间$G,H$满足如下条件:
+	\begin{enumerate}
+		\item $E=\left(G+F\right)\oplus S\oplus H$,其中$G+F$是直和,$G+F,S,H$是两两$Q$-正交的$Q$-非迷向子空间.
+		\item $G$是$Q$-全奇异子空间,$H$中没有非零的$Q$-奇异向量.
+		\item $F_{1},F_{2}$都是有限维的,并且$\dim F_{1}=\dim F_{2},\dim G=\dim F,\dim S_{1}=\dim S_{2},\codim_{E}H=2\dim F_{1}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	沿用命题\ref{prop:structural-theorem-for-maximal-totally-isotropic-subspaces}的假设.
+	\begin{enumerate}
+		\item $E$的任意两个有限维极大$\varphi$-全迷向子空间的维数相同.
+		\item 对$E$的每个有限维极大$\varphi$-全迷向子空间$F$,存在$E$的$\varphi$-全迷向子空间$F^{\prime}$使得
+		\begin{itemize}
+			\item $F\cap F^{\prime}=\left\{0\right\},\dim F=\dim F^{\prime}$,
+			\item $F+F^{\prime}$是内直和,并且是$E$的$\varphi$-非迷向子空间.
+		\end{itemize}
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	沿用命题\ref{prop:structural-theorem-for-maximal-totally-singular-subspaces}的假设.
+	\begin{enumerate}
+		\item $E$的任意两个有限维极大$Q$-全奇异子空间的维数相同.
+		\item 对$E$的每个有限维极大$Q$-全奇异子空间$F$,存在$E$的$Q$-全奇异子空间$F^{\prime}$使得
+		\begin{itemize}
+			\item $F\cap F^{\prime}=\left\{0\right\},\dim F=\dim F^{\prime}$,
+			\item $F+F^{\prime}$是内直和,并且是$E$的$Q$-非奇异子空间.
+		\end{itemize}
+	\end{enumerate}
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$A$是代数闭域,$\dim E=n\geq 1$,$Q$非退化,则存在$E$的基$\left(e_{i}\right)_{i=1}^{n}$,使得
+	\begin{enumerate}
+		\item 当$n=2\nu$时,对$A$中的每个族$\left(x_{i}\right)_{i=1}^{n}$有$Q\left(\sum\limits_{i=1}^{n}x_{i}e_{i}\right)=\sum\limits_{i=1}^{\nu}x_{i}x_{i+\nu}$.
+		\item 当$n=2\nu+1$时,对$A$中的每个族$\left(x_{i}\right)_{i=1}^{n}$有$Q\left(\sum\limits_{i=1}^{n}x_{i}e_{i}\right)=\sum\limits_{i=1}^{\nu}x_{i}x_{i+\nu}+x_{2\nu +1}^{2}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{definition}{}{}
+	设$E$是有限维的,$\varphi$迹值且非退化.
+	\begin{enumerate}
+		\item 我们称$E$中每个极大$\varphi$-全迷向子空间的维数称为$\varphi$的Witt指数,记作$\nu$.
+		\item 当$A$是域时,我们称$E$中每个极大$Q$-全奇异子空间的维数称为$Q$的Witt指数,记作$\nu$.
+	\end{enumerate}
+\end{definition}
+
+\begin{remark}{}{}
+	我们统一考虑$A$是除环和$A$是域的情形.
+	\begin{enumerate}
+		\item 若$\dim E=n$,则$n\geq 2\nu$.
+		\item 设$F$是$E$的子空间,则
+		\begin{itemize}
+			\item $F$是极大$\varphi$-全迷向子空间(相对的,极大$Q$-全奇异子空间)$\iff$ $\dim F=\nu$.
+			\item $F$中没有非零$\varphi$-迷向向量(相对的,非零$Q$-奇异向量)$\iff$ $\varphi$(相对的,$Q$)的Witt指数为$0$.
+		\end{itemize}
+		\item 设$\dim E=n$.
+		\begin{itemize}
+			\item 若$n$是奇数,则$E$上没有双曲$\varepsilon$-Hermite型;若$n$是偶数,则$\varphi$是双曲的$\iff$ $\varphi$的Witt指数为$\frac{n}{2}$.
+			\item 设$A$是域.若$n$是奇数,则$E$上没有双曲$A$-二次型;若$n$是偶数,则$Q$是双曲的$\iff$ $Q$的Witt指数为$\frac{n}{2}$.
+		\end{itemize}
+		\item 设$E$是有限维的.
+		\begin{itemize}
+			\item 存在$E$的子空间$E_{1},E_{2}$和$E_{1},E_{2}$上各自的$\varepsilon$-Hermite型$\varphi_{1},\varphi_{2}$使得$\left(E,\varphi\right)=\left(\bigboxplus\limits_{i=1}^{2}E_{i},\bigboxplus\limits_{i=1}^{2}\varphi_{i}\right)$,其中:
+			\begin{center}
+				$\dim E_{1}=2\nu$,$\varphi_{1}=\varphi|_{E_{1}\times E_{1}},\varphi_{2}=\varphi|_{E_{2}\times E_{2}}$,$\varphi_{1}$是双曲型,$\varphi_{2}$的Witt指数为$0$.
+			\end{center}
+			\item 设$A$是域,则存在$E$的子空间$E_{1},E_{2}$和$E_{1},E_{2}$上各自的$A$-二次型$Q_{1},Q_{2}$使得$\left(E,Q\right)=\left(\bigboxplus\limits_{i=1}^{2}E_{i},\bigboxplus\limits_{i=1}^{2}Q_{i}\right)$,其中:
+			\begin{center}
+				$\dim E_{1}=2\nu$,$Q_{1}=Q|_{E_{1}\times E_{1}},Q_{2}=Q|_{E_{2}\times E_{2}}$,$Q_{1}$是双曲型,$Q_{2}$的Witt指数为$0$.
+			\end{center}
+		\end{itemize}
+	\end{enumerate}
+\end{remark}
+
+\begin{proposition}{}{}
+	设$A$是域,$Q$非退化,若$E$中存在非零$Q$-奇异向量,则$\forall a\in A\exists y\in E\left(Q\left(y\right)=a\right)$.
+\end{proposition}
+

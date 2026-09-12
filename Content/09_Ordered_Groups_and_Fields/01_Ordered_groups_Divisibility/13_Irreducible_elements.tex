@@ -1,0 +1,68 @@
+\section{不可约元}
+
+记号约定:$\left(G,+,\leq\right)$是有序群,$A$是整环,$K=\Frac\left(A\right)$.
+
+\begin{definition}{不可约元}{}
+	设$x\in G_{>0}$.若$x$是$G_{>0}$的极小元,则称$x$是$G$的不可约元.
+\end{definition}
+
+\begin{remark}{}{}
+	若$x$是不可约元,则$\forall y\in G_{\geq 0}\left(y\leq x\vee y\bot x\right)$.作为推论,$G$中任意两个不相等的不可约元一定互素.
+\end{remark}
+
+\begin{definition}{整环中的不可约元}{}
+	设$p\in A$.若$\left(p\right)$是$\mathcal{P}^{\ast}\left(K\right)$的不可约元,则称$p$是不可约元.
+\end{definition}
+
+\begin{remark}{}{}
+	如果$\mathcal{P}^{\ast}\left(K\right)$是格序群,那么$\forall a\in A\left(a\bot p\vee\exists z\in A\left(a=zp\right)\right)$.
+\end{remark}
+
+\begin{example}{整环中不可约元的例子}{}
+	\begin{enumerate}
+		\item 设$p\in\Z_{>0}$,则$p$是素数$\iff$ $p$是$\Z$的不可约元.
+		\item 设$K$是域,$f\in K[X]$,则$f$是$K[X]$中的不可约多项式$\iff$ $f$是$K[X]$的不可约元.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}{格序群的素性条件}{}
+	设$x\in G_{\geqslant 0}$.若$\forall y,z\in G_{\geqslant 0}\left(x\leqslant y+z\implies\left(x\leqslant y\vee x\leqslant z\right)\right)$,则称$x$满足素性条件.
+\end{definition}
+
+\begin{proposition}{不可约元的充分条件与必要条件}{}
+	设$x\in G_{>0}$.
+	\begin{enumerate}
+		\item 若$x$满足素性条件,则$x$是不可约元.
+		\item 若$G$是格序群,则$x$满足素性条件$\iff$ $x$是不可约元.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{整环中不可约元和素元的等价性}{}
+	设$p\in A\setminus\left\{0\right\}$.
+	\begin{enumerate}
+		\item 若$\left(p\right)$是$\mathscr{P}^{\ast}\left(K\right)$的素理想,则$p$是不可约元.
+		\item 若$\mathscr{P}^{\ast}\left(K\right)$是格序群,则$\left(p\right)$是$\mathscr{P}^{\ast}\left(K\right)$的素理想 $\iff$ $p$是不可约元.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{不可约元素诱导的有序群同构}{}
+	设$\left(p_{i}\right)_{i\in I}$是$G_{\geqslant 0}$中一族满足素性条件且两两不等的元素,则该元素族诱导的映射$\varphi:\Z^{\left(I\right)}\to G$是有序群同构.
+\end{proposition}
+
+\begin{definition}{格序群的极小条件}{}
+	若$G_{\geqslant 0}$的每个非空子集都有极小元,则称$G$满足极小条件.
+\end{definition}
+
+\begin{theorem}{离散自由格序群的等价条件}{}
+	设$G$是有向群.下列命题等价:
+	\begin{enumerate}
+		\item 存在集合$I$使得$G$作为有序群同构于配备乘积序的$\Z^{\left(I\right)}$.
+		\item $G$是满足极小条件的格序群.
+		\item $G$满足极小条件,并且$G$中的每个不可约元都满足素性条件.
+		\item $G$由一个不可约元生成,并且$G$中的每个不可约元都满足素性条件.
+	\end{enumerate}
+\end{theorem}
+
+\begin{remark}{}{}
+	上述定理指出格序群中分解唯一性的格论本质.PID和UFD上的整除理论,Dedekind整环上理想的结构都依赖于此.
+\end{remark}

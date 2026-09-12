@@ -1,0 +1,155 @@
+\section{下中心列,幂零群}
+
+记号约定:$G,G^{\prime}$是群,$H$是$G$的子群
+
+
+\begin{lemma}{中心和换位子的关系}{}
+	设$K$是$G$的正规子群,$\pi:G\twoheadrightarrow G/K$是典范映射,则$\pi\left(H\right)\subseteq Z\left(G/K\right)\iff\left[G,H\right]\subseteq K$.
+\end{lemma}
+
+\begin{definition}{下中心列}{}
+	定义$G$的下中心列$\left(\gamma_{n}\left(G\right)\right)_{n=1}^{\infty}$如下:$\gamma_{n}\left(G\right)=
+	\begin{cases}
+		G,&n=1,\\
+		\left[G,\gamma_{n-1}\left(G\right)\right],&n\geq 2.
+	\end{cases}$.
+\end{definition}
+
+\begin{proposition}{下中心列的性质}{}
+	\begin{enumerate}
+		\item 设$f\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$且为满射,则$\forall n\geq 1\left(f\left(\gamma_{n}\left(G\right)\right)\right)=\gamma_{n}\left(G^{\prime}\right)$.
+		\item $\left(\gamma_{n}\left(G\right)\right)_{n=1}^{\infty}$是$G$的一族正规子群,进而是一族正规子群.
+		\item $\forall n\geq 1\left(\gamma_{n}\left(G\right)/\gamma_{n+1}\left(G\right)\subseteq Z\left(G/\gamma_{n+1}\left(G\right)\right)\right)$.
+		\item 设$\left(G_{i}\right)_{i=1}^{\infty}$是$G$的一族单调递减的正规子群,$G_{1}=G$,并且$\forall i\geq 1\left(G_{i}/G_{i+1}\subseteq Z\left(G/G_{i+1}\right)\right)$,则
+		\begin{align*}
+			\forall n\geq 1\left(\gamma_{n}\left(G\right)\subseteq G\right).
+		\end{align*}
+		\item $\forall m,n\geq 1\left(\left[\gamma_{m}\left(G\right),\gamma_{n}\left(G\right)\right]\subseteq\gamma_{m+n}\left(G\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{幂零群}{}
+	若$\exists n\in\N\left(\gamma_{n+1}\left(G\right)=\left\{e\right\}\right)$,则称$G$是幂零群,$\min\left\{k\in\N\middle|\gamma_{k+1}\left(G\right)=\left\{e\right\}\right\}$是$G$的幂零类.
+\end{definition}
+
+\begin{example}{}{}
+	\begin{enumerate}
+		\item $G$的幂零类是$0$(相对地,$\leq 1$)$\iff$ $\left|G\right|=1$(相对地,$G$是Abel群).
+		\item 若$A$是交换环,$n\geq 1$,则$SU_{n}\left(A\right)$是幂零类$\leq n-1$的幂零群.
+		\item 若$G$是幂零类为$n$的幂零群,则$G$的子群和商群都是幂零类$\leq n$的幂零群.
+		\item 有限个幂零群的乘积还是幂零群.
+	\end{enumerate}
+\end{example}
+
+\begin{proposition}{幂零类的等价条件}{}
+	设$n\geq 1$.下列命题等价:
+	\begin{enumerate}
+		\item $G$是幂零类$\leq n$的幂零群.
+		\item $G$有一个下中心列$\left(G_{i}\right)_{i=1}^{n}$,满足$G_{1}=G,G_{n+1}=\left\{e\right\}$和$\forall 1\leq k\leq n\left(\left[G,G_{k}\right]\subseteq G_{k+1}\right)$.
+		\item $G$有一个子群$A$,使得$A\subseteq Z\left(G\right)$且$G/A$是幂零类$\leq n-1$的幂零群.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{}{}
+	幂零群的中心扩张还是幂零群.
+\end{corollary}
+
+\begin{corollary}{幂零群的子群中心列}{}
+	设$n\geq 1$,$H$是$G$的子群,则$G$有一族单调递减的子群$\left(H_{i}\right)_{i=1}^{n+1}$,满足下列条件:
+	\begin{itemize}
+		\item $H_{1}=G,H_{n+1}=H$.
+		\item 对任一$1\leq k\leq n$,$H_{k+1}$是$H_{k}$的正规子群.
+		\item $\left(H_{i}/H_{i+1}\right)_{i=1}^{n}$是一族Abel群.
+	\end{itemize}
+\end{corollary}
+
+\begin{corollary}{正规化子条件}{}
+	设$G$是幂零群,$H\subset G$,则$N_{G}\left(H\right)\neq H$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$G$是幂零群,$H\subset G$,则$G$有包含$H$的正规子群$N$使得$G/N$是交换群且$\left|G/N\right|\neq 1$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$G$是幂零群.若$G=HD\left(G\right)$,则$G=H$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$G^{\prime}$是幂零群,$f\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$.若典范映射$G/D\left(G\right)\to G^{\prime}/D\left(G^{\prime}\right)$是满射,则$f$是满射.
+\end{corollary}
+
+\begin{proposition}{正规子群的下中心列}{}
+	设$n\geq 1$,$G$是幂零类$\leq n$的幂零群,$N$是$G$的正规子群,则$G$有一族递减的子群$\left(N_{i}\right)_{i=1}^{n+1}$满足$N_{1}=N,N_{n+1}=\left\{e\right\}$和
+	\begin{align*}
+		\forall 1\leq k\leq n\left(\left[G,N_{k}\right]\subseteq N_{k+1}\right).
+	\end{align*}
+\end{proposition}
+
+\begin{corollary}{中心的交集}{}
+	设$G$是幂零群,$N$是$G$的正规子群且$N\neq G$,则$N\cap Z\left(G\right)\neq\left\{e\right\}$.
+\end{corollary}
+
+\begin{corollary}{}{}
+	设$G$是幂零群,$f\in\Hom_{\mathsf{Grp}}\left(G,G^{\prime}\right)$.若$f|_{Z\left(G\right)}$是单射,则$f$是单射.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

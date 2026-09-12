@@ -1,0 +1,134 @@
+\section{Jordan-H\"older定理}
+
+记号约定:$\Omega$是集合,$G$是$\Omega$-群(采用乘法记号,幺元分别为$e$),$m,n\in\N$.
+
+\begin{definition}{合成列}{}
+	设$\left(G_{i}\right)_{i=0}^{n}$是$G$的一族$\Omega$-子群,满足下列条件:
+	\begin{enumerate}
+		\item $G_{0}=G,G_{n}=\left\{e\right\}$;
+		\item 对任一$0\leq i\leq n-1$,$G_{i+1}$是$G_{i}$的$\Omega$=子群.
+	\end{enumerate}
+	我们称$\left(G_{i}\right)_{i=0}^{n}$是$G$的合成列,每个商群$G_{i}/G_{i+1}$称为该合成列的商因子.
+\end{definition}
+
+\begin{definition}{合成列的加细}{}
+	设$\Sigma,\Sigma^{\prime}$都是$G$的合成列.若$\Sigma$是$\Sigma^{\prime}$的子列,则称$\Sigma^{\prime}$比$\Sigma$细(或$\Sigma^{\prime}$是$\Sigma$的加细).
+\end{definition}
+
+\begin{definition}{合成列的等价}{}
+	设$H$是$\Omega$-群,$\left(G_{i}\right)_{i=0}^{n}$和$\left(H_{j}\right)_{j=0}^{m}$分别是$G$和$H$的合成列.若$m=n$且存在$\phi\in\Aut_{\mathsf{Set}}\left(\llbracket 0,n-1\rrbracket\right)$使
+	\begin{align*}
+		\forall 0\leq i\leq n-1\left(G_{i}/G_{i+1}\simeq H_{\phi\left(i\right)}/H_{\phi\left(i\right)+1}\right),(\text{这里的同构指的是}\Omega\text{-群同构})
+	\end{align*}
+	则称$\left(G_{i}\right)_{i=0}^{n}$和$\left(H_{j}\right)_{j=0}^{m}$等价.
+\end{definition}
+
+\begin{lemma}{Zassenhaus引理}{}
+	设$H,K$是$G$的$\Omega$-子群,$H^{\prime},K^{\prime}$分别是$H$和$K$的正规$\Omega$-子群.
+	\begin{enumerate}
+		\item $H^{\prime}\left(H\cap K^{\prime}\right)$是$H^{\prime}\left(H\cap K\right)$的正规$\Omega$-子群.
+		\item $K^{\prime}\left(K\cap H^{\prime}\right)$是$K^{\prime}\left(K\cap H\right)$的正规$\Omega$-子群.
+		\item 我们有$\Omega$-群同构$H^{\prime}\left(H\cap K\right)/H^{\prime}\left(H\cap K^{\prime}\right)\simeq K^{\prime}\left(K\cap H\right)/K^{\prime}\left(K\cap H^{\prime}\right)$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{theorem}{Schireier加细定理}{}
+	设$\Sigma_{1},\Sigma_{2}$是$G$的两个合成列,则二者分别有加细$\Sigma_{1}^{\prime},\Sigma_{2}^{\prime}$且$\Sigma_{1}=\Sigma_{2}$.
+\end{theorem}
+
+\begin{definition}{Jordan-H\"older列}{}
+	$G$中严格递减且没有加细的合成列称为Jordan-H\"older列.
+\end{definition}
+
+\begin{proposition}{Jordan-Hölder列的判别准则}{}
+	设$\Sigma$是$G$的合成列,则$\Sigma$是Jordan-Hölder列$\iff$ $\Sigma$的每个商因子都是单群.
+\end{proposition}
+
+\begin{theorem}{Jordan-Hölder定理}{}
+	$G$的任意两个Jordan-Hölder等价.
+\end{theorem}
+
+\begin{corollary}{有Jordan-H\"older列的$\Omega$-群中,递减的合成列有加细是Jordan-H\"older列}{}
+	若$G$有Jordan-H\"older列,则$G$的每个严格递减的合成列都有一个加细是Jordan-H\"older列.
+\end{corollary}
+
+\begin{remark}{合成列不一定有Jordan-H\"older列}{}
+	考虑$\Omega$-群$\Z$,其中的正规子群列$\left(2^{n}\Z\right)_{n\geq 0}$严格递减,却没有一个加细是Jordan-Hölder列.
+\end{remark}
+
+\begin{remark}{有限的非平凡$\Omega$-群一定有Jordan-Hölder列}{}
+	设$G$是有限集,$G\neq\left\{e\right\}$.记$H_{1}$是$G$的不等于$G$的极大正规$\Omega$-子群,$H_{2}$是$H_{1}$的不等于$H_{1}$的极大正规$\Omega$-子群,$\ldots$,如此重复直至得到$H_{n}$,记$H_{0}=G$,那么$\left(H_{i}\right)_{i=0}^{n}$就是$G$的Jordan-H\"older列.
+\end{remark}
+
+\begin{definition}{$\Omega$-群的长度}{}
+	记$L=\left\{n\in\N\middle|G\text{中存在严格递减的合成列}\left(G_{i}\right)_{i=0}^{n}\right\}$,定义$\ell\left(G\right)\coloneq\sup L$,称之为$G$的长度.
+\end{definition}
+
+\begin{proposition}{$\Omega$-群的长度$\leftrightsquigarrow$ Jordan-H\"older列的存在性}{}
+	\begin{enumerate}
+		\item 若$G$有Jordan-H\"older列,则$\ell\left(G\right)$是该Jordan-H\"older列中商因子的个数.
+		\item 若$G$无Jordan-H\"older列,则$\ell\left(G\right)=\aleph_{0}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{corollary}{平凡群和单群的长度刻画}{}
+	$\ell\left(G\right)=0$ $\iff$ $G=\left\{e\right\}$;$\ell\left(G\right)=1$ $\iff$ $G$是单$\Omega$-群.
+\end{corollary}
+
+\begin{proposition}{群的长度是加性函数}{}
+	设$H$是$G$的正规$\Omega$-子群,则$\ell\left(G\right)=\ell\left(H\right)+\ell\left(G/H\right)$.
+\end{proposition}
+
+\begin{corollary}{长度=合成列中诸商因子长度的总和}{}
+	设$\left(G_{i}\right)_{i=0}^{n}$是$G$的合成列,则$\ell\left(G\right)=\sum\limits_{i=0}^{n-1}\ell\left(G_{i}/G_{i+1}\right)$.
+\end{corollary}
+
+\begin{remark}{同构与Jordan-H\"older列}{}
+	\begin{enumerate}
+		\item 设$G^{\prime}$是$\Omega$-群.若$G$和$G^{\prime}$作为$\Omega$-群同构,$G$有Jordan-H\"older列,则$G^{\prime}$也有Jordan-H\"older列,并且二者等价.
+		\item 长度相等的非平凡$\Omega$-群不一定同构,比如$\Z\times 4\Z$和$\left(\Z/2\Z\right)\times\left(\Z/2\Z\right)$.
+	\end{enumerate}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+\section{矩阵的迹}
+
+记号约定:$C$是交换环,$E$是$C$-模,$m,n\in\N$.
+
+\begin{definition}{矩阵的迹}{}
+	设$\boldsymbol{X}\coloneq\left(x_{ij}\right)_{i\in I,j\in I}$是$C$上的方阵.称$\tr\left(\boldsymbol{X}\right)\coloneq\sum\limits_{i\in I}x_{ii}$是$\boldsymbol{X}$的迹.
+\end{definition}
+
+\begin{proposition}{矩阵的迹和线性自同态的迹相等}{}
+	设$f\in\End_{C}\left(E\right)$,$\mathcal{B}\coloneq\left(e_{i}\right)_{i\in I}$是$E$的有限基,则$\tr\left(\left[f\right]_{\mathcal{B}}^{\mathcal{B}}\right)=\tr\left(f\right)$.
+\end{proposition}
+
+\begin{proposition}{矩阵乘积的迹的循环交换性}{}
+	设$\boldsymbol{X}\coloneq\left(x_{i,j}\right)_{\substack{1\leqslant i\leqslant m\\1\leqslant j\leqslant n}},\boldsymbol{Y}\coloneq\left(y_{i,j}\right)_{\substack{1\leqslant i\leqslant n\\1\leqslant j\leqslant m}}$是$C$上的矩阵,则$\tr\left(\boldsymbol{X}\boldsymbol{Y}\right)=\tr\left(\boldsymbol{Y}\boldsymbol{X}\right)=\sum\limits_{\substack{1\leq i\leq m\\1\leq j\leq n}}x_{i,j}y_{j,i}$.
+\end{proposition}
+
+\begin{proposition}{迹诱导的对偶空间同构}{}
+	对任一$\boldsymbol{P}\in\mathbf{M}_{n}\left(C\right)$,记$f_{\boldsymbol{P}}:\mathbf{M}_{n}\left(C\right)\to\mathbf{M}_{n}\left(C\right),\boldsymbol{X}\mapsto\tr\left(\boldsymbol{P}\boldsymbol{X}\right)$,则$\mathbf{M}_{n}\left(C\right)\to\left(\mathbf{M}_{n}\left(C\right)\right)^{\vee},\boldsymbol{P}\mapsto f_{\boldsymbol{P}}$是$C$-线性同构.
+\end{proposition}
+
+\begin{proposition}{迹的唯一性表征}{}
+	设$f\in\left(\mathbf{M}_{n}\left(C\right)\right)^{\vee}$且$\forall\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{n}\left(R\right)\left(f\left(\boldsymbol{X}\boldsymbol{Y}\right)=f\left(\boldsymbol{Y}\boldsymbol{X}\right)\right)$,则有唯一的$c\in C$使$\forall\boldsymbol{X}\in\mathbf{M}_{n}\left(R\right)\left(f\left(\boldsymbol{X}\right)=c\tr\left(\boldsymbol{X}\right)\right)$.
+\end{proposition}

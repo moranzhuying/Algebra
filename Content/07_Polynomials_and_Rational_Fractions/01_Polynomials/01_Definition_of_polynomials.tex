@@ -1,0 +1,25 @@
+\chapter{多项式}
+
+在第四部分中,我们总是记$A$为一个交换环,$I$是集合.
+
+\section{多项式的定义}
+
+\begin{proposition}{多项式环的标量限制}{}
+	设$B$是交换环,$\rho\in\Hom_{\mathsf{Ring}}\left(A,B\right)$,则
+	\begin{enumerate}
+		\item $\rho$诱导了$A$-代数同态$\sigma:A[(X_{i})_{i\in I}]\to B[(X_{i})_{i\in I}],\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}\mapsto\sum\limits_{\nu\in\N^{\left(I\right)}}\rho\left(\alpha_{\nu}\right)X^{\nu}$.
+		\item $\sigma$诱导了典范的$B$-代数同构$\rho_{\ast}\left(B[(X_{i})_{i\in I}]\right)\to B[(X_{i})_{i\in I}],1_{B}\otimes X_{i}\mapsto X_{i}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{多项式代数的张量积的结合约束}{}
+	设$I\neq\emptyset$,$\left(I_{\lambda}\right)_{\lambda\in\Lambda}$是$I$的划分,则有典范的$A$-代数同构$\bigotimes\limits_{\lambda\in\Lambda}A[(X_{i})_{i\in I_{\lambda}}]\simeq A[(X_{i})_{i\in I}]$.
+\end{proposition}
+
+\begin{definition}{系数在模中的多项式}{}
+	设$E$是$A$-模.定义$A$-模$E[(X_{i})_{i\in I}]\coloneq E\otimes_{A}A[(X_{i})_{i\in I}]$,称其元素为系数在$E$中的关于不定元$X_{i}$的多项式.
+\end{definition}
+
+\begin{remark}{}{}
+	对$f\in E[(X_{i})_{i\in I}]$,在$E$中总是存在唯一的有限支撑族$\left(e_{\nu}\right)_{\nu\in\N^{\left(I\right)}}$使$f=\sum\limits_{\nu\in\N^{\left(I\right)}}e_{\nu}\otimes X^{\nu}$.简便起见,对每个$\nu\in\N^{\left(I\right)}$,滥用术语,记$e_{\nu}X^{\nu}\coloneq e_{\nu}\otimes X^{\nu}$.
+\end{remark}

@@ -1,0 +1,127 @@
+\section{二次型}
+
+记号约定:$A$是交换环,$E$是$A$-模.
+
+\begin{definition}{二次型及其极化}{}
+	设$Q\in\Hom_{\mathsf{Set}}\left(E,A\right)$.如果
+	\begin{enumerate}
+		\item 对每个$\left(r,x\right)\in A\times E$有$Q\left(ax\right)=a^{2}Q\left(x\right)$,
+		\item $\varphi_{Q}:E\times E\to {}_{s}A_{d},\left(x,y\right)\mapsto Q\left(x+y\right)-Q\left(x\right)-Q\left(y\right)$是$A$-双线性型,
+	\end{enumerate}
+	则称$Q$是$E$上的$A$-二次型,$\varphi_{Q}$是$Q$的极化.
+\end{definition}
+
+\begin{definition}{}{}
+	记$\Quad_{A}\left(E\right)$是$E$上的$A$-二次型组成的集合,这是典范的$A$-模.
+\end{definition}
+
+\begin{definition}{二次型的退化}{}
+	设$Q\in\Quad_{A}\left(E\right)$.若$Q$的极化是非退化$A$-双线性型,则称$Q$是非退化的,否则称$Q$是退化的.
+\end{definition}
+
+\begin{remark}{}{}
+	显然,对每个$x\in E$有$\varphi\left(x,x\right)=2Q\left(x\right)$.于是,当$\Char\left(A\right)=2$时,$\varphi_{Q}$是交错的$A$-双线性型.
+\end{remark}
+
+\begin{definition}{}{}
+	设$Q\in\Quad_{A}\left(E\right)$,$x,y\in E$.若$\varphi_{Q}\left(x,y\right)=0$,则称$x$和$y$关于$Q$正交,记作$x\bot_{Q} y$.
+\end{definition}
+
+\begin{proposition}{}{}
+	设$Q\in\Quad_{A}\left(E\right)$,$\left(x_{i}\right)_{i\in I}\in E^{I},\left(a_{i}\right)_{i\in I}\in A^{\left(I\right)}$,则$Q\left(\sum\limits_{i\in I}a_{i}x_{i}\right)=\sum\limits_{i\in I}a_{i}^{2}x_{i}+\sum\limits_{\substack{\left(i,j\right)\in I\times I\\ i\neq j}}a_{i}a_{j}\varphi_{Q}\left(x_{i},x_{j}\right)$.
+\end{proposition}
+
+\begin{proposition}{双线性形式和二次型的对应}{}
+	记$d:E\to E\times E,x\mapsto\left(x,x\right),\tau:E\times E\to E\times E,\left(x,y\right)\mapsto\left(y,x\right)$.
+	\begin{enumerate}
+		\item 设$f\in\Bil_{A}\left(E\right)$,则$Q:E\to A,x\mapsto f\left(x,x\right)$是$A$-二次型,$\varphi_{Q}=f+f\circ\tau$.
+		\item 设$\Char\left(A\right)\neq 2$,$\mathcal{S}$是$E$上的$A$-对称双线性形式组成的集合,则
+		\begin{align*}
+			\Omega:\Quad_{A}\left(E\right)\to\mathcal{S},Q\mapsto\varphi_{Q}
+		\end{align*}
+		是双射,$\Omega^{-1}:\mathcal{S}\to\Quad_{A}\left(E\right),f\mapsto f\circ d$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{自由模上二次型和对称矩阵的对应}{}
+	设$E$是自由$A$-模,基为$\left(e_{i}\right)_{i\in I}$.
+	\begin{enumerate}
+		\item 对每个$Q\in\Quad_{A}\left(E\right)$,存在$f\in\Bil_{A}\left(E\right)$使得$\forall x\in E\left(Q\left(x\right)=f\left(x,x\right)\right)$.
+		\item 设$Q\in\Quad_{A}\left(E\right)$,$A$上的方阵$\left(b_{ij}\right)_{i\in I,j\in J}$满足
+		\begin{align*}
+			\forall\left(i,j\right)\in I\times I\left(\left(i=j\implies b_{ij}=Q\left(e_{i}\right)\right)\wedge\left(i\neq j\implies b_{ij}=\varphi_{Q}\left(e_{i},e_{j}\right)\right)\right),
+		\end{align*}
+		那么$\forall\left(i,j\right)\in I\times I\left(b_{ij}=b_{ji}\right)$.
+		\item 设$A$上的方阵$\left(b_{ij}\right)_{i\in I,j\in I}$满足$\forall\left(i,j\right)\in I\times I\left(b_{ij}=b_{ji}\right)$.记$\mathcal{F}_{1,2}=\fin_{1}\left(I\right)\cup\fin_{2}\left(I\right)$,则
+		\begin{align*}
+			Q:E\to A,\sum\limits_{i\in I}a_{i}e_{i}\mapsto\sum\limits_{\left\{i,j\right\}\in\mathcal{F}_{12}}b_{ij}a_{i}a_{j}
+		\end{align*}
+		是$A$-二次型,并且$\forall\left(i,j\right)\in I\times I\left(\left(i=j\implies b_{ij}=Q\left(e_{i}\right)\right)\wedge\left(i\neq j\implies b_{ij}=\varphi_{Q}\left(e_{i},e_{j}\right)\right)\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{$A$-二次模}{}
+	设$V$是$A$-模,$Q\in\Quad_{A}\left(V\right)$.我们称$\left(V,Q\right)$是$A$-二次模.
+\end{definition}
+
+\begin{definition}{$A$-二次模之间的态射}{}
+	设$\left(E_{1},Q_{1}\right)$和$\left(E_{2},Q_{2}\right)$是$A$-二次模,$u\in\Hom_{A}\left(E_{1},E_{2}\right)$.
+	\begin{enumerate}
+		\item 若$Q_{1}=Q_{2}\circ u$,则称$u$是$\left(E_{1},Q_{1}\right)$到$E_{2},Q_{2}$的$A$-二次模同态.
+		\item 若$u\in\Isom_{A}\left(E_{1},E_{2}\right),Q_{1}=Q_{2}\circ u$,则称$u$是$\left(E_{1},Q_{1}\right)$到$E_{2},Q_{2}$的$A$-二次模同构.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{二次模之间的同构}{}
+	设$\left(E_{1},Q_{1}\right)$和$\left(E_{2},Q_{2}\right)$是$A$-二次模.若存在$u\in\Isom_{A}\left(E_{1},E_{2}\right)$使得$Q_{1}=Q_{2}\circ u$,则称$\left(E_{1},Q_{1}\right)$和$\left(E_{2},Q_{2}\right)$同构.
+\end{definition}
+
+\begin{proposition}{二次模的直和的构造}{construction-of-exterior-direct-sum-of-quadratic-modules}
+	设$\left(\left(E_{i},Q_{i}\right)\right)_{i\in I}$是一族$A$-二次模,$E=\bigboxplus\limits_{i\in I}E_{i}$.定义$Q:E\to A,\left(x_{i}\right)_{i\in I}\mapsto\sum\limits_{i\in I}Q_{i}\left(x_{i}\right)$,
+	\begin{enumerate}
+		\item $Q$是$\bigboxplus\limits_{i\in I}E_{i}$上的$A$-二次型.
+		\item 若$\left(Q_{i}\right)_{i\in I}$的各项都非退化,则$Q$非退化.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{二次模的直和}{}
+	沿用命题(\ref{prop:construction-of-exterior-direct-sum-of-quadratic-modules})的设定.
+	\begin{enumerate}
+		\item 我们称$\bigboxplus\limits_{i\in I}Q_{i}\coloneq Q$是$\left(Q_{i}\right)_{i\in I}$的直和.
+		\item 我们称$\bigboxplus\limits_{i\in I}\left(E_{i},Q_{i}\right)\coloneq\left(E,Q\right)$是$\left(\left(E_{i},Q_{i}\right)\right)_{i\in I}$的直和.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}{二次模的核}{}
+	设$\left(E,Q\right)$是$A$-二次模.我们称$\rad\left(E,Q\right)\coloneq\left\{y\in\rad_{L}\left(\varphi\right)\middle|Q\left(y\right)=0\right\}$是二次模$\left(M,Q\right)$的核.
+\end{definition}
+
+\begin{remark}{}{}
+	显然,$\rad\left(E,Q\right)$是$E$的$A$-子模.
+\end{remark}
+
+\begin{proposition}{商二次模的构造}{construction-of-quotient-quadratic-module}
+	设$\left(E,Q\right)$是$A$-二次模,$F$是$E$的子模,$N=\rad\left(E,Q\right)$,$\pi:E\to E/F$是典范映射.
+	\begin{enumerate}
+		\item $\forall\left(x,y\right)\in E\times F\left(Q\left(x+y\right)=Q\left(x\right)\iff Q\left(y\right)+\varphi_{Q}\left(x,y\right)=0\iff\left(Q\left(y\right)=0\wedge\varphi\left(x,y\right)=0\right)\right)$.
+		\item $\exists!\bar{Q}\in\Quad_{A}\left(E/F\right)\forall x\in E\left(\bar{Q}\left(x+F\right)=Q\left(x\right)\right) \iff F\subseteq N$.
+		\item 当$F\subseteq N$时,$\pi$是$\left(E,Q\right)$到$\left(E/F\right)$的二次模同态.
+		\item 当$F=N$时$\rad\left(E/F,\bar{Q}\right)=\left\{F\right\}$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}{商二次模}{}
+	沿用命题\ref{prop:construction-of-quotient-quadratic-module}的记号.当$F\subseteq N$时,称$\left(E/F,\bar{Q}\right)$是$\left(E,Q\right)$模$F$的二次模,称$\bar{Q}$是$Q$和$E/F$诱导的二次型.
+\end{definition}
+
+\begin{proposition}{二次型的标量扩张的存在唯一性}{construction-of-quadratic-form}
+	设$A^{\prime}$是交换环,$h\in\Hom_{\mathsf{Ring}}\left(A,A^{\prime}\right)$,则存在唯一的$Q^{\prime}\in\Quad_{A}\left(h^{\ast}\left(E\right)\right)$使得$\forall x\in E\left(Q^{\prime}\left(1\otimes x\right)=h\left(Q\left(x\right)\right)\right)$.
+\end{proposition}
+
+\begin{definition}{二次型的标量扩张}{}
+	沿用命题\ref{prop:construction-of-quadratic-form}的记号.我们称$h^{\ast}\left(Q\right)\coloneq h^{\ast}Q\coloneq Q^{\prime}$是$Q$通过$h$的标量扩张.
+\end{definition}
+
+\begin{remark}{}{}
+	记$\varphi$是$Q$的极化,那么$h^{\ast}\left(\varphi\right)$就是$\varphi$通过$h$的标量扩张.
+\end{remark}

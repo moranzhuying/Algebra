@@ -1,0 +1,88 @@
+\chapter{形式幂级数}
+
+\section{形式幂级数的定义·阶}
+
+\begin{definition}{形式幂级数的阶}{}
+	设$u=\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}\in A[[(X_{i})_{i\in I}]]$.对每个$p\geq 0$,记$u_{p}=\sum\limits_{\substack{\nu\in\N^{\left(I\right)}\\ \left|\nu\right|=p}}\alpha_{\nu}X^{\nu}$.当$u\neq 0$时,称
+	\begin{align*}
+		\omega\left(u\right)\coloneq\inf\left\{p\in\N\middle|u_{p}\neq 0\right\}
+	\end{align*}
+	是$u$的阶.
+\end{definition}
+
+\begin{remark}{}{}
+	为$\Z$并接一个新元素$\infty$,把$\Z$上的偏序和运算按下列方式延拓到$\Z\sqcup\left\{\infty\right\}$上:对每个$n\in\Z$,
+	\begin{align*}
+		n<\infty,\infty+\infty=\infty,\infty+n=n+\infty=\infty.
+	\end{align*}
+	当$u=0$时,称$\omega\left(u\right)\coloneq\infty$是$u$的阶.
+\end{remark}
+
+\begin{proposition}{形式幂级数的阶的性质}{}
+	设$u,v\in A[[(X_{i})_{i\in I}]]$.
+	\begin{enumerate}
+		\item $\omega\left(u+v\right)\geq\inf\left(\omega\left(u\right),\omega\left(v\right)\right)$.当$\omega\left(u\right)\neq\omega\left(v\right)$时,$\omega\left(u+v\right)=\inf\left(\omega\left(u\right),\omega\left(v\right)\right)$.
+		\item $\omega\left(uv\right)\geq\omega\left(u\right)+\omega\left(v\right)$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}{形式幂级数环的标量延拓}{}
+	设$B$是交换环,$\varphi\in\Hom_{\mathsf{Ring}}\left(A,B\right)$.定义$\bar{\varphi}:A[[(X_{i})_{i\in I}]]\to B[[(X_{i})_{i\in I}]],\sum\limits_{\nu\in\N^{\left(I\right)}}\alpha_{\nu}X^{\nu}\mapsto\sum\limits_{\nu\in\N^{\left(I\right)}}\varphi\left(\alpha_{\nu}\right)X^{\nu}$.
+	\begin{enumerate}
+		\item $\varphi$是$A$-代数同态.
+		\item 当$A$是$B$的子环,$\varphi$是典范单射时,$\bar{\varphi}$是单射..
+	\end{enumerate}
+\end{proposition}
+
+\begin{remark}{}{}
+	当$A$是$B$的子环,$\varphi$是典范单射时,我们通常把$A[[(X_{i})_{i\in I}]]$等同于$\im\left(\varphi\right)$,从而视为$B[[(X_{i})_{i\in I}]]$的子环.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
