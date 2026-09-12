@@ -72,11 +72,18 @@ def default_cwl_path():
 
 
 def extract_symbols(structure_path):
-    """从 structure.sty 的 [模块 VI] 提取 (命令名, 注释) 列表。"""
+    """从 structure.sty 的 [模块 VI] 符号库提取 (命令名, 注释) 列表。
+
+    区段边界为 [模块 VI] 到 [模块 VII]，避免把模块 VII 的
+    \\renewcommand{\\tableofcontents} 等非数学符号计入补全。
+    """
     text = pathlib.Path(structure_path).read_text(encoding="utf-8")
     idx = text.find("[模块 VI]")
     if idx != -1:
         text = text[idx:]
+    end = text.find("[模块 VII]")
+    if end != -1:
+        text = text[:end]
     symbols = []
     for line in text.splitlines():
         m = CMD_RE.match(line.strip())
