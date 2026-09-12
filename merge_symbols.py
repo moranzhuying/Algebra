@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-merge_symbols.py — 把各笔记 structure.sty 中新增的符号定义自动回填到模板
+merge_symbols.py — 笔记与模板之间 structure.sty 符号库的双向同步
 
 用法：
     python merge_symbols.py                    # 预览（默认不改动任何文件）
     python merge_symbols.py --write            # 实际回填（自动备份模板）
     python merge_symbols.py --write --update-cwl   # 回填后顺带更新 TeXStudio 补全
+    python merge_symbols.py --write --distribute   # 回填后把模板分发到各笔记（统一结构）
+
+两个方向：
+    回填（默认）        各笔记 -> 模板：把笔记里私自新增的符号汇总进模板
+    分发 --distribute   模板 -> 各笔记：把模板的 structure.sty 覆盖到各笔记
 
 常用参数：
     --root DIR        笔记根目录（扫描其下所有含 structure.sty 的子目录）
@@ -211,6 +216,34 @@ def write_template(template_path, block_lines):
     return True
 
 
+def distribute(template_path, notes, write=False):
+    """把模板的 structure.sty 分发到各笔记（覆盖前逐个备份）。"""
+    template_text = read_text(template_path)
+    same, changed = [], []
+    for note, sty in notes:
+        try:
+            current = read_text(sty)
+        except Exception as exc:
+            print(f"  跳过 {note}：读取失败（{exc}）")
+            continue
+        (same if current == template_text else changed).append((note, sty))
+
+    print(f"\n分发模板到各笔记：已一致 {len(same)} 个，待同步 {len(changed)} 个")
+    if not changed:
+        return
+    if not write:
+        for note, _ in changed:
+            print(f"  [待同步] {note}")
+        return
+
+    stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+    for note, sty in changed:
+        backup = sty.with_name(sty.name + f".bak-{stamp}")
+        shutil.copy2(sty, backup)
+        write_text(sty, template_text)
+        print(f"  [已同步] {note}  （备份 {backup.name}）")
+
+
 def run_update_cwl():
     script = SCRIPT_DIR / "update_cwl.py"
     if not script.is_file():
@@ -222,13 +255,15 @@ def run_update_cwl():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="把各笔记 structure.sty 中新增的符号回填到模板")
+        description="符号库同步：回填（各笔记 -> 模板）与分发（模板 -> 各笔记）")
     parser.add_argument("--root", default=None, help="笔记根目录")
     parser.add_argument("--template", default=None, help="模板 structure.sty 路径")
     parser.add_argument("--notes", nargs="*", default=None, help="只扫描指定的笔记目录")
     parser.add_argument("--exclude", nargs="*", default=None, help="排除指定目录（如习题集）")
     parser.add_argument("--write", action="store_true", help="真正写入模板（默认仅预览）")
     parser.add_argument("--update-cwl", action="store_true", help="回填后刷新 TeXStudio 补全")
+    parser.add_argument("--distribute", action="store_true",
+                        help="把模板 structure.sty 分发到各笔记（与回填相反方向）")
     args = parser.parse_args()
 
     template = resolve_template(args.template)
@@ -266,27 +301,36 @@ def main():
 
     if not additions:
         print("\n没有需要回填的新符号。")
-        return 0
+    else:
+        print(f"\n发现 {len(additions)} 个新符号，来自：")
+        by_source = {}
+        for name, info in additions.items():
+            by_source.setdefault("、".join(info["sources"]), []).append(name)
+        for src, names in sorted(by_source.items()):
+            print(f"  {src}：{'、'.join('\\' + n for n in sorted(names))}")
 
-    print(f"\n发现 {len(additions)} 个新符号，来自：")
-    by_source = {}
-    for name, info in additions.items():
-        by_source.setdefault("、".join(info["sources"]), []).append(name)
-    for src, names in sorted(by_source.items()):
-        print(f"  {src}：{'、'.join('\\' + n for n in sorted(names))}")
+        block_lines = build_block(additions)
+        print("\n将追加到符号库末尾的内容：")
+        print("-" * 60)
+        for line in block_lines:
+            print(line)
+        print("-" * 60)
 
-    block_lines = build_block(additions)
-    print("\n将追加到符号库末尾的内容：")
-    print("-" * 60)
-    for line in block_lines:
-        print(line)
-    print("-" * 60)
+        if args.write:
+            write_template(template, block_lines)
+
+    if args.distribute:
+        if additions and not args.write:
+            print("\n警告：仍有未回填的新符号，直接分发会覆盖它们。")
+            print("请先加 --write 回填，或用 --notes 限定分发范围。")
+        else:
+            distribute(template, notes, write=args.write)
 
     if not args.write:
         print("\n当前为预览模式，未改动任何文件。确认无误后加 --write 执行。")
         return 0
 
-    if write_template(template, block_lines) and args.update_cwl:
+    if args.update_cwl:
         run_update_cwl()
     return 0
 
