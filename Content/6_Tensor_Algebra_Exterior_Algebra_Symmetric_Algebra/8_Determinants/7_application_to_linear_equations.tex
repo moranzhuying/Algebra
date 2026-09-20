@@ -1,17 +1,17 @@
 \section{行列式在线性方程中的应用}
 
-记号约定:$A$是交换环,$\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}\in\mathbf{M}_{n}\left(A\right)$.
+记号约定:$A$是交换环,$\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq n\\1\leq j\leq n}}\in\Mat_{n}\left(A\right)$.
 
 \begin{proposition}{}{}
-	下列两个陈述等价.二者中有一个为真时,对每个$\boldsymbol{B}\in\mathbf{M}_{n,1}\left(A\right)$,方程$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}$有唯一解.
+	下列两个陈述等价.二者中有一个为真时,对每个$\boldsymbol{B}\in\Mat_{n,1}\left(A\right)$,方程$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}$有唯一解.
 	\begin{enumerate}
-		\item 对每个$\boldsymbol{B}\in\mathbf{M}_{n,1}$,方程$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}$有解.
+		\item 对每个$\boldsymbol{B}\in\Mat_{n,1}$,方程$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}$有解.
 		\item $\det\left(\boldsymbol{A}\right)\in A^{\times}$.
 	\end{enumerate}
 \end{proposition}
 
 \begin{proposition}{Cramer法则}{}
-	设$\boldsymbol{b}\coloneq\left[b_{1}\ldots b_{n}\right]^{\top}\in\mathbf{M}_{n,1}\left(A\right)$.把$\boldsymbol{b}$等同于$b\in A^{n}$,定义$\mathbf{M}_{n}\left(A\right)$中的序列$\left(\boldsymbol{A}_{i}\right)_{i=1}^{n}$如下:对每个$1\leq i\leq n$,
+	设$\boldsymbol{b}\coloneq\left[b_{1}\ldots b_{n}\right]^{\top}\in\Mat_{n,1}\left(A\right)$.把$\boldsymbol{b}$等同于$b\in A^{n}$,定义$\Mat_{n}\left(A\right)$中的序列$\left(\boldsymbol{A}_{i}\right)_{i=1}^{n}$如下:对每个$1\leq i\leq n$,
 	\begin{align*}
 		\col_{j}\left(\boldsymbol{A}_{i}\right)=
 		\begin{cases}
@@ -20,7 +20,7 @@
 		\end{cases}
 	\end{align*}
 	\begin{enumerate}
-		\item 若$\det\left(\boldsymbol{A}\right)$不是零因子,$\boldsymbol{x}\coloneq\left[x_{1}\ldots x_{n}\right]^{\top}\in\mathbf{M}_{n,1}\left(A\right)$,则方程组$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}$和$\det\left(\boldsymbol{A}_{i}\right)x_{i}=b_{i}(1\leq i\leq n)$等价.
+		\item 若$\det\left(\boldsymbol{A}\right)$不是零因子,$\boldsymbol{x}\coloneq\left[x_{1}\ldots x_{n}\right]^{\top}\in\Mat_{n,1}\left(A\right)$,则方程组$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}$和$\det\left(\boldsymbol{A}_{i}\right)x_{i}=b_{i}(1\leq i\leq n)$等价.
 		\item 若$\det\left(\boldsymbol{A}\right)\in A^{\times}$,则方程组$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}$的解为$\left(\det\left(\boldsymbol{A}\right)\right)^{-1}\left[\det\left(\boldsymbol{A}_{1}\right)\ldots\det\left(\boldsymbol{A}_{n}\right)\right]^{\top}$.
 	\end{enumerate}
 \end{proposition}

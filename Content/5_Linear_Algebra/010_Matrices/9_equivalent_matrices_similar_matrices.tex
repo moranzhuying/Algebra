@@ -3,17 +3,17 @@
 记号约定:$A$是环,$E,F$是有限秩的自由右$A$-模,$m,n\in\N$.
 
 \begin{definition}{矩阵的等价}{}
-	定义$\mathbf{M}_{m,n}\left(A\right)$上的相抵关系$\overset{\text{相抵}}{\sim}$如下:
+	定义$\Mat_{m,n}\left(A\right)$上的相抵关系$\overset{\text{相抵}}{\sim}$如下:
 	\begin{align*}
-		\forall\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{m,n}\left(R\right)\left(\boldsymbol{X}\overset{\text{相抵}}{\sim}\boldsymbol{Y}\iff\exists\boldsymbol{P}\in\GL_{m}\left(A\right)\exists\boldsymbol{Q}\in\GL_{n}\left(A\right)\left(\boldsymbol{Y}=\boldsymbol{P}\boldsymbol{X}\boldsymbol{Q}\right)\right),
+		\forall\boldsymbol{X},\boldsymbol{Y}\in\Mat_{m,n}\left(R\right)\left(\boldsymbol{X}\overset{\text{相抵}}{\sim}\boldsymbol{Y}\iff\exists\boldsymbol{P}\in\GL_{m}\left(A\right)\exists\boldsymbol{Q}\in\GL_{n}\left(A\right)\left(\boldsymbol{Y}=\boldsymbol{P}\boldsymbol{X}\boldsymbol{Q}\right)\right),
 	\end{align*}
-	$\overset{\text{相抵}}{\sim}$是$\mathbf{M}_{m,n}\left(A\right)$上的等价关系.对$\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{m,n}\left(A\right)$,若$\boldsymbol{X}\overset{\text{相抵}}{\sim}\boldsymbol{Y}$,则称$\boldsymbol{X}$和$\boldsymbol{Y}$相抵.
+	$\overset{\text{相抵}}{\sim}$是$\Mat_{m,n}\left(A\right)$上的等价关系.对$\boldsymbol{X},\boldsymbol{Y}\in\Mat_{m,n}\left(A\right)$,若$\boldsymbol{X}\overset{\text{相抵}}{\sim}\boldsymbol{Y}$,则称$\boldsymbol{X}$和$\boldsymbol{Y}$相抵.
 \end{definition}
 
 \begin{proposition}{矩阵的相抵和线性映射在不同的基下的表示矩阵}{}
 	\begin{enumerate}
 		\item 设$f\in\Hom_{A}\left(E,F\right)$,$\mathcal{B},\mathcal{B}^{\prime}$是$E$的基,$\mathcal{C},\mathcal{C}^{\prime}$是$F$的基,则$\left[f\right]_{\mathcal{B}^{\prime}}^{\mathcal{C}^{\prime}}\overset{\text{相抵}}{\sim}\left[f\right]_{\mathcal{B}}^{\mathcal{C}}$.
-		\item 设$\boldsymbol{A},\boldsymbol{B}\in\mathbf{M}_{m,n}\left(A\right)$,$\mathcal{B},\mathcal{C}$分别是$A_{d}^{n},A_{d}^{m}$的典范基,$\mathcal{B}^{\prime},\mathcal{C}^{\prime}$分别是$A_{d}^{n},A_{d}^{m}$的基,$f\in\Hom_{A}\left(A_{d}^{n},A_{d}^{m}\right)$,则
+		\item 设$\boldsymbol{A},\boldsymbol{B}\in\Mat_{m,n}\left(A\right)$,$\mathcal{B},\mathcal{C}$分别是$A_{d}^{n},A_{d}^{m}$的典范基,$\mathcal{B}^{\prime},\mathcal{C}^{\prime}$分别是$A_{d}^{n},A_{d}^{m}$的基,$f\in\Hom_{A}\left(A_{d}^{n},A_{d}^{m}\right)$,则
 		\begin{align*}
 			\left(\boldsymbol{A}\overset{\text{相抵}}{\sim}\boldsymbol{B}\wedge\left[f\right]_{\mathcal{B}}^{\mathcal{C}}=\boldsymbol{A}\right)\implies\boldsymbol{B}=\left[\id_{F}\right]_{\mathcal{C}}^{\mathcal{C}^{\prime}}\boldsymbol{A}\left[\id_{E}\right]_{\mathcal{B}^{\prime}}^{\mathcal{B}}.
 		\end{align*}
@@ -75,21 +75,21 @@
 \end{proposition}
 
 \begin{definition}{矩阵的相似}{}
-	定义$\mathbf{M}_{n}\left(A\right)$上的相似关系$\overset{\text{相似}}{\sim}$如下:
+	定义$\Mat_{n}\left(A\right)$上的相似关系$\overset{\text{相似}}{\sim}$如下:
 	\begin{align*}
-		\forall\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{n}\left(A\right)\left(\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}\iff\exists\boldsymbol{P}\in\GL_{m}\left(A\right)\left(\boldsymbol{Y}=\boldsymbol{P}\boldsymbol{X}\boldsymbol{P}^{-1}\right)\right),
+		\forall\boldsymbol{X},\boldsymbol{Y}\in\Mat_{n}\left(A\right)\left(\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}\iff\exists\boldsymbol{P}\in\GL_{m}\left(A\right)\left(\boldsymbol{Y}=\boldsymbol{P}\boldsymbol{X}\boldsymbol{P}^{-1}\right)\right),
 	\end{align*}
-	$\overset{\text{相似}}{\sim}$是$\mathbf{M}_{n}\left(A\right)$上的等价关系.对$\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{n}\left(A\right)$,若$\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}$,则称$\boldsymbol{X}$和$\boldsymbol{Y}$相似.
+	$\overset{\text{相似}}{\sim}$是$\Mat_{n}\left(A\right)$上的等价关系.对$\boldsymbol{X},\boldsymbol{Y}\in\Mat_{n}\left(A\right)$,若$\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}$,则称$\boldsymbol{X}$和$\boldsymbol{Y}$相似.
 \end{definition}
 
 \begin{remark}{$n$阶方阵环上的内自同构和矩阵的相似}{}
-	从内自同构的角度看,$\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}$就是说$\boldsymbol{X},\boldsymbol{Y}$中的一者可以由另一者通过$\mathbf{M}_{n}\left(A\right)$上的一个内自同构得到.
+	从内自同构的角度看,$\boldsymbol{X}\overset{\text{相似}}{\sim}\boldsymbol{Y}$就是说$\boldsymbol{X},\boldsymbol{Y}$中的一者可以由另一者通过$\Mat_{n}\left(A\right)$上的一个内自同构得到.
 \end{remark}
 
 \begin{proposition}{矩阵的相似和现行自同态在不同的基下的表示矩阵}{}
 	\begin{enumerate}
 		\item 设$f\in\End_{A}\left(E\right)$,$\mathcal{B},\mathcal{B}^{\prime}$是$E$的基则$\left[f\right]_{\mathcal{B}^{\prime}}^{\mathcal{B}^{\prime}}\overset{\text{相似}}{\sim}\left[f\right]_{\mathcal{B}}^{\mathcal{B}}$.
-		\item 设$\boldsymbol{A},\boldsymbol{B}\in\mathbf{M}_{m,n}\left(A\right),E=A_{d}^{n}$,$\mathcal{B},\mathcal{C}$是$A_{d}^{n}$的基,$f\in\End_{A}\left(E\right)$,则
+		\item 设$\boldsymbol{A},\boldsymbol{B}\in\Mat_{m,n}\left(A\right),E=A_{d}^{n}$,$\mathcal{B},\mathcal{C}$是$A_{d}^{n}$的基,$f\in\End_{A}\left(E\right)$,则
 		\begin{align*}
 			\left(\boldsymbol{A}\overset{\text{相抵}}{\sim}\boldsymbol{B}\wedge\left[f\right]_{\mathcal{B}}^{\mathcal{B}}=\boldsymbol{A}\right)\implies\boldsymbol{B}=\left[\id_{E}\right]_{\mathcal{C}}^{\mathcal{B}}\boldsymbol{A}\left[\id_{E}\right]_{\mathcal{B}}^{\mathcal{C}}.
 		\end{align*}
@@ -103,7 +103,7 @@
 \end{remark}
 
 \begin{remark}{分块矩阵的相抵和相似}{}
-	设$\mathcal{I}\coloneq\left(I_{k}\right)_{k=1}^{p}$是$\llbracket 1,n\rrbracket$的划分,其中$\forall 1\leq k\leq p\left(\left|I_{k}\right|=n_{k}\right)$,$\boldsymbol{X},\boldsymbol{Y}\in\mathbf{M}_{n}\left(A\right)$相对$\mathcal{I}$分别有如下的分块
+	设$\mathcal{I}\coloneq\left(I_{k}\right)_{k=1}^{p}$是$\llbracket 1,n\rrbracket$的划分,其中$\forall 1\leq k\leq p\left(\left|I_{k}\right|=n_{k}\right)$,$\boldsymbol{X},\boldsymbol{Y}\in\Mat_{n}\left(A\right)$相对$\mathcal{I}$分别有如下的分块
 	\begin{align*}
 		\diag\left(\boldsymbol{X}_{1},\ldots,\boldsymbol{X}_{p}\right),\diag\left(\boldsymbol{Y}_{1},\ldots,\boldsymbol{Y}_{p}\right).
 	\end{align*}

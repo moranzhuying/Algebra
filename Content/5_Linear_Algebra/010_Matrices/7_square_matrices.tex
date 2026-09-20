@@ -3,7 +3,7 @@
 记号约定:$A$是环,$I,J,K,H$是集合,$E$是左(相对的,右)$A$-模.
 
 \begin{definition}{方阵}{}
-	$H^{I\times I}$的元素称$H$上的$\left(I,I\right)$-型方阵.若$\left|I\right|=n$,则称$H^{I\times I}$的元素为$n$阶方阵.当$I=\llbracket 1,n\rrbracket$时,记$\mathbf{M}_{n}\left(H\right)\coloneq H^{I\times I}$.
+	$H^{I\times I}$的元素称$H$上的$\left(I,I\right)$-型方阵.若$\left|I\right|=n$,则称$H^{I\times I}$的元素为$n$阶方阵.当$I=\llbracket 1,n\rrbracket$时,记$\Mat_{n}\left(H\right)\coloneq H^{I\times I}$.
 \end{definition}
 
 \begin{proposition}{矩阵环}{}
@@ -11,7 +11,7 @@
 \end{proposition}
 
 \begin{definition}{一般线性群}{}
-	我们称$\GL_{n}\left(A\right)\coloneq\left(\mathbf{M}_{n}\left(A\right)\right)^{\times}$为一般线性群.
+	我们称$\GL_{n}\left(A\right)\coloneq\left(\Mat_{n}\left(A\right)\right)^{\times}$为一般线性群.
 \end{definition}
 
 \begin{proposition}{矩阵单边可逆和线性方程组的关系}{}
@@ -29,8 +29,8 @@
 \begin{proposition}{矩阵环和自同态环的同构}{}
 	设$I=\llbracket 1,n\rrbracket$,$\mathcal{B}\coloneq\left(e_{i}\right)_{i=1}^{n}$是$E$的基.
 	\begin{enumerate}
-		\item 若$E$是左$A$-模,则$\mathcal{M}_{\mathcal{B}}:\End_{A}\left(E\right)\to\left(\mathbf{M}_{n}\left(A\right)\right)^{\op},f\mapsto\left(\left[f\right]_{\mathcal{B}}^{\mathcal{B}}\right)^{\top}$是环同构.
-		\item 若$E$是有$A$-模,则$\mathcal{M}_{\mathcal{B}}:\End_{A}\left(E\right)\to\left(\mathbf{M}_{n}\left(A\right)\right)^{\op},f\mapsto\left[f\right]_{\mathcal{B}}^{\mathcal{B}}$是环同构.
+		\item 若$E$是左$A$-模,则$\mathcal{M}_{\mathcal{B}}:\End_{A}\left(E\right)\to\left(\Mat_{n}\left(A\right)\right)^{\op},f\mapsto\left(\left[f\right]_{\mathcal{B}}^{\mathcal{B}}\right)^{\top}$是环同构.
+		\item 若$E$是有$A$-模,则$\mathcal{M}_{\mathcal{B}}:\End_{A}\left(E\right)\to\left(\Mat_{n}\left(A\right)\right)^{\op},f\mapsto\left[f\right]_{\mathcal{B}}^{\mathcal{B}}$是环同构.
 	\end{enumerate}
 \end{proposition}
 
@@ -78,12 +78,12 @@
 \begin{remark}{记号说明}{}
 	给定$A$中的元素族$\left(a_{i}\right)_{i\in I}$,$A$中对角线是$\left(a_{i}\right)$的矩阵记作$\diag\left(a_{i}\right)_{i\in I}$.当$I=\llbracket 1,n\rrbracket$时,将其记作$\diag\left(a_{1},\ldots,a_{n}\right)$.定义
 	\begin{align*}
-		\mathfrak{d}_{n}\left(A\right)\coloneq\left\{\diag\left(d_{1},\ldots,d_{n}\right)\in\mathbf{M}_{n}\left(A\right)\middle|d_{1},\ldots,d_{n}\in A\right\}.
+		\mathfrak{d}_{n}\left(A\right)\coloneq\left\{\diag\left(d_{1},\ldots,d_{n}\right)\in\Mat_{n}\left(A\right)\middle|d_{1},\ldots,d_{n}\in A\right\}.
 	\end{align*}
 \end{remark}
 
 \begin{definition}{标量矩阵}{}
-	设$\boldsymbol{A}\in\mathbf{M}_{n}\left(A\right)$.若$\exists a\in A\left(\boldsymbol{A}=\diag\left(a,\ldots,a\right)\right)$,则称$\boldsymbol{A}$是标量矩阵.
+	设$\boldsymbol{A}\in\Mat_{n}\left(A\right)$.若$\exists a\in A\left(\boldsymbol{A}=\diag\left(a,\ldots,a\right)\right)$,则称$\boldsymbol{A}$是标量矩阵.
 \end{definition}
 
 \begin{proposition}{对角矩阵和一般矩阵的乘积}{}
@@ -101,9 +101,9 @@
 	\end{align*}
 \end{corollary}
 
-\begin{proposition}{对角矩阵环是$\mathbf{M}_{n}\left(A\right)$的同构于$A^{n}$的子环,标量矩阵环是对角矩阵环的同构于$A$的子环}{}
+\begin{proposition}{对角矩阵环是$\Mat_{n}\left(A\right)$的同构于$A^{n}$的子环,标量矩阵环是对角矩阵环的同构于$A$的子环}{}
 	\begin{enumerate}
-		\item $\mathfrak{d}_{n}\left(A\right)$是$\mathbf{M}_{n}\left(A\right)$的子环,并且同构于$A^{n}$.
+		\item $\mathfrak{d}_{n}\left(A\right)$是$\Mat_{n}\left(A\right)$的子环,并且同构于$A^{n}$.
 		\item $A\boldsymbol{I}_{n\times n}$是$\mathfrak{d}_{n}\left(A\right)$的子环,并且同构于$A$.
 	\end{enumerate}
 \end{proposition}
@@ -145,11 +145,11 @@
 		\item 若$\forall 1\leq i,j\leq n\left(i>j\implies a_{ij}=0\right)$,则称$\boldsymbol{A}$是上三角矩阵(或$\boldsymbol{A}$的对角线下只有$0$).
 		\item 若$\forall 1\leq i,j\leq n\left(i<j\implies a_{ij}=0\right)$,则称$\boldsymbol{A}$是下三角矩阵(或$\boldsymbol{A}$的对角线上只有$0$).
 	\end{enumerate}
-	定义$\mathfrak{b}_{n}\left(A\right)=\left\{\boldsymbol{X}\in\mathbf{M}_{n}\left(A\right)\middle|\boldsymbol{X}\text{是上三角矩阵}\right\},\mathfrak{b}_{n}^{-}\left(A\right)=\left\{\boldsymbol{X}\in\mathbf{M}_{n}\left(A\right)\middle|\boldsymbol{X}\text{是下三角矩阵}\right\}$.
+	定义$\mathfrak{b}_{n}\left(A\right)=\left\{\boldsymbol{X}\in\Mat_{n}\left(A\right)\middle|\boldsymbol{X}\text{是上三角矩阵}\right\},\mathfrak{b}_{n}^{-}\left(A\right)=\left\{\boldsymbol{X}\in\Mat_{n}\left(A\right)\middle|\boldsymbol{X}\text{是下三角矩阵}\right\}$.
 \end{definition}
 
 \begin{proposition}{上三角矩阵和下三角矩阵是各自组成的集合是$n$阶方阵环的子环}{}
-	$\mathfrak{b}_{n}\left(A\right),\mathfrak{b}_{n}^{-}\left(A\right)$都是$\mathbf{M}_{n}\left(A\right)$的子环,并且$\mathfrak{b}_{n}\left(A\right)\cap \mathfrak{b}_{n}^{-}\left(A\right)=\mathfrak{d}_{n}\left(A\right)$.
+	$\mathfrak{b}_{n}\left(A\right),\mathfrak{b}_{n}^{-}\left(A\right)$都是$\Mat_{n}\left(A\right)$的子环,并且$\mathfrak{b}_{n}\left(A\right)\cap \mathfrak{b}_{n}^{-}\left(A\right)=\mathfrak{d}_{n}\left(A\right)$.
 \end{proposition}
 
 \begin{definition}{上(下)完全三角矩阵}{}

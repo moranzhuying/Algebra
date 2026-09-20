@@ -7,11 +7,11 @@
 \end{proposition}
 
 \begin{corollary}{矩阵的相抵标准型(线性映射方法)}{}
-	设$\boldsymbol{A}\in\mathbf{M}_{m,n}\left(K\right)$.若$\rank\left(\boldsymbol{A}\right)=r$,则存在$\boldsymbol{P}\in\GL_{m}\left(K\right),\boldsymbol{Q}\in\GL_{n}\left(K\right)$使得$\boldsymbol{P}\boldsymbol{A}\boldsymbol{Q}=\diag\left(\boldsymbol{I}_{r\times r},\boldsymbol{O}_{m-r,n-r}\right)$.
+	设$\boldsymbol{A}\in\Mat_{m,n}\left(K\right)$.若$\rank\left(\boldsymbol{A}\right)=r$,则存在$\boldsymbol{P}\in\GL_{m}\left(K\right),\boldsymbol{Q}\in\GL_{n}\left(K\right)$使得$\boldsymbol{P}\boldsymbol{A}\boldsymbol{Q}=\diag\left(\boldsymbol{I}_{r\times r},\boldsymbol{O}_{m-r,n-r}\right)$.
 \end{corollary}
 
 \begin{corollary}{矩阵的秩是相抵关系下的全系不变量}{}
-	设$\boldsymbol{A},\boldsymbol{B}\in\mathbf{M}_{m,n}\left(K\right)$,则$\boldsymbol{A}\overset{\text{相抵}}{\sim}\boldsymbol{B}\iff\rank\left(\boldsymbol{A}\right)=\rank\left(\boldsymbol{B}\right)$.
+	设$\boldsymbol{A},\boldsymbol{B}\in\Mat_{m,n}\left(K\right)$,则$\boldsymbol{A}\overset{\text{相抵}}{\sim}\boldsymbol{B}\iff\rank\left(\boldsymbol{A}\right)=\rank\left(\boldsymbol{B}\right)$.
 \end{corollary}
 
 \begin{definition}{剪切矩阵}{}
@@ -19,13 +19,13 @@
 \end{definition}
 
 \begin{definition}{初等变换群}{}
-	设$m\geq 2$,$A$是环.我们称$\left\{\boldsymbol{B}_{i,j}\left(a\right)\in\mathbf{M}_{m}\left(A\right)\middle|a\in A\right\}$生成的群为初等变换群,记作$E_{m}\left(A\right)$.
+	设$m\geq 2$,$A$是环.我们称$\left\{\boldsymbol{B}_{i,j}\left(a\right)\in\Mat_{m}\left(A\right)\middle|a\in A\right\}$生成的群为初等变换群,记作$E_{m}\left(A\right)$.
 \end{definition}
 
 \begin{lemma}{消元引理}{}
 	设$m\geq 2$,$\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leqslant i\leqslant m\\1\leqslant j\leqslant n}}$为$K$上的矩阵.若$\exists 1\leq i_{0}\leq m\left(a_{i_{0},1}\in K^{\times}\right)$,则
 	\begin{align*}
-		\boldsymbol{P}\in E_{m}\left(R\right),\boldsymbol{Q}\in E_{n}\left(R\right),\boldsymbol{Y}\in\mathbf{M}_{m-1,n-1}\left(K\right)\left(\boldsymbol{P}\boldsymbol{A}\boldsymbol{Q}=
+		\boldsymbol{P}\in E_{m}\left(R\right),\boldsymbol{Q}\in E_{n}\left(R\right),\boldsymbol{Y}\in\Mat_{m-1,n-1}\left(K\right)\left(\boldsymbol{P}\boldsymbol{A}\boldsymbol{Q}=
 		\begin{bmatrix}
 			\boldsymbol{I}_{1\times 1}&\boldsymbol{O}_{1\times\left(n-1\right)}\\
 			\boldsymbol{O}_{\left(m-1\right)\times 1}&\boldsymbol{Y}
@@ -35,7 +35,7 @@
 \end{lemma}
 
 \begin{proposition}{约化形式}{}
-	设$\boldsymbol{A}\in\mathbf{M}_{m,n}\left(K\right)$.若$\rank\left(\boldsymbol{A}\right)=r$,则存在$\boldsymbol{P}\in E_{m}\left(K\right),\boldsymbol{Q}\in E_{n}\left(K\right),\delta\in K^{\times}$使得
+	设$\boldsymbol{A}\in\Mat_{m,n}\left(K\right)$.若$\rank\left(\boldsymbol{A}\right)=r$,则存在$\boldsymbol{P}\in E_{m}\left(K\right),\boldsymbol{Q}\in E_{n}\left(K\right),\delta\in K^{\times}$使得
 	\begin{align*}
 		\boldsymbol{P}\boldsymbol{A}\boldsymbol{Q}=\diag\left(\boldsymbol{I}_{r-1},\left[\delta\right],\boldsymbol{O}_{\left(m-r\right)\times\left(n-r\right)}\right).
 	\end{align*}
@@ -48,14 +48,14 @@
 \end{corollary}
 
 \begin{corollary}{$\GL_{n}\left(K\right)$的生成集}{}
-	记$D_{0}=\left\{\diag\left(a,1,\ldots,1\right)\in\mathfrak{d}_{n}\left(K\right)\middle|a\in K^{\times}\right\},E=\left\{\boldsymbol{B}_{1,2}\left(\lambda\right)\in\mathbf{M}_{n}\left(K\right)\middle|\lambda\in K\right\}$,则$\GL_{n}\left(K\right)$的生成集为
+	记$D_{0}=\left\{\diag\left(a,1,\ldots,1\right)\in\mathfrak{d}_{n}\left(K\right)\middle|a\in K^{\times}\right\},E=\left\{\boldsymbol{B}_{1,2}\left(\lambda\right)\in\Mat_{n}\left(K\right)\middle|\lambda\in K\right\}$,则$\GL_{n}\left(K\right)$的生成集为
 	\begin{align*}
 		D_{0}\left(K\right)\cup P_{n}\left(K\right)\cup E.
 	\end{align*}
 \end{corollary}
 
 \begin{remark}{RREF的另一种生成方式}{}
-	若$\boldsymbol{A}\in\mathbf{M}_{m,n}\left(K\right)$且$\rank\left(\boldsymbol{A}\right)=r$,则存在$\boldsymbol{P}\in E_{m}\left(K\right),\boldsymbol{R}\in P_{n}\left(R\right),\boldsymbol{N}\in\mathbf{M}_{r,n-r}\left(K\right)$使得
+	若$\boldsymbol{A}\in\Mat_{m,n}\left(K\right)$且$\rank\left(\boldsymbol{A}\right)=r$,则存在$\boldsymbol{P}\in E_{m}\left(K\right),\boldsymbol{R}\in P_{n}\left(R\right),\boldsymbol{N}\in\Mat_{r,n-r}\left(K\right)$使得
 	\begin{align*}
 		\boldsymbol{P}\boldsymbol{A}\boldsymbol{Q}=
 		\begin{bmatrix}

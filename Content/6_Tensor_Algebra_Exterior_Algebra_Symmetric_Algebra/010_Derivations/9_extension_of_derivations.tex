@@ -20,7 +20,7 @@
 \end{corollary}
 
 \begin{example}{自同态诱导的代数导子}{}
-	沿用命题(\ref{prop:extend-derivation-to-tensor-algebra-symmetric-algebra-and-exterior-algebra})的设定.取$d=0$,那么$d_{1}$是$A$-线性映射.
+	沿用命题(\cref{prop:extend-derivation-to-tensor-algebra-symmetric-algebra-and-exterior-algebra})的设定.取$d=0$,那么$d_{1}$是$A$-线性映射.
 	\begin{itemize}
 		\item 特别地,每个$s\in\End_{A}\left(M\right)$都可以唯一地延拓为$\mathsf{T}\left(M\right)$(相对的,$\mathsf{S}\left(M\right),\bigwedge\left(M\right)$)上的$0$次导子$D_{s}$.具体地:对$M$中的每个序列$\left(x_{i}\right)_{i=1}^{n}$,
 		\begin{align*}
@@ -39,7 +39,7 @@
 \end{proposition}
 
 \begin{example}{外代数上的内插算子}{}
-	沿用命题(\ref{prop:extend-derivation-to-tensor-algebra-symmetric-algebra-and-exterior-algebra})的设定,考虑$B=\bigwedge\left(M\right)$,$\Delta=\left\{0\right\}$的情形,并采用标准交换因子,则每个$x^{\ast}\in M^{\vee}$能唯一延拓为$\bigwedge\left(M\right)$上的$-1$次反导子$i\left(x^{\ast}\right)$.具体地,对$M$中每个序列$\left(x_{i}\right)_{i=1}^{n}$,有
+	沿用命题(\cref{prop:extend-derivation-to-tensor-algebra-symmetric-algebra-and-exterior-algebra})的设定,考虑$B=\bigwedge\left(M\right)$,$\Delta=\left\{0\right\}$的情形,并采用标准交换因子,则每个$x^{\ast}\in M^{\vee}$能唯一延拓为$\bigwedge\left(M\right)$上的$-1$次反导子$i\left(x^{\ast}\right)$.具体地,对$M$中每个序列$\left(x_{i}\right)_{i=1}^{n}$,有
 	\begin{align*}
 		i\left(x^{\ast}\right)\left(x_{1}\wedge\ldots\wedge x_{n}\right)=\sum\limits_{i=1}^{n}\left(-1\right)^{i-1}\langle x_{i},x^{\ast}\rangle x_{1}\wedge\ldots\wedge x_{i-1}\wedge x_{i+1}\wedge\ldots\wedge x_{n}.
 	\end{align*}
@@ -64,12 +64,12 @@
 
 \begin{example}{对偶模和态射模上的导子}{}
 	\begin{enumerate}
-		\item 在命题(\ref{prop:derivation-over-multilinear-mapping-module})中,考虑$n=1$,$M_{1}=M,P=A$的情形.那么$M^{\vee}$上诱导了导子$d^{\ast}$,对每个$m\in M$和$m^{\ast}\in M^{\vee}$有
+		\item 在命题(\cref{prop:derivation-over-multilinear-mapping-module})中,考虑$n=1$,$M_{1}=M,P=A$的情形.那么$M^{\vee}$上诱导了导子$d^{\ast}$,对每个$m\in M$和$m^{\ast}\in M^{\vee}$有
 		\begin{align*}
 			d_{0}\left(\langle m,m^{\ast}\rangle\right)=\langle d\left(m\right),m^{\ast}\rangle+\langle m,d^{\ast}\left(m^{\ast}\right)\rangle.
 		\end{align*}
 		考虑$\End_{K}\left(\rho_{\ast}\left(M\boxplus M^{\vee}\right)\right)\simeq\End_{K}\left(\rho_{\ast}\left(M\right)\boxplus\rho_{\ast}\left(M^{\vee}\right)\right)$,则每个$h\in\End_{K}\left(\rho_{\ast}\left(M\boxplus M^{\ast}\right)\right)$只要在$\rho_{\ast}\left(M^{\vee}\right)$上等于$d^{\ast}$,在$\rho_{\ast}\left(M\right)$上等于$d$,就一定是$\rho_{\ast}\left(\mathsf{T}\left(M\boxplus M^{\vee}\right)\right)$上的$K$-导子.$d$在$\mathsf{T}\left(M\boxplus M^{\vee}\right)$的$A$-子模$\mathsf{T}_{J}^{I}\left(M\right)$上的限制$d_{J}^{I}$满足$\left(d_{0},d_{J}^{I},d_{J}^{I}\right)$是$\left(A,\rho_{\ast}\left(T_{J}^{I}\left(M\right)\right),\rho_{\ast}\left(T_{I}^{J}\left(M\right)\right)\right)$的$K$-导子.此外,对$\left(i,j\right)\in I\times J$,若记$I^{\prime}-I\setminus\left\{i\right\},J^{\prime}=J\setminus\left\{j\right\}$,则对缩并$c_{j}^{i}$和每个$z\in\mathsf{T}_{J}^{i}\left(M\right)$有$c_{j}^{i}\left(d_{J}^{I}\left(z\right)\right)=d_{J^{\prime}}^{I^{\prime}}\left(c_{j}^{i}\left(z\right)\right)$.
-		\item 设$\left(M_{i}\right)_{i=1}^{3}$是一族$A$-模,对每个$1\leq i\leq 3$,$\left(d_{0},d_{1},d_{1}\right)$是$\left(A,\rho_{\ast}\left(M_{i}\right),\rho_{\ast}\left(M_{i}\right)\right)$的导子.应用命题(\ref{prop:derivation-over-multilinear-mapping-module})中$n=1$的情形,并记$H_{ij}=\Hom_{A}\left(M_{i},M_{j}\right)\left(1\leq i,j\leq 3\right)$,则对每个$1\leq i,j\leq 3$,$\left(d_{0},d_{ij},d_{ij}\right)$是$\left(A,\rho_{\ast}\left(H_{ij}\right),\rho_{\ast}\left(H_{ij}\right)\right)$的导子.在此记号下,对每个$u\in H_{12}$和$v\in H_{23}$有$d_{13}\left(v\circ u\right)=d_{23}\left(v\right)\circ u+v\circ d_{12}\left(u\right)$.
+		\item 设$\left(M_{i}\right)_{i=1}^{3}$是一族$A$-模,对每个$1\leq i\leq 3$,$\left(d_{0},d_{1},d_{1}\right)$是$\left(A,\rho_{\ast}\left(M_{i}\right),\rho_{\ast}\left(M_{i}\right)\right)$的导子.应用命题(\cref{prop:derivation-over-multilinear-mapping-module})中$n=1$的情形,并记$H_{ij}=\Hom_{A}\left(M_{i},M_{j}\right)\left(1\leq i,j\leq 3\right)$,则对每个$1\leq i,j\leq 3$,$\left(d_{0},d_{ij},d_{ij}\right)$是$\left(A,\rho_{\ast}\left(H_{ij}\right),\rho_{\ast}\left(H_{ij}\right)\right)$的导子.在此记号下,对每个$u\in H_{12}$和$v\in H_{23}$有$d_{13}\left(v\circ u\right)=d_{23}\left(v\right)\circ u+v\circ d_{12}\left(u\right)$.
 	\end{enumerate}
 \end{example}
 

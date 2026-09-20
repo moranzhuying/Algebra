@@ -1,6 +1,6 @@
 \section{除环上的矩阵}
 
-记号约定:$K$是除环,$m,n\in\N,\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq m\\1\leq j\leq n}}\in\mathbf{M}_{m,n}\left(K\right)$.
+记号约定:$K$是除环,$m,n\in\N,\boldsymbol{A}\coloneq\left(a_{i,j}\right)_{\substack{1\leq i\leq m\\1\leq j\leq n}}\in\Mat_{m,n}\left(K\right)$.
 
 \begin{definition}{矩阵的行空间,列空间,行秩,列秩}{}
 	\begin{enumerate}
@@ -18,7 +18,7 @@
 \end{proposition}
 
 \begin{proposition}{矩阵的列秩不随除环扩充而改变}{}
-	设$K_{0}$是$K$的子除环.若$\boldsymbol{A}\in\mathbf{M}_{m,n}\left(K_{0}\right)$,则$\dim_{K}\col\left(A\right)=\dim_{K_{0}}\col\left(\boldsymbol{A}\right)$.
+	设$K_{0}$是$K$的子除环.若$\boldsymbol{A}\in\Mat_{m,n}\left(K_{0}\right)$,则$\dim_{K}\col\left(A\right)=\dim_{K_{0}}\col\left(\boldsymbol{A}\right)$.
 \end{proposition}
 
 \begin{proposition}{矩阵的行秩和列秩相等}{}
@@ -42,7 +42,7 @@
 \end{proposition}
 
 \begin{proposition}{线性方程组有唯一解的增广矩阵判别法}{}
-	设$\boldsymbol{B}\coloneq\left(b_{i}\right)_{1\leq i\leq n}$是$K$上的列矩阵,$\left(\boldsymbol{A}|\boldsymbol{B}\right)\in\mathbf{M}_{m,n+1}\left(K\right)$满足$\col_{i}\left(\left(\boldsymbol{A}|\boldsymbol{B}\right)\right)=
+	设$\boldsymbol{B}\coloneq\left(b_{i}\right)_{1\leq i\leq n}$是$K$上的列矩阵,$\left(\boldsymbol{A}|\boldsymbol{B}\right)\in\Mat_{m,n+1}\left(K\right)$满足$\col_{i}\left(\left(\boldsymbol{A}|\boldsymbol{B}\right)\right)=
 	\begin{cases}
 		\col_{i}\left(\boldsymbol{A}\right),&1\leq i\leq n,\\
 		\boldsymbol{B},&i=n+1.
